@@ -82,8 +82,8 @@ export default function FeedbackPage() {
         <div className="boxed_wrapper">
             <Layout headerStyle={1} footerStyle={1}>
                 <section style={{
-                    backgroundColor: "#FAF8F2",
-                    padding: "100px 0 90px",
+                    backgroundColor: "#f8fafd",
+                    padding: "100px 0 100px",
                     minHeight: "80vh",
                     fontFamily: "var(--primary-font)"
                 }}>
@@ -98,18 +98,19 @@ export default function FeedbackPage() {
                                 fontWeight: "700",
                                 letterSpacing: "1.5px",
                                 textTransform: "uppercase",
-                                color: "#1e3b2b",
-                                backgroundColor: "rgba(30, 59, 43, 0.08)",
+                                color: "#2460e2",
+                                backgroundColor: "rgba(36, 96, 226, 0.08)",
+                                border: "1px solid rgba(36, 96, 226, 0.2)",
                                 padding: "4px 16px",
                                 borderRadius: "20px",
                                 marginBottom: "14px"
                             }}>
                                 Verified Client Feedback
                             </span>
-                            <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#1e3b2b", marginBottom: "18px", lineHeight: "1.2" }}>
+                            <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#1b2534", marginBottom: "18px", lineHeight: "1.2" }}>
                                 Executive Testimonials &amp; Reviews
                             </h1>
-                            <p style={{ fontSize: "19px", color: "#4a5d51", lineHeight: "1.7", fontStyle: "italic", margin: 0 }}>
+                            <p style={{ fontSize: "19px", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
                                 Hear directly from senior HR leaders, managing directors, and consultants who have elevated their authority, reputation, and career trajectory with Elite Prominence.
                             </p>
 
@@ -117,14 +118,14 @@ export default function FeedbackPage() {
                                 <Link
                                     href="/dashboard"
                                     style={{
-                                        backgroundColor: "#1e3b2b",
-                                        color: "#FAF8F2",
+                                        backgroundColor: "#2460e2",
+                                        color: "#ffffff",
                                         padding: "12px 28px",
                                         borderRadius: "30px",
                                         fontSize: "15px",
                                         fontWeight: "700",
                                         textDecoration: "none",
-                                        boxShadow: "0 4px 14px rgba(30, 59, 43, 0.2)"
+                                        boxShadow: "0 4px 14px rgba(36, 96, 226, 0.25)"
                                     }}
                                 >
                                     Share Your Feedback &rarr;
@@ -132,9 +133,9 @@ export default function FeedbackPage() {
                                 <Link
                                     href="/community"
                                     style={{
-                                        backgroundColor: "transparent",
-                                        color: "#1e3b2b",
-                                        border: "1.5px solid #1e3b2b",
+                                        backgroundColor: "#ffffff",
+                                        color: "#2460e2",
+                                        border: "1.5px solid #2460e2",
                                         padding: "12px 26px",
                                         borderRadius: "30px",
                                         fontSize: "15px",
@@ -149,7 +150,7 @@ export default function FeedbackPage() {
 
                         {/* Reviews Grid */}
                         <div style={{ textAlign: "center", marginBottom: "36px" }}>
-                            <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#1e3b2b", margin: 0 }}>
+                            <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#1b2534", margin: 0 }}>
                                 Client Endorsements &amp; Perspectives
                             </h2>
                         </div>
@@ -163,8 +164,8 @@ export default function FeedbackPage() {
                                     backgroundColor: "#ffffff",
                                     borderRadius: "16px",
                                     padding: "34px",
-                                    border: "1px solid rgba(30, 59, 43, 0.1)",
-                                    boxShadow: "0 6px 24px rgba(30, 59, 43, 0.05)",
+                                    border: "1px solid #e2e8f0",
+                                    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)",
                                     display: "flex",
                                     flexDirection: "column",
                                     justifyContent: "space-between",
@@ -173,15 +174,16 @@ export default function FeedbackPage() {
                                     <div>
                                         {/* Star Rating & Verified Badge */}
                                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px" }}>
-                                            <div style={{ color: "#d97706", fontSize: "17px", letterSpacing: "2px" }}>
+                                            <div style={{ color: "#f59e0b", fontSize: "17px", letterSpacing: "2px" }}>
                                                 {'★'.repeat(rev.rating)}{'☆'.repeat(5 - rev.rating)}
                                             </div>
                                             <span style={{
                                                 fontSize: "11px",
                                                 fontWeight: "700",
                                                 textTransform: "uppercase",
-                                                color: "#1e3b2b",
-                                                backgroundColor: "rgba(30, 59, 43, 0.08)",
+                                                color: "#2460e2",
+                                                backgroundColor: "rgba(36, 96, 226, 0.08)",
+                                                border: "1px solid rgba(36, 96, 226, 0.2)",
                                                 padding: "3px 10px",
                                                 borderRadius: "12px"
                                             }}>
@@ -193,7 +195,7 @@ export default function FeedbackPage() {
                                         <p style={{
                                             fontSize: "16px",
                                             lineHeight: "1.7",
-                                            color: "#2d3748",
+                                            color: "#334155",
                                             margin: "0 0 24px",
                                             fontStyle: "normal"
                                         }}>
@@ -202,11 +204,11 @@ export default function FeedbackPage() {
                                     </div>
 
                                     {/* Author Signature */}
-                                    <div style={{ borderTop: "1px solid #f0eee6", paddingTop: "18px" }}>
-                                        <h3 style={{ margin: "0 0 4px", fontSize: "18px", fontWeight: "700", color: "#1e3b2b" }}>
+                                    <div style={{ borderTop: "1px solid #edf2f7", paddingTop: "18px" }}>
+                                        <h3 style={{ margin: "0 0 4px", fontSize: "18px", fontWeight: "700", color: "#1b2534" }}>
                                             {rev.full_name}
                                         </h3>
-                                        <div style={{ fontSize: "14px", color: "#59606a", fontStyle: "italic" }}>
+                                        <div style={{ fontSize: "14px", color: "#64748b", fontStyle: "italic" }}>
                                             {rev.role_title}
                                         </div>
                                     </div>

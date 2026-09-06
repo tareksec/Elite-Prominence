@@ -136,8 +136,8 @@ export default function CommunityPage() {
         <div className="boxed_wrapper">
             <Layout headerStyle={1} footerStyle={1}>
                 <section style={{
-                    backgroundColor: "#FAF8F2",
-                    padding: "100px 0 90px",
+                    backgroundColor: "#f8fafd",
+                    padding: "100px 0 100px",
                     minHeight: "80vh",
                     fontFamily: "var(--primary-font)"
                 }}>
@@ -152,18 +152,19 @@ export default function CommunityPage() {
                             fontWeight: "700",
                             letterSpacing: "1.5px",
                             textTransform: "uppercase",
-                            color: "#1e3b2b",
-                            backgroundColor: "rgba(30, 59, 43, 0.08)",
+                            color: "#2460e2",
+                            backgroundColor: "rgba(36, 96, 226, 0.08)",
+                            border: "1px solid rgba(36, 96, 226, 0.2)",
                             padding: "4px 16px",
                             borderRadius: "20px",
                             marginBottom: "14px"
                         }}>
                             Executive Directory
                         </span>
-                        <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#1e3b2b", marginBottom: "18px", lineHeight: "1.2" }}>
+                        <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#1b2534", marginBottom: "18px", lineHeight: "1.2" }}>
                             Executive Community &amp; Contributors
                         </h1>
-                        <p style={{ fontSize: "19px", color: "#4a5d51", lineHeight: "1.7", fontStyle: "italic", margin: 0 }}>
+                        <p style={{ fontSize: "19px", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
                             Explore perspectives and verified profiles of industry leaders, chief people officers, and advisors who contribute to the Elite Prominence network.
                         </p>
 
@@ -171,14 +172,14 @@ export default function CommunityPage() {
                             <Link
                                 href="/signup"
                                 style={{
-                                    backgroundColor: "#1e3b2b",
-                                    color: "#FAF8F2",
+                                    backgroundColor: "#2460e2",
+                                    color: "#ffffff",
                                     padding: "12px 28px",
                                     borderRadius: "30px",
                                     fontSize: "15px",
                                     fontWeight: "700",
                                     textDecoration: "none",
-                                    boxShadow: "0 4px 14px rgba(30, 59, 43, 0.2)"
+                                    boxShadow: "0 4px 14px rgba(36, 96, 226, 0.25)"
                                 }}
                             >
                                 Join the Network &rarr;
@@ -188,7 +189,7 @@ export default function CommunityPage() {
 
                     {/* Member Cards Grid */}
                     <div style={{ textAlign: "center", marginBottom: "36px" }}>
-                        <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#1e3b2b", margin: 0 }}>
+                        <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#1b2534", margin: 0 }}>
                             Directory of Executive Contributors
                         </h2>
                     </div>
@@ -203,16 +204,16 @@ export default function CommunityPage() {
                                 backgroundColor: "#ffffff",
                                 borderRadius: "16px",
                                 padding: "34px",
-                                border: "1px solid rgba(30, 59, 43, 0.1)",
-                                boxShadow: "0 6px 24px rgba(30, 59, 43, 0.05)"
+                                border: "1px solid #e2e8f0",
+                                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)"
                             }}>
                                 <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "18px" }}>
                                     <div style={{
                                         width: "56px",
                                         height: "56px",
                                         borderRadius: "50%",
-                                        backgroundColor: "#1e3b2b",
-                                        color: "#FAF8F2",
+                                        backgroundColor: "#2460e2",
+                                        color: "#ffffff",
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "center",
@@ -223,10 +224,10 @@ export default function CommunityPage() {
                                         {member.full_name?.charAt(0) || 'E'}
                                     </div>
                                     <div>
-                                        <h3 style={{ margin: "0 0 4px", fontSize: "20px", fontWeight: "700", color: "#1e3b2b" }}>
+                                        <h3 style={{ margin: "0 0 4px", fontSize: "20px", fontWeight: "700", color: "#1b2534" }}>
                                             {member.full_name}
                                         </h3>
-                                        <div style={{ fontSize: "14px", color: "#59606a", fontStyle: "italic" }}>
+                                        <div style={{ fontSize: "14px", color: "#64748b", fontStyle: "italic" }}>
                                             {member.role_title || 'Executive Leader'}
                                         </div>
                                     </div>
@@ -237,9 +238,9 @@ export default function CommunityPage() {
                                     gap: "12px",
                                     marginBottom: "22px",
                                     fontSize: "13px",
-                                    color: "#1e3b2b",
-                                    borderTop: "1px solid #f0eee6",
-                                    borderBottom: "1px solid #f0eee6",
+                                    color: "#475569",
+                                    borderTop: "1px solid #edf2f7",
+                                    borderBottom: "1px solid #edf2f7",
                                     padding: "10px 0"
                                 }}>
                                     <span>
@@ -253,7 +254,7 @@ export default function CommunityPage() {
 
                                 {member.articles && member.articles.length > 0 ? (
                                     <div>
-                                        <div style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#72777a", marginBottom: "10px" }}>
+                                        <div style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#64748b", marginBottom: "10px" }}>
                                             Featured Writing:
                                         </div>
                                         {member.articles.map(art => (
@@ -261,26 +262,26 @@ export default function CommunityPage() {
                                                 key={art.id} 
                                                 onClick={() => setSelectedArticle({ ...art, author: member.full_name, role_title: member.role_title })}
                                                 style={{
-                                                    backgroundColor: "#FAF8F2",
+                                                    backgroundColor: "#f8fafd",
                                                     padding: "14px 16px",
                                                     borderRadius: "8px",
                                                     cursor: "pointer",
                                                     marginBottom: "8px",
                                                     transition: "all 0.2s ease",
-                                                    border: "1px solid rgba(30,59,43,0.08)"
+                                                    border: "1px solid #e2e8f0"
                                                 }}
                                             >
-                                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#1e3b2b", marginBottom: "2px" }}>
+                                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#2460e2", marginBottom: "2px" }}>
                                                     {art.category}
                                                 </div>
-                                                <div style={{ fontSize: "15px", fontWeight: "700", color: "#1e3b2b", lineHeight: "1.4" }}>
+                                                <div style={{ fontSize: "15px", fontWeight: "700", color: "#1b2534", lineHeight: "1.4" }}>
                                                     {art.title} &rarr;
                                                 </div>
                                             </div>
                                         ))}
                                     </div>
                                 ) : (
-                                    <div style={{ fontSize: "14px", color: "#8a9097", fontStyle: "italic" }}>
+                                    <div style={{ fontSize: "14px", color: "#94a3b8", fontStyle: "italic" }}>
                                         Verified executive client of Elite Prominence.
                                     </div>
                                 )}
@@ -296,7 +297,8 @@ export default function CommunityPage() {
                             left: 0,
                             right: 0,
                             bottom: 0,
-                            backgroundColor: "rgba(0, 0, 0, 0.6)",
+                            backgroundColor: "rgba(13, 20, 36, 0.75)",
+                            backdropFilter: "blur(4px)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -312,7 +314,7 @@ export default function CommunityPage() {
                                 overflowY: "auto",
                                 padding: "40px",
                                 position: "relative",
-                                boxShadow: "0 20px 60px rgba(0,0,0,0.3)"
+                                boxShadow: "0 20px 60px rgba(0,0,0,0.25)"
                             }}>
                                 <button
                                     onClick={() => setSelectedArticle(null)}
@@ -320,8 +322,9 @@ export default function CommunityPage() {
                                         position: "absolute",
                                         top: "20px",
                                         right: "20px",
-                                        background: "#FAF8F2",
-                                        border: "1px solid #dcdad3",
+                                        background: "#f1f5f9",
+                                        border: "1px solid #e2e8f0",
+                                        color: "#475569",
                                         borderRadius: "50%",
                                         width: "36px",
                                         height: "36px",
@@ -340,8 +343,9 @@ export default function CommunityPage() {
                                     fontSize: "12px",
                                     fontWeight: "700",
                                     textTransform: "uppercase",
-                                    color: "#1e3b2b",
-                                    backgroundColor: "rgba(30, 59, 43, 0.08)",
+                                    color: "#2460e2",
+                                    backgroundColor: "rgba(36, 96, 226, 0.08)",
+                                    border: "1px solid rgba(36, 96, 226, 0.2)",
                                     padding: "3px 12px",
                                     borderRadius: "12px",
                                     display: "inline-block",
@@ -350,15 +354,15 @@ export default function CommunityPage() {
                                     {selectedArticle.category}
                                 </span>
 
-                                <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#1e3b2b", marginBottom: "8px", lineHeight: "1.3" }}>
+                                <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#1b2534", marginBottom: "8px", lineHeight: "1.3" }}>
                                     {selectedArticle.title}
                                 </h2>
 
-                                <div style={{ fontSize: "14px", color: "#59606a", marginBottom: "24px", borderBottom: "1px solid #f0eee6", paddingBottom: "16px" }}>
+                                <div style={{ fontSize: "14px", color: "#64748b", marginBottom: "24px", borderBottom: "1px solid #edf2f7", paddingBottom: "16px" }}>
                                     By <strong>{selectedArticle.author}</strong> ({selectedArticle.role_title}) • {new Date(selectedArticle.published_at).toLocaleDateString()}
                                 </div>
 
-                                <div style={{ fontSize: "16px", lineHeight: "1.8", color: "#2d3748", whiteSpace: "pre-wrap" }}>
+                                <div style={{ fontSize: "16px", lineHeight: "1.8", color: "#334155", whiteSpace: "pre-wrap" }}>
                                     {selectedArticle.body}
                                 </div>
                             </div>
