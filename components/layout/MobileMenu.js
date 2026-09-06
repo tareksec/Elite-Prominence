@@ -51,10 +51,20 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                 <Link
                                     href="/contact"
                                     onClick={handleMobileMenu}
-                                    className="btn_style_one"
-                                    style={{ display: "block", textAlign: "center", padding: "12px 20px" }}
+                                    style={{
+                                        display: "block",
+                                        textAlign: "center",
+                                        padding: "13px 20px",
+                                        borderRadius: "9999px",
+                                        background: "linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)",
+                                        color: "#ffffff",
+                                        fontSize: "15px",
+                                        fontWeight: "700",
+                                        textDecoration: "none",
+                                        boxShadow: "0 4px 15px rgba(236, 72, 153, 0.35)"
+                                    }}
                                 >
-                                    Book a Strategy Call
+                                    Book a Strategy Call &rarr;
                                 </Link>
                             </div>
                         </div>
