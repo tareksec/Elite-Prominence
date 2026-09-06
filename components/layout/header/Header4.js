@@ -1,8 +1,7 @@
 import Link from "next/link"
 import Menu from "../Menu"
 import MobileMenu from "../MobileMenu"
-
-
+import HeaderAuth from "@/components/elements/HeaderAuth"
 
 export default function Header4({ scroll, handleMobileMenu, handlePopup }) {
     
@@ -35,8 +34,9 @@ export default function Header4({ scroll, handleMobileMenu, handlePopup }) {
                                 </div>
                             </nav>
                         </div>
-                        <div className="header_right_content">
+                        <div className="header_right_content" style={{ display: "flex", alignItems: "center" }}>
                             <button className="search-toggler" onClick={handlePopup}><i className="icon-50"></i></button>
+                            <HeaderAuth />
                             <div className="link-btn"><Link href="/contact" className="btn_style_one">Book a Strategy Call</Link></div>
                         </div> 
                     </div>
@@ -62,8 +62,9 @@ export default function Header4({ scroll, handleMobileMenu, handlePopup }) {
                                 </div>
                             </nav>
                         </div>
-                        <div className="header_right_content">
+                        <div className="header_right_content" style={{ display: "flex", alignItems: "center" }}>
                             <button className="search-toggler" onClick={handlePopup}><i className="icon-50"></i></button>
+                            <HeaderAuth />
                             <div className="link-btn"><Link href="/contact" className="btn_style_one">Book a Strategy Call</Link></div>
                         </div> 
                     </div>            

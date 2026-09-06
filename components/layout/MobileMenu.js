@@ -1,6 +1,7 @@
-'use client'
 import Link from "next/link"
 import { useState } from "react"
+import HeaderAuth from "@/components/elements/HeaderAuth"
+
 export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar }) {
     const [isActive, setIsActive] = useState({
         status: false,
@@ -38,14 +39,25 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                 <li><Link href="/about" onClick={handleMobileMenu}>About</Link></li>
                                 <li><Link href="/services" onClick={handleMobileMenu}>Services</Link></li>
                                 <li><Link href="/pricing" onClick={handleMobileMenu}>Pricing</Link></li>
-                                <li><Link href="/feedback" onClick={handleMobileMenu}>Feedback</Link></li>
-                                <li><Link href="/community" onClick={handleMobileMenu}>Community</Link></li>
+                                <li><Link href="/feedback" onClick={handleMobileMenu}>Feedback &amp; Reviews</Link></li>
+                                <li><Link href="/community" onClick={handleMobileMenu}>Executive Directory</Link></li>
                                 <li><Link href="/blog-grid" onClick={handleMobileMenu}>Blog</Link></li>
                                 <li><Link href="/contact" onClick={handleMobileMenu}>Contact</Link></li>
-                                <li><Link href="/dashboard" onClick={handleMobileMenu} style={{ color: "#1e3b2b", fontWeight: "700" }}>Member Portal</Link></li>
                             </ul>
-                        </div>
 
+                            <HeaderAuth isMobile={true} onMobileNavClick={handleMobileMenu} />
+
+                            <div style={{ marginTop: "16px", marginBottom: "20px" }}>
+                                <Link
+                                    href="/contact"
+                                    onClick={handleMobileMenu}
+                                    className="btn_style_one"
+                                    style={{ display: "block", textAlign: "center", padding: "12px 20px" }}
+                                >
+                                    Book a Strategy Call
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                     {/*Social Links*/}
                     <div className="contact-info">
