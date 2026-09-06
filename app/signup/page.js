@@ -1,0 +1,266 @@
+'use client'
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import Layout from '@/components/layout/Layout'
+import { getSupabaseBrowserClient } from '@/lib/supabase/client'
+import { isSupabaseConfigured } from '@/lib/supabase/config'
+import SupabaseSetupNotice from '@/components/elements/SupabaseSetupNotice'
+
+export default function SignupPage() {
+    const router = useRouter()
+    const [fullName, setFullName] = useState('')
+    const [roleTitle, setRoleTitle] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [loading, setLoading] = useState(false)
+    const [errorMsg, setErrorMsg] = useState('')
+    const [successMsg, setSuccessMsg] = useState('')
+
+    const configured = isSupabaseConfigured()
+
+    const handleSignup = async (e) => {
+        e.preventDefault()
+        setErrorMsg('')
+        setSuccessMsg('')
+
+        if (!configured) {
+            setErrorMsg('Supabase is not configured yet. Please add your credentials to .env.local.')
+            return
+        }
+
+        setLoading(true)
+        try {
+            const supabase = getSupabaseBrowserClient()
+            const { data, error } = await supabase.auth.signUp({
+                email,
+                password,
+                options: {
+                    data: {
+                        full_name: fullName,
+                        role_title: roleTitle,
+                    },
+                },
+            })
+
+            if (error) {
+                setErrorMsg(error.message)
+            } else if (data?.user) {
+                // If email confirmation is enabled, notify user
+                if (data.session) {
+                    router.push('/dashboard')
+                } else {
+                    setSuccessMsg('Account created successfully! Check your email to confirm your registration, or proceed to sign in.')
+                }
+            }
+        } catch (err) {
+            setErrorMsg(err.message || 'An unexpected error occurred during signup.')
+        } finally {
+            setLoading(false)
+        }
+    }
+
+    return (
+        <div className="boxed_wrapper">
+            <Layout headerStyle={1} footerStyle={1}>
+                <section className="auth_section" style={{
+                backgroundColor: "#FAF8F2",
+                padding: "130px 0 90px",
+                minHeight: "85vh",
+                display: "flex",
+                alignItems: "center"
+            }}>
+                <div className="container">
+                    <div style={{ maxWidth: "520px", margin: "0 auto" }}>
+                        {!configured && <SupabaseSetupNotice feature="User Signup & Authentication" />}
+
+                        <div style={{
+                            backgroundColor: "#ffffff",
+                            borderRadius: "16px",
+                            padding: "44px 40px",
+                            boxShadow: "0 10px 40px rgba(30, 59, 43, 0.08)",
+                            border: "1px solid rgba(30, 59, 43, 0.1)",
+                            fontFamily: "var(--primary-font)"
+                        }}>
+                            <div style={{ textAlign: "center", marginBottom: "32px" }}>
+                                <span style={{
+                                    display: "inline-block",
+                                    fontSize: "13px",
+                                    fontWeight: "700",
+                                    letterSpacing: "1.5px",
+                                    textTransform: "uppercase",
+                                    color: "#1e3b2b",
+                                    backgroundColor: "rgba(30, 59, 43, 0.08)",
+                                    padding: "4px 14px",
+                                    borderRadius: "20px",
+                                    marginBottom: "12px"
+                                }}>
+                                    Executive Community
+                                </span>
+                                <h2 style={{ fontSize: "32px", fontWeight: "700", color: "#1e3b2b", margin: 0 }}>
+                                    Create Your Account
+                                </h2>
+                                <p style={{ fontSize: "16px", color: "#59606a", marginTop: "8px", fontStyle: "italic" }}>
+                                    Join the Elite Prominence executive network to submit testimonials and thought leadership articles.
+                                </p>
+                            </div>
+
+                            {errorMsg && (
+                                <div style={{
+                                    backgroundColor: "#fdf2f2",
+                                    color: "#b91c1c",
+                                    padding: "12px 16px",
+                                    borderRadius: "8px",
+                                    fontSize: "14px",
+                                    marginBottom: "20px",
+                                    border: "1px solid #fca5a5"
+                                }}>
+                                    {errorMsg}
+                                </div>
+                            )}
+
+                            {successMsg && (
+                                <div style={{
+                                    backgroundColor: "#f0fdf4",
+                                    color: "#15803d",
+                                    padding: "12px 16px",
+                                    borderRadius: "8px",
+                                    fontSize: "14px",
+                                    marginBottom: "20px",
+                                    border: "1px solid #86efac"
+                                }}>
+                                    {successMsg}
+                                </div>
+                            )}
+
+                            <form onSubmit={handleSignup}>
+                                <div style={{ marginBottom: "18px" }}>
+                                    <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#1e3b2b", marginBottom: "6px" }}>
+                                        Full Name *
+                                    </label>
+                                    <input
+                                        type="text"
+                                        required
+                                        value={fullName}
+                                        onChange={(e) => setFullName(e.target.value)}
+                                        placeholder="e.g. Sarah Jenkins"
+                                        style={{
+                                            width: "100%",
+                                            height: "48px",
+                                            border: "1.5px solid #dcdad3",
+                                            borderRadius: "8px",
+                                            padding: "0 16px",
+                                            fontSize: "15px",
+                                            fontFamily: "var(--primary-font)",
+                                            outline: "none",
+                                            transition: "all 0.2s"
+                                        }}
+                                    />
+                                </div>
+
+                                <div style={{ marginBottom: "18px" }}>
+                                    <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#1e3b2b", marginBottom: "6px" }}>
+                                        Title / Organization (Optional)
+                                    </label>
+                                    <input
+                                        type="text"
+                                        value={roleTitle}
+                                        onChange={(e) => setRoleTitle(e.target.value)}
+                                        placeholder="e.g. Chief People Officer at FinCorp"
+                                        style={{
+                                            width: "100%",
+                                            height: "48px",
+                                            border: "1.5px solid #dcdad3",
+                                            borderRadius: "8px",
+                                            padding: "0 16px",
+                                            fontSize: "15px",
+                                            fontFamily: "var(--primary-font)",
+                                            outline: "none"
+                                        }}
+                                    />
+                                </div>
+
+                                <div style={{ marginBottom: "18px" }}>
+                                    <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#1e3b2b", marginBottom: "6px" }}>
+                                        Email Address *
+                                    </label>
+                                    <input
+                                        type="email"
+                                        required
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        placeholder="sarah@executive.com"
+                                        style={{
+                                            width: "100%",
+                                            height: "48px",
+                                            border: "1.5px solid #dcdad3",
+                                            borderRadius: "8px",
+                                            padding: "0 16px",
+                                            fontSize: "15px",
+                                            fontFamily: "var(--primary-font)",
+                                            outline: "none"
+                                        }}
+                                    />
+                                </div>
+
+                                <div style={{ marginBottom: "26px" }}>
+                                    <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#1e3b2b", marginBottom: "6px" }}>
+                                        Password *
+                                    </label>
+                                    <input
+                                        type="password"
+                                        required
+                                        minLength={6}
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                        placeholder="Minimum 6 characters"
+                                        style={{
+                                            width: "100%",
+                                            height: "48px",
+                                            border: "1.5px solid #dcdad3",
+                                            borderRadius: "8px",
+                                            padding: "0 16px",
+                                            fontSize: "15px",
+                                            fontFamily: "var(--primary-font)",
+                                            outline: "none"
+                                        }}
+                                    />
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    style={{
+                                        width: "100%",
+                                        height: "50px",
+                                        backgroundColor: "#1e3b2b",
+                                        color: "#FAF8F2",
+                                        border: "none",
+                                        borderRadius: "30px",
+                                        fontSize: "16px",
+                                        fontWeight: "700",
+                                        fontFamily: "var(--primary-font)",
+                                        cursor: loading ? "not-allowed" : "pointer",
+                                        opacity: loading ? 0.7 : 1,
+                                        transition: "all 0.3s ease",
+                                        boxShadow: "0 6px 20px rgba(30, 59, 43, 0.2)"
+                                    }}
+                                >
+                                    {loading ? 'Creating Account...' : 'Complete Registration →'}
+                                </button>
+                            </form>
+
+                            <div style={{ textAlign: "center", marginTop: "24px", fontSize: "15px", color: "#59606a" }}>
+                                Already have an account?{' '}
+                                <Link href="/login" style={{ color: "#1e3b2b", fontWeight: "700", textDecoration: "underline" }}>
+                                    Sign in here
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </Layout>
+        </div>
+    )
+}
