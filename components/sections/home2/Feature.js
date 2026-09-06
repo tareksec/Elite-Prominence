@@ -49,7 +49,7 @@ export default function Feature() {
                             <ul className="accordion_box">
                                 <li className="accordion block" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
                                     <div className={isActive.key == 1 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(1)}>                        
-                                        <h3>1. Digital HQ (Website)</h3>
+                                        <h3>Pillar 1 — Digital HQ (Website)</h3>
                                         <div className="icon-box"></div>
                                     </div>
                                     <div className={isActive.key == 1 ? "acc-content current" : "acc-content"}>
@@ -60,7 +60,7 @@ export default function Feature() {
                                 </li>
                                 <li className="accordion block" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="650">
                                     <div className={isActive.key == 2 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(2)}>                        
-                                        <h3>2. Google & Reputation</h3>
+                                        <h3>Pillar 2 — Google & Reputation</h3>
                                         <div className="icon-box"></div>
                                     </div>
                                     <div className={isActive.key == 2 ? "acc-content current" : "acc-content"}>
@@ -71,7 +71,7 @@ export default function Feature() {
                                 </li>
                                 <li className="accordion block" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="700">
                                     <div className={isActive.key == 3 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(3)}>                       
-                                        <h3>3. Social Visibility</h3>
+                                        <h3>Pillar 3 — Social Visibility</h3>
                                         <div className="icon-box"></div>
                                     </div>
                                     <div className={isActive.key == 3 ? "acc-content current" : "acc-content"}>
