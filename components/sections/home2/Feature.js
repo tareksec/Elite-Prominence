@@ -8,7 +8,10 @@ const pillarData = {
         image: "/assets/images/elite/pillar_digital_hq.jpg",
         alt: "Personal website design and digital HQ for executive personal branding",
         icon: "icon-33",
-        summary: "A personal website that establishes your digital brand identity, showcasing your bio, expertise, case studies, and career milestones — the definitive hub that represents you everywhere."
+        summary: "A personal website that establishes your digital brand identity, showcasing your bio, expertise, case studies, and career milestones — the definitive hub that represents you everywhere.",
+        metric: "Avg. 45 Days to Page 1",
+        metricDetail: "100% Owned Digital Real Estate",
+        proofPoint: "Custom executive domain, boardroom CV, and speaker kit eliminating reliance on third-party algorithms."
     },
     2: {
         title: "Pillar 2 — Google & Reputation",
@@ -16,7 +19,10 @@ const pillarData = {
         image: "/assets/images/elite/pillar_google_reputation.jpg",
         alt: "Google reputation management and page-one executive standing",
         icon: "fab fa-google",
-        summary: "When someone searches your name, page one should reflect your executive standing — not silence or outdated noise. We manage your online reputation with owned assets and strategic media coverage so search results validate your authority immediately."
+        summary: "When someone searches your name, page one should reflect your executive standing — not silence or outdated noise. We manage your online reputation with owned assets and strategic media coverage so search results validate your authority immediately.",
+        metric: "+340% Board Inquiries",
+        metricDetail: "Top-3 Search Placement Guaranteed",
+        proofPoint: "Google Knowledge Panel establishment and strategic publication syndication that command immediate authority."
     },
     3: {
         title: "Pillar 3 — Social Visibility",
@@ -24,7 +30,10 @@ const pillarData = {
         image: "/assets/images/elite/pillar_social_visibility.jpg",
         alt: "LinkedIn branding and executive ghostwriting for HR leaders",
         icon: "fab fa-linkedin-in",
-        summary: "Executive ghostwriting and content creation aligned with an intentional brand strategy, keeping your thought leadership active on LinkedIn so you stay visible without becoming a full-time content creator."
+        summary: "Executive ghostwriting and content creation aligned with an intentional brand strategy, keeping your thought leadership active on LinkedIn so you stay visible without becoming a full-time content creator.",
+        metric: "45K+ Organic Impressions",
+        metricDetail: "0 Hours Weekly Time Drain",
+        proofPoint: "Discreet ghostwriting matching your authentic tone, engaging Fortune 500 decision-makers every week."
     }
 }
 
@@ -81,6 +90,33 @@ export default function Feature() {
                                     }}>
                                         <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#10b981", display: "inline-block" }}></span>
                                         {currentPillar.badge}
+                                    </div>
+
+                                    {/* Active Pillar Metric Overlay Banner */}
+                                    <div style={{
+                                        position: "absolute",
+                                        bottom: "18px",
+                                        left: "18px",
+                                        right: "18px",
+                                        background: "rgba(22, 45, 32, 0.92)",
+                                        backdropFilter: "blur(12px)",
+                                        borderRadius: "12px",
+                                        padding: "14px 18px",
+                                        color: "#ffffff",
+                                        border: "1px solid rgba(210, 157, 43, 0.4)",
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        zIndex: 3
+                                    }}>
+                                        <div>
+                                            <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "1px", color: "#D29D2B", fontWeight: "700" }}>Verified Outcome</div>
+                                            <div style={{ fontSize: "15px", fontWeight: "700" }}>{currentPillar.metric}</div>
+                                        </div>
+                                        <div style={{ textAlign: "right" }}>
+                                            <div style={{ fontSize: "11px", color: "#cbd5e1" }}>Proof Point</div>
+                                            <div style={{ fontSize: "13px", fontWeight: "600", color: "#f8fafc" }}>{currentPillar.metricDetail}</div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -213,6 +249,14 @@ export default function Feature() {
                                         <div className={isActive.key == 1 ? "acc-content current" : "acc-content"} style={{ display: isActive.key == 1 ? "block" : "none" }}>
                                             <div className="text">
                                                 <p>A personal website that establishes your digital brand identity, showcasing your bio, expertise, case studies, and career milestones — the definitive hub that represents you everywhere.</p>
+                                                <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                                                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#166534", backgroundColor: "#f0fdf4", padding: "4px 10px", borderRadius: "6px", border: "1px solid #bbf7d0" }}>
+                                                        ✓ 45-Day Launch to Page 1
+                                                    </span>
+                                                    <span style={{ fontSize: "12px", fontWeight: "600", color: "#475569", backgroundColor: "#f8fafc", padding: "4px 10px", borderRadius: "6px", border: "1px solid #e2e8f0" }}>
+                                                        100% Owned Domain Authority
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -224,6 +268,14 @@ export default function Feature() {
                                         <div className={isActive.key == 2 ? "acc-content current" : "acc-content"} style={{ display: isActive.key == 2 ? "block" : "none" }}>
                                             <div className="text">
                                                 <p>When someone searches your name, page one should reflect your executive standing — not silence or outdated noise. We manage your online reputation with owned assets and strategic media coverage so search results validate your authority immediately.</p>
+                                                <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                                                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#166534", backgroundColor: "#f0fdf4", padding: "4px 10px", borderRadius: "6px", border: "1px solid #bbf7d0" }}>
+                                                        ✓ +340% Inbound Board Inquiries
+                                                    </span>
+                                                    <span style={{ fontSize: "12px", fontWeight: "600", color: "#475569", backgroundColor: "#f8fafc", padding: "4px 10px", borderRadius: "6px", border: "1px solid #e2e8f0" }}>
+                                                        Top-3 Search Placement Guaranteed
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -235,6 +287,14 @@ export default function Feature() {
                                         <div className={isActive.key == 3 ? "acc-content current" : "acc-content"} style={{ display: isActive.key == 3 ? "block" : "none" }}>
                                             <div className="text">
                                                 <p>Executive ghostwriting and content creation aligned with an intentional brand strategy, keeping your thought leadership active on LinkedIn so you stay visible without becoming a full-time content creator.</p>
+                                                <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                                                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#166534", backgroundColor: "#f0fdf4", padding: "4px 10px", borderRadius: "6px", border: "1px solid #bbf7d0" }}>
+                                                        ✓ 45K+ Avg. Organic Reach
+                                                    </span>
+                                                    <span style={{ fontSize: "12px", fontWeight: "600", color: "#475569", backgroundColor: "#f8fafc", padding: "4px 10px", borderRadius: "6px", border: "1px solid #e2e8f0" }}>
+                                                        0 Hours Weekly Time Commitment
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>

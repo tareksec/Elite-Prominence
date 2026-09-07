@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 
 /**
  * ArticleCTA — Mid-article conversion banner
@@ -11,8 +12,10 @@ export default function ArticleCTA({
   headline = 'Ready to Close the Visibility Gap?',
   body = 'Schedule a confidential 20-minute digital presence assessment with our executive branding team.',
   buttonText = 'Book Strategy Call',
-  link = 'https://prominence.agency/contact'
+  link = '/contact'
 }) {
+  const isInternal = link.startsWith('/');
+
   return (
     <aside
       aria-label="Executive digital presence assessment"
@@ -22,9 +25,8 @@ export default function ArticleCTA({
         backgroundColor: '#FFFFFF',
         borderRadius: '14px',
         border: '1px solid #E5E7EB',
-        borderLeft: '5px solid #7C3AED',
-        borderImage: 'linear-gradient(135deg, #7C3AED, #C026A8, #F472B6) 1',
-        boxShadow: '0 8px 30px rgba(124, 58, 237, 0.08), 0 2px 8px rgba(15, 18, 53, 0.04)',
+        borderLeft: '5px solid #162d20',
+        boxShadow: '0 8px 30px rgba(22, 45, 32, 0.08), 0 2px 8px rgba(15, 18, 53, 0.04)',
         position: 'relative',
         overflow: 'hidden'
       }}
@@ -38,7 +40,7 @@ export default function ArticleCTA({
           width: '180px',
           height: '180px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(244, 114, 182, 0.12) 0%, rgba(124, 58, 237, 0.03) 70%, transparent 100%)',
+          background: 'radial-gradient(circle, rgba(210, 157, 43, 0.15) 0%, rgba(22, 45, 32, 0.03) 70%, transparent 100%)',
           pointerEvents: 'none',
           filter: 'blur(16px)'
         }}
@@ -66,7 +68,7 @@ export default function ArticleCTA({
               fontWeight: '700',
               textTransform: 'uppercase',
               letterSpacing: '0.8px',
-              color: '#C026A8',
+              color: '#162d20',
               marginBottom: '8px'
             }}
           >
@@ -75,7 +77,7 @@ export default function ArticleCTA({
                 width: '6px',
                 height: '6px',
                 borderRadius: '50%',
-                backgroundColor: '#C026A8'
+                backgroundColor: '#D29D2B'
               }}
             />
             <span>Elite Prominence Executive Advisory</span>
@@ -85,7 +87,7 @@ export default function ArticleCTA({
             style={{
               fontFamily: "'DM Serif Display', Georgia, serif",
               fontSize: '23px',
-              color: '#0F1235',
+              color: '#162d20',
               lineHeight: 1.25,
               margin: '0 0 8px 0'
             }}
@@ -115,19 +117,19 @@ export default function ArticleCTA({
             }}
           >
             <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2.5">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#162d20" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
               </svg>
               100% Confidential
             </span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2.5">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#162d20" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
               </svg>
               No Obligation
             </span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2.5">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#162d20" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
               </svg>
               20 Minutes
@@ -136,37 +138,53 @@ export default function ArticleCTA({
         </div>
 
         <div style={{ flexShrink: 0 }}>
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '13px 26px',
-              borderRadius: '8px',
-              fontSize: '14px',
-              fontWeight: '700',
-              color: '#FFFFFF',
-              background: 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)',
-              textDecoration: 'none',
-              boxShadow: '0 6px 18px rgba(192, 38, 168, 0.35)',
-              transition: 'all 0.2s ease',
-              whiteSpace: 'nowrap'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 8px 24px rgba(192, 38, 168, 0.5)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 6px 18px rgba(192, 38, 168, 0.35)';
-            }}
-          >
-            <span>{buttonText}</span>
-            <span aria-hidden="true">→</span>
-          </a>
+          {isInternal ? (
+            <Link
+              href={link}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '13px 26px',
+                borderRadius: '8px',
+                fontSize: '14px',
+                fontWeight: '700',
+                color: '#FFFFFF',
+                background: '#162d20',
+                textDecoration: 'none',
+                boxShadow: '0 6px 18px rgba(22, 45, 32, 0.25)',
+                transition: 'all 0.2s ease',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              <span>{buttonText}</span>
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
+          ) : (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '13px 26px',
+                borderRadius: '8px',
+                fontSize: '14px',
+                fontWeight: '700',
+                color: '#FFFFFF',
+                background: '#162d20',
+                textDecoration: 'none',
+                boxShadow: '0 6px 18px rgba(22, 45, 32, 0.25)',
+                transition: 'all 0.2s ease',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              <span>{buttonText}</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          )}
         </div>
       </div>
     </aside>

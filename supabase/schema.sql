@@ -15,8 +15,34 @@ CREATE TABLE IF NOT EXISTS public.profiles (
     role_title TEXT,
     role TEXT CHECK (role IN ('user', 'admin')) DEFAULT 'user' NOT NULL,
     avatar_url TEXT,
+    bio TEXT,
+    company TEXT,
+    industry TEXT,
+    location TEXT,
+    years_of_experience TEXT,
+    linkedin_url TEXT,
+    twitter_url TEXT,
+    website_url TEXT,
+    core_expertise TEXT[] DEFAULT '{}',
+    speaking_topics TEXT,
+    is_public_directory BOOLEAN DEFAULT true,
+    banner_url TEXT,
     created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL
 );
+
+-- Idempotent Column Additions for existing databases:
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS bio TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS company TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS industry TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS location TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS years_of_experience TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS linkedin_url TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS twitter_url TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS website_url TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS core_expertise TEXT[] DEFAULT '{}';
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS speaking_topics TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS is_public_directory BOOLEAN DEFAULT true;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS banner_url TEXT;
 
 -- Index for role lookup
 CREATE INDEX IF NOT EXISTS idx_profiles_role ON public.profiles(role);
@@ -43,6 +69,17 @@ DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
 CREATE TRIGGER on_auth_user_created
     AFTER INSERT ON auth.users
     FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
+
+-- 3b. Backfill any existing users who signed up before this trigger
+INSERT INTO public.profiles (id, full_name, role_title, role)
+SELECT 
+    id, 
+    COALESCE(raw_user_meta_data->>'full_name', split_part(email, '@', 1)), 
+    COALESCE(raw_user_meta_data->>'role_title', ''),
+    'user'
+FROM auth.users
+ON CONFLICT (id) DO NOTHING;
+
 
 -- ==============================================================================
 -- 4. Admin Check Helper Function (Security Definer)
@@ -220,4 +257,47 @@ DROP POLICY IF EXISTS "Only admins can view contact submissions" ON public.conta
 CREATE POLICY "Only admins can view contact submissions"
   ON public.contacts FOR SELECT
   USING (public.is_admin());
+
+-- Only admins can delete contact submissions
+DROP POLICY IF EXISTS "Only admins can delete contact submissions" ON public.contacts;
+CREATE POLICY "Only admins can delete contact submissions"
+  ON public.contacts FOR DELETE
+  USING (public.is_admin());
+
+-- Admins can delete any user profile
+DROP POLICY IF EXISTS "Admins can delete any profile" ON public.profiles;
+CREATE POLICY "Admins can delete any profile"
+  ON public.profiles FOR DELETE
+  USING (public.is_admin());
+
+-- ==============================================================================
+-- 13. Site Settings Table (Live Announcement & Live Config)
+-- ==============================================================================
+CREATE TABLE IF NOT EXISTS public.site_settings (
+  key TEXT PRIMARY KEY,
+  value JSONB NOT NULL,
+  updated_at TIMESTAMPTZ DEFAULT NOW() NOT NULL
+);
+
+ALTER TABLE public.site_settings ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Public can read site settings" ON public.site_settings;
+CREATE POLICY "Public can read site settings"
+  ON public.site_settings FOR SELECT
+  TO anon, authenticated
+  USING (true);
+
+DROP POLICY IF EXISTS "Admins can update site settings" ON public.site_settings;
+CREATE POLICY "Admins can update site settings"
+  ON public.site_settings FOR ALL
+  USING (public.is_admin())
+  WITH CHECK (public.is_admin());
+
+-- Seed initial default settings
+INSERT INTO public.site_settings (key, value)
+VALUES 
+  ('whatsapp_number', '"8801645441584"'::jsonb),
+  ('announcement', '{"enabled": false, "text": "Elite Prominence is now accepting applications for the Q4 Executive Cohort.", "link": "/contact", "bgColor": "#162d20"}'::jsonb)
+ON CONFLICT (key) DO NOTHING;
+
 

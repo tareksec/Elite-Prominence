@@ -103,7 +103,7 @@ export default function CommunityPage() {
                 // Fetch profiles for these users
                 const { data: profiles } = await supabase
                     .from('profiles')
-                    .select('id, full_name, role_title')
+                    .select('id, full_name, role_title, company, industry, location, core_expertise, is_public_directory')
                     .in('id', Array.from(userIds))
 
                 if (profiles && profiles.length > 0) {
@@ -114,6 +114,10 @@ export default function CommunityPage() {
                             id: p.id,
                             full_name: p.full_name,
                             role_title: p.role_title,
+                            company: p.company,
+                            industry: p.industry,
+                            location: p.location,
+                            core_expertise: p.core_expertise,
                             approved_articles_count: userArts.length,
                             approved_reviews_count: userRevs.length,
                             articles: userArts
@@ -233,7 +237,7 @@ export default function CommunityPage() {
                                             {member.full_name}
                                         </h3>
                                         <div style={{ fontSize: "14px", color: "#64748b", fontStyle: "italic" }}>
-                                            {member.role_title || 'Executive Leader'}
+                                            {member.role_title || 'Executive Leader'} {member.company ? `• ${member.company}` : ''}
                                         </div>
                                     </div>
                                 </div>
@@ -241,7 +245,7 @@ export default function CommunityPage() {
                                 <div style={{
                                     display: "flex",
                                     gap: "12px",
-                                    marginBottom: "22px",
+                                    marginBottom: "16px",
                                     fontSize: "13px",
                                     color: "#475569",
                                     borderTop: "1px solid #edf2f7",
@@ -256,20 +260,26 @@ export default function CommunityPage() {
                                     <span>
                                         <strong>{member.approved_reviews_count}</strong> {member.approved_reviews_count === 1 ? 'Endorsement' : 'Endorsements'}
                                     </span>
+                                    {member.location && (
+                                        <>
+                                            <span>•</span>
+                                            <span>📍 {member.location}</span>
+                                        </>
+                                    )}
                                 </div>
 
                                 {member.articles && member.articles.length > 0 ? (
-                                    <div>
+                                    <div style={{ marginBottom: "18px" }}>
                                         <div style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#64748b", marginBottom: "10px" }}>
                                             Featured Writing:
                                         </div>
-                                        {member.articles.map(art => (
+                                        {member.articles.slice(0, 2).map(art => (
                                             <div 
                                                 key={art.id} 
                                                 onClick={() => setSelectedArticle({ ...art, author: member.full_name, role_title: member.role_title })}
                                                 style={{
                                                     backgroundColor: "#f8fafd",
-                                                    padding: "14px 16px",
+                                                    padding: "12px 14px",
                                                     borderRadius: "8px",
                                                     cursor: "pointer",
                                                     marginBottom: "8px",
@@ -277,20 +287,37 @@ export default function CommunityPage() {
                                                     border: "1px solid #e2e8f0"
                                                 }}
                                             >
-                                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#7c3aed", marginBottom: "2px" }}>
+                                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#162d20", marginBottom: "2px" }}>
                                                     {art.category}
                                                 </div>
-                                                <div style={{ fontSize: "15px", fontWeight: "700", color: "#1b2534", lineHeight: "1.4" }}>
+                                                <div style={{ fontSize: "14px", fontWeight: "700", color: "#1b2534", lineHeight: "1.4" }}>
                                                     {art.title} →
                                                 </div>
                                             </div>
                                         ))}
                                     </div>
                                 ) : (
-                                    <div style={{ fontSize: "14px", color: "#94a3b8", fontStyle: "italic" }}>
-                                        Verified executive client of Elite Prominence.
+                                    <div style={{ fontSize: "14px", color: "#94a3b8", fontStyle: "italic", marginBottom: "18px" }}>
+                                        Verified executive member of Elite Prominence Network.
                                     </div>
                                 )}
+
+                                <div style={{ borderTop: "1px solid #edf2f7", paddingTop: "14px" }}>
+                                    <Link
+                                        href={`/community/${member.id}`}
+                                        style={{
+                                            color: "#162d20",
+                                            fontWeight: "800",
+                                            fontSize: "14px",
+                                            textDecoration: "none",
+                                            display: "inline-flex",
+                                            alignItems: "center",
+                                            gap: "6px"
+                                        }}
+                                    >
+                                        View Full Executive Profile & Articles &rarr;
+                                    </Link>
+                                </div>
                             </div>
                         ))}
                     </div>

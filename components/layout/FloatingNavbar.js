@@ -105,7 +105,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
         return false
     }
 
-    const isMoreActive = pathname?.startsWith('/about') || pathname?.startsWith('/feedback') || pathname?.startsWith('/community')
+    const isMoreActive = pathname?.startsWith('/about') || pathname?.startsWith('/feedback') || pathname?.startsWith('/community') || pathname?.startsWith('/faq')
 
     return (
         <header
@@ -179,7 +179,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                 </div>
 
                 {/* 2. Nav Links (Center-aligned, desktop only) */}
-                <nav className="desktop_nav_links" style={{ margin: '0 auto' }}>
+                <nav className="desktop_nav_links" aria-label="Desktop Primary Navigation" style={{ margin: '0 auto' }}>
                     <ul
                         style={{
                             display: 'flex',
@@ -370,7 +370,24 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                         }}
                                         className="more_dropdown_item"
                                     >
-                                        Executive Community
+                                        Executive Directory
+                                    </Link>
+                                    <Link
+                                        href="/faq"
+                                        onClick={() => setMoreOpen(false)}
+                                        style={{
+                                            display: 'block',
+                                            padding: '10px 14px',
+                                            borderRadius: '10px',
+                                            color: '#1b2534',
+                                            textDecoration: 'none',
+                                            fontSize: '14px',
+                                            fontWeight: '600',
+                                            transition: 'background-color 0.2s ease'
+                                        }}
+                                        className="more_dropdown_item"
+                                    >
+                                        Strategic FAQ
                                     </Link>
                                 </div>
                             )}

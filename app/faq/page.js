@@ -68,6 +68,30 @@ const faqSchema = {
                 },
                 {
                     '@type': 'Question',
+                    name: 'How much does executive personal branding cost for an HR leader?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'We offer tailored executive engagements, ranging from our intensive 90-Day Authority Sprint to ongoing quarterly executive advisory retainers. Packages reflect the bespoke nature of building proprietary digital assets and Google Page 1 placement. Transparent pricing tiers are published on our Pricing page.',
+                    },
+                },
+                {
+                    '@type': 'Question',
+                    name: 'Why do CHROs and VP HR need a dedicated personal website (Digital HQ)?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Because social platforms are rented digital land. Algorithms change, accounts can be restricted, and social feeds are ephemeral. A personal website is an owned executive asset that ranks #1 on Google when search committees, CEOs, and journalists research your credentials.',
+                    },
+                },
+                {
+                    '@type': 'Question',
+                    name: 'How do you protect employer confidentiality and strict non-disclosure?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Discretion is our foremost principle. We adhere strictly to corporate NDAs and employment agreements. All thought leadership focuses on macro talent architecture, workplace governance, and organizational transformation without disclosing private employer data or internal communications.',
+                    },
+                },
+                {
+                    '@type': 'Question',
                     name: 'Who is this NOT a good fit for?',
                     acceptedAnswer: {
                         '@type': 'Answer',

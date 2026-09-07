@@ -26,6 +26,7 @@ import Header2 from './header/Header2'
 import Header3 from "./header/Header3"
 import Header4 from "./header/Header4"
 import Footer1 from './footer/Footer1'
+import AnnouncementBanner from '../elements/AnnouncementBanner'
 
 export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, breadcrumbTitle2, breadcrumbTitle3, breadcrumbTitle4, breadcrumbTitle5, breadcrumbTitle6, breadcrumbTitle7, breadcrumbTitle8, breadcrumbTitle9, breadcrumbTitle10, breadcrumbTitle11, breadcrumbTitle12, breadcrumbTitle13, breadcrumbTitle14, breadcrumbTitle15, breadcrumbTitle16, children, wrapperCls }) {
     const [scroll, setScroll] = useState(0)
@@ -62,6 +63,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, brea
         <>
             <DataBg />
             <div className={`page-wrapper ${wrapperCls ? wrapperCls : ""}`} id="#top">
+                <AnnouncementBanner />
                 {!headerStyle && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} handlePopup={handlePopup} isSidebar={isSidebar} handleSidebar={handleSidebar} />}
                 {headerStyle == 1 ? <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} handlePopup={handlePopup} isSidebar={isSidebar} handleSidebar={handleSidebar} /> : null}
                 {headerStyle == 2 ? <Header2 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} handlePopup={handlePopup} isSidebar={isSidebar} handleSidebar={handleSidebar} /> : null}

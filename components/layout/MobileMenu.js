@@ -26,7 +26,7 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
             <div className="mobile-menu">
                 <div className="menu-backdrop" onClick={handleMobileMenu} />
                 <div className="close-btn" onClick={handleMobileMenu}>X</div>
-                <nav className="menu-box">
+                <nav className="menu-box" aria-label="Mobile Navigation Drawer">
                     <div className="nav-logo">
                         <Link href="/" onClick={handleMobileMenu} style={{ display: "inline-flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
                             <img src="/assets/images/Elite%20Prominence/EliteProminence-iocn.png" alt="Elite Prominence" style={{ height: "34px", width: "auto", display: "block" }} />
@@ -42,6 +42,7 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                 <li><Link href="/pricing" onClick={handleMobileMenu}>Pricing</Link></li>
                                 <li><Link href="/feedback" onClick={handleMobileMenu}>Feedback &amp; Reviews</Link></li>
                                 <li><Link href="/community" onClick={handleMobileMenu}>Executive Directory</Link></li>
+                                <li><Link href="/faq" onClick={handleMobileMenu}>Strategic FAQ</Link></li>
                                 <li><Link href="/blog-grid" onClick={handleMobileMenu}>Blog</Link></li>
                                 <li><Link href="/contact" onClick={handleMobileMenu}>Contact</Link></li>
                             </ul>

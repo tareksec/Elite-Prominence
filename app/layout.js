@@ -18,16 +18,16 @@ export const viewport = {
 export const metadata = {
     metadataBase: new URL('https://www.prominence.agency'),
     title: {
-        default: 'Elite Prominence | Personal Branding Agency for Executives',
+        default: 'Personal Branding for HR Leaders & CHROs | Elite Prominence',
         template: '%s | Elite Prominence',
     },
-    description: 'We build a complete digital presence for HR leaders & executives — website, Google reputation, and LinkedIn visibility, done for you.',
+    description: 'Done-for-you personal branding agency for HR leaders, CHROs, and senior executives. We build your private digital HQ, Google reputation, and high-impact LinkedIn authority.',
     alternates: {
-        canonical: '/',
+        canonical: 'https://www.prominence.agency',
     },
     openGraph: {
-        title: 'Elite Prominence | Personal Branding Agency for Executives',
-        description: 'We build a complete digital presence for HR leaders & executives — website, Google reputation, and LinkedIn visibility, done for you.',
+        title: 'Personal Branding for HR Leaders & CHROs | Elite Prominence',
+        description: 'Elevate your executive authority. Elite Prominence designs bespoke digital HQs, Google Knowledge Panels, and strategic LinkedIn presence for HR leaders & CHROs.',
         url: 'https://www.prominence.agency',
         siteName: 'Elite Prominence',
         images: [
@@ -43,8 +43,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Elite Prominence | Personal Branding Agency for Executives',
-        description: 'We build a complete digital presence for HR leaders & executives — website, Google reputation, and LinkedIn visibility, done for you.',
+        title: 'Personal Branding for HR Leaders & CHROs | Elite Prominence',
+        description: 'Turn HR leadership into executive influence. Bespoke digital HQ, search reputation, and LinkedIn thought leadership for CHROs.',
         images: ['/assets/images/Elite%20Prominence/EliteProminence-coverphoto.png'],
     },
     icons: {

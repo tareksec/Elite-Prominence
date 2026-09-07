@@ -23,6 +23,17 @@ const nextConfig = {
     async redirects() {
         return [
             {
+                source: '/:path*',
+                has: [
+                    {
+                        type: 'host',
+                        value: 'prominence.agency',
+                    },
+                ],
+                destination: 'https://www.prominence.agency/:path*',
+                permanent: true,
+            },
+            {
                 source: '/privacy',
                 destination: '/privacy-policy',
                 permanent: true,

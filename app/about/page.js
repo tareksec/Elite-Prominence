@@ -19,21 +19,70 @@ export const metadata = {
     },
 }
 
-const breadcrumbJsonLd = {
+const aboutSchemaGraph = {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
+    '@graph': [
         {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: 'https://www.prominence.agency',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+                {
+                    '@type': 'ListItem',
+                    position: 1,
+                    name: 'Home',
+                    item: 'https://www.prominence.agency',
+                },
+                {
+                    '@type': 'ListItem',
+                    position: 2,
+                    name: 'About Us',
+                    item: 'https://www.prominence.agency/about',
+                },
+            ],
         },
         {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'About Us',
-            item: 'https://www.prominence.agency/about',
+            '@type': 'AboutPage',
+            '@id': 'https://www.prominence.agency/about/#webpage',
+            url: 'https://www.prominence.agency/about',
+            name: 'About Elite Prominence | Executive Personal Branding Agency',
+            description: 'Elite Prominence makes senior HR leaders and executive consultants prominent — building bespoke digital HQs, Google reputation, and high-impact LinkedIn authority.',
+            mainEntity: {
+                '@id': 'https://www.prominence.agency/#founder',
+            },
+        },
+        {
+            '@type': 'Organization',
+            '@id': 'https://www.prominence.agency/#organization',
+            name: 'Elite Prominence',
+            url: 'https://www.prominence.agency',
+            logo: 'https://www.prominence.agency/assets/images/Elite%20Prominence/EliteProminence-iocn.png',
+            founder: {
+                '@id': 'https://www.prominence.agency/#founder',
+            },
+            sameAs: [
+                'https://www.linkedin.com/company/elite-prominence',
+                'https://www.facebook.com/EliteProminence/',
+            ],
+        },
+        {
+            '@type': 'Person',
+            '@id': 'https://www.prominence.agency/#founder',
+            name: 'Md Tarek',
+            jobTitle: 'Founder & Executive Brand Advisor',
+            worksFor: {
+                '@id': 'https://www.prominence.agency/#organization',
+            },
+            url: 'https://www.prominence.agency/about',
+            sameAs: [
+                'https://www.linkedin.com/in/mdtarek404/',
+            ],
+            knowsAbout: [
+                'Executive Personal Branding',
+                'CHRO Thought Leadership',
+                'Google Knowledge Graph Optimization',
+                'Board Advisory Positioning',
+                'Human Resources Strategy',
+            ],
+            description: 'Executive Brand Advisor counseling CHROs, VP HRs, and managing directors on proprietary digital HQ architecture, Google Page 1 placement, and strategic LinkedIn thought leadership.',
         },
     ],
 }
@@ -44,7 +93,7 @@ export default function About_Page() {
         <div className="boxed_wrapper">
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchemaGraph) }}
         />
         <Layout headerStyle={1} footerStyle={1}>
 

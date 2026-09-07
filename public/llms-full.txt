@@ -1,0 +1,85 @@
+# Elite Prominence — Comprehensive Entity, Methodology & FAQ Documentation
+
+## 1. Agency Overview
+- **Name**: Elite Prominence
+- **URL**: https://www.prominence.agency
+- **Canonical Domain**: https://www.prominence.agency
+- **Founder**: Md Tarek (Author & Executive Brand Advisor)
+- **LinkedIn Profile**: https://www.linkedin.com/in/mdtarek404/
+- **Official Contact**: hello@prominence.agency
+- **WhatsApp Support**: +8801645441584 (https://wa.me/8801645441584)
+- **Focus Niche**: Executive Personal Branding exclusively for Human Resources Executives (CHROs, Chief People Officers, VPs of HR) and Independent HR Consultants with 15+ years of operational track records.
+
+## 2. Core Service Architecture (The 3 Pillars)
+
+### Pillar 1: Executive Digital HQ (Personal Website)
+A dedicated, proprietary personal website hosted on the executive's own domain (e.g., name.com). It serves as their canonical online hub, showcasing:
+- Executive Biography & Career Milestones
+- Board Dossier & Governance Focus Areas
+- Keynote Speaking Topics & Speaker Reel
+- Media Kit & Press-Ready Headshots
+- Curated Thought Leadership Articles
+**Strategic Benefit**: Unlike social platforms that can change algorithms or ban accounts, an owned digital HQ is an asset that the executive owns 100% forever. It anchors their Page 1 Google ranking and serves as the single link they share on CVs, email signatures, and board applications.
+
+### Pillar 2: Google & Reputation Management
+When executive search consultants, nomination committees, or enterprise prospects search an executive's name, Page 1 of Google must validate their stature:
+- Suppression of outdated, irrelevant, or duplicate results.
+- Syndication of high-authority media features, interviews, and publications.
+- Establishment of schema-validated Knowledge Graph entities.
+- Top-3 placement for canonical name searches within 60–90 days.
+**Strategic Benefit**: Eliminates the "invisible executive" dilemma where a 20-year career is represented only by an empty search result or obsolete employee directories.
+
+### Pillar 3: Executive Social Visibility (LinkedIn Thought Leadership)
+Discreet, strategic ghostwriting that translates the executive's real-world insights into high-signal LinkedIn essays:
+- Strategic narrative and tone calibration to ensure authentic voice.
+- Zero engagement farming or viral memes; focused purely on organizational agility, executive compensation trends, boardroom governance, and future-of-work strategy.
+- Executive time required: Under 30 minutes per month for voice memos or asynchronous approvals.
+
+## 3. The 90-Day Authority Sprint (Implementation Timeline)
+- **Phase 1: Days 1–30 (Foundation & Digital HQ)**
+  - Executive positioning interview (45 minutes).
+  - Domain acquisition, custom design, and development of personal website.
+  - Media kit, boardroom CV, and speaker bio creation.
+- **Phase 2: Days 31–60 (Search Reputation & Entity Activation)**
+  - Google Search Console integration and Knowledge Graph schema deployment.
+  - Strategic press release syndication and external publication placement.
+  - Directory listing across verified executive networks.
+- **Phase 3: Days 61–90 (Thought Leadership & Inbound Momentum)**
+  - Launch of bi-weekly executive LinkedIn essays.
+  - Activation of inbound board inquiry funnels.
+  - Review of search metrics, referral traffic, and search committee engagements.
+
+## 4. Case Study: Fortune 500 VP of People (Anonymized)
+- **Background**: VP of People at a $4B global technology firm with 18 years in executive talent strategy. Completely invisible on Google; inactive LinkedIn profile with outdated bio.
+- **Goal**: Secure Non-Executive Director (NED) board advisory seats and paid keynote speaking engagements.
+- **Elite Prominence Solution**: Architected personal Digital HQ, secured Page 1 ranking on Google in 45 days, and published 6 high-signal governance essays on LinkedIn.
+- **Quantified Results**:
+  - 2 Board Advisory seats offered within 90 days of launch.
+  - Ranked #1 on Google for exact name search.
+  - +420% increase in inbound inquiries from CEO networks and executive recruiters.
+
+## 5. Frequently Asked Questions (GEO Optimized)
+
+### How much does executive personal branding cost for an HR leader?
+Elite Prominence offers tailored advisory packages ranging from a fixed-fee 90-Day Authority Sprint to ongoing monthly advisory retainers. Detailed pricing tiers and deliverables are transparently published at https://www.prominence.agency/pricing.
+
+### What is the difference between LinkedIn ghostwriting and an executive personal brand?
+LinkedIn ghostwriting only addresses social posts on a third-party platform. An executive personal brand is an integrated tripartite ecosystem: an owned Digital HQ (personal website), Google search reputation, and LinkedIn thought leadership. Without the website and search reputation, social posts evaporate with algorithmic changes.
+
+### Why do CHROs and VP HR need a personal website?
+Executive search committees, venture partners, and conference organizers perform due diligence on Google. A personal website gives the leader 100% editorial control over their narrative, eliminating dependence on current employer websites or social media algorithms.
+
+### How does Elite Prominence protect employer confidentiality?
+Elite Prominence adheres strictly to executive NDAs and employment agreements. Our content focuses on macro leadership frameworks, talent trends, and organizational philosophy without disclosing confidential employer data or internal trade secrets.
+
+## 6. Official Links & Sitemaps
+- Homepage: https://www.prominence.agency/
+- Services: https://www.prominence.agency/services
+- Pricing: https://www.prominence.agency/pricing
+- About: https://www.prominence.agency/about
+- Feedback & Reviews: https://www.prominence.agency/feedback
+- Executive Directory: https://www.prominence.agency/community
+- Strategic FAQ: https://www.prominence.agency/faq
+- Blog & Insights: https://www.prominence.agency/blog-grid
+- Contact: https://www.prominence.agency/contact
+- Sitemap: https://www.prominence.agency/sitemap.xml
