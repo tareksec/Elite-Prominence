@@ -3,6 +3,9 @@ import React, { useState } from 'react'
 
 export default function ContactForm() {
     const [submitted, setSubmitted] = useState(false)
+    const [submitting, setSubmitting] = useState(false)
+    const [errorMsg, setErrorMsg] = useState('')
+    const [honeypot, setHoneypot] = useState('')
     const [formData, setFormData] = useState({
         name: '',
         role: '',
@@ -12,9 +15,34 @@ export default function ContactForm() {
         goals: ''
     })
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        setSubmitted(true)
+        setErrorMsg('')
+
+        if (honeypot) {
+            setSubmitted(true)
+            return
+        }
+
+        setSubmitting(true)
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ...formData, honeypot })
+            })
+
+            const data = await res.json()
+            if (!res.ok) {
+                setErrorMsg(data.error || 'Failed to submit inquiry. Please try again.')
+            } else {
+                setSubmitted(true)
+            }
+        } catch (err) {
+            setErrorMsg('Network error. Please try again or email hello@prominence.agency directly.')
+        } finally {
+            setSubmitting(false)
+        }
     }
 
     return (
@@ -31,6 +59,25 @@ export default function ContactForm() {
                 </div>
             ) : (
                 <form onSubmit={handleSubmit} className="contact_form">
+                    {errorMsg && (
+                        <div className="alert alert-danger mb_25" style={{ padding: "12px 18px", borderRadius: "8px", background: "#fdf2f2", border: "1px solid #fca5a5", color: "#b91c1c", fontSize: "14px" }}>
+                            {errorMsg}
+                        </div>
+                    )}
+
+                    {/* Honeypot field for bot protection */}
+                    <div style={{ display: 'none' }} aria-hidden="true">
+                        <label htmlFor="hp_contact_url">Leave this field blank</label>
+                        <input
+                            type="text"
+                            id="hp_contact_url"
+                            name="hp_contact_url"
+                            tabIndex="-1"
+                            autoComplete="off"
+                            value={honeypot}
+                            onChange={(e) => setHoneypot(e.target.value)}
+                        />
+                    </div>
                     <div className="row">
                         <div className="col-xl-6 col-md-6 col-sm-12">
                             <div className="form-group mb_20">
@@ -109,8 +156,22 @@ export default function ContactForm() {
                         </div>
                         <div className="col-xl-12 col-md-12 col-sm-12">
                             <div className="form-group centred">
-                                <button type="submit" className="btn_style_one" style={{ minHeight: "48px", width: "100%", maxWidth: "320px", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
-                                    Book a Strategy Call &rarr;
+                                <button
+                                    type="submit"
+                                    disabled={submitting}
+                                    className="btn_style_one"
+                                    style={{
+                                        minHeight: "48px",
+                                        width: "100%",
+                                        maxWidth: "320px",
+                                        display: "inline-flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        opacity: submitting ? 0.7 : 1,
+                                        cursor: submitting ? "not-allowed" : "pointer"
+                                    }}
+                                >
+                                    {submitting ? 'Submitting Details...' : 'Book a Strategy Call →'}
                                 </button>
                             </div>
                         </div>

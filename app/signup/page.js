@@ -13,6 +13,8 @@ export default function SignupPage() {
     const [roleTitle, setRoleTitle] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [agreedToTerms, setAgreedToTerms] = useState(false)
+    const [honeypot, setHoneypot] = useState('')
     const [loading, setLoading] = useState(false)
     const [errorMsg, setErrorMsg] = useState('')
     const [successMsg, setSuccessMsg] = useState('')
@@ -23,6 +25,15 @@ export default function SignupPage() {
         e.preventDefault()
         setErrorMsg('')
         setSuccessMsg('')
+
+        if (honeypot) {
+            return // Silently drop bot submission
+        }
+
+        if (!agreedToTerms) {
+            setErrorMsg('Please accept the Terms of Service and Privacy Policy to continue.')
+            return
+        }
 
         if (!configured) {
             setErrorMsg('Supabase is not configured yet. Please add your credentials to .env.local.')
@@ -227,15 +238,47 @@ export default function SignupPage() {
                                     />
                                 </div>
 
-                                <div style={{ marginBottom: "22px", fontSize: "13.5px", color: "#64748b", lineHeight: "1.5", textAlign: "center" }}>
-                                    By signing up, you agree to our{' '}
-                                    <Link href="/terms" style={{ color: "#1e3b2b", fontWeight: "700", textDecoration: "underline" }} target="_blank">
-                                        Terms of Service
-                                    </Link>{' '}
-                                    and{' '}
-                                    <Link href="/privacy-policy" style={{ color: "#1e3b2b", fontWeight: "700", textDecoration: "underline" }} target="_blank">
-                                        Privacy Policy
-                                    </Link>.
+                                {/* Honeypot field for bot protection */}
+                                <div style={{ display: 'none' }} aria-hidden="true">
+                                    <label htmlFor="website_hp">Leave this field blank</label>
+                                    <input
+                                        type="text"
+                                        id="website_hp"
+                                        name="website_hp"
+                                        tabIndex="-1"
+                                        autoComplete="off"
+                                        value={honeypot}
+                                        onChange={(e) => setHoneypot(e.target.value)}
+                                    />
+                                </div>
+
+                                {/* Terms & Privacy Consent Checkbox */}
+                                <div style={{ marginBottom: "22px", display: "flex", alignItems: "flex-start", gap: "10px" }}>
+                                    <input
+                                        type="checkbox"
+                                        id="terms-consent-checkbox"
+                                        required
+                                        checked={agreedToTerms}
+                                        onChange={(e) => setAgreedToTerms(e.target.checked)}
+                                        style={{
+                                            width: "18px",
+                                            height: "18px",
+                                            marginTop: "2px",
+                                            cursor: "pointer",
+                                            accentColor: "#1e3b2b",
+                                            flexShrink: 0
+                                        }}
+                                    />
+                                    <label htmlFor="terms-consent-checkbox" style={{ fontSize: "13.5px", color: "#64748b", lineHeight: "1.5", cursor: "pointer" }}>
+                                        I have read and agree to the{' '}
+                                        <Link href="/terms" style={{ color: "#1e3b2b", fontWeight: "700", textDecoration: "underline" }} target="_blank">
+                                            Terms of Service
+                                        </Link>{' '}
+                                        and{' '}
+                                        <Link href="/privacy-policy" style={{ color: "#1e3b2b", fontWeight: "700", textDecoration: "underline" }} target="_blank">
+                                            Privacy Policy
+                                        </Link>.*
+                                    </label>
                                 </div>
 
                                 <button

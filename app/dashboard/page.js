@@ -6,6 +6,7 @@ import Layout from '@/components/layout/Layout'
 import { getSupabaseBrowserClient } from '@/lib/supabase/client'
 import { isSupabaseConfigured } from '@/lib/supabase/config'
 import SupabaseSetupNotice from '@/components/elements/SupabaseSetupNotice'
+import { sanitizeText, sanitizeTitle } from '@/lib/sanitize'
 
 const ARTICLE_CATEGORIES = [
     "Executive Presence",
@@ -122,9 +123,11 @@ export default function DashboardPage() {
     const handleSubmitReview = async (e) => {
         e.preventDefault()
         setReviewSuccess('')
-        setGlobalError('')
-
-        if (!reviewContent.trim()) return
+        const cleanContent = sanitizeText(reviewContent, 2000)
+        if (!cleanContent) {
+            setGlobalError('Please enter review content.')
+            return
+        }
 
         setSubmittingReview(true)
         try {
@@ -133,7 +136,7 @@ export default function DashboardPage() {
                 .from('reviews')
                 .insert({
                     user_id: user.id,
-                    content: reviewContent.trim(),
+                    content: cleanContent,
                     rating: parseInt(reviewRating),
                     status: 'pending' // Enforced client & server
                 })
@@ -157,9 +160,12 @@ export default function DashboardPage() {
     const handleSubmitArticle = async (e) => {
         e.preventDefault()
         setArticleSuccess('')
-        setGlobalError('')
-
-        if (!articleTitle.trim() || !articleBody.trim()) return
+        const cleanTitle = sanitizeTitle(articleTitle, 200)
+        const cleanBody = sanitizeText(articleBody, 20000)
+        if (!cleanTitle || !cleanBody) {
+            setGlobalError('Please enter both an article title and content body.')
+            return
+        }
 
         setSubmittingArticle(true)
         try {
@@ -168,9 +174,9 @@ export default function DashboardPage() {
                 .from('articles')
                 .insert({
                     user_id: user.id,
-                    title: articleTitle.trim(),
+                    title: cleanTitle,
                     category: articleCategory,
-                    body: articleBody.trim(),
+                    body: cleanBody,
                     status: 'pending' // Enforced client & server
                 })
                 .select()
@@ -193,7 +199,12 @@ export default function DashboardPage() {
     const handleUpdateProfile = async (e) => {
         e.preventDefault()
         setProfileSuccess('')
-        setGlobalError('')
+        const cleanName = sanitizeTitle(editName, 100)
+        const cleanTitle = sanitizeTitle(editTitle, 120)
+        if (!cleanName) {
+            setGlobalError('Name cannot be blank.')
+            return
+        }
 
         setUpdatingProfile(true)
         try {
@@ -201,8 +212,8 @@ export default function DashboardPage() {
             const { data, error } = await supabase
                 .from('profiles')
                 .update({
-                    full_name: editName.trim(),
-                    role_title: editTitle.trim(),
+                    full_name: cleanName,
+                    role_title: cleanTitle,
                 })
                 .eq('id', user.id)
                 .select()
