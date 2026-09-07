@@ -3,13 +3,13 @@ import Link from "next/link"
 import Layout from "@/components/layout/Layout"
 
 export const metadata = {
-    title: 'Insights for HR Leaders | Elite Prominence Blog',
+    title: 'HR Leadership Perspectives',
     description: 'Practical guidance on personal branding, LinkedIn strategy, and Google reputation for HR leaders and consultants.',
     alternates: {
         canonical: '/blog-standard',
     },
     openGraph: {
-        title: 'Insights for HR Leaders | Elite Prominence Blog',
+        title: 'Insights for HR Leaders | Blog',
         description: 'Practical guidance on personal branding, LinkedIn strategy, and Google reputation for HR leaders and consultants.',
         url: 'https://www.prominence.agency/blog-standard',
         siteName: 'Elite Prominence',

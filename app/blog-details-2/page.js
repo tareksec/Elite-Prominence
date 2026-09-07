@@ -14,13 +14,13 @@ import styles from '@/components/blog/BlogReading.module.css';
 import { BLOG_ARTICLES, getArticleBySlug } from '@/lib/blogData';
 
 export const metadata = {
-  title: "A LinkedIn Strategy for CHROs Who Don't Have Time to Post | Elite Prominence",
+  title: 'LinkedIn Strategy for CHROs',
   description: "A LinkedIn strategy and executive ghostwriting roadmap for CHROs and VP HRs who do not have time to post. Build quiet authority on LinkedIn with done-for-you support.",
   alternates: {
     canonical: '/blog-details-2',
   },
   openGraph: {
-    title: "A LinkedIn Strategy for CHROs Who Don't Have Time to Post | Elite Prominence",
+    title: "A LinkedIn Strategy for CHROs Who Don't Have Time to Post",
     description: "A LinkedIn strategy and executive ghostwriting roadmap for CHROs and VP HRs who do not have time to post. Build quiet authority on LinkedIn with done-for-you support.",
     url: 'https://www.prominence.agency/blog-details-2',
     siteName: 'Elite Prominence',
@@ -37,7 +37,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "A LinkedIn Strategy for CHROs Who Don't Have Time to Post | Elite Prominence",
+    title: "A LinkedIn Strategy for CHROs Who Don't Have Time to Post",
     description: "A LinkedIn strategy and executive ghostwriting roadmap for CHROs and VP HRs who do not have time to post. Build quiet authority on LinkedIn with done-for-you support.",
     images: ['https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&h=630&q=80'],
   },

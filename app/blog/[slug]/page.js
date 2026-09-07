@@ -23,24 +23,36 @@ export async function generateMetadata({ params }) {
   const post = getArticleBySlug(params.slug);
   if (!post) {
     return {
-      title: 'Article Not Found | Elite Prominence',
+      title: 'Article Not Found',
       description: 'The requested article could not be located.'
     };
   }
 
+  const seoTitles = {
+    'how-to-build-a-personal-brand-as-an-hr-leader': 'Personal Branding for HR Leaders',
+    'linkedin-strategy-for-senior-hr-professionals': 'LinkedIn Strategy for HR Leaders',
+    'how-to-rank-on-google-as-an-independent-hr-consultant': 'Google SEO for HR Consultants',
+    'why-chros-are-invisible-online': 'Why CHROs Are Invisible Online',
+    'hr-leader-personal-brand-roi': 'HR Leader Personal Brand ROI',
+    'done-for-you-personal-branding': 'Done-for-You Personal Branding Guide',
+    'what-is-executive-personal-branding': 'Executive Personal Branding Guide',
+    'thought-leadership-content-strategy-for-hr-leaders': 'Thought Leadership for HR Leaders',
+  };
+
+  const seoTitle = seoTitles[post.slug] || post.title.replace(/\s*\|\s*Elite Prominence.*$/i, '');
   const pageUrl = `https://www.prominence.agency/blog/${post.slug}`;
   const heroImageUrl = post.heroImage?.startsWith('http')
     ? post.heroImage
     : `https://www.prominence.agency${post.heroImage || '/assets/images/elite/blog_1_hr_personal_brand.jpg'}`;
 
   return {
-    title: `${post.title} | Elite Prominence`,
+    title: seoTitle,
     description: post.excerpt,
     alternates: {
       canonical: pageUrl,
     },
     openGraph: {
-      title: `${post.title} | Elite Prominence`,
+      title: post.title,
       description: post.excerpt,
       url: pageUrl,
       siteName: 'Elite Prominence',
@@ -57,7 +69,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${post.title} | Elite Prominence`,
+      title: post.title,
       description: post.excerpt,
       images: [heroImageUrl],
     }

@@ -4,13 +4,13 @@ import Layout from '@/components/layout/Layout'
 import BreadcrumbJsonLd from '@/components/elements/BreadcrumbJsonLd'
 
 export const metadata = {
-    title: 'Terms of Service | Elite Prominence',
+    title: 'Terms of Service',
     description: 'Terms of Service governing advisory, executive ghostwriting, and personal branding representations with Elite Prominence.',
     alternates: {
         canonical: '/terms',
     },
     openGraph: {
-        title: 'Terms of Service | Elite Prominence',
+        title: 'Terms of Service',
         description: 'Terms of Service governing advisory, executive ghostwriting, and personal branding representations with Elite Prominence.',
         url: 'https://www.prominence.agency/terms',
         siteName: 'Elite Prominence',

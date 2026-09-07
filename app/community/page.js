@@ -61,6 +61,7 @@ export default function CommunityPage() {
     const configured = isSupabaseConfigured()
     const [members, setMembers] = useState(SAMPLE_COMMUNITY_MEMBERS)
     const [selectedArticle, setSelectedArticle] = useState(null)
+    const [openFaq, setOpenFaq] = useState(0)
     const [loading, setLoading] = useState(!configured ? false : true)
 
     useEffect(() => {
@@ -163,7 +164,7 @@ export default function CommunityPage() {
                             Executive Community &amp; Contributors
                         </h1>
                         <p style={{ fontSize: "clamp(16px, 2.5vw, 19px)", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
-                            Explore perspectives and verified profiles of industry leaders, chief people officers, and advisors who contribute to the Elite Prominence network.
+                            The Elite Prominence Executive Community is an invitation-only collective of senior HR executives, Chief People Officers, and board talent advisors. We empower leaders to translate their operational wisdom into high-visibility personal authority, Google search prominence, and meaningful board advisory appointments.
                         </p>
 
                         <div style={{ marginTop: "26px" }}>
@@ -294,6 +295,479 @@ export default function CommunityPage() {
                         ))}
                     </div>
 
+                    {/* Architectural Pillars of the Network */}
+                    <div style={{
+                        marginTop: "80px",
+                        marginBottom: "70px",
+                        padding: "60px 40px",
+                        backgroundColor: "#ffffff",
+                        borderRadius: "20px",
+                        border: "1px solid #e2e8f0",
+                        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.03)"
+                    }}>
+                        <div style={{ textAlign: "center", maxWidth: "760px", margin: "0 auto 48px" }}>
+                            <span style={{
+                                display: "inline-block",
+                                fontSize: "12px",
+                                fontWeight: "700",
+                                letterSpacing: "1.5px",
+                                textTransform: "uppercase",
+                                color: "#7c3aed",
+                                backgroundColor: "#f3e8ff",
+                                border: "1px solid rgba(124, 58, 237, 0.2)",
+                                padding: "4px 14px",
+                                borderRadius: "20px",
+                                marginBottom: "12px"
+                            }}>
+                                Network Architecture
+                            </span>
+                            <h2 style={{ fontSize: "clamp(24px, 4.5vw, 34px)", fontWeight: "700", color: "#1b2534", marginBottom: "16px" }}>
+                                Four Pillars of the Elite Prominence Network
+                            </h2>
+                            <p style={{ fontSize: "16px", color: "#64748b", lineHeight: "1.7", margin: 0 }}>
+                                Designed specifically for senior HR leaders, managing directors, and executive talent advisors who require a dignified, high-yield digital presence without the friction of daily social media management.
+                            </p>
+                        </div>
+
+                        <div className="community_pillars_grid" style={{
+                            display: "grid",
+                            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                            gap: "28px"
+                        }}>
+                            <div style={{
+                                padding: "30px 24px",
+                                borderRadius: "14px",
+                                backgroundColor: "#f8fafd",
+                                border: "1px solid #e2e8f0"
+                            }}>
+                                <div style={{
+                                    width: "44px",
+                                    height: "44px",
+                                    borderRadius: "10px",
+                                    backgroundColor: "#ede9fe",
+                                    color: "#7c3aed",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    fontSize: "20px",
+                                    fontWeight: "700",
+                                    marginBottom: "18px"
+                                }}>
+                                    01
+                                </div>
+                                <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#1b2534", marginBottom: "10px" }}>
+                                    Selective Peer Assembly
+                                </h3>
+                                <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.7", margin: 0 }}>
+                                    The directory is restricted to proven enterprise executives—Chief Human Resources Officers, VP People, and senior advisory partners. We preserve an environment free of commercial solicitations, algorithmic chasing, and low-signal noise.
+                                </p>
+                            </div>
+
+                            <div style={{
+                                padding: "30px 24px",
+                                borderRadius: "14px",
+                                backgroundColor: "#f8fafd",
+                                border: "1px solid #e2e8f0"
+                            }}>
+                                <div style={{
+                                    width: "44px",
+                                    height: "44px",
+                                    borderRadius: "10px",
+                                    backgroundColor: "#ede9fe",
+                                    color: "#7c3aed",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    fontSize: "20px",
+                                    fontWeight: "700",
+                                    marginBottom: "18px"
+                                }}>
+                                    02
+                                </div>
+                                <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#1b2534", marginBottom: "10px" }}>
+                                    Editorial Governance &amp; Rigor
+                                </h3>
+                                <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.7", margin: 0 }}>
+                                    Every article published under our community banner is curated for strategic substance. We translate real-world human capital challenges, executive compensation nuances, and board governance models into definitive frameworks that withstand executive scrutiny.
+                                </p>
+                            </div>
+
+                            <div style={{
+                                padding: "30px 24px",
+                                borderRadius: "14px",
+                                backgroundColor: "#f8fafd",
+                                border: "1px solid #e2e8f0"
+                            }}>
+                                <div style={{
+                                    width: "44px",
+                                    height: "44px",
+                                    borderRadius: "10px",
+                                    backgroundColor: "#ede9fe",
+                                    color: "#7c3aed",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    fontSize: "20px",
+                                    fontWeight: "700",
+                                    marginBottom: "18px"
+                                }}>
+                                    03
+                                </div>
+                                <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#1b2534", marginBottom: "10px" }}>
+                                    Google Search &amp; Entity Authority
+                                </h3>
+                                <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.7", margin: 0 }}>
+                                    When board nominating committees, executive search partners, or conference organizers research your name, your thought leadership articles and verified contributor bio occupy prime digital real estate, establishing your definitive knowledge graph entity.
+                                </p>
+                            </div>
+
+                            <div style={{
+                                padding: "30px 24px",
+                                borderRadius: "14px",
+                                backgroundColor: "#f8fafd",
+                                border: "1px solid #e2e8f0"
+                            }}>
+                                <div style={{
+                                    width: "44px",
+                                    height: "44px",
+                                    borderRadius: "10px",
+                                    backgroundColor: "#ede9fe",
+                                    color: "#7c3aed",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    fontSize: "20px",
+                                    fontWeight: "700",
+                                    marginBottom: "18px"
+                                }}>
+                                    04
+                                </div>
+                                <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#1b2534", marginBottom: "10px" }}>
+                                    Board &amp; Advisory Pipeline
+                                </h3>
+                                <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.7", margin: 0 }}>
+                                    A verified public portfolio of executive writing positions you as a leading voice on human capital risk and corporate culture, directly creating opportunities for non-executive director (NED) seats, advisory boards, and high-value private consulting engagements.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* How It Works: Contributor Journey */}
+                    <div style={{ marginBottom: "70px" }}>
+                        <div style={{ textAlign: "center", maxWidth: "700px", margin: "0 auto 44px" }}>
+                            <span style={{
+                                display: "inline-block",
+                                fontSize: "12px",
+                                fontWeight: "700",
+                                letterSpacing: "1.5px",
+                                textTransform: "uppercase",
+                                color: "#7c3aed",
+                                backgroundColor: "#f3e8ff",
+                                border: "1px solid rgba(124, 58, 237, 0.2)",
+                                padding: "4px 14px",
+                                borderRadius: "20px",
+                                marginBottom: "12px"
+                            }}>
+                                Contributor Process
+                            </span>
+                            <h2 style={{ fontSize: "clamp(24px, 4.5vw, 34px)", fontWeight: "700", color: "#1b2534", marginBottom: "14px" }}>
+                                The 3-Step Journey to Executive Visibility
+                            </h2>
+                            <p style={{ fontSize: "16px", color: "#64748b", lineHeight: "1.7", margin: 0 }}>
+                                A structured, time-efficient editorial model engineered specifically for time-constrained C-suite leaders.
+                            </p>
+                        </div>
+
+                        <div className="community_steps_grid" style={{
+                            display: "grid",
+                            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                            gap: "28px"
+                        }}>
+                            <div style={{
+                                backgroundColor: "#ffffff",
+                                padding: "34px 28px",
+                                borderRadius: "16px",
+                                border: "1px solid #e2e8f0",
+                                position: "relative"
+                            }}>
+                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#7c3aed", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
+                                    Stage 01
+                                </div>
+                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1b2534", marginBottom: "12px" }}>
+                                    Executive Verification &amp; Profile Build
+                                </h3>
+                                <p style={{ fontSize: "14px", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
+                                    Create your executive account with verified credentials. We configure your public profile, executive title, domain areas, and link back to your personal digital headquarters or LinkedIn presence.
+                                </p>
+                            </div>
+
+                            <div style={{
+                                backgroundColor: "#ffffff",
+                                padding: "34px 28px",
+                                borderRadius: "16px",
+                                border: "1px solid #e2e8f0",
+                                position: "relative"
+                            }}>
+                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#7c3aed", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
+                                    Stage 02
+                                </div>
+                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1b2534", marginBottom: "12px" }}>
+                                    Framework Co-Creation &amp; Review
+                                </h3>
+                                <p style={{ fontSize: "14px", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
+                                    Submit your strategic thinking through our intuitive contributor portal. Our editorial advisory team assists with proofing, formatting, and structural polishing to ensure publication-grade caliber.
+                                </p>
+                            </div>
+
+                            <div style={{
+                                backgroundColor: "#ffffff",
+                                padding: "34px 28px",
+                                borderRadius: "16px",
+                                border: "1px solid #e2e8f0",
+                                position: "relative"
+                            }}>
+                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#7c3aed", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
+                                    Stage 03
+                                </div>
+                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1b2534", marginBottom: "12px" }}>
+                                    Directory Indexing &amp; Distribution
+                                </h3>
+                                <p style={{ fontSize: "14px", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
+                                    Upon review and approval, your article is published with rich schema markup, indexed by search engines, featured in our community directory, and syndicated across executive talent channels.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Editorial Standards & Governance */}
+                    <div style={{
+                        marginBottom: "70px",
+                        padding: "50px 36px",
+                        borderRadius: "18px",
+                        backgroundColor: "#1b2534",
+                        color: "#ffffff"
+                    }}>
+                        <div style={{ maxWidth: "720px", marginBottom: "36px" }}>
+                            <span style={{
+                                display: "inline-block",
+                                fontSize: "12px",
+                                fontWeight: "700",
+                                letterSpacing: "1.5px",
+                                textTransform: "uppercase",
+                                color: "#c4b5fd",
+                                backgroundColor: "rgba(196, 181, 253, 0.15)",
+                                border: "1px solid rgba(196, 181, 253, 0.3)",
+                                padding: "4px 14px",
+                                borderRadius: "20px",
+                                marginBottom: "12px"
+                            }}>
+                                Integrity &amp; Standards
+                            </span>
+                            <h2 style={{ fontSize: "clamp(24px, 4.5vw, 32px)", fontWeight: "700", color: "#ffffff", marginBottom: "12px" }}>
+                                Editorial Principles &amp; Governance
+                            </h2>
+                            <p style={{ fontSize: "15px", color: "#cbd5e1", lineHeight: "1.7", margin: 0 }}>
+                                To ensure our platform remains an esteemed resource for boards, search consultants, and enterprise practitioners, every contributor aligns with our core governance standards:
+                            </p>
+                        </div>
+
+                        <div className="community_standards_grid" style={{
+                            display: "grid",
+                            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                            gap: "24px"
+                        }}>
+                            <div style={{
+                                padding: "24px 22px",
+                                borderRadius: "12px",
+                                backgroundColor: "rgba(255, 255, 255, 0.05)",
+                                border: "1px solid rgba(255, 255, 255, 0.1)"
+                            }}>
+                                <h4 style={{ fontSize: "17px", fontWeight: "700", color: "#f8fafc", marginBottom: "8px" }}>
+                                    Substance Over Hype
+                                </h4>
+                                <p style={{ fontSize: "14px", color: "#94a3b8", lineHeight: "1.6", margin: 0 }}>
+                                    We disallow generic motivational platitudes or AI-generated filler. Content must address real operational complexities, change management realities, or corporate leadership dilemmas.
+                                </p>
+                            </div>
+
+                            <div style={{
+                                padding: "24px 22px",
+                                borderRadius: "12px",
+                                backgroundColor: "rgba(255, 255, 255, 0.05)",
+                                border: "1px solid rgba(255, 255, 255, 0.1)"
+                            }}>
+                                <h4 style={{ fontSize: "17px", fontWeight: "700", color: "#f8fafc", marginBottom: "8px" }}>
+                                    Commercial Neutrality
+                                </h4>
+                                <p style={{ fontSize: "14px", color: "#94a3b8", lineHeight: "1.6", margin: 0 }}>
+                                    Articles are editorial contributions, not advertisements. Direct vendor promotion or self-serving pitches are declined to safeguard the collective integrity of all members.
+                                </p>
+                            </div>
+
+                            <div style={{
+                                padding: "24px 22px",
+                                borderRadius: "12px",
+                                backgroundColor: "rgba(255, 255, 255, 0.05)",
+                                border: "1px solid rgba(255, 255, 255, 0.1)"
+                            }}>
+                                <h4 style={{ fontSize: "17px", fontWeight: "700", color: "#f8fafc", marginBottom: "8px" }}>
+                                    Corporate Confidentiality
+                                </h4>
+                                <p style={{ fontSize: "14px", color: "#94a3b8", lineHeight: "1.6", margin: 0 }}>
+                                    We protect current and former employer interests. Case studies and strategic insights are anonymized whenever necessary to honor non-disclosure commitments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Community FAQ Section */}
+                    <div style={{ marginBottom: "80px", maxWidth: "860px", margin: "0 auto 80px" }}>
+                        <div style={{ textAlign: "center", marginBottom: "40px" }}>
+                            <span style={{
+                                display: "inline-block",
+                                fontSize: "12px",
+                                fontWeight: "700",
+                                letterSpacing: "1.5px",
+                                textTransform: "uppercase",
+                                color: "#7c3aed",
+                                backgroundColor: "#f3e8ff",
+                                border: "1px solid rgba(124, 58, 237, 0.2)",
+                                padding: "4px 14px",
+                                borderRadius: "20px",
+                                marginBottom: "12px"
+                            }}>
+                                Got Questions?
+                            </span>
+                            <h2 style={{ fontSize: "clamp(24px, 4.5vw, 32px)", fontWeight: "700", color: "#1b2534", margin: 0 }}>
+                                Frequently Asked Questions About the Community
+                            </h2>
+                        </div>
+
+                        <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                            {[
+                                {
+                                    q: "Who qualifies for contributor status in the Executive Directory?",
+                                    a: "Eligibility is tailored for senior HR leaders (CHROs, Chief People Officers, SVPs and VPs of HR), executive search partners, and independent human capital advisors with extensive operational track records. We review each application to ensure community alignment and mutual peer caliber."
+                                },
+                                {
+                                    q: "How much time is required to participate as a contributor?",
+                                    a: "Our model is engineered for executive efficiency. Contributors can spend as little as 45 minutes reviewing an editorial brief or submitting a recorded voice memo. The Elite Prominence editorial desk handles structural synthesis, copywriting, and search engine optimization."
+                                },
+                                {
+                                    q: "Do I retain ownership of the insights and articles I publish?",
+                                    a: "Yes. You retain full copyright and intellectual property rights to your ideas and writing. Elite Prominence receives a non-exclusive license to host, format, and syndicate the piece across our network and public search index."
+                                },
+                                {
+                                    q: "How does this directory help me win board or advisory roles?",
+                                    a: "Executive recruiters and nominating committees consistently audit candidate search visibility before making contact. By having high-ranking, publication-grade perspectives indexed in our directory, you present unambiguous proof of domain mastery, strategic acumen, and progressive leadership."
+                                }
+                            ].map((faq, idx) => (
+                                <div
+                                    key={idx}
+                                    style={{
+                                        backgroundColor: "#ffffff",
+                                        borderRadius: "12px",
+                                        border: "1px solid #e2e8f0",
+                                        overflow: "hidden",
+                                        boxShadow: "0 4px 12px rgba(0,0,0,0.02)"
+                                    }}
+                                >
+                                    <button
+                                        type="button"
+                                        onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                                        style={{
+                                            width: "100%",
+                                            textAlign: "left",
+                                            padding: "20px 24px",
+                                            background: "none",
+                                            border: "none",
+                                            cursor: "pointer",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "space-between",
+                                            gap: "16px",
+                                            fontFamily: "inherit"
+                                        }}
+                                    >
+                                        <span style={{ fontSize: "16px", fontWeight: "700", color: "#1b2534" }}>
+                                            {faq.q}
+                                        </span>
+                                        <span style={{
+                                            fontSize: "20px",
+                                            color: "#7c3aed",
+                                            fontWeight: "700",
+                                            transition: "transform 0.2s ease",
+                                            transform: openFaq === idx ? "rotate(45deg)" : "rotate(0deg)"
+                                        }}>
+                                            +
+                                        </span>
+                                    </button>
+                                    {openFaq === idx && (
+                                        <div style={{
+                                            padding: "0 24px 22px",
+                                            fontSize: "14px",
+                                            lineHeight: "1.7",
+                                            color: "#59606a",
+                                            borderTop: "1px solid #f1f5f9"
+                                        }}>
+                                            {faq.a}
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Executive Final CTA Banner */}
+                    <div style={{
+                        textAlign: "center",
+                        padding: "60px 30px",
+                        borderRadius: "20px",
+                        background: "linear-gradient(135deg, #2b2d32 0%, #151619 100%)",
+                        color: "#ffffff",
+                        boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
+                        marginBottom: "40px"
+                    }}>
+                        <h2 style={{ fontSize: "clamp(24px, 4.5vw, 36px)", fontWeight: "700", color: "#ffffff", marginBottom: "16px" }}>
+                            Ready to Claim Your Place in the Executive Network?
+                        </h2>
+                        <p style={{ fontSize: "16px", color: "#cbd5e1", maxWidth: "640px", margin: "0 auto 32px", lineHeight: "1.7" }}>
+                            Join prominent HR leaders who are turning their career expertise into indexed authority, board invitations, and compounding executive prominence.
+                        </p>
+                        <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
+                            <Link
+                                href="/signup"
+                                style={{
+                                    backgroundColor: "#ffffff",
+                                    color: "#151619",
+                                    padding: "14px 32px",
+                                    borderRadius: "30px",
+                                    fontSize: "15px",
+                                    fontWeight: "700",
+                                    textDecoration: "none",
+                                    boxShadow: "0 8px 20px rgba(255, 255, 255, 0.2)"
+                                }}
+                            >
+                                Apply for Directory Status →
+                            </Link>
+                            <Link
+                                href="/contact"
+                                style={{
+                                    backgroundColor: "transparent",
+                                    color: "#ffffff",
+                                    padding: "14px 32px",
+                                    borderRadius: "30px",
+                                    fontSize: "15px",
+                                    fontWeight: "700",
+                                    textDecoration: "none",
+                                    border: "1px solid rgba(255, 255, 255, 0.3)"
+                                }}
+                            >
+                                Book Confidential Strategy Call
+                            </Link>
+                        </div>
+                    </div>
+
                     {/* Full Article Reader Modal */}
                     {selectedArticle && (
                         <div style={{
@@ -375,7 +849,10 @@ export default function CommunityPage() {
 
                     <style jsx>{`
                         @media (max-width: 767px) {
-                            .community_grid {
+                            .community_grid,
+                            .community_pillars_grid,
+                            .community_steps_grid,
+                            .community_standards_grid {
                                 grid-template-columns: 1fr !important;
                                 gap: 20px !important;
                             }

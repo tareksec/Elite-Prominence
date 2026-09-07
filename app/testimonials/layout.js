@@ -1,13 +1,13 @@
 import React from 'react'
 
 export const metadata = {
-    title: 'Client Recognition & Testimonials | Elite Prominence',
+    title: 'Client Recognition & Results',
     description: 'Discover how Elite Prominence partners with senior HR executives and consultants to build digital authority that creates compounding career returns.',
     alternates: {
         canonical: '/testimonials',
     },
     openGraph: {
-        title: 'Client Recognition & Testimonials | Elite Prominence',
+        title: 'Client Recognition & Testimonials',
         description: 'Discover how Elite Prominence partners with senior HR executives and consultants to build digital authority that creates compounding career returns.',
         url: 'https://www.prominence.agency/testimonials',
         siteName: 'Elite Prominence',

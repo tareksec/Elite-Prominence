@@ -1,13 +1,13 @@
 import React from 'react'
 
 export const metadata = {
-    title: 'Client Feedback & Testimonials | Elite Prominence',
+    title: 'Client Feedback & Reviews',
     description: 'Read verified feedback and testimonials from chief human resources officers and senior people leaders working with Elite Prominence.',
     alternates: {
         canonical: '/feedback',
     },
     openGraph: {
-        title: 'Client Feedback & Testimonials | Elite Prominence',
+        title: 'Client Feedback & Testimonials',
         description: 'Read verified feedback and testimonials from chief human resources officers and senior people leaders working with Elite Prominence.',
         url: 'https://www.prominence.agency/feedback',
         siteName: 'Elite Prominence',

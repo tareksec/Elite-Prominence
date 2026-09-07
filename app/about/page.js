@@ -4,13 +4,13 @@ import Layout from "@/components/layout/Layout"
 import Testimonial from '@/components/sections/home3/Testimonial'
 
 export const metadata = {
-    title: 'About Elite Prominence | Executive Personal Branding Consultants',
+    title: 'Executive Branding Consultants',
     description: 'Elite Prominence makes senior HR leaders and consultants prominent — so opportunity finds them instead of the other way around.',
     alternates: {
         canonical: '/about',
     },
     openGraph: {
-        title: 'About Elite Prominence | Executive Personal Branding Consultants',
+        title: 'About Us | Executive Personal Branding Consultants',
         description: 'Elite Prominence makes senior HR leaders and consultants prominent — so opportunity finds them instead of the other way around.',
         url: 'https://www.prominence.agency/about',
         siteName: 'Elite Prominence',

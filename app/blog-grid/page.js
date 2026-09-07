@@ -4,13 +4,13 @@ import Layout from '@/components/layout/Layout';
 import { BLOG_ARTICLES } from '@/lib/blogData';
 
 export const metadata = {
-  title: 'Executive Insights for HR Leaders | Elite Prominence Blog',
+  title: 'Executive Insights & Articles',
   description: 'Strategic guidance on executive personal branding, LinkedIn strategy, and Google reputation management for senior human resources leaders and executive consultants.',
   alternates: {
     canonical: '/blog-grid',
   },
   openGraph: {
-    title: 'Executive Insights for HR Leaders | Elite Prominence Blog',
+    title: 'Executive Insights for HR Leaders | Blog',
     description: 'Strategic guidance on executive personal branding, LinkedIn strategy, and Google reputation management for senior human resources leaders and executive consultants.',
     url: 'https://www.prominence.agency/blog-grid',
     siteName: 'Elite Prominence',

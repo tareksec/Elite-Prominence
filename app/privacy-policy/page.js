@@ -4,13 +4,13 @@ import Layout from '@/components/layout/Layout'
 import BreadcrumbJsonLd from '@/components/elements/BreadcrumbJsonLd'
 
 export const metadata = {
-    title: 'Privacy Policy | Elite Prominence',
+    title: 'Privacy Policy',
     description: 'Privacy Policy for Elite Prominence executive personal branding advisory and representation services.',
     alternates: {
         canonical: '/privacy-policy',
     },
     openGraph: {
-        title: 'Privacy Policy | Elite Prominence',
+        title: 'Privacy Policy',
         description: 'Privacy Policy for Elite Prominence executive personal branding advisory and representation services.',
         url: 'https://www.prominence.agency/privacy-policy',
         siteName: 'Elite Prominence',

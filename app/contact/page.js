@@ -5,13 +5,13 @@ import ContactForm from "@/components/elements/ContactForm"
 import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export const metadata = {
-    title: 'Contact Us | Book an Executive Strategy Session — Elite Prominence',
+    title: 'Contact & Strategy Session',
     description: 'Schedule a 30-minute consultation with Elite Prominence. We will evaluate your current digital footprint and discuss your executive personal branding roadmap.',
     alternates: {
         canonical: '/contact',
     },
     openGraph: {
-        title: 'Contact Us | Book an Executive Strategy Session — Elite Prominence',
+        title: 'Contact Us | Book an Executive Strategy Session',
         description: 'Schedule a 30-minute consultation with Elite Prominence. We will evaluate your current digital footprint and discuss your executive personal branding roadmap.',
         url: 'https://www.prominence.agency/contact',
         siteName: 'Elite Prominence',

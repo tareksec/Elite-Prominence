@@ -1,13 +1,13 @@
 import React from 'react'
 
 export const metadata = {
-    title: 'Executive Community & Contributors | Elite Prominence',
+    title: 'Executive Community Directory',
     description: 'Explore perspectives and verified profiles of industry leaders, chief people officers, and advisors contributing to the Elite Prominence network.',
     alternates: {
         canonical: '/community',
     },
     openGraph: {
-        title: 'Executive Community & Contributors | Elite Prominence',
+        title: 'Executive Community & Contributors',
         description: 'Explore perspectives and verified profiles of industry leaders, chief people officers, and advisors contributing to the Elite Prominence network.',
         url: 'https://www.prominence.agency/community',
         siteName: 'Elite Prominence',

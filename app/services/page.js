@@ -4,13 +4,13 @@ import Layout from "@/components/layout/Layout"
 import Testimonial from '@/components/sections/home3/Testimonial'
 
 export const metadata = {
-    title: 'Services | LinkedIn Branding & Google Reputation Management',
+    title: 'Executive Branding Services',
     description: 'Website, Google reputation management, and LinkedIn branding — three pillars, delivered together, for HR leaders and consultants.',
     alternates: {
         canonical: '/services',
     },
     openGraph: {
-        title: 'Services | LinkedIn Branding & Google Reputation Management',
+        title: 'Executive Branding & Reputation Services',
         description: 'Website, Google reputation management, and LinkedIn branding — three pillars, delivered together, for HR leaders and consultants.',
         url: 'https://www.prominence.agency/services',
         siteName: 'Elite Prominence',

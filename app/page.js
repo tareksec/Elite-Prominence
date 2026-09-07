@@ -9,7 +9,9 @@ import Blog from "@/components/sections/home2/Blog"
 import FinalCta from "@/components/sections/home5/FinalCta"
 
 export const metadata = {
-    title: 'Elite Prominence | Personal Branding Agency for Executives',
+    title: {
+        absolute: 'Elite Prominence | Personal Branding Agency for Executives',
+    },
     description: 'We build a complete digital presence for HR leaders & executives — website, Google reputation, and LinkedIn visibility, done for you.',
     alternates: {
         canonical: '/',

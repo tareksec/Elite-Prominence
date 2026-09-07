@@ -1,13 +1,13 @@
 import React from 'react'
 
 export const metadata = {
-    title: 'Service Architecture & The 3 Pillars | Elite Prominence',
+    title: 'Service Architecture & 3 Pillars',
     description: 'Detailed architecture of our 3-pillar executive personal branding model: Digital HQ (Website), Google Reputation Management, and LinkedIn Ghostwriting.',
     alternates: {
         canonical: '/services-details',
     },
     openGraph: {
-        title: 'Service Architecture & The 3 Pillars | Elite Prominence',
+        title: 'Service Architecture & The 3 Pillars',
         description: 'Detailed architecture of our 3-pillar executive personal branding model: Digital HQ (Website), Google Reputation Management, and LinkedIn Ghostwriting.',
         url: 'https://www.prominence.agency/services-details',
         siteName: 'Elite Prominence',

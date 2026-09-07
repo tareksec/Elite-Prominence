@@ -14,13 +14,13 @@ import styles from '@/components/blog/BlogReading.module.css';
 import { BLOG_ARTICLES, getArticleBySlug } from '@/lib/blogData';
 
 export const metadata = {
-  title: 'How to Build a Personal Brand as an HR Leader | Elite Prominence',
+  title: 'Personal Branding for HR Leaders',
   description: 'How to build a personal brand as an HR leader without becoming a content creator. Executive personal branding guidance by Elite Prominence.',
   alternates: {
     canonical: '/blog-details',
   },
   openGraph: {
-    title: 'How to Build a Personal Brand as an HR Leader | Elite Prominence',
+    title: 'How to Build a Personal Brand as an HR Leader',
     description: 'How to build a personal brand as an HR leader without becoming a content creator. Executive personal branding guidance by Elite Prominence.',
     url: 'https://www.prominence.agency/blog-details',
     siteName: 'Elite Prominence',
@@ -37,7 +37,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Build a Personal Brand as an HR Leader | Elite Prominence',
+    title: 'How to Build a Personal Brand as an HR Leader',
     description: 'How to build a personal brand as an HR leader without becoming a content creator. Executive personal branding guidance by Elite Prominence.',
     images: ['https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&h=630&q=80'],
   },

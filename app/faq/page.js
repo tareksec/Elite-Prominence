@@ -4,13 +4,13 @@ import Layout from "@/components/layout/Layout"
 import FaqAccordion from "@/components/elements/FaqAccordion"
 
 export const metadata = {
-    title: 'Frequently Asked Questions | Elite Prominence',
+    title: 'Frequently Asked Questions',
     description: 'Answers to common questions about our done-for-you personal branding service for senior HR leaders, including time commitment, deliverables, and ROI.',
     alternates: {
         canonical: '/faq',
     },
     openGraph: {
-        title: 'Frequently Asked Questions | Elite Prominence',
+        title: 'Frequently Asked Questions',
         description: 'Answers to common questions about our done-for-you personal branding service for senior HR leaders, including time commitment, deliverables, and ROI.',
         url: 'https://www.prominence.agency/faq',
         siteName: 'Elite Prominence',

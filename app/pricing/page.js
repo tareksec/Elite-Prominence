@@ -4,13 +4,13 @@ import Layout from "@/components/layout/Layout"
 import PricingTabs from "@/components/elements/PricingTabs"
 
 export const metadata = {
-    title: 'Pricing & Packages | Personal Branding Agency — Elite Prominence',
+    title: 'Pricing & Advisory Packages',
     description: 'Transparent monthly retainer packages for senior HR leaders and executive consultants. Starter, Growth, and Premium tiers with full done-for-you support.',
     alternates: {
         canonical: '/pricing',
     },
     openGraph: {
-        title: 'Pricing & Packages | Personal Branding Agency — Elite Prominence',
+        title: 'Pricing & Packages | Personal Branding Agency',
         description: 'Transparent monthly retainer packages for senior HR leaders and executive consultants. Starter, Growth, and Premium tiers with full done-for-you support.',
         url: 'https://www.prominence.agency/pricing',
         siteName: 'Elite Prominence',
