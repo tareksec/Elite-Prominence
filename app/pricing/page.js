@@ -48,8 +48,8 @@ export default function Pricing_Page() {
             />
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle6="Pricing & Packages">
                 <section className="pricing_section pt_150 pb_120">
-                    <div className="shape_bg"></div>
-                    <div className="shape_six float-bob-y"><img src="/assets/images/icons/shape_icon_6.png" alt=""/></div>
+                    <div className="shape_bg" style={{ pointerEvents: "none" }}></div>
+                    <div className="shape_six float-bob-y" style={{ pointerEvents: "none" }}><img src="/assets/images/icons/shape_icon_6.png" alt=""/></div>
                     <div className="container">
                         <div className="section_title centred mb_50">
                             <div className="tag_text"><h6>Packages & Investment</h6></div>

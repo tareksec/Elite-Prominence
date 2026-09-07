@@ -8,8 +8,8 @@ export default function PricingTabs() {
     return (
         <div className="pricing_tab_wrapper" style={{ fontFamily: "var(--primary-font)" }}>
             {/* Toggle Switcher */}
-            <div className="pricing_toggle_container centred mb_50" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <div className="pricing_toggle_box" style={{
+            <div className="pricing_toggle_container centred mb_50" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', zIndex: 10 }}>
+                <div className="pricing_toggle_box" role="tablist" aria-label="Pricing Model Selection" style={{
                     display: 'inline-flex',
                     background: '#edf2f7',
                     padding: '6px',
@@ -22,6 +22,10 @@ export default function PricingTabs() {
                 }}>
                     <button
                         type="button"
+                        id="pricing-tab-onetime"
+                        role="tab"
+                        aria-selected={activeModel === 'onetime'}
+                        aria-controls="pricing-tabpanel-onetime"
                         className="pricing_toggle_btn"
                         onClick={() => setActiveModel('onetime')}
                         style={{
@@ -41,6 +45,10 @@ export default function PricingTabs() {
                     </button>
                     <button
                         type="button"
+                        id="pricing-tab-retainer"
+                        role="tab"
+                        aria-selected={activeModel === 'retainer'}
+                        aria-controls="pricing-tabpanel-retainer"
                         className="pricing_toggle_btn"
                         onClick={() => setActiveModel('retainer')}
                         style={{
@@ -63,7 +71,7 @@ export default function PricingTabs() {
 
             {/* Model 1: One-Time Package (3-Month Sprint) */}
             {activeModel === 'onetime' && (
-                <div className="model_one_content" data-aos="fade-up" data-aos-duration="400">
+                <div id="pricing-tabpanel-onetime" role="tabpanel" aria-labelledby="pricing-tab-onetime" className="model_one_content" style={{ animation: 'fadeInTab 0.35s ease-out' }}>
                     <div className="model_header centred mb_40">
                         <span style={{
                             display: "inline-block",
@@ -332,7 +340,7 @@ export default function PricingTabs() {
 
             {/* Model 2: Monthly Retainer */}
             {activeModel === 'retainer' && (
-                <div className="model_two_content" data-aos="fade-up" data-aos-duration="400">
+                <div id="pricing-tabpanel-retainer" role="tabpanel" aria-labelledby="pricing-tab-retainer" className="model_two_content" style={{ animation: 'fadeInTab 0.35s ease-out' }}>
                     <div className="model_header centred mb_40">
                         <span style={{
                             display: "inline-block",
@@ -846,6 +854,16 @@ export default function PricingTabs() {
                     }
                     .step_card_content {
                         align-items: flex-start;
+                    }
+                }
+                @keyframes fadeInTab {
+                    from {
+                        opacity: 0;
+                        transform: translateY(8px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
                     }
                 }
             `}</style>

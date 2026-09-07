@@ -2751,6 +2751,8 @@ img {
     background: conic-gradient(from -87deg at 50% 50%, #9F70FD 92.37696290016174deg, #E770C1 360deg);
     opacity: 0.1;
     filter: blur(125px);
+    pointer-events: none;
+    z-index: 0;
 }
 .testimonial_section .owl-carousel .owl-stage-outer{
     overflow: visible;
@@ -3325,11 +3327,14 @@ img {
     background: conic-gradient(from -87deg at 50% 50%, #9F70FD 92.37696290016174deg, #E770C1 360deg);
     opacity: 0.1;
     filter: blur(125px);
+    pointer-events: none;
+    z-index: 0;
 }
 .pricing_section .shape_six{
     position: absolute;
     bottom: 150px;
     right: 0px;
+    pointer-events: none;
 }
 .pricing_block_one{
     position: relative;
