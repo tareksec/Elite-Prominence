@@ -134,7 +134,7 @@ export default function CommunityPage() {
 
     return (
         <div className="boxed_wrapper">
-            <Layout headerStyle={1} footerStyle={1}>
+            <Layout headerStyle={4} footerStyle={1}>
                 <section style={{
                     backgroundColor: "#f8fafd",
                     padding: "100px 0 100px",
@@ -152,9 +152,7 @@ export default function CommunityPage() {
                             fontWeight: "700",
                             letterSpacing: "1.5px",
                             textTransform: "uppercase",
-                            color: "#2460e2",
-                            backgroundColor: "rgba(36, 96, 226, 0.08)",
-                            border: "1px solid rgba(36, 96, 226, 0.2)",
+                            color: "#7c3aed", backgroundColor: "#f3e8ff", border: "1px solid rgba(124, 58, 237, 0.2)",
                             padding: "4px 16px",
                             borderRadius: "20px",
                             marginBottom: "14px"
@@ -172,7 +170,7 @@ export default function CommunityPage() {
                             <Link
                                 href="/signup"
                                 style={{
-                                    backgroundColor: "#2460e2",
+                                    background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
                                     color: "#ffffff",
                                     padding: "12px 28px",
                                     minHeight: "44px",
@@ -183,7 +181,7 @@ export default function CommunityPage() {
                                     fontSize: "15px",
                                     fontWeight: "700",
                                     textDecoration: "none",
-                                    boxShadow: "0 4px 14px rgba(36, 96, 226, 0.25)"
+                                    boxShadow: "0 8px 20px -2px rgba(0, 0, 0, 0.35)"
                                 }}
                             >
                                 Join the Network →
@@ -218,7 +216,7 @@ export default function CommunityPage() {
                                         width: "56px",
                                         height: "56px",
                                         borderRadius: "50%",
-                                        backgroundColor: "#2460e2",
+                                        background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
                                         color: "#ffffff",
                                         display: "flex",
                                         alignItems: "center",
@@ -278,7 +276,7 @@ export default function CommunityPage() {
                                                     border: "1px solid #e2e8f0"
                                                 }}
                                             >
-                                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#2460e2", marginBottom: "2px" }}>
+                                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#7c3aed", marginBottom: "2px" }}>
                                                     {art.category}
                                                 </div>
                                                 <div style={{ fontSize: "15px", fontWeight: "700", color: "#1b2534", lineHeight: "1.4" }}>
@@ -351,9 +349,7 @@ export default function CommunityPage() {
                                     fontSize: "12px",
                                     fontWeight: "700",
                                     textTransform: "uppercase",
-                                    color: "#2460e2",
-                                    backgroundColor: "rgba(36, 96, 226, 0.08)",
-                                    border: "1px solid rgba(36, 96, 226, 0.2)",
+                                    color: "#7c3aed", backgroundColor: "#f3e8ff", border: "1px solid rgba(124, 58, 237, 0.2)",
                                     padding: "3px 12px",
                                     borderRadius: "12px",
                                     display: "inline-block",

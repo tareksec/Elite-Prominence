@@ -80,7 +80,7 @@ export default function FeedbackPage() {
 
     return (
         <div className="boxed_wrapper">
-            <Layout headerStyle={1} footerStyle={1}>
+            <Layout headerStyle={4} footerStyle={1}>
                 <section style={{
                     backgroundColor: "#f8fafd",
                     padding: "100px 0 100px",
@@ -98,9 +98,7 @@ export default function FeedbackPage() {
                                 fontWeight: "700",
                                 letterSpacing: "1.5px",
                                 textTransform: "uppercase",
-                                color: "#2460e2",
-                                backgroundColor: "rgba(36, 96, 226, 0.08)",
-                                border: "1px solid rgba(36, 96, 226, 0.2)",
+                                color: "#7c3aed", backgroundColor: "#f3e8ff", border: "1px solid rgba(124, 58, 237, 0.2)",
                                 padding: "4px 16px",
                                 borderRadius: "20px",
                                 marginBottom: "14px"
@@ -118,7 +116,7 @@ export default function FeedbackPage() {
                                 <Link
                                     href="/dashboard"
                                     style={{
-                                        backgroundColor: "#2460e2",
+                                        background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
                                         color: "#ffffff",
                                         padding: "12px 28px",
                                         minHeight: "44px",
@@ -129,7 +127,7 @@ export default function FeedbackPage() {
                                         fontSize: "15px",
                                         fontWeight: "700",
                                         textDecoration: "none",
-                                        boxShadow: "0 4px 14px rgba(36, 96, 226, 0.25)"
+                                        boxShadow: "0 8px 20px -2px rgba(0, 0, 0, 0.35)"
                                     }}
                                 >
                                     Share Your Feedback →
@@ -138,8 +136,8 @@ export default function FeedbackPage() {
                                     href="/community"
                                     style={{
                                         backgroundColor: "#ffffff",
-                                        color: "#2460e2",
-                                        border: "1.5px solid #2460e2",
+                                        color: "#7c3aed",
+                                        border: "1.5px solid #7c3aed",
                                         padding: "12px 26px",
                                         minHeight: "44px",
                                         display: "inline-flex",
@@ -191,9 +189,7 @@ export default function FeedbackPage() {
                                                 fontSize: "11px",
                                                 fontWeight: "700",
                                                 textTransform: "uppercase",
-                                                color: "#2460e2",
-                                                backgroundColor: "rgba(36, 96, 226, 0.08)",
-                                                border: "1px solid rgba(36, 96, 226, 0.2)",
+                                                color: "#7c3aed", backgroundColor: "#f3e8ff", border: "1px solid rgba(124, 58, 237, 0.2)",
                                                 padding: "3px 10px",
                                                 borderRadius: "12px"
                                             }}>

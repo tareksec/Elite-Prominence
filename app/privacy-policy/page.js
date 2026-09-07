@@ -29,24 +29,16 @@ export default function PrivacyPolicyPage() {
         <div className="boxed_wrapper">
             <BreadcrumbJsonLd items={breadcrumbItems} />
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Privacy Policy">
-                <section className="pt_120 pb_120" style={{ backgroundColor: "#FAF8F2", minHeight: "80vh" }}>
+                <section className="pt_120 pb_120" style={{ backgroundColor: "#f8fafc", minHeight: "80vh" }}>
                     <div className="container" style={{ maxWidth: "860px" }}>
                         {/* Legal Notice Banner */}
                         <div style={{
-                            backgroundColor: "#fffbeb",
-                            border: "1px solid #fef3c7",
-                            borderLeft: "4px solid #f59e0b",
-                            borderRadius: "10px",
-                            padding: "16px 20px",
-                            marginBottom: "35px",
-                            fontSize: "14px",
-                            lineHeight: "1.6",
-                            color: "#92400e"
+                            backgroundColor: "#ffffff", border: "1px solid #e2e8f0", borderLeft: "4px solid #7c3aed", borderRadius: "10px", padding: "16px 22px", marginBottom: "35px", fontSize: "14px", lineHeight: "1.6", color: "#475569", boxShadow: "0 2px 8px rgba(0,0,0,0.02)"
                         }}>
                             <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
-                                <span style={{ fontSize: "18px", lineHeight: "1" }}>⚠️</span>
+                                <span style={{ fontSize: "16px", color: "#7c3aed", fontWeight: "700" }}>ℹ️</span>
                                 <div>
-                                    <strong style={{ fontWeight: "700" }}>NOT LEGAL ADVICE.</strong> This is a structural starting draft, not a lawyer-reviewed document. Before accepting real payments or scaling user signups, have this reviewed by a qualified lawyer.
+                                    <strong style={{ fontWeight: "700", color: "#0f172a" }}>Privacy Notice:</strong> This is a structural starting draft, not a lawyer-reviewed document. Before accepting real payments or scaling user signups, have this reviewed by a qualified lawyer.
                                 </div>
                             </div>
                         </div>

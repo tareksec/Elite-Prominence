@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from "next/link"
 import Layout from "@/components/layout/Layout"
+import PricingTabs from "@/components/elements/PricingTabs"
 
 export const metadata = {
     title: 'Pricing & Packages | Personal Branding Agency — Elite Prominence',
@@ -37,8 +38,6 @@ const breadcrumbJsonLd = {
     ],
 }
 
-import PricingTabs from "@/components/elements/PricingTabs"
-
 export default function Pricing_Page() {
     return (
         <div className="boxed_wrapper">
@@ -46,19 +45,53 @@ export default function Pricing_Page() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
-            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle6="Pricing & Packages">
-                <section className="pricing_section pt_150 pb_120">
-                    <div className="shape_bg" style={{ pointerEvents: "none" }}></div>
-                    <div className="shape_six float-bob-y" style={{ pointerEvents: "none" }}><img src="/assets/images/icons/shape_icon_6.png" alt=""/></div>
+            <Layout headerStyle={4} footerStyle={1}>
+                {/* Clean Executive Hero Header */}
+                <section className="pricing_page_hero" style={{
+                    padding: "130px 0 50px",
+                    background: "linear-gradient(180deg, #F8F7FF 0%, #FFFFFF 100%)",
+                    textAlign: "center"
+                }}>
                     <div className="container">
-                        <div className="section_title centred mb_50">
-                            <div className="tag_text"><h6>Packages & Investment</h6></div>
-                            <h2>Personal Branding Investment Models</h2>
-                            <p style={{ maxWidth: "760px", margin: "15px auto 0", fontSize: "18px", color: "#59606a", lineHeight: "1.7" }}>
-                                Two ways to work with us — a fixed-scope infrastructure build, or ongoing monthly personal branding and social media authority management. Choose whichever fits how you like to plan.
+                        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+                            <span style={{
+                                display: "inline-block",
+                                fontSize: "12px",
+                                fontWeight: "700",
+                                letterSpacing: "1.2px",
+                                textTransform: "uppercase",
+                                color: "#7c3aed",
+                                background: "#f3e8ff",
+                                padding: "6px 18px",
+                                borderRadius: "9999px",
+                                marginBottom: "18px"
+                            }}>
+                                Investment &amp; Packages
+                            </span>
+                            <h1 style={{
+                                fontFamily: "'DM Serif Display', Georgia, serif",
+                                fontSize: "clamp(32px, 5vw, 48px)",
+                                color: "#0F1235",
+                                marginBottom: "18px",
+                                lineHeight: "1.2"
+                            }}>
+                                Executive Personal Branding Models
+                            </h1>
+                            <p style={{
+                                fontSize: "18px",
+                                color: "#59606a",
+                                lineHeight: "1.7",
+                                margin: "0 auto",
+                                maxWidth: "720px"
+                            }}>
+                                Two flexible engagement structures designed for senior leaders: a focused 3-month digital infrastructure sprint, or comprehensive ongoing monthly authority management.
                             </p>
                         </div>
-                        
+                    </div>
+                </section>
+
+                <section className="pricing_section pb_120" style={{ background: "#FFFFFF" }}>
+                    <div className="container">
                         <PricingTabs />
                     </div>
                 </section>
