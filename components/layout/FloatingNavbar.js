@@ -435,7 +435,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                         )}
                     </div>
 
-                    {/* Gradient CTA Pill Button: #8B5CF6 → #EC4899 */}
+                    {/* Tactile 3D CTA Pill Button */}
                     <Link
                         href="/contact"
                         className="floating_cta_btn"
@@ -443,17 +443,19 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             display: 'inline-flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            padding: '10px 22px',
+                            padding: '10px 24px',
                             borderRadius: '9999px',
-                            background: 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)',
+                            background: 'linear-gradient(180deg, #2b2d32 0%, #151619 100%)',
                             color: '#ffffff',
                             fontSize: '14px',
-                            fontWeight: '700',
+                            fontWeight: '600',
                             letterSpacing: '0.2px',
                             textDecoration: 'none',
                             whiteSpace: 'nowrap',
-                            boxShadow: '0 4px 15px rgba(236, 72, 153, 0.35)',
-                            transition: 'all 0.25s ease'
+                            border: '1px solid rgba(255, 255, 255, 0.09)',
+                            boxShadow: '0 8px 20px -2px rgba(0, 0, 0, 0.4), 0 3px 6px -1px rgba(0, 0, 0, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6)',
+                            textShadow: '0 1px 2px rgba(0, 0, 0, 0.4)',
+                            transition: 'all 0.22s cubic-bezier(0.16, 1, 0.3, 1)'
                         }}
                     >
                         <span className="cta_desktop_text">Book a Strategy Call</span>
@@ -468,13 +470,14 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                         aria-label="Toggle navigation menu"
                         style={{
                             display: 'none',
-                            background: '#f1f5f9',
-                            border: '1px solid #e2e8f0',
-                            borderRadius: '50%',
-                            width: '44px',
-                            height: '44px',
-                            minWidth: '44px',
-                            minHeight: '44px',
+                            background: '#f1f3f6',
+                            border: '1px solid rgba(0, 0, 0, 0.04)',
+                            boxShadow: 'inset 0 1px 1px rgba(255, 255, 255, 0.95), 0 2px 5px rgba(0, 0, 0, 0.04)',
+                            borderRadius: '12px',
+                            width: '42px',
+                            height: '42px',
+                            minWidth: '42px',
+                            minHeight: '42px',
                             alignItems: 'center',
                             justifyContent: 'center',
                             cursor: 'pointer',
@@ -495,13 +498,17 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                     min-height: 44px;
                 }
                 .floating_cta_btn:hover {
-                    transform: translateY(-1px);
-                    box-shadow: 0 6px 22px rgba(236, 72, 153, 0.48) !important;
+                    transform: translateY(-2px);
+                    box-shadow: 0 12px 26px -2px rgba(0, 0, 0, 0.5), 0 4px 10px -1px rgba(0, 0, 0, 0.25), inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.48), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6) !important;
                     filter: brightness(1.04);
                 }
+                .floating_cta_btn:active {
+                    transform: translateY(1px);
+                    box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.32), inset 0 1px 2px 0 rgba(0, 0, 0, 0.7) !important;
+                }
                 .more_dropdown_item:hover {
-                    background-color: rgba(139, 92, 246, 0.08) !important;
-                    color: #8B5CF6 !important;
+                    background-color: rgba(15, 23, 42, 0.05) !important;
+                    color: #0f172a !important;
                 }
                 .cta_mobile_text {
                     display: none;

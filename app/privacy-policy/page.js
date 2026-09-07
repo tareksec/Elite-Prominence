@@ -12,7 +12,7 @@ export const metadata = {
     openGraph: {
         title: 'Privacy Policy | Elite Prominence',
         description: 'Privacy Policy for Elite Prominence executive personal branding advisory and representation services.',
-        url: 'https://prominence.agency/privacy-policy',
+        url: 'https://www.prominence.agency/privacy-policy',
         siteName: 'Elite Prominence',
         locale: 'en_US',
         type: 'website',

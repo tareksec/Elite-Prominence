@@ -15,6 +15,6 @@ export default function robots() {
         ],
       },
     ],
-    sitemap: 'https://prominence.agency/sitemap.xml',
+    sitemap: 'https://www.prominence.agency/sitemap.xml',
   }
 }

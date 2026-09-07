@@ -11,7 +11,7 @@ export const metadata = {
     openGraph: {
         title: 'Pricing & Packages | Personal Branding Agency — Elite Prominence',
         description: 'Transparent monthly retainer packages for senior HR leaders and executive consultants. Starter, Growth, and Premium tiers with full done-for-you support.',
-        url: 'https://prominence.agency/pricing',
+        url: 'https://www.prominence.agency/pricing',
         siteName: 'Elite Prominence',
         locale: 'en_US',
         type: 'website',
@@ -26,13 +26,13 @@ const breadcrumbJsonLd = {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://prominence.agency',
+            item: 'https://www.prominence.agency',
         },
         {
             '@type': 'ListItem',
             position: 2,
             name: 'Pricing & Packages',
-            item: 'https://prominence.agency/pricing',
+            item: 'https://www.prominence.agency/pricing',
         },
     ],
 }

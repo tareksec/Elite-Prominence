@@ -13,7 +13,7 @@ export const metadata = {
     openGraph: {
         title: 'Contact Us | Book an Executive Strategy Session — Elite Prominence',
         description: 'Schedule a 30-minute consultation with Elite Prominence. We will evaluate your current digital footprint and discuss your executive personal branding roadmap.',
-        url: 'https://prominence.agency/contact',
+        url: 'https://www.prominence.agency/contact',
         siteName: 'Elite Prominence',
         locale: 'en_US',
         type: 'website',
@@ -30,13 +30,13 @@ const contactSchema = {
                     '@type': 'ListItem',
                     position: 1,
                     name: 'Home',
-                    item: 'https://prominence.agency',
+                    item: 'https://www.prominence.agency',
                 },
                 {
                     '@type': 'ListItem',
                     position: 2,
                     name: 'Contact',
-                    item: 'https://prominence.agency/contact',
+                    item: 'https://www.prominence.agency/contact',
                 },
             ],
         },
@@ -44,7 +44,7 @@ const contactSchema = {
             '@type': 'ContactPage',
             name: 'Contact Elite Prominence',
             description: 'Schedule a strategy call or get in touch with Elite Prominence executive personal branding consultants.',
-            url: 'https://prominence.agency/contact',
+            url: 'https://www.prominence.agency/contact',
         },
     ],
 }

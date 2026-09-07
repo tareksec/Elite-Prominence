@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { checkRateLimit } from '@/lib/rateLimit'
 import { sanitizeText, sanitizeTitle } from '@/lib/sanitize'
+import { sendContactForm } from '@/app/actions/contact'
 
 export async function POST(request) {
     try {
@@ -18,7 +19,7 @@ export async function POST(request) {
         }
 
         const body = await request.json()
-        const { name, role, company, email, linkedin, goals, honeypot } = body
+        const { name, role, company, email, linkedin, goals, message, honeypot } = body
 
         // 2. Honeypot check (silently drop bot submissions)
         if (honeypot) {
@@ -26,9 +27,9 @@ export async function POST(request) {
         }
 
         // 3. Required Fields Validation
-        if (!name || !email || !role) {
+        if (!name || !email) {
             return NextResponse.json(
-                { error: 'Name, email, and role are required fields.' },
+                { error: 'Name and email are required fields.' },
                 { status: 400 }
             )
         }
@@ -45,29 +46,31 @@ export async function POST(request) {
         // 5. Input Sanitization
         const sanitizedInquiry = {
             name: sanitizeTitle(name, 100),
-            role: sanitizeTitle(role, 120),
-            company: sanitizeTitle(company || '', 120),
+            role: role ? sanitizeTitle(role, 120) : undefined,
+            company: company ? sanitizeTitle(company, 120) : undefined,
             email: sanitizeText(email, 120),
-            linkedin: sanitizeText(linkedin || '', 250),
-            goals: sanitizeText(goals || '', 2000),
-            submitted_at: new Date().toISOString()
+            linkedin: linkedin ? sanitizeText(linkedin, 250) : undefined,
+            goals: goals ? sanitizeText(goals, 2000) : undefined,
+            message: message ? sanitizeText(message, 3000) : undefined,
         }
 
-        // Log receipt (in production, integrate with Resend/SendGrid or Supabase table)
-        console.log('[Contact Inquiry Received]:', {
-            name: sanitizedInquiry.name,
-            email: sanitizedInquiry.email,
-            role: sanitizedInquiry.role,
-            timestamp: sanitizedInquiry.submitted_at
-        })
+        // 6. Execute Supabase insertion and Brevo Email Notification
+        const result = await sendContactForm(sanitizedInquiry)
+
+        if (!result.success) {
+            return NextResponse.json(
+                { error: result.message || 'Failed to submit contact form.' },
+                { status: 400 }
+            )
+        }
 
         return NextResponse.json({
             success: true,
-            message: 'Your strategy session request has been received. An executive advisor will reach out within 1–2 business days.'
+            message: 'Your inquiry has been received. An executive advisor will reach out within 1–2 business days.'
         })
 
     } catch (err) {
-        console.error('Contact API Error:', err)
+        console.error('Contact API Route Error:', err)
         return NextResponse.json(
             { error: 'An unexpected error occurred. Please contact us directly at hello@prominence.agency.' },
             { status: 500 }

@@ -12,7 +12,7 @@ export const metadata = {
     openGraph: {
         title: 'Services | LinkedIn Branding & Google Reputation Management',
         description: 'Website, Google reputation management, and LinkedIn branding — three pillars, delivered together, for HR leaders and consultants.',
-        url: 'https://prominence.agency/services',
+        url: 'https://www.prominence.agency/services',
         siteName: 'Elite Prominence',
         locale: 'en_US',
         type: 'website',
@@ -29,13 +29,13 @@ const serviceSchema = {
                     '@type': 'ListItem',
                     position: 1,
                     name: 'Home',
-                    item: 'https://prominence.agency',
+                    item: 'https://www.prominence.agency',
                 },
                 {
                     '@type': 'ListItem',
                     position: 2,
                     name: 'Services',
-                    item: 'https://prominence.agency/services',
+                    item: 'https://www.prominence.agency/services',
                 },
             ],
         },
@@ -45,7 +45,7 @@ const serviceSchema = {
             provider: {
                 '@type': 'Organization',
                 name: 'Elite Prominence',
-                url: 'https://prominence.agency',
+                url: 'https://www.prominence.agency',
             },
             description: 'Done-for-you personal branding for senior HR leaders, CHROs, and executive consultants covering website design, Google reputation management, and LinkedIn presence.',
             areaServed: 'Worldwide',

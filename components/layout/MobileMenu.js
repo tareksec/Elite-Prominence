@@ -57,12 +57,14 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                         textAlign: "center",
                                         padding: "13px 20px",
                                         borderRadius: "9999px",
-                                        background: "linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)",
+                                        background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
                                         color: "#ffffff",
                                         fontSize: "15px",
-                                        fontWeight: "700",
+                                        fontWeight: "600",
                                         textDecoration: "none",
-                                        boxShadow: "0 4px 15px rgba(236, 72, 153, 0.35)"
+                                        border: "1px solid rgba(255, 255, 255, 0.09)",
+                                        boxShadow: "0 8px 20px -2px rgba(0, 0, 0, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6)",
+                                        textShadow: "0 1px 2px rgba(0, 0, 0, 0.4)"
                                     }}
                                 >
                                     Book a Strategy Call &rarr;

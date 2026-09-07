@@ -950,44 +950,40 @@ div#mCSB_1_container{
 .scroll-top{
     width: 50px;
     height: 50px;
-    line-height: 53px;
+    line-height: 50px;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 24px;
-    z-index: 99;
+    bottom: 25px;
+    right: 25px;
+    font-size: 18px;
+    z-index: 999;
     color: #fff;
-    background: linear-gradient(267deg, #E770C1 11.27%, #9F70FD 88.73%);
-    border: 1px solid var(--theme-color);
+    background: linear-gradient(180deg, #2b2d32 0%, #151619 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 50%;
     text-align: center;
     cursor: pointer;
-    z-index: 999;    
+    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.35),
+                inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6),
+                0 10px 24px -2px rgba(0, 0, 0, 0.42),
+                0 3px 8px -1px rgba(0, 0, 0, 0.22);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }  
 .scroll-top:before{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-    opacity: 0;
-    z-index: -1;
-    transform: scale(0.0);
-    border-radius: 50%;
-    background: linear-gradient(267deg, #9F70FD 11.27%, #E770C1 88.73%);
-    transition: all 900ms ease;
-    -moz-transition: all 900ms ease;
-    -webkit-transition: all 900ms ease;
-    -ms-transition: all 900ms ease;
-    -o-transition: all 900ms ease;
-}
-.scroll-top:hover:before{
-    opacity: 1;
-    transform: scale(1.0);
+    display: none;
 }
 .scroll-top:hover{
     color: #fff;
+    background: linear-gradient(180deg, #35383e 0%, #1c1d22 100%);
+    transform: translateY(-2px);
+    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.45),
+                inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6),
+                0 14px 28px -2px rgba(0, 0, 0, 0.5),
+                0 4px 10px -1px rgba(0, 0, 0, 0.3);
+}
+.scroll-top:active{
+    transform: translateY(1px);
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.8),
+                0 4px 10px -1px rgba(0, 0, 0, 0.3);
 }
 /** End Scroll Top **/
 @media only screen and (min-width: 991px) and (max-width: 1139px){

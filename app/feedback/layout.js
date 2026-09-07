@@ -9,7 +9,7 @@ export const metadata = {
     openGraph: {
         title: 'Client Feedback & Testimonials | Elite Prominence',
         description: 'Read verified feedback and testimonials from chief human resources officers and senior people leaders working with Elite Prominence.',
-        url: 'https://prominence.agency/feedback',
+        url: 'https://www.prominence.agency/feedback',
         siteName: 'Elite Prominence',
         locale: 'en_US',
         type: 'website',
@@ -24,13 +24,13 @@ const feedbackBreadcrumbSchema = {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://prominence.agency',
+            item: 'https://www.prominence.agency',
         },
         {
             '@type': 'ListItem',
             position: 2,
             name: 'Client Feedback',
-            item: 'https://prominence.agency/feedback',
+            item: 'https://www.prominence.agency/feedback',
         },
     ],
 }

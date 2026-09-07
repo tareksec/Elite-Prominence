@@ -12,7 +12,7 @@ export const metadata = {
     openGraph: {
         title: 'Terms of Service | Elite Prominence',
         description: 'Terms of Service governing advisory, executive ghostwriting, and personal branding representations with Elite Prominence.',
-        url: 'https://prominence.agency/terms',
+        url: 'https://www.prominence.agency/terms',
         siteName: 'Elite Prominence',
         locale: 'en_US',
         type: 'website',

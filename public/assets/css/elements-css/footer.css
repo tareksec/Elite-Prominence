@@ -38,7 +38,7 @@ h4.footer_widget_title{
     -o-transition: all 900ms ease;
 }
 .footer_widget ul li a:hover{
-    color: #E770C1;
+    color: #cbd5e1;
 }
 .subscribe-inner .form-group{
     display: inline-flex;
@@ -56,7 +56,7 @@ h4.footer_widget_title{
     backdrop-filter: blur(5px);
 }
 .subscribe-inner .form-group input:focus{
-    border-color: #E770C1;
+    border-color: rgba(255, 255, 255, 0.5);
 }
 .footer_bottom{
     position: relative;
@@ -76,7 +76,10 @@ h4.footer_widget_title{
     font-family: var(--secondary-font)
 }
 .footer_bottom .copyright a{
-    color: #E770C1;
+    color: #cbd5e1;
+}
+.footer_bottom .copyright a:hover{
+    color: #ffffff;
 }
 .footer_shape{
     position: absolute;
@@ -85,9 +88,9 @@ h4.footer_widget_title{
     bottom: -443px;
     z-index: -1;
     left: calc(50% - 468px);
-    background: conic-gradient(from -87deg at 50% 50%, #9F70FD 92.37696290016174deg, #E770C1 360deg);
-    opacity: 0.12;
-    filter: blur(125px);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(15, 16, 19, 0) 70%);
+    opacity: 0.2;
+    filter: blur(100px);
 }
 
 /* End Footer Bottom */

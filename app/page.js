@@ -17,7 +17,7 @@ export const metadata = {
     openGraph: {
         title: 'Elite Prominence | Personal Branding Agency for Executives',
         description: 'We build a complete digital presence for HR leaders & executives — website, Google reputation, and LinkedIn visibility, done for you.',
-        url: 'https://prominence.agency',
+        url: 'https://www.prominence.agency',
         siteName: 'Elite Prominence',
         locale: 'en_US',
         type: 'website',
@@ -28,7 +28,7 @@ const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Elite Prominence',
-    url: 'https://prominence.agency',
+    url: 'https://www.prominence.agency',
 }
 
 export default function Home() {

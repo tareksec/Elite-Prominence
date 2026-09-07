@@ -19,8 +19,8 @@ export default function Footer1() {
                 top: 0,
                 left: 0,
                 right: 0,
-                height: "2px",
-                background: "linear-gradient(90deg, transparent 0%, #8B5CF6 30%, #EC4899 70%, transparent 100%)",
+                height: "1px",
+                background: "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.2) 70%, transparent 100%)",
                 zIndex: 2
             }} />
 
@@ -240,9 +240,9 @@ export default function Footer1() {
                                 fontWeight: "700",
                                 textTransform: "uppercase",
                                 letterSpacing: "1px",
-                                color: "#EC4899",
-                                backgroundColor: "rgba(236, 72, 153, 0.1)",
-                                border: "1px solid rgba(236, 72, 153, 0.25)",
+                                color: "#e2e8f0",
+                                backgroundColor: "rgba(255, 255, 255, 0.08)",
+                                border: "1px solid rgba(255, 255, 255, 0.15)",
                                 padding: "3px 10px",
                                 borderRadius: "12px",
                                 marginBottom: "12px"
@@ -273,16 +273,18 @@ export default function Footer1() {
                                 style={{
                                     display: "block",
                                     textAlign: "center",
-                                    padding: "12px 20px",
+                                    padding: "12px 24px",
                                     borderRadius: "9999px",
-                                    background: "linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)",
+                                    background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
                                     color: "#ffffff",
                                     fontSize: "14px",
-                                    fontWeight: "700",
+                                    fontWeight: "600",
                                     letterSpacing: "0.2px",
                                     textDecoration: "none",
-                                    boxShadow: "0 4px 16px rgba(236, 72, 153, 0.35)",
-                                    transition: "all 0.25s ease"
+                                    border: "1px solid rgba(255, 255, 255, 0.12)",
+                                    boxShadow: "0 8px 20px -2px rgba(0, 0, 0, 0.5), 0 2px 6px -1px rgba(0, 0, 0, 0.3), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6)",
+                                    textShadow: "0 1px 2px rgba(0, 0, 0, 0.4)",
+                                    transition: "all 0.22s cubic-bezier(0.16, 1, 0.3, 1)"
                                 }}
                             >
                                 Book a Strategy Call &rarr;
@@ -371,22 +373,27 @@ export default function Footer1() {
             {/* Hover Effects & Media Queries */}
             <style jsx>{`
                 .footer_link_item:hover {
-                    color: #8B5CF6 !important;
+                    color: #ffffff !important;
                     transform: translateX(4px);
                 }
                 .footer_social_pill:hover {
-                    background: linear-gradient(135deg, #8B5CF6, #EC4899) !important;
-                    border-color: transparent !important;
+                    background: #ffffff !important;
+                    color: #0f172a !important;
+                    border-color: #ffffff !important;
                     transform: translateY(-2px);
-                    box-shadow: 0 4px 14px rgba(236, 72, 153, 0.4) !important;
+                    box-shadow: 0 4px 14px rgba(255, 255, 255, 0.2) !important;
                 }
                 .footer_cta_btn:hover {
-                    transform: translateY(-1px);
-                    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.5) !important;
+                    transform: translateY(-2px);
+                    box-shadow: 0 12px 28px -2px rgba(0, 0, 0, 0.6), inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6) !important;
                     filter: brightness(1.05);
                 }
+                .footer_cta_btn:active {
+                    transform: translateY(1px);
+                    box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.35), inset 0 1px 2px 0 rgba(0, 0, 0, 0.7) !important;
+                }
                 .footer_email_link:hover {
-                    color: #EC4899 !important;
+                    color: #ffffff !important;
                 }
                 .footer_legal_link:hover {
                     color: #cbd5e1 !important;

@@ -9,7 +9,7 @@ export const metadata = {
     openGraph: {
         title: 'Client Recognition & Testimonials | Elite Prominence',
         description: 'Discover how Elite Prominence partners with senior HR executives and consultants to build digital authority that creates compounding career returns.',
-        url: 'https://prominence.agency/testimonials',
+        url: 'https://www.prominence.agency/testimonials',
         siteName: 'Elite Prominence',
         locale: 'en_US',
         type: 'website',
@@ -24,13 +24,13 @@ const testimonialsBreadcrumbSchema = {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://prominence.agency',
+            item: 'https://www.prominence.agency',
         },
         {
             '@type': 'ListItem',
             position: 2,
             name: 'Client Recognition',
-            item: 'https://prominence.agency/testimonials',
+            item: 'https://www.prominence.agency/testimonials',
         },
     ],
 }

@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://prominence.agency'
+  const baseUrl = 'https://www.prominence.agency'
   const currentDate = new Date().toISOString().split('T')[0]
 
   return [

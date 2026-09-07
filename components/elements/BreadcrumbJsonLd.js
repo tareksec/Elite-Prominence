@@ -11,7 +11,7 @@ export default function BreadcrumbJsonLd({ items }) {
             "position": index + 1,
             "name": item.name,
             "item": item.url 
-                ? (item.url.startsWith("http") ? item.url : `https://prominence.agency${item.url}`)
+                ? (item.url.startsWith("http") ? item.url : `https://www.prominence.agency${item.url}`)
                 : undefined
         }))
     }

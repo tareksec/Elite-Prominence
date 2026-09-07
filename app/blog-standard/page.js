@@ -11,7 +11,7 @@ export const metadata = {
     openGraph: {
         title: 'Insights for HR Leaders | Elite Prominence Blog',
         description: 'Practical guidance on personal branding, LinkedIn strategy, and Google reputation for HR leaders and consultants.',
-        url: 'https://prominence.agency/blog-standard',
+        url: 'https://www.prominence.agency/blog-standard',
         siteName: 'Elite Prominence',
         locale: 'en_US',
         type: 'website',
@@ -28,13 +28,13 @@ const blogStandardSchema = {
                     '@type': 'ListItem',
                     position: 1,
                     name: 'Home',
-                    item: 'https://prominence.agency',
+                    item: 'https://www.prominence.agency',
                 },
                 {
                     '@type': 'ListItem',
                     position: 2,
                     name: 'Articles',
-                    item: 'https://prominence.agency/blog-standard',
+                    item: 'https://www.prominence.agency/blog-standard',
                 },
             ],
         },
@@ -42,7 +42,7 @@ const blogStandardSchema = {
             '@type': 'CollectionPage',
             name: 'Insights for HR Leaders | Elite Prominence Blog',
             description: 'Practical guidance on personal branding, LinkedIn strategy, and Google reputation for HR leaders and consultants.',
-            url: 'https://prominence.agency/blog-standard',
+            url: 'https://www.prominence.agency/blog-standard',
         },
     ],
 }

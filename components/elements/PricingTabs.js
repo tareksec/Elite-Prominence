@@ -8,18 +8,19 @@ export default function PricingTabs() {
 
     return (
         <div className="pricing_tab_wrapper" style={{ fontFamily: "var(--primary-font)" }}>
-            {/* Toggle Switcher */}
+            {/* Toggle Switcher — Tactile Floating Pill Container (Matching Reference Image) */}
             <div className="pricing_toggle_container centred mb_50" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', zIndex: 10 }}>
                 <div className="pricing_toggle_box" role="tablist" aria-label="Pricing Model Selection" style={{
                     display: 'inline-flex',
-                    background: '#edf2f7',
-                    padding: '6px',
-                    borderRadius: '40px',
-                    boxShadow: 'inset 0 2px 5px rgba(0,0,0,0.06)',
+                    background: '#ffffff',
+                    padding: '6px 8px',
+                    borderRadius: '9999px',
+                    boxShadow: '0 12px 36px -4px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.03)',
+                    border: '1px solid rgba(0, 0, 0, 0.05)',
                     maxWidth: '100%',
                     flexWrap: 'wrap',
                     justifyContent: 'center',
-                    gap: '4px'
+                    gap: '6px'
                 }}>
                     <button
                         type="button"
@@ -31,15 +32,18 @@ export default function PricingTabs() {
                         onClick={() => setActiveModel('onetime')}
                         style={{
                             padding: '12px 28px',
-                            borderRadius: '30px',
-                            border: 'none',
-                            fontWeight: '700',
+                            borderRadius: '9999px',
+                            border: activeModel === 'onetime' ? '1px solid rgba(255, 255, 255, 0.09)' : '1px solid transparent',
+                            fontWeight: '600',
                             fontSize: '15px',
                             cursor: 'pointer',
-                            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                            background: activeModel === 'onetime' ? '#2460e2' : 'transparent',
-                            color: activeModel === 'onetime' ? '#ffffff' : '#4a5568',
-                            boxShadow: activeModel === 'onetime' ? '0 4px 14px rgba(36, 96, 226, 0.35)' : 'none'
+                            transition: 'all 0.22s cubic-bezier(0.16, 1, 0.3, 1)',
+                            background: activeModel === 'onetime' ? 'linear-gradient(180deg, #2b2d32 0%, #151619 100%)' : 'transparent',
+                            color: activeModel === 'onetime' ? '#ffffff' : '#64748b',
+                            boxShadow: activeModel === 'onetime' 
+                                ? '0 8px 20px -2px rgba(0, 0, 0, 0.4), 0 3px 6px -1px rgba(0, 0, 0, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6)' 
+                                : 'none',
+                            textShadow: activeModel === 'onetime' ? '0 1px 2px rgba(0, 0, 0, 0.4)' : 'none'
                         }}
                     >
                         One-Time Package (3-Month Sprint)
@@ -54,15 +58,18 @@ export default function PricingTabs() {
                         onClick={() => setActiveModel('retainer')}
                         style={{
                             padding: '12px 28px',
-                            borderRadius: '30px',
-                            border: 'none',
-                            fontWeight: '700',
+                            borderRadius: '9999px',
+                            border: activeModel === 'retainer' ? '1px solid rgba(255, 255, 255, 0.09)' : '1px solid transparent',
+                            fontWeight: '600',
                             fontSize: '15px',
                             cursor: 'pointer',
-                            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                            background: activeModel === 'retainer' ? '#2460e2' : 'transparent',
-                            color: activeModel === 'retainer' ? '#ffffff' : '#4a5568',
-                            boxShadow: activeModel === 'retainer' ? '0 4px 14px rgba(36, 96, 226, 0.35)' : 'none'
+                            transition: 'all 0.22s cubic-bezier(0.16, 1, 0.3, 1)',
+                            background: activeModel === 'retainer' ? 'linear-gradient(180deg, #2b2d32 0%, #151619 100%)' : 'transparent',
+                            color: activeModel === 'retainer' ? '#ffffff' : '#64748b',
+                            boxShadow: activeModel === 'retainer' 
+                                ? '0 8px 20px -2px rgba(0, 0, 0, 0.4), 0 3px 6px -1px rgba(0, 0, 0, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6)' 
+                                : 'none',
+                            textShadow: activeModel === 'retainer' ? '0 1px 2px rgba(0, 0, 0, 0.4)' : 'none'
                         }}
                     >
                         Monthly Retainer (Ongoing)
@@ -244,10 +251,10 @@ export default function PricingTabs() {
                                         href="/contact" 
                                         className="btn_style_one"
                                         style={{
-                                            display: 'block',
+                                            display: 'flex',
                                             width: '100%',
                                             textAlign: 'center',
-                                            boxShadow: '0 4px 14px rgba(36, 96, 226, 0.35)'
+                                            justifyContent: 'center'
                                         }}
                                     >
                                         Book a Strategy Call &rarr;
@@ -513,10 +520,10 @@ export default function PricingTabs() {
                                         href="/contact" 
                                         className="btn_style_one"
                                         style={{
-                                            display: 'block',
+                                            display: 'flex',
                                             width: '100%',
                                             textAlign: 'center',
-                                            boxShadow: '0 4px 14px rgba(36, 96, 226, 0.35)'
+                                            justifyContent: 'center'
                                         }}
                                     >
                                         Book a Strategy Call &rarr;

@@ -9,7 +9,7 @@ export const metadata = {
     openGraph: {
         title: 'Executive Community & Contributors | Elite Prominence',
         description: 'Explore perspectives and verified profiles of industry leaders, chief people officers, and advisors contributing to the Elite Prominence network.',
-        url: 'https://prominence.agency/community',
+        url: 'https://www.prominence.agency/community',
         siteName: 'Elite Prominence',
         locale: 'en_US',
         type: 'website',
@@ -24,13 +24,13 @@ const communityBreadcrumbSchema = {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://prominence.agency',
+            item: 'https://www.prominence.agency',
         },
         {
             '@type': 'ListItem',
             position: 2,
             name: 'Executive Community',
-            item: 'https://prominence.agency/community',
+            item: 'https://www.prominence.agency/community',
         },
     ],
 }

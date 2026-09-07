@@ -12,7 +12,7 @@ export const metadata = {
     openGraph: {
         title: 'About Elite Prominence | Executive Personal Branding Consultants',
         description: 'Elite Prominence makes senior HR leaders and consultants prominent — so opportunity finds them instead of the other way around.',
-        url: 'https://prominence.agency/about',
+        url: 'https://www.prominence.agency/about',
         siteName: 'Elite Prominence',
         locale: 'en_US',
         type: 'website',
@@ -27,13 +27,13 @@ const breadcrumbJsonLd = {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://prominence.agency',
+            item: 'https://www.prominence.agency',
         },
         {
             '@type': 'ListItem',
             position: 2,
             name: 'About Us',
-            item: 'https://prominence.agency/about',
+            item: 'https://www.prominence.agency/about',
         },
     ],
 }

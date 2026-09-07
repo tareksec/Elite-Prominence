@@ -26,12 +26,13 @@ export default function FinalCta() {
                         fontWeight: "700",
                         textTransform: "uppercase",
                         letterSpacing: "1.2px",
-                        color: "#8B5CF6",
-                        backgroundColor: "rgba(139, 92, 246, 0.08)",
-                        border: "1px solid rgba(139, 92, 246, 0.2)",
-                        padding: "4px 14px",
-                        borderRadius: "20px",
-                        marginBottom: "14px"
+                        color: "#334155",
+                        backgroundColor: "#ffffff",
+                        border: "1px solid rgba(0, 0, 0, 0.08)",
+                        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
+                        padding: "5px 16px",
+                        borderRadius: "9999px",
+                        marginBottom: "16px"
                     }}>
                         Exclusive Client Roster
                     </span>
@@ -59,15 +60,17 @@ export default function FinalCta() {
                                 display: "inline-flex",
                                 alignItems: "center",
                                 gap: "10px",
-                                background: "linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)",
+                                background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
                                 color: "#ffffff",
                                 fontSize: "16px",
-                                fontWeight: "700",
-                                padding: "15px 38px",
+                                fontWeight: "600",
+                                padding: "16px 42px",
                                 borderRadius: "9999px",
                                 textDecoration: "none",
-                                boxShadow: "0 4px 18px rgba(236, 72, 153, 0.35)",
-                                transition: "all 0.3s ease"
+                                border: "1px solid rgba(255, 255, 255, 0.09)",
+                                boxShadow: "0 12px 28px -2px rgba(0, 0, 0, 0.45), 0 4px 10px -1px rgba(0, 0, 0, 0.22), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6)",
+                                textShadow: "0 1px 2px rgba(0, 0, 0, 0.4)",
+                                transition: "all 0.22s cubic-bezier(0.16, 1, 0.3, 1)"
                             }}
                             className="final_cta_btn"
                         >
@@ -80,8 +83,12 @@ export default function FinalCta() {
             <style jsx>{`
                 .final_cta_btn:hover {
                     transform: translateY(-2px);
-                    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.5) !important;
-                    filter: brightness(1.05);
+                    box-shadow: 0 16px 36px -2px rgba(0, 0, 0, 0.55), 0 6px 14px -1px rgba(0, 0, 0, 0.3), inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.48), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6) !important;
+                    filter: brightness(1.04);
+                }
+                .final_cta_btn:active {
+                    transform: translateY(1px);
+                    box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.32), inset 0 1px 2px 0 rgba(0, 0, 0, 0.7) !important;
                 }
             `}</style>
         </section>

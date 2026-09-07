@@ -1,0 +1,1738 @@
+<!-- Refer to public/blog-details.html or open directly -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Build a Personal Brand as an HR Leader (Without Becoming a "Content Creator") | Elite Prominence</title>
+  <meta name="description" content="Discover how senior HR leaders and CHROs build sovereign digital presence, rank on Google, and command executive authority without becoming content creators." />
+  <link rel="canonical" href="https://www.prominence.agency/blog-details" />
+  
+  <!-- Google Fonts: DM Serif Display & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Brand Design Tokens */
+    :root {
+      --gradient-brand: linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%);
+      --gradient-brand-subtle: linear-gradient(135deg, rgba(124, 58, 237, 0.08) 0%, rgba(192, 38, 168, 0.08) 50%, rgba(244, 114, 182, 0.08) 100%);
+      --gradient-hover: linear-gradient(135deg, #6D28D9 0%, #A21CAF 50%, #EC4899 100%);
+
+      --bg-page: #FFFFFF;
+      --bg-surface: #F8F7FF;
+      --bg-muted: #F1F0F9;
+
+      --text-heading: #0F1235;
+      --text-body: #374151;
+      --text-secondary: #64748B;
+      --text-muted: #94A3B8;
+
+      --purple: #7C3AED;
+      --magenta: #C026A8;
+      --pink: #F472B6;
+
+      --border: #E5E7EB;
+      --border-brand: #C026A8;
+      --shadow-sm: 0 1px 3px rgba(15, 18, 53, 0.05);
+      --shadow-md: 0 4px 14px rgba(15, 18, 53, 0.08);
+      --shadow-lg: 0 10px 30px rgba(124, 58, 237, 0.12);
+      --shadow-brand: 0 8px 25px rgba(192, 38, 168, 0.25);
+
+      --font-heading: 'DM Serif Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --content-font-size: 18px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-body);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      transition: all 0.2s ease;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Reading Progress Bar */
+    #reading-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--gradient-brand);
+      z-index: 9999;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      height: 72px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--gradient-brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+    }
+
+    .brand-title {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      color: var(--text-heading);
+      letter-spacing: -0.3px;
+    }
+
+    .brand-title span {
+      background: var(--gradient-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .nav-link:hover {
+      color: var(--purple);
+    }
+
+    .btn-gradient {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 9999px;
+      background: var(--gradient-brand);
+      color: #FFFFFF !important;
+      font-weight: 600;
+      font-size: 14px;
+      box-shadow: 0 4px 15px rgba(192, 38, 168, 0.25);
+      transition: all 0.25s ease;
+    }
+
+    .btn-gradient:hover {
+      background: var(--gradient-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(192, 38, 168, 0.35);
+    }
+
+    /* Article Header */
+    .article-header {
+      max-width: 960px;
+      margin: 48px auto 32px;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .category-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 18px;
+      border-radius: 9999px;
+      background: var(--gradient-brand);
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 10px rgba(124, 58, 237, 0.2);
+    }
+
+    .article-title {
+      font-family: var(--font-heading);
+      font-size: 46px;
+      line-height: 1.2;
+      color: var(--text-heading);
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .article-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 500;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .author-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .author-avatar-sm {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--gradient-brand);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 12px;
+      box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25);
+    }
+
+    .meta-divider {
+      color: var(--border);
+    }
+
+    .article-tags-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .tag-pill {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      background: var(--bg-muted);
+      color: var(--purple);
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .tag-pill:hover {
+      background: var(--bg-surface);
+      color: var(--magenta);
+      border-color: var(--purple);
+    }
+
+    .hero-image-wrapper {
+      max-width: 1100px;
+      margin: 0 auto 56px;
+      padding: 0 24px;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Three-Column Reading Layout */
+    .reading-layout {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 240px minmax(0, 720px) 140px;
+      justify-content: center;
+      gap: 48px;
+      position: relative;
+    }
+
+    /* Left: Sticky TOC */
+    .toc-sidebar {
+      position: sticky;
+      top: 96px;
+      align-self: start;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      padding-right: 12px;
+    }
+
+    .toc-header {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border-left: 2px solid var(--border);
+    }
+
+    .toc-item {
+      position: relative;
+    }
+
+    .toc-link {
+      display: block;
+      padding: 6px 12px 6px 16px;
+      font-size: 14px;
+      line-height: 1.4;
+      color: var(--text-secondary);
+      transition: all 0.2s ease;
+      border-left: 2px solid transparent;
+      margin-left: -2px;
+    }
+
+    .toc-link.toc-h3 {
+      padding-left: 28px;
+      font-size: 13px;
+    }
+
+    .toc-link:hover {
+      color: var(--purple);
+    }
+
+    .toc-link.active {
+      color: var(--purple);
+      font-weight: 600;
+      border-left: 2px solid var(--purple);
+      background: linear-gradient(90deg, rgba(124, 58, 237, 0.05) 0%, transparent 100%);
+    }
+
+    /* Center: Content */
+    .article-content-column {
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .article-body {
+      font-family: var(--font-body);
+      font-size: var(--content-font-size);
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .article-body p {
+      margin-bottom: 1.6rem;
+    }
+
+    .article-body h2 {
+      font-family: var(--font-heading);
+      font-size: 32px;
+      line-height: 1.3;
+      color: var(--text-heading);
+      margin: 3rem 0 1.25rem;
+      padding-left: 16px;
+      border-left: 4px solid var(--purple);
+      position: relative;
+    }
+
+    .article-body h2::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--gradient-brand);
+      border-radius: 2px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-body);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text-heading);
+      margin: 2.25rem 0 1rem;
+      letter-spacing: -0.2px;
+    }
+
+    .article-body strong {
+      color: var(--purple);
+      font-weight: 600;
+    }
+
+    .article-body blockquote {
+      position: relative;
+      background: var(--bg-surface);
+      border-left: 4px solid;
+      border-image: var(--gradient-brand) 1;
+      border-radius: 0 12px 12px 0;
+      padding: 1.5rem 1.75rem;
+      margin: 2.25rem 0;
+      font-style: italic;
+      color: var(--text-heading);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .article-body blockquote p {
+      margin-bottom: 0;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    .article-body ul, .article-body ol {
+      margin: 1.5rem 0 2rem 1.5rem;
+    }
+
+    .article-body li {
+      margin-bottom: 0.85rem;
+      padding-left: 6px;
+    }
+
+    .article-body ul li {
+      list-style: none;
+      position: relative;
+    }
+
+    .article-body ul li::before {
+      content: '';
+      position: absolute;
+      left: -18px;
+      top: 11px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gradient-brand);
+    }
+
+    .definition-box {
+      background: var(--bg-surface);
+      border: 1px solid rgba(192, 38, 168, 0.2);
+      border-left: 4px solid var(--purple);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .definition-box .def-title {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--purple);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Right: Sticky Reactions */
+    .reactions-sidebar {
+      position: sticky;
+      top: 96px;
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      padding: 16px 10px;
+      box-shadow: var(--shadow-sm);
+      width: 68px;
+      margin-left: auto;
+    }
+
+    .action-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .action-btn {
+      position: relative;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      background: var(--bg-page);
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+
+    .action-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .action-btn:hover {
+      color: var(--purple);
+      border-color: var(--purple);
+      background: var(--bg-surface);
+      transform: scale(1.08);
+    }
+
+    .action-btn.active {
+      background: var(--gradient-brand);
+      color: #FFFFFF;
+      border-color: transparent;
+      box-shadow: 0 4px 12px rgba(192, 38, 168, 0.3);
+    }
+
+    .action-btn .reaction-count {
+      font-size: 11px;
+      font-weight: 600;
+      margin-top: 2px;
+      line-height: 1;
+    }
+
+    .action-divider {
+      width: 28px;
+      height: 1px;
+      background: var(--border);
+      margin: 4px 0;
+    }
+
+    .action-btn[data-tooltip]::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      right: 56px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--text-heading);
+      color: #FFFFFF;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .action-btn:hover[data-tooltip]::after {
+      opacity: 1;
+    }
+
+    /* Mid-Article CTA Banner */
+    .mid-article-cta {
+      position: relative;
+      background: var(--bg-surface);
+      border: 1px solid rgba(192, 38, 168, 0.2);
+      border-left: 5px solid;
+      border-image: var(--gradient-brand) 1;
+      border-radius: 0 16px 16px 0;
+      padding: 2.25rem 2rem;
+      margin: 3.5rem 0;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .cta-heading {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      color: var(--text-heading);
+      margin-bottom: 10px;
+    }
+
+    .cta-body {
+      color: var(--text-secondary);
+      font-size: 16px;
+      margin-bottom: 20px;
+      max-width: 540px;
+    }
+
+    /* Highlight Tooltip */
+    #highlight-tooltip {
+      position: absolute;
+      display: none;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 10px;
+      box-shadow: 0 8px 24px rgba(15, 18, 53, 0.15);
+      z-index: 9998;
+      align-items: center;
+      gap: 8px;
+      transform: translate(-50%, -100%);
+      margin-top: -10px;
+    }
+
+    #highlight-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: #FFFFFF;
+    }
+
+    .tooltip-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      background: transparent;
+      transition: all 0.15s ease;
+    }
+
+    .tooltip-btn:hover {
+      color: var(--purple);
+      background: var(--bg-surface);
+    }
+
+    .tooltip-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* Font Size Widget */
+    .font-size-widget {
+      position: fixed;
+      bottom: 28px;
+      left: 28px;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 6px 10px;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      z-index: 900;
+    }
+
+    .font-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      padding: 0 4px;
+    }
+
+    .font-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-body);
+      background: var(--bg-muted);
+    }
+
+    .font-btn:hover {
+      background: var(--purple);
+      color: #FFFFFF;
+    }
+
+    /* Author Bio Card */
+    .author-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.25rem;
+      margin: 4rem 0 3rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .author-card-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .author-avatar-lg {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: var(--gradient-brand);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 26px;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(124, 58, 237, 0.25);
+      flex-shrink: 0;
+    }
+
+    .author-name {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      color: var(--text-heading);
+      line-height: 1.2;
+    }
+
+    .author-title {
+      font-size: 14px;
+      color: var(--purple);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .author-bio {
+      color: var(--text-body);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .author-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 9999px;
+      border: 1px solid var(--purple);
+      color: var(--purple);
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline:hover {
+      background: var(--purple);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+    }
+
+    /* Related Articles */
+    .related-section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 32px;
+      color: var(--text-heading);
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .related-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .related-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(192, 38, 168, 0.3);
+    }
+
+    .related-thumb {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      background: var(--bg-muted);
+    }
+
+    .related-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .related-badge {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: var(--gradient-brand-subtle);
+      color: var(--purple);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .related-title {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      line-height: 1.35;
+      color: var(--text-heading);
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+
+    .related-card:hover .related-title {
+      color: var(--purple);
+    }
+
+    .related-meta {
+      font-size: 13px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Back to Top */
+    #back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--gradient-brand);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-brand);
+      z-index: 900;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.8);
+      transition: all 0.25s ease;
+    }
+
+    #back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+
+    #back-to-top:hover {
+      background: var(--gradient-hover);
+      transform: scale(1.1);
+    }
+
+    /* Mobile Elements */
+    .mobile-bottom-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #FFFFFF;
+      border-top: 1px solid var(--border);
+      padding: 10px 20px;
+      z-index: 1000;
+      box-shadow: 0 -4px 16px rgba(15, 18, 53, 0.08);
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .mobile-toc-toggle {
+      display: none;
+      position: fixed;
+      bottom: 84px;
+      right: 20px;
+      background: var(--gradient-brand);
+      color: #FFFFFF;
+      border-radius: 9999px;
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: var(--shadow-brand);
+      z-index: 999;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .mobile-toc-drawer {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #FFFFFF;
+      border-radius: 20px 20px 0 0;
+      max-height: 70vh;
+      overflow-y: auto;
+      padding: 24px;
+      box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
+      z-index: 1100;
+    }
+
+    .mobile-toc-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 18, 53, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 1099;
+    }
+
+    /* Toast */
+    #toast-notification {
+      position: fixed;
+      bottom: 84px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--text-heading);
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s ease;
+      z-index: 9999;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #toast-notification.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border);
+      padding: 50px 24px;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .footer-brand {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      color: var(--text-heading);
+      margin-bottom: 12px;
+    }
+
+    .footer-tagline {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .footer-copy {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 1279px) {
+      .reading-layout {
+        grid-template-columns: minmax(0, 720px);
+        gap: 0;
+      }
+      .toc-sidebar {
+        display: none;
+      }
+      .reactions-sidebar {
+        display: none;
+      }
+      .mobile-toc-toggle {
+        display: flex;
+      }
+      .mobile-bottom-bar {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .article-title {
+        font-size: 38px;
+      }
+      .nav-menu {
+        display: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+      .article-title {
+        font-size: 30px;
+      }
+      .article-meta-row {
+        gap: 12px;
+      }
+      .hero-image {
+        max-height: 320px;
+      }
+      .font-size-widget {
+        display: none;
+      }
+      .author-card {
+        padding: 1.5rem;
+      }
+      .author-actions {
+        flex-direction: column;
+      }
+      .author-actions a {
+        width: 100%;
+        text-align: center;
+      }
+      body {
+        padding-bottom: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 2. Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="https://prominence.agency" class="nav-brand" aria-label="Elite Prominence Homepage">
+        <div class="brand-logo-mark">EP</div>
+        <span class="brand-title">Elite <span>Prominence</span></span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="https://prominence.agency/services" class="nav-link">Services</a></li>
+        <li><a href="https://prominence.agency/about" class="nav-link">Our Approach</a></li>
+        <li><a href="https://prominence.agency/pricing" class="nav-link">Packages</a></li>
+        <li><a href="https://prominence.agency/contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="https://prominence.agency/contact" class="btn-gradient">Book a Strategy Call &rarr;</a>
+    </div>
+  </header>
+
+  <!-- 3. Article Header -->
+  <header class="article-header">
+    <div class="category-badge">Personal Branding</div>
+    <h1 class="article-title">How to Build a Personal Brand as an HR Leader (Without Becoming a "Content Creator")</h1>
+    
+    <div class="article-meta-row">
+      <div class="author-pill">
+        <div class="author-avatar-sm">EP</div>
+        <span>Elite Prominence Editorial</span>
+      </div>
+      <span class="meta-divider">&bull;</span>
+      <time datetime="2026-06-01">June 2026</time>
+      <span class="meta-divider">&bull;</span>
+      <span id="reading-time">7 min read</span>
+    </div>
+
+    <div class="article-tags-row">
+      <span class="tag-pill">Personal Branding</span>
+      <span class="tag-pill">HR Leaders</span>
+      <span class="tag-pill">Executive Presence</span>
+      <span class="tag-pill">LinkedIn Strategy</span>
+      <span class="tag-pill">CHRO Advisory</span>
+    </div>
+  </header>
+
+  <!-- Full-Width Hero Image -->
+  <div class="hero-image-wrapper">
+    <img src="/assets/images/elite/blog_1_hr_personal_brand.jpg" alt="How to build an executive personal brand as an HR leader" class="hero-image" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80'" />
+  </div>
+
+  <!-- 4. Three-Column Reading Layout -->
+  <main class="reading-layout">
+
+    <!-- Sticky Left Sidebar: Table of Contents -->
+    <aside class="toc-sidebar" aria-label="Table of Contents">
+      <div class="toc-header">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h12"/></svg>
+        Table of Contents
+      </div>
+      <nav>
+        <ul class="toc-list" id="dynamic-toc">
+          <!-- Dynamically populated via JS -->
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Center Column: Article Content -->
+    <article class="article-content-column">
+      <div class="article-body" id="article-content">
+
+        <p class="lead" style="font-size: 20px; line-height: 1.7; color: var(--text-heading); font-weight: 500;">
+          Every senior HR leader we speak with has already completed the hardest part of career achievement: they have resolved high-stakes human capital crises, navigated complex mergers, and coached executive committees through profound uncertainty.
+        </p>
+
+        <p>
+          Yet when a search committee, private equity partner, or board nominating group conducts due diligence on their name, they find an outdated single-line bio from five years ago. <strong>Doing great work quietly is no longer career insurance; it is a career ceiling.</strong>
+        </p>
+
+        <div class="definition-box">
+          <div class="def-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            Executive Definition
+          </div>
+          <p style="margin-bottom:0; font-size: 16px; color: var(--text-body);">
+            <strong>Executive personal branding</strong> is the strategic governance of a senior leader's intellectual property, public record, and digital presence to establish verifiable authority across search engines, social channels, and media.
+          </p>
+        </div>
+
+        <h2 id="why-visibility-is-a-separate-discipline">Why Visibility Is a Separate Discipline</h2>
+        <p>
+          Operational competence and public visibility are two distinct career disciplines. Most human resources executives operate with deep discretion. By default, they protect enterprise confidentiality and promote the accomplishments of their teams.
+        </p>
+        <p>
+          However, when nominating committees seek candidates for non-executive director (NED) seats or advisory roles, they cannot inspect your internal personnel files. They evaluate what is visible on page one of Google and LinkedIn.
+        </p>
+
+        <blockquote>
+          <p>&ldquo;The leaders receiving keynote invitations and advisory board seats are not necessarily more qualified than you. They are the visible leaders who are also exceptional at what they do.&rdquo;</p>
+        </blockquote>
+
+        <p>
+          According to the <em>Edelman-LinkedIn B2B Thought Leadership Impact Report</em>, <strong>75% of C-suite executives say thought leadership directly influenced their decision to award business or advisory mandates</strong>, while 60% confirmed that high-caliber content builds immediate trust in an executive's strategic acumen.
+        </p>
+
+        <h2 id="the-3-pillars-of-an-executive-digital-presence">The 3 Pillars of an Executive Digital Presence</h2>
+        <p>
+          To build authority without becoming a full-time content creator, senior HR leaders require an integrated architecture that operates continuously in the background:
+        </p>
+
+        <ul>
+          <li><strong>The Sovereign Digital HQ (Personal Website):</strong> An owned web asset on your exact name that presents your board bio, signature governance frameworks, and media appearances.</li>
+          <li><strong>Google Reputation Management:</strong> Proactive search engine optimization ensuring that when someone researches your background, page one delivers an authoritative executive dossier.</li>
+          <li><strong>Peer-Tier LinkedIn Thought Leadership:</strong> High-signal, perspective-rich analysis that showcases your pattern recognition on future-of-work economics, organizational restructuring, and executive compensation.</li>
+        </ul>
+
+        <!-- Mid-Article CTA Banner (Appears at ~50% read) -->
+        <div class="mid-article-cta">
+          <h3 class="cta-heading">Ready to Close the Visibility Gap?</h3>
+          <p class="cta-body">
+            Schedule a confidential 20-minute digital presence assessment with our advisory team.
+          </p>
+          <a href="https://prominence.agency/contact" class="btn-gradient">Book a Strategy Call &rarr;</a>
+        </div>
+
+        <h2 id="common-mistakes-senior-hr-leaders-make">Common Mistakes Senior HR Leaders Make</h2>
+        <p>
+          When senior executives attempt personal branding independently, they routinely stumble into three counterproductive patterns:
+        </p>
+
+        <h3>1. The Corporate Megaphone Trap</h3>
+        <p>
+          Restricting your social presence to reposting company press releases and corporate hiring notices. This signals corporate compliance rather than independent intellectual leadership.
+        </p>
+
+        <h3>2. The "Content Creator" Burnout Cycle</h3>
+        <p>
+          Attempting to post daily updates, superficial polls, and personal anecdotes. Senior executives do not have fifteen hours weekly to chase algorithmic engagement. Quality and analytical rigor always outperform volume.
+        </p>
+
+        <h3>3. Relying Exclusively on Rented Platforms</h3>
+        <p>
+          Building a presence exclusively on LinkedIn without an owned executive website. Algorithms shift and platform policies change; an owned digital headquarters protects your reputation permanently.
+        </p>
+
+        <h2 id="how-elite-prominence-handles-this">How Elite Prominence Handles This</h2>
+        <p>
+          At <strong>Elite Prominence</strong>, we operate a bespoke, done-for-you service designed specifically for time-poor human capital leaders. You do not write posts or manage web servers.
+        </p>
+        <p>
+          Instead, we conduct a structured 60-minute monthly executive interview. Our editorial team distills your real-world pattern recognition into boardroom-ready thought leadership essays, optimizes your Google search profile, and maintains your sovereign digital presence.
+        </p>
+        <p>
+          <strong>Success got you here. Visibility takes you further.</strong>
+        </p>
+
+      </div>
+
+      <!-- Author Bio Card -->
+      <section class="author-card">
+        <div class="author-card-header">
+          <div class="author-avatar-lg">EP</div>
+          <div>
+            <h3 class="author-name">Elite Prominence Editorial</h3>
+            <p class="author-title">Executive Positioning &amp; Personal Branding Advisory</p>
+          </div>
+        </div>
+        <p class="author-bio">
+          Elite Prominence builds sovereign digital footprints for CHROs, Chief People Officers, and senior HR consultants. We transform 20+ years of institutional expertise into Google page-one dominance, board advisory dossiers, and peer-tier LinkedIn thought leadership.
+        </p>
+        <div class="author-actions">
+          <a href="https://www.linkedin.com/company/elite-prominence" target="_blank" rel="noopener noreferrer" class="btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.65 1.65 0 0 0-1.66 1.65c0 .91.74 1.65 1.66 1.65.9 0 1.65-.74 1.65-1.65 0-.9-.75-1.65-1.65-1.65z"/></svg>
+            Follow on LinkedIn
+          </a>
+          <a href="https://prominence.agency/contact" class="btn-gradient">Book a Strategy Call &rarr;</a>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- Right: Sticky Reactions & Share -->
+    <aside class="reactions-sidebar" aria-label="Article Actions &amp; Reactions">
+      <div class="action-group">
+        <button class="action-btn" id="share-linkedin" data-tooltip="Share on LinkedIn" aria-label="Share on LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.65 1.65 0 0 0-1.66 1.65c0 .91.74 1.65 1.66 1.65.9 0 1.65-.74 1.65-1.65 0-.9-.75-1.65-1.65-1.65z"/></svg>
+        </button>
+
+        <button class="action-btn" id="share-x" data-tooltip="Share on X" aria-label="Share on X">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </button>
+
+        <button class="action-btn" id="copy-link-btn" data-tooltip="Copy Article Link" aria-label="Copy Link">
+          <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+        </button>
+      </div>
+
+      <div class="action-divider"></div>
+
+      <div class="action-group">
+        <button class="action-btn reaction-btn" data-reaction="claps" data-tooltip="Clap" aria-label="Clap for this article">
+          <span style="font-size: 16px; line-height: 1;">👏</span>
+          <span class="reaction-count" id="count-claps">42</span>
+        </button>
+
+        <button class="action-btn reaction-btn" data-reaction="likes" data-tooltip="Like" aria-label="Like this article">
+          <span style="font-size: 16px; line-height: 1;">❤️</span>
+          <span class="reaction-count" id="count-likes">28</span>
+        </button>
+
+        <button class="action-btn reaction-btn" data-reaction="insights" data-tooltip="Insightful" aria-label="Mark as insightful">
+          <span style="font-size: 16px; line-height: 1;">💡</span>
+          <span class="reaction-count" id="count-insights">35</span>
+        </button>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Related Articles Section -->
+  <section class="related-section">
+    <h2 class="section-title">Related Executive Insights</h2>
+    <div class="related-grid">
+
+      <a href="https://prominence.agency/blog-details" class="related-card">
+        <img src="/assets/images/elite/blog_2_linkedin_chro.jpg" alt="A LinkedIn Strategy for CHROs Who Don't Have Time to Post" class="related-thumb" onerror="this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80'" />
+        <div class="related-body">
+          <span class="related-badge">LinkedIn Strategy</span>
+          <h3 class="related-title">A LinkedIn Strategy for CHROs Who Don't Have Time to Post</h3>
+          <div class="related-meta">
+            <span>5 min read</span> &bull; <span>June 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://prominence.agency/blog-details" class="related-card">
+        <img src="/assets/images/elite/blog_3_google_ranking.jpg" alt="How to Rank on Google as an Independent Consultant" class="related-thumb" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80'" />
+        <div class="related-body">
+          <span class="related-badge">Reputation Management</span>
+          <h3 class="related-title">How to Rank on Google as an Independent Consultant</h3>
+          <div class="related-meta">
+            <span>6 min read</span> &bull; <span>May 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://prominence.agency/blog-details" class="related-card">
+        <img src="/assets/images/elite/blog_4_executive_presence.jpg" alt="Why Executives Need Personal Branding More Than Anyone Else" class="related-thumb" onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80'" />
+        <div class="related-body">
+          <span class="related-badge">Executive Presence</span>
+          <h3 class="related-title">Why Executives Need Personal Branding More Than Anyone Else</h3>
+          <div class="related-meta">
+            <span>8 min read</span> &bull; <span>May 2026</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Highlight-to-Share Tooltip -->
+  <div id="highlight-tooltip" role="toolbar" aria-label="Highlight to share options">
+    <button class="tooltip-btn" id="hl-share-linkedin" title="Share quote on LinkedIn" aria-label="Share quote on LinkedIn">
+      <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.65 1.65 0 0 0-1.66 1.65c0 .91.74 1.65 1.66 1.65.9 0 1.65-.74 1.65-1.65 0-.9-.75-1.65-1.65-1.65z"/></svg>
+    </button>
+    <button class="tooltip-btn" id="hl-share-x" title="Share quote on X" aria-label="Share quote on X">
+      <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </button>
+    <button class="tooltip-btn" id="hl-copy-quote" title="Copy quote" aria-label="Copy quote">
+      <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+    </button>
+  </div>
+
+  <!-- Font Size Control -->
+  <aside class="font-size-widget" aria-label="Font Size Adjuster">
+    <span class="font-label">Text</span>
+    <button class="font-btn" id="font-decrease" title="Decrease font size" aria-label="Decrease font size">A&minus;</button>
+    <button class="font-btn" id="font-increase" title="Increase font size" aria-label="Increase font size">A&#43;</button>
+  </aside>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Back to top" aria-label="Scroll back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Mobile Floating TOC Toggle & Drawer -->
+  <button class="mobile-toc-toggle" id="mobile-toc-btn" aria-label="Toggle Table of Contents">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h12"/></svg>
+    Table of Contents
+  </button>
+
+  <div class="mobile-toc-overlay" id="mobile-toc-overlay"></div>
+  <div class="mobile-toc-drawer" id="mobile-toc-drawer" role="dialog" aria-modal="true" aria-label="Table of Contents Drawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
+      <h3 style="font-family: var(--font-heading); font-size: 20px; color: var(--text-heading); margin: 0;">Table of Contents</h3>
+      <button id="close-mobile-toc" style="font-size: 24px; color: var(--text-secondary);">&times;</button>
+    </div>
+    <ul class="toc-list" id="mobile-dynamic-toc"></ul>
+  </div>
+
+  <!-- Mobile Bottom Share & Reaction Bar (<768px) -->
+  <aside class="mobile-bottom-bar" aria-label="Mobile Reactions and Share">
+    <button class="action-btn reaction-btn" data-reaction="claps" aria-label="Clap">
+      <span style="font-size: 15px;">👏</span>
+      <span class="reaction-count" id="mobile-count-claps">42</span>
+    </button>
+    <button class="action-btn reaction-btn" data-reaction="likes" aria-label="Like">
+      <span style="font-size: 15px;">❤️</span>
+      <span class="reaction-count" id="mobile-count-likes">28</span>
+    </button>
+    <button class="action-btn reaction-btn" data-reaction="insights" aria-label="Insightful">
+      <span style="font-size: 15px;">💡</span>
+      <span class="reaction-count" id="mobile-count-insights">35</span>
+    </button>
+    <button class="action-btn" id="mobile-share-btn" aria-label="Share article">
+      <svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"/></svg>
+    </button>
+  </aside>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" role="status" aria-live="polite">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+    <span id="toast-message">Link copied to clipboard!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-brand">Elite Prominence</div>
+    <p class="footer-tagline">&ldquo;Success Got You Here. Visibility Takes You Further.&rdquo;</p>
+    <p class="footer-copy">&copy; 2026 Elite Prominence. All rights reserved. Sovereign digital footprints for senior HR leaders.</p>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // 1. Reading Progress Bar & Dynamic Reading Time
+      const progressBar = document.getElementById('reading-progress-bar');
+      const articleBody = document.getElementById('article-content');
+      const readingTimeSpan = document.getElementById('reading-time');
+
+      if (articleBody && readingTimeSpan) {
+        const text = articleBody.innerText || '';
+        const wordCount = text.trim().split(/\s+/).length;
+        const minutes = Math.ceil(wordCount / 238);
+        readingTimeSpan.textContent = `${minutes} min read`;
+      }
+
+      function updateProgress() {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (totalHeight > 0) {
+          const progress = (window.scrollY / totalHeight) * 100;
+          progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+        }
+      }
+
+      window.addEventListener('scroll', updateProgress, { passive: true });
+
+      // 2. Dynamic Table of Contents Generation
+      const tocContainer = document.getElementById('dynamic-toc');
+      const mobileTocContainer = document.getElementById('mobile-dynamic-toc');
+      const headings = articleBody ? articleBody.querySelectorAll('h2, h3') : [];
+
+      if (headings.length > 0 && tocContainer) {
+        headings.forEach((heading, idx) => {
+          if (!heading.id) {
+            heading.id = 'section-' + idx;
+          }
+
+          const isH3 = heading.tagName.toLowerCase() === 'h3';
+          const li = document.createElement('li');
+          li.className = 'toc-item';
+
+          const a = document.createElement('a');
+          a.href = '#' + heading.id;
+          a.className = 'toc-link' + (isH3 ? ' toc-h3' : '');
+          a.textContent = heading.textContent.trim();
+
+          li.appendChild(a);
+          tocContainer.appendChild(li);
+
+          if (mobileTocContainer) {
+            const mobileLi = li.cloneNode(true);
+            mobileLi.querySelector('a').addEventListener('click', () => {
+              closeMobileDrawer();
+            });
+            mobileTocContainer.appendChild(mobileLi);
+          }
+        });
+
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px 0px -65% 0px',
+          threshold: 0
+        };
+
+        let currentActiveId = '';
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              currentActiveId = entry.target.id;
+              updateActiveTocLink();
+            }
+          });
+        }, observerOptions);
+
+        headings.forEach((h) => observer.observe(h));
+
+        function updateActiveTocLink() {
+          const allLinks = document.querySelectorAll('.toc-link');
+          allLinks.forEach((link) => {
+            if (link.getAttribute('href') === '#' + currentActiveId) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      }
+
+      // 3. Reactions System with localStorage
+      const defaultReactions = {
+        claps: 42,
+        likes: 28,
+        insights: 35
+      };
+
+      const storageKey = 'ep_blog_reactions_v1';
+      let userReactions = {};
+      try {
+        userReactions = JSON.parse(localStorage.getItem(storageKey)) || {};
+      } catch (e) {
+        userReactions = {};
+      }
+
+      function renderReactions() {
+        ['claps', 'likes', 'insights'].forEach((type) => {
+          const count = (defaultReactions[type] || 0) + (userReactions[type] ? 1 : 0);
+          const desktopEl = document.getElementById(`count-${type}`);
+          const mobileEl = document.getElementById(`mobile-count-${type}`);
+          if (desktopEl) desktopEl.textContent = count;
+          if (mobileEl) mobileEl.textContent = count;
+
+          document.querySelectorAll(`.reaction-btn[data-reaction="${type}"]`).forEach((btn) => {
+            if (userReactions[type]) {
+              btn.classList.add('active');
+            } else {
+              btn.classList.remove('active');
+            }
+          });
+        });
+      }
+
+      document.querySelectorAll('.reaction-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const type = btn.getAttribute('data-reaction');
+          if (!type) return;
+
+          userReactions[type] = !userReactions[type];
+          try {
+            localStorage.setItem(storageKey, JSON.stringify(userReactions));
+          } catch (e) {}
+
+          renderReactions();
+          showToast(userReactions[type] ? 'Reaction added!' : 'Reaction removed');
+        });
+      });
+
+      renderReactions();
+
+      // 4. Social Sharing & Copy Link
+      const articleUrl = encodeURIComponent(window.location.href);
+      const articleTitle = encodeURIComponent(document.title);
+
+      const shareLinkedInBtn = document.getElementById('share-linkedin');
+      if (shareLinkedInBtn) {
+        shareLinkedInBtn.addEventListener('click', () => {
+          window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${articleUrl}`, '_blank', 'width=600,height=600');
+        });
+      }
+
+      const shareXBtn = document.getElementById('share-x');
+      if (shareXBtn) {
+        shareXBtn.addEventListener('click', () => {
+          window.open(`https://twitter.com/intent/tweet?url=${articleUrl}&text=${articleTitle}`, '_blank', 'width=600,height=400');
+        });
+      }
+
+      const copyLinkBtn = document.getElementById('copy-link-btn');
+      if (copyLinkBtn) {
+        copyLinkBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            showToast('Link copied to clipboard!');
+          });
+        });
+      }
+
+      const mobileShareBtn = document.getElementById('mobile-share-btn');
+      if (mobileShareBtn) {
+        mobileShareBtn.addEventListener('click', () => {
+          if (navigator.share) {
+            navigator.share({
+              title: document.title,
+              url: window.location.href
+            }).catch(() => {});
+          } else {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+              showToast('Link copied to clipboard!');
+            });
+          }
+        });
+      }
+
+      // 5. Highlight-to-Share Tooltip
+      const tooltip = document.getElementById('highlight-tooltip');
+      let currentSelectedText = '';
+
+      if (tooltip && articleBody) {
+        document.addEventListener('mouseup', (e) => {
+          if (tooltip.contains(e.target)) return;
+
+          const selection = window.getSelection();
+          const text = selection.toString().trim();
+
+          if (text.length > 8 && articleBody.contains(selection.anchorNode)) {
+            currentSelectedText = text;
+            const range = selection.getRangeAt(0);
+            const rect = range.getBoundingClientRect();
+
+            tooltip.style.left = `${rect.left + rect.width / 2 + window.scrollX}px`;
+            tooltip.style.top = `${rect.top + window.scrollY}px`;
+            tooltip.style.display = 'flex';
+          } else {
+            tooltip.style.display = 'none';
+          }
+        });
+
+        document.getElementById('hl-share-linkedin').addEventListener('click', () => {
+          const url = `https://www.linkedin.com/sharing/share-offsite/?url=${articleUrl}&summary=${encodeURIComponent('"' + currentSelectedText + '"')}`;
+          window.open(url, '_blank', 'width=600,height=600');
+          tooltip.style.display = 'none';
+        });
+
+        document.getElementById('hl-share-x').addEventListener('click', () => {
+          const quote = `"${currentSelectedText.slice(0, 200)}..."`;
+          const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(quote)}&url=${articleUrl}`;
+          window.open(url, '_blank', 'width=600,height=400');
+          tooltip.style.display = 'none';
+        });
+
+        document.getElementById('hl-copy-quote').addEventListener('click', () => {
+          navigator.clipboard.writeText(`"${currentSelectedText}" — Elite Prominence (${window.location.href})`).then(() => {
+            showToast('Quote copied to clipboard!');
+            tooltip.style.display = 'none';
+          });
+        });
+      }
+
+      // 6. Font Size Controller
+      const fontSizes = [16, 18, 21];
+      let currentFontIndex = 1;
+
+      const savedFontIndex = localStorage.getItem('ep_font_size_idx');
+      if (savedFontIndex !== null && fontSizes[savedFontIndex]) {
+        currentFontIndex = parseInt(savedFontIndex, 10);
+      }
+
+      function applyFontSize() {
+        document.documentElement.style.setProperty('--content-font-size', `${fontSizes[currentFontIndex]}px`);
+        try {
+          localStorage.setItem('ep_font_size_idx', currentFontIndex);
+        } catch (e) {}
+      }
+
+      applyFontSize();
+
+      document.getElementById('font-decrease').addEventListener('click', () => {
+        if (currentFontIndex > 0) {
+          currentFontIndex--;
+          applyFontSize();
+        }
+      });
+
+      document.getElementById('font-increase').addEventListener('click', () => {
+        if (currentFontIndex < fontSizes.length - 1) {
+          currentFontIndex++;
+          applyFontSize();
+        }
+      });
+
+      // 7. Back to Top Button
+      const backToTopBtn = document.getElementById('back-to-top');
+      if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 400) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+        }, { passive: true });
+
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // 8. Mobile Table of Contents Drawer
+      const mobileTocBtn = document.getElementById('mobile-toc-btn');
+      const mobileDrawer = document.getElementById('mobile-toc-drawer');
+      const mobileOverlay = document.getElementById('mobile-toc-overlay');
+      const closeMobileToc = document.getElementById('close-mobile-toc');
+
+      function openMobileDrawer() {
+        if (mobileDrawer && mobileOverlay) {
+          mobileDrawer.style.display = 'block';
+          mobileOverlay.style.display = 'block';
+        }
+      }
+
+      function closeMobileDrawer() {
+        if (mobileDrawer && mobileOverlay) {
+          mobileDrawer.style.display = 'none';
+          mobileOverlay.style.display = 'none';
+        }
+      }
+
+      if (mobileTocBtn) mobileTocBtn.addEventListener('click', openMobileDrawer);
+      if (closeMobileToc) closeMobileToc.addEventListener('click', closeMobileDrawer);
+      if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileDrawer);
+
+      // 9. Toast Notification Helper
+      let toastTimer = null;
+      function showToast(message) {
+        const toast = document.getElementById('toast-notification');
+        const toastMsg = document.getElementById('toast-message');
+        if (!toast || !toastMsg) return;
+
+        toastMsg.textContent = message;
+        toast.classList.add('show');
+
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2500);
+      }
+
+    })();
+  </script>
+</body>
+</html>
