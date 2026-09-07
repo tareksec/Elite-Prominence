@@ -12,10 +12,11 @@ import Link from 'next/link';
 export default function AuthorCard({
   author = {
     name: 'Tarek Chowdhury',
-    title: 'Founder & Executive Brand Strategist at Elite Prominence',
+    founderName: 'Md Tarek',
+    title: 'Founder & Executive Brand Advisor at Elite Prominence',
     initials: 'TC',
     bio: 'Advising CHROs, VP HRs, and executive consultants on building authoritative digital presence, personal websites, and Google visibility without becoming full-time content creators.',
-    linkedinUrl: 'https://www.linkedin.com/in/tareksec/',
+    linkedinUrl: 'https://www.linkedin.com/in/mdtarek404/',
     avatar: '/assets/images/elite/tarek-portrait.jpg'
   }
 }) {

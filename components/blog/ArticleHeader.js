@@ -9,7 +9,8 @@ export default function ArticleHeader({
   readTime = '7 min read',
   tags = ['Personal Branding', 'HR Leaders', 'Executive Presence'],
   heroImage = '/assets/images/elite/blog_1_hr_personal_brand.jpg',
-  author = 'Elite Prominence Editorial'
+  author = 'Tarek Chowdhury',
+  authorAvatar = '/assets/images/elite/tarek-portrait.jpg'
 }) {
   return (
     <header style={{ maxWidth: '960px', margin: '48px auto 32px', padding: '0 24px', textAlign: 'center' }}>
@@ -69,16 +70,43 @@ export default function ArticleHeader({
               height: '32px',
               borderRadius: '50%',
               background: 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)',
-              color: '#FFFFFF',
+              padding: '2px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              fontWeight: '700',
-              fontSize: '12px',
-              boxShadow: '0 2px 8px rgba(124, 58, 237, 0.25)'
+              boxShadow: '0 2px 8px rgba(124, 58, 237, 0.25)',
+              overflow: 'hidden'
             }}
           >
-            EP
+            {authorAvatar ? (
+              <img
+                src={authorAvatar}
+                alt={author}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '50%',
+                  objectFit: 'cover'
+                }}
+              />
+            ) : (
+              <div
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '50%',
+                  background: '#0F1235',
+                  color: '#FFFFFF',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: '700',
+                  fontSize: '12px'
+                }}
+              >
+                TC
+              </div>
+            )}
           </div>
           <span style={{ color: '#0F1235', fontWeight: '600' }}>{author}</span>
         </div>

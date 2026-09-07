@@ -71,20 +71,69 @@ export default function About_Page() {
                 <div className="row align-items-center">
                     <div className="col-lg-5 col-md-12 mb-4 mb-lg-0">
                         <div style={{
-                            background: "#edf2f7",
-                            border: "2px dashed #cbd5e1",
-                            borderRadius: "12px",
-                            height: "360px",
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            padding: "30px",
-                            textAlign: "center"
+                            background: "#ffffff",
+                            borderRadius: "16px",
+                            overflow: "hidden",
+                            boxShadow: "0 12px 36px rgba(15, 23, 42, 0.08)",
+                            border: "1px solid #e2e8f0",
+                            maxWidth: "420px",
+                            margin: "0 auto"
                         }}>
-                            <i className="icon-20" style={{ fontSize: "40px", color: "#94a3b8", marginBottom: "15px" }}></i>
-                            <span style={{ fontWeight: "700", color: "#334155", fontSize: "16px", marginBottom: "6px" }}>Add founder photo</span>
-                            <span style={{ fontSize: "13px", color: "#64748b", maxWidth: "240px", lineHeight: "1.5" }}>Reserved for authentic founder portrait (royalty-free placeholders avoided per editorial policy)</span>
+                            <div style={{ position: "relative", width: "100%", height: "420px", overflow: "hidden" }}>
+                                <img
+                                    src="/assets/images/elite/tarek-portrait.jpg"
+                                    alt="Md Tarek — Founder & Executive Brand Advisor at Elite Prominence"
+                                    style={{
+                                        width: "100%",
+                                        height: "100%",
+                                        objectFit: "cover",
+                                        objectPosition: "center top"
+                                    }}
+                                />
+                            </div>
+                            <div style={{ padding: "24px", textAlign: "center", background: "#ffffff" }}>
+                                <span style={{
+                                    display: "inline-block",
+                                    fontSize: "12px",
+                                    fontWeight: "700",
+                                    letterSpacing: "0.8px",
+                                    textTransform: "uppercase",
+                                    color: "#7c3aed",
+                                    background: "#f3e8ff",
+                                    padding: "4px 12px",
+                                    borderRadius: "9999px",
+                                    marginBottom: "10px"
+                                }}>
+                                    Founder & Advisor
+                                </span>
+                                <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0f172a", margin: "0 0 4px 0" }}>
+                                    Md Tarek
+                                </h3>
+                                <p style={{ fontSize: "14px", color: "#64748b", margin: "0 0 16px 0", fontWeight: "500" }}>
+                                    Author & Executive Brand Advisor
+                                </p>
+                                <a
+                                    href="https://www.linkedin.com/in/mdtarek404/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{
+                                        display: "inline-flex",
+                                        alignItems: "center",
+                                        gap: "8px",
+                                        padding: "8px 18px",
+                                        borderRadius: "8px",
+                                        background: "#0a66c2",
+                                        color: "#ffffff",
+                                        fontSize: "13.5px",
+                                        fontWeight: "600",
+                                        textDecoration: "none",
+                                        boxShadow: "0 2px 8px rgba(10, 102, 194, 0.25)"
+                                    }}
+                                >
+                                    <i className="fab fa-linkedin-in" style={{ fontSize: "15px" }}></i>
+                                    <span>Connect on LinkedIn</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div className="col-lg-7 col-md-12 ps-lg-5">

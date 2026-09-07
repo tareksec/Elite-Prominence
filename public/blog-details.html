@@ -1,3 +1,4 @@
+<!-- Refer to public/blog-details.html or open directly -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,32 +14,25 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    /* ==========================================================================
-       1. BRAND DESIGN TOKENS (Elite Prominence Official Identity)
-       ========================================================================== */
+    /* Brand Design Tokens */
     :root {
-      /* Signature Brand Gradient */
       --gradient-brand: linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%);
       --gradient-brand-subtle: linear-gradient(135deg, rgba(124, 58, 237, 0.08) 0%, rgba(192, 38, 168, 0.08) 50%, rgba(244, 114, 182, 0.08) 100%);
       --gradient-hover: linear-gradient(135deg, #6D28D9 0%, #A21CAF 50%, #EC4899 100%);
 
-      /* Backgrounds */
       --bg-page: #FFFFFF;
       --bg-surface: #F8F7FF;
       --bg-muted: #F1F0F9;
 
-      /* Text */
       --text-heading: #0F1235;
       --text-body: #374151;
       --text-secondary: #64748B;
       --text-muted: #94A3B8;
 
-      /* Brand Solids */
       --purple: #7C3AED;
       --magenta: #C026A8;
       --pink: #F472B6;
 
-      /* Borders & Shadows */
       --border: #E5E7EB;
       --border-brand: #C026A8;
       --shadow-sm: 0 1px 3px rgba(15, 18, 53, 0.05);
@@ -46,15 +40,11 @@
       --shadow-lg: 0 10px 30px rgba(124, 58, 237, 0.12);
       --shadow-brand: 0 8px 25px rgba(192, 38, 168, 0.25);
 
-      /* Typography */
       --font-heading: 'DM Serif Display', Georgia, serif;
       --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --content-font-size: 18px;
     }
 
-    /* ==========================================================================
-       2. RESET & BASE STYLES
-       ========================================================================== */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -97,9 +87,7 @@
       display: block;
     }
 
-    /* ==========================================================================
-       3. READING PROGRESS BAR
-       ========================================================================== */
+    /* Reading Progress Bar */
     #reading-progress-bar {
       position: fixed;
       top: 0;
@@ -111,9 +99,7 @@
       transition: width 0.1s ease-out;
     }
 
-    /* ==========================================================================
-       4. NAVBAR
-       ========================================================================== */
+    /* Navbar */
     .navbar {
       position: sticky;
       top: 0;
@@ -208,9 +194,7 @@
       box-shadow: 0 6px 20px rgba(192, 38, 168, 0.35);
     }
 
-    /* ==========================================================================
-       5. ARTICLE HEADER
-       ========================================================================== */
+    /* Article Header */
     .article-header {
       max-width: 960px;
       margin: 48px auto 32px;
@@ -318,9 +302,7 @@
       box-shadow: var(--shadow-md);
     }
 
-    /* ==========================================================================
-       6. THREE-COLUMN READING LAYOUT
-       ========================================================================== */
+    /* Three-Column Reading Layout */
     .reading-layout {
       max-width: 1360px;
       margin: 0 auto;
@@ -332,7 +314,7 @@
       position: relative;
     }
 
-    /* 6A. Sticky Left Sidebar: Table of Contents */
+    /* Left: Sticky TOC */
     .toc-sidebar {
       position: sticky;
       top: 96px;
@@ -394,7 +376,7 @@
       background: linear-gradient(90deg, rgba(124, 58, 237, 0.05) 0%, transparent 100%);
     }
 
-    /* 6B. Main Article Content Column */
+    /* Center: Content */
     .article-content-column {
       max-width: 720px;
       width: 100%;
@@ -492,23 +474,6 @@
       background: var(--gradient-brand);
     }
 
-    .article-body figure {
-      margin: 2.5rem 0;
-    }
-
-    .article-body figure img {
-      border-radius: 12px;
-      box-shadow: var(--shadow-md);
-      width: 100%;
-    }
-
-    .article-body figcaption {
-      text-align: center;
-      font-size: 14px;
-      color: var(--text-secondary);
-      margin-top: 10px;
-    }
-
     .definition-box {
       background: var(--bg-surface);
       border: 1px solid rgba(192, 38, 168, 0.2);
@@ -531,7 +496,7 @@
       gap: 6px;
     }
 
-    /* 6C. Sticky Right Sidebar: Share & Reactions */
+    /* Right: Sticky Reactions */
     .reactions-sidebar {
       position: sticky;
       top: 96px;
@@ -606,7 +571,6 @@
       margin: 4px 0;
     }
 
-    /* Tooltip */
     .action-btn[data-tooltip]::after {
       content: attr(data-tooltip);
       position: absolute;
@@ -630,9 +594,7 @@
       opacity: 1;
     }
 
-    /* ==========================================================================
-       7. MID-ARTICLE CTA BANNER
-       ========================================================================== */
+    /* Mid-Article CTA Banner */
     .mid-article-cta {
       position: relative;
       background: var(--bg-surface);
@@ -644,19 +606,6 @@
       margin: 3.5rem 0;
       box-shadow: var(--shadow-md);
       overflow: hidden;
-    }
-
-    .mid-article-cta::after {
-      content: '';
-      position: absolute;
-      top: -60px;
-      right: -60px;
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: var(--gradient-brand);
-      opacity: 0.08;
-      pointer-events: none;
     }
 
     .cta-heading {
@@ -673,9 +622,7 @@
       max-width: 540px;
     }
 
-    /* ==========================================================================
-       8. HIGHLIGHT-TO-SHARE TOOLTIP
-       ========================================================================== */
+    /* Highlight Tooltip */
     #highlight-tooltip {
       position: absolute;
       display: none;
@@ -724,9 +671,7 @@
       fill: currentColor;
     }
 
-    /* ==========================================================================
-       9. FONT SIZE CONTROLLER (Fixed bottom-left)
-       ========================================================================== */
+    /* Font Size Widget */
     .font-size-widget {
       position: fixed;
       bottom: 28px;
@@ -767,9 +712,7 @@
       color: #FFFFFF;
     }
 
-    /* ==========================================================================
-       10. AUTHOR BIO CARD (End of article)
-       ========================================================================== */
+    /* Author Bio Card */
     .author-card {
       background: #FFFFFF;
       border: 1px solid var(--border);
@@ -848,9 +791,7 @@
       box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
     }
 
-    /* ==========================================================================
-       11. RELATED ARTICLES GRID
-       ========================================================================== */
+    /* Related Articles */
     .related-section {
       max-width: 1100px;
       margin: 80px auto;
@@ -937,9 +878,7 @@
       gap: 6px;
     }
 
-    /* ==========================================================================
-       12. BACK TO TOP BUTTON
-       ========================================================================== */
+    /* Back to Top */
     #back-to-top {
       position: fixed;
       bottom: 28px;
@@ -971,9 +910,7 @@
       transform: scale(1.1);
     }
 
-    /* ==========================================================================
-       13. MOBILE BOTTOM SHARE & REACTION BAR (<768px)
-       ========================================================================== */
+    /* Mobile Elements */
     .mobile-bottom-bar {
       display: none;
       position: fixed;
@@ -1006,7 +943,6 @@
       gap: 6px;
     }
 
-    /* Mobile Drawer */
     .mobile-toc-drawer {
       display: none;
       position: fixed;
@@ -1031,7 +967,7 @@
       z-index: 1099;
     }
 
-    /* Toast Notification */
+    /* Toast */
     #toast-notification {
       position: fixed;
       bottom: 84px;
@@ -1059,9 +995,7 @@
       transform: translateX(-50%) translateY(0);
     }
 
-    /* ==========================================================================
-       14. FOOTER
-       ========================================================================== */
+    /* Footer */
     .site-footer {
       background: var(--bg-surface);
       border-top: 1px solid var(--border);
@@ -1088,9 +1022,6 @@
       font-size: 13px;
     }
 
-    /* ==========================================================================
-       15. RESPONSIVE BREAKPOINTS
-       ========================================================================== */
     @media (max-width: 1279px) {
       .reading-layout {
         grid-template-columns: minmax(0, 720px);
@@ -1313,22 +1244,25 @@
 
       </div>
 
-      <!-- 8. Author Bio Card -->
+      <!-- Author Bio Card -->
       <section class="author-card">
         <div class="author-card-header">
-          <div class="author-avatar-lg">EP</div>
+          <div class="author-avatar-lg" style="overflow: hidden; padding: 0;">
+            <img src="/assets/images/elite/tarek-portrait.jpg" alt="Tarek Chowdhury" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
+          </div>
           <div>
-            <h3 class="author-name">Elite Prominence Editorial</h3>
-            <p class="author-title">Executive Positioning &amp; Personal Branding Advisory</p>
+            <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--purple); background: var(--bg-muted); padding: 2px 8px; border-radius: 4px; display: inline-block; margin-bottom: 4px;">Author &amp; Advisor</span>
+            <h3 class="author-name" style="margin: 0 0 2px 0;">Tarek Chowdhury</h3>
+            <p class="author-title">Founder &amp; Executive Brand Advisor at Elite Prominence</p>
           </div>
         </div>
         <p class="author-bio">
-          Elite Prominence builds sovereign digital footprints for CHROs, Chief People Officers, and senior HR consultants. We transform 20+ years of institutional expertise into Google page-one dominance, board advisory dossiers, and peer-tier LinkedIn thought leadership.
+          Advising CHROs, VP HRs, and executive consultants on building authoritative digital presence, personal websites, and Google visibility without becoming full-time content creators. Transforming proven institutional track records into sovereign market authority.
         </p>
         <div class="author-actions">
-          <a href="https://www.linkedin.com/company/elite-prominence" target="_blank" rel="noopener noreferrer" class="btn-outline">
+          <a href="https://www.linkedin.com/in/mdtarek404/" target="_blank" rel="noopener noreferrer" class="btn-outline">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.65 1.65 0 0 0-1.66 1.65c0 .91.74 1.65 1.66 1.65.9 0 1.65-.74 1.65-1.65 0-.9-.75-1.65-1.65-1.65z"/></svg>
-            Follow on LinkedIn
+            Connect on LinkedIn
           </a>
           <a href="https://prominence.agency/contact" class="btn-gradient">Book a Strategy Call &rarr;</a>
         </div>
@@ -1336,20 +1270,17 @@
 
     </article>
 
-    <!-- Sticky Right Sidebar: Share & Reactions -->
+    <!-- Right: Sticky Reactions & Share -->
     <aside class="reactions-sidebar" aria-label="Article Actions &amp; Reactions">
       <div class="action-group">
-        <!-- Share: LinkedIn -->
         <button class="action-btn" id="share-linkedin" data-tooltip="Share on LinkedIn" aria-label="Share on LinkedIn">
           <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.65 1.65 0 0 0-1.66 1.65c0 .91.74 1.65 1.66 1.65.9 0 1.65-.74 1.65-1.65 0-.9-.75-1.65-1.65-1.65z"/></svg>
         </button>
 
-        <!-- Share: X / Twitter -->
         <button class="action-btn" id="share-x" data-tooltip="Share on X" aria-label="Share on X">
           <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </button>
 
-        <!-- Share: Copy Link -->
         <button class="action-btn" id="copy-link-btn" data-tooltip="Copy Article Link" aria-label="Copy Link">
           <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
         </button>
@@ -1357,21 +1288,17 @@
 
       <div class="action-divider"></div>
 
-      <!-- Reactions -->
       <div class="action-group">
-        <!-- Clap -->
         <button class="action-btn reaction-btn" data-reaction="claps" data-tooltip="Clap" aria-label="Clap for this article">
           <span style="font-size: 16px; line-height: 1;">👏</span>
           <span class="reaction-count" id="count-claps">42</span>
         </button>
 
-        <!-- Like -->
         <button class="action-btn reaction-btn" data-reaction="likes" data-tooltip="Like" aria-label="Like this article">
           <span style="font-size: 16px; line-height: 1;">❤️</span>
           <span class="reaction-count" id="count-likes">28</span>
         </button>
 
-        <!-- Insightful -->
         <button class="action-btn reaction-btn" data-reaction="insights" data-tooltip="Insightful" aria-label="Mark as insightful">
           <span style="font-size: 16px; line-height: 1;">💡</span>
           <span class="reaction-count" id="count-insights">35</span>
@@ -1381,12 +1308,11 @@
 
   </main>
 
-  <!-- 10. Related Articles Section -->
+  <!-- Related Articles Section -->
   <section class="related-section">
     <h2 class="section-title">Related Executive Insights</h2>
     <div class="related-grid">
 
-      <!-- Card 1 -->
       <a href="https://prominence.agency/blog-details" class="related-card">
         <img src="/assets/images/elite/blog_2_linkedin_chro.jpg" alt="A LinkedIn Strategy for CHROs Who Don't Have Time to Post" class="related-thumb" onerror="this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80'" />
         <div class="related-body">
@@ -1398,7 +1324,6 @@
         </div>
       </a>
 
-      <!-- Card 2 -->
       <a href="https://prominence.agency/blog-details" class="related-card">
         <img src="/assets/images/elite/blog_3_google_ranking.jpg" alt="How to Rank on Google as an Independent Consultant" class="related-thumb" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80'" />
         <div class="related-body">
@@ -1410,7 +1335,6 @@
         </div>
       </a>
 
-      <!-- Card 3 -->
       <a href="https://prominence.agency/blog-details" class="related-card">
         <img src="/assets/images/elite/blog_4_executive_presence.jpg" alt="Why Executives Need Personal Branding More Than Anyone Else" class="related-thumb" onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80'" />
         <div class="related-body">
@@ -1425,7 +1349,7 @@
     </div>
   </section>
 
-  <!-- 6. Highlight-to-Share Tooltip -->
+  <!-- Highlight-to-Share Tooltip -->
   <div id="highlight-tooltip" role="toolbar" aria-label="Highlight to share options">
     <button class="tooltip-btn" id="hl-share-linkedin" title="Share quote on LinkedIn" aria-label="Share quote on LinkedIn">
       <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.65 1.65 0 0 0-1.66 1.65c0 .91.74 1.65 1.66 1.65.9 0 1.65-.74 1.65-1.65 0-.9-.75-1.65-1.65-1.65z"/></svg>
@@ -1438,14 +1362,14 @@
     </button>
   </div>
 
-  <!-- 7. Font Size Control (Fixed bottom-left) -->
+  <!-- Font Size Control -->
   <aside class="font-size-widget" aria-label="Font Size Adjuster">
     <span class="font-label">Text</span>
     <button class="font-btn" id="font-decrease" title="Decrease font size" aria-label="Decrease font size">A&minus;</button>
     <button class="font-btn" id="font-increase" title="Increase font size" aria-label="Increase font size">A&#43;</button>
   </aside>
 
-  <!-- 11. Back to Top Button -->
+  <!-- Back to Top Button -->
   <button id="back-to-top" title="Back to top" aria-label="Scroll back to top">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
   </button>
@@ -1465,7 +1389,7 @@
     <ul class="toc-list" id="mobile-dynamic-toc"></ul>
   </div>
 
-  <!-- 13. Mobile Bottom Share & Reaction Bar (<768px) -->
+  <!-- Mobile Bottom Share & Reaction Bar (<768px) -->
   <aside class="mobile-bottom-bar" aria-label="Mobile Reactions and Share">
     <button class="action-btn reaction-btn" data-reaction="claps" aria-label="Clap">
       <span style="font-size: 15px;">👏</span>
@@ -1497,21 +1421,15 @@
     <p class="footer-copy">&copy; 2026 Elite Prominence. All rights reserved. Sovereign digital footprints for senior HR leaders.</p>
   </footer>
 
-  <!-- ==========================================================================
-       16. VANILLA JAVASCRIPT LOGIC
-       ========================================================================== -->
   <script>
     (function () {
       'use strict';
 
-      // -------------------------------------------------------------
       // 1. Reading Progress Bar & Dynamic Reading Time
-      // -------------------------------------------------------------
       const progressBar = document.getElementById('reading-progress-bar');
       const articleBody = document.getElementById('article-content');
       const readingTimeSpan = document.getElementById('reading-time');
 
-      // Calculate Read Time based on 238 words/min
       if (articleBody && readingTimeSpan) {
         const text = articleBody.innerText || '';
         const wordCount = text.trim().split(/\s+/).length;
@@ -1529,9 +1447,7 @@
 
       window.addEventListener('scroll', updateProgress, { passive: true });
 
-      // -------------------------------------------------------------
-      // 2. Dynamic Table of Contents (TOC) Generation
-      // -------------------------------------------------------------
+      // 2. Dynamic Table of Contents Generation
       const tocContainer = document.getElementById('dynamic-toc');
       const mobileTocContainer = document.getElementById('mobile-dynamic-toc');
       const headings = articleBody ? articleBody.querySelectorAll('h2, h3') : [];
@@ -1563,7 +1479,6 @@
           }
         });
 
-        // Highlight Active TOC Item on Scroll using IntersectionObserver
         const observerOptions = {
           root: null,
           rootMargin: '0px 0px -65% 0px',
@@ -1594,9 +1509,7 @@
         }
       }
 
-      // -------------------------------------------------------------
       // 3. Reactions System with localStorage
-      // -------------------------------------------------------------
       const defaultReactions = {
         claps: 42,
         likes: 28,
@@ -1646,9 +1559,7 @@
 
       renderReactions();
 
-      // -------------------------------------------------------------
       // 4. Social Sharing & Copy Link
-      // -------------------------------------------------------------
       const articleUrl = encodeURIComponent(window.location.href);
       const articleTitle = encodeURIComponent(document.title);
 
@@ -1691,9 +1602,7 @@
         });
       }
 
-      // -------------------------------------------------------------
       // 5. Highlight-to-Share Tooltip
-      // -------------------------------------------------------------
       const tooltip = document.getElementById('highlight-tooltip');
       let currentSelectedText = '';
 
@@ -1738,11 +1647,9 @@
         });
       }
 
-      // -------------------------------------------------------------
       // 6. Font Size Controller
-      // -------------------------------------------------------------
       const fontSizes = [16, 18, 21];
-      let currentFontIndex = 1; // Default 18px
+      let currentFontIndex = 1;
 
       const savedFontIndex = localStorage.getItem('ep_font_size_idx');
       if (savedFontIndex !== null && fontSizes[savedFontIndex]) {
@@ -1772,9 +1679,7 @@
         }
       });
 
-      // -------------------------------------------------------------
       // 7. Back to Top Button
-      // -------------------------------------------------------------
       const backToTopBtn = document.getElementById('back-to-top');
       if (backToTopBtn) {
         window.addEventListener('scroll', () => {
@@ -1790,9 +1695,7 @@
         });
       }
 
-      // -------------------------------------------------------------
       // 8. Mobile Table of Contents Drawer
-      // -------------------------------------------------------------
       const mobileTocBtn = document.getElementById('mobile-toc-btn');
       const mobileDrawer = document.getElementById('mobile-toc-drawer');
       const mobileOverlay = document.getElementById('mobile-toc-overlay');
@@ -1816,9 +1719,7 @@
       if (closeMobileToc) closeMobileToc.addEventListener('click', closeMobileDrawer);
       if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileDrawer);
 
-      // -------------------------------------------------------------
       // 9. Toast Notification Helper
-      // -------------------------------------------------------------
       let toastTimer = null;
       function showToast(message) {
         const toast = document.getElementById('toast-notification');
