@@ -74,15 +74,15 @@ export default function SignupPage() {
                     <div style={{ maxWidth: "520px", margin: "0 auto" }}>
                         {!configured && <SupabaseSetupNotice feature="User Signup & Authentication" />}
 
-                        <div style={{
+                        <div className="signup_card" style={{
                             backgroundColor: "#ffffff",
                             borderRadius: "16px",
-                            padding: "44px 40px",
+                            padding: "40px 32px",
                             boxShadow: "0 10px 40px rgba(30, 59, 43, 0.08)",
                             border: "1px solid rgba(30, 59, 43, 0.1)",
                             fontFamily: "var(--primary-font)"
                         }}>
-                            <div style={{ textAlign: "center", marginBottom: "32px" }}>
+                            <div style={{ textAlign: "center", marginBottom: "30px" }}>
                                 <span style={{
                                     display: "inline-block",
                                     fontSize: "13px",
@@ -97,10 +97,10 @@ export default function SignupPage() {
                                 }}>
                                     Executive Community
                                 </span>
-                                <h2 style={{ fontSize: "32px", fontWeight: "700", color: "#1e3b2b", margin: 0 }}>
+                                <h2 style={{ fontSize: "clamp(24px, 5vw, 32px)", fontWeight: "700", color: "#1e3b2b", margin: 0 }}>
                                     Create Your Account
                                 </h2>
-                                <p style={{ fontSize: "16px", color: "#59606a", marginTop: "8px", fontStyle: "italic" }}>
+                                <p style={{ fontSize: "15px", color: "#59606a", marginTop: "8px", fontStyle: "italic" }}>
                                     Join the Elite Prominence executive network to submit testimonials and thought leadership articles.
                                 </p>
                             </div>
@@ -150,7 +150,7 @@ export default function SignupPage() {
                                             border: "1.5px solid #dcdad3",
                                             borderRadius: "8px",
                                             padding: "0 16px",
-                                            fontSize: "15px",
+                                            fontSize: "16px",
                                             fontFamily: "var(--primary-font)",
                                             outline: "none",
                                             transition: "all 0.2s"
@@ -173,7 +173,7 @@ export default function SignupPage() {
                                             border: "1.5px solid #dcdad3",
                                             borderRadius: "8px",
                                             padding: "0 16px",
-                                            fontSize: "15px",
+                                            fontSize: "16px",
                                             fontFamily: "var(--primary-font)",
                                             outline: "none"
                                         }}
@@ -196,7 +196,7 @@ export default function SignupPage() {
                                             border: "1.5px solid #dcdad3",
                                             borderRadius: "8px",
                                             padding: "0 16px",
-                                            fontSize: "15px",
+                                            fontSize: "16px",
                                             fontFamily: "var(--primary-font)",
                                             outline: "none"
                                         }}
@@ -220,7 +220,7 @@ export default function SignupPage() {
                                             border: "1.5px solid #dcdad3",
                                             borderRadius: "8px",
                                             padding: "0 16px",
-                                            fontSize: "15px",
+                                            fontSize: "16px",
                                             fontFamily: "var(--primary-font)",
                                             outline: "none"
                                         }}
@@ -232,6 +232,7 @@ export default function SignupPage() {
                                     disabled={loading}
                                     style={{
                                         width: "100%",
+                                        minHeight: "48px",
                                         height: "50px",
                                         backgroundColor: "#1e3b2b",
                                         color: "#FAF8F2",
@@ -252,11 +253,19 @@ export default function SignupPage() {
 
                             <div style={{ textAlign: "center", marginTop: "24px", fontSize: "15px", color: "#59606a" }}>
                                 Already have an account?{' '}
-                                <Link href="/login" style={{ color: "#1e3b2b", fontWeight: "700", textDecoration: "underline" }}>
+                                <Link href="/login" style={{ color: "#1e3b2b", fontWeight: "700", textDecoration: "underline", minHeight: "44px", display: "inline-block", paddingTop: "6px" }}>
                                     Sign in here
                                 </Link>
                             </div>
                         </div>
+
+                        <style jsx>{`
+                            @media (max-width: 480px) {
+                                .signup_card {
+                                    padding: 28px 18px !important;
+                                }
+                            }
+                        `}</style>
                     </div>
                 </div>
             </section>

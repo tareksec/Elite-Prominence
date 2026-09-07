@@ -145,7 +145,7 @@ export default function CommunityPage() {
                     {!configured && <SupabaseSetupNotice feature="Community Directory & Approved Thought Leadership" />}
 
                     {/* Hero Header */}
-                    <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
+                    <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 40px" }}>
                         <span style={{
                             display: "inline-block",
                             fontSize: "13px",
@@ -161,10 +161,10 @@ export default function CommunityPage() {
                         }}>
                             Executive Directory
                         </span>
-                        <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#1b2534", marginBottom: "18px", lineHeight: "1.2" }}>
+                        <h1 style={{ fontSize: "clamp(28px, 5.5vw, 44px)", fontWeight: "700", color: "#1b2534", marginBottom: "18px", lineHeight: "1.25" }}>
                             Executive Community &amp; Contributors
                         </h1>
-                        <p style={{ fontSize: "19px", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
+                        <p style={{ fontSize: "clamp(16px, 2.5vw, 19px)", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
                             Explore perspectives and verified profiles of industry leaders, chief people officers, and advisors who contribute to the Elite Prominence network.
                         </p>
 
@@ -175,6 +175,10 @@ export default function CommunityPage() {
                                     backgroundColor: "#2460e2",
                                     color: "#ffffff",
                                     padding: "12px 28px",
+                                    minHeight: "44px",
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
                                     borderRadius: "30px",
                                     fontSize: "15px",
                                     fontWeight: "700",
@@ -182,30 +186,32 @@ export default function CommunityPage() {
                                     boxShadow: "0 4px 14px rgba(36, 96, 226, 0.25)"
                                 }}
                             >
-                                Join the Network &rarr;
+                                Join the Network →
                             </Link>
                         </div>
                     </div>
 
                     {/* Member Cards Grid */}
-                    <div style={{ textAlign: "center", marginBottom: "36px" }}>
-                        <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#1b2534", margin: 0 }}>
+                    <div style={{ textAlign: "center", marginBottom: "32px" }}>
+                        <h2 style={{ fontSize: "clamp(22px, 4vw, 28px)", fontWeight: "700", color: "#1b2534", margin: 0 }}>
                             Directory of Executive Contributors
                         </h2>
                     </div>
-                    <div style={{
+                    <div className="community_grid" style={{
                         display: "grid",
-                        gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
-                        gap: "30px",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                        gap: "28px",
                         marginBottom: "60px"
                     }}>
                         {members.map((member) => (
-                            <div key={member.id} style={{
+                            <div key={member.id} className="community_card" style={{
                                 backgroundColor: "#ffffff",
                                 borderRadius: "16px",
-                                padding: "34px",
+                                padding: "32px 28px",
                                 border: "1px solid #e2e8f0",
-                                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)"
+                                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)",
+                                overflowWrap: "break-word",
+                                wordBreak: "break-word"
                             }}>
                                 <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "18px" }}>
                                     <div style={{
@@ -241,7 +247,8 @@ export default function CommunityPage() {
                                     color: "#475569",
                                     borderTop: "1px solid #edf2f7",
                                     borderBottom: "1px solid #edf2f7",
-                                    padding: "10px 0"
+                                    padding: "10px 0",
+                                    flexWrap: "wrap"
                                 }}>
                                     <span>
                                         <strong>{member.approved_articles_count}</strong> {member.approved_articles_count === 1 ? 'Article' : 'Articles'}
@@ -275,7 +282,7 @@ export default function CommunityPage() {
                                                     {art.category}
                                                 </div>
                                                 <div style={{ fontSize: "15px", fontWeight: "700", color: "#1b2534", lineHeight: "1.4" }}>
-                                                    {art.title} &rarr;
+                                                    {art.title} →
                                                 </div>
                                             </div>
                                         ))}
@@ -303,32 +310,33 @@ export default function CommunityPage() {
                             alignItems: "center",
                             justifyContent: "center",
                             zIndex: 9999,
-                            padding: "20px"
+                            padding: "16px"
                         }}>
-                            <div style={{
+                            <div className="community_modal_content" style={{
                                 backgroundColor: "#ffffff",
                                 borderRadius: "16px",
                                 maxWidth: "720px",
                                 width: "100%",
-                                maxHeight: "85vh",
+                                maxHeight: "88vh",
                                 overflowY: "auto",
-                                padding: "40px",
+                                padding: "36px",
                                 position: "relative",
                                 boxShadow: "0 20px 60px rgba(0,0,0,0.25)"
                             }}>
                                 <button
                                     onClick={() => setSelectedArticle(null)}
+                                    aria-label="Close article modal"
                                     style={{
                                         position: "absolute",
-                                        top: "20px",
-                                        right: "20px",
+                                        top: "16px",
+                                        right: "16px",
                                         background: "#f1f5f9",
                                         border: "1px solid #e2e8f0",
                                         color: "#475569",
                                         borderRadius: "50%",
-                                        width: "36px",
-                                        height: "36px",
-                                        fontSize: "16px",
+                                        width: "44px",
+                                        height: "44px",
+                                        fontSize: "18px",
                                         fontWeight: "700",
                                         cursor: "pointer",
                                         display: "flex",
@@ -354,7 +362,7 @@ export default function CommunityPage() {
                                     {selectedArticle.category}
                                 </span>
 
-                                <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#1b2534", marginBottom: "8px", lineHeight: "1.3" }}>
+                                <h2 style={{ fontSize: "clamp(22px, 4.5vw, 28px)", fontWeight: "700", color: "#1b2534", marginBottom: "8px", lineHeight: "1.3" }}>
                                     {selectedArticle.title}
                                 </h2>
 
@@ -362,12 +370,27 @@ export default function CommunityPage() {
                                     By <strong>{selectedArticle.author}</strong> ({selectedArticle.role_title}) • {new Date(selectedArticle.published_at).toLocaleDateString()}
                                 </div>
 
-                                <div style={{ fontSize: "16px", lineHeight: "1.8", color: "#334155", whiteSpace: "pre-wrap" }}>
+                                <div style={{ fontSize: "16px", lineHeight: "1.8", color: "#334155", whiteSpace: "pre-wrap", overflowWrap: "break-word" }}>
                                     {selectedArticle.body}
                                 </div>
                             </div>
                         </div>
                     )}
+
+                    <style jsx>{`
+                        @media (max-width: 767px) {
+                            .community_grid {
+                                grid-template-columns: 1fr !important;
+                                gap: 20px !important;
+                            }
+                            .community_card {
+                                padding: 24px 18px !important;
+                            }
+                            .community_modal_content {
+                                padding: 24px 18px !important;
+                            }
+                        }
+                    `}</style>
                 </div>
             </section>
         </Layout>

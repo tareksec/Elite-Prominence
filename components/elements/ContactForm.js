@@ -18,7 +18,7 @@ export default function ContactForm() {
     }
 
     return (
-        <div className="inner_box" style={{ maxWidth: "850px", margin: "0 auto", background: "#fff", padding: "50px 40px", borderRadius: "10px", boxShadow: "0 10px 40px rgba(0,0,0,0.06)" }}>
+        <div className="inner_box contact_form_inner_box" style={{ maxWidth: "850px", margin: "0 auto", background: "#fff", padding: "50px 40px", borderRadius: "10px", boxShadow: "0 10px 40px rgba(0,0,0,0.06)" }}>
             <div className="section_title centred" style={{ marginBottom: "35px" }}>
                 <h2 style={{ fontSize: "28px", fontWeight: "700" }}>Book a Strategy Call</h2>
                 <p style={{ color: "#59606a", marginTop: "10px" }}>Fill in the details below to help us prepare for our discussion.</p>
@@ -109,12 +109,32 @@ export default function ContactForm() {
                         </div>
                         <div className="col-xl-12 col-md-12 col-sm-12">
                             <div className="form-group centred">
-                                <button type="submit" className="btn_style_one">Book a Strategy Call</button>
+                                <button type="submit" className="btn_style_one" style={{ minHeight: "48px", width: "100%", maxWidth: "320px", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+                                    Book a Strategy Call &rarr;
+                                </button>
                             </div>
                         </div>
                     </div>
                 </form>
             )}
+
+            <style jsx>{`
+                @media (max-width: 767px) {
+                    :global(.contact_form_inner_box) {
+                        padding: 30px 18px !important;
+                        border-radius: 12px !important;
+                    }
+                    :global(.contact_form input) {
+                        font-size: 16px !important;
+                        padding: 0 16px !important;
+                        height: 52px !important;
+                    }
+                    :global(.contact_form textarea) {
+                        font-size: 16px !important;
+                        padding: 14px 16px !important;
+                    }
+                }
+            `}</style>
         </div>
     )
 }

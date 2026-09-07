@@ -97,14 +97,14 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
                         My Account
                     </div>
                     <ul className="navigation clearfix" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                        <li style={{ marginBottom: "8px" }}>
-                            <Link href="/dashboard" onClick={handleClick} style={{ color: "#2460e2", fontWeight: "700", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                        <li style={{ marginBottom: "6px" }}>
+                            <Link href="/dashboard" onClick={handleClick} style={{ color: "#2460e2", fontWeight: "700", display: "inline-flex", alignItems: "center", gap: "6px", minHeight: "44px", padding: "10px 0" }}>
                                 <span>Member Dashboard &rarr;</span>
                             </Link>
                         </li>
                         {role === 'admin' && (
-                            <li style={{ marginBottom: "8px" }}>
-                                <Link href="/admin" onClick={handleClick} style={{ color: "#dc2626", fontWeight: "700" }}>
+                            <li style={{ marginBottom: "6px" }}>
+                                <Link href="/admin" onClick={handleClick} style={{ color: "#dc2626", fontWeight: "700", display: "inline-flex", alignItems: "center", minHeight: "44px", padding: "10px 0" }}>
                                     <span>Admin Moderation &rarr;</span>
                                 </Link>
                             </li>
@@ -115,10 +115,13 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
                                 style={{
                                     background: "none",
                                     border: "none",
-                                    padding: 0,
+                                    padding: "10px 0",
                                     color: "#64748b",
                                     fontSize: "14px",
-                                    cursor: "pointer"
+                                    cursor: "pointer",
+                                    minHeight: "44px",
+                                    display: "inline-flex",
+                                    alignItems: "center"
                                 }}
                             >
                                 Sign Out
@@ -135,13 +138,17 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
                     href="/login"
                     onClick={handleClick}
                     style={{
-                        padding: "8px 16px",
+                        padding: "11px 20px",
                         borderRadius: "20px",
                         backgroundColor: "#f1f5f9",
                         color: "#1b2534",
-                        fontSize: "13px",
+                        fontSize: "14px",
                         fontWeight: "700",
-                        textDecoration: "none"
+                        textDecoration: "none",
+                        minHeight: "44px",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center"
                     }}
                 >
                     Log In
@@ -150,14 +157,18 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
                     href="/signup"
                     onClick={handleClick}
                     style={{
-                        padding: "8px 16px",
+                        padding: "11px 20px",
                         borderRadius: "20px",
                         backgroundColor: "rgba(36, 96, 226, 0.08)",
                         color: "#2460e2",
                         border: "1px solid rgba(36, 96, 226, 0.2)",
-                        fontSize: "13px",
+                        fontSize: "14px",
                         fontWeight: "700",
-                        textDecoration: "none"
+                        textDecoration: "none",
+                        minHeight: "44px",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center"
                     }}
                 >
                     Sign Up

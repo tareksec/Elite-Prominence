@@ -278,7 +278,7 @@ export default function DashboardPage() {
                     )}
 
                     {/* Dashboard Header Bar */}
-                    <div style={{
+                    <div className="dashboard_header_bar" style={{
                         backgroundColor: "#1e3b2b",
                         color: "#FAF8F2",
                         padding: "32px 36px",
@@ -295,7 +295,7 @@ export default function DashboardPage() {
                             <div style={{ fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px", opacity: 0.8, marginBottom: "4px" }}>
                                 Executive Portal
                             </div>
-                            <h2 style={{ fontSize: "32px", fontWeight: "700", color: "#ffffff", margin: 0 }}>
+                            <h2 style={{ fontSize: "clamp(22px, 5vw, 32px)", fontWeight: "700", color: "#ffffff", margin: 0 }}>
                                 {profile?.full_name ? `Welcome, ${profile.full_name}` : 'Welcome, Member'}
                             </h2>
                             <p style={{ margin: "4px 0 0", color: "#d1dec9", fontSize: "16px", fontStyle: "italic" }}>
@@ -303,7 +303,7 @@ export default function DashboardPage() {
                             </p>
                         </div>
 
-                        <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+                        <div style={{ display: "flex", gap: "12px", alignItems: "center", flexWrap: "wrap" }}>
                             {profile?.role === 'admin' && (
                                 <Link
                                     href="/admin"
@@ -311,6 +311,9 @@ export default function DashboardPage() {
                                         backgroundColor: "#FAF8F2",
                                         color: "#1e3b2b",
                                         padding: "10px 22px",
+                                        minHeight: "44px",
+                                        display: "inline-flex",
+                                        alignItems: "center",
                                         borderRadius: "30px",
                                         fontWeight: "700",
                                         fontSize: "14px",
@@ -328,6 +331,9 @@ export default function DashboardPage() {
                                     color: "#ffffff",
                                     border: "1px solid rgba(255, 255, 255, 0.25)",
                                     padding: "10px 20px",
+                                    minHeight: "44px",
+                                    display: "inline-flex",
+                                    alignItems: "center",
                                     borderRadius: "30px",
                                     fontWeight: "600",
                                     fontSize: "14px",
@@ -346,21 +352,25 @@ export default function DashboardPage() {
                         gap: "8px",
                         borderBottom: "2px solid #e5e3db",
                         marginBottom: "32px",
-                        overflowX: "auto"
+                        overflowX: "auto",
+                        whiteSpace: "nowrap",
+                        WebkitOverflowScrolling: "touch"
                     }}>
                         <button
                             onClick={() => setActiveTab('submissions')}
                             style={{
-                                padding: "12px 24px",
+                                padding: "12px 20px",
+                                minHeight: "44px",
                                 border: "none",
                                 background: "none",
-                                fontSize: "16px",
+                                fontSize: "15px",
                                 fontWeight: "700",
                                 color: activeTab === 'submissions' ? "#1e3b2b" : "#72777a",
                                 borderBottom: activeTab === 'submissions' ? "3px solid #1e3b2b" : "3px solid transparent",
                                 cursor: "pointer",
                                 fontFamily: "var(--primary-font)",
-                                marginBottom: "-2px"
+                                marginBottom: "-2px",
+                                flexShrink: 0
                             }}
                         >
                             📋 My Submissions ({myReviews.length + myArticles.length})
@@ -368,16 +378,18 @@ export default function DashboardPage() {
                         <button
                             onClick={() => setActiveTab('review')}
                             style={{
-                                padding: "12px 24px",
+                                padding: "12px 20px",
+                                minHeight: "44px",
                                 border: "none",
                                 background: "none",
-                                fontSize: "16px",
+                                fontSize: "15px",
                                 fontWeight: "700",
                                 color: activeTab === 'review' ? "#1e3b2b" : "#72777a",
                                 borderBottom: activeTab === 'review' ? "3px solid #1e3b2b" : "3px solid transparent",
                                 cursor: "pointer",
                                 fontFamily: "var(--primary-font)",
-                                marginBottom: "-2px"
+                                marginBottom: "-2px",
+                                flexShrink: 0
                             }}
                         >
                             ✍️ Write a Review
@@ -385,16 +397,18 @@ export default function DashboardPage() {
                         <button
                             onClick={() => setActiveTab('article')}
                             style={{
-                                padding: "12px 24px",
+                                padding: "12px 20px",
+                                minHeight: "44px",
                                 border: "none",
                                 background: "none",
-                                fontSize: "16px",
+                                fontSize: "15px",
                                 fontWeight: "700",
                                 color: activeTab === 'article' ? "#1e3b2b" : "#72777a",
                                 borderBottom: activeTab === 'article' ? "3px solid #1e3b2b" : "3px solid transparent",
                                 cursor: "pointer",
                                 fontFamily: "var(--primary-font)",
-                                marginBottom: "-2px"
+                                marginBottom: "-2px",
+                                flexShrink: 0
                             }}
                         >
                             📝 Submit an Article
@@ -402,16 +416,18 @@ export default function DashboardPage() {
                         <button
                             onClick={() => setActiveTab('profile')}
                             style={{
-                                padding: "12px 24px",
+                                padding: "12px 20px",
+                                minHeight: "44px",
                                 border: "none",
                                 background: "none",
-                                fontSize: "16px",
+                                fontSize: "15px",
                                 fontWeight: "700",
                                 color: activeTab === 'profile' ? "#1e3b2b" : "#72777a",
                                 borderBottom: activeTab === 'profile' ? "3px solid #1e3b2b" : "3px solid transparent",
                                 cursor: "pointer",
                                 fontFamily: "var(--primary-font)",
-                                marginBottom: "-2px"
+                                marginBottom: "-2px",
+                                flexShrink: 0
                             }}
                         >
                             ⚙️ Edit Profile
@@ -465,9 +481,9 @@ export default function DashboardPage() {
 
                             {/* Reviews Section */}
                             <div style={{ marginBottom: "40px" }}>
-                                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-                                    <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#1e3b2b", margin: 0 }}>
-                                        My Reviews & Testimonials
+                                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "10px" }}>
+                                    <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#1e3b2b", margin: 0 }}>
+                                        My Reviews &amp; Testimonials
                                     </h3>
                                     <button
                                         onClick={() => setActiveTab('review')}
@@ -476,13 +492,14 @@ export default function DashboardPage() {
                                             color: "#FAF8F2",
                                             border: "none",
                                             borderRadius: "20px",
-                                            padding: "6px 16px",
+                                            padding: "8px 18px",
+                                            minHeight: "36px",
                                             fontSize: "13px",
                                             fontWeight: "700",
                                             cursor: "pointer"
                                         }}
                                     >
-                                        + New Review
+                                        + Write Review
                                     </button>
                                 </div>
 
@@ -490,7 +507,7 @@ export default function DashboardPage() {
                                     <div style={{
                                         backgroundColor: "#ffffff",
                                         borderRadius: "12px",
-                                        padding: "36px",
+                                        padding: "36px 20px",
                                         textAlign: "center",
                                         color: "#72777a",
                                         border: "1px dashed #dcdad3"
@@ -503,11 +520,12 @@ export default function DashboardPage() {
                                             <div key={rev.id} style={{
                                                 backgroundColor: "#ffffff",
                                                 borderRadius: "12px",
-                                                padding: "24px",
+                                                padding: "24px 20px",
                                                 border: "1px solid rgba(30, 59, 43, 0.1)",
-                                                boxShadow: "0 2px 10px rgba(0,0,0,0.03)"
+                                                boxShadow: "0 2px 10px rgba(0,0,0,0.03)",
+                                                overflowWrap: "break-word"
                                             }}>
-                                                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "10px" }}>
+                                                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "10px", flexWrap: "wrap", gap: "8px" }}>
                                                     <div>
                                                         <span style={{ color: "#d97706", fontSize: "16px", marginRight: "10px" }}>
                                                             {'★'.repeat(rev.rating || 5)}{'☆'.repeat(5 - (rev.rating || 5))}
@@ -529,8 +547,8 @@ export default function DashboardPage() {
 
                             {/* Articles Section */}
                             <div>
-                                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-                                    <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#1e3b2b", margin: 0 }}>
+                                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "10px" }}>
+                                    <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#1e3b2b", margin: 0 }}>
                                         My Thought Leadership Articles
                                     </h3>
                                     <button
@@ -540,7 +558,8 @@ export default function DashboardPage() {
                                             color: "#FAF8F2",
                                             border: "none",
                                             borderRadius: "20px",
-                                            padding: "6px 16px",
+                                            padding: "8px 18px",
+                                            minHeight: "36px",
                                             fontSize: "13px",
                                             fontWeight: "700",
                                             cursor: "pointer"
@@ -554,7 +573,7 @@ export default function DashboardPage() {
                                     <div style={{
                                         backgroundColor: "#ffffff",
                                         borderRadius: "12px",
-                                        padding: "36px",
+                                        padding: "36px 20px",
                                         textAlign: "center",
                                         color: "#72777a",
                                         border: "1px dashed #dcdad3"
@@ -567,11 +586,12 @@ export default function DashboardPage() {
                                             <div key={art.id} style={{
                                                 backgroundColor: "#ffffff",
                                                 borderRadius: "12px",
-                                                padding: "24px",
+                                                padding: "24px 20px",
                                                 border: "1px solid rgba(30, 59, 43, 0.1)",
-                                                boxShadow: "0 2px 10px rgba(0,0,0,0.03)"
+                                                boxShadow: "0 2px 10px rgba(0,0,0,0.03)",
+                                                overflowWrap: "break-word"
                                             }}>
-                                                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
+                                                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px", flexWrap: "wrap", gap: "8px" }}>
                                                     <span style={{
                                                         fontSize: "12px",
                                                         fontWeight: "700",
@@ -585,7 +605,7 @@ export default function DashboardPage() {
                                                     </span>
                                                     {renderStatusBadge(art.status)}
                                                 </div>
-                                                <h4 style={{ fontSize: "20px", fontWeight: "700", color: "#1e3b2b", margin: "8px 0" }}>
+                                                <h4 style={{ fontSize: "19px", fontWeight: "700", color: "#1e3b2b", margin: "8px 0" }}>
                                                     {art.title}
                                                 </h4>
                                                 <p style={{ margin: "0 0 12px", fontSize: "15px", lineHeight: "1.6", color: "#59606a" }}>
@@ -605,18 +625,18 @@ export default function DashboardPage() {
 
                     {/* TAB 2: WRITE REVIEW */}
                     {activeTab === 'review' && (
-                        <div style={{
+                        <div className="dashboard_card" style={{
                             backgroundColor: "#ffffff",
                             borderRadius: "16px",
-                            padding: "40px",
+                            padding: "36px 32px",
                             maxWidth: "700px",
                             boxShadow: "0 4px 20px rgba(0,0,0,0.04)",
                             border: "1px solid rgba(30, 59, 43, 0.1)"
                         }}>
-                            <h3 style={{ fontSize: "26px", fontWeight: "700", color: "#1e3b2b", marginBottom: "8px" }}>
+                            <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#1e3b2b", marginBottom: "8px" }}>
                                 Write a Review / Testimonial
                             </h3>
-                            <p style={{ fontSize: "15px", color: "#59606a", marginBottom: "28px", fontStyle: "italic" }}>
+                            <p style={{ fontSize: "15px", color: "#59606a", marginBottom: "24px", fontStyle: "italic" }}>
                                 Share your personal branding journey and experience with Elite Prominence. All submissions are reviewed by our administration before appearing on the public Feedback page.
                             </p>
 
@@ -630,11 +650,11 @@ export default function DashboardPage() {
                                         onChange={(e) => setReviewRating(e.target.value)}
                                         style={{
                                             width: "100%",
-                                            height: "46px",
+                                            height: "48px",
                                             border: "1.5px solid #dcdad3",
                                             borderRadius: "8px",
                                             padding: "0 14px",
-                                            fontSize: "15px",
+                                            fontSize: "16px",
                                             fontFamily: "var(--primary-font)",
                                             outline: "none"
                                         }}
@@ -662,7 +682,7 @@ export default function DashboardPage() {
                                             border: "1.5px solid #dcdad3",
                                             borderRadius: "8px",
                                             padding: "14px 16px",
-                                            fontSize: "15px",
+                                            fontSize: "16px",
                                             fontFamily: "var(--primary-font)",
                                             outline: "none",
                                             lineHeight: "1.6"
@@ -679,6 +699,7 @@ export default function DashboardPage() {
                                         border: "none",
                                         borderRadius: "30px",
                                         padding: "14px 32px",
+                                        minHeight: "48px",
                                         fontSize: "15px",
                                         fontWeight: "700",
                                         cursor: submittingReview ? "not-allowed" : "pointer",
@@ -694,18 +715,18 @@ export default function DashboardPage() {
 
                     {/* TAB 3: SUBMIT ARTICLE */}
                     {activeTab === 'article' && (
-                        <div style={{
+                        <div className="dashboard_card" style={{
                             backgroundColor: "#ffffff",
                             borderRadius: "16px",
-                            padding: "40px",
+                            padding: "36px 32px",
                             maxWidth: "760px",
                             boxShadow: "0 4px 20px rgba(0,0,0,0.04)",
                             border: "1px solid rgba(30, 59, 43, 0.1)"
                         }}>
-                            <h3 style={{ fontSize: "26px", fontWeight: "700", color: "#1e3b2b", marginBottom: "8px" }}>
+                            <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#1e3b2b", marginBottom: "8px" }}>
                                 Submit a Thought Leadership Article
                             </h3>
-                            <p style={{ fontSize: "15px", color: "#59606a", marginBottom: "28px", fontStyle: "italic" }}>
+                            <p style={{ fontSize: "15px", color: "#59606a", marginBottom: "24px", fontStyle: "italic" }}>
                                 Contribute your executive insights, HR strategies, or leadership reflections. Once approved by our team, your article will be published to the Community Directory.
                             </p>
 
@@ -726,7 +747,7 @@ export default function DashboardPage() {
                                             border: "1.5px solid #dcdad3",
                                             borderRadius: "8px",
                                             padding: "0 16px",
-                                            fontSize: "15px",
+                                            fontSize: "16px",
                                             fontFamily: "var(--primary-font)",
                                             outline: "none"
                                         }}
@@ -742,11 +763,11 @@ export default function DashboardPage() {
                                         onChange={(e) => setArticleCategory(e.target.value)}
                                         style={{
                                             width: "100%",
-                                            height: "46px",
+                                            height: "48px",
                                             border: "1.5px solid #dcdad3",
                                             borderRadius: "8px",
                                             padding: "0 14px",
-                                            fontSize: "15px",
+                                            fontSize: "16px",
                                             fontFamily: "var(--primary-font)",
                                             outline: "none"
                                         }}
@@ -772,7 +793,7 @@ export default function DashboardPage() {
                                             border: "1.5px solid #dcdad3",
                                             borderRadius: "8px",
                                             padding: "16px",
-                                            fontSize: "15px",
+                                            fontSize: "16px",
                                             fontFamily: "var(--primary-font)",
                                             outline: "none",
                                             lineHeight: "1.6"
@@ -789,6 +810,7 @@ export default function DashboardPage() {
                                         border: "none",
                                         borderRadius: "30px",
                                         padding: "14px 32px",
+                                        minHeight: "48px",
                                         fontSize: "15px",
                                         fontWeight: "700",
                                         cursor: submittingArticle ? "not-allowed" : "pointer",
@@ -804,18 +826,18 @@ export default function DashboardPage() {
 
                     {/* TAB 4: EDIT PROFILE */}
                     {activeTab === 'profile' && (
-                        <div style={{
+                        <div className="dashboard_card" style={{
                             backgroundColor: "#ffffff",
                             borderRadius: "16px",
-                            padding: "40px",
+                            padding: "36px 32px",
                             maxWidth: "600px",
                             boxShadow: "0 4px 20px rgba(0,0,0,0.04)",
                             border: "1px solid rgba(30, 59, 43, 0.1)"
                         }}>
-                            <h3 style={{ fontSize: "26px", fontWeight: "700", color: "#1e3b2b", marginBottom: "8px" }}>
+                            <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#1e3b2b", marginBottom: "8px" }}>
                                 Edit Member Profile
                             </h3>
-                            <p style={{ fontSize: "15px", color: "#59606a", marginBottom: "28px" }}>
+                            <p style={{ fontSize: "15px", color: "#59606a", marginBottom: "24px" }}>
                                 Update your public display name and professional credentials.
                             </p>
 
@@ -849,7 +871,7 @@ export default function DashboardPage() {
                                             border: "1.5px solid #dcdad3",
                                             borderRadius: "8px",
                                             padding: "0 16px",
-                                            fontSize: "15px",
+                                            fontSize: "16px",
                                             fontFamily: "var(--primary-font)",
                                             outline: "none"
                                         }}
@@ -871,7 +893,7 @@ export default function DashboardPage() {
                                             border: "1.5px solid #dcdad3",
                                             borderRadius: "8px",
                                             padding: "0 16px",
-                                            fontSize: "15px",
+                                            fontSize: "16px",
                                             fontFamily: "var(--primary-font)",
                                             outline: "none"
                                         }}
@@ -887,6 +909,7 @@ export default function DashboardPage() {
                                         border: "none",
                                         borderRadius: "30px",
                                         padding: "14px 32px",
+                                        minHeight: "48px",
                                         fontSize: "15px",
                                         fontWeight: "700",
                                         cursor: updatingProfile ? "not-allowed" : "pointer",
@@ -899,6 +922,17 @@ export default function DashboardPage() {
                             </form>
                         </div>
                     )}
+
+                    <style jsx>{`
+                        @media (max-width: 767px) {
+                            .dashboard_header_bar {
+                                padding: 24px 18px !important;
+                            }
+                            .dashboard_card {
+                                padding: 24px 18px !important;
+                            }
+                        }
+                    `}</style>
                 </div>
             </section>
         </Layout>

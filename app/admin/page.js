@@ -209,7 +209,7 @@ export default function AdminPage() {
                     {!configured && <SupabaseSetupNotice feature="Admin Moderation Panel" />}
 
                     {/* Admin Header */}
-                    <div style={{
+                    <div className="admin_header_bar" style={{
                         backgroundColor: "#162d20",
                         color: "#FAF8F2",
                         padding: "30px 36px",
@@ -237,12 +237,12 @@ export default function AdminPage() {
                                 </span>
                                 <span style={{ fontSize: "14px", color: "#d1dec9" }}>Moderation Console</span>
                             </div>
-                            <h2 style={{ fontSize: "30px", fontWeight: "700", color: "#ffffff", margin: 0 }}>
+                            <h2 style={{ fontSize: "clamp(22px, 5vw, 30px)", fontWeight: "700", color: "#ffffff", margin: 0 }}>
                                 Elite Prominence Admin
                             </h2>
                         </div>
 
-                        <div style={{ display: "flex", gap: "12px" }}>
+                        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                             <Link
                                 href="/dashboard"
                                 style={{
@@ -250,13 +250,16 @@ export default function AdminPage() {
                                     color: "#ffffff",
                                     border: "1px solid rgba(255, 255, 255, 0.25)",
                                     padding: "10px 20px",
+                                    minHeight: "44px",
+                                    display: "inline-flex",
+                                    alignItems: "center",
                                     borderRadius: "30px",
                                     fontWeight: "600",
                                     fontSize: "14px",
                                     textDecoration: "none"
                                 }}
                             >
-                                &larr; User Dashboard
+                                ← User Dashboard
                             </Link>
                             <Link
                                 href="/feedback"
@@ -265,13 +268,16 @@ export default function AdminPage() {
                                     backgroundColor: "#FAF8F2",
                                     color: "#1e3b2b",
                                     padding: "10px 20px",
+                                    minHeight: "44px",
+                                    display: "inline-flex",
+                                    alignItems: "center",
                                     borderRadius: "30px",
                                     fontWeight: "700",
                                     fontSize: "14px",
                                     textDecoration: "none"
                                 }}
                             >
-                                View Feedback Page &nearr;
+                                View Feedback Page ↗
                             </Link>
                         </div>
                     </div>
@@ -282,21 +288,25 @@ export default function AdminPage() {
                         gap: "8px",
                         borderBottom: "2px solid #e5e3db",
                         marginBottom: "28px",
-                        overflowX: "auto"
+                        overflowX: "auto",
+                        whiteSpace: "nowrap",
+                        WebkitOverflowScrolling: "touch"
                     }}>
                         <button
                             onClick={() => setActiveTab('pending')}
                             style={{
-                                padding: "12px 22px",
+                                padding: "12px 20px",
+                                minHeight: "44px",
                                 border: "none",
                                 background: "none",
-                                fontSize: "16px",
+                                fontSize: "15px",
                                 fontWeight: "700",
                                 color: activeTab === 'pending' ? "#1e3b2b" : "#72777a",
                                 borderBottom: activeTab === 'pending' ? "3px solid #1e3b2b" : "3px solid transparent",
                                 cursor: "pointer",
                                 fontFamily: "var(--primary-font)",
-                                marginBottom: "-2px"
+                                marginBottom: "-2px",
+                                flexShrink: 0
                             }}
                         >
                             ⏳ Pending Queue ({pendingReviews.length + pendingArticles.length})
@@ -304,16 +314,18 @@ export default function AdminPage() {
                         <button
                             onClick={() => setActiveTab('reviews')}
                             style={{
-                                padding: "12px 22px",
+                                padding: "12px 20px",
+                                minHeight: "44px",
                                 border: "none",
                                 background: "none",
-                                fontSize: "16px",
+                                fontSize: "15px",
                                 fontWeight: "700",
                                 color: activeTab === 'reviews' ? "#1e3b2b" : "#72777a",
                                 borderBottom: activeTab === 'reviews' ? "3px solid #1e3b2b" : "3px solid transparent",
                                 cursor: "pointer",
                                 fontFamily: "var(--primary-font)",
-                                marginBottom: "-2px"
+                                marginBottom: "-2px",
+                                flexShrink: 0
                             }}
                         >
                             ⭐ All Reviews ({allReviews.length})
@@ -321,16 +333,18 @@ export default function AdminPage() {
                         <button
                             onClick={() => setActiveTab('articles')}
                             style={{
-                                padding: "12px 22px",
+                                padding: "12px 20px",
+                                minHeight: "44px",
                                 border: "none",
                                 background: "none",
-                                fontSize: "16px",
+                                fontSize: "15px",
                                 fontWeight: "700",
                                 color: activeTab === 'articles' ? "#1e3b2b" : "#72777a",
                                 borderBottom: activeTab === 'articles' ? "3px solid #1e3b2b" : "3px solid transparent",
                                 cursor: "pointer",
                                 fontFamily: "var(--primary-font)",
-                                marginBottom: "-2px"
+                                marginBottom: "-2px",
+                                flexShrink: 0
                             }}
                         >
                             📰 All Articles ({allArticles.length})
@@ -338,16 +352,18 @@ export default function AdminPage() {
                         <button
                             onClick={() => setActiveTab('users')}
                             style={{
-                                padding: "12px 22px",
+                                padding: "12px 20px",
+                                minHeight: "44px",
                                 border: "none",
                                 background: "none",
-                                fontSize: "16px",
+                                fontSize: "15px",
                                 fontWeight: "700",
                                 color: activeTab === 'users' ? "#1e3b2b" : "#72777a",
                                 borderBottom: activeTab === 'users' ? "3px solid #1e3b2b" : "3px solid transparent",
                                 cursor: "pointer",
                                 fontFamily: "var(--primary-font)",
-                                marginBottom: "-2px"
+                                marginBottom: "-2px",
+                                flexShrink: 0
                             }}
                         >
                             👥 User Directory ({allProfiles.length})
@@ -670,9 +686,10 @@ export default function AdminPage() {
                             backgroundColor: "#ffffff",
                             borderRadius: "12px",
                             border: "1px solid #e5e3db",
-                            overflow: "hidden"
+                            overflowX: "auto",
+                            WebkitOverflowScrolling: "touch"
                         }}>
-                            <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left" }}>
+                            <table style={{ width: "100%", minWidth: "640px", borderCollapse: "collapse", textAlign: "left" }}>
                                 <thead>
                                     <tr style={{ backgroundColor: "#faf9f5", borderBottom: "1px solid #e5e3db" }}>
                                         <th style={{ padding: "14px 20px", fontSize: "14px", fontWeight: "700", color: "#1e3b2b" }}>Name</th>
@@ -712,6 +729,14 @@ export default function AdminPage() {
                             </table>
                         </div>
                     )}
+
+                    <style jsx>{`
+                        @media (max-width: 767px) {
+                            .admin_header_bar {
+                                padding: 22px 18px !important;
+                            }
+                        }
+                    `}</style>
                 </div>
             </section>
         </Layout>

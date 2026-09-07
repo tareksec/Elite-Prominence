@@ -9,7 +9,7 @@ export default function PricingTabs() {
         <div className="pricing_tab_wrapper" style={{ fontFamily: "var(--primary-font)" }}>
             {/* Toggle Switcher */}
             <div className="pricing_toggle_container centred mb_50" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <div style={{
+                <div className="pricing_toggle_box" style={{
                     display: 'inline-flex',
                     background: '#edf2f7',
                     padding: '6px',
@@ -22,6 +22,7 @@ export default function PricingTabs() {
                 }}>
                     <button
                         type="button"
+                        className="pricing_toggle_btn"
                         onClick={() => setActiveModel('onetime')}
                         style={{
                             padding: '12px 28px',
@@ -40,6 +41,7 @@ export default function PricingTabs() {
                     </button>
                     <button
                         type="button"
+                        className="pricing_toggle_btn"
                         onClick={() => setActiveModel('retainer')}
                         style={{
                             padding: '12px 28px',
@@ -791,6 +793,28 @@ export default function PricingTabs() {
                 }
 
                 @media (max-width: 767px) {
+                    .pricing_toggle_box {
+                        width: 100% !important;
+                        flex-direction: column !important;
+                        border-radius: 20px !important;
+                        padding: 8px !important;
+                    }
+                    .pricing_toggle_btn {
+                        width: 100% !important;
+                        padding: 12px 16px !important;
+                        font-size: 14px !important;
+                        min-height: 46px !important;
+                        border-radius: 14px !important;
+                        text-align: center !important;
+                    }
+                    :global(.pricing_card_item.recommended) {
+                        transform: none !important;
+                        margin-top: 14px !important;
+                        margin-bottom: 14px !important;
+                    }
+                    :global(.pricing_card_item) {
+                        padding: 30px 20px !important;
+                    }
                     .timeline_stepper {
                         flex-direction: column;
                         gap: 24px;
@@ -802,16 +826,22 @@ export default function PricingTabs() {
                         gap: 16px;
                     }
                     .step_node_container {
-                        width: auto;
+                        width: 48px;
+                        align-self: stretch;
                         flex-direction: column;
+                        align-items: center;
+                        position: relative;
                         margin-bottom: 0;
+                        flex-shrink: 0;
                     }
                     .step_connector_line {
-                        left: 50%;
+                        position: absolute;
+                        left: calc(50% - 1.5px);
                         top: 48px;
+                        bottom: -24px;
                         width: 3px;
-                        height: calc(100% + 24px);
-                        transform: translateX(-50%);
+                        height: auto;
+                        transform: none;
                         background: linear-gradient(180deg, #2460e2, #93c5fd);
                     }
                     .step_card_content {

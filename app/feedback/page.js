@@ -91,7 +91,7 @@ export default function FeedbackPage() {
                         {!configured && <SupabaseSetupNotice feature="Live Feedback & Testimonials Moderation" />}
 
                         {/* Hero Header */}
-                        <div style={{ textAlign: "center", maxWidth: "780px", margin: "0 auto 60px" }}>
+                        <div style={{ textAlign: "center", maxWidth: "780px", margin: "0 auto 40px" }}>
                             <span style={{
                                 display: "inline-block",
                                 fontSize: "13px",
@@ -107,10 +107,10 @@ export default function FeedbackPage() {
                             }}>
                                 Verified Client Feedback
                             </span>
-                            <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#1b2534", marginBottom: "18px", lineHeight: "1.2" }}>
+                            <h1 style={{ fontSize: "clamp(28px, 5.5vw, 44px)", fontWeight: "700", color: "#1b2534", marginBottom: "18px", lineHeight: "1.25" }}>
                                 Executive Testimonials &amp; Reviews
                             </h1>
-                            <p style={{ fontSize: "19px", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
+                            <p style={{ fontSize: "clamp(16px, 2.5vw, 19px)", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
                                 Hear directly from senior HR leaders, managing directors, and consultants who have elevated their authority, reputation, and career trajectory with Elite Prominence.
                             </p>
 
@@ -121,6 +121,10 @@ export default function FeedbackPage() {
                                         backgroundColor: "#2460e2",
                                         color: "#ffffff",
                                         padding: "12px 28px",
+                                        minHeight: "44px",
+                                        display: "inline-flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
                                         borderRadius: "30px",
                                         fontSize: "15px",
                                         fontWeight: "700",
@@ -128,7 +132,7 @@ export default function FeedbackPage() {
                                         boxShadow: "0 4px 14px rgba(36, 96, 226, 0.25)"
                                     }}
                                 >
-                                    Share Your Feedback &rarr;
+                                    Share Your Feedback →
                                 </Link>
                                 <Link
                                     href="/community"
@@ -137,43 +141,49 @@ export default function FeedbackPage() {
                                         color: "#2460e2",
                                         border: "1.5px solid #2460e2",
                                         padding: "12px 26px",
+                                        minHeight: "44px",
+                                        display: "inline-flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
                                         borderRadius: "30px",
                                         fontSize: "15px",
                                         fontWeight: "700",
                                         textDecoration: "none"
                                     }}
                                 >
-                                    Explore Community Directory &rarr;
+                                    Explore Community Directory →
                                 </Link>
                             </div>
                         </div>
 
                         {/* Reviews Grid */}
-                        <div style={{ textAlign: "center", marginBottom: "36px" }}>
-                            <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#1b2534", margin: 0 }}>
+                        <div style={{ textAlign: "center", marginBottom: "32px" }}>
+                            <h2 style={{ fontSize: "clamp(22px, 4vw, 28px)", fontWeight: "700", color: "#1b2534", margin: 0 }}>
                                 Client Endorsements &amp; Perspectives
                             </h2>
                         </div>
-                        <div style={{
+                        <div className="feedback_grid" style={{
                             display: "grid",
-                            gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-                            gap: "28px"
+                            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                            gap: "24px"
                         }}>
                             {reviews.map((rev) => (
-                                <div key={rev.id} style={{
+                                <div key={rev.id} className="feedback_card" style={{
                                     backgroundColor: "#ffffff",
                                     borderRadius: "16px",
-                                    padding: "34px",
+                                    padding: "32px 28px",
                                     border: "1px solid #e2e8f0",
                                     boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)",
                                     display: "flex",
                                     flexDirection: "column",
                                     justifyContent: "space-between",
+                                    overflowWrap: "break-word",
+                                    wordBreak: "break-word",
                                     transition: "all 0.3s ease"
                                 }}>
                                     <div>
                                         {/* Star Rating & Verified Badge */}
-                                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px" }}>
+                                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px", flexWrap: "wrap", gap: "8px" }}>
                                             <div style={{ color: "#f59e0b", fontSize: "17px", letterSpacing: "2px" }}>
                                                 {'★'.repeat(rev.rating)}{'☆'.repeat(5 - rev.rating)}
                                             </div>
@@ -197,7 +207,9 @@ export default function FeedbackPage() {
                                             lineHeight: "1.7",
                                             color: "#334155",
                                             margin: "0 0 24px",
-                                            fontStyle: "normal"
+                                            fontStyle: "normal",
+                                            overflowWrap: "break-word",
+                                            wordBreak: "break-word"
                                         }}>
                                             "{rev.content}"
                                         </p>
@@ -215,6 +227,18 @@ export default function FeedbackPage() {
                                 </div>
                             ))}
                         </div>
+
+                        <style jsx>{`
+                            @media (max-width: 767px) {
+                                .feedback_grid {
+                                    grid-template-columns: 1fr !important;
+                                    gap: 20px !important;
+                                }
+                                .feedback_card {
+                                    padding: 24px 18px !important;
+                                }
+                            }
+                        `}</style>
                     </div>
                 </section>
             </Layout>

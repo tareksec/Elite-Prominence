@@ -471,8 +471,10 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             background: '#f1f5f9',
                             border: '1px solid #e2e8f0',
                             borderRadius: '50%',
-                            width: '40px',
-                            height: '40px',
+                            width: '44px',
+                            height: '44px',
+                            minWidth: '44px',
+                            minHeight: '44px',
                             alignItems: 'center',
                             justifyContent: 'center',
                             cursor: 'pointer',
@@ -489,6 +491,9 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
 
             {/* Scoped CSS for responsive floating navbar behavior */}
             <style jsx>{`
+                .floating_cta_btn {
+                    min-height: 44px;
+                }
                 .floating_cta_btn:hover {
                     transform: translateY(-1px);
                     box-shadow: 0 6px 22px rgba(236, 72, 153, 0.48) !important;
@@ -519,14 +524,25 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                         display: inline;
                     }
                     .floating_navbar_pill {
-                        padding: 0 12px 0 18px !important;
+                        padding: 0 10px 0 16px !important;
                         height: 56px !important;
                     }
                 }
 
                 @media (max-width: 480px) {
+                    :global(.floating_navbar_container) {
+                        width: calc(100% - 24px) !important;
+                        top: 12px !important;
+                    }
                     .logo_wordmark {
                         display: none !important;
+                    }
+                    .floating_navbar_pill {
+                        padding: 0 8px 0 12px !important;
+                    }
+                    .floating_cta_btn {
+                        padding: 8px 16px !important;
+                        font-size: 13px !important;
                     }
                 }
             `}</style>

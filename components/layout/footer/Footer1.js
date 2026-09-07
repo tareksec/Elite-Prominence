@@ -75,13 +75,15 @@ export default function Footer1() {
                                         display: "inline-flex",
                                         alignItems: "center",
                                         justifyContent: "center",
-                                        width: "38px",
-                                        height: "38px",
+                                        minWidth: "44px",
+                                        minHeight: "44px",
+                                        width: "44px",
+                                        height: "44px",
                                         borderRadius: "50%",
                                         backgroundColor: "rgba(255, 255, 255, 0.05)",
                                         border: "1px solid rgba(255, 255, 255, 0.15)",
                                         color: "#ffffff",
-                                        fontSize: "14px",
+                                        fontSize: "15px",
                                         textDecoration: "none",
                                         transition: "all 0.3s ease"
                                     }}
@@ -98,13 +100,15 @@ export default function Footer1() {
                                         display: "inline-flex",
                                         alignItems: "center",
                                         justifyContent: "center",
-                                        width: "38px",
-                                        height: "38px",
+                                        minWidth: "44px",
+                                        minHeight: "44px",
+                                        width: "44px",
+                                        height: "44px",
                                         borderRadius: "50%",
                                         backgroundColor: "rgba(255, 255, 255, 0.05)",
                                         border: "1px solid rgba(255, 255, 255, 0.15)",
                                         color: "#ffffff",
-                                        fontSize: "14px",
+                                        fontSize: "15px",
                                         textDecoration: "none",
                                         transition: "all 0.3s ease"
                                     }}
@@ -300,14 +304,14 @@ export default function Footer1() {
                         <div>
                             &copy; {new Date().getFullYear()} Elite Prominence. All rights reserved.
                         </div>
-                        <div style={{ display: "flex", gap: "20px" }}>
-                            <Link href="/privacy-policy" className="footer_legal_link" style={{ color: "#64748b", textDecoration: "none", transition: "color 0.2s ease" }}>
+                        <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
+                            <Link href="/privacy-policy" className="footer_legal_link" style={{ color: "#64748b", textDecoration: "none", transition: "color 0.2s ease", minHeight: "44px", display: "inline-flex", alignItems: "center" }}>
                                 Privacy Policy
                             </Link>
-                            <Link href="/terms" className="footer_legal_link" style={{ color: "#64748b", textDecoration: "none", transition: "color 0.2s ease" }}>
+                            <Link href="/terms" className="footer_legal_link" style={{ color: "#64748b", textDecoration: "none", transition: "color 0.2s ease", minHeight: "44px", display: "inline-flex", alignItems: "center" }}>
                                 Terms of Service
                             </Link>
-                            <Link href="/login" className="footer_legal_link" style={{ color: "#64748b", textDecoration: "none", transition: "color 0.2s ease" }}>
+                            <Link href="/login" className="footer_legal_link" style={{ color: "#64748b", textDecoration: "none", transition: "color 0.2s ease", minHeight: "44px", display: "inline-flex", alignItems: "center" }}>
                                 Client Login
                             </Link>
                         </div>
@@ -347,10 +351,16 @@ export default function Footer1() {
                     }
                 }
 
-                @media (max-width: 640px) {
+                @media (max-width: 767px) {
                     .footer_grid_layout {
                         grid-template-columns: 1fr !important;
                         gap: 36px !important;
+                    }
+                    .footer_link_item {
+                        min-height: 44px;
+                        display: inline-flex !important;
+                        align-items: center;
+                        padding: 6px 0;
                     }
                 }
             `}</style>
