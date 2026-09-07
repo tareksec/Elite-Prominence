@@ -227,6 +227,17 @@ export default function SignupPage() {
                                     />
                                 </div>
 
+                                <div style={{ marginBottom: "22px", fontSize: "13.5px", color: "#64748b", lineHeight: "1.5", textAlign: "center" }}>
+                                    By signing up, you agree to our{' '}
+                                    <Link href="/terms" style={{ color: "#1e3b2b", fontWeight: "700", textDecoration: "underline" }} target="_blank">
+                                        Terms of Service
+                                    </Link>{' '}
+                                    and{' '}
+                                    <Link href="/privacy-policy" style={{ color: "#1e3b2b", fontWeight: "700", textDecoration: "underline" }} target="_blank">
+                                        Privacy Policy
+                                    </Link>.
+                                </div>
+
                                 <button
                                     type="submit"
                                     disabled={loading}
