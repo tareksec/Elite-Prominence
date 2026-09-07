@@ -92,7 +92,7 @@ export default function Service_Page() {
                                         </div>
                                         <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "15px" }}>1. Website — Your Digital HQ</h3>
                                         <p style={{ color: "#59606a", lineHeight: "1.7", marginBottom: "20px", flex: 1 }}>
-                                            A personal website that showcases your bio, areas of expertise, case studies, and testimonials — the link you put in your email signature, LinkedIn bio, and every speaker application.
+                                            A personal website that anchors your personal brand by showcasing your bio, areas of expertise, case studies, and testimonials — the definitive link you put in your email signature, LinkedIn bio, and every board or speaker application.
                                         </p>
                                         <div className="link_btn">
                                             <Link href="/contact" className="btn_style_two" style={{ padding: "10px 20px", fontSize: "14px" }}>Book a Strategy Call</Link>
@@ -134,7 +134,7 @@ export default function Service_Page() {
                                         </div>
                                         <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "15px" }}>3. Social Visibility (LinkedIn-first)</h3>
                                         <p style={{ color: "#59606a", lineHeight: "1.7", marginBottom: "20px", flex: 1 }}>
-                                            A content strategy and ghostwriting system built around your voice — thought-leadership posts, consistent publishing, and engagement growth, without it becoming your job.
+                                            A content strategy and ghostwriting system built around your voice — thought-leadership posts, consistent publishing, and engagement growth that reinforces both your executive stature and your organization's employer branding, without it becoming your day job.
                                         </p>
                                         <div className="link_btn">
                                             <Link href="/contact" className="btn_style_two" style={{ padding: "10px 20px", fontSize: "14px" }}>Book a Strategy Call</Link>

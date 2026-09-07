@@ -8,7 +8,7 @@ const pillarData = {
         image: "/assets/images/elite/pillar_digital_hq.jpg",
         alt: "Personal website design and digital HQ for executive personal branding",
         icon: "icon-33",
-        summary: "A personal website built around your bio, expertise, case studies, and testimonials — the single link that represents you everywhere."
+        summary: "A personal website that establishes your digital brand identity, showcasing your bio, expertise, case studies, and career milestones — the definitive hub that represents you everywhere."
     },
     2: {
         title: "Pillar 2 — Google & Reputation",
@@ -16,7 +16,7 @@ const pillarData = {
         image: "/assets/images/elite/pillar_google_reputation.jpg",
         alt: "Google reputation management and page-one executive standing",
         icon: "fab fa-google",
-        summary: "When someone searches your name, page one should say \"expert\" — not \"nothing,\" and not something outdated. We make sure it does."
+        summary: "When someone searches your name, page one should reflect your executive standing — not silence or outdated noise. We manage your online reputation with owned assets and strategic media coverage so search results validate your authority immediately."
     },
     3: {
         title: "Pillar 3 — Social Visibility",
@@ -24,7 +24,7 @@ const pillarData = {
         image: "/assets/images/elite/pillar_social_visibility.jpg",
         alt: "LinkedIn branding and executive ghostwriting for HR leaders",
         icon: "fab fa-linkedin-in",
-        summary: "LinkedIn content and thought leadership built around your voice, run for you, so you stay visible without becoming a full-time content creator."
+        summary: "Executive ghostwriting and content creation aligned with an intentional brand strategy, keeping your thought leadership active on LinkedIn so you stay visible without becoming a full-time content creator."
     }
 }
 
@@ -212,7 +212,7 @@ export default function Feature() {
                                         </div>
                                         <div className={isActive.key == 1 ? "acc-content current" : "acc-content"} style={{ display: isActive.key == 1 ? "block" : "none" }}>
                                             <div className="text">
-                                                <p>A personal website built around your bio, expertise, case studies, and testimonials — the single link that represents you everywhere.</p>
+                                                <p>A personal website that establishes your digital brand identity, showcasing your bio, expertise, case studies, and career milestones — the definitive hub that represents you everywhere.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -223,7 +223,7 @@ export default function Feature() {
                                         </div>
                                         <div className={isActive.key == 2 ? "acc-content current" : "acc-content"} style={{ display: isActive.key == 2 ? "block" : "none" }}>
                                             <div className="text">
-                                                <p>When someone searches your name, page one should say "expert" — not "nothing," and not something outdated. We make sure it does.</p>
+                                                <p>When someone searches your name, page one should reflect your executive standing — not silence or outdated noise. We manage your online reputation with owned assets and strategic media coverage so search results validate your authority immediately.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -234,7 +234,7 @@ export default function Feature() {
                                         </div>
                                         <div className={isActive.key == 3 ? "acc-content current" : "acc-content"} style={{ display: isActive.key == 3 ? "block" : "none" }}>
                                             <div className="text">
-                                                <p>LinkedIn content and thought leadership built around your voice, run for you, so you stay visible without becoming a full-time content creator.</p>
+                                                <p>Executive ghostwriting and content creation aligned with an intentional brand strategy, keeping your thought leadership active on LinkedIn so you stay visible without becoming a full-time content creator.</p>
                                             </div>
                                         </div>
                                     </li>

@@ -96,7 +96,7 @@ export default function Blog_Details() {
                                                 Every senior HR leader we speak with has already completed the hardest part of professional achievement: they've guided enterprise transformations, navigated complex restructuring, coached executive teams, and resolved high-stakes human capital crises.
                                             </p>
                                             <p style={{ fontSize: "17px", lineHeight: "1.7", color: "#59606a", marginBottom: "20px" }}>
-                                                Yet when someone Googles their name or checks their LinkedIn profile, they often find an outdated single-line bio from a conference five years ago. Results and visibility are two distinct disciplines — and busy executives rarely have the bandwidth to run both.
+                                                Yet when someone Googles their name or checks their LinkedIn profile, they often find an outdated single-line bio from a conference five years ago. Results and visibility are two distinct disciplines. For senior executives, building your personal brand isn't about chasing likes or broadcasting daily trivialities — it is about aligning your external presence with your real-world caliber.
                                             </p>
                                             <ul className="feature-list" style={{ marginBottom: "25px", color: "#1b2534", fontWeight: "500", lineHeight: "1.8" }}>
                                                 <li>Doing great work quietly is a career ceiling, not a virtue.</li>
@@ -121,7 +121,7 @@ export default function Blog_Details() {
                                         <div className="blog_details_content_box mb_50">
                                             <h3 style={{ fontSize: "26px", fontWeight: "700", marginBottom: "15px" }}>The 3 Pillars of an Executive Digital Presence</h3>
                                             <p style={{ fontSize: "17px", lineHeight: "1.7", color: "#59606a", marginBottom: "20px" }}>
-                                                To build authority without becoming a full-time content creator, senior HR leaders require a structured system:
+                                                To build authority without becoming a full-time content creator, senior HR leaders require a structured personal branding system:
                                             </p>
                                             <p style={{ fontSize: "17px", lineHeight: "1.7", color: "#59606a", marginBottom: "20px" }}>
                                                 <strong>1. Digital HQ (Website):</strong> An owned personal website that houses your bio, career milestones, case studies, and media appearances. This is the definitive link you provide to nominating committees, event organizers, and prospective advisory clients.

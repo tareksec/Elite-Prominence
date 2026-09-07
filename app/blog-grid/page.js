@@ -4,13 +4,13 @@ import Layout from "@/components/layout/Layout"
 
 export const metadata = {
     title: 'Insights for HR Leaders | Elite Prominence Blog',
-    description: 'Practical guidance on personal branding, LinkedIn strategy, and Google reputation for HR leaders and consultants.',
+    description: 'Strategic guidance on personal branding, LinkedIn strategy, and reputation management for human resources executives navigating the future of work.',
     alternates: {
         canonical: '/blog-grid',
     },
     openGraph: {
         title: 'Insights for HR Leaders | Elite Prominence Blog',
-        description: 'Practical guidance on personal branding, LinkedIn strategy, and Google reputation for HR leaders and consultants.',
+        description: 'Strategic guidance on personal branding, LinkedIn strategy, and reputation management for human resources executives navigating the future of work.',
         url: 'https://prominence.agency/blog-grid',
         siteName: 'Elite Prominence',
         locale: 'en_US',
@@ -41,7 +41,7 @@ const blogGridSchema = {
         {
             '@type': 'CollectionPage',
             name: 'Insights for HR Leaders | Elite Prominence Blog',
-            description: 'Practical guidance on personal branding, LinkedIn strategy, and Google reputation for HR leaders and consultants.',
+            description: 'Strategic guidance on personal branding, LinkedIn strategy, and reputation management for human resources executives navigating the future of work.',
             url: 'https://prominence.agency/blog-grid',
         },
     ],
@@ -55,7 +55,7 @@ const posts = [
         date: 'Recent',
         image: '/assets/images/elite/blog_1_hr_personal_brand.jpg',
         alt: 'How to build a personal brand as an HR leader without becoming a content creator',
-        desc: 'Frame personal branding as career infrastructure, not self-promotion; why a 3-pillar architecture creates inbound authority for HR leaders.',
+        desc: 'Frame personal branding as career infrastructure for human resources leaders; why a 3-pillar architecture creates inbound authority in the future of work.',
         status: 'Available'
     },
     {
@@ -65,7 +65,7 @@ const posts = [
         date: 'Recent',
         image: '/assets/images/elite/blog_2_linkedin_chro.jpg',
         alt: 'LinkedIn strategy and ghostwriting for CHROs and VP HR',
-        desc: 'Explore content pillars, strategic publishing cadence, and the "done-for-you" ghostwriting model designed for busy executives.',
+        desc: 'Explore content pillars, strategic publishing cadence, and the "done-for-you" ghostwriting model designed for a Chief People Officer shaping talent management discussions.',
         status: 'Available'
     },
     {
@@ -85,7 +85,7 @@ const posts = [
         date: 'Upcoming',
         image: '/assets/images/elite/blog_4_executive_presence.jpg',
         alt: 'Executive presence and reputation management for corporate leaders',
-        desc: 'Explain how seniority increases reliance on third-party perception (recruiters, boards, and media) before they ever reach out.',
+        desc: 'Explain how seniority in workplace culture and executive leadership increases reliance on external perception before stakeholders reach out.',
         status: 'Coming Soon'
     },
     {
@@ -123,8 +123,8 @@ export default function Blog_Grid() {
                         <div className="section_title centred" style={{ marginBottom: "50px" }}>
                             <div className="tag_text"><h6>Thought Leadership</h6></div>
                             <h2>Articles & Strategic Guides</h2>
-                            <p style={{ maxWidth: "700px", margin: "15px auto 0", fontSize: "18px", color: "#59606a" }}>
-                                Practical guidance on personal branding, LinkedIn strategy, and Google reputation for senior HR leaders and consultants.
+                            <p style={{ maxWidth: "820px", margin: "15px auto 0", fontSize: "18px", color: "#59606a", lineHeight: "1.7" }}>
+                                Navigating the future of work requires human resources executives to command more than internal credibility. Whether shaping workplace culture, championing employee engagement, or modernizing talent management through strategic HR technology, today's Chief People Officer must be recognized across the market. Explore our field-tested frameworks on executive presence, talent acquisition leadership, and digital authority.
                             </p>
                         </div>
                         <div className="row">

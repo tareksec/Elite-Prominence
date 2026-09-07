@@ -54,7 +54,7 @@ export default function About_Page() {
                     <div className="tag_text"><h6>About Elite Prominence</h6></div>
                     <h1>We Make Elite Professionals Prominent.</h1>
                     <p style={{ maxWidth: "800px", margin: "0 auto 30px", fontSize: "18px", lineHeight: "1.7" }}>
-                        Every HR leader we work with has already done the hard part — they've built real results, led real teams, solved real problems. What most of them haven't built is a digital presence that reflects it. Elite Prominence exists to close that gap: we take what you've already proven and make it visible to the people who matter — boards, recruiters, peers, and media.
+                        Every HR leader we work with has already done the hard part — they've built an exceptional track record, led transformation, and solved high-stakes problems. What most lack is executive branding that reflects their true caliber. Elite Prominence exists to close that gap: we take what you've already proven and position it with authority before the people who matter — boards, recruiters, peers, and media.
                     </p>
                     <div className="link_btn" style={{ marginBottom: "30px" }}>
                         <Link href="/contact" className="btn_style_one">Book a Strategy Call</Link>
@@ -94,10 +94,10 @@ export default function About_Page() {
                             “We make elite professionals prominent, so opportunity finds them — instead of them having to chase it.”
                         </div>
                         <p style={{ fontSize: "17px", lineHeight: "1.7", color: "#59606a", marginBottom: "16px" }}>
-                            Every HR leader we work with has already done the hard part — they've built real results, led real teams, solved real problems. What most of them haven't built is a digital presence that reflects it.
+                            The personal story behind Elite Prominence began with a straightforward realization: in senior leadership, opportunities are won by credibility that is recognized before the conversation starts.
                         </p>
                         <p style={{ fontSize: "17px", lineHeight: "1.7", color: "#59606a", marginBottom: "25px" }}>
-                            Elite Prominence exists to close that gap: we take what you've already proven and make it visible to the people who matter — boards, recruiters, peers, and media.
+                            We establish sharp brand positioning for proven leaders, transforming an understated online presence into an authentic asset that opens doors with search committees, advisory boards, and conference organizers.
                         </p>
                         <Link href="/contact" className="btn_style_one">Book a Strategy Call</Link>
                     </div>
@@ -132,7 +132,7 @@ export default function About_Page() {
                                 <i className="icon-27"></i>
                             </div>
                             <h3>Done-for-you beats DIY.</h3>
-                            <p>Senior leaders shouldn't be writing their own captions at 11pm.</p>
+                            <p>Senior leaders shouldn't be drafting posts at 11pm. We design your content strategy and manage your executive LinkedIn profile with complete consistency.</p>
                             <div className="link_btn"><Link href="/services">Our Services <i className="fa-solid fa-angle-right"></i></Link></div>
                         </div>
                     </div>
@@ -156,7 +156,7 @@ export default function About_Page() {
                     <div className="tag_text"><h6>Focus & Fit</h6></div>
                     <h2>Who This Is For</h2>
                     <p style={{ maxWidth: "750px", margin: "15px auto 0", color: "#b0b8c4", fontSize: "18px", lineHeight: "1.7" }}>
-                        We currently focus exclusively on senior HR leaders, consultants, coaches, and HR tech founders — professionals who've already achieved results and need their online presence to catch up.
+                        Our defined target audience is senior HR leaders, executive consultants, keynote speakers, and HR tech founders — accomplished professionals with substantial track records whose online presence deserves to match their real-world impact.
                     </p>
                     <div style={{ marginTop: "35px" }}>
                         <Link href="/contact" className="btn_style_one">Book a Strategy Call</Link>

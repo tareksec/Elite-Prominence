@@ -55,7 +55,7 @@ export default function Pricing_Page() {
                             <div className="tag_text"><h6>Packages & Investment</h6></div>
                             <h2>Personal Branding Investment Models</h2>
                             <p style={{ maxWidth: "760px", margin: "15px auto 0", fontSize: "18px", color: "#59606a", lineHeight: "1.7" }}>
-                                Two ways to work with us — a fixed-scope project, or ongoing monthly management. Choose whichever fits how you like to plan.
+                                Two ways to work with us — a fixed-scope infrastructure build, or ongoing monthly personal branding and social media authority management. Choose whichever fits how you like to plan.
                             </p>
                         </div>
                         

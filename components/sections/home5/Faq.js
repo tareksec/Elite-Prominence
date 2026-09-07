@@ -76,18 +76,18 @@ export default function Faq() {
                                     </div>
                                     <div className={isActive.key == 1 ? "acc-content current" : "acc-content"}>
                                         <div className="text">
-                                            <p>Very little. This is a done-for-you model — most clients spend under 30 minutes a month once onboarding is complete.</p>
+                                            <p>Very little. This is a done-for-you model designed specifically for busy HR leaders — most clients spend under 30 minutes a month once onboarding is complete.</p>
                                         </div>
                                     </div>
                                 </li>
                                 <li className="accordion block">
                                     <div className={isActive.key == 2 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(2)}>                        
-                                        <h3>2. Is this just LinkedIn content, or more than that?</h3>
+                                        <h3>2. Is building a personal brand with you just about LinkedIn content, or more than that?</h3>
                                         <div className="icon-box"></div>
                                     </div>
                                     <div className={isActive.key == 2 ? "acc-content current" : "acc-content"}>
                                         <div className="text">
-                                            <p>It's more. We combine a personal website, Google reputation work, and LinkedIn strategy — most agencies only do one of these.</p>
+                                            <p>It's significantly more. Building a personal brand requires an integrated presence: we combine an executive personal website, Google reputation management, and high-impact LinkedIn thought leadership — whereas most agencies only handle one piece.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -109,7 +109,7 @@ export default function Faq() {
                                     </div>
                                     <div className={isActive.key == 4 ? "acc-content current" : "acc-content"}>
                                         <div className="text">
-                                            <p>Early-career professionals without an established track record yet — this is built specifically for leaders who already have results to showcase.</p>
+                                            <p>Early-career practitioners without an established track record yet — our work is designed specifically for senior leaders who already possess substantive expertise and commercial outcomes to showcase.</p>
                                         </div>
                                     </div>
                                 </li>

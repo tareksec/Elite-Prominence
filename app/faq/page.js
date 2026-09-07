@@ -47,15 +47,15 @@ const faqSchema = {
                     name: "I'm already busy. How much time will this take from me?",
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Very little. This is a done-for-you model — most clients spend under 30 minutes a month once onboarding is complete.',
+                        text: 'Very little. This is a done-for-you model designed specifically for busy HR leaders — most clients spend under 30 minutes a month once onboarding is complete.',
                     },
                 },
                 {
                     '@type': 'Question',
-                    name: 'Is this just LinkedIn content, or more than that?',
+                    name: 'Is building a personal brand with you just about LinkedIn content, or more than that?',
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: "It's more. We combine a personal website, Google reputation work, and LinkedIn strategy — most agencies only do one of these.",
+                        text: "It's significantly more. Building a personal brand requires an integrated presence: we combine an executive personal website, Google reputation management, and high-impact LinkedIn thought leadership — whereas most agencies only handle one piece.",
                     },
                 },
                 {
@@ -71,7 +71,7 @@ const faqSchema = {
                     name: 'Who is this NOT a good fit for?',
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Early-career professionals without an established track record yet — this is built specifically for leaders who already have results to showcase.',
+                        text: 'Early-career practitioners without an established track record yet — our work is designed specifically for senior leaders who already possess substantive expertise and commercial outcomes to showcase.',
                     },
                 },
             ],
@@ -92,8 +92,8 @@ export default function Faq_Page() {
                         <div className="section_title centred aos-init aos-animate" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
                             <div className="tag_text"><h6>Common Inquiries</h6></div>
                             <h2>Common Questions About Our Executive Model</h2>
-                            <p style={{ maxWidth: "700px", margin: "15px auto 0", fontSize: "18px", color: "#59606a" }}>
-                                Everything you need to know about our personal branding model, time investment, and outcomes.
+                            <p style={{ maxWidth: "780px", margin: "15px auto 0", fontSize: "18px", color: "#59606a", lineHeight: "1.7" }}>
+                                Everything HR leaders and senior leaders need to know about building a personal brand with our done-for-you model, time investment, and outcomes.
                             </p>
                         </div>
                         <div className="inner_box" style={{ maxWidth: "850px", margin: "0 auto" }}>
