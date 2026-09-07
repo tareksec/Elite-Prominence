@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { getWhatsAppUrl } from '@/lib/whatsapp'
 
 export default function PricingTabs() {
     const [activeModel, setActiveModel] = useState('onetime') // 'onetime' | 'retainer'
@@ -705,6 +706,28 @@ export default function PricingTabs() {
                 <Link href="/contact" className="btn_style_one" style={{ padding: '14px 34px', fontSize: '16px', fontWeight: '700' }}>
                     Book a Strategy Call &rarr;
                 </Link>
+                <div style={{ marginTop: '16px', fontSize: '15px', color: '#64748b', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                    <span>or</span>
+                    <a
+                        href={getWhatsAppUrl("Hi, I'd like to know more about Elite Prominence's services and pricing.")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            color: '#16a34a',
+                            fontWeight: '600',
+                            textDecoration: 'none',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '6px',
+                            transition: 'color 0.2s ease'
+                        }}
+                        className="pricing_whatsapp_secondary_link"
+                        aria-label="Message Elite Prominence on WhatsApp"
+                    >
+                        <i className="fab fa-whatsapp" style={{ fontSize: '18px', color: '#25D366' }}></i>
+                        <span>message us on WhatsApp</span>
+                    </a>
+                </div>
             </div>
 
             {/* Embedded Stepper Styles (Responsive Desktop & Mobile) */}

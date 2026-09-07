@@ -1,6 +1,7 @@
 'use client'
 import React from "react"
 import Link from "next/link"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function Footer1() {
     return (
@@ -115,6 +116,31 @@ export default function Footer1() {
                                 >
                                     <i className="fab fa-facebook-f"></i>
                                 </Link>
+                                <a
+                                    href={getWhatsAppUrl()}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="WhatsApp"
+                                    className="footer_social_pill"
+                                    style={{
+                                        display: "inline-flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        minWidth: "44px",
+                                        minHeight: "44px",
+                                        width: "44px",
+                                        height: "44px",
+                                        borderRadius: "50%",
+                                        backgroundColor: "rgba(37, 211, 102, 0.1)",
+                                        border: "1px solid rgba(37, 211, 102, 0.3)",
+                                        color: "#25D366",
+                                        fontSize: "16px",
+                                        textDecoration: "none",
+                                        transition: "all 0.3s ease"
+                                    }}
+                                >
+                                    <i className="fab fa-whatsapp"></i>
+                                </a>
                             </div>
                         </div>
 
@@ -263,22 +289,45 @@ export default function Footer1() {
                             </Link>
 
                             <div style={{ marginTop: "18px", borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: "14px" }}>
-                                <div style={{ fontSize: "13px", color: "#64748b", marginBottom: "4px" }}>
+                                <div style={{ fontSize: "13px", color: "#64748b", marginBottom: "6px" }}>
                                     Inquiries &amp; Confidential Briefs:
                                 </div>
-                                <a
-                                    href="mailto:hello@prominence.agency"
-                                    style={{
-                                        color: "#cbd5e1",
-                                        fontSize: "14px",
-                                        fontWeight: "600",
-                                        textDecoration: "none",
-                                        transition: "color 0.2s ease"
-                                    }}
-                                    className="footer_email_link"
-                                >
-                                    hello@prominence.agency
-                                </a>
+                                <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "10px" }}>
+                                    <a
+                                        href="mailto:hello@prominence.agency"
+                                        style={{
+                                            color: "#cbd5e1",
+                                            fontSize: "14px",
+                                            fontWeight: "600",
+                                            textDecoration: "none",
+                                            transition: "color 0.2s ease"
+                                        }}
+                                        className="footer_email_link"
+                                    >
+                                        hello@prominence.agency
+                                    </a>
+                                    <span style={{ color: "#475569", fontSize: "12px" }}>&bull;</span>
+                                    <a
+                                        href={getWhatsAppUrl()}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{
+                                            color: "#25D366",
+                                            fontSize: "14px",
+                                            fontWeight: "600",
+                                            textDecoration: "none",
+                                            display: "inline-flex",
+                                            alignItems: "center",
+                                            gap: "6px",
+                                            transition: "opacity 0.2s ease"
+                                        }}
+                                        className="footer_whatsapp_link"
+                                        aria-label="Chat with Elite Prominence on WhatsApp"
+                                    >
+                                        <i className="fab fa-whatsapp" style={{ fontSize: "15px" }}></i>
+                                        <span>WhatsApp</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import Link from "next/link"
 import Layout from "@/components/layout/Layout"
 import ContactForm from "@/components/elements/ContactForm"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export const metadata = {
     title: 'Contact Us | Book an Executive Strategy Session — Elite Prominence',
@@ -68,19 +69,30 @@ export default function Contact_Page() {
                         </div>
                         <div className="row" style={{ marginTop: "40px" }}>
                             {/* Email */}
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                 <div className="contact_block_one mb_30" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
                                     <div className="contact_block_icon"><i className="icon-2"></i></div>
                                     <div className="contact_block_title"><h3>Direct Email</h3></div>
                                     <div className="contact_block_text">
-                                        <p><Link href="mailto:hello@prominence.agency">hello@prominence.agency</Link><br/>Inquiries & Introductions</p>
+                                        <p><Link href="mailto:hello@prominence.agency">hello@prominence.agency</Link><br/>Inquiries &amp; Introductions</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* WhatsApp */}
+                            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                                <div className="contact_block_one mb_30" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="550">
+                                    <div className="contact_block_icon"><i className="fab fa-whatsapp" style={{ fontSize: "28px", color: "#25D366" }}></i></div>
+                                    <div className="contact_block_title"><h3>WhatsApp</h3></div>
+                                    <div className="contact_block_text">
+                                        <p><a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" style={{ color: "#25D366", fontWeight: "600" }}>Chat on WhatsApp</a><br/>Instant Consultation &amp; Support</p>
                                     </div>
                                 </div>
                             </div>
 
                             {/* LinkedIn */}
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                <div className="contact_block_one mb_30" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="550">
+                            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                                <div className="contact_block_one mb_30" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
                                     <div className="contact_block_icon"><i className="fab fa-linkedin-in" style={{ fontSize: "28px" }}></i></div>
                                     <div className="contact_block_title"><h3>LinkedIn</h3></div>
                                     <div className="contact_block_text">
@@ -90,8 +102,8 @@ export default function Contact_Page() {
                             </div>
 
                             {/* Facebook */}
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                <div className="contact_block_one mb_30" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
+                            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                                <div className="contact_block_one mb_30" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="650">
                                     <div className="contact_block_icon"><i className="fab fa-facebook-f" style={{ fontSize: "28px" }}></i></div>
                                     <div className="contact_block_title"><h3>Facebook</h3></div>
                                     <div className="contact_block_text">

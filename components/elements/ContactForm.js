@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+import { getWhatsAppUrl } from '@/lib/whatsapp'
 
 export default function ContactForm() {
     const [submitted, setSubmitted] = useState(false)
@@ -47,15 +48,98 @@ export default function ContactForm() {
 
     return (
         <div className="inner_box contact_form_inner_box" style={{ maxWidth: "850px", margin: "0 auto", background: "#fff", padding: "50px 40px", borderRadius: "10px", boxShadow: "0 10px 40px rgba(0,0,0,0.06)" }}>
-            <div className="section_title centred" style={{ marginBottom: "35px" }}>
+            <div className="section_title centred" style={{ marginBottom: "25px" }}>
                 <h2 style={{ fontSize: "28px", fontWeight: "700" }}>Book a Strategy Call</h2>
                 <p style={{ color: "#59606a", marginTop: "10px" }}>Fill in the details below to help us prepare for our discussion.</p>
+            </div>
+
+            {/* Inline WhatsApp Quick Action Banner */}
+            <div className="whatsapp_banner" style={{
+                background: "#f0fdf4",
+                border: "1px solid #bbf7d0",
+                borderRadius: "10px",
+                padding: "16px 22px",
+                marginBottom: "30px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                flexWrap: "wrap",
+                gap: "14px"
+            }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                    <div style={{
+                        width: "40px",
+                        height: "40px",
+                        borderRadius: "50%",
+                        background: "#25D366",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: "#ffffff",
+                        fontSize: "20px",
+                        flexShrink: 0
+                    }}>
+                        <i className="fab fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <div style={{ fontWeight: "700", color: "#166534", fontSize: "15px" }}>
+                            Prefer instant messaging?
+                        </div>
+                        <div style={{ color: "#15803d", fontSize: "13.5px" }}>
+                            Chat directly with our executive advisors for immediate answers or payment coordination.
+                        </div>
+                    </div>
+                </div>
+                <a
+                    href={getWhatsAppUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whatsapp_quick_btn"
+                    style={{
+                        background: "#25D366",
+                        color: "#ffffff",
+                        fontWeight: "600",
+                        fontSize: "14px",
+                        padding: "10px 20px",
+                        borderRadius: "8px",
+                        textDecoration: "none",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        boxShadow: "0 2px 10px rgba(37, 211, 102, 0.25)",
+                        whiteSpace: "nowrap",
+                        transition: "all 0.2s ease"
+                    }}
+                >
+                    <i className="fab fa-whatsapp" style={{ fontSize: "17px" }}></i>
+                    <span>Chat with us on WhatsApp</span>
+                </a>
             </div>
 
             {submitted ? (
                 <div className="alert alert-success centred" style={{ padding: "30px", borderRadius: "8px", background: "#eef9f2", border: "1px solid #c3e6cb", color: "#155724" }}>
                     <h3 style={{ color: "#155724", marginBottom: "10px" }}>Thank You!</h3>
-                    <p>Your details have been received. An executive advisor will review your information and reach out within 1–2 business days.</p>
+                    <p style={{ marginBottom: "16px" }}>Your details have been received. An executive advisor will review your information and reach out within 1–2 business days.</p>
+                    <a
+                        href={getWhatsAppUrl("Hi, I just submitted the contact form on your website and would like to follow up.")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            background: "#25D366",
+                            color: "#ffffff",
+                            fontWeight: "600",
+                            fontSize: "14px",
+                            padding: "10px 20px",
+                            borderRadius: "8px",
+                            textDecoration: "none",
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "8px"
+                        }}
+                    >
+                        <i className="fab fa-whatsapp" style={{ fontSize: "17px" }}></i>
+                        <span>Message us on WhatsApp for fast follow-up</span>
+                    </a>
                 </div>
             ) : (
                 <form onSubmit={handleSubmit} className="contact_form">
@@ -155,7 +239,7 @@ export default function ContactForm() {
                             </div>
                         </div>
                         <div className="col-xl-12 col-md-12 col-sm-12">
-                            <div className="form-group centred">
+                            <div className="form-group centred" style={{ marginTop: "10px" }}>
                                 <button
                                     type="submit"
                                     disabled={submitting}
@@ -168,11 +252,43 @@ export default function ContactForm() {
                                         alignItems: "center",
                                         justifyContent: "center",
                                         opacity: submitting ? 0.7 : 1,
-                                        cursor: submitting ? "not-allowed" : "pointer"
+                                        cursor: submitting ? "not-allowed" : "pointer",
+                                        fontSize: "16px",
+                                        fontWeight: "700"
                                     }}
                                 >
                                     {submitting ? 'Submitting Details...' : 'Book a Strategy Call →'}
                                 </button>
+
+                                <div style={{ marginTop: "22px", display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
+                                    <span style={{ fontSize: "14px", color: "#64748b" }}>
+                                        or connect instantly via WhatsApp
+                                    </span>
+                                    <a
+                                        href={getWhatsAppUrl()}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="whatsapp_secondary_btn"
+                                        style={{
+                                            display: "inline-flex",
+                                            alignItems: "center",
+                                            justifyContent: "center",
+                                            gap: "8px",
+                                            color: "#16a34a",
+                                            background: "rgba(37, 211, 102, 0.08)",
+                                            border: "1px solid rgba(37, 211, 102, 0.3)",
+                                            padding: "10px 22px",
+                                            borderRadius: "8px",
+                                            fontWeight: "600",
+                                            fontSize: "14px",
+                                            textDecoration: "none",
+                                            transition: "all 0.2s ease"
+                                        }}
+                                    >
+                                        <i className="fab fa-whatsapp" style={{ fontSize: "18px", color: "#25D366" }}></i>
+                                        <span>Chat with us on WhatsApp</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -193,6 +309,19 @@ export default function ContactForm() {
                     :global(.contact_form textarea) {
                         font-size: 16px !important;
                         padding: 14px 16px !important;
+                    }
+                    :global(.whatsapp_banner) {
+                        flex-direction: column !important;
+                        align-items: flex-start !important;
+                        padding: 16px !important;
+                    }
+                    :global(.whatsapp_quick_btn) {
+                        width: 100% !important;
+                        justify-content: center !important;
+                    }
+                    :global(.whatsapp_secondary_btn) {
+                        width: 100% !important;
+                        max-width: 320px !important;
                     }
                 }
             `}</style>

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import HeaderAuth from "@/components/elements/HeaderAuth"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar }) {
     const [isActive, setIsActive] = useState({
@@ -74,11 +75,17 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                         <h4>Contact Info</h4>
                         <ul>
                             <li><Link href="mailto:hello@prominence.agency">hello@prominence.agency</Link></li>
+                            <li style={{ marginTop: "6px" }}>
+                                <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" style={{ color: "#25D366", display: "inline-flex", alignItems: "center", gap: "6px", fontWeight: "600" }}>
+                                    <i className="fab fa-whatsapp"></i> WhatsApp Chat
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <ul className="social-links centred">
-                        <li><Link href="https://www.linkedin.com/company/elite-prominence" target="_blank"><span className="fab fa-linkedin-in"></span></Link></li>
-                        <li><Link href="https://www.facebook.com/EliteProminence/" target="_blank"><span className="fab fa-facebook-square"></span></Link></li>
+                        <li><Link href="https://www.linkedin.com/company/elite-prominence" target="_blank" aria-label="LinkedIn"><span className="fab fa-linkedin-in"></span></Link></li>
+                        <li><Link href="https://www.facebook.com/EliteProminence/" target="_blank" aria-label="Facebook"><span className="fab fa-facebook-square"></span></Link></li>
+                        <li><a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span className="fab fa-whatsapp" style={{ color: "#25D366" }}></span></a></li>
                     </ul>
                 </nav>
             </div>{/* End Mobile Menu */}
