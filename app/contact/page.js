@@ -85,7 +85,7 @@ export default function Contact_Page() {
                                     <div className="contact_block_icon"><i className="fab fa-whatsapp" style={{ fontSize: "28px", color: "#25D366" }}></i></div>
                                     <div className="contact_block_title"><h3>WhatsApp</h3></div>
                                     <div className="contact_block_text">
-                                        <p><a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" style={{ color: "#25D366", fontWeight: "600" }}>Chat on WhatsApp</a><br/>Instant Consultation &amp; Support</p>
+                                        <p><a href={getWhatsAppUrl()} target="_blank" rel="nofollow noopener noreferrer" style={{ color: "#25D366", fontWeight: "600" }}>Chat on WhatsApp</a><br/>Instant Consultation &amp; Support</p>
                                     </div>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@ export default function Contact_Page() {
                                     <div className="contact_block_icon"><i className="fab fa-linkedin-in" style={{ fontSize: "28px" }}></i></div>
                                     <div className="contact_block_title"><h3>LinkedIn</h3></div>
                                     <div className="contact_block_text">
-                                        <p><Link href="https://www.linkedin.com/company/elite-prominence" target="_blank">Elite Prominence</Link><br/>Follow Company Updates</p>
+                                        <p><Link href="https://www.linkedin.com/company/elite-prominence" target="_blank" rel="nofollow noopener noreferrer">Elite Prominence</Link><br/>Follow Company Updates</p>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@ export default function Contact_Page() {
                                     <div className="contact_block_icon"><i className="fab fa-facebook-f" style={{ fontSize: "28px" }}></i></div>
                                     <div className="contact_block_title"><h3>Facebook</h3></div>
                                     <div className="contact_block_text">
-                                        <p><Link href="https://www.facebook.com/EliteProminence/" target="_blank">Elite Prominence Page</Link><br/>Community Insights</p>
+                                        <p><Link href="https://www.facebook.com/EliteProminence/" target="_blank" rel="nofollow noopener noreferrer">Elite Prominence Page</Link><br/>Community Insights</p>
                                     </div>
                                 </div>
                             </div>

@@ -93,7 +93,7 @@ export default function ContactForm() {
                 <a
                     href={getWhatsAppUrl()}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow noopener noreferrer"
                     className="whatsapp_quick_btn"
                     style={{
                         background: "#25D366",
@@ -123,7 +123,7 @@ export default function ContactForm() {
                     <a
                         href={getWhatsAppUrl("Hi, I just submitted the contact form on your website and would like to follow up.")}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="nofollow noopener noreferrer"
                         style={{
                             background: "#25D366",
                             color: "#ffffff",
@@ -267,7 +267,7 @@ export default function ContactForm() {
                                     <a
                                         href={getWhatsAppUrl()}
                                         target="_blank"
-                                        rel="noopener noreferrer"
+                                        rel="nofollow noopener noreferrer"
                                         className="whatsapp_secondary_btn"
                                         style={{
                                             display: "inline-flex",

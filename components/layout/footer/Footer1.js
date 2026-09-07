@@ -69,7 +69,7 @@ export default function Footer1() {
                                 <Link
                                     href="https://www.linkedin.com/company/elite-prominence"
                                     target="_blank"
-                                    rel="noopener noreferrer"
+                                    rel="nofollow noopener noreferrer"
                                     aria-label="LinkedIn"
                                     className="footer_social_pill"
                                     style={{
@@ -94,7 +94,7 @@ export default function Footer1() {
                                 <Link
                                     href="https://www.facebook.com/EliteProminence"
                                     target="_blank"
-                                    rel="noopener noreferrer"
+                                    rel="nofollow noopener noreferrer"
                                     aria-label="Facebook"
                                     className="footer_social_pill"
                                     style={{
@@ -119,7 +119,7 @@ export default function Footer1() {
                                 <a
                                     href={getWhatsAppUrl()}
                                     target="_blank"
-                                    rel="noopener noreferrer"
+                                    rel="nofollow noopener noreferrer"
                                     aria-label="WhatsApp"
                                     className="footer_social_pill"
                                     style={{
@@ -310,7 +310,7 @@ export default function Footer1() {
                                     <a
                                         href={getWhatsAppUrl()}
                                         target="_blank"
-                                        rel="noopener noreferrer"
+                                        rel="nofollow noopener noreferrer"
                                         style={{
                                             color: "#25D366",
                                             fontSize: "14px",

@@ -711,7 +711,7 @@ export default function PricingTabs() {
                     <a
                         href={getWhatsAppUrl("Hi, I'd like to know more about Elite Prominence's services and pricing.")}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="nofollow noopener noreferrer"
                         style={{
                             color: '#16a34a',
                             fontWeight: '600',
