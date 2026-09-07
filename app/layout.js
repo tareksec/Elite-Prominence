@@ -16,7 +16,7 @@ export const viewport = {
 }
 
 export const metadata = {
-    metadataBase: new URL('https://prominence.agency'),
+    metadataBase: new URL('https://www.prominence.agency'),
     title: {
         default: 'Elite Prominence | Personal Branding Agency for Executives',
         template: '%s | Elite Prominence',
@@ -28,7 +28,7 @@ export const metadata = {
     openGraph: {
         title: 'Elite Prominence | Personal Branding Agency for Executives',
         description: 'We build a complete digital presence for HR leaders & executives — website, Google reputation, and LinkedIn visibility, done for you.',
-        url: 'https://prominence.agency',
+        url: 'https://www.prominence.agency',
         siteName: 'Elite Prominence',
         images: [
             {
@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <link
-                    href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Tiro+Bangla:ital@0;1&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Tiro+Bangla:ital@0;1&display=swap"
                     rel="stylesheet"
                 />
                 <script
@@ -72,8 +72,8 @@ export default function RootLayout({ children }) {
                             '@context': 'https://schema.org',
                             '@type': 'Organization',
                             name: 'Elite Prominence',
-                            url: 'https://prominence.agency',
-                            logo: 'https://prominence.agency/assets/images/Elite%20Prominence/EliteProminence-iocn.png',
+                            url: 'https://www.prominence.agency',
+                            logo: 'https://www.prominence.agency/assets/images/Elite%20Prominence/EliteProminence-iocn.png',
                             description: 'Personal branding agency for senior HR leaders, CHROs, and executive consultants.',
                             sameAs: [
                                 'https://www.linkedin.com/company/elite-prominence',
