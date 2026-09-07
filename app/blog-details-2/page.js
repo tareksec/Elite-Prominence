@@ -26,11 +26,28 @@ export const metadata = {
     siteName: 'Elite Prominence',
     locale: 'en_US',
     type: 'article',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&h=630&q=80',
+        width: 1200,
+        height: 630,
+        alt: "A LinkedIn Strategy for CHROs Who Don't Have Time to Post",
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "A LinkedIn Strategy for CHROs Who Don't Have Time to Post | Elite Prominence",
+    description: "A LinkedIn strategy and executive ghostwriting roadmap for CHROs and VP HRs who do not have time to post. Build quiet authority on LinkedIn with done-for-you support.",
+    images: ['https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&h=630&q=80'],
   },
 };
 
 export default function Blog_Details_Two() {
   const post = getArticleBySlug('linkedin-strategy-for-senior-hr-professionals') || BLOG_ARTICLES[2];
+  const heroImageUrl = post.heroImage?.startsWith('http')
+    ? post.heroImage
+    : `https://www.prominence.agency${post.heroImage}`;
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -62,7 +79,7 @@ export default function Blog_Details_Two() {
         '@type': 'Article',
         headline: post.title,
         description: post.excerpt,
-        image: `https://www.prominence.agency${post.heroImage}`,
+        image: heroImageUrl,
         author: {
           '@type': 'Person',
           name: post.author.name,

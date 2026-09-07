@@ -74,11 +74,6 @@ export default function AuthorCard({
               <img
                 src={author.avatar}
                 alt={author.name}
-                onError={(e) => {
-                  // Fallback to initials circle if image fails
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextSibling.style.display = 'flex';
-                }}
                 style={{
                   width: '100%',
                   height: '100%',

@@ -26,11 +26,28 @@ export const metadata = {
     siteName: 'Elite Prominence',
     locale: 'en_US',
     type: 'article',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&h=630&q=80',
+        width: 1200,
+        height: 630,
+        alt: 'How to Build a Personal Brand as an HR Leader',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Build a Personal Brand as an HR Leader | Elite Prominence',
+    description: 'How to build a personal brand as an HR leader without becoming a content creator. Executive personal branding guidance by Elite Prominence.',
+    images: ['https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&h=630&q=80'],
   },
 };
 
 export default function Blog_Details() {
   const post = getArticleBySlug('how-to-build-a-personal-brand-as-an-hr-leader') || BLOG_ARTICLES[0];
+  const heroImageUrl = post.heroImage?.startsWith('http')
+    ? post.heroImage
+    : `https://www.prominence.agency${post.heroImage}`;
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -62,7 +79,7 @@ export default function Blog_Details() {
         '@type': 'Article',
         headline: post.title,
         description: post.excerpt,
-        image: `https://www.prominence.agency${post.heroImage}`,
+        image: heroImageUrl,
         author: {
           '@type': 'Person',
           name: post.author.name,

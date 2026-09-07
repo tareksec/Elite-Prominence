@@ -1,6 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import Layout from '@/components/layout/Layout';
+// Elite Prominence blog reading interface with open web imagery
 import ReadingProgressBar from '@/components/blog/ReadingProgressBar';
 import ArticleHeader from '@/components/blog/ArticleHeader';
 import TableOfContents from '@/components/blog/TableOfContents';
@@ -28,6 +29,9 @@ export async function generateMetadata({ params }) {
   }
 
   const pageUrl = `https://www.prominence.agency/blog/${post.slug}`;
+  const heroImageUrl = post.heroImage?.startsWith('http')
+    ? post.heroImage
+    : `https://www.prominence.agency${post.heroImage || '/assets/images/elite/blog_1_hr_personal_brand.jpg'}`;
 
   return {
     title: `${post.title} | Elite Prominence`,
@@ -44,7 +48,7 @@ export async function generateMetadata({ params }) {
       type: 'article',
       images: [
         {
-          url: `https://www.prominence.agency${post.heroImage}`,
+          url: heroImageUrl,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -55,7 +59,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: `${post.title} | Elite Prominence`,
       description: post.excerpt,
-      images: [`https://www.prominence.agency${post.heroImage}`],
+      images: [heroImageUrl],
     }
   };
 }
@@ -99,7 +103,7 @@ export default function BlogPostPage({ params }) {
         '@type': 'Article',
         headline: post.title,
         description: post.excerpt,
-        image: `https://www.prominence.agency${post.heroImage}`,
+        image: post.heroImage?.startsWith('http') ? post.heroImage : `https://www.prominence.agency${post.heroImage}`,
         author: {
           '@type': 'Person',
           name: post.author.name,

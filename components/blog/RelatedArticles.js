@@ -74,12 +74,9 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
                 {/* Image Wrap */}
                 <div className="ep-card-img-wrap">
                   <img
-                    src={art.heroImage || '/assets/images/elite/blog_1_hr_personal_brand.jpg'}
+                    src={art.heroImage || 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&h=630&q=80'}
                     alt={art.title}
                     className="ep-card-img"
-                    onError={(e) => {
-                      e.currentTarget.src = '/assets/images/elite/blog_1_hr_personal_brand.jpg';
-                    }}
                   />
                   {art.category && (
                     <span className="ep-card-badge">

@@ -1,4 +1,6 @@
-import React from 'react'
+'use client';
+
+import React from 'react';
 
 export default function ArticleHeader({
   title,
@@ -123,6 +125,7 @@ export default function ArticleHeader({
           <img
             src={heroImage}
             alt={title}
+            loading="eager"
             style={{
               width: '100%',
               maxHeight: '480px',
