@@ -11,12 +11,14 @@ const PHASES = [
                 num: "01",
                 name: "Discover",
                 badge: "Forensic Audit",
+                icon: "fa-solid fa-magnifying-glass-chart",
                 desc: "Forensic audit of your Google Page 1 footprint, namesake conflicts, and strategic narrative extraction."
             },
             {
                 num: "02",
                 name: "Position",
                 badge: "Boardroom Framing",
+                icon: "fa-solid fa-chess",
                 desc: "Crafting your sovereign leadership thesis, governance credentials, and strict corporate PR compliance guardrails."
             }
         ]
@@ -29,12 +31,14 @@ const PHASES = [
                 num: "03",
                 name: "Build",
                 badge: "Digital HQ",
+                icon: "fa-solid fa-cubes-stacked",
                 desc: "Bespoke Next.js Executive Digital HQ engineering and structured Google Knowledge Graph entity schema deployment."
             },
             {
                 num: "04",
                 name: "Publish",
                 badge: "Ghostwriting",
+                icon: "fa-solid fa-feather-pointed",
                 desc: "Senior editorial ghostwriting authored in your authentic voice, requiring under 20 minutes monthly executive briefing."
             }
         ]
@@ -47,12 +51,14 @@ const PHASES = [
                 num: "05",
                 name: "Amplify",
                 badge: "Media Stature",
+                icon: "fa-solid fa-bullhorn",
                 desc: "Securing tier-1 executive podcast appearances, keynote invitations, and strategic press syndication."
             },
             {
                 num: "06",
                 name: "Measure",
                 badge: "Entity Defense",
+                icon: "fa-solid fa-shield-halved",
                 desc: "Continuous Google Page 1 monitoring, automated namesake defense, and inbound board advisory inquiry tracking."
             }
         ]
@@ -111,29 +117,31 @@ export default function MethodologyTeaser() {
                                 {/* Stages in this Phase */}
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', flexGrow: 1 }}>
                                     {block.stages.map((stage) => (
-                                        <div key={stage.num} style={{ position: 'relative', paddingLeft: '44px' }}>
-                                            {/* Stage Number Bullet */}
+                                        <div key={stage.num} style={{ position: 'relative', paddingLeft: '48px' }}>
+                                            {/* Stage Icon Bullet */}
                                             <div style={{
                                                 position: 'absolute',
                                                 left: 0,
                                                 top: '2px',
-                                                width: '32px',
-                                                height: '32px',
-                                                borderRadius: '6px',
-                                                background: '#0D0D14',
-                                                color: '#A78BFA',
-                                                fontSize: '12px',
-                                                fontWeight: '700',
+                                                width: '36px',
+                                                height: '36px',
+                                                borderRadius: '10px',
+                                                background: 'linear-gradient(135deg, #0D0D14 0%, #1e1b4b 100%)',
+                                                color: '#C084FC',
+                                                fontSize: '14px',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                fontFamily: 'var(--primary-font)',
-                                                border: '1px solid rgba(139, 92, 246, 0.25)'
+                                                border: '1px solid rgba(139, 92, 246, 0.35)',
+                                                boxShadow: '0 4px 12px rgba(13, 13, 20, 0.12)'
                                             }}>
-                                                {stage.num}
+                                                <i className={stage.icon}></i>
                                             </div>
 
                                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
+                                                <span style={{ fontSize: '11.5px', fontWeight: '700', color: '#6D28D9' }}>
+                                                    {stage.num}.
+                                                </span>
                                                 <h3 style={{ fontSize: '17px', fontWeight: '700', color: '#0D0D14', margin: 0, fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                                     {stage.name}
                                                 </h3>

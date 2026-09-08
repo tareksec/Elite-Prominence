@@ -301,20 +301,52 @@ export default function ExecutiveCaseStudy() {
                                     </ul>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div style={{ backgroundColor: "#F7F5FC", padding: "30px", borderRadius: "14px", border: "1px solid #eaedf0" }}>
-                                        <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "12px" }}>
-                                            {[...Array(5)].map((_, i) => (
-                                                <i key={i} className="fa-solid fa-star" style={{ color: "#8B5CF6", fontSize: "13px" }}></i>
-                                            ))}
-                                        </div>
-                                        <p style={{ fontSize: "16px", color: "#0D0D14", lineHeight: "1.7", fontStyle: "italic", marginBottom: "18px" }}>
-                                            &ldquo;Prominence shifted how the market perceives me. When headhunters and CEOs Google me now, they see an authoritative board candidate rather than just another corporate executive.&rdquo;
-                                        </p>
-                                        <div style={{ fontSize: "14px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)" }}>
-                                            VP of People &amp; Board Director
-                                        </div>
-                                        <div style={{ fontSize: "12px", color: "#6B7280" }}>
-                                            Global Tech Enterprise ($4B Market Cap)
+                                    <div style={{
+                                        position: "relative",
+                                        borderRadius: "14px",
+                                        overflow: "hidden",
+                                        boxShadow: "0 12px 32px rgba(0,0,0,0.08)",
+                                        border: "1px solid #eaedf0",
+                                        backgroundColor: "#ffffff"
+                                    }}>
+                                        <img
+                                            src="/assets/images/elite/executive_boardroom_authority.jpg"
+                                            alt="Executive Boardroom Authority & Stature"
+                                            style={{
+                                                width: "100%",
+                                                height: "230px",
+                                                objectFit: "cover",
+                                                objectPosition: "center 20%",
+                                                display: "block"
+                                            }}
+                                        />
+                                        <div style={{ padding: "24px 26px" }}>
+                                            <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "10px" }}>
+                                                {[...Array(5)].map((_, i) => (
+                                                    <i key={i} className="fa-solid fa-star" style={{ color: "#8B5CF6", fontSize: "12px" }}></i>
+                                                ))}
+                                                <span style={{ fontSize: "11px", fontWeight: "700", color: "#166534", backgroundColor: "#f0fdf4", padding: "2px 8px", borderRadius: "10px", marginLeft: "6px", border: "1px solid #bbf7d0" }}>
+                                                    Verified Client Outcome
+                                                </span>
+                                            </div>
+                                            <p style={{ fontSize: "15px", color: "#0D0D14", lineHeight: "1.65", fontStyle: "italic", marginBottom: "16px" }}>
+                                                &ldquo;Prominence shifted how the market perceives me. When headhunters and CEOs Google me now, they see an authoritative board candidate rather than just another corporate executive.&rdquo;
+                                            </p>
+                                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+                                                <div>
+                                                    <div style={{ fontSize: "14px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)" }}>
+                                                        VP of People &amp; Board Director
+                                                    </div>
+                                                    <div style={{ fontSize: "12px", color: "#6B7280" }}>
+                                                        Global Tech Enterprise ($4B Market Cap)
+                                                    </div>
+                                                </div>
+                                                <div style={{ textAlign: "right" }}>
+                                                    <span style={{ fontSize: "11px", fontWeight: "700", color: "#6D28D9", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                                                        90-Day Sprint
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

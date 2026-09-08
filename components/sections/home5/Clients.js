@@ -67,35 +67,52 @@ export default function Clients() {
                                 maxWidth: "580px"
                             }}>
                                 {[
-                                    { sector: "Fortune 500 Enterprises", tier: "C-Suite Officers & SVPs" },
-                                    { sector: "Private Equity Portfolios", tier: "Chairs & Operating Partners" },
-                                    { sector: "High-Growth Scale-Ups", tier: "Enterprise Founders & CEOs" },
-                                    { sector: "Management Consultancies", tier: "Senior Partners & Directors" }
+                                    { sector: "Fortune 500 Enterprises", tier: "C-Suite Officers & SVPs", icon: "fa-solid fa-building-columns", color: "#6D28D9", bg: "rgba(109, 40, 217, 0.08)" },
+                                    { sector: "Private Equity Portfolios", tier: "Chairs & Operating Partners", icon: "fa-solid fa-chart-line", color: "#059669", bg: "rgba(5, 150, 105, 0.08)" },
+                                    { sector: "High-Growth Scale-Ups", tier: "Enterprise Founders & CEOs", icon: "fa-solid fa-rocket", color: "#EC4899", bg: "rgba(236, 72, 153, 0.08)" },
+                                    { sector: "Management Consultancies", tier: "Senior Partners & Directors", icon: "fa-solid fa-briefcase", color: "#2563EB", bg: "rgba(37, 99, 235, 0.08)" }
                                 ].map((item, idx) => (
                                     <div
                                         key={idx}
                                         style={{
-                                            padding: "12px 16px",
+                                            padding: "14px 16px",
                                             backgroundColor: "#ffffff",
-                                            borderRadius: "10px",
+                                            borderRadius: "12px",
                                             border: "1px solid #eaedf0",
-                                            boxShadow: "0 2px 8px rgba(13, 13, 20, 0.02)"
+                                            boxShadow: "0 4px 12px rgba(13, 13, 20, 0.03)",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            gap: "12px",
+                                            transition: "all 0.2s ease"
                                         }}
                                     >
                                         <div style={{
-                                            fontSize: "13px",
-                                            fontWeight: "700",
-                                            color: "#0D0D14",
-                                            fontFamily: "var(--primary-font)",
+                                            width: "36px",
+                                            height: "36px",
+                                            borderRadius: "8px",
+                                            backgroundColor: item.bg,
+                                            color: item.color,
                                             display: "flex",
                                             alignItems: "center",
-                                            gap: "8px"
+                                            justifyContent: "center",
+                                            fontSize: "15px",
+                                            flexShrink: 0
                                         }}>
-                                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#8B5CF6", flexShrink: 0 }}></span>
-                                            {item.sector}
+                                            <i className={item.icon}></i>
                                         </div>
-                                        <div style={{ fontSize: "12px", color: "#4B5563", marginTop: "2px", paddingLeft: "14px" }}>
-                                            {item.tier}
+                                        <div>
+                                            <div style={{
+                                                fontSize: "13.5px",
+                                                fontWeight: "700",
+                                                color: "#0D0D14",
+                                                fontFamily: "var(--primary-font)",
+                                                lineHeight: "1.3"
+                                            }}>
+                                                {item.sector}
+                                            </div>
+                                            <div style={{ fontSize: "12px", color: "#4B5563", marginTop: "2px" }}>
+                                                {item.tier}
+                                            </div>
                                         </div>
                                     </div>
                                 ))}

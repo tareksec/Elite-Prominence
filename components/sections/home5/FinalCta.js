@@ -52,6 +52,44 @@ export default function FinalCta() {
                             Evaluate Your Stature <i className="fa-solid fa-arrow-right"></i>
                         </Link>
                     </div>
+
+                    {/* Executive Credentials & Trust Guarantee Badges */}
+                    <div style={{
+                        marginTop: "40px",
+                        paddingTop: "28px",
+                        borderTop: "1px solid #e2e8f0",
+                        display: "flex",
+                        flexWrap: "wrap",
+                        justifyContent: "center",
+                        gap: "14px"
+                    }}>
+                        {[
+                            { icon: "fa-solid fa-user-tie", label: "Managing Partner Advisory", color: "#6D28D9" },
+                            { icon: "fa-solid fa-shield-halved", label: "Strict NDA & Discretion", color: "#059669" },
+                            { icon: "fa-solid fa-globe", label: "100% Owned Real Estate", color: "#2563EB" },
+                            { icon: "fa-solid fa-bolt", label: "45-Day Google Page 1 Placement", color: "#D97706" }
+                        ].map((badge, idx) => (
+                            <div
+                                key={idx}
+                                style={{
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    gap: "8px",
+                                    backgroundColor: "#ffffff",
+                                    padding: "8px 16px",
+                                    borderRadius: "30px",
+                                    border: "1px solid #eaedf0",
+                                    boxShadow: "0 2px 8px rgba(0,0,0,0.03)",
+                                    fontSize: "12.5px",
+                                    fontWeight: "600",
+                                    color: "#0D0D14"
+                                }}
+                            >
+                                <i className={badge.icon} style={{ color: badge.color, fontSize: "13px" }}></i>
+                                <span>{badge.label}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

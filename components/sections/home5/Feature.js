@@ -20,16 +20,28 @@ export default function Feature_Two() {
                             </h2>
                             <ul style={{ listStyle: "none", padding: 0, margin: "0 0 25px 0", flex: 1 }}>
                                 {[
-                                    { title: "CEOs & Enterprise Presidents", desc: "Leading $50M+ organizations or preparing for high-stakes capital rounds" },
-                                    { title: "CHROs & Senior People Executives", desc: "Positioning for paid corporate board directorships (NED) and industry authority" },
-                                    { title: "Enterprise Founders & Managing Directors", desc: "Ensuring personal reputation elevates enterprise valuation and investor due diligence" },
-                                    { title: "Senior Corporate Executives", desc: "SVPs and EVPs transitioning into public board roles and keynote stages" },
-                                    { title: "Elite Consultants & Advisors", desc: "Commanding high five-figure monthly retainers through sovereign positioning" }
+                                    { title: "CEOs & Enterprise Presidents", desc: "Leading $50M+ organizations or preparing for high-stakes capital rounds", icon: "fa-solid fa-crown", color: "#D97706", bg: "rgba(217, 119, 6, 0.10)" },
+                                    { title: "CHROs & Senior People Executives", desc: "Positioning for paid corporate board directorships (NED) and industry authority", icon: "fa-solid fa-users-gear", color: "#8B5CF6", bg: "rgba(139, 92, 246, 0.10)" },
+                                    { title: "Enterprise Founders & Managing Directors", desc: "Ensuring personal reputation elevates enterprise valuation and investor due diligence", icon: "fa-solid fa-rocket", color: "#EC4899", bg: "rgba(236, 72, 153, 0.10)" },
+                                    { title: "Senior Corporate Executives", desc: "SVPs and EVPs transitioning into public board roles and keynote stages", icon: "fa-solid fa-chess-queen", color: "#2563EB", bg: "rgba(37, 99, 235, 0.10)" },
+                                    { title: "Elite Consultants & Advisors", desc: "Commanding high five-figure monthly retainers through sovereign positioning", icon: "fa-solid fa-gem", color: "#059669", bg: "rgba(5, 150, 105, 0.10)" }
                                 ].map((role, idx) => (
-                                    <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#4B5563", display: "flex", alignItems: "flex-start", gap: "12px" }}>
-                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#6D28D9", fontFamily: "var(--primary-font)", minWidth: "20px", paddingTop: "2px" }}>
-                                            0{idx + 1}
-                                        </span>
+                                    <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#4B5563", display: "flex", alignItems: "flex-start", gap: "14px" }}>
+                                        <div style={{
+                                            width: "32px",
+                                            height: "32px",
+                                            borderRadius: "8px",
+                                            backgroundColor: role.bg,
+                                            color: role.color,
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "center",
+                                            fontSize: "13px",
+                                            flexShrink: 0,
+                                            marginTop: "2px"
+                                        }}>
+                                            <i className={role.icon}></i>
+                                        </div>
                                         <div>
                                             <strong style={{ color: "#0D0D14" }}>{role.title}:</strong> <span style={{ color: "#4B5563" }}>{role.desc}</span>
                                         </div>
@@ -60,28 +72,28 @@ export default function Feature_Two() {
                             </h2>
                             <ul style={{ listStyle: "none", padding: 0, margin: "0 0 25px 0", flex: 1 }}>
                                 {[
-                                    { anchor: "Google Page 1 Domination", desc: "100% dominated by your owned assets, verified profiles, and Tier-1 press" },
-                                    { anchor: "Executive Digital HQ", desc: "Bespoke web asset providing your definitive link for board seats, keynotes, and vetting" },
-                                    { anchor: "Strategic Ghostwriting", desc: "Essays published bi-weekly in your authentic voice—zero drafting time from your calendar" },
-                                    { anchor: "Knowledge Graph Authority", desc: "Structured JSON-LD schema anchors your entity within Google Knowledge Graph" },
-                                    { anchor: "Inbound Advisory Opportunities", desc: "Corporate board directorships (NED) and paid advisory inquiries arrive proactively" }
+                                    { anchor: "Google Page 1 Domination", desc: "100% dominated by your owned assets, verified profiles, and Tier-1 press", icon: "fab fa-google", color: "#4285F4", bg: "rgba(66, 133, 244, 0.10)" },
+                                    { anchor: "Executive Digital HQ", desc: "Bespoke web asset providing your definitive link for board seats, keynotes, and vetting", icon: "fa-solid fa-laptop-code", color: "#8B5CF6", bg: "rgba(139, 92, 246, 0.10)" },
+                                    { anchor: "Strategic Ghostwriting", desc: "Essays published bi-weekly in your authentic voice—zero drafting time from your calendar", icon: "fa-solid fa-feather-pointed", color: "#EC4899", bg: "rgba(236, 72, 153, 0.10)" },
+                                    { anchor: "Knowledge Graph Authority", desc: "Structured JSON-LD schema anchors your entity within Google Knowledge Graph", icon: "fa-solid fa-diagram-project", color: "#10B981", bg: "rgba(16, 185, 129, 0.10)" },
+                                    { anchor: "Inbound Advisory Opportunities", desc: "Corporate board directorships (NED) and paid advisory inquiries arrive proactively", icon: "fa-solid fa-handshake", color: "#F59E0B", bg: "rgba(245, 158, 11, 0.10)" }
                                 ].map((item, idx) => (
-                                    <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#4B5563", display: "flex", alignItems: "flex-start", gap: "12px" }}>
-                                        <span style={{
-                                            width: "22px",
-                                            height: "22px",
-                                            borderRadius: "50%",
-                                            background: "rgba(109, 40, 217, 0.10)",
-                                            color: "#6D28D9",
+                                    <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#4B5563", display: "flex", alignItems: "flex-start", gap: "14px" }}>
+                                        <div style={{
+                                            width: "32px",
+                                            height: "32px",
+                                            borderRadius: "8px",
+                                            backgroundColor: item.bg,
+                                            color: item.color,
                                             display: "flex",
                                             alignItems: "center",
                                             justifyContent: "center",
-                                            fontSize: "11px",
+                                            fontSize: "14px",
                                             flexShrink: 0,
                                             marginTop: "2px"
                                         }}>
-                                            <i className="fa-solid fa-check"></i>
-                                        </span>
+                                            <i className={item.icon}></i>
+                                        </div>
                                         <div>
                                             <strong style={{ color: "#0D0D14" }}>{item.anchor}:</strong> <span style={{ color: "#4B5563" }}>{item.desc}</span>
                                         </div>
