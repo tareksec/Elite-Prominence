@@ -19,7 +19,7 @@ export default function ArticleHeader({
         <span
           className="prominence_badge"
           style={{
-            background: '#0f1013',
+            background: '#0D0D14',
             color: '#FFFFFF',
             borderColor: 'rgba(255, 255, 255, 0.2)'
           }}
@@ -34,7 +34,7 @@ export default function ArticleHeader({
           fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
           fontSize: 'clamp(30px, 4.5vw, 46px)',
           lineHeight: '1.2',
-          color: '#0f1013',
+          color: '#0D0D14',
           marginBottom: '24px',
           letterSpacing: '-0.5px'
         }}
@@ -49,7 +49,7 @@ export default function ArticleHeader({
           alignItems: 'center',
           justifyContent: 'center',
           gap: '16px',
-          color: '#64748B',
+          color: '#6B7280',
           fontSize: '14px',
           fontWeight: '500',
           flexWrap: 'wrap',
@@ -62,7 +62,7 @@ export default function ArticleHeader({
               width: '32px',
               height: '32px',
               borderRadius: '50%',
-              background: '#0f1013',
+              background: '#0D0D14',
               padding: '2px',
               display: 'flex',
               alignItems: 'center',
@@ -88,7 +88,7 @@ export default function ArticleHeader({
                   width: '100%',
                   height: '100%',
                   borderRadius: '50%',
-                  background: '#0f1013',
+                  background: '#0D0D14',
                   color: '#FFFFFF',
                   display: 'flex',
                   alignItems: 'center',
@@ -101,7 +101,7 @@ export default function ArticleHeader({
               </div>
             )}
           </div>
-          <span style={{ color: '#0f1013', fontWeight: '600' }}>{author}</span>
+          <span style={{ color: '#0D0D14', fontWeight: '600' }}>{author}</span>
         </div>
         <span style={{ color: '#CBD5E1' }}>&bull;</span>
         <time>{date}</time>
@@ -128,9 +128,9 @@ export default function ArticleHeader({
                 display: 'inline-block',
                 padding: '5px 14px',
                 borderRadius: '6px',
-                background: 'rgba(15, 16, 19, 0.05)',
-                color: '#0f1013',
-                border: '1px solid rgba(15, 16, 19, 0.1)',
+                background: 'rgba(13, 13, 20, 0.05)',
+                color: '#0D0D14',
+                border: '1px solid rgba(13, 13, 20, 0.1)',
                 fontSize: '12.5px',
                 fontWeight: '600',
                 fontFamily: 'var(--primary-font)'
@@ -154,7 +154,7 @@ export default function ArticleHeader({
               maxHeight: '480px',
               objectFit: 'cover',
               borderRadius: '16px',
-              boxShadow: '0 10px 30px rgba(15, 18, 53, 0.08)'
+              boxShadow: '0 10px 30px rgba(13, 13, 20, 0.08)'
             }}
           />
         </div>

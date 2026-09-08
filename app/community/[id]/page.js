@@ -147,8 +147,8 @@ export default function MemberProfilePage({ params }) {
         return (
             <div className="boxed_wrapper">
                 <Layout headerStyle={1} footerStyle={1}>
-                    <div style={{ padding: "160px 0 120px", textAlign: "center", backgroundColor: "#FAF8F2", minHeight: "80vh" }}>
-                        <div style={{ fontSize: "16px", color: "#0f1013", fontWeight: "700" }}>
+                    <div style={{ padding: "160px 0 120px", textAlign: "center", backgroundColor: "#F7F5FC", minHeight: "80vh" }}>
+                        <div style={{ fontSize: "16px", color: "#0D0D14", fontWeight: "700" }}>
                             Loading Executive Profile...
                         </div>
                     </div>
@@ -161,13 +161,13 @@ export default function MemberProfilePage({ params }) {
         return (
             <div className="boxed_wrapper">
                 <Layout headerStyle={1} footerStyle={1}>
-                    <div style={{ padding: "160px 0 120px", textAlign: "center", backgroundColor: "#FAF8F2", minHeight: "80vh" }}>
+                    <div style={{ padding: "160px 0 120px", textAlign: "center", backgroundColor: "#F7F5FC", minHeight: "80vh" }}>
                         <div className="container" style={{ maxWidth: "600px", margin: "0 auto" }}>
-                            <div style={{ fontSize: "36px", color: "#64748b", marginBottom: "16px" }}><i className="fa-solid fa-magnifying-glass"></i></div>
-                            <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0f1013", marginBottom: "12px" }}>
+                            <div style={{ fontSize: "36px", color: "#6B7280", marginBottom: "16px" }}><i className="fa-solid fa-magnifying-glass"></i></div>
+                            <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0D0D14", marginBottom: "12px" }}>
                                 Executive Profile Not Found
                             </h2>
-                            <p style={{ color: "#64748b", fontSize: "16px", lineHeight: "1.6", marginBottom: "24px" }}>
+                            <p style={{ color: "#6B7280", fontSize: "16px", lineHeight: "1.6", marginBottom: "24px" }}>
                                 The requested executive profile is either confidential, not yet verified, or has been updated.
                             </p>
                             <Link
@@ -199,16 +199,16 @@ export default function MemberProfilePage({ params }) {
     return (
         <div className="boxed_wrapper">
             <Layout headerStyle={1} footerStyle={1}>
-                <section style={{ backgroundColor: "#f8fafc", padding: "120px 0 90px", minHeight: "85vh", fontFamily: "var(--primary-font)" }}>
+                <section style={{ backgroundColor: "#F7F5FC", padding: "120px 0 90px", minHeight: "85vh", fontFamily: "var(--primary-font)" }}>
                     <div className="container" style={{ maxWidth: "1080px" }}>
 
                         {/* Breadcrumbs */}
-                        <div style={{ marginBottom: "24px", fontSize: "13px", color: "#64748b", display: "flex", gap: "6px", alignItems: "center" }}>
-                            <Link href="/" style={{ color: "#0f1013", textDecoration: "none", fontWeight: "600" }}>Home</Link>
+                        <div style={{ marginBottom: "24px", fontSize: "13px", color: "#6B7280", display: "flex", gap: "6px", alignItems: "center" }}>
+                            <Link href="/" style={{ color: "#0D0D14", textDecoration: "none", fontWeight: "600" }}>Home</Link>
                             <span>/</span>
-                            <Link href="/community" style={{ color: "#0f1013", textDecoration: "none", fontWeight: "600" }}>Executive Community</Link>
+                            <Link href="/community" style={{ color: "#0D0D14", textDecoration: "none", fontWeight: "600" }}>Executive Community</Link>
                             <span>/</span>
-                            <span style={{ color: "#b89058", fontWeight: "700" }}>{member.full_name}</span>
+                            <span style={{ color: "#8B5CF6", fontWeight: "700" }}>{member.full_name}</span>
                         </div>
 
                         {/* Executive Profile Card Hero */}
@@ -223,7 +223,7 @@ export default function MemberProfilePage({ params }) {
                             {/* Decorative Cover Bar */}
                             <div style={{
                                 height: "140px",
-                                background: "linear-gradient(135deg, #0f1013 0%, #151619 60%, #b89058 100%)",
+                                background: "linear-gradient(135deg, #0D0D14 0%, #151619 60%, #8B5CF6 100%)",
                                 position: "relative"
                             }}>
                                 <div style={{
@@ -253,8 +253,8 @@ export default function MemberProfilePage({ params }) {
                                         width: "110px",
                                         height: "110px",
                                         borderRadius: "50%",
-                                        backgroundColor: "#0f1013",
-                                        color: "#b89058",
+                                        backgroundColor: "#0D0D14",
+                                        color: "#8B5CF6",
                                         border: "5px solid #ffffff",
                                         boxShadow: "0 6px 20px rgba(0,0,0,0.12)",
                                         display: "flex",
@@ -308,7 +308,7 @@ export default function MemberProfilePage({ params }) {
                                             rel="noopener noreferrer"
                                             className="btn_style_one btn_sm"
                                         >
-                                            <i className="fab fa-whatsapp" style={{ fontSize: "14px", color: "#b89058", marginRight: "6px" }}></i> Contact via Advisory
+                                            <i className="fab fa-whatsapp" style={{ fontSize: "14px", color: "#25D366", marginRight: "6px" }}></i> Contact via Advisory
                                         </a>
                                     </div>
                                 </div>
@@ -319,16 +319,16 @@ export default function MemberProfilePage({ params }) {
                                         <h1 style={{
                                             fontSize: "clamp(26px, 4vw, 36px)",
                                             fontWeight: "700",
-                                            color: "#0f1013",
+                                            color: "#0D0D14",
                                             margin: 0,
                                             fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                                         }}>
                                             {member.full_name}
                                         </h1>
                                         <span style={{
-                                            backgroundColor: "rgba(184, 144, 88, 0.10)",
-                                            color: "#b89058",
-                                            border: "1px solid rgba(184, 144, 88, 0.25)",
+                                            backgroundColor: "rgba(139, 92, 246, 0.10)",
+                                            color: "#8B5CF6",
+                                            border: "1px solid rgba(139, 92, 246, 0.25)",
                                             fontSize: "11px",
                                             fontWeight: "700",
                                             padding: "3px 10px",
@@ -344,24 +344,24 @@ export default function MemberProfilePage({ params }) {
                                     </h2>
 
                                     {/* Meta pills */}
-                                    <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", fontSize: "13px", color: "#64748b", marginBottom: "20px" }}>
+                                    <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", fontSize: "13px", color: "#6B7280", marginBottom: "20px" }}>
                                         {member.industry && (
-                                            <span><i className="fa-solid fa-building" style={{ marginRight: "4px", color: "#b89058" }}></i><strong>Industry:</strong> {member.industry}</span>
+                                            <span><i className="fa-solid fa-building" style={{ marginRight: "4px", color: "#8B5CF6" }}></i><strong>Industry:</strong> {member.industry}</span>
                                         )}
                                         {member.location && (
-                                            <span><i className="fa-solid fa-location-dot" style={{ marginRight: "4px", color: "#b89058" }}></i><strong>Location:</strong> {member.location}</span>
+                                            <span><i className="fa-solid fa-location-dot" style={{ marginRight: "4px", color: "#8B5CF6" }}></i><strong>Location:</strong> {member.location}</span>
                                         )}
                                         {member.years_of_experience && (
-                                            <span><i className="fa-solid fa-clock" style={{ marginRight: "4px", color: "#b89058" }}></i><strong>Experience:</strong> {member.years_of_experience}</span>
+                                            <span><i className="fa-solid fa-clock" style={{ marginRight: "4px", color: "#8B5CF6" }}></i><strong>Experience:</strong> {member.years_of_experience}</span>
                                         )}
-                                        <span><i className="fa-solid fa-newspaper" style={{ marginRight: "4px", color: "#b89058" }}></i><strong>Articles:</strong> {articles.length} Published</span>
+                                        <span><i className="fa-solid fa-newspaper" style={{ marginRight: "4px", color: "#8B5CF6" }}></i><strong>Articles:</strong> {articles.length} Published</span>
                                     </div>
 
                                     <hr style={{ border: "none", borderTop: "1px solid #f1f5f9", margin: "20px 0" }} />
 
                                     {/* Bio / Leadership Thesis */}
                                     <div style={{ marginBottom: "26px" }}>
-                                        <h3 style={{ fontSize: "16px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#0f1013", marginBottom: "10px" }}>
+                                        <h3 style={{ fontSize: "16px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#0D0D14", marginBottom: "10px" }}>
                                             Executive Biography & Leadership Philosophy
                                         </h3>
                                         <p style={{ fontSize: "16px", lineHeight: "1.7", color: "#334155", whiteSpace: "pre-wrap", margin: 0 }}>
@@ -371,14 +371,14 @@ export default function MemberProfilePage({ params }) {
 
                                     {/* Core Expertise Tags */}
                                     <div style={{ marginBottom: "26px" }}>
-                                        <h3 style={{ fontSize: "16px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#0f1013", marginBottom: "10px" }}>
+                                        <h3 style={{ fontSize: "16px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#0D0D14", marginBottom: "10px" }}>
                                             Core Domains & Strategic Competencies
                                         </h3>
                                         <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
                                             {expertiseList.map((tag, idx) => (
                                                 <span key={idx} style={{
-                                                    backgroundColor: "#f8fafc",
-                                                    color: "#0f1013",
+                                                    backgroundColor: "#F7F5FC",
+                                                    color: "#0D0D14",
                                                     border: "1px solid #eaedf0",
                                                     padding: "6px 14px",
                                                     borderRadius: "8px",
@@ -393,9 +393,9 @@ export default function MemberProfilePage({ params }) {
 
                                     {/* Keynote / Speaking Topics */}
                                     {member.speaking_topics && (
-                                        <div style={{ marginBottom: "10px", padding: "16px 20px", borderRadius: "12px", backgroundColor: "#f8fafc", border: "1px solid #eaedf0" }}>
-                                            <h4 style={{ margin: "0 0 6px", fontSize: "14px", fontWeight: "700", color: "#0f1013", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                                                <i className="fa-solid fa-microphone" style={{ marginRight: "6px", color: "#b89058" }}></i> Keynote Topics & Advisory Mandates
+                                        <div style={{ marginBottom: "10px", padding: "16px 20px", borderRadius: "12px", backgroundColor: "#F7F5FC", border: "1px solid #eaedf0" }}>
+                                            <h4 style={{ margin: "0 0 6px", fontSize: "14px", fontWeight: "700", color: "#0D0D14", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                                                <i className="fa-solid fa-microphone" style={{ marginRight: "6px", color: "#8B5CF6" }}></i> Keynote Topics & Advisory Mandates
                                             </h4>
                                             <p style={{ margin: 0, fontSize: "14px", color: "#475569", lineHeight: "1.5" }}>
                                                 {member.speaking_topics}
@@ -413,20 +413,20 @@ export default function MemberProfilePage({ params }) {
                                 <h3 style={{
                                     fontSize: "24px",
                                     fontWeight: "700",
-                                    color: "#0f1013",
+                                    color: "#0D0D14",
                                     margin: 0,
                                     fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
                                 }}>
                                     Authored Articles & Perspectives ({articles.length})
                                 </h3>
-                                <span style={{ fontSize: "13px", color: "#64748b" }}>
+                                <span style={{ fontSize: "13px", color: "#6B7280" }}>
                                     Peer-reviewed by Elite Prominence Editorial Board
                                 </span>
                             </div>
 
                             {articles.length === 0 ? (
                                 <div style={{ backgroundColor: "#ffffff", padding: "40px", borderRadius: "16px", textAlign: "center", border: "1px solid #eaedf0" }}>
-                                    <p style={{ margin: 0, color: "#64748b", fontSize: "15px" }}>
+                                    <p style={{ margin: 0, color: "#6B7280", fontSize: "15px" }}>
                                         Articles authored by {member.full_name} are currently undergoing editorial review and will appear here upon publication.
                                     </p>
                                 </div>
@@ -446,20 +446,20 @@ export default function MemberProfilePage({ params }) {
                                                     fontSize: "12px",
                                                     fontWeight: "700",
                                                     textTransform: "uppercase",
-                                                    color: "#b89058",
-                                                    backgroundColor: "rgba(184, 144, 88, 0.10)",
-                                                    border: "1px solid rgba(184, 144, 88, 0.25)",
+                                                    color: "#8B5CF6",
+                                                    backgroundColor: "rgba(139, 92, 246, 0.10)",
+                                                    border: "1px solid rgba(139, 92, 246, 0.25)",
                                                     padding: "3px 10px",
                                                     borderRadius: "6px"
                                                 }}>
                                                     {art.category}
                                                 </span>
-                                                <span style={{ fontSize: "12px", color: "#64748b" }}>
+                                                <span style={{ fontSize: "12px", color: "#6B7280" }}>
                                                     {new Date(art.published_at || art.created_at).toLocaleDateString()}
                                                 </span>
                                             </div>
 
-                                            <h4 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", margin: "8px 0" }}>
+                                            <h4 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", margin: "8px 0" }}>
                                                 {art.title}
                                             </h4>
 
@@ -482,12 +482,12 @@ export default function MemberProfilePage({ params }) {
 
                         {/* Bottom CTA Card */}
                         <div style={{
-                            backgroundColor: "#0f1013",
+                            backgroundColor: "#0D0D14",
                             color: "#ffffff",
                             padding: "40px",
                             borderRadius: "20px",
                             textAlign: "center",
-                            border: "1px solid rgba(184, 144, 88, 0.25)",
+                            border: "1px solid rgba(139, 92, 246, 0.25)",
                             boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)"
                         }}>
                             <h3 style={{
@@ -499,7 +499,7 @@ export default function MemberProfilePage({ params }) {
                             }}>
                                 Connect with {member.full_name} or Apply for Directory Status
                             </h3>
-                            <p style={{ color: "#94a3b8", maxWidth: "600px", margin: "0 auto 28px", fontSize: "15px", lineHeight: "1.6" }}>
+                            <p style={{ color: "#6B7280", maxWidth: "600px", margin: "0 auto 28px", fontSize: "15px", lineHeight: "1.6" }}>
                                 Elite Prominence represents C-suite executives, independent board advisors, and senior HR leaders seeking sovereign digital authority and executive search positioning.
                             </p>
                             <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
@@ -554,7 +554,7 @@ export default function MemberProfilePage({ params }) {
                                     border: "none",
                                     fontSize: "24px",
                                     cursor: "pointer",
-                                    color: "#94a3b8"
+                                    color: "#6B7280"
                                 }}
                             >
                                 <i className="fa-solid fa-xmark"></i>
@@ -564,9 +564,9 @@ export default function MemberProfilePage({ params }) {
                                 fontSize: "11.5px",
                                 fontWeight: "700",
                                 textTransform: "uppercase",
-                                color: "#b89058",
-                                backgroundColor: "rgba(184, 144, 88, 0.10)",
-                                border: "1px solid rgba(184, 144, 88, 0.25)",
+                                color: "#8B5CF6",
+                                backgroundColor: "rgba(139, 92, 246, 0.10)",
+                                border: "1px solid rgba(139, 92, 246, 0.25)",
                                 padding: "4px 12px",
                                 borderRadius: "6px",
                                 display: "inline-block",
@@ -575,11 +575,11 @@ export default function MemberProfilePage({ params }) {
                                 {selectedArticle.category}
                             </span>
 
-                            <h2 style={{ fontSize: "24px", fontWeight: "700", color: "#0f1013", marginBottom: "8px" }}>
+                            <h2 style={{ fontSize: "24px", fontWeight: "700", color: "#0D0D14", marginBottom: "8px" }}>
                                 {selectedArticle.title}
                             </h2>
 
-                            <div style={{ fontSize: "13px", color: "#64748b", marginBottom: "24px" }}>
+                            <div style={{ fontSize: "13px", color: "#6B7280", marginBottom: "24px" }}>
                                 By {member.full_name} ({member.role_title}) • Published {new Date(selectedArticle.published_at || selectedArticle.created_at).toLocaleDateString()}
                             </div>
 

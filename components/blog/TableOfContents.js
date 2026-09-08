@@ -95,7 +95,7 @@ export default function TableOfContents({ headings = [] }) {
             gap: '8px'
           }}
         >
-          <i className="fa-solid fa-list-ul" style={{ fontSize: '13px', color: '#b89058' }}></i>
+          <i className="fa-solid fa-list-ul" style={{ fontSize: '13px', color: '#8B5CF6' }}></i>
           Table of Contents
         </div>
 
@@ -115,11 +115,11 @@ export default function TableOfContents({ headings = [] }) {
                     padding: heading.level === 3 ? '6px 12px 6px 28px' : '6px 12px 6px 16px',
                     fontSize: heading.level === 3 ? '13px' : '14px',
                     lineHeight: '1.4',
-                    color: isActive ? '#0f1013' : '#64748B',
+                    color: isActive ? '#0D0D14' : '#6B7280',
                     fontWeight: isActive ? '700' : '400',
-                    borderLeft: isActive ? '2px solid #b89058' : '2px solid transparent',
+                    borderLeft: isActive ? '2px solid #8B5CF6' : '2px solid transparent',
                     marginLeft: '-2px',
-                    background: isActive ? 'rgba(184, 144, 88, 0.08)' : 'transparent',
+                    background: isActive ? 'rgba(139, 92, 246, 0.08)' : 'transparent',
                     textDecoration: 'none',
                     transition: 'all 0.2s ease'
                   }}
@@ -142,7 +142,7 @@ export default function TableOfContents({ headings = [] }) {
           position: 'fixed',
           bottom: '84px',
           right: '20px',
-          background: '#0f1013',
+          background: '#0D0D14',
           color: '#FFFFFF',
           borderRadius: '8px',
           padding: '10px 18px',
@@ -193,12 +193,12 @@ export default function TableOfContents({ headings = [] }) {
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-              <h3 style={{ fontFamily: "var(--primary-font)", fontSize: '20px', color: '#0f1013', margin: 0 }}>
+              <h3 style={{ fontFamily: "var(--primary-font)", fontSize: '20px', color: '#0D0D14', margin: 0 }}>
                 Table of Contents
               </h3>
               <button
                 onClick={() => setIsMobileOpen(false)}
-                style={{ fontSize: '24px', color: '#64748B', background: 'none', border: 'none', cursor: 'pointer' }}
+                style={{ fontSize: '24px', color: '#6B7280', background: 'none', border: 'none', cursor: 'pointer' }}
               >
                 &times;
               </button>
@@ -218,7 +218,7 @@ export default function TableOfContents({ headings = [] }) {
                         display: 'block',
                         padding: heading.level === 3 ? '8px 12px 8px 24px' : '8px 12px 8px 16px',
                         fontSize: heading.level === 3 ? '13px' : '14px',
-                        color: isActive ? '#0f1013' : '#64748B',
+                        color: isActive ? '#0D0D14' : '#6B7280',
                         fontWeight: isActive ? '700' : '400',
                         textDecoration: 'none'
                       }}

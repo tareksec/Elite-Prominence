@@ -68,18 +68,18 @@ export default function LoginPage() {
                             backgroundColor: "#ffffff",
                             borderRadius: "16px",
                             padding: "40px 32px",
-                            boxShadow: "0 10px 40px rgba(15, 16, 19, 0.08)",
-                            border: "1px solid rgba(15, 16, 19, 0.1)",
+                            boxShadow: "0 10px 40px rgba(13, 13, 20, 0.08)",
+                            border: "1px solid rgba(13, 13, 20, 0.1)",
                             fontFamily: "var(--primary-font)"
                         }}>
                             <div style={{ textAlign: "center", marginBottom: "30px" }}>
                                 <span className="prominence_badge prominence_badge_dark" style={{ marginBottom: "12px" }}>
                                     Member Access
                                 </span>
-                                <h2 style={{ fontSize: "clamp(24px, 5vw, 32px)", fontWeight: "700", color: "#0f1013", margin: 0, fontFamily: "var(--title-font)" }}>
+                                <h2 style={{ fontSize: "clamp(24px, 5vw, 32px)", fontWeight: "700", color: "#0D0D14", margin: 0, fontFamily: "var(--title-font)" }}>
                                     Welcome Back
                                 </h2>
-                                <p style={{ fontSize: "15px", color: "#59606a", marginTop: "8px", fontStyle: "italic" }}>
+                                <p style={{ fontSize: "15px", color: "#6B7280", marginTop: "8px", fontStyle: "italic" }}>
                                     Log in to manage your submissions, draft articles, and view moderation status.
                                 </p>
                             </div>
@@ -140,9 +140,9 @@ export default function LoginPage() {
                                 </button>
                             </form>
 
-                            <div style={{ textAlign: "center", marginTop: "24px", fontSize: "15px", color: "#59606a" }}>
+                            <div style={{ textAlign: "center", marginTop: "24px", fontSize: "15px", color: "#6B7280" }}>
                                 Don’t have an account?{' '}
-                                <Link href="/signup" style={{ color: "#0f1013", fontWeight: "700", textDecoration: "underline", minHeight: "44px", display: "inline-block", paddingTop: "6px" }}>
+                                <Link href="/signup" style={{ color: "#0D0D14", fontWeight: "700", textDecoration: "underline", minHeight: "44px", display: "inline-block", paddingTop: "6px" }}>
                                     Sign up for free
                                 </Link>
                             </div>

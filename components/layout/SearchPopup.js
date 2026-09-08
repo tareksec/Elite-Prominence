@@ -24,7 +24,7 @@ export default function SearchPopup({ isPopup, handlePopup }) {
                         <figure className="logo-box">
                             <Link href="/" onClick={handlePopup} style={{ display: "inline-flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
                                 <img src="/assets/images/Elite%20Prominence/EliteProminence-iocn.png" alt="Elite Prominence" style={{ height: "34px", width: "auto", display: "block" }} />
-                                <span style={{ fontSize: "22px", fontWeight: "800", color: "#1b2534", letterSpacing: "-0.5px", whiteSpace: "nowrap" }}>Elite Prominence</span>
+                                <span style={{ fontSize: "22px", fontWeight: "800", color: "#0D0D14", letterSpacing: "-0.5px", whiteSpace: "nowrap" }}>Elite Prominence</span>
                             </Link>
                         </figure>
                         <div className="close-search" onClick={handlePopup} role="button" tabIndex={0} aria-label="Close search modal">

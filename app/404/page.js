@@ -7,12 +7,12 @@ export default function ErrorPage() {
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="404 - Page Not Found">
                 <section className="error_section pt_150 pb_150">
                     <div className="container">
-                        <div className="error_content centred" style={{ maxWidth: "600px", margin: "0 auto", padding: "60px 30px", background: "#ffffff", border: "1px solid #e5e3db", borderRadius: "16px", boxShadow: "0 10px 40px rgba(15, 16, 19, 0.05)" }}>
-                            <div style={{ fontSize: "72px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: "700", color: "#0f1013", marginBottom: "15px", lineHeight: "1" }}>
+                        <div className="error_content centred" style={{ maxWidth: "600px", margin: "0 auto", padding: "60px 30px", background: "#ffffff", border: "1px solid #e5e3db", borderRadius: "16px", boxShadow: "0 10px 40px rgba(13, 13, 20, 0.05)" }}>
+                            <div style={{ fontSize: "72px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: "700", color: "#0D0D14", marginBottom: "15px", lineHeight: "1" }}>
                                 404
                             </div>
-                            <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0f1013", marginBottom: "15px" }}>Page Not Found</h2>
-                            <p style={{ color: "#59606a", fontSize: "16px", marginBottom: "30px" }}>
+                            <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0D0D14", marginBottom: "15px" }}>Page Not Found</h2>
+                            <p style={{ color: "#6B7280", fontSize: "16px", marginBottom: "30px" }}>
                                 The page you are looking for doesn't exist or has been moved.
                             </p>
                             <div className="error_btn_box">

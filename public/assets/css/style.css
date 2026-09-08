@@ -13,9 +13,9 @@
 
 :root{
     /* Legacy brand aliases for backwards compatibility */
-    --primary-color: #0f1013;
-    --secondary-color: #1e2025;
-    --theme-color: #151619;
+    --primary-color: #0D0D14;
+    --secondary-color: #0D0D14;
+    --theme-color: #8B5CF6;
     --primary-font: var(--font-pt-serif), 'PT Serif', var(--font-tiro-bangla), 'Tiro Bangla', serif;
     --secondary-font: var(--font-pt-serif), 'PT Serif', var(--font-tiro-bangla), 'Tiro Bangla', serif;
     --title-font: var(--font-pt-serif), 'PT Serif', var(--font-tiro-bangla), 'Tiro Bangla', serif;
@@ -23,33 +23,57 @@
     --pt-serif-font: var(--font-pt-serif), 'PT Serif', serif;
 
     /* ==========================================================================
-       PROMINENCE SOVEREIGN DESIGN SYSTEM TOKENS
+       PROMINENCE SOVEREIGN DESIGN SYSTEM TOKENS (MATCHING OFFICIAL LOGOMARK)
        ========================================================================== */
 
-    /* Colors: Sovereign Executive Palette */
-    --ep-obsidian: #0f1013;
-    --ep-obsidian-rgb: 15, 16, 19;
-    --ep-charcoal: #151619;
-    --ep-surface-dark: #1e2025;
-    --ep-surface-dark-elevated: #262930;
-    --ep-gold: #b89058;
-    --ep-gold-rgb: 184, 144, 88;
-    --ep-gold-light: #c9a56d;
-    --ep-gold-dim: rgba(184, 144, 88, 0.12);
-    --ep-gold-glow: rgba(184, 144, 88, 0.25);
+    /* Brand Signature Gradient & Palette (Canonical #8B5CF6 purple -> #EC4899 pink/magenta) */
+    --ep-brand-violet: #8B5CF6;
+    --ep-brand-purple: #8B5CF6;
+    --ep-brand-fuchsia: #EC4899;
+    --ep-brand-magenta: #EC4899;
+    --ep-brand-pink: #EC4899;
+    --ep-brand-rose: #EC4899;
+    --ep-brand-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+    --ep-brand-gradient-hover: linear-gradient(135deg, #7C3AED 0%, #DB2777 100%);
+    --ep-brand-gradient-soft: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(236, 72, 153, 0.08) 100%);
+    --ep-brand-glow: 0 8px 32px rgba(236, 72, 153, 0.30);
+
+    /* Primary Accent & Shadows */
+    --ep-accent: #8B5CF6;
+    --ep-accent-rgb: 139, 92, 246;
+    --ep-accent-magenta: #EC4899;
+    --ep-accent-pink: #EC4899;
+    --ep-accent-dim: rgba(139, 92, 246, 0.09);
+    --ep-accent-glow: rgba(236, 72, 153, 0.30);
+
+    /* Backward Compatibility for --ep-gold mappings (Synchronized with Logo Theme) */
+    --ep-gold: #8B5CF6;
+    --ep-gold-rgb: 139, 92, 246;
+    --ep-gold-light: #A78BFA;
+    --ep-gold-dim: rgba(139, 92, 246, 0.09);
+    --ep-gold-glow: rgba(236, 72, 153, 0.30);
+    --ep-shadow-gold: 0 0 24px -4px rgba(236, 72, 153, 0.35);
+
+    /* Dark Neutral Obsidian */
+    --ep-obsidian: #0D0D14;
+    --ep-obsidian-rgb: 13, 13, 20;
+    --ep-charcoal: #0D0D14;
+    --ep-surface-dark: #0D0D14;
+    --ep-surface-dark-elevated: #161622;
 
     /* Surfaces & Canvas */
     --ep-canvas: #ffffff;
-    --ep-canvas-subtle: #f8fafc;
-    --ep-canvas-muted: #f1f5f9;
+    --ep-canvas-subtle: #F7F5FC;
+    --ep-canvas-muted: #F7F5FC;
+    --ep-canvas-warm: #F7F5FC;
     --ep-border-subtle: #eaedf0;
     --ep-border-medium: #e2e8f0;
     --ep-border-dark: rgba(255, 255, 255, 0.10);
 
     /* Text Hierarchy */
-    --ep-text-primary: #0f1013;
-    --ep-text-secondary: #59606a;
-    --ep-text-muted: #64748b;
+    --ep-text-primary: #0D0D14;
+    --ep-text-secondary: #6B7280;
+    --ep-text-muted: #6B7280;
     --ep-text-inverse: #ffffff;
     --ep-text-inverse-muted: rgba(255, 255, 255, 0.72);
 
@@ -98,7 +122,7 @@
     --ep-shadow-lg: 0 12px 32px rgba(15, 16, 19, 0.07), 0 4px 8px rgba(15, 16, 19, 0.03);
     --ep-shadow-xl: 0 20px 48px rgba(15, 16, 19, 0.10), 0 8px 16px rgba(15, 16, 19, 0.04);
     --ep-shadow-floating: 0 20px 40px -10px rgba(0, 0, 0, 0.12);
-    --ep-shadow-gold: 0 0 24px -4px rgba(184, 144, 88, 0.25);
+    --ep-shadow-gold: 0 0 24px -4px rgba(139, 92, 246, 0.25);
     --ep-shadow-dark-card: 0 16px 48px rgba(0, 0, 0, 0.35);
 }
 
@@ -310,56 +334,56 @@ img {
     -webkit-font-smoothing: antialiased;
 }
 
-/* 1. Primary CTA: Tactile Matte Obsidian (Light Surfaces) */
+/* 1. Primary CTA: Brand Signature Gradient (Canonical #8B5CF6 -> #EC4899) */
 .btn_style_one {
     color: #ffffff !important;
-    background: linear-gradient(180deg, #1e2025 0%, #0f1013 100%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--ep-brand-gradient);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 
-        0 4px 12px rgba(15, 16, 19, 0.25),
-        0 1px 3px rgba(15, 16, 19, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        0 4px 14px rgba(139, 92, 246, 0.3),
+        0 1px 3px rgba(13, 13, 20, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 .btn_style_one:hover {
     color: #ffffff !important;
-    background: #1e2025;
-    border-color: #b89058;
+    background: var(--ep-brand-gradient-hover);
+    border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-1.5px);
     box-shadow: 
-        0 8px 20px rgba(15, 16, 19, 0.32),
-        0 2px 6px rgba(15, 16, 19, 0.18),
-        inset 0 1px 0 rgba(255, 255, 255, 0.24);
+        0 8px 24px rgba(236, 72, 153, 0.35),
+        0 2px 6px rgba(13, 13, 20, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 .btn_style_one:active {
     transform: translateY(1px);
-    box-shadow: 0 2px 6px rgba(15, 16, 19, 0.2);
+    box-shadow: 0 2px 6px rgba(13, 13, 20, 0.2);
 }
 .btn_style_one:focus-visible {
-    outline: 2px solid #b89058;
+    outline: 2px solid #8B5CF6;
     outline-offset: 2px;
 }
 
-/* 1b. Sovereign Gold Primary CTA (Dark Canvas / Hero / High-Impact Actions) */
+/* 1b. Sovereign Gold / Gradient Primary CTA */
 .btn_style_gold,
 .btn_style_one.btn_gold,
 .btn_style_one.btn_dark {
-    color: #0f1013 !important;
-    background: #b89058;
-    border: 1px solid #b89058;
+    color: #ffffff !important;
+    background: var(--ep-brand-gradient);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 
-        0 4px 14px rgba(184, 144, 88, 0.28),
+        0 4px 14px rgba(139, 92, 246, 0.3),
         0 1px 3px rgba(0, 0, 0, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 .btn_style_gold:hover,
 .btn_style_one.btn_gold:hover,
 .btn_style_one.btn_dark:hover {
-    color: #0f1013 !important;
-    background: #c9a56d;
-    border-color: #c9a56d;
+    color: #ffffff !important;
+    background: var(--ep-brand-gradient-hover);
+    border-color: rgba(255, 255, 255, 0.35);
     transform: translateY(-1.5px);
     box-shadow: 
-        0 8px 22px rgba(184, 144, 88, 0.4),
+        0 8px 24px rgba(236, 72, 153, 0.4),
         0 2px 6px rgba(0, 0, 0, 0.25),
         inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
@@ -367,7 +391,7 @@ img {
 .btn_style_one.btn_gold:active,
 .btn_style_one.btn_dark:active {
     transform: translateY(1px);
-    box-shadow: 0 2px 6px rgba(184, 144, 88, 0.2);
+    box-shadow: 0 2px 6px rgba(139, 92, 246, 0.2);
 }
 .btn_style_gold:focus-visible,
 .btn_style_one.btn_gold:focus-visible,
@@ -379,34 +403,34 @@ img {
 /* 2. Secondary CTA: Tactile Soft Light Button (Light Surfaces) */
 .btn_style_two {
     background: #ffffff;
-    color: #0f1013 !important;
+    color: #0D0D14 !important;
     border: 1px solid #eaedf0;
     box-shadow: 
-        0 2px 6px rgba(15, 16, 19, 0.03),
-        0 1px 2px rgba(15, 16, 19, 0.02);
+        0 2px 6px rgba(13, 13, 20, 0.03),
+        0 1px 2px rgba(13, 13, 20, 0.02);
 }
 .btn_style_two span {
-    color: #0f1013;
+    color: #0D0D14;
     transition: color 0.2s ease;
 }
 .btn_style_two:hover {
-    background: #f8fafc;
-    border-color: #0f1013;
-    color: #0f1013 !important;
+    background: #F7F5FC;
+    border-color: #8B5CF6;
+    color: #0D0D14 !important;
     transform: translateY(-1.5px);
     box-shadow: 
-        0 6px 16px rgba(15, 16, 19, 0.06),
-        0 2px 4px rgba(15, 16, 19, 0.03);
+        0 6px 16px rgba(139, 92, 246, 0.08),
+        0 2px 4px rgba(13, 13, 20, 0.03);
 }
 .btn_style_two:hover span {
-    color: #0f1013;
+    color: #0D0D14;
 }
 .btn_style_two:active {
     transform: translateY(1px);
-    box-shadow: inset 0 1px 2px rgba(15, 16, 19, 0.06);
+    box-shadow: inset 0 1px 2px rgba(13, 13, 20, 0.06);
 }
 .btn_style_two:focus-visible {
-    outline: 2px solid #0f1013;
+    outline: 2px solid #0D0D14;
     outline-offset: 2px;
 }
 
@@ -427,7 +451,7 @@ img {
 .btn_style_two_dark:hover,
 .btn_style_two.btn_dark:hover {
     background: rgba(255, 255, 255, 0.14);
-    border-color: #b89058;
+    border-color: #8B5CF6;
     color: #ffffff !important;
     transform: translateY(-1.5px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
@@ -442,7 +466,7 @@ img {
 }
 .btn_style_two_dark:focus-visible,
 .btn_style_two.btn_dark:focus-visible {
-    outline: 2px solid #b89058;
+    outline: 2px solid #8B5CF6;
     outline-offset: 2px;
 }
 
@@ -451,7 +475,7 @@ img {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #0f1013;
+    color: #0D0D14;
     font-family: var(--primary-font);
     font-size: 14.5px;
     font-weight: 600;
@@ -469,7 +493,7 @@ img {
     transition: transform 0.2s ease;
 }
 .btn_style_ghost:hover {
-    color: #b89058;
+    color: #8B5CF6;
     transform: translateX(3px);
 }
 .btn_style_ghost:hover i,
@@ -480,7 +504,7 @@ img {
     transform: translateX(1px);
 }
 .btn_style_ghost:focus-visible {
-    outline: 2px solid #b89058;
+    outline: 2px solid #8B5CF6;
     outline-offset: 2px;
     border-radius: 4px;
 }
@@ -494,7 +518,7 @@ img {
 .btn_style_ghost_light:hover,
 .btn_style_ghost.light:hover,
 .btn_style_ghost.btn_light:hover {
-    color: #b89058 !important;
+    color: #8B5CF6 !important;
     transform: translateX(3px);
 }
 
@@ -706,7 +730,7 @@ button:disabled,
     left: 0;
     top: 0;
     width: 100%;
-    background: #0f1013;
+    background: #0D0D14;
     z-index: 9999999;
 }  
 .preloader-close{
@@ -3350,7 +3374,7 @@ button:disabled,
     padding: 80px 60px;
     z-index: 1;
     overflow: hidden;
-    background: linear-gradient(135deg, #151619 0%, #202328 50%, #0f1013 100%);
+    background: linear-gradient(135deg, #151619 0%, #202328 50%, #0D0D14 100%);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
@@ -3413,7 +3437,7 @@ button:disabled,
     background: #F5F1FF;
 }
 .clients-section.home_five{
-    background: #0f1013;
+    background: #0D0D14;
 }
 .clients-section.inner_page{
     padding: 0px 0px 150px;
@@ -3467,7 +3491,7 @@ button:disabled,
 }
 .home_five .app_outer_box{
     border-radius: 16px;
-    background: linear-gradient(135deg, #151619 0%, #202328 50%, #0f1013 100%);
+    background: linear-gradient(135deg, #151619 0%, #202328 50%, #0D0D14 100%);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .app_outer_box .shape_one{
@@ -3609,8 +3633,8 @@ button:disabled,
     border-radius: 6px;
     padding: 3px 12px;
     margin-bottom: 12px;
-    background: #faf6f0;
-    border: 1px solid rgba(184, 144, 88, 0.25);
+    background: #fbf7fe;
+    border: 1px solid rgba(112, 44, 232, 0.22);
     width: fit-content;
 }
 .news_block_one li .category{
@@ -3624,9 +3648,9 @@ button:disabled,
     line-height: 18px;
     text-transform: uppercase;
     letter-spacing: 0.6px;
-    color: #b89058;
+    color: #8B5CF6;
     background: none;
-    -webkit-text-fill-color: #b89058;
+    -webkit-text-fill-color: #8B5CF6;
 }
 .news_block_one h3{
     font-family: var(--primary-font);
@@ -3638,7 +3662,7 @@ button:disabled,
     flex-grow: 1;
 }
 .news_block_one h3 a{
-    color: #0f1013;
+    color: #0D0D14;
     display: inline-block;
     transition: all .3s;
 }
@@ -3951,7 +3975,7 @@ button:disabled,
     position: relative;
     z-index: 1;
     padding: 180px 0px 100px;
-    background: #FAF8F2;
+    background: #F7F5FC;
 }
 .page_breadcrumb_shape_one{
     position: absolute;
@@ -3969,8 +3993,8 @@ button:disabled,
     display: inline-block;
     padding: 5px 18px;
     margin-bottom: 12px;
-    background: rgba(184, 144, 88, 0.12);
-    border: 1px solid rgba(184, 144, 88, 0.25);
+    background: rgba(139, 92, 246, 0.09);
+    border: 1px solid rgba(139, 92, 246, 0.22);
 }
 .breadcrumb_sutitle h6{
     font-size: 12px;
@@ -3980,7 +4004,7 @@ button:disabled,
     letter-spacing: 0.8px;
     font-family: var(--primary-font);
     text-transform: uppercase;
-    color: #b89058;
+    color: #8B5CF6;
 }
 .breadcrumb_title{
     color: var(--primary-color);
@@ -6471,7 +6495,7 @@ h3.widget_title{
     font-family: var(--primary-font);
     font-size: 40px;
     font-weight: 700;
-    color: #1b2534;
+    color: #0D0D14;
     margin-bottom: 16px;
     line-height: 1.25;
 }
@@ -6526,7 +6550,7 @@ h3.widget_title{
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent 0%, rgba(184, 144, 88, 0.5) 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, rgba(139, 92, 246, 0.5) 50%, transparent 100%);
     z-index: 2;
 }
 
@@ -6610,7 +6634,7 @@ h3.widget_title{
 .nature_footer_socials a:hover {
     background: #1e2025;
     color: #ffffff;
-    border-color: rgba(184, 144, 88, 0.6);
+    border-color: rgba(139, 92, 246, 0.6);
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
@@ -6671,9 +6695,9 @@ h3.widget_title{
 }
 
 .nature_footer_input:focus {
-    border-color: rgba(184, 144, 88, 0.7);
+    border-color: rgba(139, 92, 246, 0.7);
     background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 0 3px rgba(184, 144, 88, 0.15);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
 }
 
 .nature_footer_input::placeholder {
@@ -6708,7 +6732,7 @@ h3.widget_title{
 }
 
 .nature_footer_btn:hover {
-    border-color: rgba(184, 144, 88, 0.6);
+    border-color: rgba(139, 92, 246, 0.6);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
     transform: translateY(-1px);
 }
@@ -6744,7 +6768,7 @@ h3.widget_title{
 }
 
 .nature_footer_msg_link:hover {
-    color: #b89058;
+    color: #8B5CF6;
     transform: translateX(4px);
 }
 
@@ -6769,7 +6793,7 @@ h3.widget_title{
 }
 
 .nature_footer_phone a:hover {
-    color: #b89058 !important;
+    color: #8B5CF6 !important;
 }
 
 .nature_footer_badge {
@@ -6924,7 +6948,7 @@ h3.widget_title{
 .prominence_badge_gold {
     color: var(--ep-gold) !important;
     background: var(--ep-gold-dim) !important;
-    border-color: rgba(184, 144, 88, 0.3) !important;
+    border-color: rgba(139, 92, 246, 0.25) !important;
 }
 
 .ep-badge-obsidian,
@@ -7081,7 +7105,7 @@ img {
 .prominence_card:hover {
     transform: translateY(-3px);
     box-shadow: var(--ep-shadow-md);
-    border-color: rgba(184, 144, 88, 0.4);
+    border-color: rgba(139, 92, 246, 0.4);
 }
 
 .ep-card-equal,
@@ -7123,7 +7147,7 @@ img {
 .ep-card-dark:hover,
 .prominence_card_dark:hover {
     transform: translateY(-3px);
-    border-color: rgba(184, 144, 88, 0.45);
+    border-color: rgba(139, 92, 246, 0.45);
     box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
 }
 
@@ -7164,7 +7188,7 @@ img {
 .ep-select:focus,
 .prominence_select:focus {
     border-color: var(--ep-gold) !important;
-    box-shadow: 0 0 0 3px rgba(184, 144, 88, 0.2) !important;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.20) !important;
     outline: none !important;
 }
 
@@ -7201,7 +7225,7 @@ img {
 .ep-textarea-dark:focus,
 .prominence_textarea_dark:focus {
     border-color: var(--ep-gold) !important;
-    box-shadow: 0 0 0 3px rgba(184, 144, 88, 0.25) !important;
+    box-shadow: 0 0 0 3px rgba(217, 36, 143, 0.25) !important;
 }
 
 .ep-form-group,
@@ -7241,16 +7265,16 @@ img {
 
 .ep-badge-gold,
 .prominence_badge_gold {
-    background: rgba(184, 144, 88, 0.12);
-    color: #97733e;
-    border: 1px solid rgba(184, 144, 88, 0.3);
+    background: rgba(139, 92, 246, 0.09);
+    color: #8B5CF6;
+    border: 1px solid rgba(139, 92, 246, 0.25);
 }
 
 .ep-badge-dark,
 .prominence_badge_dark {
-    background: rgba(15, 16, 19, 0.08);
-    color: #0f1013;
-    border: 1px solid rgba(15, 16, 19, 0.14);
+    background: rgba(13, 13, 20, 0.08);
+    color: #0D0D14;
+    border: 1px solid rgba(13, 13, 20, 0.14);
 }
 
 .ep-badge-white,
@@ -7284,7 +7308,7 @@ img {
 /* 8. Standardized CTA Banners & Blocks */
 .ep-cta-block,
 .prominence_cta_banner_dark {
-    background: linear-gradient(135deg, #151619 0%, #0f1013 100%);
+    background: linear-gradient(135deg, #151619 0%, #0D0D14 100%);
     border: 1px solid var(--ep-border-dark);
     border-radius: var(--ep-radius-xl);
     padding: clamp(36px, 5vw, 60px) clamp(24px, 5vw, 48px);
@@ -7296,12 +7320,12 @@ img {
 
 .ep-cta-block.light,
 .prominence_cta_banner {
-    background: var(--ep-canvas-warm, #FAF8F2);
-    border: 1px solid rgba(184, 144, 88, 0.25);
+    background: var(--ep-canvas-warm, #F7F5FC);
+    border: 1px solid rgba(139, 92, 246, 0.22);
     border-radius: var(--ep-radius-xl);
     padding: clamp(36px, 5vw, 60px) clamp(24px, 5vw, 48px);
     color: var(--ep-text-primary);
-    box-shadow: 0 8px 30px rgba(15, 16, 19, 0.04);
+    box-shadow: 0 8px 30px rgba(13, 13, 20, 0.04);
 }
 
 /* 9. Standardized Icon Containers */
@@ -7322,7 +7346,7 @@ img {
 .prominence_icon_box_gold {
     background: var(--ep-gold-dim);
     color: var(--ep-gold);
-    border: 1px solid rgba(184, 144, 88, 0.25);
+    border: 1px solid rgba(139, 92, 246, 0.22);
 }
 
 .ep-icon-box-dark,
@@ -7359,7 +7383,7 @@ img {
 /* 11. Sovereign Color Helper Classes */
 .bg-obsidian { background-color: var(--ep-obsidian) !important; }
 .bg-charcoal { background-color: var(--ep-charcoal) !important; }
-.bg-alabaster { background-color: #FAF8F2 !important; }
+.bg-alabaster { background-color: #F7F5FC !important; }
 .text-gold { color: var(--ep-gold) !important; }
 .text-obsidian { color: var(--ep-obsidian) !important; }
 .border-gold { border-color: var(--ep-gold) !important; }
@@ -7407,7 +7431,7 @@ img {
     font-size: 38px;
     line-height: 44px;
     font-weight: 700;
-    color: #0f1013;
+    color: #0D0D14;
     font-family: var(--primary-font);
     letter-spacing: -0.5px;
 }
@@ -7513,7 +7537,7 @@ img {
     --shadow-subtle: 0 1px 3px rgba(15, 16, 19, 0.04), 0 4px 12px rgba(15, 16, 19, 0.02);
     --shadow-card: 0 2px 8px rgba(15, 16, 19, 0.04), 0 14px 36px rgba(15, 16, 19, 0.05);
     --shadow-floating: 0 12px 32px rgba(15, 16, 19, 0.09), 0 24px 64px rgba(15, 16, 19, 0.08);
-    --shadow-glow-gold: 0 0 0 1px rgba(184, 144, 88, 0.25), 0 8px 24px rgba(184, 144, 88, 0.12);
+    --shadow-glow-gold: 0 0 0 1px rgba(139, 92, 246, 0.25), 0 8px 24px rgba(139, 92, 246, 0.12);
 }
 
 /* Premium Multi-Layer Depth Card */
@@ -7534,7 +7558,7 @@ img {
 
 /* Dark Surface Depth Card */
 .prominence_depth_card_dark {
-    background: #0f1013;
+    background: #0D0D14;
     border: 1px solid rgba(255, 255, 255, 0.09);
     border-radius: 16px;
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
@@ -7546,7 +7570,7 @@ img {
 .prominence_depth_card_dark:hover {
     transform: translateY(-4px);
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-    border-color: rgba(184, 144, 88, 0.35);
+    border-color: rgba(139, 92, 246, 0.35);
 }
 
 /* Floating Badges & Status Chips (Break boundaries with depth) */
@@ -7570,9 +7594,21 @@ img {
     transform: translateY(-2px);
 }
 
+.prominence_floating_badge_gradient,
+.pricing_card_item.recommended .prominence_floating_badge {
+    background: var(--ep-brand-gradient) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    box-shadow: 0 8px 24px rgba(236, 72, 153, 0.35) !important;
+}
+.prominence_floating_badge_gradient span,
+.pricing_card_item.recommended .prominence_floating_badge span {
+    color: #ffffff !important;
+}
+
 .prominence_floating_badge_dark {
     position: absolute;
-    background: rgba(15, 16, 19, 0.94);
+    background: rgba(13, 13, 20, 0.94);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.14);
@@ -7592,7 +7628,7 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-    background: #f8fafc;
+    background: #F7F5FC;
     border: 1px solid #eaedf0;
     border-radius: 10px;
     padding: 16px;
@@ -7616,7 +7652,7 @@ img {
 .prominence_meta_value {
     font-size: 13.5px;
     font-weight: 600;
-    color: #0f1013;
+    color: #0D0D14;
 }
 
 /* Asymmetrical Layout Containers */
@@ -7639,7 +7675,7 @@ img {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #b89058;
+    background: var(--ep-brand-gradient);
     position: relative;
     display: inline-block;
 }
@@ -7652,7 +7688,7 @@ img {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    border: 1.5px solid #b89058;
+    border: 1.5px solid #d9248f;
     opacity: 0.75;
     animation: prominencePulse 2s infinite ease-in-out;
 }
@@ -7782,7 +7818,7 @@ img {
 .prominence_lead_text {
     font-size: 16.5px;
     line-height: 28px;
-    color: #59606a;
+    color: #6B7280;
     max-width: var(--ep-content-measure);
     font-weight: 400;
 }
@@ -7790,7 +7826,7 @@ img {
 .prominence_title_serif {
     font-family: var(--title-font, 'PT Serif', Georgia, serif) !important;
     letter-spacing: -0.02em;
-    color: #0f1013;
+    color: #0D0D14;
     line-height: 1.25;
 }
 
@@ -7943,4 +7979,4 @@ img {
 
 
 
-
+

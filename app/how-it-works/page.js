@@ -191,23 +191,23 @@ export default function HowItWorksPage() {
                                     alignItems: 'center',
                                     gap: '8px',
                                     padding: '6px 16px',
-                                    background: '#f1f5f9',
+                                    background: '#F7F5FC',
                                     borderRadius: '6px',
                                     fontSize: '12px',
                                     fontWeight: '700',
-                                    color: '#0f1013',
+                                    color: '#0D0D14',
                                     textTransform: 'uppercase',
                                     letterSpacing: '0.8px',
                                     border: '1px solid #e2e8f0'
                                 }}>
-                                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#b89058' }}></span>
+                                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#8B5CF6' }}></span>
                                     The 6-Stage Methodology
                                 </h6>
                             </div>
                             <h1 style={{
                                 fontSize: 'clamp(28px, 5vw, 44px)',
                                 fontWeight: '700',
-                                color: '#0f1013',
+                                color: '#0D0D14',
                                 lineHeight: '1.2',
                                 letterSpacing: '-0.5px',
                                 marginBottom: '20px',
@@ -215,7 +215,7 @@ export default function HowItWorksPage() {
                             }}>
                                 The Sovereign Stature Architecture Protocol
                             </h1>
-                            <p style={{ fontSize: '18px', color: '#59606a', lineHeight: '1.7', margin: '0 auto', maxWidth: '720px' }}>
+                            <p style={{ fontSize: '18px', color: '#6B7280', lineHeight: '1.7', margin: '0 auto', maxWidth: '720px' }}>
                                 Establishing a commanding executive presence demands strategic rigor, journalistic precision, and absolute discretion. Our 6-stage protocol delivers turnkey execution requiring under 30 minutes of executive time each month.
                             </p>
                             <div style={{ marginTop: '32px', display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -231,7 +231,7 @@ export default function HowItWorksPage() {
                 </section>
 
                 {/* 6 Stages Deep Dive — Alternating Card vs Editorial Layout */}
-                <section className="pt_100 pb_90" style={{ background: '#fafbfc', fontFamily: 'var(--primary-font)' }}>
+                <section className="pt_100 pb_90" style={{ background: '#F7F5FC', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
                             {stages.map((stage, idx) => {
@@ -239,21 +239,21 @@ export default function HowItWorksPage() {
                                 
                                 if (isCard) {
                                     return (
-                                        <div key={stage.number} className="prominence_card prominence_depth_card" style={{ padding: '44px 48px', borderTop: '3px solid #b89058' }}>
+                                        <div key={stage.number} className="prominence_card prominence_depth_card" style={{ padding: '44px 48px', borderTop: '3px solid #8B5CF6' }}>
                                             <div className="row align-items-start">
                                                 <div className="col-lg-4 mb_30 mb-lg-0">
                                                     <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '12px' }}>
-                                                        <span className="prominence_step_num" style={{ color: '#0f1013' }}>
+                                                        <span className="prominence_step_num" style={{ color: '#0D0D14' }}>
                                                             {stage.number}
                                                         </span>
-                                                        <span style={{ fontSize: '11px', fontWeight: '700', color: '#b89058', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                                                        <span style={{ fontSize: '11px', fontWeight: '700', color: '#8B5CF6', textTransform: 'uppercase', letterSpacing: '1px' }}>
                                                             Stage {stage.number} of 06 · Flagship Protocol
                                                         </span>
                                                     </div>
-                                                    <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#0f1013', marginBottom: '8px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                                    <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#0D0D14', marginBottom: '8px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                                         {stage.name}
                                                     </h2>
-                                                    <p style={{ fontSize: '14.5px', fontWeight: '600', color: '#b89058', marginBottom: '22px' }}>
+                                                    <p style={{ fontSize: '14.5px', fontWeight: '600', color: '#8B5CF6', marginBottom: '22px' }}>
                                                         {stage.tagline}
                                                     </p>
                                                     
@@ -264,7 +264,7 @@ export default function HowItWorksPage() {
                                                         </div>
                                                         <div className="prominence_meta_item">
                                                             <span className="prominence_meta_label">Client Commitment</span>
-                                                            <span className="prominence_meta_value" style={{ color: '#b89058' }}>{stage.clientTime}</span>
+                                                            <span className="prominence_meta_value" style={{ color: '#8B5CF6' }}>{stage.clientTime}</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -275,7 +275,7 @@ export default function HowItWorksPage() {
                                                             {stage.overview}
                                                         </p>
 
-                                                        <h3 style={{ fontSize: '11.5px', fontWeight: '700', color: '#0f1013', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>
+                                                        <h3 style={{ fontSize: '11.5px', fontWeight: '700', color: '#0D0D14', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>
                                                             Tangible Protocol Deliverables
                                                         </h3>
 
@@ -283,7 +283,7 @@ export default function HowItWorksPage() {
                                                             {stage.deliverables.map((del, i) => (
                                                                 <div key={i} className="col-md-6 mb_16">
                                                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                                                                        <span style={{ color: '#b89058', fontSize: '12px', marginTop: '4px' }}>
+                                                                        <span style={{ color: '#8B5CF6', fontSize: '12px', marginTop: '4px' }}>
                                                                             <i className="fa-solid fa-check"></i>
                                                                         </span>
                                                                         <span style={{ fontSize: '13.5px', color: '#475569', lineHeight: '1.6' }}>{del}</span>
@@ -303,7 +303,7 @@ export default function HowItWorksPage() {
                                     <div key={stage.number} style={{ 
                                         padding: '40px 24px', 
                                         borderTop: '1px solid #e2e8f0', 
-                                        borderBottom: '1px solid #e2e8f0',
+                                        borderBottom: '1px solid #e2e8f0', 
                                         background: 'transparent'
                                     }}>
                                         <div className="row align-items-start">
@@ -312,11 +312,11 @@ export default function HowItWorksPage() {
                                                     <span style={{ fontSize: '38px', fontWeight: '800', color: '#cbd5e1', lineHeight: '1', fontFamily: 'var(--primary-font)' }}>
                                                         {stage.number}
                                                     </span>
-                                                    <span style={{ fontSize: '11px', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                                                    <span style={{ fontSize: '11px', fontWeight: '700', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '1px' }}>
                                                         Stage {stage.number} of 06 · Editorial Briefing
                                                     </span>
                                                 </div>
-                                                <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#0f1013', marginBottom: '8px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                                <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#0D0D14', marginBottom: '8px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                                     {stage.name}
                                                 </h2>
                                                 <p style={{ fontSize: '14.5px', fontWeight: '600', color: '#475569', marginBottom: '22px' }}>
@@ -325,12 +325,12 @@ export default function HowItWorksPage() {
                                                 
                                                 <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                                                     <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '8px 14px', fontSize: '12.5px' }}>
-                                                        <span style={{ color: '#64748b', marginRight: '6px' }}>Horizon:</span>
-                                                        <strong style={{ color: '#0f1013' }}>{stage.duration}</strong>
+                                                        <span style={{ color: '#6B7280', marginRight: '6px' }}>Horizon:</span>
+                                                        <strong style={{ color: '#0D0D14' }}>{stage.duration}</strong>
                                                     </div>
                                                     <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '8px 14px', fontSize: '12.5px' }}>
-                                                        <span style={{ color: '#64748b', marginRight: '6px' }}>Client:</span>
-                                                        <strong style={{ color: '#b89058' }}>{stage.clientTime}</strong>
+                                                        <span style={{ color: '#6B7280', marginRight: '6px' }}>Client:</span>
+                                                        <strong style={{ color: '#8B5CF6' }}>{stage.clientTime}</strong>
                                                     </div>
                                                 </div>
                                             </div>
@@ -341,7 +341,7 @@ export default function HowItWorksPage() {
                                                         {stage.overview}
                                                     </p>
 
-                                                    <h3 style={{ fontSize: '11.5px', fontWeight: '700', color: '#0f1013', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>
+                                                    <h3 style={{ fontSize: '11.5px', fontWeight: '700', color: '#0D0D14', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>
                                                         Tangible Protocol Deliverables
                                                     </h3>
 
@@ -349,7 +349,7 @@ export default function HowItWorksPage() {
                                                         {stage.deliverables.map((del, i) => (
                                                             <div key={i} className="col-md-6 mb_16">
                                                                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                                                                    <span style={{ color: '#b89058', fontSize: '12px', marginTop: '4px' }}>
+                                                                    <span style={{ color: '#8B5CF6', fontSize: '12px', marginTop: '4px' }}>
                                                                         <i className="fa-solid fa-circle-check"></i>
                                                                     </span>
                                                                     <span style={{ fontSize: '13.5px', color: '#475569', lineHeight: '1.6' }}>{del}</span>
@@ -368,7 +368,7 @@ export default function HowItWorksPage() {
                 </section>
 
                 {/* Confidentiality, PR & Legal Governance */}
-                <section className="prominence_section" style={{ background: '#0f1013', color: '#ffffff', fontFamily: 'var(--primary-font)' }}>
+                <section className="prominence_section" style={{ background: '#0D0D14', color: '#ffffff', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
                         <div className="prominence_header_split">
                             <div>
@@ -397,8 +397,8 @@ export default function HowItWorksPage() {
 
                         <div className="row g-4">
                             <div className="col-lg-4 col-md-6">
-                                <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: '36px 30px', height: '100%', borderTop: '3px solid #b89058' }}>
-                                    <div style={{ fontSize: '22px', color: '#b89058', marginBottom: '18px' }}>
+                                <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: '36px 30px', height: '100%', borderTop: '3px solid #8B5CF6' }}>
+                                    <div style={{ fontSize: '22px', color: '#8B5CF6', marginBottom: '18px' }}>
                                         <i className="fa-solid fa-file-shield"></i>
                                     </div>
                                     <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff', marginBottom: '12px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
@@ -411,8 +411,8 @@ export default function HowItWorksPage() {
                             </div>
 
                             <div className="col-lg-4 col-md-6">
-                                <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: '36px 30px', height: '100%', borderTop: '3px solid #b89058' }}>
-                                    <div style={{ fontSize: '22px', color: '#b89058', marginBottom: '18px' }}>
+                                <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: '36px 30px', height: '100%', borderTop: '3px solid #8B5CF6' }}>
+                                    <div style={{ fontSize: '22px', color: '#8B5CF6', marginBottom: '18px' }}>
                                         <i className="fa-solid fa-scale-balanced"></i>
                                     </div>
                                     <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff', marginBottom: '12px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
@@ -425,8 +425,8 @@ export default function HowItWorksPage() {
                             </div>
 
                             <div className="col-lg-4 col-md-6">
-                                <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: '36px 30px', height: '100%', borderTop: '3px solid #b89058' }}>
-                                    <div style={{ fontSize: '22px', color: '#b89058', marginBottom: '18px' }}>
+                                <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: '36px 30px', height: '100%', borderTop: '3px solid #8B5CF6' }}>
+                                    <div style={{ fontSize: '22px', color: '#8B5CF6', marginBottom: '18px' }}>
                                         <i className="fa-solid fa-certificate"></i>
                                     </div>
                                     <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff', marginBottom: '12px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
@@ -453,14 +453,14 @@ export default function HowItWorksPage() {
                             <h2 style={{
                                 fontSize: 'clamp(26px, 4.5vw, 38px)',
                                 fontWeight: '700',
-                                color: '#0f1013',
+                                color: '#0D0D14',
                                 letterSpacing: '-0.5px',
                                 marginBottom: '16px',
                                 fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                             }}>
                                 Put the Prominence Protocol to Work for Your Career
                             </h2>
-                            <p style={{ color: '#59606a', fontSize: '17px', lineHeight: '1.7', marginBottom: '32px' }}>
+                            <p style={{ color: '#6B7280', fontSize: '17px', lineHeight: '1.7', marginBottom: '32px' }}>
                                 Connect directly with our managing partners for a 30-minute private consultation. We will analyze your public search posture and explain how Stage 01 will proceed.
                             </p>
                             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>

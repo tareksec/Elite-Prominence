@@ -43,7 +43,7 @@ export default function AuthorCard({
           left: 0,
           right: 0,
           height: '4px',
-          background: '#b89058'
+          background: 'linear-gradient(90deg, #8B5CF6 0%, #EC4899 100%)'
         }}
       />
 
@@ -63,7 +63,7 @@ export default function AuthorCard({
               width: '76px',
               height: '76px',
               borderRadius: '50%',
-              background: '#0f1013',
+              background: '#0D0D14',
               padding: '3px',
               display: 'flex',
               alignItems: 'center',
@@ -89,7 +89,7 @@ export default function AuthorCard({
                 width: '100%',
                 height: '100%',
                 borderRadius: '50%',
-                backgroundColor: '#0f1013',
+                backgroundColor: '#0D0D14',
                 color: '#FFFFFF',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -115,7 +115,7 @@ export default function AuthorCard({
             style={{
               fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
               fontSize: '24px',
-              color: '#0f1013',
+              color: '#0D0D14',
               margin: '4px 0 6px 0',
               lineHeight: 1.2
             }}
@@ -127,7 +127,7 @@ export default function AuthorCard({
             style={{
               fontSize: '14px',
               fontWeight: '600',
-              color: '#64748B',
+              color: '#6B7280',
               marginBottom: '12px'
             }}
           >

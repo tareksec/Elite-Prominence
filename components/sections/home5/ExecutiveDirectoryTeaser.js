@@ -41,7 +41,7 @@ const DIRECTORY_TEASER_MEMBERS = [
 export default function ExecutiveDirectoryTeaser() {
     return (
         <section style={{
-            backgroundColor: "#fafbfc",
+            backgroundColor: "#F7F5FC",
             padding: "var(--ep-section-py) 0",
             fontFamily: "var(--primary-font)",
             position: "relative",
@@ -54,14 +54,14 @@ export default function ExecutiveDirectoryTeaser() {
                     <div>
                         <div style={{ marginBottom: "12px" }}>
                             <span className="prominence_tracker">
-                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058" }}></span>
+                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6" }}></span>
                                 Verified Network &amp; Editorial Syndication
                             </span>
                         </div>
                         <h2 style={{
                             fontSize: "clamp(26px, 3.6vw, 36px)",
                             fontWeight: "700",
-                            color: "#0f1013",
+                            color: "#0D0D14",
                             letterSpacing: "-0.5px",
                             margin: 0,
                             lineHeight: "1.24",
@@ -74,7 +74,7 @@ export default function ExecutiveDirectoryTeaser() {
                         <p style={{
                             fontSize: "16px",
                             lineHeight: "27px",
-                            color: "#59606a",
+                            color: "#6B7280",
                             maxWidth: "520px",
                             margin: 0
                         }}>
@@ -99,7 +99,7 @@ export default function ExecutiveDirectoryTeaser() {
                                 borderRadius: "14px",
                                 padding: "32px 28px",
                                 border: "1px solid #eaedf0",
-                                borderTop: "3px solid #b89058",
+                                borderTop: "3px solid #8B5CF6",
                                 display: "flex",
                                 flexDirection: "column",
                                 transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)"
@@ -126,8 +126,8 @@ export default function ExecutiveDirectoryTeaser() {
                                             <div style={{
                                                 width: "100%",
                                                 height: "100%",
-                                                backgroundColor: "#0f1013",
-                                                color: "#b89058",
+                                                backgroundColor: "#0D0D14",
+                                                color: "#8B5CF6",
                                                 display: "flex",
                                                 alignItems: "center",
                                                 justifyContent: "center",
@@ -144,18 +144,18 @@ export default function ExecutiveDirectoryTeaser() {
                                             <h3 style={{
                                                 fontSize: "17px",
                                                 fontWeight: "700",
-                                                color: "#0f1013",
+                                                color: "#0D0D14",
                                                 margin: 0,
                                                 fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                                             }}>
                                                 {member.name}
                                             </h3>
-                                            <i className="fa-solid fa-circle-check" style={{ color: "#b89058", fontSize: "13px" }} title="Verified Prominence Member"></i>
+                                            <i className="fa-solid fa-circle-check" style={{ color: "#8B5CF6", fontSize: "13px" }} title="Verified Prominence Member"></i>
                                         </div>
-                                        <div style={{ fontSize: "13px", fontWeight: "600", color: "#64748b", marginTop: "2px" }}>
+                                        <div style={{ fontSize: "13px", fontWeight: "600", color: "#6B7280", marginTop: "2px" }}>
                                             {member.role || member.title}
                                         </div>
-                                        <div style={{ fontSize: "12px", color: "#94a3b8" }}>
+                                        <div style={{ fontSize: "12px", color: "#6B7280" }}>
                                             {member.company}
                                         </div>
                                     </div>
@@ -166,29 +166,29 @@ export default function ExecutiveDirectoryTeaser() {
                                     display: "flex",
                                     gap: "10px",
                                     fontSize: "12px",
-                                    color: "#64748b",
+                                    color: "#6B7280",
                                     marginBottom: "16px",
                                     padding: "8px 0",
                                     borderTop: "1px solid #f1f5f9",
                                     borderBottom: "1px solid #f1f5f9"
                                 }}>
-                                    <span><i className="fa-solid fa-location-dot me-1" style={{ color: "#b89058" }}></i>{member.location}</span>
+                                    <span><i className="fa-solid fa-location-dot me-1" style={{ color: "#8B5CF6" }}></i>{member.location}</span>
                                     <span>&bull;</span>
-                                    <span><i className="fa-solid fa-newspaper me-1" style={{ color: "#64748b" }}></i>{member.articlesCount} Published Articles</span>
+                                    <span><i className="fa-solid fa-newspaper me-1" style={{ color: "#6B7280" }}></i>{member.articlesCount} Published Articles</span>
                                 </div>
 
                                 {/* Featured Perspective Preview */}
                                 <div style={{
-                                    backgroundColor: "#f8fafc",
+                                    backgroundColor: "#F7F5FC",
                                     padding: "14px 16px",
                                     borderRadius: "10px",
                                     border: "1px solid #eaedf0",
                                     marginBottom: "18px"
                                 }}>
-                                    <span style={{ fontSize: "10.5px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.5px", color: "#b89058", display: "block", marginBottom: "4px" }}>
+                                    <span style={{ fontSize: "10.5px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.5px", color: "#8B5CF6", display: "block", marginBottom: "4px" }}>
                                         Featured Perspective
                                     </span>
-                                    <p style={{ margin: 0, fontSize: "13.5px", fontWeight: "600", color: "#1e293b", lineHeight: "1.5" }}>
+                                    <p style={{ margin: 0, fontSize: "13.5px", fontWeight: "600", color: "#0D0D14", lineHeight: "1.5" }}>
                                         &ldquo;{member.quote}&rdquo;
                                     </p>
                                 </div>
@@ -199,8 +199,8 @@ export default function ExecutiveDirectoryTeaser() {
                                         <span
                                             key={idx}
                                             style={{
-                                                backgroundColor: "#f1f5f9",
-                                                color: "#475569",
+                                                backgroundColor: "#F7F5FC",
+                                                color: "#6B7280",
                                                 fontSize: "11px",
                                                 fontWeight: "600",
                                                 padding: "3px 10px",
@@ -229,7 +229,7 @@ export default function ExecutiveDirectoryTeaser() {
 
                 {/* Bottom Value Props Bar & Actions */}
                 <div style={{
-                    backgroundColor: "#0f1013",
+                    backgroundColor: "#0D0D14",
                     color: "#ffffff",
                     borderRadius: "14px",
                     padding: "32px 36px",
@@ -245,7 +245,7 @@ export default function ExecutiveDirectoryTeaser() {
                         <h4 style={{ margin: "0 0 6px", fontSize: "20px", fontWeight: "700", color: "#ffffff", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                             Elevate Your Strategic Executive Footprint
                         </h4>
-                        <p style={{ margin: 0, color: "#94a3b8", fontSize: "14px", maxWidth: "600px", lineHeight: "1.6" }}>
+                        <p style={{ margin: 0, color: "#6B7280", fontSize: "14px", maxWidth: "600px", lineHeight: "1.6" }}>
                             Every Prominence member receives a sovereign personal website, Google Knowledge Graph indexation, and priority publication in our Executive Directory.
                         </p>
                     </div>

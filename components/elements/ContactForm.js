@@ -51,21 +51,21 @@ export default function ContactForm() {
             <div style={{ marginBottom: "26px" }}>
                 <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
                     <span className="prominence_pulse_dot"></span>
-                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#b89058", fontFamily: "var(--primary-font)" }}>
+                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#8B5CF6", fontFamily: "var(--primary-font)" }}>
                         Direct Partner Intake
                     </span>
                 </div>
-                <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", letterSpacing: "-0.3px", margin: 0 }}>
+                <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)", letterSpacing: "-0.3px", margin: 0 }}>
                     Initiate Confidential Stature Consultation
                 </h3>
-                <p style={{ color: "#64748b", marginTop: "6px", fontSize: "14.5px", lineHeight: "22px" }}>
+                <p style={{ color: "#6B7280", marginTop: "6px", fontSize: "14.5px", lineHeight: "22px" }}>
                     Provide baseline career context to allow our partners to prepare an initial Google search audit prior to our strategy call.
                 </p>
             </div>
 
             {/* Discreet Executive Concierge Banner */}
             <div style={{
-                background: "#f8fafc",
+                background: "#F7F5FC",
                 border: "1px solid #eaedf0",
                 borderRadius: "10px",
                 padding: "14px 18px",
@@ -77,12 +77,12 @@ export default function ContactForm() {
                 gap: "12px"
             }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                    <i className="fa-brands fa-whatsapp" style={{ color: "#b89058", fontSize: "18px" }}></i>
+                    <i className="fa-brands fa-whatsapp" style={{ color: "#25D366", fontSize: "18px" }}></i>
                     <div>
-                        <div style={{ fontWeight: "700", color: "#0f1013", fontSize: "13.5px", fontFamily: "var(--primary-font)" }}>
+                        <div style={{ fontWeight: "700", color: "#0D0D14", fontSize: "13.5px", fontFamily: "var(--primary-font)" }}>
                             Prefer direct encrypted messaging?
                         </div>
-                        <div style={{ color: "#64748b", fontSize: "12px" }}>
+                        <div style={{ color: "#6B7280", fontSize: "12px" }}>
                             Connect with an executive partner via WhatsApp for immediate coordination.
                         </div>
                     </div>
@@ -99,13 +99,13 @@ export default function ContactForm() {
             </div>
 
             {submitted ? (
-                <div style={{ padding: "36px 30px", borderRadius: "10px", background: "#f8fafc", border: "1px solid #eaedf0", textAlign: "center" }}>
+                <div style={{ padding: "36px 30px", borderRadius: "10px", background: "#F7F5FC", border: "1px solid #eaedf0", textAlign: "center" }}>
                     <div style={{
                         width: "48px",
                         height: "48px",
                         borderRadius: "50%",
-                        backgroundColor: "#0f1013",
-                        color: "#b89058",
+                        backgroundColor: "#0D0D14",
+                        color: "#8B5CF6",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -114,10 +114,10 @@ export default function ContactForm() {
                     }}>
                         <i className="fa-solid fa-check"></i>
                     </div>
-                    <h3 style={{ color: "#0f1013", fontSize: "22px", fontWeight: "700", fontFamily: "var(--primary-font)", marginBottom: "8px" }}>
+                    <h3 style={{ color: "#0D0D14", fontSize: "22px", fontWeight: "700", fontFamily: "var(--primary-font)", marginBottom: "8px" }}>
                         Inquiry Received Under Strict Confidence
                     </h3>
-                    <p style={{ color: "#64748b", fontSize: "14.5px", lineHeight: "24px", maxWidth: "520px", margin: "0 auto 20px" }}>
+                    <p style={{ color: "#6B7280", fontSize: "14.5px", lineHeight: "24px", maxWidth: "520px", margin: "0 auto 20px" }}>
                         A Prominence Managing Partner will review your public digital baseline and reach out within 24 business hours to schedule your strategy briefing.
                     </p>
                     <a
@@ -247,8 +247,8 @@ export default function ContactForm() {
                                 {submitting ? 'Submitting Confidential Intake...' : 'Request Confidential Stature Consultation'}
                                 {!submitting && <i className="fa-solid fa-arrow-right"></i>}
                             </button>
-                            <div style={{ fontSize: "12px", color: "#94a3b8", textAlign: "center", marginTop: "12px" }}>
-                                <i className="fa-solid fa-lock me-1" style={{ color: "#b89058" }}></i>
+                            <div style={{ fontSize: "12px", color: "#6B7280", textAlign: "center", marginTop: "12px" }}>
+                                <i className="fa-solid fa-lock me-1" style={{ color: "#8B5CF6" }}></i>
                                 100% Strict Bilateral NDA Protection · Zero Third-Party Disclosures
                             </div>
                         </div>

@@ -39,7 +39,7 @@ export default function AnnouncementBanner() {
 
     return (
         <div style={{
-            backgroundColor: banner.bgColor || "#0f1013",
+            backgroundColor: banner.bgColor || "#0D0D14",
             color: "#ffffff",
             padding: "8px 16px",
             fontSize: "13px",
@@ -51,12 +51,12 @@ export default function AnnouncementBanner() {
             gap: "12px",
             position: "relative",
             zIndex: 9999,
-            borderBottom: "1px solid rgba(184, 144, 88, 0.3)",
+            borderBottom: "1px solid rgba(139, 92, 246, 0.3)",
             boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
         }}>
             <span style={{
-                backgroundColor: "#b89058",
-                color: "#0f1013",
+                backgroundColor: "#8B5CF6",
+                color: "#ffffff",
                 fontSize: "10px",
                 fontWeight: "700",
                 textTransform: "uppercase",
@@ -75,7 +75,7 @@ export default function AnnouncementBanner() {
                 <Link
                     href={banner.link}
                     style={{
-                        color: "#D29D2B",
+                        color: "#EC4899",
                         textDecoration: "underline",
                         fontWeight: "700",
                         display: "inline-flex",

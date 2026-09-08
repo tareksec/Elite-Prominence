@@ -94,8 +94,8 @@ export default function FontSizeControl() {
           height: '28px',
           borderRadius: '50%',
           border: '1px solid #E5E7EB',
-          background: currentSizeIndex === 0 ? '#f8fafc' : '#FFFFFF',
-          color: currentSizeIndex === 0 ? '#94A3B8' : '#0f1013',
+          background: currentSizeIndex === 0 ? '#F7F5FC' : '#FFFFFF',
+          color: currentSizeIndex === 0 ? '#9CA3AF' : '#0D0D14',
           fontSize: '12px',
           fontWeight: '700',
           cursor: currentSizeIndex === 0 ? 'not-allowed' : 'pointer',
@@ -124,9 +124,9 @@ export default function FontSizeControl() {
                 borderRadius: '6px',
                 border: 'none',
                 background: isActive
-                  ? '#0f1013'
+                  ? '#0D0D14'
                   : 'transparent',
-                color: isActive ? '#FFFFFF' : '#64748B',
+                color: isActive ? '#FFFFFF' : '#6B7280',
                 fontSize: '11px',
                 fontWeight: isActive ? '700' : '500',
                 cursor: 'pointer',
@@ -153,8 +153,8 @@ export default function FontSizeControl() {
           height: '28px',
           borderRadius: '50%',
           border: '1px solid #E5E7EB',
-          background: currentSizeIndex === SIZES.length - 1 ? '#f8fafc' : '#FFFFFF',
-          color: currentSizeIndex === SIZES.length - 1 ? '#94A3B8' : '#0f1013',
+          background: currentSizeIndex === SIZES.length - 1 ? '#F7F5FC' : '#FFFFFF',
+          color: currentSizeIndex === SIZES.length - 1 ? '#9CA3AF' : '#0D0D14',
           fontSize: '12px',
           fontWeight: '700',
           cursor: currentSizeIndex === SIZES.length - 1 ? 'not-allowed' : 'pointer',

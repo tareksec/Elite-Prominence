@@ -392,7 +392,7 @@ export default function DashboardPage() {
         <div className="boxed_wrapper">
             <Layout headerStyle={1} footerStyle={1}>
                 <section style={{
-                    backgroundColor: "#FAF8F2",
+                    backgroundColor: "#F7F5FC",
                     padding: "100px 0 90px",
                     minHeight: "85vh",
                     fontFamily: "var(--primary-font)"
@@ -417,8 +417,8 @@ export default function DashboardPage() {
 
                         {/* Top Executive Header Bar */}
                         <div style={{
-                            backgroundColor: "#0f1013",
-                            color: "#FAF8F2",
+                            backgroundColor: "#0D0D14",
+                            color: "#ffffff",
                             padding: "32px 36px",
                             borderRadius: "18px",
                             marginBottom: "28px",
@@ -427,16 +427,16 @@ export default function DashboardPage() {
                             alignItems: "center",
                             flexWrap: "wrap",
                             gap: "20px",
-                            boxShadow: "0 10px 30px rgba(22, 45, 32, 0.15)",
-                            border: "1px solid rgba(184, 144, 88, 0.25)"
+                            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)",
+                            border: "1px solid rgba(139, 92, 246, 0.25)"
                         }}>
                             <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
                                 <div style={{
                                     width: "68px",
                                     height: "68px",
                                     borderRadius: "50%",
-                                    backgroundColor: "#FAF8F2",
-                                    color: "#0f1013",
+                                    backgroundColor: "#F7F5FC",
+                                    color: "#0D0D14",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -448,13 +448,13 @@ export default function DashboardPage() {
                                     {initials}
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", color: "#b89058", fontWeight: "700", marginBottom: "4px" }}>
+                                    <div style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", color: "#8B5CF6", fontWeight: "700", marginBottom: "4px" }}>
                                         Verified Member Studio
                                     </div>
                                     <h1 style={{ fontSize: "clamp(22px, 4vw, 30px)", fontWeight: "700", color: "#ffffff", margin: 0 }}>
                                         {fullName || profile?.full_name || 'Executive Member'}
                                     </h1>
-                                    <p style={{ margin: "4px 0 0", color: "#c1cfc5", fontSize: "15px" }}>
+                                    <p style={{ margin: "4px 0 0", color: "#6B7280", fontSize: "15px" }}>
                                         {roleTitle || profile?.role_title || 'Senior Executive'} {company ? `• ${company}` : ''}
                                     </p>
                                 </div>
@@ -465,7 +465,7 @@ export default function DashboardPage() {
                                     <Link
                                         href={`/community/${user.id}`}
                                         target="_blank"
-                                        className="btn_style_gold btn_sm"
+                                        className="btn_style_one btn_sm"
                                     >
                                         <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginRight: "6px" }}></i> View Public Profile
                                     </Link>
@@ -494,12 +494,12 @@ export default function DashboardPage() {
                             backgroundColor: "#ffffff",
                             padding: "20px 26px",
                             borderRadius: "14px",
-                            border: "1px solid #e5e3db",
+                            border: "1px solid #eaedf0",
                             marginBottom: "28px",
                             boxShadow: "0 4px 14px rgba(0,0,0,0.03)"
                         }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
-                                <span style={{ fontSize: "14px", fontWeight: "700", color: "#0f1013" }}>
+                                <span style={{ fontSize: "14px", fontWeight: "700", color: "#0D0D14" }}>
                                     Executive Profile Completeness: <strong>{completeness}%</strong>
                                 </span>
                                 <span style={{ fontSize: "12px", color: completeness === 100 ? "#16a34a" : "#d97706", fontWeight: "700" }}>
@@ -510,7 +510,7 @@ export default function DashboardPage() {
                                 <div style={{
                                     width: `${completeness}%`,
                                     height: "100%",
-                                    backgroundColor: completeness === 100 ? "#22c55e" : "#b89058",
+                                    backgroundColor: completeness === 100 ? "#22c55e" : "#8B5CF6",
                                     borderRadius: "6px",
                                     transition: "width 0.4s ease"
                                 }}></div>
@@ -565,8 +565,8 @@ export default function DashboardPage() {
                                     background: "none",
                                     fontSize: "15px",
                                     fontWeight: "700",
-                                    color: activeTab === 'profile' ? "#0f1013" : "#64748b",
-                                    borderBottom: activeTab === 'profile' ? "3px solid #0f1013" : "3px solid transparent",
+                                    color: activeTab === 'profile' ? "#0D0D14" : "#6B7280",
+                                    borderBottom: activeTab === 'profile' ? "3px solid #8B5CF6" : "3px solid transparent",
                                     cursor: "pointer",
                                     marginBottom: "-2px"
                                 }}
@@ -583,8 +583,8 @@ export default function DashboardPage() {
                                     background: "none",
                                     fontSize: "15px",
                                     fontWeight: "700",
-                                    color: activeTab === 'articles' ? "#0f1013" : "#64748b",
-                                    borderBottom: activeTab === 'articles' ? "3px solid #0f1013" : "3px solid transparent",
+                                    color: activeTab === 'articles' ? "#0D0D14" : "#6B7280",
+                                    borderBottom: activeTab === 'articles' ? "3px solid #8B5CF6" : "3px solid transparent",
                                     cursor: "pointer",
                                     marginBottom: "-2px"
                                 }}
@@ -601,8 +601,8 @@ export default function DashboardPage() {
                                     background: "none",
                                     fontSize: "15px",
                                     fontWeight: "700",
-                                    color: activeTab === 'reviews' ? "#0f1013" : "#64748b",
-                                    borderBottom: activeTab === 'reviews' ? "3px solid #0f1013" : "3px solid transparent",
+                                    color: activeTab === 'reviews' ? "#0D0D14" : "#6B7280",
+                                    borderBottom: activeTab === 'reviews' ? "3px solid #8B5CF6" : "3px solid transparent",
                                     cursor: "pointer",
                                     marginBottom: "-2px"
                                 }}
@@ -619,8 +619,8 @@ export default function DashboardPage() {
                                     background: "none",
                                     fontSize: "15px",
                                     fontWeight: "700",
-                                    color: activeTab === 'playbooks' ? "#0f1013" : "#64748b",
-                                    borderBottom: activeTab === 'playbooks' ? "3px solid #0f1013" : "3px solid transparent",
+                                    color: activeTab === 'playbooks' ? "#0D0D14" : "#6B7280",
+                                    borderBottom: activeTab === 'playbooks' ? "3px solid #8B5CF6" : "3px solid transparent",
                                     cursor: "pointer",
                                     marginBottom: "-2px"
                                 }}
@@ -643,10 +643,10 @@ export default function DashboardPage() {
                                     border: "1px solid #e5e3db",
                                     boxShadow: "0 6px 20px rgba(0,0,0,0.03)"
                                 }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "6px" }}>
                                         Executive Profile Details
                                     </h3>
-                                    <p style={{ fontSize: "14px", color: "#64748b", margin: "0 0 24px" }}>
+                                    <p style={{ fontSize: "14px", color: "#6B7280", margin: "0 0 24px" }}>
                                         These credentials power your public profile on Elite Prominence and sync with executive search algorithms.
                                     </p>
 
@@ -815,9 +815,9 @@ export default function DashboardPage() {
                                                             className={`prominence_badge ${selected ? 'prominence_badge_dark' : ''}`}
                                                             style={{
                                                                 cursor: "pointer",
-                                                                border: selected ? "1px solid #0f1013" : "1px solid #e2e8f0",
-                                                                backgroundColor: selected ? "#0f1013" : "#f1f5f9",
-                                                                color: selected ? "#ffffff" : "#475569",
+                                                                border: selected ? "1px solid #8B5CF6" : "1px solid #e2e8f0",
+                                                                backgroundColor: selected ? "#8B5CF6" : "#F7F5FC",
+                                                                color: selected ? "#ffffff" : "#6B7280",
                                                                 padding: "5px 12px",
                                                                 fontSize: "12px",
                                                                 fontWeight: "700"
@@ -865,7 +865,7 @@ export default function DashboardPage() {
                                         </div>
 
                                         {/* Directory Privacy Toggle */}
-                                        <div style={{ marginBottom: "26px", padding: "14px 18px", borderRadius: "10px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0" }}>
+                                        <div style={{ marginBottom: "26px", padding: "14px 18px", borderRadius: "10px", backgroundColor: "#F7F5FC", border: "1px solid #e2e8f0" }}>
                                             <label style={{ display: "flex", alignItems: "center", gap: "10px", cursor: "pointer" }}>
                                                 <input
                                                     type="checkbox"
@@ -874,10 +874,10 @@ export default function DashboardPage() {
                                                     style={{ width: "18px", height: "18px" }}
                                                 />
                                                 <div>
-                                                    <div style={{ fontSize: "14px", fontWeight: "700", color: "#0f1013" }}>
+                                                    <div style={{ fontSize: "14px", fontWeight: "700", color: "#0D0D14" }}>
                                                         Show Profile in Public Executive Directory
                                                     </div>
-                                                    <div style={{ fontSize: "12px", color: "#64748b" }}>
+                                                    <div style={{ fontSize: "12px", color: "#6B7280" }}>
                                                         Enables your card and published perspectives on the `/community` directory page.
                                                     </div>
                                                 </div>
@@ -904,15 +904,15 @@ export default function DashboardPage() {
                                         backgroundColor: "#ffffff",
                                         borderRadius: "16px",
                                         padding: "30px 26px",
-                                        border: "1px solid rgba(184, 144, 88, 0.3)",
+                                        border: "1px solid rgba(139, 92, 246, 0.3)",
                                         boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
                                         position: "sticky",
                                         top: "20px"
                                     }}>
                                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
                                             <span style={{
-                                                backgroundColor: "rgba(184, 144, 88, 0.15)",
-                                                color: "#92400e",
+                                                backgroundColor: "rgba(139, 92, 246, 0.12)",
+                                                color: "#8B5CF6",
                                                 fontSize: "11px",
                                                 fontWeight: "700",
                                                 padding: "3px 10px",
@@ -925,7 +925,7 @@ export default function DashboardPage() {
                                                 <Link
                                                     href={`/community/${user.id}`}
                                                     target="_blank"
-                                                    style={{ fontSize: "12px", color: "#0f1013", fontWeight: "700", textDecoration: "underline" }}
+                                                    style={{ fontSize: "12px", color: "#0D0D14", fontWeight: "700", textDecoration: "underline" }}
                                                 >
                                                     Open Full Page <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: "4px", fontSize: "11px" }}></i>
                                                 </Link>
@@ -938,8 +938,8 @@ export default function DashboardPage() {
                                                 width: "58px",
                                                 height: "58px",
                                                 borderRadius: "50%",
-                                                backgroundColor: "#0f1013",
-                                                color: "#b89058",
+                                                backgroundColor: "#0D0D14",
+                                                color: "#8B5CF6",
                                                 display: "flex",
                                                 alignItems: "center",
                                                 justifyContent: "center",
@@ -950,28 +950,28 @@ export default function DashboardPage() {
                                                 {initials}
                                             </div>
                                             <div>
-                                                <h4 style={{ margin: 0, fontSize: "18px", fontWeight: "700", color: "#0f1013" }}>
+                                                <h4 style={{ margin: 0, fontSize: "18px", fontWeight: "700", color: "#0D0D14" }}>
                                                     {fullName || 'Your Executive Name'}
                                                 </h4>
-                                                <div style={{ fontSize: "13px", color: "#64748b", fontStyle: "italic", marginTop: "2px" }}>
+                                                <div style={{ fontSize: "13px", color: "#6B7280", fontStyle: "italic", marginTop: "2px" }}>
                                                     {roleTitle || 'Executive Title'} {company ? `• ${company}` : ''}
                                                 </div>
                                             </div>
                                         </div>
 
                                         {/* Metadata */}
-                                        <div style={{ display: "flex", gap: "10px", fontSize: "12px", color: "#64748b", marginBottom: "14px", flexWrap: "wrap" }}>
-                                            {location && <span><i className="fa-solid fa-location-dot" style={{ marginRight: "4px", color: "#b89058" }}></i>{location}</span>}
-                                            {industry && <span><i className="fa-solid fa-building" style={{ marginRight: "4px", color: "#b89058" }}></i>{industry}</span>}
-                                            <span><i className="fa-solid fa-clock" style={{ marginRight: "4px", color: "#b89058" }}></i>{yearsExp}</span>
+                                        <div style={{ display: "flex", gap: "10px", fontSize: "12px", color: "#6B7280", marginBottom: "14px", flexWrap: "wrap" }}>
+                                            {location && <span><i className="fa-solid fa-location-dot" style={{ marginRight: "4px", color: "#8B5CF6" }}></i>{location}</span>}
+                                            {industry && <span><i className="fa-solid fa-building" style={{ marginRight: "4px", color: "#8B5CF6" }}></i>{industry}</span>}
+                                            <span><i className="fa-solid fa-clock" style={{ marginRight: "4px", color: "#8B5CF6" }}></i>{yearsExp}</span>
                                         </div>
 
                                         {/* Bio Snippet */}
                                         <p style={{
                                             fontSize: "13px",
                                             lineHeight: "1.6",
-                                            color: "#334155",
-                                            backgroundColor: "#faf9f5",
+                                            color: "#0D0D14",
+                                            backgroundColor: "#F7F5FC",
                                             padding: "12px 14px",
                                             borderRadius: "8px",
                                             marginBottom: "16px"
@@ -983,8 +983,8 @@ export default function DashboardPage() {
                                         <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "18px" }}>
                                             {coreExpertise.slice(0, 4).map((tag, idx) => (
                                                 <span key={idx} style={{
-                                                    backgroundColor: "#FAF8F2",
-                                                    color: "#0f1013",
+                                                    backgroundColor: "#F7F5FC",
+                                                    color: "#0D0D14",
                                                     border: "1px solid #e5e3db",
                                                     padding: "3px 10px",
                                                     borderRadius: "12px",
@@ -1004,8 +1004,8 @@ export default function DashboardPage() {
                                                 </span>
                                             )}
                                             {websiteUrl && (
-                                                <span style={{ fontSize: "12px", color: "#0f1013", fontWeight: "700" }}>
-                                                    <i className="fa-solid fa-globe" style={{ marginRight: "4px", color: "#b89058" }}></i> Advisory Site
+                                                <span style={{ fontSize: "12px", color: "#0D0D14", fontWeight: "700" }}>
+                                                    <i className="fa-solid fa-globe" style={{ marginRight: "4px", color: "#8B5CF6" }}></i> Advisory Site
                                                 </span>
                                             )}
                                         </div>
@@ -1022,14 +1022,14 @@ export default function DashboardPage() {
                             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "30px" }}>
                                 {/* Left: My Submissions */}
                                 <div>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "16px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "16px" }}>
                                         My Published & Pending Articles ({myArticles.length})
                                     </h3>
 
                                     {myArticles.length === 0 ? (
                                         <div style={{ backgroundColor: "#ffffff", padding: "40px", borderRadius: "14px", textAlign: "center", border: "1px solid #e5e3db" }}>
-                                            <div style={{ fontSize: "28px", color: "#64748b", marginBottom: "10px" }}><i className="fa-solid fa-feather"></i></div>
-                                            <p style={{ margin: 0, color: "#64748b", fontSize: "15px" }}>
+                                            <div style={{ fontSize: "28px", color: "#6B7280", marginBottom: "10px" }}><i className="fa-solid fa-feather"></i></div>
+                                            <p style={{ margin: 0, color: "#6B7280", fontSize: "15px" }}>
                                                 You haven't submitted any thought leadership articles yet. Use the writer studio on the right to publish your first executive article.
                                             </p>
                                         </div>
@@ -1048,8 +1048,8 @@ export default function DashboardPage() {
                                                             fontSize: "11px",
                                                             fontWeight: "700",
                                                             textTransform: "uppercase",
-                                                            color: "#0f1013",
-                                                            backgroundColor: "rgba(30, 59, 43, 0.08)",
+                                                            color: "#0D0D14",
+                                                            backgroundColor: "rgba(139, 92, 246, 0.1)",
                                                             padding: "3px 8px",
                                                             borderRadius: "8px"
                                                         }}>
@@ -1058,15 +1058,15 @@ export default function DashboardPage() {
                                                         {renderStatusBadge(art.status)}
                                                     </div>
 
-                                                    <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "6px 0 8px" }}>
+                                                    <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0D0D14", margin: "6px 0 8px" }}>
                                                         {art.title}
                                                     </h4>
 
-                                                    <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 12px" }}>
+                                                    <p style={{ fontSize: "14px", color: "#6B7280", lineHeight: "1.6", margin: "0 0 12px" }}>
                                                         {art.body.slice(0, 160)}...
                                                     </p>
 
-                                                    <div style={{ fontSize: "12px", color: "#64748b" }}>
+                                                    <div style={{ fontSize: "12px", color: "#6B7280" }}>
                                                         Submitted {new Date(art.created_at).toLocaleDateString()}
                                                     </div>
                                                 </div>
@@ -1082,10 +1082,10 @@ export default function DashboardPage() {
                                     padding: "32px",
                                     border: "1px solid #e5e3db"
                                 }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "6px" }}>
                                         Write Thought Leadership Perspective
                                     </h3>
-                                    <p style={{ fontSize: "13px", color: "#64748b", margin: "0 0 20px" }}>
+                                    <p style={{ fontSize: "13px", color: "#6B7280", margin: "0 0 20px" }}>
                                         Published articles link to your executive profile and appear on the Elite Prominence Community network.
                                     </p>
 
@@ -1130,7 +1130,7 @@ export default function DashboardPage() {
                                                 <label className="prominence_label" style={{ marginBottom: 0 }}>
                                                     Article Content Body *
                                                 </label>
-                                                <span style={{ fontSize: "12px", color: "#64748b" }}>
+                                                <span style={{ fontSize: "12px", color: "#6B7280" }}>
                                                     {articleBody.length} characters
                                                 </span>
                                             </div>
@@ -1168,14 +1168,14 @@ export default function DashboardPage() {
                             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "30px" }}>
                                 {/* Left: My Reviews */}
                                 <div>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "16px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "16px" }}>
                                         My Endorsements & Reviews ({myReviews.length})
                                     </h3>
 
                                     {myReviews.length === 0 ? (
                                         <div style={{ backgroundColor: "#ffffff", padding: "40px", borderRadius: "14px", textAlign: "center", border: "1px solid #e5e3db" }}>
-                                            <div style={{ fontSize: "28px", color: "#b89058", marginBottom: "10px" }}><i className="fa-solid fa-star"></i></div>
-                                            <p style={{ margin: 0, color: "#64748b", fontSize: "15px" }}>
+                                            <div style={{ fontSize: "28px", color: "#8B5CF6", marginBottom: "10px" }}><i className="fa-solid fa-star"></i></div>
+                                            <p style={{ margin: 0, color: "#6B7280", fontSize: "15px" }}>
                                                 You haven't submitted a client review or advisory endorsement yet.
                                             </p>
                                         </div>
@@ -1194,18 +1194,18 @@ export default function DashboardPage() {
                                                                 <i
                                                                     key={i}
                                                                     className={i < (rev.rating || 5) ? "fa-solid fa-star" : "fa-regular fa-star"}
-                                                                    style={{ color: i < (rev.rating || 5) ? "#b89058" : "#cbd5e1" }}
+                                                                    style={{ color: i < (rev.rating || 5) ? "#8B5CF6" : "#cbd5e1" }}
                                                                 />
                                                             ))}
                                                         </span>
                                                         {renderStatusBadge(rev.status)}
                                                     </div>
 
-                                                    <p style={{ fontSize: "15px", color: "#334155", lineHeight: "1.6", margin: "0 0 12px" }}>
+                                                    <p style={{ fontSize: "15px", color: "#0D0D14", lineHeight: "1.6", margin: "0 0 12px" }}>
                                                         "{rev.content}"
                                                     </p>
 
-                                                    <div style={{ fontSize: "12px", color: "#64748b" }}>
+                                                    <div style={{ fontSize: "12px", color: "#6B7280" }}>
                                                         Submitted {new Date(rev.created_at).toLocaleDateString()}
                                                     </div>
                                                 </div>
@@ -1221,16 +1221,16 @@ export default function DashboardPage() {
                                     padding: "32px",
                                     border: "1px solid #e5e3db"
                                 }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "6px" }}>
                                         Submit Client Endorsement
                                     </h3>
-                                    <p style={{ fontSize: "13px", color: "#64748b", margin: "0 0 20px" }}>
+                                    <p style={{ fontSize: "13px", color: "#6B7280", margin: "0 0 20px" }}>
                                         Your review will be displayed on the public Feedback page and your executive profile card once approved.
                                     </p>
 
                                     {reviewSuccess && (
                                         <div style={{ backgroundColor: "#f0fdf4", color: "#15803d", padding: "12px 16px", borderRadius: "8px", fontSize: "13px", marginBottom: "18px", border: "1px solid #86efac" }}>
-                                            <i className="fa-solid fa-circle-check" style={{ marginRight: "6px", color: "#b89058" }}></i> {reviewSuccess}
+                                            <i className="fa-solid fa-circle-check" style={{ marginRight: "6px", color: "#8B5CF6" }}></i> {reviewSuccess}
                                         </div>
                                     )}
 
@@ -1287,63 +1287,63 @@ export default function DashboardPage() {
                         {activeTab === 'playbooks' && (
                             <div>
                                 <div style={{ marginBottom: "24px" }}>
-                                    <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0f1013", margin: "0 0 6px" }}>
+                                    <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0D0D14", margin: "0 0 6px" }}>
                                         Executive Career & Personal Authority Toolkits
                                     </h3>
-                                    <p style={{ color: "#64748b", margin: 0, fontSize: "15px" }}>
+                                    <p style={{ color: "#6B7280", margin: 0, fontSize: "15px" }}>
                                         Curated tactical frameworks designed exclusively for Elite Prominence executive members.
                                     </p>
                                 </div>
 
                                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px", marginBottom: "36px" }}>
-                                    <div className="prominence_depth_card" style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "16px", border: "1px solid #e5e3db", borderTop: "3px solid #b89058" }}>
-                                        <div style={{ width: "42px", height: "42px", borderRadius: "10px", background: "rgba(184, 144, 88, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#b89058", marginBottom: "16px" }}><i className="fa-solid fa-landmark"></i></div>
-                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                    <div className="prominence_depth_card" style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "16px", border: "1px solid #e5e3db", borderTop: "3px solid #8B5CF6" }}>
+                                        <div style={{ width: "42px", height: "42px", borderRadius: "10px", background: "rgba(139, 92, 246, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#8B5CF6", marginBottom: "16px" }}><i className="fa-solid fa-landmark"></i></div>
+                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0D0D14", margin: "0 0 8px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             The 90-Day Executive Authority Blueprint
                                         </h4>
-                                        <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 16px" }}>
+                                        <p style={{ fontSize: "14px", color: "#6B7280", lineHeight: "1.6", margin: "0 0 16px" }}>
                                             How senior leaders systematically build page-one Google search presence, executive bio syndication, and inbound board inquiries.
                                         </p>
-                                        <Link href="/blog/how-to-build-a-personal-brand-as-an-hr-leader" style={{ color: "#b89058", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
+                                        <Link href="/blog/how-to-build-a-personal-brand-as-an-hr-leader" style={{ color: "#8B5CF6", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
                                             Read Strategic Guide <i className="fa-solid fa-arrow-right" style={{ marginLeft: "4px" }}></i>
                                         </Link>
                                     </div>
 
-                                    <div className="prominence_depth_card" style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "16px", border: "1px solid #e5e3db", borderTop: "3px solid #b89058" }}>
-                                        <div style={{ width: "42px", height: "42px", borderRadius: "10px", background: "rgba(184, 144, 88, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#b89058", marginBottom: "16px" }}><i className="fa-solid fa-briefcase"></i></div>
-                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                    <div className="prominence_depth_card" style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "16px", border: "1px solid #e5e3db", borderTop: "3px solid #8B5CF6" }}>
+                                        <div style={{ width: "42px", height: "42px", borderRadius: "10px", background: "rgba(139, 92, 246, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#8B5CF6", marginBottom: "16px" }}><i className="fa-solid fa-briefcase"></i></div>
+                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0D0D14", margin: "0 0 8px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             LinkedIn Architecture for C-Suite Leaders
                                         </h4>
-                                        <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 16px" }}>
+                                        <p style={{ fontSize: "14px", color: "#6B7280", lineHeight: "1.6", margin: "0 0 16px" }}>
                                             Specific headline formulas, featured asset curation, and engagement protocols that attract executive search recruiters.
                                         </p>
-                                        <Link href="/blog/linkedin-strategy-for-senior-hr-professionals" style={{ color: "#b89058", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
+                                        <Link href="/blog/linkedin-strategy-for-senior-hr-professionals" style={{ color: "#8B5CF6", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
                                             Read Strategic Guide <i className="fa-solid fa-arrow-right" style={{ marginLeft: "4px" }}></i>
                                         </Link>
                                     </div>
 
-                                    <div className="prominence_depth_card" style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "16px", border: "1px solid #e5e3db", borderTop: "3px solid #b89058" }}>
-                                        <div style={{ width: "42px", height: "42px", borderRadius: "10px", background: "rgba(184, 144, 88, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#b89058", marginBottom: "16px" }}><i className="fa-solid fa-magnifying-glass"></i></div>
-                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                    <div className="prominence_depth_card" style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "16px", border: "1px solid #e5e3db", borderTop: "3px solid #8B5CF6" }}>
+                                        <div style={{ width: "42px", height: "42px", borderRadius: "10px", background: "rgba(139, 92, 246, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#8B5CF6", marginBottom: "16px" }}><i className="fa-solid fa-magnifying-glass"></i></div>
+                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0D0D14", margin: "0 0 8px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             Google Knowledge Graph & Entity Authority
                                         </h4>
-                                        <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 16px" }}>
+                                        <p style={{ fontSize: "14px", color: "#6B7280", lineHeight: "1.6", margin: "0 0 16px" }}>
                                             Structuring executive digital footprints so Google associates your name with your core operational and boardroom disciplines.
                                         </p>
-                                        <Link href="/blog/how-to-rank-on-google-as-an-independent-hr-consultant" style={{ color: "#b89058", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
+                                        <Link href="/blog/how-to-rank-on-google-as-an-independent-hr-consultant" style={{ color: "#8B5CF6", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
                                             Read Strategic Guide <i className="fa-solid fa-arrow-right" style={{ marginLeft: "4px" }}></i>
                                         </Link>
                                     </div>
 
-                                    <div className="prominence_depth_card" style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "16px", border: "1px solid #e5e3db", borderTop: "3px solid #b89058" }}>
-                                        <div style={{ width: "42px", height: "42px", borderRadius: "10px", background: "rgba(184, 144, 88, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#b89058", marginBottom: "16px" }}><i className="fa-solid fa-chart-line"></i></div>
-                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                    <div className="prominence_depth_card" style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "16px", border: "1px solid #e5e3db", borderTop: "3px solid #8B5CF6" }}>
+                                        <div style={{ width: "42px", height: "42px", borderRadius: "10px", background: "rgba(139, 92, 246, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#8B5CF6", marginBottom: "16px" }}><i className="fa-solid fa-chart-line"></i></div>
+                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0D0D14", margin: "0 0 8px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             Executive Brand ROI & Board Placement
                                         </h4>
-                                        <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 16px" }}>
+                                        <p style={{ fontSize: "14px", color: "#6B7280", lineHeight: "1.6", margin: "0 0 16px" }}>
                                             Translating public thought leadership into non-executive director (NED) seats, speaking engagements, and advisory equity.
                                         </p>
-                                        <Link href="/blog/hr-leader-personal-brand-roi" style={{ color: "#b89058", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
+                                        <Link href="/blog/hr-leader-personal-brand-roi" style={{ color: "#8B5CF6", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
                                             Read Strategic Guide <i className="fa-solid fa-arrow-right" style={{ marginLeft: "4px" }}></i>
                                         </Link>
                                     </div>
@@ -1351,7 +1351,7 @@ export default function DashboardPage() {
 
                                 {/* Advisory Booking Banner */}
                                 <div style={{
-                                    backgroundColor: "#0f1013",
+                                    backgroundColor: "#0D0D14",
                                     color: "#ffffff",
                                     padding: "36px 40px",
                                     borderRadius: "18px",
@@ -1360,13 +1360,13 @@ export default function DashboardPage() {
                                     alignItems: "center",
                                     flexWrap: "wrap",
                                     gap: "20px",
-                                    border: "1px solid rgba(210, 157, 43, 0.3)"
+                                    border: "1px solid rgba(139, 92, 246, 0.3)"
                                 }}>
                                     <div>
                                         <h3 style={{ margin: "0 0 6px", fontSize: "22px", fontWeight: "700", color: "#ffffff" }}>
                                             Schedule an Executive Brand Review
                                         </h3>
-                                        <p style={{ margin: 0, color: "#94a3b8", fontSize: "15px" }}>
+                                        <p style={{ margin: 0, color: "#6B7280", fontSize: "15px" }}>
                                             Connect directly with Md Tarek and our advisory strategists to audit your digital footprint.
                                         </p>
                                     </div>
@@ -1375,9 +1375,20 @@ export default function DashboardPage() {
                                         href={getWhatsAppUrl("Hi, I am an active Elite Prominence member and would like to schedule a 1-on-1 executive brand review session.")}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="btn_style_gold btn_md"
+                                        style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            padding: '12px 24px',
+                                            borderRadius: '10px',
+                                            backgroundColor: '#25D366',
+                                            color: '#ffffff',
+                                            fontWeight: '700',
+                                            fontSize: '15px',
+                                            textDecoration: 'none',
+                                            boxShadow: '0 4px 14px rgba(37, 211, 102, 0.3)'
+                                        }}
                                     >
-                                        <i className="fab fa-whatsapp" style={{ marginRight: "8px" }}></i>WhatsApp Advisory Session
+                                        <i className="fab fa-whatsapp" style={{ marginRight: "8px", fontSize: "18px" }}></i>WhatsApp Advisory Session
                                     </a>
                                 </div>
                             </div>

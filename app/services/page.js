@@ -71,14 +71,14 @@ export default function Service_Page() {
                             <div className="col-lg-8" data-aos="fade-right" data-aos-duration="500">
                                 <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
                                     <span className="prominence_pulse_dot"></span>
-                                    <span style={{ fontSize: "11.5px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#b89058", fontFamily: "var(--primary-font)" }}>
+                                    <span style={{ fontSize: "11.5px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#8B5CF6", fontFamily: "var(--primary-font)" }}>
                                         The 7 Sovereign Capabilities
                                     </span>
                                 </div>
                                 <h1 style={{
                                     fontSize: "clamp(28px, 5vw, 44px)",
                                     fontWeight: "700",
-                                    color: "#0f1013",
+                                    color: "#0D0D14",
                                     lineHeight: "1.2",
                                     letterSpacing: "-0.6px",
                                     marginBottom: "20px",
@@ -86,7 +86,7 @@ export default function Service_Page() {
                                 }}>
                                     Sovereign Digital Stature Engineered for Enterprise Leaders
                                 </h1>
-                                <p style={{ fontSize: "17.5px", color: "#59606a", lineHeight: "30px", maxWidth: "680px", margin: 0 }}>
+                                <p style={{ fontSize: "17.5px", color: "#6B7280", lineHeight: "30px", maxWidth: "680px", margin: 0 }}>
                                     Prominence does not offer generic marketing retainers or superficial social media management. We build permanent, owned reputation assets that establish institutional authority, protect against reputational risk, and unlock boardroom, investor, and advisory opportunities.
                                 </p>
                             </div>
@@ -112,23 +112,23 @@ export default function Service_Page() {
                             display: "grid",
                             gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
                             gap: "20px",
-                            boxShadow: "0 2px 10px rgba(15, 16, 19, 0.02)"
+                            boxShadow: "0 2px 10px rgba(13, 13, 20, 0.02)"
                         }}>
                             <div>
-                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#94a3b8", letterSpacing: "0.8px" }}>Deliverable Model</div>
-                                <div style={{ fontSize: "15px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginTop: "2px" }}>100% Turnkey Execution</div>
+                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#6B7280", letterSpacing: "0.8px" }}>Deliverable Model</div>
+                                <div style={{ fontSize: "15px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)", marginTop: "2px" }}>100% Turnkey Execution</div>
                             </div>
                             <div>
-                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#94a3b8", letterSpacing: "0.8px" }}>Time Investment</div>
-                                <div style={{ fontSize: "15px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginTop: "2px" }}>&lt; 30 Mins / Month</div>
+                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#6B7280", letterSpacing: "0.8px" }}>Time Investment</div>
+                                <div style={{ fontSize: "15px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)", marginTop: "2px" }}>&lt; 30 Mins / Month</div>
                             </div>
                             <div>
-                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#94a3b8", letterSpacing: "0.8px" }}>Search Placement</div>
-                                <div style={{ fontSize: "15px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginTop: "2px" }}>Page 1 #1 Guaranteed</div>
+                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#6B7280", letterSpacing: "0.8px" }}>Search Placement</div>
+                                <div style={{ fontSize: "15px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)", marginTop: "2px" }}>Page 1 #1 Guaranteed</div>
                             </div>
                             <div>
-                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#94a3b8", letterSpacing: "0.8px" }}>Confidentiality</div>
-                                <div style={{ fontSize: "15px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginTop: "2px" }}>100% Strict NDA Adherence</div>
+                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#6B7280", letterSpacing: "0.8px" }}>Confidentiality</div>
+                                <div style={{ fontSize: "15px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)", marginTop: "2px" }}>100% Strict NDA Adherence</div>
                             </div>
                         </div>
                     </div>
@@ -148,12 +148,12 @@ export default function Service_Page() {
                                             alignItems: "center",
                                             gap: "8px",
                                             padding: "4px 14px",
-                                            backgroundColor: "rgba(184, 144, 88, 0.15)",
-                                            border: "1px solid rgba(184, 144, 88, 0.35)",
+                                            backgroundColor: "rgba(139, 92, 246, 0.15)",
+                                            border: "1px solid rgba(139, 92, 246, 0.35)",
                                             borderRadius: "6px",
                                             fontSize: "11px",
                                             fontWeight: "700",
-                                            color: "#b89058",
+                                            color: "#8B5CF6",
                                             textTransform: "uppercase",
                                             letterSpacing: "1px",
                                             marginBottom: "18px"
@@ -181,7 +181,7 @@ export default function Service_Page() {
                                         <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px", marginBottom: "32px" }}>
                                             {SERVICES_DATA[0].deliverables.slice(0, 4).map((item, i) => (
                                                 <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "13.5px", color: "#e2e8f0" }}>
-                                                    <i className="fa-solid fa-check" style={{ color: "#b89058", fontSize: "12px", marginTop: "4px" }}></i>
+                                                    <i className="fa-solid fa-check" style={{ color: "#8B5CF6", fontSize: "12px", marginTop: "4px" }}></i>
                                                     <span>{item}</span>
                                                 </div>
                                             ))}
@@ -206,7 +206,7 @@ export default function Service_Page() {
                                             padding: "28px 24px",
                                             backdropFilter: "blur(12px)"
                                         }}>
-                                            <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#b89058", marginBottom: "16px", fontFamily: "var(--primary-font)" }}>
+                                            <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#8B5CF6", marginBottom: "16px", fontFamily: "var(--primary-font)" }}>
                                                 Asset Technical Specifications
                                             </div>
 
@@ -237,8 +237,8 @@ export default function Service_Page() {
                                             <div style={{
                                                 marginTop: "18px",
                                                 padding: "12px 14px",
-                                                backgroundColor: "rgba(184, 144, 88, 0.1)",
-                                                border: "1px solid rgba(184, 144, 88, 0.25)",
+                                                backgroundColor: "rgba(139, 92, 246, 0.1)",
+                                                border: "1px solid rgba(139, 92, 246, 0.25)",
                                                 borderRadius: "8px",
                                                 display: "flex",
                                                 alignItems: "center",
@@ -246,7 +246,7 @@ export default function Service_Page() {
                                                 fontSize: "12px",
                                                 color: "#f8fafc"
                                             }}>
-                                                <i className="fa-solid fa-lock" style={{ color: "#b89058" }}></i>
+                                                <i className="fa-solid fa-lock" style={{ color: "#8B5CF6" }}></i>
                                                 <span>Permanent Sovereign Asset · Independent of Corporate Employers</span>
                                             </div>
                                         </div>
@@ -258,10 +258,10 @@ export default function Service_Page() {
                         {/* 2. Core Stature Architecture: Pillars 02–05 (Asymmetrical 2x2 Editorial Grid) */}
                         <div style={{ marginBottom: "70px" }}>
                             <div style={{ marginBottom: "36px" }}>
-                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#b89058", fontFamily: "var(--primary-font)" }}>
+                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#8B5CF6", fontFamily: "var(--primary-font)" }}>
                                     Core Reputation Pillars
                                 </div>
-                                <h3 style={{ fontSize: "28px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", letterSpacing: "-0.4px", marginTop: "4px" }}>
+                                <h3 style={{ fontSize: "28px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)", letterSpacing: "-0.4px", marginTop: "4px" }}>
                                     Active Authority &amp; Narrative Architecture
                                 </h3>
                             </div>
@@ -276,23 +276,23 @@ export default function Service_Page() {
                                                     <span style={{
                                                         fontSize: "11px",
                                                         fontWeight: "700",
-                                                        color: "#b89058",
-                                                        backgroundColor: "#faf8f2",
+                                                        color: "#8B5CF6",
+                                                        backgroundColor: "#F7F5FC",
                                                         padding: "4px 10px",
                                                         borderRadius: "6px",
-                                                        border: "1px solid #f1ebd8",
+                                                        border: "1px solid #e2e8f0",
                                                         letterSpacing: "0.8px",
                                                         textTransform: "uppercase",
                                                         fontFamily: "var(--primary-font)"
                                                     }}>
                                                         Pillar {service.number}
                                                     </span>
-                                                    <span style={{ fontSize: "11.5px", color: "#94a3b8", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.6px" }}>
+                                                    <span style={{ fontSize: "11.5px", color: "#6B7280", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.6px" }}>
                                                         {service.tagline}
                                                     </span>
                                                 </div>
 
-                                                <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", lineHeight: "1.3", marginBottom: "12px" }}>
+                                                <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)", lineHeight: "1.3", marginBottom: "12px" }}>
                                                     <Link href={`/services/${service.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
                                                         {service.title}
                                                     </Link>
@@ -359,18 +359,18 @@ export default function Service_Page() {
                         {/* 3. Institutional Governance & Crisis Shield: Pillars 06 & 07 (Horizontal Briefing Block) */}
                         <div data-aos="fade-up" data-aos-duration="600">
                             <div style={{
-                                backgroundColor: "#fafbfc",
+                                backgroundColor: "#F7F5FC",
                                 border: "1px solid #eaedf0",
                                 borderRadius: "16px",
                                 padding: "44px 40px",
-                                boxShadow: "0 4px 20px rgba(15, 16, 19, 0.03)"
+                                boxShadow: "0 4px 20px rgba(13, 13, 20, 0.03)"
                             }}>
                                 <div style={{ borderBottom: "1px solid #eaedf0", paddingBottom: "20px", marginBottom: "32px", display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "16px" }}>
                                     <div>
-                                        <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#b89058", fontFamily: "var(--primary-font)" }}>
+                                        <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#8B5CF6", fontFamily: "var(--primary-font)" }}>
                                             Institutional Protection &amp; Strategic Advisory
                                         </div>
-                                        <h3 style={{ fontSize: "28px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", letterSpacing: "-0.4px", marginTop: "4px" }}>
+                                        <h3 style={{ fontSize: "28px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)", letterSpacing: "-0.4px", marginTop: "4px" }}>
                                             Discreet Media Placements &amp; Reputation Risk Insulation
                                         </h3>
                                     </div>
@@ -379,14 +379,14 @@ export default function Service_Page() {
                                         alignItems: "center",
                                         gap: "8px",
                                         fontSize: "12px",
-                                        color: "#0f1013",
+                                        color: "#0D0D14",
                                         fontWeight: "700",
                                         backgroundColor: "#ffffff",
                                         padding: "6px 14px",
                                         borderRadius: "20px",
                                         border: "1px solid #e2e8f0"
                                     }}>
-                                        <i className="fa-solid fa-shield-halved" style={{ color: "#b89058" }}></i>
+                                        <i className="fa-solid fa-shield-halved" style={{ color: "#8B5CF6" }}></i>
                                         Strict NDA Compliance Guaranteed
                                     </div>
                                 </div>
@@ -395,27 +395,27 @@ export default function Service_Page() {
                                     {SERVICES_DATA.slice(5, 7).map((service, idx) => (
                                         <div key={service.slug} className="col-lg-6 mb-4 mb-lg-0 pe-lg-4" style={{ borderRight: idx === 0 ? "1px solid #eaedf0" : "none" }}>
                                             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "12px" }}>
-                                                <span style={{ fontSize: "11px", fontWeight: "700", color: "#b89058", letterSpacing: "0.8px", textTransform: "uppercase", fontFamily: "var(--primary-font)" }}>
+                                                <span style={{ fontSize: "11px", fontWeight: "700", color: "#8B5CF6", letterSpacing: "0.8px", textTransform: "uppercase", fontFamily: "var(--primary-font)" }}>
                                                     Pillar {service.number}
                                                 </span>
                                                 <span style={{ color: "#cbd5e1" }}>&bull;</span>
-                                                <span style={{ fontSize: "12px", color: "#64748b", fontWeight: "600" }}>{service.tagline}</span>
+                                                <span style={{ fontSize: "12px", color: "#6B7280", fontWeight: "600" }}>{service.tagline}</span>
                                             </div>
 
-                                            <h4 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginBottom: "12px", lineHeight: "1.3" }}>
+                                            <h4 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)", marginBottom: "12px", lineHeight: "1.3" }}>
                                                 <Link href={`/services/${service.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
                                                     {service.title}
                                                 </Link>
                                             </h4>
 
-                                            <p style={{ fontSize: "14.5px", color: "#59606a", lineHeight: "24px", marginBottom: "20px" }}>
+                                            <p style={{ fontSize: "14.5px", color: "#6B7280", lineHeight: "24px", marginBottom: "20px" }}>
                                                 {service.shortDescription}
                                             </p>
 
                                             <ul style={{ listStyle: "none", padding: 0, margin: "0 0 20px" }}>
                                                 {service.deliverables.slice(0, 3).map((item, i) => (
-                                                    <li key={i} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#334155", marginBottom: "8px" }}>
-                                                        <i className="fa-solid fa-check" style={{ color: "#b89058", fontSize: "11px" }}></i>
+                                                    <li key={i} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#0D0D14", marginBottom: "8px" }}>
+                                                        <i className="fa-solid fa-check" style={{ color: "#8B5CF6", fontSize: "11px" }}></i>
                                                         <span>{item}</span>
                                                     </li>
                                                 ))}
@@ -437,7 +437,7 @@ export default function Service_Page() {
                 </section>
 
                 {/* Strategic Comparison: Editorial Table */}
-                <section className="prominence_section" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7", borderBottom: "1px solid #edf2f7" }}>
+                <section className="prominence_section" style={{ background: "#F7F5FC", borderTop: "1px solid #edf2f7", borderBottom: "1px solid #edf2f7" }}>
                     <div className="container">
                         <div className="prominence_header_centered" style={{ maxWidth: "780px", margin: "0 auto 48px" }}>
                             <span className="prominence_tracker">The Prominence Difference</span>
@@ -450,20 +450,20 @@ export default function Service_Page() {
                         <div className="row justify-content-center">
                             <div className="col-lg-10">
                                 <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "14px", overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.03)" }}>
-                                    <div className="row g-0" style={{ borderBottom: "1px solid #e2e8f0", background: "#fafbfc" }}>
+                                    <div className="row g-0" style={{ borderBottom: "1px solid #e2e8f0", background: "#F7F5FC" }}>
                                         <div className="col-md-6 p-4" style={{ borderRight: "1px solid #e2e8f0" }}>
-                                            <span style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "1.2px", textTransform: "uppercase", color: "#64748b", display: "block" }}>
+                                            <span style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "1.2px", textTransform: "uppercase", color: "#6B7280", display: "block" }}>
                                                 Conventional Agency Approach
                                             </span>
-                                            <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#0f1013", marginTop: "4px" }}>
+                                            <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#0D0D14", marginTop: "4px" }}>
                                                 Rented Social Retainers
                                             </h3>
                                         </div>
-                                        <div className="col-md-6 p-4" style={{ background: "#f8fafc" }}>
-                                            <span style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "1.2px", textTransform: "uppercase", color: "#b89058", display: "block" }}>
+                                        <div className="col-md-6 p-4" style={{ background: "#F7F5FC" }}>
+                                            <span style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "1.2px", textTransform: "uppercase", color: "#8B5CF6", display: "block" }}>
                                                 The Prominence Sovereign Standard
                                             </span>
-                                            <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#0f1013", marginTop: "4px" }}>
+                                            <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#0D0D14", marginTop: "4px" }}>
                                                 Permanent Owned Architecture
                                             </h3>
                                         </div>
@@ -493,18 +493,18 @@ export default function Service_Page() {
                                     ].map((row, i) => (
                                         <div key={i} className="row g-0" style={{ borderBottom: i < 3 ? "1px solid #f1f5f9" : "none" }}>
                                             <div className="col-md-6 p-4" style={{ borderRight: "1px solid #e2e8f0" }}>
-                                                <span style={{ fontSize: "12px", fontWeight: "700", color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.5px", display: "block", marginBottom: "4px" }}>
+                                                <span style={{ fontSize: "12px", fontWeight: "700", color: "#6B7280", textTransform: "uppercase", letterSpacing: "0.5px", display: "block", marginBottom: "4px" }}>
                                                     {row.dimension}
                                                 </span>
-                                                <p style={{ color: "#64748b", fontSize: "14.5px", lineHeight: "22px", margin: 0 }}>
+                                                <p style={{ color: "#6B7280", fontSize: "14.5px", lineHeight: "22px", margin: 0 }}>
                                                     {row.traditional}
                                                 </p>
                                             </div>
-                                            <div className="col-md-6 p-4" style={{ background: "#fafbfc" }}>
-                                                <span style={{ fontSize: "12px", fontWeight: "700", color: "#1e293b", textTransform: "uppercase", letterSpacing: "0.5px", display: "block", marginBottom: "4px" }}>
+                                            <div className="col-md-6 p-4" style={{ background: "#F7F5FC" }}>
+                                                <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", textTransform: "uppercase", letterSpacing: "0.5px", display: "block", marginBottom: "4px" }}>
                                                     {row.dimension}
                                                 </span>
-                                                <p style={{ color: "#0f1013", fontSize: "14.5px", lineHeight: "22px", margin: 0, fontWeight: "500" }}>
+                                                <p style={{ color: "#0D0D14", fontSize: "14.5px", lineHeight: "22px", margin: 0, fontWeight: "500" }}>
                                                     {row.prominence}
                                                 </p>
                                             </div>
@@ -552,11 +552,11 @@ export default function Service_Page() {
                                             a: "SEO agencies focus on keywords; PR agencies focus on temporary press cycles. Prominence builds sovereign digital assets you own permanently—your personal website, Google Knowledge Graph presence, curated search results, and verified thought leadership repository."
                                         }
                                     ].map((faq, i) => (
-                                        <div key={i} style={{ border: "1px solid #e2e8f0", borderRadius: "10px", padding: "28px 32px", background: "#fafbfc" }}>
-                                            <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", marginBottom: "10px" }}>
+                                        <div key={i} style={{ border: "1px solid #e2e8f0", borderRadius: "10px", padding: "28px 32px", background: "#F7F5FC" }}>
+                                            <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0D0D14", marginBottom: "10px" }}>
                                                 {faq.q}
                                             </h3>
-                                            <p style={{ color: "#475569", lineHeight: "24px", margin: 0, fontSize: "15px" }}>
+                                            <p style={{ color: "#6B7280", lineHeight: "24px", margin: 0, fontSize: "15px" }}>
                                                 {faq.a}
                                             </p>
                                         </div>
@@ -568,11 +568,11 @@ export default function Service_Page() {
                 </section>
 
                 {/* Final CTA Strip */}
-                <section className="prominence_section" style={{ background: "#FAF8F2", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
+                <section className="prominence_section" style={{ background: "#F7F5FC", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
                     <div className="container">
                         <div className="prominence_header_centered" style={{ maxWidth: "740px", margin: "0 auto" }}>
                             <span className="prominence_tracker">Private Consultation</span>
-                            <h2 style={{ fontSize: "clamp(26px, 3.8vw, 36px)", fontWeight: "700", color: "#0f1013", marginBottom: "14px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                            <h2 style={{ fontSize: "clamp(26px, 3.8vw, 36px)", fontWeight: "700", color: "#0D0D14", marginBottom: "14px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 Ready to Architect Your Sovereign Executive Presence?
                             </h2>
                             <p className="prominence_lead_text" style={{ marginBottom: "32px" }}>

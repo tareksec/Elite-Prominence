@@ -50,7 +50,7 @@ export default function AdminPage() {
             enabled: false,
             text: 'Elite Prominence is accepting executive cohort applications for Q4.',
             link: '/contact',
-            bgColor: '#0f1013'
+            bgColor: '#0D0D14'
         }
     })
 
@@ -82,7 +82,7 @@ export default function AdminPage() {
         announcement_enabled: false,
         announcement_text: '',
         announcement_link: '',
-        announcement_bgColor: '#0f1013'
+        announcement_bgColor: '#0D0D14'
     })
 
     // -------------------------------------------------------------
@@ -117,7 +117,7 @@ export default function AdminPage() {
                     announcement_enabled: s.announcement?.enabled || false,
                     announcement_text: s.announcement?.text || '',
                     announcement_link: s.announcement?.link || '',
-                    announcement_bgColor: s.announcement?.bgColor || '#0f1013'
+                    announcement_bgColor: s.announcement?.bgColor || '#0D0D14'
                 })
             }
 
@@ -542,7 +542,7 @@ export default function AdminPage() {
 
                         {/* Top Mission Control Header */}
                         <div style={{
-                            backgroundColor: "#0f1013",
+                            backgroundColor: "#0D0D14",
                             color: "#ffffff",
                             padding: "32px 36px",
                             borderRadius: "16px",
@@ -553,13 +553,13 @@ export default function AdminPage() {
                             flexWrap: "wrap",
                             gap: "18px",
                             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)",
-                            border: "1px solid rgba(184, 144, 88, 0.25)"
+                            border: "1px solid rgba(139, 92, 246, 0.25)"
                         }}>
                             <div>
                                 <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "6px" }}>
                                     <span style={{
-                                        backgroundColor: "#b89058",
-                                        color: "#0f1013",
+                                        backgroundColor: "#8B5CF6",
+                                        color: "#ffffff",
                                         fontSize: "11px",
                                         fontWeight: "700",
                                         padding: "3px 10px",
@@ -577,7 +577,7 @@ export default function AdminPage() {
                                 <h1 style={{ fontSize: "clamp(24px, 4vw, 32px)", fontWeight: "700", color: "#ffffff", margin: 0, fontFamily: "var(--title-font)" }}>
                                     Elite Prominence Administration
                                 </h1>
-                                <p style={{ margin: "6px 0 0", color: "#c1cfc5", fontSize: "14px" }}>
+                                <p style={{ margin: "6px 0 0", color: "#6B7280", fontSize: "14px" }}>
                                     Logged in as <strong>{adminProfile?.full_name || adminUser?.email}</strong> ({adminProfile?.role_title || 'Chief Administrator'})
                                 </p>
                             </div>
@@ -599,7 +599,7 @@ export default function AdminPage() {
                                 <Link
                                     href="/feedback"
                                     target="_blank"
-                                    className="btn_style_gold btn_sm"
+                                    className="btn_style_one btn_sm"
                                 >
                                     Public Reviews <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: "6px", fontSize: "11px" }}></i>
                                 </Link>
@@ -613,35 +613,35 @@ export default function AdminPage() {
                             gap: "16px",
                             marginBottom: "28px"
                         }}>
-                            <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #e5e3db", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
-                                <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>Inquiries / Leads</div>
-                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#0f1013", marginTop: "4px" }}>{leads.length}</div>
+                            <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #eaedf0", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
+                                <div style={{ fontSize: "12px", color: "#6B7280", fontWeight: "700", textTransform: "uppercase" }}>Inquiries / Leads</div>
+                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#0D0D14", marginTop: "4px" }}>{leads.length}</div>
                                 <div style={{ fontSize: "12px", color: "#16a34a", marginTop: "4px" }}>Active Contact Submissions</div>
                             </div>
 
-                            <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #e5e3db", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
-                                <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>Executive Members</div>
-                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#0f1013", marginTop: "4px" }}>{users.length}</div>
+                            <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #eaedf0", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
+                                <div style={{ fontSize: "12px", color: "#6B7280", fontWeight: "700", textTransform: "uppercase" }}>Executive Members</div>
+                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#0D0D14", marginTop: "4px" }}>{users.length}</div>
                                 <div style={{ fontSize: "12px", color: "#d97706", marginTop: "4px" }}>{adminCount} Administrator{adminCount > 1 ? 's' : ''}</div>
                             </div>
 
-                            <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #e5e3db", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
-                                <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>Executive Articles</div>
-                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#0f1013", marginTop: "4px" }}>{approvedArticles.length}</div>
-                                <div style={{ fontSize: "12px", color: "#64748b", marginTop: "4px" }}>{pendingArticles.length} pending moderation</div>
+                            <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #eaedf0", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
+                                <div style={{ fontSize: "12px", color: "#6B7280", fontWeight: "700", textTransform: "uppercase" }}>Executive Articles</div>
+                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#0D0D14", marginTop: "4px" }}>{approvedArticles.length}</div>
+                                <div style={{ fontSize: "12px", color: "#6B7280", marginTop: "4px" }}>{pendingArticles.length} pending moderation</div>
                             </div>
 
-                            <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #e5e3db", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
-                                <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>Testimonials</div>
-                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#0f1013", marginTop: "4px" }}>{approvedReviews.length}</div>
-                                <div style={{ fontSize: "12px", color: "#64748b", marginTop: "4px" }}>{pendingReviews.length} pending moderation</div>
+                            <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #eaedf0", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
+                                <div style={{ fontSize: "12px", color: "#6B7280", fontWeight: "700", textTransform: "uppercase" }}>Testimonials</div>
+                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#0D0D14", marginTop: "4px" }}>{approvedReviews.length}</div>
+                                <div style={{ fontSize: "12px", color: "#6B7280", marginTop: "4px" }}>{pendingReviews.length} pending moderation</div>
                             </div>
 
                             <div style={{
-                                backgroundColor: (pendingReviews.length + pendingArticles.length > 0) ? "#fef3c7" : "#f1f5f9",
+                                backgroundColor: (pendingReviews.length + pendingArticles.length > 0) ? "#fef3c7" : "#F7F5FC",
                                 padding: "20px",
                                 borderRadius: "14px",
-                                border: (pendingReviews.length + pendingArticles.length > 0) ? "1.5px solid #b89058" : "1px solid #e2e8f0"
+                                border: (pendingReviews.length + pendingArticles.length > 0) ? "1.5px solid #8B5CF6" : "1px solid #e2e8f0"
                             }}>
                                 <div style={{ fontSize: "12px", color: "#92400e", fontWeight: "700", textTransform: "uppercase" }}>Urgent Queue</div>
                                 <div style={{ fontSize: "32px", fontWeight: "700", color: "#92400e", marginTop: "4px" }}>
@@ -677,8 +677,8 @@ export default function AdminPage() {
                                         background: "none",
                                         fontSize: "15px",
                                         fontWeight: "700",
-                                        color: activeTab === 'queue' ? "#0f1013" : "#64748b",
-                                        borderBottom: activeTab === 'queue' ? "3px solid #0f1013" : "3px solid transparent",
+                                        color: activeTab === 'queue' ? "#0D0D14" : "#6B7280",
+                                        borderBottom: activeTab === 'queue' ? "3px solid #8B5CF6" : "3px solid transparent",
                                         cursor: "pointer",
                                         marginBottom: "-2px",
                                         flexShrink: 0
@@ -696,8 +696,8 @@ export default function AdminPage() {
                                         background: "none",
                                         fontSize: "15px",
                                         fontWeight: "700",
-                                        color: activeTab === 'leads' ? "#0f1013" : "#64748b",
-                                        borderBottom: activeTab === 'leads' ? "3px solid #0f1013" : "3px solid transparent",
+                                        color: activeTab === 'leads' ? "#0D0D14" : "#6B7280",
+                                        borderBottom: activeTab === 'leads' ? "3px solid #8B5CF6" : "3px solid transparent",
                                         cursor: "pointer",
                                         marginBottom: "-2px",
                                         flexShrink: 0
@@ -715,8 +715,8 @@ export default function AdminPage() {
                                         background: "none",
                                         fontSize: "15px",
                                         fontWeight: "700",
-                                        color: activeTab === 'reviews' ? "#0f1013" : "#64748b",
-                                        borderBottom: activeTab === 'reviews' ? "3px solid #0f1013" : "3px solid transparent",
+                                        color: activeTab === 'reviews' ? "#0D0D14" : "#6B7280",
+                                        borderBottom: activeTab === 'reviews' ? "3px solid #8B5CF6" : "3px solid transparent",
                                         cursor: "pointer",
                                         marginBottom: "-2px",
                                         flexShrink: 0
@@ -734,8 +734,8 @@ export default function AdminPage() {
                                         background: "none",
                                         fontSize: "15px",
                                         fontWeight: "700",
-                                        color: activeTab === 'articles' ? "#0f1013" : "#64748b",
-                                        borderBottom: activeTab === 'articles' ? "3px solid #0f1013" : "3px solid transparent",
+                                        color: activeTab === 'articles' ? "#0D0D14" : "#6B7280",
+                                        borderBottom: activeTab === 'articles' ? "3px solid #8B5CF6" : "3px solid transparent",
                                         cursor: "pointer",
                                         marginBottom: "-2px",
                                         flexShrink: 0
@@ -753,8 +753,8 @@ export default function AdminPage() {
                                         background: "none",
                                         fontSize: "15px",
                                         fontWeight: "700",
-                                        color: activeTab === 'users' ? "#0f1013" : "#64748b",
-                                        borderBottom: activeTab === 'users' ? "3px solid #0f1013" : "3px solid transparent",
+                                        color: activeTab === 'users' ? "#0D0D14" : "#6B7280",
+                                        borderBottom: activeTab === 'users' ? "3px solid #8B5CF6" : "3px solid transparent",
                                         cursor: "pointer",
                                         marginBottom: "-2px",
                                         flexShrink: 0
@@ -772,8 +772,8 @@ export default function AdminPage() {
                                         background: "none",
                                         fontSize: "15px",
                                         fontWeight: "700",
-                                        color: activeTab === 'settings' ? "#0f1013" : "#64748b",
-                                        borderBottom: activeTab === 'settings' ? "3px solid #0f1013" : "3px solid transparent",
+                                        color: activeTab === 'settings' ? "#0D0D14" : "#6B7280",
+                                        borderBottom: activeTab === 'settings' ? "3px solid #8B5CF6" : "3px solid transparent",
                                         cursor: "pointer",
                                         marginBottom: "-2px",
                                         flexShrink: 0
@@ -862,10 +862,10 @@ export default function AdminPage() {
                                         border: "1px solid #e5e3db"
                                     }}>
                                         <div style={{ fontSize: "36px", color: "#16a34a", marginBottom: "12px" }}><i className="fa-solid fa-circle-check"></i></div>
-                                        <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px" }}>
+                                        <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0D0D14", margin: "0 0 8px" }}>
                                             Moderation Queue is Clear
                                         </h3>
-                                        <p style={{ color: "#64748b", margin: 0, fontSize: "15px" }}>
+                                        <p style={{ color: "#6B7280", margin: 0, fontSize: "15px" }}>
                                             All client submissions and executive articles have been reviewed. New submissions will appear here instantly.
                                         </p>
                                     </div>
@@ -874,7 +874,7 @@ export default function AdminPage() {
                                         {/* Pending Reviews */}
                                         {pendingReviews.length > 0 && (
                                             <div>
-                                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "16px" }}>
+                                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "16px" }}>
                                                     Pending Reviews & Testimonials ({pendingReviews.length})
                                                 </h3>
                                                 <div style={{ display: "grid", gap: "16px" }}>
@@ -883,15 +883,15 @@ export default function AdminPage() {
                                                             backgroundColor: "#ffffff",
                                                             borderRadius: "12px",
                                                             padding: "24px",
-                                                            border: "1.5px solid #D29D2B",
+                                                            border: "1.5px solid #8B5CF6",
                                                             boxShadow: "0 4px 14px rgba(0,0,0,0.04)"
                                                         }}>
                                                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
                                                                 <div>
-                                                                    <h4 style={{ margin: 0, fontSize: "18px", fontWeight: "700", color: "#0f1013" }}>
+                                                                    <h4 style={{ margin: 0, fontSize: "18px", fontWeight: "700", color: "#0D0D14" }}>
                                                                         {rev.profiles?.full_name || 'Anonymous Client'}
                                                                     </h4>
-                                                                    <div style={{ fontSize: "13px", color: "#64748b" }}>
+                                                                    <div style={{ fontSize: "13px", color: "#6B7280" }}>
                                                                         {rev.profiles?.role_title || 'Executive Client'} • {new Date(rev.created_at).toLocaleString()}
                                                                     </div>
                                                                 </div>
@@ -900,13 +900,13 @@ export default function AdminPage() {
                                                                         <i
                                                                             key={i}
                                                                             className={i < (rev.rating || 5) ? "fa-solid fa-star" : "fa-regular fa-star"}
-                                                                            style={{ color: i < (rev.rating || 5) ? "#b89058" : "#cbd5e1" }}
+                                                                            style={{ color: i < (rev.rating || 5) ? "#8B5CF6" : "#cbd5e1" }}
                                                                         />
                                                                     ))}
                                                                 </div>
                                                             </div>
 
-                                                            <p style={{ fontSize: "15px", lineHeight: "1.6", color: "#334155", margin: "0 0 20px" }}>
+                                                            <p style={{ fontSize: "15px", lineHeight: "1.6", color: "#0D0D14", margin: "0 0 20px" }}>
                                                                 "{rev.content}"
                                                             </p>
 
@@ -935,7 +935,7 @@ export default function AdminPage() {
                                         {/* Pending Articles */}
                                         {pendingArticles.length > 0 && (
                                             <div>
-                                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "16px" }}>
+                                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "16px" }}>
                                                     Pending Executive Articles ({pendingArticles.length})
                                                 </h3>
                                                 <div style={{ display: "grid", gap: "16px" }}>
@@ -944,7 +944,7 @@ export default function AdminPage() {
                                                             backgroundColor: "#ffffff",
                                                             borderRadius: "12px",
                                                             padding: "26px",
-                                                            border: "1.5px solid #b89058",
+                                                            border: "1.5px solid #8B5CF6",
                                                             boxShadow: "0 4px 14px rgba(0,0,0,0.04)"
                                                         }}>
                                                             <div style={{ marginBottom: "10px" }}>
@@ -952,8 +952,8 @@ export default function AdminPage() {
                                                                     fontSize: "12px",
                                                                     fontWeight: "700",
                                                                     textTransform: "uppercase",
-                                                                    color: "#0f1013",
-                                                                    backgroundColor: "rgba(184, 144, 88, 0.12)",
+                                                                    color: "#8B5CF6",
+                                                                    backgroundColor: "rgba(139, 92, 246, 0.12)",
                                                                     padding: "3px 10px",
                                                                     borderRadius: "6px",
                                                                     display: "inline-block",
@@ -961,21 +961,21 @@ export default function AdminPage() {
                                                                 }}>
                                                                     {art.category}
                                                                 </span>
-                                                                <h4 style={{ margin: 0, fontSize: "22px", fontWeight: "700", color: "#0f1013" }}>
+                                                                <h4 style={{ margin: 0, fontSize: "22px", fontWeight: "700", color: "#0D0D14" }}>
                                                                     {art.title}
                                                                 </h4>
-                                                                <div style={{ fontSize: "13px", color: "#64748b", marginTop: "4px" }}>
+                                                                <div style={{ fontSize: "13px", color: "#6B7280", marginTop: "4px" }}>
                                                                     By {art.profiles?.full_name || 'Contributor'} • {new Date(art.created_at).toLocaleString()}
                                                                 </div>
                                                             </div>
 
                                                             <div style={{
-                                                                backgroundColor: "#faf9f5",
+                                                                backgroundColor: "#F7F5FC",
                                                                 borderRadius: "8px",
                                                                 padding: "16px",
                                                                 fontSize: "14px",
                                                                 lineHeight: "1.6",
-                                                                color: "#374151",
+                                                                color: "#0D0D14",
                                                                 margin: "14px 0 18px",
                                                                 maxHeight: "180px",
                                                                 overflowY: "auto",
@@ -1016,7 +1016,7 @@ export default function AdminPage() {
                         {activeTab === 'leads' && (
                             <div>
                                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "10px" }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", margin: 0 }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", margin: 0 }}>
                                         Contact Inquiries & Strategy Leads ({filteredLeads.length})
                                     </h3>
                                     <button
@@ -1029,7 +1029,7 @@ export default function AdminPage() {
 
                                 {filteredLeads.length === 0 ? (
                                     <div style={{ backgroundColor: "#ffffff", padding: "50px 20px", textAlign: "center", borderRadius: "12px", border: "1px solid #e5e3db" }}>
-                                        <p style={{ color: "#64748b", margin: 0 }}>No contact inquiries found matching criteria.</p>
+                                        <p style={{ color: "#6B7280", margin: 0 }}>No contact inquiries found matching criteria.</p>
                                     </div>
                                 ) : (
                                     <div style={{ display: "grid", gap: "14px" }}>
@@ -1043,7 +1043,7 @@ export default function AdminPage() {
                                             }}>
                                                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "10px", marginBottom: "10px" }}>
                                                     <div>
-                                                        <h4 style={{ margin: 0, fontSize: "17px", fontWeight: "700", color: "#0f1013" }}>
+                                                        <h4 style={{ margin: 0, fontSize: "17px", fontWeight: "700", color: "#0D0D14" }}>
                                                             {lead.name}
                                                         </h4>
                                                         <div style={{ fontSize: "14px", color: "#2563eb", fontWeight: "600", marginTop: "2px" }}>
@@ -1052,18 +1052,18 @@ export default function AdminPage() {
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <span style={{ fontSize: "12px", color: "#64748b", backgroundColor: "#f1f5f9", padding: "4px 10px", borderRadius: "12px" }}>
+                                                    <span style={{ fontSize: "12px", color: "#6B7280", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "12px" }}>
                                                         <i className="fa-solid fa-calendar" style={{ marginRight: "4px" }}></i>{new Date(lead.created_at).toLocaleString()}
                                                     </span>
                                                 </div>
 
                                                 <div style={{
-                                                    backgroundColor: "#f8fafc",
+                                                    backgroundColor: "#F7F5FC",
                                                     padding: "14px 18px",
                                                     borderRadius: "8px",
                                                     fontSize: "14px",
                                                     lineHeight: "1.6",
-                                                    color: "#334155",
+                                                    color: "#0D0D14",
                                                     marginBottom: "16px",
                                                     whiteSpace: "pre-wrap"
                                                 }}>
@@ -1074,7 +1074,7 @@ export default function AdminPage() {
                                                     <a
                                                         href={`mailto:${lead.email}?subject=Regarding your inquiry with Elite Prominence`}
                                                         style={{
-                                                            backgroundColor: "#0f1013",
+                                                            backgroundColor: "#0D0D14",
                                                             color: "#ffffff",
                                                             padding: "7px 16px",
                                                             borderRadius: "6px",
@@ -1142,7 +1142,7 @@ export default function AdminPage() {
                         {activeTab === 'reviews' && (
                             <div>
                                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "10px" }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", margin: 0 }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", margin: 0 }}>
                                         Testimonials & Feedback ({filteredReviews.length})
                                     </h3>
                                     <button
@@ -1167,14 +1167,14 @@ export default function AdminPage() {
                                         }}>
                                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px", flexWrap: "wrap", gap: "8px" }}>
                                                 <div>
-                                                    <strong style={{ fontSize: "16px", color: "#0f1013" }}>{rev.profiles?.full_name || 'Direct Client'}</strong>
-                                                    <span style={{ color: "#64748b", fontSize: "13px", marginLeft: "6px" }}>({rev.profiles?.role_title || 'Executive Client'})</span>
+                                                    <strong style={{ fontSize: "16px", color: "#0D0D14" }}>{rev.profiles?.full_name || 'Direct Client'}</strong>
+                                                    <span style={{ color: "#6B7280", fontSize: "13px", marginLeft: "6px" }}>({rev.profiles?.role_title || 'Executive Client'})</span>
                                                     <span style={{ marginLeft: "12px", fontSize: "13px", display: "inline-flex", gap: "2px", verticalAlign: "middle" }}>
                                                         {[...Array(5)].map((_, i) => (
                                                             <i
                                                                 key={i}
                                                                 className={i < (rev.rating || 5) ? "fa-solid fa-star" : "fa-regular fa-star"}
-                                                                style={{ color: i < (rev.rating || 5) ? "#b89058" : "#cbd5e1" }}
+                                                                style={{ color: i < (rev.rating || 5) ? "#8B5CF6" : "#cbd5e1" }}
                                                             />
                                                         ))}
                                                     </span>
@@ -1184,7 +1184,7 @@ export default function AdminPage() {
                                                 </div>
                                             </div>
 
-                                            <p style={{ margin: "0 0 16px", fontSize: "15px", color: "#334155", lineHeight: "1.6" }}>
+                                            <p style={{ margin: "0 0 16px", fontSize: "15px", color: "#0D0D14", lineHeight: "1.6" }}>
                                                 "{rev.content}"
                                             </p>
 
@@ -1238,7 +1238,7 @@ export default function AdminPage() {
                         {activeTab === 'articles' && (
                             <div>
                                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "10px" }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", margin: 0 }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", margin: 0 }}>
                                         Articles & Thought Leadership ({filteredArticles.length})
                                     </h3>
                                     <button
@@ -1262,22 +1262,22 @@ export default function AdminPage() {
                                             border: "1px solid #e5e3db"
                                         }}>
                                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px", flexWrap: "wrap", gap: "8px" }}>
-                                                <span style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", color: "#0f1013", backgroundColor: "#e2e8f0", padding: "2px 8px", borderRadius: "6px" }}>
+                                                <span style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", color: "#8B5CF6", backgroundColor: "rgba(139, 92, 246, 0.12)", padding: "2px 8px", borderRadius: "6px" }}>
                                                     {art.category}
                                                 </span>
                                                 {renderStatusBadge(art.status)}
                                             </div>
 
-                                            <h4 style={{ fontSize: "19px", fontWeight: "700", color: "#0f1013", margin: "6px 0" }}>
+                                            <h4 style={{ fontSize: "19px", fontWeight: "700", color: "#0D0D14", margin: "6px 0" }}>
                                                 {art.title}
                                             </h4>
-                                            <div style={{ fontSize: "13px", color: "#64748b", marginBottom: "12px" }}>
+                                            <div style={{ fontSize: "13px", color: "#6B7280", marginBottom: "12px" }}>
                                                 By {art.profiles?.full_name || 'Editorial Team'} • Submitted: {new Date(art.created_at).toLocaleDateString()}
                                             </div>
 
                                             <p style={{
                                                 fontSize: "14px",
-                                                color: "#475569",
+                                                color: "#6B7280",
                                                 lineHeight: "1.6",
                                                 maxHeight: "80px",
                                                 overflow: "hidden",
@@ -1344,30 +1344,30 @@ export default function AdminPage() {
                             }}>
                                 <table style={{ width: "100%", minWidth: "750px", borderCollapse: "collapse", textAlign: "left" }}>
                                     <thead>
-                                        <tr style={{ backgroundColor: "#faf9f5", borderBottom: "1px solid #e5e3db" }}>
-                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0f1013", textTransform: "uppercase" }}>Executive Name</th>
-                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0f1013", textTransform: "uppercase" }}>Role Title</th>
-                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0f1013", textTransform: "uppercase" }}>Role</th>
-                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0f1013", textTransform: "uppercase" }}>Registered</th>
-                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0f1013", textTransform: "uppercase", textAlign: "right" }}>Actions</th>
+                                        <tr style={{ backgroundColor: "#F7F5FC", borderBottom: "1px solid #e5e3db" }}>
+                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0D0D14", textTransform: "uppercase" }}>Executive Name</th>
+                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0D0D14", textTransform: "uppercase" }}>Role Title</th>
+                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0D0D14", textTransform: "uppercase" }}>Role</th>
+                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0D0D14", textTransform: "uppercase" }}>Registered</th>
+                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0D0D14", textTransform: "uppercase", textAlign: "right" }}>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {filteredUsers.map((u) => (
                                             <tr key={u.id} style={{ borderBottom: "1px solid #f1f5f9" }}>
-                                                <td style={{ padding: "16px 20px", fontSize: "15px", fontWeight: "700", color: "#0f1013" }}>
+                                                <td style={{ padding: "16px 20px", fontSize: "15px", fontWeight: "700", color: "#0D0D14" }}>
                                                     {u.full_name || 'Member'}
                                                     {u.id === adminUser?.id && (
                                                         <span style={{ fontSize: "10px", backgroundColor: "#22c55e", color: "#ffffff", padding: "2px 6px", borderRadius: "4px", marginLeft: "6px" }}>YOU</span>
                                                     )}
                                                 </td>
-                                                <td style={{ padding: "16px 20px", fontSize: "14px", color: "#475569" }}>
+                                                <td style={{ padding: "16px 20px", fontSize: "14px", color: "#6B7280" }}>
                                                     {u.role_title || '—'}
                                                 </td>
                                                 <td style={{ padding: "16px 20px" }}>
                                                     <span style={{
-                                                        backgroundColor: u.role === 'admin' ? "#b89058" : "#e2e8f0",
-                                                        color: u.role === 'admin' ? "#0f1013" : "#334155",
+                                                        backgroundColor: u.role === 'admin' ? "#8B5CF6" : "#e2e8f0",
+                                                        color: u.role === 'admin' ? "#ffffff" : "#0D0D14",
                                                         fontSize: "11px",
                                                         fontWeight: "700",
                                                         padding: "3px 10px",
@@ -1378,7 +1378,7 @@ export default function AdminPage() {
                                                         {u.role}
                                                     </span>
                                                 </td>
-                                                <td style={{ padding: "16px 20px", fontSize: "13px", color: "#64748b" }}>
+                                                <td style={{ padding: "16px 20px", fontSize: "13px", color: "#6B7280" }}>
                                                     {new Date(u.created_at).toLocaleDateString()}
                                                 </td>
                                                 <td style={{ padding: "16px 20px", textAlign: "right" }}>
@@ -1386,7 +1386,7 @@ export default function AdminPage() {
                                                         <button
                                                             onClick={() => handleToggleRole(u)}
                                                             disabled={actionLoading[`role_${u.id}`]}
-                                                            className={u.role === 'admin' ? "btn_style_two btn_sm" : "btn_style_gold btn_sm"}
+                                                            className={u.role === 'admin' ? "btn_style_two btn_sm" : "btn_style_one btn_sm"}
                                                         >
                                                             {u.role === 'admin' ? 'Demote' : 'Make Admin'}
                                                         </button>
@@ -1430,7 +1430,7 @@ export default function AdminPage() {
                             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
                                 {/* Left Panel: Live WhatsApp & Announcement */}
                                 <div style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "14px", border: "1px solid #e5e3db" }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "20px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "20px" }}>
                                         Live Site Settings
                                     </h3>
 
@@ -1450,7 +1450,7 @@ export default function AdminPage() {
                                                     fontFamily: "monospace"
                                                 }}
                                             />
-                                            <span style={{ fontSize: "12px", color: "#64748b", marginTop: "4px", display: "block" }}>
+                                            <span style={{ fontSize: "12px", color: "#6B7280", marginTop: "4px", display: "block" }}>
                                                 Updates contact buttons across Header, Mobile Menu, Footer, and Contact Form.
                                             </span>
                                         </div>
@@ -1460,7 +1460,7 @@ export default function AdminPage() {
                                         {/* Site Announcement Banner Control */}
                                         <div style={{ marginBottom: "20px" }}>
                                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
-                                                <label style={{ fontSize: "15px", fontWeight: "700", color: "#0f1013" }}>
+                                                <label style={{ fontSize: "15px", fontWeight: "700", color: "#0D0D14" }}>
                                                     Top Announcement Banner
                                                 </label>
                                                 <label style={{ display: "inline-flex", alignItems: "center", gap: "8px", cursor: "pointer" }}>
@@ -1470,7 +1470,7 @@ export default function AdminPage() {
                                                         onChange={(e) => setSettingsForm(prev => ({ ...prev, announcement_enabled: e.target.checked }))}
                                                         style={{ width: "18px", height: "18px", cursor: "pointer" }}
                                                     />
-                                                    <span style={{ fontSize: "13px", fontWeight: "700", color: settingsForm.announcement_enabled ? "#16a34a" : "#64748b" }}>
+                                                    <span style={{ fontSize: "13px", fontWeight: "700", color: settingsForm.announcement_enabled ? "#16a34a" : "#6B7280" }}>
                                                         {settingsForm.announcement_enabled ? "ACTIVE LIVE" : "DISABLED"}
                                                     </span>
                                                 </label>
@@ -1503,7 +1503,7 @@ export default function AdminPage() {
                                             </div>
 
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "#475569", marginBottom: "4px" }}>
+                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "#6B7280", marginBottom: "4px" }}>
                                                     Banner Background Color
                                                 </label>
                                                 <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
@@ -1513,7 +1513,7 @@ export default function AdminPage() {
                                                         onChange={(e) => setSettingsForm(prev => ({ ...prev, announcement_bgColor: e.target.value }))}
                                                         style={{ width: "40px", height: "40px", padding: 0, border: "none", cursor: "pointer", borderRadius: "6px" }}
                                                     />
-                                                    <span style={{ fontSize: "13px", fontFamily: "monospace", color: "#64748b" }}>
+                                                    <span style={{ fontSize: "13px", fontFamily: "monospace", color: "#6B7280" }}>
                                                         {settingsForm.announcement_bgColor}
                                                     </span>
                                                 </div>
@@ -1534,37 +1534,37 @@ export default function AdminPage() {
 
                                 {/* Right Panel: System Infrastructure Status */}
                                 <div style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "14px", border: "1px solid #e5e3db" }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "20px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "20px" }}>
                                         Infrastructure Status
                                     </h3>
 
                                     <div style={{ display: "grid", gap: "16px" }}>
-                                        <div style={{ padding: "14px 18px", borderRadius: "10px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0" }}>
+                                        <div style={{ padding: "14px 18px", borderRadius: "10px", backgroundColor: "#F7F5FC", border: "1px solid #e2e8f0" }}>
                                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                                                <span style={{ fontWeight: "700", color: "#1e293b" }}>Supabase Database</span>
+                                                <span style={{ fontWeight: "700", color: "#0D0D14" }}>Supabase Database</span>
                                                 <span style={{ color: "#16a34a", fontWeight: "700", fontSize: "13px" }}>● CONNECTED</span>
                                             </div>
-                                            <p style={{ margin: "4px 0 0", fontSize: "12px", color: "#64748b" }}>
+                                            <p style={{ margin: "4px 0 0", fontSize: "12px", color: "#6B7280" }}>
                                                 RLS Security Active • Real-time Auth Listening
                                             </p>
                                         </div>
 
-                                        <div style={{ padding: "14px 18px", borderRadius: "10px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0" }}>
+                                        <div style={{ padding: "14px 18px", borderRadius: "10px", backgroundColor: "#F7F5FC", border: "1px solid #e2e8f0" }}>
                                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                                                <span style={{ fontWeight: "700", color: "#1e293b" }}>Brevo SMTP / Email Service</span>
+                                                <span style={{ fontWeight: "700", color: "#0D0D14" }}>Brevo SMTP / Email Service</span>
                                                 <span style={{ color: "#16a34a", fontWeight: "700", fontSize: "13px" }}>● ACTIVE</span>
                                             </div>
-                                            <p style={{ margin: "4px 0 0", fontSize: "12px", color: "#64748b" }}>
+                                            <p style={{ margin: "4px 0 0", fontSize: "12px", color: "#6B7280" }}>
                                                 Contact form notifications & autoresponders
                                             </p>
                                         </div>
 
-                                        <div style={{ padding: "14px 18px", borderRadius: "10px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0" }}>
+                                        <div style={{ padding: "14px 18px", borderRadius: "10px", backgroundColor: "#F7F5FC", border: "1px solid #e2e8f0" }}>
                                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                                                <span style={{ fontWeight: "700", color: "#1e293b" }}>Next.js Security Middleware</span>
+                                                <span style={{ fontWeight: "700", color: "#0D0D14" }}>Next.js Security Middleware</span>
                                                 <span style={{ color: "#16a34a", fontWeight: "700", fontSize: "13px" }}>● ENFORCED</span>
                                             </div>
-                                            <p style={{ margin: "4px 0 0", fontSize: "12px", color: "#64748b" }}>
+                                            <p style={{ margin: "4px 0 0", fontSize: "12px", color: "#6B7280" }}>
                                                 Route protection on `/admin` & `/dashboard`
                                             </p>
                                         </div>
@@ -1605,7 +1605,7 @@ export default function AdminPage() {
                                     boxShadow: "0 20px 50px rgba(0,0,0,0.2)"
                                 }}>
                                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px" }}>
-                                        <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "700", color: "#0f1013" }}>
+                                        <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "700", color: "#0D0D14" }}>
                                             {editingReview ? 'Edit Testimonial' : 'Post Direct Testimonial'}
                                         </h3>
                                         <button onClick={() => setReviewModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fa-solid fa-xmark"></i></button>
@@ -1704,7 +1704,7 @@ export default function AdminPage() {
                                     overflowY: "auto"
                                 }}>
                                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px" }}>
-                                        <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "700", color: "#0f1013" }}>
+                                        <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "700", color: "#0D0D14" }}>
                                             {editingArticle ? 'Edit Article' : 'Write & Publish Executive Article'}
                                         </h3>
                                         <button onClick={() => setArticleModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fa-solid fa-xmark"></i></button>
@@ -1816,7 +1816,7 @@ export default function AdminPage() {
                                     boxShadow: "0 20px 50px rgba(0,0,0,0.2)"
                                 }}>
                                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px" }}>
-                                        <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "700", color: "#0f1013" }}>
+                                        <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "700", color: "#0D0D14" }}>
                                             Edit Member Profile
                                         </h3>
                                         <button onClick={() => setUserModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fa-solid fa-xmark"></i></button>

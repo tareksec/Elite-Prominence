@@ -29,7 +29,7 @@ export default function TermsPage() {
         <div className="boxed_wrapper">
             <BreadcrumbJsonLd items={breadcrumbItems} />
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Terms of Service">
-                <section className="pt_120 pb_120" style={{ backgroundColor: "#f8fafc", minHeight: "80vh" }}>
+                <section className="pt_120 pb_120" style={{ backgroundColor: "#F7F5FC", minHeight: "80vh" }}>
                     <div className="container" style={{ maxWidth: "860px" }}>
                         {/* Title & Metadata Card */}
                         <div style={{
@@ -37,44 +37,44 @@ export default function TermsPage() {
                             borderRadius: "16px",
                             padding: "40px 36px",
                             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)",
-                            border: "1px solid #e2e8f0"
+                            border: "1px solid #eaedf0"
                         }}>
                             <div className="section_title mb_30">
-                                <div className="tag_text"><h6>Agreement & Terms</h6></div>
-                                <h1 style={{ fontSize: "clamp(28px, 4vw, 36px)", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", margin: "10px 0" }}>
+                                <div className="tag_text"><h6 style={{ color: "#8B5CF6" }}>Agreement & Terms</h6></div>
+                                <h1 style={{ fontSize: "clamp(28px, 4vw, 36px)", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)", margin: "10px 0" }}>
                                     Terms of Service
                                 </h1>
-                                <p style={{ color: "#64748b", fontSize: "14px", marginTop: "8px", fontStyle: "italic" }}>
+                                <p style={{ color: "#6B7280", fontSize: "14px", marginTop: "8px", fontStyle: "italic" }}>
                                     Last updated: September 7, 2026
                                 </p>
                             </div>
 
-                            <div style={{ color: "#475569", lineHeight: "1.8", fontSize: "16px" }}>
+                            <div style={{ color: "#0D0D14", lineHeight: "1.8", fontSize: "16px" }}>
                                 {/* Section 1 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "30px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "30px", marginBottom: "12px" }}>
                                     1. Acceptance of Terms
                                 </h2>
                                 <p>
                                     By using{' '}
-                                    <Link href="/" style={{ color: "#0f1013", fontWeight: "600", textDecoration: "underline" }}>
+                                    <Link href="/" style={{ color: "#8B5CF6", fontWeight: "600", textDecoration: "underline" }}>
                                         prominence.agency
                                     </Link>{' '}
                                     or signing up for an account, you agree to these Terms.
                                 </p>
 
                                 {/* Section 2 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     2. Our Services
                                 </h2>
                                 <p>
                                     Elite Prominence provides personal branding services for HR leaders and executives, delivered as One-Time Packages or Monthly Retainers, as described on our{' '}
-                                    <Link href="/pricing" style={{ color: "#0f1013", fontWeight: "600", textDecoration: "underline" }}>
+                                    <Link href="/pricing" style={{ color: "#8B5CF6", fontWeight: "600", textDecoration: "underline" }}>
                                         Pricing page
                                     </Link>. Specific deliverables per tier are outlined there and may be updated over time.
                                 </p>
 
                                 {/* Section 3 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     3. Account Registration
                                 </h2>
                                 <p>
@@ -82,7 +82,7 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 4 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     4. User-Submitted Content (Reviews &amp; Articles)
                                 </h2>
                                 <ul style={{ paddingLeft: "20px", marginBottom: "15px" }}>
@@ -101,7 +101,7 @@ export default function TermsPage() {
                                 </ul>
 
                                 {/* Section 5 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     5. Payment Terms
                                 </h2>
                                 <p>
@@ -109,7 +109,7 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 6 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     6. No Guarantee of Specific Outcomes
                                 </h2>
                                 <p>
@@ -117,7 +117,7 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 7 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     7. Acceptable Use
                                 </h2>
                                 <p>
@@ -125,7 +125,7 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 8 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     8. Termination
                                 </h2>
                                 <p>
@@ -133,7 +133,7 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 9 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     9. Disclaimer of Warranties
                                 </h2>
                                 <p>
@@ -141,7 +141,7 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 10 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     10. Limitation of Liability
                                 </h2>
                                 <p>
@@ -149,7 +149,7 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 11 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     11. Governing Law &amp; Dispute Resolution
                                 </h2>
                                 <p>
@@ -157,7 +157,7 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 12 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     12. Changes to These Terms
                                 </h2>
                                 <p>
@@ -165,12 +165,12 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 13 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     13. Contact
                                 </h2>
                                 <p>
                                     Questions about these Terms:{' '}
-                                    <Link href="mailto:hello@prominence.agency" style={{ color: "#0f1013", fontWeight: "600", textDecoration: "underline" }}>
+                                    <Link href="mailto:hello@prominence.agency" style={{ color: "#8B5CF6", fontWeight: "600", textDecoration: "underline" }}>
                                         hello@prominence.agency
                                     </Link>
                                 </p>
@@ -179,7 +179,7 @@ export default function TermsPage() {
                                 <div style={{
                                     marginTop: "45px",
                                     paddingTop: "25px",
-                                    borderTop: "1px solid #e2e8f0",
+                                    borderTop: "1px solid #eaedf0",
                                     display: "flex",
                                     justifyContent: "space-between",
                                     alignItems: "center",
@@ -187,8 +187,8 @@ export default function TermsPage() {
                                     gap: "15px"
                                 }}>
                                     <div>
-                                        <div style={{ fontWeight: "700", color: "#0f1013" }}>Have questions about our service terms?</div>
-                                        <div style={{ fontSize: "14px", color: "#64748b" }}>Reach out directly to our executive counsel.</div>
+                                        <div style={{ fontWeight: "700", color: "#0D0D14" }}>Have questions about our service terms?</div>
+                                        <div style={{ fontSize: "14px", color: "#6B7280" }}>Reach out directly to our executive counsel.</div>
                                     </div>
                                     <Link
                                         href="mailto:hello@prominence.agency"

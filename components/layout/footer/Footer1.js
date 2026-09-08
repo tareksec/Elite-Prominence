@@ -6,7 +6,7 @@ import { getWhatsAppUrl } from "@/lib/whatsapp"
 export default function Footer1() {
     return (
         <footer className="elite_site_footer" style={{
-            backgroundColor: "#070b14",
+            backgroundColor: "#0D0D14",
             color: "#e2e8f0",
             fontFamily: "var(--primary-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif)",
             position: "relative",
@@ -33,15 +33,15 @@ export default function Footer1() {
                             <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: "10px", textDecoration: "none", marginBottom: "16px" }}>
                                 <img
                                     src="/assets/images/Elite%20Prominence/EliteProminence-iocn.png"
-                                    alt="Prominence.agency"
-                                    style={{ height: "34px", width: "auto", display: "block", borderRadius: "6px" }}
+                                    alt="Elite Prominence"
+                                    style={{ height: "36px", width: "auto", display: "block" }}
                                 />
                                 <div>
                                     <span style={{ fontSize: "20px", fontWeight: "800", color: "#ffffff", letterSpacing: "-0.4px", display: "block", lineHeight: "1.2" }}>
-                                        Prominence
+                                        Elite Prominence
                                     </span>
-                                    <span style={{ fontSize: "10px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#94a3b8" }}>
-                                        Executive Advisory
+                                    <span style={{ fontSize: "9.5px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#94a3b8" }}>
+                                        Personal Branding for HR Leaders &amp; Executives
                                     </span>
                                 </div>
                             </Link>
@@ -297,7 +297,7 @@ export default function Footer1() {
 
             {/* Bottom Legal Sub-Footer Bar */}
             <div style={{
-                backgroundColor: "#030712",
+                backgroundColor: "#0D0D14",
                 borderTop: "1px solid rgba(255, 255, 255, 0.06)",
                 padding: "20px 0"
             }}>
@@ -309,22 +309,22 @@ export default function Footer1() {
                         flexWrap: "wrap",
                         gap: "14px",
                         fontSize: "13px",
-                        color: "#64748b"
+                        color: "#6B7280"
                     }}>
                         <div>
                             &copy; {new Date().getFullYear()} Prominence.agency. All rights reserved. International Executive Reputation Advisory.
                         </div>
                         <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
-                            <Link href="/privacy-policy" style={{ color: "#64748b", textDecoration: "none" }}>
+                            <Link href="/privacy-policy" style={{ color: "#6B7280", textDecoration: "none" }}>
                                 Privacy Policy
                             </Link>
-                            <Link href="/terms" style={{ color: "#64748b", textDecoration: "none" }}>
+                            <Link href="/terms" style={{ color: "#6B7280", textDecoration: "none" }}>
                                 Terms of Engagement
                             </Link>
-                            <Link href="/resources" style={{ color: "#64748b", textDecoration: "none" }}>
+                            <Link href="/resources" style={{ color: "#6B7280", textDecoration: "none" }}>
                                 Resources
                             </Link>
-                            <Link href="/login" style={{ color: "#64748b", textDecoration: "none" }}>
+                            <Link href="/login" style={{ color: "#6B7280", textDecoration: "none" }}>
                                 Client Portal
                             </Link>
                         </div>

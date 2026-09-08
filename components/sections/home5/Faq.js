@@ -36,12 +36,12 @@ export default function Faq() {
                                 left: 0,
                                 width: "100%",
                                 height: "100%",
-                                background: "linear-gradient(180deg, rgba(15, 16, 19, 0.25) 0%, rgba(15, 16, 19, 0.95) 100%)"
+                                background: "linear-gradient(180deg, rgba(13, 13, 20, 0.25) 0%, rgba(13, 13, 20, 0.95) 100%)"
                             }}></div>
                             <div style={{ position: "relative", zIndex: 2, padding: "35px 30px", color: "#fff" }}>
                                 <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "12px" }}>
                                     <span className="prominence_pulse_dot"></span>
-                                    <span style={{ color: "#b89058", textTransform: "uppercase", fontSize: "11px", fontWeight: "700", letterSpacing: "1.2px", fontFamily: "var(--primary-font)" }}>
+                                    <span style={{ color: "#8B5CF6", textTransform: "uppercase", fontSize: "11px", fontWeight: "700", letterSpacing: "1.2px", fontFamily: "var(--primary-font)" }}>
                                         Executive Consultation
                                     </span>
                                 </div>

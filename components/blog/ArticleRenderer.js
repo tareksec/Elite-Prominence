@@ -46,7 +46,7 @@ export default function ArticleRenderer({ sections = [] }) {
               {sec.definition && (
                 <div className={styles.definitionBox}>
                   <div className={styles.defTitle}>
-                    <i className="fa-solid fa-lightbulb" style={{ fontSize: '13px', color: '#b89058' }}></i>
+                    <i className="fa-solid fa-lightbulb" style={{ fontSize: '13px', color: '#8B5CF6' }}></i>
                     <span>{sec.definition.title}</span>
                   </div>
                   <p style={{ margin: 0, fontSize: '16px', color: '#1F2937', lineHeight: 1.6 }}>

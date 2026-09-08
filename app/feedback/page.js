@@ -82,7 +82,7 @@ export default function FeedbackPage() {
         <div className="boxed_wrapper">
             <Layout headerStyle={4} footerStyle={1}>
                 <section style={{
-                    backgroundColor: "#FAF8F2",
+                    backgroundColor: "#F7F5FC",
                     padding: "var(--ep-section-py) 0",
                     minHeight: "80vh",
                     fontFamily: "var(--primary-font)"
@@ -94,14 +94,14 @@ export default function FeedbackPage() {
                         <div className="prominence_header_centered">
                             <div style={{ marginBottom: "12px" }}>
                                 <span className="prominence_tracker">
-                                    <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058" }}></span>
+                                    <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6" }}></span>
                                     Verified Client Perspectives
                                 </span>
                             </div>
                             <h1 style={{
                                 fontSize: "clamp(28px, 4.5vw, 42px)",
                                 fontWeight: "700",
-                                color: "#0f1013",
+                                color: "#0D0D14",
                                 marginBottom: "16px",
                                 lineHeight: "1.24",
                                 fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
@@ -133,7 +133,7 @@ export default function FeedbackPage() {
                             <h2 style={{
                                 fontSize: "clamp(22px, 3.5vw, 28px)",
                                 fontWeight: "700",
-                                color: "#0f1013",
+                                color: "#0D0D14",
                                 margin: 0,
                                 fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
                             }}>
@@ -147,11 +147,11 @@ export default function FeedbackPage() {
                         }}>
                             {reviews.map((rev, idx) => (
                                 <div key={rev.id} className="feedback_card prominence_card_equal_height prominence_depth_card" style={{
-                                    backgroundColor: idx % 3 === 1 ? "#fafbfc" : "#ffffff",
+                                    backgroundColor: idx % 3 === 1 ? "#F7F5FC" : "#ffffff",
                                     borderRadius: "12px",
                                     padding: "34px 30px",
                                     border: "1px solid #eaedf0",
-                                    borderTop: "3px solid #b89058",
+                                    borderTop: "3px solid #8B5CF6",
                                     overflowWrap: "break-word",
                                     wordBreak: "break-word",
                                     position: "relative"
@@ -164,7 +164,7 @@ export default function FeedbackPage() {
                                                     <i 
                                                         key={i} 
                                                         className={i < rev.rating ? "fa-solid fa-star" : "fa-regular fa-star"} 
-                                                        style={{ color: i < rev.rating ? "#b89058" : "#cbd5e1" }}
+                                                        style={{ color: i < rev.rating ? "#8B5CF6" : "#cbd5e1" }}
                                                     />
                                                 ))}
                                             </div>
@@ -174,15 +174,15 @@ export default function FeedbackPage() {
                                                     fontWeight: "700",
                                                     textTransform: "uppercase",
                                                     letterSpacing: "0.5px",
-                                                    color: "#0f1013", 
-                                                    backgroundColor: "rgba(184, 144, 88, 0.08)", 
-                                                    border: "1px solid rgba(184, 144, 88, 0.25)",
+                                                    color: "#0D0D14", 
+                                                    backgroundColor: "rgba(139, 92, 246, 0.08)", 
+                                                    border: "1px solid rgba(139, 92, 246, 0.25)",
                                                     padding: "3px 10px",
                                                     borderRadius: "6px"
                                                 }}>
-                                                    <i className="fa-solid fa-circle-check" style={{ marginRight: "4px", color: "#b89058" }}></i> Verified Client
+                                                    <i className="fa-solid fa-circle-check" style={{ marginRight: "4px", color: "#8B5CF6" }}></i> Verified Client
                                                 </span>
-                                                <i className="fa-solid fa-quote-right" style={{ color: "rgba(184, 144, 88, 0.22)", fontSize: "18px" }}></i>
+                                                <i className="fa-solid fa-quote-right" style={{ color: "rgba(139, 92, 246, 0.22)", fontSize: "18px" }}></i>
                                             </div>
                                         </div>
 
@@ -202,10 +202,10 @@ export default function FeedbackPage() {
 
                                     {/* Author Signature */}
                                     <div className="prominence_card_footer" style={{ borderTop: "1px solid #eaedf0", paddingTop: "18px" }}>
-                                        <h3 style={{ margin: "0 0 4px", fontSize: "17px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                        <h3 style={{ margin: "0 0 4px", fontSize: "17px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             {rev.full_name}
                                         </h3>
-                                        <div style={{ fontSize: "13px", color: "#64748b", fontStyle: "normal" }}>
+                                        <div style={{ fontSize: "13px", color: "#6B7280", fontStyle: "normal" }}>
                                             {rev.role_title}
                                         </div>
                                     </div>

@@ -5,9 +5,9 @@ import Link from 'next/link'
 export default function SupabaseSetupNotice({ feature = "this feature" }) {
     return (
         <div style={{
-            background: "#f8fafc",
+            background: "#F7F5FC",
             border: "1px solid #cbd5e1",
-            borderLeft: "4px solid #0D1322",
+            borderLeft: "4px solid #0D0D14",
             borderRadius: "12px",
             padding: "24px 28px",
             marginBottom: "30px",
@@ -17,14 +17,14 @@ export default function SupabaseSetupNotice({ feature = "this feature" }) {
             gap: "18px",
             alignItems: "flex-start"
         }}>
-            <div style={{ fontSize: "20px", lineHeight: "1", color: "#b89058", marginTop: "2px", flexShrink: 0 }}>
+            <div style={{ fontSize: "20px", lineHeight: "1", color: "#8B5CF6", marginTop: "2px", flexShrink: 0 }}>
                 <i className="fa-solid fa-database"></i>
             </div>
             <div>
-                <h4 style={{ margin: "0 0 8px", color: "#1b2534", fontSize: "18px", fontWeight: "700" }}>
+                <h4 style={{ margin: "0 0 8px", color: "#0D0D14", fontSize: "18px", fontWeight: "700" }}>
                     Connect Supabase to Activate {feature}
                 </h4>
-                <p style={{ margin: "0 0 14px", fontSize: "14px", lineHeight: "1.6", color: "#475569" }}>
+                <p style={{ margin: "0 0 14px", fontSize: "14px", lineHeight: "1.6", color: "#6B7280" }}>
                     To enable live signups, reviews, user dashboards, and admin moderation, configure your Supabase project credentials in <code>.env.local</code> and run the SQL migration script located in <code>supabase/schema.sql</code>.
                 </p>
                 <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center" }}>
@@ -36,7 +36,7 @@ export default function SupabaseSetupNotice({ feature = "this feature" }) {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: "6px",
-                            background: "#0D1322",
+                            background: "#0D0D14",
                             color: "#ffffff",
                             padding: "8px 18px",
                             borderRadius: "6px",
@@ -48,7 +48,7 @@ export default function SupabaseSetupNotice({ feature = "this feature" }) {
                         <span>Open Supabase Dashboard</span>
                         <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: "11px" }}></i>
                     </a>
-                    <span style={{ fontSize: "13px", color: "#64748b" }}>
+                    <span style={{ fontSize: "13px", color: "#6B7280" }}>
                         Setup file: <code>supabase/schema.sql</code>
                     </span>
                 </div>

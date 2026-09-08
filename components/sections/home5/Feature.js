@@ -9,11 +9,11 @@ export default function Feature_Two() {
                 <div className="row">
                     {/* Who We Serve */}
                     <div className="col-xl-6 col-lg-6 col-md-12 mb_40">
-                        <div className="feature_block_one" style={{ height: "100%", display: "flex", flexDirection: "column", padding: "40px 35px", borderRadius: "12px", background: "#fff", boxShadow: "0 10px 30px rgba(0,0,0,0.04)", border: "1px solid #eef2f6" }} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                        <div className="feature_block_one" style={{ height: "100%", display: "flex", flexDirection: "column", padding: "40px 35px", borderRadius: "12px", background: "#fff", boxShadow: "0 10px 30px rgba(0,0,0,0.04)", border: "1px solid #eaedf0" }} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
                             <div className="tag_text" style={{ marginBottom: "16px" }}>
                                 <h6>Target Mandate</h6>
                             </div>
-                            <h2 style={{ fontSize: "28px", fontWeight: "700", marginBottom: "20px", color: "#0f1013", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                            <h2 style={{ fontSize: "28px", fontWeight: "700", marginBottom: "20px", color: "#0D0D14", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 Who Prominence Advises
                             </h2>
                             <ul style={{ listStyle: "none", padding: 0, margin: "0 0 25px 0", flex: 1 }}>
@@ -25,21 +25,21 @@ export default function Feature_Two() {
                                     { title: "Elite Consultants & Advisors", desc: "Commanding high five-figure monthly retainers through sovereign positioning" }
                                 ].map((role, idx) => (
                                     <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#1e293b", display: "flex", alignItems: "flex-start", gap: "12px" }}>
-                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#b89058", fontFamily: "var(--primary-font)", minWidth: "20px", paddingTop: "2px" }}>
+                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#8B5CF6", fontFamily: "var(--primary-font)", minWidth: "20px", paddingTop: "2px" }}>
                                             0{idx + 1}
                                         </span>
                                         <div>
-                                            <strong style={{ color: "#0f1013" }}>{role.title}:</strong> <span style={{ color: "#64748b" }}>{role.desc}</span>
+                                            <strong style={{ color: "#0D0D14" }}>{role.title}:</strong> <span style={{ color: "#6B7280" }}>{role.desc}</span>
                                         </div>
                                     </li>
                                 ))}
                             </ul>
-                            <div style={{ background: "#FAF8F2", padding: "16px 20px", borderRadius: "8px", borderLeft: "3px solid #b89058", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <div style={{ background: "#F7F5FC", padding: "16px 20px", borderRadius: "8px", borderLeft: "3px solid #8B5CF6", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                 <p style={{ margin: 0, fontSize: "14px", fontWeight: "600", color: "#1e2025" }}>
                                     Explore tailored solutions for each role
                                 </p>
-                                <Link href="/solutions" style={{ fontSize: "13px", fontWeight: "700", color: "#0f1013", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
-                                    View All Roles <i className="fa-solid fa-arrow-right" style={{ color: "#b89058", fontSize: "12px" }}></i>
+                                <Link href="/solutions" style={{ fontSize: "13px", fontWeight: "700", color: "#0D0D14", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                                    View All Roles <i className="fa-solid fa-arrow-right" style={{ color: "#8B5CF6", fontSize: "12px" }}></i>
                                 </Link>
                             </div>
                         </div>
@@ -47,11 +47,11 @@ export default function Feature_Two() {
 
                     {/* What Changes in 60–90 Days */}
                     <div className="col-xl-6 col-lg-6 col-md-12 mb_40">
-                        <div className="feature_block_one" style={{ height: "100%", display: "flex", flexDirection: "column", padding: "40px 35px", borderRadius: "12px", background: "#fff", boxShadow: "0 10px 30px rgba(0,0,0,0.04)", border: "1px solid #eef2f6" }} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
+                        <div className="feature_block_one" style={{ height: "100%", display: "flex", flexDirection: "column", padding: "40px 35px", borderRadius: "12px", background: "#fff", boxShadow: "0 10px 30px rgba(0,0,0,0.04)", border: "1px solid #eaedf0" }} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
                             <div className="tag_text" style={{ marginBottom: "16px" }}>
                                 <h6>Measurable Transformation</h6>
                             </div>
-                            <h2 style={{ fontSize: "28px", fontWeight: "700", marginBottom: "20px", color: "#0f1013", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                            <h2 style={{ fontSize: "28px", fontWeight: "700", marginBottom: "20px", color: "#0D0D14", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 What Changes in 60–90 Days
                             </h2>
                             <ul style={{ listStyle: "none", padding: 0, margin: "0 0 25px 0", flex: 1 }}>
@@ -62,18 +62,18 @@ export default function Feature_Two() {
                                     "Structured JSON-LD schema markup anchors your entity within Google's Knowledge Graph",
                                     "Inbound requests for corporate board seats, keynote appearances, and advisory mandates begin arriving proactively"
                                 ].map((item, idx) => (
-                                    <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#475569", display: "flex", alignItems: "flex-start", gap: "12px" }}>
-                                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058", marginTop: "9px", flexShrink: 0 }}></span>
+                                    <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#6B7280", display: "flex", alignItems: "flex-start", gap: "12px" }}>
+                                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6", marginTop: "9px", flexShrink: 0 }}></span>
                                         <span>{item}</span>
                                     </li>
                                 ))}
                             </ul>
-                            <div style={{ background: "#FAF8F2", padding: "16px 20px", borderRadius: "8px", borderLeft: "3px solid #b89058", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <div style={{ background: "#F7F5FC", padding: "16px 20px", borderRadius: "8px", borderLeft: "3px solid #8B5CF6", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                 <p style={{ margin: 0, fontSize: "14px", fontWeight: "600", color: "#1e2025" }}>
                                     Turnkey execution: &lt; 30 min client time per month
                                 </p>
-                                <Link href="/how-it-works" style={{ fontSize: "13px", fontWeight: "700", color: "#0f1013", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
-                                    Our Methodology <i className="fa-solid fa-arrow-right" style={{ color: "#b89058", fontSize: "12px" }}></i>
+                                <Link href="/how-it-works" style={{ fontSize: "13px", fontWeight: "700", color: "#0D0D14", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                                    Our Methodology <i className="fa-solid fa-arrow-right" style={{ color: "#8B5CF6", fontSize: "12px" }}></i>
                                 </Link>
                             </div>
                         </div>

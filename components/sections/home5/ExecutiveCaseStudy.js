@@ -12,7 +12,7 @@ export default function ExecutiveCaseStudy() {
             data-aos-easing="linear"
             data-aos-duration="550"
             style={{
-                backgroundColor: "#fafbfc",
+                backgroundColor: "#F7F5FC",
                 padding: "var(--ep-section-py) 0",
                 position: "relative",
                 borderTop: "1px solid #eaedf0",
@@ -33,20 +33,20 @@ export default function ExecutiveCaseStudy() {
                             borderRadius: "6px",
                             fontSize: "11px",
                             fontWeight: "700",
-                            color: "#0f1013",
+                            color: "#0D0D14",
                             textTransform: "uppercase",
                             letterSpacing: "1px",
                             marginBottom: "14px",
                             border: "1px solid #e2e8f0"
                         }}>
-                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058" }}></span>
+                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6" }}></span>
                             Executive Proof of Concept
                         </div>
 
                         <h2 style={{
                             fontSize: "clamp(26px, 3.6vw, 36px)",
                             fontWeight: "700",
-                            color: "#0f1013",
+                            color: "#0D0D14",
                             lineHeight: "1.24",
                             letterSpacing: "-0.5px",
                             margin: 0,
@@ -59,7 +59,7 @@ export default function ExecutiveCaseStudy() {
                     <div>
                         <p style={{
                             fontSize: "16px",
-                            color: "#59606a",
+                            color: "#6B7280",
                             lineHeight: "27px",
                             maxWidth: "520px",
                             margin: 0
@@ -90,7 +90,7 @@ export default function ExecutiveCaseStudy() {
                                 padding: "28px 22px",
                                 borderRadius: "12px",
                                 border: "1px solid #eaedf0",
-                                borderTop: "3px solid #b89058",
+                                borderTop: "3px solid #8B5CF6",
                                 textAlign: "center",
                                 transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)"
                             }}
@@ -100,8 +100,8 @@ export default function ExecutiveCaseStudy() {
                                 height: "44px", 
                                 margin: "0 auto 14px", 
                                 borderRadius: "8px", 
-                                background: "rgba(184, 144, 88, 0.08)", 
-                                color: "#b89058", 
+                                background: "rgba(139, 92, 246, 0.08)", 
+                                color: "#8B5CF6", 
                                 display: "flex", 
                                 alignItems: "center", 
                                 justifyContent: "center", 
@@ -109,10 +109,10 @@ export default function ExecutiveCaseStudy() {
                             }}>
                                 <i className={stat.icon}></i>
                             </div>
-                            <div style={{ fontSize: "24px", fontWeight: "700", color: "#0f1013", letterSpacing: "-0.5px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                            <div style={{ fontSize: "24px", fontWeight: "700", color: "#0D0D14", letterSpacing: "-0.5px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 {stat.metric}
                             </div>
-                            <div style={{ fontSize: "12.5px", fontWeight: "600", color: "#64748b", marginTop: "4px" }}>
+                            <div style={{ fontSize: "12.5px", fontWeight: "600", color: "#6B7280", marginTop: "4px" }}>
                                 {stat.label}
                             </div>
                         </div>
@@ -124,14 +124,14 @@ export default function ExecutiveCaseStudy() {
                     backgroundColor: "#ffffff",
                     borderRadius: "14px",
                     border: "1px solid #eaedf0",
-                    boxShadow: "0 16px 40px rgba(15, 16, 19, 0.05)",
+                    boxShadow: "0 16px 40px rgba(13, 13, 20, 0.05)",
                     overflow: "hidden"
                 }}>
                     {/* Navigation Tabs */}
                     <div style={{
                         display: "flex",
                         borderBottom: "1px solid #eaedf0",
-                        backgroundColor: "#f8fafc",
+                        backgroundColor: "#F7F5FC",
                         overflowX: "auto"
                     }}>
                         {[
@@ -148,7 +148,7 @@ export default function ExecutiveCaseStudy() {
                                     padding: "18px 24px",
                                     border: "none",
                                     backgroundColor: activeTab === tab.key ? "#ffffff" : "transparent",
-                                    borderBottom: activeTab === tab.key ? "3px solid #0f1013" : "3px solid transparent",
+                                    borderBottom: activeTab === tab.key ? "3px solid #0D0D14" : "3px solid transparent",
                                     cursor: "pointer",
                                     display: "flex",
                                     alignItems: "center",
@@ -161,7 +161,7 @@ export default function ExecutiveCaseStudy() {
                                 <span style={{
                                     fontSize: "14px",
                                     fontWeight: "700",
-                                    color: activeTab === tab.key ? "#0f1013" : "#64748b",
+                                    color: activeTab === tab.key ? "#0D0D14" : "#6B7280",
                                     fontFamily: "var(--primary-font)"
                                 }}>
                                     {tab.label}
@@ -171,8 +171,8 @@ export default function ExecutiveCaseStudy() {
                                     fontWeight: "600",
                                     padding: "2px 8px",
                                     borderRadius: "6px",
-                                    backgroundColor: activeTab === tab.key ? "#0f1013" : "#e2e8f0",
-                                    color: activeTab === tab.key ? "#ffffff" : "#64748b"
+                                    backgroundColor: activeTab === tab.key ? "#0D0D14" : "#e2e8f0",
+                                    color: activeTab === tab.key ? "#ffffff" : "#6B7280"
                                 }}>
                                     {tab.badge}
                                 </span>
@@ -188,20 +188,20 @@ export default function ExecutiveCaseStudy() {
                                     <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#b91c1c", backgroundColor: "#fef2f2", padding: "4px 10px", borderRadius: "6px", border: "1px solid #fecaca" }}>
                                         The Problem
                                     </span>
-                                    <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0f1013", marginTop: "12px", marginBottom: "16px", fontFamily: "var(--primary-font)" }}>
+                                    <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0D0D14", marginTop: "12px", marginBottom: "16px", fontFamily: "var(--primary-font)" }}>
                                         18 Years of Operational Excellence — Zero Owned Digital Footprint
                                     </h3>
-                                    <p style={{ fontSize: "15.5px", color: "#475569", lineHeight: "1.7", marginBottom: "16px" }}>
+                                    <p style={{ fontSize: "15.5px", color: "#6B7280", lineHeight: "1.7", marginBottom: "16px" }}>
                                         Despite orchestrating major M&amp;A talent consolidations and leading 2,500+ employees, our client&apos;s name search on Google returned an outdated alumni bulletin and an unrelated namesake on page one.
                                     </p>
                                     <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                                         {[
-                                            "No personal domain or definitive executive CV online",
-                                            "Due diligence committees found silence instead of authority",
-                                            "Inactive LinkedIn profile with zero thought leadership voice",
-                                            "Overlooked for advisory mandates due to lack of public credibility"
+                                             "No personal domain or definitive executive CV online",
+                                             "Due diligence committees found silence instead of authority",
+                                             "Inactive LinkedIn profile with zero thought leadership voice",
+                                             "Overlooked for advisory mandates due to lack of public credibility"
                                         ].map((item, i) => (
-                                            <li key={i} style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "14.5px", color: "#64748b", marginBottom: "10px" }}>
+                                            <li key={i} style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "14.5px", color: "#6B7280", marginBottom: "10px" }}>
                                                 <span style={{ color: "#ef4444", fontWeight: "700" }}>&times;</span>
                                                 {item}
                                             </li>
@@ -209,16 +209,16 @@ export default function ExecutiveCaseStudy() {
                                     </ul>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div style={{ backgroundColor: "#f8fafc", padding: "30px", borderRadius: "12px", border: "1px solid #eaedf0" }}>
-                                        <div style={{ fontSize: "12px", fontWeight: "700", color: "#64748b", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "12px" }}>
+                                    <div style={{ backgroundColor: "#F7F5FC", padding: "30px", borderRadius: "12px", border: "1px solid #eaedf0" }}>
+                                        <div style={{ fontSize: "12px", fontWeight: "700", color: "#6B7280", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "12px" }}>
                                             Search Audit Baseline (Before)
                                         </div>
                                         <div style={{ backgroundColor: "#ffffff", padding: "16px", borderRadius: "8px", border: "1px solid #cbd5e1", marginBottom: "14px", fontSize: "13px" }}>
-                                            <span style={{ color: "#0f1013", fontWeight: "600" }}>Search: &quot;[Executive Name] HR Leader&quot;</span>
-                                            <div style={{ color: "#64748b", fontSize: "11px", marginTop: "2px" }}>https://random-university.edu/bulletin-2012</div>
+                                            <span style={{ color: "#0D0D14", fontWeight: "600" }}>Search: &quot;[Executive Name] HR Leader&quot;</span>
+                                            <div style={{ color: "#6B7280", fontSize: "11px", marginTop: "2px" }}>https://random-university.edu/bulletin-2012</div>
                                             <div style={{ color: "#4d5156", marginTop: "4px" }}>Result: Outdated 2012 student committee mention... No active corporate profile found.</div>
                                         </div>
-                                        <p style={{ fontSize: "13px", color: "#64748b", margin: 0, fontStyle: "italic" }}>
+                                        <p style={{ fontSize: "13px", color: "#6B7280", margin: 0, fontStyle: "italic" }}>
                                             &ldquo;I was advising our board internally every quarter, but external search chairs had no way to verify my governance stature.&rdquo;
                                         </p>
                                     </div>
@@ -232,10 +232,10 @@ export default function ExecutiveCaseStudy() {
                                     <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#92400e", backgroundColor: "#fef3c7", padding: "4px 10px", borderRadius: "6px", border: "1px solid #fde68a" }}>
                                         The Execution
                                     </span>
-                                    <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0f1013", marginTop: "12px", marginBottom: "16px", fontFamily: "var(--primary-font)" }}>
+                                    <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0D0D14", marginTop: "12px", marginBottom: "16px", fontFamily: "var(--primary-font)" }}>
                                         The 90-Day Tripartite Done-For-You Sprint
                                     </h3>
-                                    <p style={{ fontSize: "15.5px", color: "#475569", lineHeight: "1.7", marginBottom: "16px" }}>
+                                    <p style={{ fontSize: "15.5px", color: "#6B7280", lineHeight: "1.7", marginBottom: "16px" }}>
                                         Prominence took total operational ownership. The client participated in one 45-minute positioning interview; our team executed the architecture end-to-end.
                                     </p>
                                     <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
@@ -244,21 +244,21 @@ export default function ExecutiveCaseStudy() {
                                             { phase: "Days 31–60", title: "Google Search Reputation", desc: "Structured schema deployment, tier-1 syndicated interviews, and Knowledge Panel equity." },
                                             { phase: "Days 61–90", title: "Discreet LinkedIn Ghostwriting", desc: "Bi-weekly governance essays targeting nominating committees and Fortune 500 CEOs." }
                                         ].map((p, idx) => (
-                                            <div key={idx} style={{ display: "flex", gap: "14px", padding: "12px 14px", backgroundColor: "#f8fafc", borderRadius: "10px", border: "1px solid #edf2f7" }}>
-                                                <div style={{ fontWeight: "700", fontSize: "12px", color: "#0f1013", backgroundColor: "#eaedf0", padding: "4px 10px", borderRadius: "6px", height: "fit-content", whiteSpace: "nowrap" }}>
+                                            <div key={idx} style={{ display: "flex", gap: "14px", padding: "12px 14px", backgroundColor: "#F7F5FC", borderRadius: "10px", border: "1px solid #edf2f7" }}>
+                                                <div style={{ fontWeight: "700", fontSize: "12px", color: "#0D0D14", backgroundColor: "#eaedf0", padding: "4px 10px", borderRadius: "6px", height: "fit-content", whiteSpace: "nowrap" }}>
                                                     {p.phase}
                                                 </div>
                                                 <div>
-                                                    <div style={{ fontSize: "14px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)" }}>{p.title}</div>
-                                                    <div style={{ fontSize: "13px", color: "#64748b" }}>{p.desc}</div>
+                                                    <div style={{ fontSize: "14px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)" }}>{p.title}</div>
+                                                    <div style={{ fontSize: "13px", color: "#6B7280" }}>{p.desc}</div>
                                                 </div>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div style={{ backgroundColor: "#0f1013", padding: "34px", borderRadius: "14px", color: "#ffffff", border: "1px solid rgba(255, 255, 255, 0.08)" }}>
-                                        <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "1px", color: "#b89058", fontWeight: "700", marginBottom: "8px" }}>
+                                    <div style={{ backgroundColor: "#0D0D14", padding: "34px", borderRadius: "14px", color: "#ffffff", border: "1px solid rgba(255, 255, 255, 0.08)" }}>
+                                        <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "1px", color: "#8B5CF6", fontWeight: "700", marginBottom: "8px" }}>
                                             Client Time Investment
                                         </div>
                                         <div style={{ fontSize: "28px", fontWeight: "700", marginBottom: "8px", fontFamily: "var(--primary-font)" }}>
@@ -268,8 +268,8 @@ export default function ExecutiveCaseStudy() {
                                             Zero ghostwriting burden. The client sent quick WhatsApp voice notes while commuting; our team converted insights into boardroom-caliber thought leadership.
                                         </p>
                                         <div style={{ padding: "14px 18px", backgroundColor: "rgba(255,255,255,0.06)", borderRadius: "10px", border: "1px solid rgba(255,255,255,0.12)" }}>
-                                            <span style={{ fontSize: "12px", color: "#94a3b8" }}>Strict NDA Compliance:</span>
-                                            <div style={{ fontSize: "13px", color: "#f8fafc", fontWeight: "600", marginTop: "2px" }}>
+                                            <span style={{ fontSize: "12px", color: "#6B7280" }}>Strict NDA Compliance:</span>
+                                            <div style={{ fontSize: "13px", color: "#F7F5FC", fontWeight: "600", marginTop: "2px" }}>
                                                 100% anonymized corporate data with zero trade-secret disclosures.
                                             </div>
                                         </div>
@@ -284,10 +284,10 @@ export default function ExecutiveCaseStudy() {
                                     <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#166534", backgroundColor: "#f0fdf4", padding: "4px 10px", borderRadius: "6px", border: "1px solid #bbf7d0" }}>
                                         The Transformation
                                     </span>
-                                    <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0f1013", marginTop: "12px", marginBottom: "16px", fontFamily: "var(--primary-font)" }}>
+                                    <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0D0D14", marginTop: "12px", marginBottom: "16px", fontFamily: "var(--primary-font)" }}>
                                         Inbound Stature Preceding Every Meeting
                                     </h3>
-                                    <p style={{ fontSize: "15.5px", color: "#475569", lineHeight: "1.7", marginBottom: "16px" }}>
+                                    <p style={{ fontSize: "15.5px", color: "#6B7280", lineHeight: "1.7", marginBottom: "16px" }}>
                                         Within 90 days of launch, the client became the definitive authority in strategic HR governance for their sector. Opportunities began finding them asynchronously.
                                     </p>
                                     <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -297,7 +297,7 @@ export default function ExecutiveCaseStudy() {
                                             "Ranked #1 on Google for full name with verified Knowledge Graph signals",
                                             "Over 65,000 organic impressions on LinkedIn from C-suite peers"
                                         ].map((item, i) => (
-                                            <li key={i} style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "14.5px", color: "#1b2534", fontWeight: "600", marginBottom: "10px" }}>
+                                            <li key={i} style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "14.5px", color: "#0D0D14", fontWeight: "600", marginBottom: "10px" }}>
                                                 <i className="fa-solid fa-check" style={{ color: "#15803d", fontSize: "13px" }}></i>
                                                 {item}
                                             </li>
@@ -305,19 +305,19 @@ export default function ExecutiveCaseStudy() {
                                     </ul>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div style={{ backgroundColor: "#f8fafc", padding: "30px", borderRadius: "14px", border: "1px solid #eaedf0" }}>
+                                    <div style={{ backgroundColor: "#F7F5FC", padding: "30px", borderRadius: "14px", border: "1px solid #eaedf0" }}>
                                         <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "12px" }}>
                                             {[...Array(5)].map((_, i) => (
-                                                <i key={i} className="fa-solid fa-star" style={{ color: "#b89058", fontSize: "13px" }}></i>
+                                                <i key={i} className="fa-solid fa-star" style={{ color: "#8B5CF6", fontSize: "13px" }}></i>
                                             ))}
                                         </div>
-                                        <p style={{ fontSize: "16px", color: "#1e293b", lineHeight: "1.7", fontStyle: "italic", marginBottom: "18px" }}>
+                                        <p style={{ fontSize: "16px", color: "#0D0D14", lineHeight: "1.7", fontStyle: "italic", marginBottom: "18px" }}>
                                             &ldquo;Prominence shifted how the market perceives me. When headhunters and CEOs Google me now, they see an authoritative board candidate rather than just another corporate executive.&rdquo;
                                         </p>
-                                        <div style={{ fontSize: "14px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)" }}>
+                                        <div style={{ fontSize: "14px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)" }}>
                                             VP of People &amp; Board Director
                                         </div>
-                                        <div style={{ fontSize: "12px", color: "#64748b" }}>
+                                        <div style={{ fontSize: "12px", color: "#6B7280" }}>
                                             Global Tech Enterprise ($4B Market Cap)
                                         </div>
                                     </div>
@@ -329,7 +329,7 @@ export default function ExecutiveCaseStudy() {
                     {/* Bottom Action Footer */}
                     <div style={{
                         padding: "20px 35px",
-                        backgroundColor: "#f8fafc",
+                        backgroundColor: "#F7F5FC",
                         borderTop: "1px solid #eaedf0",
                         display: "flex",
                         alignItems: "center",
@@ -337,7 +337,7 @@ export default function ExecutiveCaseStudy() {
                         flexWrap: "wrap",
                         gap: "16px"
                     }}>
-                        <div style={{ fontSize: "14px", color: "#64748b", fontWeight: "500" }}>
+                        <div style={{ fontSize: "14px", color: "#6B7280", fontWeight: "500" }}>
                             Want similar asymmetric trust for board seats and keynote invitations?
                         </div>
                         <Link href="/contact" className="btn_style_one btn_md">

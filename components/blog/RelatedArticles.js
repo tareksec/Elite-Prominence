@@ -33,7 +33,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
               fontWeight: '700',
               textTransform: 'uppercase',
               letterSpacing: '0.8px',
-              color: '#b89058',
+              color: '#8B5CF6',
               fontFamily: 'var(--primary-font)'
             }}
           >
@@ -43,7 +43,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
             style={{
               fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
               fontSize: '28px',
-              color: '#0f1013',
+              color: '#0D0D14',
               margin: '4px 0 0 0'
             }}
           >
@@ -56,7 +56,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
           style={{
             fontSize: '14px',
             fontWeight: '600',
-            color: '#0f1013',
+            color: '#0D0D14',
             textDecoration: 'none',
             display: 'inline-flex',
             alignItems: 'center',
@@ -88,7 +88,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
 
                 {/* Card Content */}
                 <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', flexGrow: 1, backgroundColor: '#FFFFFF' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: '#94A3B8', marginBottom: '8px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: '#6B7280', marginBottom: '8px' }}>
                     <span>{art.publishDate || 'Recent'}</span>
                     <span>•</span>
                     <span>{art.readTime || '6 min read'}</span>
@@ -104,7 +104,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
                     </p>
                   )}
 
-                  <div style={{ marginTop: 'auto', paddingTop: '12px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '700', color: '#0f1013' }}>
+                  <div style={{ marginTop: 'auto', paddingTop: '12px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '700', color: '#0D0D14' }}>
                     <span>Read Article</span>
                     <i className="fa-solid fa-arrow-right ms-1" style={{ fontSize: '12px' }}></i>
                   </div>
@@ -132,7 +132,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
 
         .ep-related-card:hover {
           transform: translateY(-4px);
-          box-shadow: 0 12px 30px rgba(15, 16, 19, 0.08);
+          box-shadow: 0 12px 30px rgba(13, 13, 20, 0.08);
           border-color: #cbd5e1;
         }
 
@@ -141,7 +141,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
           width: 100%;
           height: 190px;
           overflow: hidden;
-          background-color: #f8fafc;
+          background-color: #F7F5FC;
         }
 
         .ep-card-img {
@@ -159,7 +159,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
           position: absolute;
           top: 12px;
           left: 12px;
-          background: #0f1013;
+          background: #0D0D14;
           color: #FFFFFF;
           font-size: 11px;
           font-weight: 700;
@@ -176,7 +176,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
           font-family: var(--title-font, 'PT Serif', Georgia, serif);
           font-size: 18px;
           line-height: 1.35;
-          color: #0f1013;
+          color: #0D0D14;
           margin: 0 0 8px 0;
           display: -webkit-box;
           -webkit-line-clamp: 2;
@@ -186,13 +186,13 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
         }
 
         .ep-related-card:hover .ep-card-title {
-          color: #b89058;
+          color: #8B5CF6;
         }
 
         .ep-card-excerpt {
           font-size: 13px;
           line-height: 1.55;
-          color: #64748B;
+          color: #6B7280;
           margin: 0 0 12px 0;
           display: -webkit-box;
           -webkit-line-clamp: 2;

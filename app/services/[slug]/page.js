@@ -121,14 +121,14 @@ export default function ServiceDetailPage({ params }) {
                                 <h1 style={{
                                     fontSize: "clamp(30px, 4.8vw, 44px)",
                                     fontWeight: "700",
-                                    color: "#0f1013",
+                                    color: "#0D0D14",
                                     lineHeight: "1.2",
                                     marginBottom: "16px",
                                     fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                                 }}>
                                     {service.title}
                                 </h1>
-                                <p style={{ fontSize: "17.5px", fontWeight: "700", color: "#b89058", marginBottom: "16px", fontFamily: "var(--primary-font)", letterSpacing: "0.2px" }}>
+                                <p style={{ fontSize: "17.5px", fontWeight: "700", color: "#8B5CF6", marginBottom: "16px", fontFamily: "var(--primary-font)", letterSpacing: "0.2px" }}>
                                     {service.tagline}
                                 </p>
                                 <p className="prominence_lead_text" style={{ marginBottom: "32px", maxWidth: "640px" }}>
@@ -161,7 +161,7 @@ export default function ServiceDetailPage({ params }) {
                                         bottom: "16px",
                                         left: "16px",
                                         right: "16px",
-                                        background: "rgba(15, 16, 19, 0.85)",
+                                        background: "rgba(13, 13, 20, 0.85)",
                                         backdropFilter: "blur(8px)",
                                         padding: "12px 16px",
                                         borderRadius: "8px",
@@ -171,7 +171,7 @@ export default function ServiceDetailPage({ params }) {
                                         justifyContent: "space-between",
                                         alignItems: "center"
                                     }}>
-                                        <span style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#b89058" }}>
+                                        <span style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#8B5CF6" }}>
                                             Sovereign Standard
                                         </span>
                                         <span style={{ fontSize: "12px", color: "#cbd5e1" }}>
@@ -203,24 +203,24 @@ export default function ServiceDetailPage({ params }) {
 
                         <div className="row g-4 align-items-center">
                             <div className="col-lg-7">
-                                <div style={{ fontSize: "16.5px", lineHeight: "29px", color: "#334155" }}>
+                                <div style={{ fontSize: "16.5px", lineHeight: "29px", color: "#0D0D14" }}>
                                     <p style={{ marginBottom: "20px" }}>
                                         {service.problem}
                                     </p>
-                                    <p style={{ color: "#64748b", fontSize: "15px", margin: 0 }}>
+                                    <p style={{ color: "#6B7280", fontSize: "15px", margin: 0 }}>
                                         When board nominating panels, private equity partners, or enterprise clients conduct due diligence, they make irreversible impressions within 30 seconds of organic search inspection.
                                     </p>
                                 </div>
                             </div>
                             <div className="col-lg-5">
-                                <div style={{ background: "#f8fafc", border: "1px solid #eaedf0", borderLeft: "3px solid #b89058", borderRadius: "12px", padding: "28px 24px" }}>
-                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#b89058", display: "block", marginBottom: "8px" }}>
+                                <div style={{ background: "#F7F5FC", border: "1px solid #eaedf0", borderLeft: "3px solid #8B5CF6", borderRadius: "12px", padding: "28px 24px" }}>
+                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#8B5CF6", display: "block", marginBottom: "8px" }}>
                                         The Conventional Trap
                                     </span>
-                                    <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", marginBottom: "10px" }}>
+                                    <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0D0D14", marginBottom: "10px" }}>
                                         Rented Social Retainers
                                     </h3>
-                                    <p style={{ fontSize: "14px", color: "#64748b", lineHeight: "22px", margin: 0 }}>
+                                    <p style={{ fontSize: "14px", color: "#6B7280", lineHeight: "22px", margin: 0 }}>
                                         Traditional agencies push generic daily posting that vanishes within hours. When algorithms change or you transition corporate roles, rented land disappears.
                                     </p>
                                 </div>
@@ -230,7 +230,7 @@ export default function ServiceDetailPage({ params }) {
                 </section>
 
                 {/* 02. Insight: The Institutional Reality */}
-                <section className="prominence_section" style={{ background: "#FAF8F2", borderTop: "1px solid #eaedf0", borderBottom: "1px solid #eaedf0" }}>
+                <section className="prominence_section" style={{ background: "#F7F5FC", borderTop: "1px solid #eaedf0", borderBottom: "1px solid #eaedf0" }}>
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-5 mb-4 mb-lg-0">
@@ -238,22 +238,22 @@ export default function ServiceDetailPage({ params }) {
                                 <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "20px" }}>
                                     Why Sovereign Stature Matters
                                 </h2>
-                                <blockquote style={{ fontSize: "17px", fontWeight: "600", color: "#1e293b", borderLeft: "3px solid var(--ep-gold, #b89058)", paddingLeft: "20px", margin: 0, lineHeight: "1.6" }}>
+                                <blockquote style={{ fontSize: "17px", fontWeight: "600", color: "#0D0D14", borderLeft: "3px solid #8B5CF6", paddingLeft: "20px", margin: 0, lineHeight: "1.6" }}>
                                     &ldquo;Executive influence is never won by shouting into the feed. It is established by sovereign assets that speak with quiet, undeniable finality.&rdquo;
                                 </blockquote>
                             </div>
                             <div className="col-lg-7 ps-lg-5">
-                                <p style={{ fontSize: "17px", lineHeight: "30px", color: "#334155", marginBottom: "24px" }}>
+                                <p style={{ fontSize: "17px", lineHeight: "30px", color: "#0D0D14", marginBottom: "24px" }}>
                                     {service.whyItMatters}
                                 </p>
                                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "16px" }}>
                                     <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "10px", padding: "18px 20px" }}>
-                                        <strong style={{ fontSize: "15px", color: "#0f1013", display: "block", marginBottom: "4px" }}>100% Owned Equity</strong>
-                                        <span style={{ fontSize: "13px", color: "#64748b", lineHeight: "20px", display: "block" }}>Assets that travel with you across career transitions and board mandates.</span>
+                                        <strong style={{ fontSize: "15px", color: "#0D0D14", display: "block", marginBottom: "4px" }}>100% Owned Equity</strong>
+                                        <span style={{ fontSize: "13px", color: "#6B7280", lineHeight: "20px", display: "block" }}>Assets that travel with you across career transitions and board mandates.</span>
                                     </div>
                                     <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "10px", padding: "18px 20px" }}>
-                                        <strong style={{ fontSize: "15px", color: "#0f1013", display: "block", marginBottom: "4px" }}>Institutional Defense</strong>
-                                        <span style={{ fontSize: "13px", color: "#64748b", lineHeight: "20px", display: "block" }}>Protects your name, family, and reputation against scrapers and outdated noise.</span>
+                                        <strong style={{ fontSize: "15px", color: "#0D0D14", display: "block", marginBottom: "4px" }}>Institutional Defense</strong>
+                                        <span style={{ fontSize: "13px", color: "#6B7280", lineHeight: "20px", display: "block" }}>Protects your name, family, and reputation against scrapers and outdated noise.</span>
                                     </div>
                                 </div>
                             </div>
@@ -278,25 +278,25 @@ export default function ServiceDetailPage({ params }) {
                             </div>
                         </div>
 
-                        <div style={{ background: "#fafbfc", border: "1px solid #eaedf0", borderRadius: "16px", padding: "clamp(28px, 5vw, 44px)" }}>
-                            <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0f1013", marginBottom: "14px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                        <div style={{ background: "#F7F5FC", border: "1px solid #eaedf0", borderRadius: "16px", padding: "clamp(28px, 5vw, 44px)" }}>
+                            <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0D0D14", marginBottom: "14px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 {service.tagline}
                             </h3>
-                            <p style={{ fontSize: "16.5px", lineHeight: "28px", color: "#334155", maxWidth: "820px", margin: "0 0 28px 0" }}>
+                            <p style={{ fontSize: "16.5px", lineHeight: "28px", color: "#0D0D14", maxWidth: "820px", margin: "0 0 28px 0" }}>
                                 {service.strategy}
                             </p>
                             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "20px", borderTop: "1px solid #e2e8f0", paddingTop: "24px" }}>
                                 <div>
-                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#b89058", letterSpacing: "1px", display: "block" }}>Mandate Stature</span>
-                                    <strong style={{ fontSize: "15px", color: "#0f1013" }}>C-Suite, CHRO &amp; Board Level</strong>
+                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#8B5CF6", letterSpacing: "1px", display: "block" }}>Mandate Stature</span>
+                                    <strong style={{ fontSize: "15px", color: "#0D0D14" }}>C-Suite, CHRO &amp; Board Level</strong>
                                 </div>
                                 <div>
-                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#b89058", letterSpacing: "1px", display: "block" }}>Monthly Executive Time</span>
-                                    <strong style={{ fontSize: "15px", color: "#0f1013" }}>&lt; 30 Minutes Total</strong>
+                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#8B5CF6", letterSpacing: "1px", display: "block" }}>Monthly Executive Time</span>
+                                    <strong style={{ fontSize: "15px", color: "#0D0D14" }}>&lt; 30 Minutes Total</strong>
                                 </div>
                                 <div>
-                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#b89058", letterSpacing: "1px", display: "block" }}>Asset Ownership</span>
-                                    <strong style={{ fontSize: "15px", color: "#0f1013" }}>100% Owned Domain &amp; Code</strong>
+                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#8B5CF6", letterSpacing: "1px", display: "block" }}>Asset Ownership</span>
+                                    <strong style={{ fontSize: "15px", color: "#0D0D14" }}>100% Owned Domain &amp; Code</strong>
                                 </div>
                             </div>
                         </div>
@@ -304,7 +304,7 @@ export default function ServiceDetailPage({ params }) {
                 </section>
 
                 {/* 04. Execution: Protocol & Scope */}
-                <section className="prominence_section" style={{ background: "#FAF8F2", borderTop: "1px solid #eaedf0", borderBottom: "1px solid #eaedf0" }}>
+                <section className="prominence_section" style={{ background: "#F7F5FC", borderTop: "1px solid #eaedf0", borderBottom: "1px solid #eaedf0" }}>
                     <div className="container">
                         <div className="prominence_header_split">
                             <div>
@@ -325,13 +325,13 @@ export default function ServiceDetailPage({ params }) {
                             {service.process.map((step, idx) => (
                                 <div key={idx} className="col-lg-3 col-md-6">
                                     <div style={{ background: "#ffffff", border: "1px solid #eaedf0", borderRadius: "14px", padding: "28px 22px", height: "100%", display: "flex", flexDirection: "column" }}>
-                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#b89058", textTransform: "uppercase", letterSpacing: "1.2px", marginBottom: "12px" }}>
+                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#8B5CF6", textTransform: "uppercase", letterSpacing: "1.2px", marginBottom: "12px" }}>
                                             Stage 0{step.step}
                                         </span>
-                                        <h4 style={{ fontSize: "17px", fontWeight: "700", color: "#0f1013", marginBottom: "10px" }}>
+                                        <h4 style={{ fontSize: "17px", fontWeight: "700", color: "#0D0D14", marginBottom: "10px" }}>
                                             {step.name}
                                         </h4>
-                                        <p style={{ fontSize: "13.5px", color: "#64748b", lineHeight: "22px", margin: 0, flex: 1 }}>
+                                        <p style={{ fontSize: "13.5px", color: "#6B7280", lineHeight: "22px", margin: 0, flex: 1 }}>
                                             {step.desc}
                                         </p>
                                     </div>
@@ -341,14 +341,14 @@ export default function ServiceDetailPage({ params }) {
 
                         {/* Deliverables Specification Matrix */}
                         <div style={{ background: "#ffffff", border: "1px solid #eaedf0", borderRadius: "16px", padding: "clamp(28px, 4vw, 36px)" }}>
-                            <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "20px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                            <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "20px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 Included Institutional Deliverables
                             </h3>
                             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "16px" }}>
                                 {service.deliverables.map((item, idx) => (
-                                    <div key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "14px", padding: "14px 16px", background: "#fafbfc", borderRadius: "8px", border: "1px solid #f1f5f9" }}>
-                                        <i className="fa-solid fa-check" style={{ color: "#b89058", marginTop: "4px", fontSize: "12px" }}></i>
-                                        <span style={{ fontSize: "14px", color: "#1e293b", fontWeight: "500", lineHeight: "22px" }}>{item}</span>
+                                    <div key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "14px", padding: "14px 16px", background: "#F7F5FC", borderRadius: "8px", border: "1px solid #f1f5f9" }}>
+                                        <i className="fa-solid fa-check" style={{ color: "#8B5CF6", marginTop: "4px", fontSize: "12px" }}></i>
+                                        <span style={{ fontSize: "14px", color: "#0D0D14", fontWeight: "500", lineHeight: "22px" }}>{item}</span>
                                     </div>
                                 ))}
                             </div>
@@ -357,17 +357,17 @@ export default function ServiceDetailPage({ params }) {
                 </section>
 
                 {/* 05. Outcome: Authority Milestones & Board Impact */}
-                <section className="prominence_section" style={{ background: "#0f1013", color: "#ffffff" }}>
+                <section className="prominence_section" style={{ background: "#0D0D14", color: "#ffffff" }}>
                     <div className="container">
                         <div className="prominence_header_split">
                             <div>
-                                <span className="prominence_tracker" style={{ color: "#b89058" }}>05 · Measurable Impact</span>
+                                <span className="prominence_tracker" style={{ color: "#8B5CF6" }}>05 · Measurable Impact</span>
                                 <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", color: "#ffffff" }}>
                                     Authority Milestones &amp; Outcomes
                                 </h2>
                             </div>
                             <div>
-                                <p className="prominence_lead_text" style={{ color: "#94a3b8" }}>
+                                <p className="prominence_lead_text" style={{ color: "#6B7280" }}>
                                     The measurable commercial, governance, and reputational return engineered for enterprise leaders.
                                 </p>
                             </div>
@@ -376,7 +376,7 @@ export default function ServiceDetailPage({ params }) {
                         <div className="row g-4">
                             <div className="col-lg-6">
                                 <div style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.09)", borderRadius: "14px", padding: "32px 28px", height: "100%" }}>
-                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#b89058", display: "block", marginBottom: "12px" }}>
+                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#8B5CF6", display: "block", marginBottom: "12px" }}>
                                         Governance &amp; Search Milestones
                                     </span>
                                     <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#ffffff", marginBottom: "20px" }}>
@@ -385,7 +385,7 @@ export default function ServiceDetailPage({ params }) {
                                     <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                                         {service.expectedOutcomes.map((outcome, idx) => (
                                             <div key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
-                                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058", marginTop: "10px", flexShrink: 0 }}></span>
+                                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6", marginTop: "10px", flexShrink: 0 }}></span>
                                                 <p style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: "24px", margin: 0 }}>
                                                     {outcome}
                                                 </p>
@@ -397,7 +397,7 @@ export default function ServiceDetailPage({ params }) {
 
                             <div className="col-lg-6">
                                 <div style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.09)", borderRadius: "14px", padding: "32px 28px", height: "100%" }}>
-                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#94a3b8", display: "block", marginBottom: "12px" }}>
+                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#6B7280", display: "block", marginBottom: "12px" }}>
                                         Target Leadership Stature
                                     </span>
                                     <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#ffffff", marginBottom: "20px" }}>
@@ -406,7 +406,7 @@ export default function ServiceDetailPage({ params }) {
                                     <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                                         {service.whoItsFor.map((persona, idx) => (
                                             <div key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
-                                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058", marginTop: "10px", flexShrink: 0 }}></span>
+                                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6", marginTop: "10px", flexShrink: 0 }}></span>
                                                 <p style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: "24px", margin: 0 }}>
                                                     {persona}
                                                 </p>
@@ -440,11 +440,11 @@ export default function ServiceDetailPage({ params }) {
                             <div className="col-lg-10">
                                 <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                                     {service.faqs.map((faq, i) => (
-                                        <div key={i} style={{ border: "1px solid #e2e8f0", borderRadius: "12px", padding: "26px 30px", background: "#fafbfc" }}>
-                                            <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", marginBottom: "10px" }}>
+                                        <div key={i} style={{ border: "1px solid #e2e8f0", borderRadius: "12px", padding: "26px 30px", background: "#F7F5FC" }}>
+                                            <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0D0D14", marginBottom: "10px" }}>
                                                 {faq.question}
                                             </h3>
-                                            <p style={{ color: "#475569", lineHeight: "26px", margin: 0, fontSize: "15px" }}>
+                                            <p style={{ color: "#6B7280", lineHeight: "26px", margin: 0, fontSize: "15px" }}>
                                                 {faq.answer}
                                             </p>
                                         </div>
@@ -456,7 +456,7 @@ export default function ServiceDetailPage({ params }) {
                 </section>
 
                 {/* Related Capabilities */}
-                <section className="prominence_section_compact" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7" }}>
+                <section className="prominence_section_compact" style={{ background: "#F7F5FC", borderTop: "1px solid #edf2f7" }}>
                     <div className="container">
                         <div className="prominence_header_split" style={{ marginBottom: "36px" }}>
                             <div>
@@ -476,15 +476,15 @@ export default function ServiceDetailPage({ params }) {
                                 <div key={rel.slug} className="col-lg-4 col-md-6">
                                     <div className="prominence_card_equal_height" style={{ background: "#ffffff", border: "1px solid #eaedf0", borderRadius: "12px", padding: "28px" }}>
                                         <div className="prominence_card_body">
-                                            <span style={{ fontSize: "11px", fontWeight: "700", color: "#b89058", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px", fontFamily: "var(--primary-font)", display: "block" }}>
+                                            <span style={{ fontSize: "11px", fontWeight: "700", color: "#8B5CF6", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px", fontFamily: "var(--primary-font)", display: "block" }}>
                                                 Pillar {rel.number}
                                             </span>
                                             <h4 style={{ fontSize: "18px", fontWeight: "700", marginBottom: "8px" }}>
-                                                <Link href={`/services/${rel.slug}`} style={{ color: "#0f1013", textDecoration: "none" }}>
+                                                <Link href={`/services/${rel.slug}`} style={{ color: "#0D0D14", textDecoration: "none" }}>
                                                     {rel.title}
                                                 </Link>
                                             </h4>
-                                            <p style={{ fontSize: "14px", color: "#64748b", lineHeight: "22px", margin: 0 }}>
+                                            <p style={{ fontSize: "14px", color: "#6B7280", lineHeight: "22px", margin: 0 }}>
                                                 {rel.shortDescription}
                                             </p>
                                         </div>
@@ -501,11 +501,11 @@ export default function ServiceDetailPage({ params }) {
                 </section>
 
                 {/* Final Consultation CTA */}
-                <section className="prominence_section" style={{ background: "#FAF8F2", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
+                <section className="prominence_section" style={{ background: "#F7F5FC", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
                     <div className="container">
                         <div className="prominence_header_centered" style={{ maxWidth: "740px", margin: "0 auto" }}>
                             <span className="prominence_tracker">Private Consultation</span>
-                            <h2 style={{ fontSize: "clamp(26px, 3.8vw, 36px)", fontWeight: "700", color: "#0f1013", marginBottom: "16px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                            <h2 style={{ fontSize: "clamp(26px, 3.8vw, 36px)", fontWeight: "700", color: "#0D0D14", marginBottom: "16px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 Discuss Your Executive Positioning
                             </h2>
                             <p className="prominence_lead_text" style={{ marginBottom: "32px" }}>

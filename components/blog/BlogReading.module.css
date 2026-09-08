@@ -1,22 +1,22 @@
 /* Elite Prominence — Executive Blog Reading CSS Module */
 
 .readingContainer {
-  --gradient-brand: linear-gradient(180deg, #2b2d32 0%, #151619 100%);
-  --gradient-brand-subtle: rgba(15, 16, 19, 0.04);
+  --gradient-brand: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+  --gradient-brand-subtle: rgba(139, 92, 246, 0.04);
   --bg-page: #FFFFFF;
-  --bg-surface: #F8F9FA;
+  --bg-surface: #F7F5FC;
   --bg-muted: #F1F3F5;
-  --text-heading: #0f1013;
+  --text-heading: #0D0D14;
   --text-body: #374151;
-  --text-secondary: #64748B;
+  --text-secondary: #6B7280;
   --text-muted: #94A3B8;
-  --purple: #0f1013;
-  --magenta: #0f1013;
-  --pink: #b89058;
+  --purple: #8B5CF6;
+  --magenta: #EC4899;
+  --pink: #EC4899;
   --border: #E5E7EB;
-  --border-brand: #0f1013;
-  --shadow-sm: 0 1px 3px rgba(15, 16, 19, 0.05);
-  --shadow-md: 0 4px 14px rgba(15, 16, 19, 0.08);
+  --border-brand: #0D0D14;
+  --shadow-sm: 0 1px 3px rgba(13, 13, 20, 0.05);
+  --shadow-md: 0 4px 14px rgba(13, 13, 20, 0.08);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.08);
   --shadow-brand: 0 8px 25px rgba(0, 0, 0, 0.15);
   --font-heading: var(--primary-font), serif;
@@ -64,7 +64,7 @@
   font-family: var(--font-heading);
   font-size: 30px;
   line-height: 1.3;
-  color: #0f1013;
+  color: #0D0D14;
   border-left: 4px solid var(--purple);
   padding-left: 16px;
   margin-top: 2.75rem;
@@ -87,18 +87,18 @@
   font-family: var(--font-body);
   font-size: 22px;
   font-weight: 600;
-  color: #0f1013;
+  color: #0D0D14;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 .articleBody strong {
-  color: #0f1013;
+  color: #0D0D14;
   font-weight: 700;
 }
 
 .articleBody a {
-  color: #0f1013;
+  color: #0D0D14;
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 500;
@@ -106,18 +106,18 @@
 }
 
 .articleBody a:hover {
-  color: #b89058;
+  color: #8B5CF6;
 }
 
 .articleBody blockquote {
   position: relative;
-  background: #F8F9FA;
-  border-left: 4px solid #b89058;
+  background: #F7F5FC;
+  border-left: 4px solid #8B5CF6;
   border-radius: 0 10px 10px 0;
   padding: 1.25rem 1.75rem;
   margin: 2rem 0;
   font-style: italic;
-  color: #0f1013;
+  color: #0D0D14;
   box-shadow: var(--shadow-sm);
 }
 

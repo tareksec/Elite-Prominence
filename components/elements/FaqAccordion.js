@@ -70,8 +70,8 @@ export default function FaqAccordion() {
                         className="prominence_depth_card"
                         style={{
                             padding: "0",
-                            backgroundColor: isOpen ? "#faf8f2" : "#ffffff",
-                            borderColor: isOpen ? "#b89058" : "#eaedf0",
+                            backgroundColor: isOpen ? "#F7F5FC" : "#ffffff",
+                            borderColor: isOpen ? "#8B5CF6" : "#eaedf0",
                             transition: "all 0.25s ease",
                             overflow: "hidden"
                         }}
@@ -93,7 +93,7 @@ export default function FaqAccordion() {
                                         fontWeight: "700",
                                         textTransform: "uppercase",
                                         letterSpacing: "0.8px",
-                                        color: "#b89058",
+                                        color: "#8B5CF6",
                                         fontFamily: "var(--primary-font)"
                                     }}>
                                         {item.category}
@@ -102,7 +102,7 @@ export default function FaqAccordion() {
                                     <span style={{
                                         fontSize: "11px",
                                         fontWeight: "600",
-                                        color: "#64748b",
+                                        color: "#6B7280",
                                         backgroundColor: isOpen ? "#ffffff" : "#f1f5f9",
                                         padding: "2px 8px",
                                         borderRadius: "4px",
@@ -115,8 +115,8 @@ export default function FaqAccordion() {
                                     width: "28px",
                                     height: "28px",
                                     borderRadius: "50%",
-                                    backgroundColor: isOpen ? "#0f1013" : "#f1f5f9",
-                                    color: isOpen ? "#ffffff" : "#64748b",
+                                    backgroundColor: isOpen ? "#0D0D14" : "#f1f5f9",
+                                    color: isOpen ? "#ffffff" : "#6B7280",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -132,7 +132,7 @@ export default function FaqAccordion() {
                                 margin: "4px 0 0",
                                 fontSize: "17.5px",
                                 fontWeight: "700",
-                                color: isOpen ? "#0f1013" : "#1e293b",
+                                color: "#0D0D14",
                                 fontFamily: "var(--primary-font)",
                                 lineHeight: "1.35",
                                 letterSpacing: "-0.2px"
@@ -144,12 +144,12 @@ export default function FaqAccordion() {
                         {isOpen && (
                             <div style={{
                                 padding: "0 28px 24px",
-                                borderTop: "1px solid rgba(184, 144, 88, 0.2)"
+                                borderTop: "1px solid rgba(139, 92, 246, 0.2)"
                             }}>
                                 <p style={{
                                     margin: "16px 0 0",
                                     fontSize: "15px",
-                                    color: "#475569",
+                                    color: "#6B7280",
                                     lineHeight: "26px"
                                 }}>
                                     {item.answer}

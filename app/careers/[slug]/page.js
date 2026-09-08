@@ -94,7 +94,7 @@ export default function MandateDetailPage({ params }) {
                                 <span className="prominence_badge">
                                     {mandate.mandate}
                                 </span>
-                                <span style={{ fontSize: "12px", color: "#64748b", fontWeight: "600" }}>
+                                <span style={{ fontSize: "12px", color: "#6B7280", fontWeight: "600" }}>
                                     {mandate.practice}
                                 </span>
                             </div>
@@ -102,7 +102,7 @@ export default function MandateDetailPage({ params }) {
                             <h1 style={{
                                 fontSize: "clamp(28px, 4.5vw, 42px)",
                                 fontWeight: "700",
-                                color: "#0f1013",
+                                color: "#0D0D14",
                                 lineHeight: "1.2",
                                 letterSpacing: "-0.5px",
                                 marginBottom: "18px",
@@ -111,7 +111,7 @@ export default function MandateDetailPage({ params }) {
                                 {mandate.title}
                             </h1>
 
-                            <p className="prominence_lead_text" style={{ fontSize: "17.5px", marginBottom: "32px", maxWidth: "780px" }}>
+                            <p className="prominence_lead_text" style={{ fontSize: "17.5px", marginBottom: "32px", maxWidth: "780px", color: "#6B7280" }}>
                                 {mandate.mission}
                             </p>
 
@@ -120,41 +120,41 @@ export default function MandateDetailPage({ params }) {
                                 display: "grid",
                                 gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
                                 gap: "16px",
-                                background: "#fafbfc",
+                                background: "#F7F5FC",
                                 border: "1px solid #e2e8f0",
                                 borderRadius: "12px",
                                 padding: "20px 24px",
                                 marginBottom: "32px"
                             }}>
                                 <div>
-                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#94a3b8", display: "block" }}>
+                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#6B7280", display: "block" }}>
                                         Engagement Model
                                     </span>
-                                    <strong style={{ fontSize: "14.5px", color: "#0f1013", marginTop: "2px", display: "block" }}>
+                                    <strong style={{ fontSize: "14.5px", color: "#0D0D14", marginTop: "2px", display: "block" }}>
                                         {mandate.arrangement}
                                     </strong>
                                 </div>
                                 <div>
-                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#94a3b8", display: "block" }}>
+                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#6B7280", display: "block" }}>
                                         Compensation
                                     </span>
-                                    <strong style={{ fontSize: "14.5px", color: "#b89058", marginTop: "2px", display: "block" }}>
+                                    <strong style={{ fontSize: "14.5px", color: "#8B5CF6", marginTop: "2px", display: "block" }}>
                                         {mandate.compensation}
                                     </strong>
                                 </div>
                                 <div>
-                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#94a3b8", display: "block" }}>
+                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#6B7280", display: "block" }}>
                                         Workplace Structure
                                     </span>
-                                    <strong style={{ fontSize: "14.5px", color: "#0f1013", marginTop: "2px", display: "block" }}>
+                                    <strong style={{ fontSize: "14.5px", color: "#0D0D14", marginTop: "2px", display: "block" }}>
                                         {mandate.location}
                                     </strong>
                                 </div>
                                 <div>
-                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#94a3b8", display: "block" }}>
+                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#6B7280", display: "block" }}>
                                         Discretion Protocol
                                     </span>
-                                    <strong style={{ fontSize: "14.5px", color: "#0f1013", marginTop: "2px", display: "block" }}>
+                                    <strong style={{ fontSize: "14.5px", color: "#0D0D14", marginTop: "2px", display: "block" }}>
                                         Strict NDA Adherence
                                     </strong>
                                 </div>
@@ -180,10 +180,10 @@ export default function MandateDetailPage({ params }) {
                             {/* 1. Context & Overview */}
                             <div style={{ marginBottom: "52px" }}>
                                 <span className="prominence_tracker">01 · Practice Overview</span>
-                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "18px" }}>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "18px", color: "#0D0D14" }}>
                                     The Mandate In Focus
                                 </h2>
-                                <p style={{ fontSize: "16.5px", lineHeight: "28px", color: "#334155" }}>
+                                <p style={{ fontSize: "16.5px", lineHeight: "28px", color: "#0D0D14" }}>
                                     {mandate.overview}
                                 </p>
                             </div>
@@ -191,7 +191,7 @@ export default function MandateDetailPage({ params }) {
                             {/* 2. Key Imperatives */}
                             <div style={{ marginBottom: "52px" }}>
                                 <span className="prominence_tracker">02 · Core Responsibilities</span>
-                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "22px" }}>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "22px", color: "#0D0D14" }}>
                                     Essential Imperatives
                                 </h2>
                                 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
@@ -201,14 +201,14 @@ export default function MandateDetailPage({ params }) {
                                             alignItems: "flex-start",
                                             gap: "16px",
                                             padding: "18px 20px",
-                                            background: "#fafbfc",
+                                            background: "#F7F5FC",
                                             border: "1px solid #eaedf0",
                                             borderRadius: "10px"
                                         }}>
-                                            <span style={{ fontSize: "12px", fontWeight: "700", color: "#b89058", minWidth: "24px", paddingTop: "2px" }}>
+                                            <span style={{ fontSize: "12px", fontWeight: "700", color: "#8B5CF6", minWidth: "24px", paddingTop: "2px" }}>
                                                 0{idx + 1}
                                             </span>
-                                            <p style={{ margin: 0, fontSize: "15px", color: "#1e293b", lineHeight: "24px", fontWeight: "500" }}>
+                                            <p style={{ margin: 0, fontSize: "15px", color: "#0D0D14", lineHeight: "24px", fontWeight: "500" }}>
                                                 {item}
                                             </p>
                                         </div>
@@ -219,14 +219,14 @@ export default function MandateDetailPage({ params }) {
                             {/* 3. The Ideal Profile & Qualifications */}
                             <div style={{ marginBottom: "52px" }}>
                                 <span className="prominence_tracker">03 · Candidate Caliber</span>
-                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "16px" }}>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "16px", color: "#0D0D14" }}>
                                     The Ideal Profile
                                 </h2>
                                 <blockquote style={{
                                     fontSize: "16.5px",
                                     fontWeight: "600",
-                                    color: "#1e293b",
-                                    borderLeft: "3px solid var(--ep-gold, #b89058)",
+                                    color: "#0D0D14",
+                                    borderLeft: "3px solid #8B5CF6",
                                     paddingLeft: "20px",
                                     margin: "0 0 24px 0",
                                     lineHeight: "1.6"
@@ -234,13 +234,13 @@ export default function MandateDetailPage({ params }) {
                                     {mandate.idealProfile}
                                 </blockquote>
 
-                                <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", marginBottom: "14px", marginTop: "24px" }}>
+                                <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0D0D14", marginBottom: "14px", marginTop: "24px" }}>
                                     Verified Requisites
                                 </h3>
                                 <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                                     {mandate.qualifications.map((q, i) => (
-                                        <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "12px", fontSize: "14.5px", color: "#475569", marginBottom: "12px", lineHeight: "24px" }}>
-                                            <i className="fa-solid fa-check" style={{ color: "#b89058", marginTop: "5px", fontSize: "12px" }}></i>
+                                        <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "12px", fontSize: "14.5px", color: "#6B7280", marginBottom: "12px", lineHeight: "24px" }}>
+                                            <i className="fa-solid fa-check" style={{ color: "#8B5CF6", marginTop: "5px", fontSize: "12px" }}></i>
                                             <span>{q}</span>
                                         </li>
                                     ))}
@@ -248,16 +248,16 @@ export default function MandateDetailPage({ params }) {
                             </div>
 
                             {/* 4. Deliverables in Role */}
-                            <div style={{ marginBottom: "52px", background: "#FAF8F2", border: "1px solid #eaedf0", borderRadius: "14px", padding: "32px 30px" }}>
+                            <div style={{ marginBottom: "52px", background: "#F7F5FC", border: "1px solid #eaedf0", borderRadius: "14px", padding: "32px 30px" }}>
                                 <span className="prominence_tracker">04 · Governance Impact</span>
-                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "16px" }}>
+                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "16px" }}>
                                     Key Deliverables &amp; Output Expectations
                                 </h3>
                                 <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                                     {mandate.deliverablesInRole.map((deliv, i) => (
                                         <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                                            <i className="fa-solid fa-arrow-right" style={{ color: "#b89058", marginTop: "4px", fontSize: "12px" }}></i>
-                                            <span style={{ fontSize: "14.5px", color: "#1e293b", fontWeight: "500" }}>{deliv}</span>
+                                            <i className="fa-solid fa-arrow-right" style={{ color: "#8B5CF6", marginTop: "4px", fontSize: "12px" }}></i>
+                                            <span style={{ fontSize: "14.5px", color: "#0D0D14", fontWeight: "500" }}>{deliv}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -268,15 +268,15 @@ export default function MandateDetailPage({ params }) {
                 </section>
 
                 {/* Confidential Dossier Submission Form */}
-                <section id="apply-dossier" className="prominence_section" style={{ background: "#f8fafc", borderTop: "1px solid #eaedf0" }}>
+                <section id="apply-dossier" className="prominence_section" style={{ background: "#F7F5FC", borderTop: "1px solid #eaedf0" }}>
                     <div className="container">
                         <div style={{ maxWidth: "780px", margin: "0 auto" }}>
                             <div className="prominence_header_centered" style={{ maxWidth: "680px", margin: "0 auto 36px" }}>
                                 <span className="prominence_tracker">Confidential Submission</span>
-                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", color: "#0D0D14" }}>
                                     Apply For {mandate.shortTitle}
                                 </h2>
-                                <p className="prominence_lead_text">
+                                <p className="prominence_lead_text" style={{ color: "#6B7280" }}>
                                     Transmissions are delivered directly to the managing partners under strict non-disclosure guardrails.
                                 </p>
                             </div>
@@ -292,7 +292,7 @@ export default function MandateDetailPage({ params }) {
                         <div className="prominence_header_split" style={{ marginBottom: "36px" }}>
                             <div>
                                 <span className="prominence_tracker">Active Searches</span>
-                                <h3 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                <h3 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", color: "#0D0D14" }}>
                                     Other Practice Mandates
                                 </h3>
                             </div>
@@ -308,15 +308,15 @@ export default function MandateDetailPage({ params }) {
                                 <div key={other.slug} className="col-lg-4 col-md-6">
                                     <div className="prominence_card_equal_height" style={{ background: "#ffffff", border: "1px solid #eaedf0", borderRadius: "12px", padding: "28px" }}>
                                         <div className="prominence_card_body">
-                                            <span style={{ fontSize: "11px", fontWeight: "700", color: "#b89058", textTransform: "uppercase", letterSpacing: "1px", display: "block", marginBottom: "8px" }}>
+                                            <span style={{ fontSize: "11px", fontWeight: "700", color: "#8B5CF6", textTransform: "uppercase", letterSpacing: "1px", display: "block", marginBottom: "8px" }}>
                                                 {other.practice}
                                             </span>
-                                            <h4 style={{ fontSize: "17px", fontWeight: "700", color: "#0f1013", marginBottom: "8px" }}>
-                                                <Link href={`/careers/${other.slug}`} style={{ color: "#0f1013", textDecoration: "none" }}>
+                                            <h4 style={{ fontSize: "17px", fontWeight: "700", color: "#0D0D14", marginBottom: "8px" }}>
+                                                <Link href={`/careers/${other.slug}`} style={{ color: "#0D0D14", textDecoration: "none" }}>
                                                     {other.title}
                                                 </Link>
                                             </h4>
-                                            <p style={{ fontSize: "13.5px", color: "#64748b", lineHeight: "22px", margin: 0 }}>
+                                            <p style={{ fontSize: "13.5px", color: "#6B7280", lineHeight: "22px", margin: 0 }}>
                                                 {other.arrangement} &bull; {other.location}
                                             </p>
                                         </div>

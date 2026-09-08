@@ -61,23 +61,23 @@ const PHASES = [
 
 export default function MethodologyTeaser() {
     return (
-        <section className="prominence_section" style={{ background: '#fafbfc', borderTop: '1px solid #eaedf0', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
+        <section className="prominence_section" style={{ background: '#F7F5FC', borderTop: '1px solid #eaedf0', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
             <div className="container">
                 {/* Section Header: Editorial Split */}
                 <div className="prominence_header_split">
                     <div>
                         <div style={{ marginBottom: '12px' }}>
                             <span className="prominence_tracker">
-                                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#b89058' }}></span>
+                                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#8B5CF6' }}></span>
                                 The Prominence Protocol
                             </span>
                         </div>
-                        <h2 style={{ fontSize: 'clamp(26px, 3.6vw, 36px)', fontWeight: '700', color: '#0f1013', letterSpacing: '-0.5px', lineHeight: '1.24', margin: 0, fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                        <h2 style={{ fontSize: 'clamp(26px, 3.6vw, 36px)', fontWeight: '700', color: '#0D0D14', letterSpacing: '-0.5px', lineHeight: '1.24', margin: 0, fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                             Our 6-Stage Sovereign Architecture
                         </h2>
                     </div>
                     <div>
-                        <p style={{ color: '#59606a', fontSize: '16px', lineHeight: '27px', maxWidth: '520px', margin: 0 }}>
+                        <p style={{ color: '#6B7280', fontSize: '16px', lineHeight: '27px', maxWidth: '520px', margin: 0 }}>
                             A disciplined, turnkey methodology engineered to establish permanent executive stature with under 30 minutes of client time per month.
                         </p>
                     </div>
@@ -90,7 +90,7 @@ export default function MethodologyTeaser() {
                             <div className="prominence_depth_card" style={{
                                 background: '#ffffff',
                                 border: '1px solid #eaedf0',
-                                borderTop: '3px solid #b89058',
+                                borderTop: '3px solid #8B5CF6',
                                 borderRadius: '14px',
                                 padding: '34px 28px',
                                 height: '100%',
@@ -100,7 +100,7 @@ export default function MethodologyTeaser() {
                             }}>
                                 {/* Phase Header */}
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', paddingBottom: '16px', borderBottom: '1px solid #eaedf0' }}>
-                                    <span style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', letterSpacing: '0.5px' }}>
+                                    <span style={{ fontSize: '13px', fontWeight: '700', color: '#0D0D14', letterSpacing: '0.5px' }}>
                                         {block.phase}
                                     </span>
                                     <span className="prominence_badge prominence_badge_gold" style={{ fontSize: '11px', padding: '3px 10px' }}>
@@ -120,29 +120,29 @@ export default function MethodologyTeaser() {
                                                 width: '32px',
                                                 height: '32px',
                                                 borderRadius: '6px',
-                                                background: '#0f1013',
-                                                color: '#b89058',
+                                                background: '#0D0D14',
+                                                color: '#8B5CF6',
                                                 fontSize: '12px',
                                                 fontWeight: '700',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
                                                 fontFamily: 'var(--primary-font)',
-                                                border: '1px solid rgba(184, 144, 88, 0.25)'
+                                                border: '1px solid rgba(139, 92, 246, 0.25)'
                                             }}>
                                                 {stage.num}
                                             </div>
 
                                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-                                                <h3 style={{ fontSize: '17px', fontWeight: '700', color: '#0f1013', margin: 0, fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                                <h3 style={{ fontSize: '17px', fontWeight: '700', color: '#0D0D14', margin: 0, fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                                     {stage.name}
                                                 </h3>
-                                                <span style={{ fontSize: '10.5px', fontWeight: '600', color: '#64748b', background: '#f1f5f9', padding: '2px 8px', borderRadius: '6px', border: '1px solid #e2e8f0' }}>
+                                                <span style={{ fontSize: '10.5px', fontWeight: '600', color: '#6B7280', background: '#F7F5FC', padding: '2px 8px', borderRadius: '6px', border: '1px solid #e2e8f0' }}>
                                                     {stage.badge}
                                                 </span>
                                             </div>
 
-                                            <p style={{ color: '#59606a', fontSize: '13.5px', lineHeight: '1.6', margin: 0 }}>
+                                            <p style={{ color: '#6B7280', fontSize: '13.5px', lineHeight: '1.6', margin: 0 }}>
                                                 {stage.desc}
                                             </p>
                                         </div>

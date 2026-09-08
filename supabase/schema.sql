@@ -297,7 +297,7 @@ CREATE POLICY "Admins can update site settings"
 INSERT INTO public.site_settings (key, value)
 VALUES 
   ('whatsapp_number', '"8801645441584"'::jsonb),
-  ('announcement', '{"enabled": false, "text": "Prominence is now accepting applications for the Q4 Executive Cohort.", "link": "/contact", "bgColor": "#0f1013"}'::jsonb)
+  ('announcement', '{"enabled": false, "text": "Prominence is now accepting applications for the Q4 Executive Cohort.", "link": "/contact", "bgColor": "#0D0D14"}'::jsonb)
 ON CONFLICT (key) DO NOTHING;
 
 

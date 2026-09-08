@@ -21,10 +21,10 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                 <nav className="menu-box" aria-label="Mobile Navigation Drawer" style={{ maxHeight: '100vh', overflowY: 'auto' }}>
                     <div className="nav-logo" style={{ padding: '24px 20px 16px' }}>
                         <Link href="/" onClick={handleMobileMenu} style={{ display: "inline-flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
-                            <img src="/assets/images/Elite%20Prominence/EliteProminence-iocn.png" alt="Prominence.agency" style={{ height: "32px", width: "auto", display: "block" }} />
+                            <img src="/assets/images/Elite%20Prominence/EliteProminence-iocn.png" alt="Elite Prominence" style={{ height: "34px", width: "auto", display: "block" }} />
                             <div>
-                                <span style={{ fontSize: "18px", fontWeight: "800", color: "#0f172a", display: "block", lineHeight: '1.2' }}>Prominence</span>
-                                <span style={{ fontSize: "10px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#64748b" }}>Executive Advisory</span>
+                                <span style={{ fontSize: "17px", fontWeight: "800", color: "#0D0D14", display: "block", lineHeight: '1.2' }}>Elite Prominence</span>
+                                <span style={{ fontSize: "9px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.6px", color: "#6B7280" }}>Personal Branding for HR Leaders &amp; Executives</span>
                             </div>
                         </Link>
                     </div>
@@ -49,22 +49,22 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                             padding: '12px 14px',
                                             cursor: 'pointer',
                                             fontWeight: '700',
-                                            color: '#0f172a'
+                                            color: '#0D0D14'
                                         }}
                                     >
                                         <span>Services</span>
-                                        <span style={{ fontSize: '14px', color: '#64748b' }}>{openSection === 'services' ? '−' : '+'}</span>
+                                        <span style={{ fontSize: '14px', color: '#6B7280' }}>{openSection === 'services' ? '−' : '+'}</span>
                                     </div>
                                     {openSection === 'services' && (
-                                        <ul style={{ listStyle: 'none', padding: '4px 0 8px 18px', margin: 0, backgroundColor: '#f8fafc', borderRadius: '8px' }}>
+                                        <ul style={{ listStyle: 'none', padding: '4px 0 8px 18px', margin: 0, backgroundColor: '#F7F5FC', borderRadius: '8px' }}>
                                             <li style={{ padding: '6px 0' }}>
-                                                <Link href="/services" onClick={handleMobileMenu} style={{ fontSize: '13.5px', fontWeight: '700', color: '#0f172a' }}>
+                                                <Link href="/services" onClick={handleMobileMenu} style={{ fontSize: '13.5px', fontWeight: '700', color: '#0D0D14' }}>
                                                     All Services Overview &rarr;
                                                 </Link>
                                             </li>
                                             {SERVICES_DATA.map((srv) => (
                                                 <li key={srv.slug} style={{ padding: '6px 0' }}>
-                                                    <Link href={`/services/${srv.slug}`} onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#475569', textDecoration: 'none' }}>
+                                                    <Link href={`/services/${srv.slug}`} onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#6B7280', textDecoration: 'none' }}>
                                                         {srv.title}
                                                     </Link>
                                                 </li>
@@ -84,22 +84,22 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                             padding: '12px 14px',
                                             cursor: 'pointer',
                                             fontWeight: '700',
-                                            color: '#0f172a'
+                                            color: '#0D0D14'
                                         }}
                                     >
                                         <span>Who We Serve</span>
-                                        <span style={{ fontSize: '14px', color: '#64748b' }}>{openSection === 'solutions' ? '−' : '+'}</span>
+                                        <span style={{ fontSize: '14px', color: '#6B7280' }}>{openSection === 'solutions' ? '−' : '+'}</span>
                                     </div>
                                     {openSection === 'solutions' && (
-                                        <ul style={{ listStyle: 'none', padding: '4px 0 8px 18px', margin: 0, backgroundColor: '#f8fafc', borderRadius: '8px' }}>
+                                        <ul style={{ listStyle: 'none', padding: '4px 0 8px 18px', margin: 0, backgroundColor: '#F7F5FC', borderRadius: '8px' }}>
                                             <li style={{ padding: '6px 0' }}>
-                                                <Link href="/solutions" onClick={handleMobileMenu} style={{ fontSize: '13.5px', fontWeight: '700', color: '#0f172a' }}>
+                                                <Link href="/solutions" onClick={handleMobileMenu} style={{ fontSize: '13.5px', fontWeight: '700', color: '#0D0D14' }}>
                                                     All Executive Solutions &rarr;
                                                 </Link>
                                             </li>
                                             {SOLUTIONS_DATA.map((sol) => (
                                                 <li key={sol.slug} style={{ padding: '6px 0' }}>
-                                                    <Link href={`/solutions/${sol.slug}`} onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#475569', textDecoration: 'none' }}>
+                                                    <Link href={`/solutions/${sol.slug}`} onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#6B7280', textDecoration: 'none' }}>
                                                         {sol.title}
                                                     </Link>
                                                 </li>
@@ -137,26 +137,26 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                             padding: '12px 14px',
                                             cursor: 'pointer',
                                             fontWeight: '700',
-                                            color: '#0f172a'
+                                            color: '#0D0D14'
                                         }}
                                     >
                                         <span>Resources</span>
-                                        <span style={{ fontSize: '14px', color: '#64748b' }}>{openSection === 'resources' ? '−' : '+'}</span>
+                                        <span style={{ fontSize: '14px', color: '#6B7280' }}>{openSection === 'resources' ? '−' : '+'}</span>
                                     </div>
                                     {openSection === 'resources' && (
-                                        <ul style={{ listStyle: 'none', padding: '4px 0 8px 18px', margin: 0, backgroundColor: '#f8fafc', borderRadius: '8px' }}>
+                                        <ul style={{ listStyle: 'none', padding: '4px 0 8px 18px', margin: 0, backgroundColor: '#F7F5FC', borderRadius: '8px' }}>
                                             <li style={{ padding: '6px 0' }}>
-                                                <Link href="/resources/assessment" onClick={handleMobileMenu} style={{ fontSize: '13.5px', fontWeight: '700', color: '#1d4ed8' }}>
+                                                <Link href="/resources/assessment" onClick={handleMobileMenu} style={{ fontSize: '13.5px', fontWeight: '700', color: '#8B5CF6' }}>
                                                     Executive Digital Scorecard
                                                 </Link>
                                             </li>
                                             <li style={{ padding: '6px 0' }}>
-                                                <Link href="/resources" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#475569' }}>
+                                                <Link href="/resources" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#6B7280' }}>
                                                     Resources Library &amp; Guides
                                                 </Link>
                                             </li>
                                             <li style={{ padding: '6px 0' }}>
-                                                <Link href="/community" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#475569' }}>
+                                                <Link href="/community" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#6B7280' }}>
                                                     Executive Contributor Directory
                                                 </Link>
                                             </li>
@@ -175,37 +175,37 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                             padding: '12px 14px',
                                             cursor: 'pointer',
                                             fontWeight: '700',
-                                            color: '#0f172a'
+                                            color: '#0D0D14'
                                         }}
                                     >
                                         <span>Firm &amp; About</span>
-                                        <span style={{ fontSize: '14px', color: '#64748b' }}>{openSection === 'firm' ? '−' : '+'}</span>
+                                        <span style={{ fontSize: '14px', color: '#6B7280' }}>{openSection === 'firm' ? '−' : '+'}</span>
                                     </div>
                                     {openSection === 'firm' && (
-                                        <ul style={{ listStyle: 'none', padding: '4px 0 8px 18px', margin: 0, backgroundColor: '#f8fafc', borderRadius: '8px' }}>
+                                        <ul style={{ listStyle: 'none', padding: '4px 0 8px 18px', margin: 0, backgroundColor: '#F7F5FC', borderRadius: '8px' }}>
                                             <li style={{ padding: '6px 0' }}>
-                                                <Link href="/about" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#475569' }}>
+                                                <Link href="/about" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#6B7280' }}>
                                                     About Prominence
                                                 </Link>
                                             </li>
                                             <li style={{ padding: '6px 0' }}>
-                                                <Link href="/careers" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#475569', display: 'flex', justifyContent: 'space-between', paddingRight: '14px' }}>
+                                                <Link href="/careers" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#6B7280', display: 'flex', justifyContent: 'space-between', paddingRight: '14px' }}>
                                                     <span>Careers</span>
                                                     <span style={{ fontSize: '10px', fontWeight: '800', color: '#059669' }}>Hiring</span>
                                                 </Link>
                                             </li>
                                             <li style={{ padding: '6px 0' }}>
-                                                <Link href="/pricing" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#475569' }}>
+                                                <Link href="/pricing" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#6B7280' }}>
                                                     Advisory Packages &amp; Pricing
                                                 </Link>
                                             </li>
                                             <li style={{ padding: '6px 0' }}>
-                                                <Link href="/feedback" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#475569' }}>
+                                                <Link href="/feedback" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#6B7280' }}>
                                                     Client Endorsements
                                                 </Link>
                                             </li>
                                             <li style={{ padding: '6px 0' }}>
-                                                <Link href="/faq" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#475569' }}>
+                                                <Link href="/faq" onClick={handleMobileMenu} style={{ fontSize: '13.5px', color: '#6B7280' }}>
                                                     Strategic FAQ
                                                 </Link>
                                             </li>
@@ -236,12 +236,12 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
 
                     {/* Contact Info */}
                     <div className="contact-info" style={{ padding: '0 20px 20px' }}>
-                        <h4 style={{ fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1px', color: '#94a3b8' }}>
+                        <h4 style={{ fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1px', color: '#6B7280' }}>
                             Confidential Inquiries
                         </h4>
                         <ul style={{ listStyle: 'none', padding: 0, margin: '8px 0 0' }}>
                             <li>
-                                <Link href="mailto:hello@prominence.agency" style={{ fontSize: '13.5px', color: '#0f172a', fontWeight: '600' }}>
+                                <Link href="mailto:hello@prominence.agency" style={{ fontSize: '13.5px', color: '#0D0D14', fontWeight: '600' }}>
                                     hello@prominence.agency
                                 </Link>
                             </li>

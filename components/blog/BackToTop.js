@@ -50,7 +50,7 @@ export default function BackToTop() {
           height: 44px;
           border-radius: 50%;
           border: 1px solid rgba(255, 255, 255, 0.15);
-          background: #0f1013;
+          background: #0D0D14;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -64,7 +64,7 @@ export default function BackToTop() {
         .ep-back-to-top:hover {
           transform: translateY(-4px) scale(1.05);
           background: #1e2025;
-          border-color: #b89058;
+          border-color: #8B5CF6;
           box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
         }
 

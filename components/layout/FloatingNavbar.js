@@ -199,12 +199,11 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                     >
                         <img
                             src="/assets/images/Elite%20Prominence/EliteProminence-iocn.png"
-                            alt="Prominence.agency"
+                            alt="Elite Prominence"
                             style={{
-                                height: '32px',
+                                height: '34px',
                                 width: 'auto',
-                                display: 'block',
-                                borderRadius: '6px'
+                                display: 'block'
                             }}
                         />
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -212,27 +211,27 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 className="logo_wordmark"
                                 style={{
                                     fontSize: '17px',
-                                    fontWeight: '700',
-                                    color: '#0f1013',
-                                    letterSpacing: '-0.4px',
+                                    fontWeight: '800',
+                                    color: '#0D0D14',
+                                    letterSpacing: '-0.3px',
                                     whiteSpace: 'nowrap',
                                     lineHeight: '1.2',
                                     fontFamily: 'var(--primary-font)'
                                 }}
                             >
-                                Prominence
+                                Elite Prominence
                             </span>
                             <span
                                 className="logo_subtag"
                                 style={{
-                                    fontSize: '9.5px',
+                                    fontSize: '9px',
                                     fontWeight: '700',
-                                    letterSpacing: '1px',
+                                    letterSpacing: '0.6px',
                                     textTransform: 'uppercase',
-                                    color: '#64748b'
+                                    color: '#6B7280'
                                 }}
                             >
-                                Executive Advisory
+                                Personal Branding for HR Leaders &amp; Executives
                             </span>
                         </div>
                     </Link>
@@ -262,7 +261,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isServicesActive ? '#0f1013' : '#475569',
+                                    color: isServicesActive ? '#0D0D14' : '#475569',
                                     textDecoration: 'none',
                                     display: 'inline-flex',
                                     alignItems: 'center',
@@ -297,7 +296,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                         <span style={{ fontSize: '11px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#94a3b8' }}>
                                             Core Executive Offerings
                                         </span>
-                                        <Link href="/services" onClick={closeAllDropdowns} style={{ fontSize: '12px', fontWeight: '700', color: '#0f1013', textDecoration: 'none' }}>
+                                        <Link href="/services" onClick={closeAllDropdowns} style={{ fontSize: '12px', fontWeight: '700', color: '#0D0D14', textDecoration: 'none' }}>
                                             Overview &rarr;
                                         </Link>
                                     </div>
@@ -321,8 +320,8 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                                 <span style={{
                                                     fontSize: '11px',
                                                     fontWeight: '700',
-                                                    color: '#94a3b8',
-                                                    backgroundColor: '#f8fafc',
+                                                    color: '#6B7280',
+                                                    backgroundColor: '#F7F5FC',
                                                     padding: '2px 6px',
                                                     borderRadius: '6px',
                                                     marginTop: '2px'
@@ -330,10 +329,10 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                                     {srv.number}
                                                 </span>
                                                 <div>
-                                                    <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0f1013', lineHeight: '1.3' }}>
+                                                    <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0D0D14', lineHeight: '1.3' }}>
                                                         {srv.title}
                                                     </div>
-                                                    <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px', lineHeight: '1.35' }}>
+                                                    <div style={{ fontSize: '12px', color: '#6B7280', marginTop: '2px', lineHeight: '1.35' }}>
                                                         {srv.shortDescription}
                                                     </div>
                                                 </div>
@@ -356,7 +355,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isSolutionsActive ? '#0f1013' : '#475569',
+                                    color: isSolutionsActive ? '#0D0D14' : '#475569',
                                     textDecoration: 'none',
                                     display: 'inline-flex',
                                     alignItems: 'center',
@@ -391,7 +390,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                         <span style={{ fontSize: '11px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#94a3b8' }}>
                                             Who We Serve
                                         </span>
-                                        <Link href="/solutions" onClick={closeAllDropdowns} style={{ fontSize: '12px', fontWeight: '700', color: '#0f1013', textDecoration: 'none' }}>
+                                        <Link href="/solutions" onClick={closeAllDropdowns} style={{ fontSize: '12px', fontWeight: '700', color: '#0D0D14', textDecoration: 'none' }}>
                                             Compare All &rarr;
                                         </Link>
                                     </div>
@@ -410,10 +409,10 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                                     transition: 'all 0.18s ease'
                                                 }}
                                             >
-                                                <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0f1013', lineHeight: '1.3' }}>
+                                                <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0D0D14', lineHeight: '1.3' }}>
                                                     {sol.title}
                                                 </div>
-                                                <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px', lineHeight: '1.35' }}>
+                                                <div style={{ fontSize: '12px', color: '#6B7280', marginTop: '2px', lineHeight: '1.35' }}>
                                                     {sol.subtitle}
                                                 </div>
                                             </Link>
@@ -431,7 +430,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isActive('/how-it-works') ? '#0f1013' : '#475569',
+                                    color: isActive('/how-it-works') ? '#0D0D14' : '#475569',
                                     textDecoration: 'none',
                                     padding: '6px 2px',
                                     transition: 'color 0.2s ease'
@@ -449,7 +448,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isActive('/case-studies') ? '#0f1013' : '#475569',
+                                    color: isActive('/case-studies') ? '#0D0D14' : '#475569',
                                     textDecoration: 'none',
                                     padding: '6px 2px',
                                     transition: 'color 0.2s ease'
@@ -467,7 +466,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isActive('/blog') || isActive('/blog-grid') ? '#0f1013' : '#475569',
+                                    color: isActive('/blog') || isActive('/blog-grid') ? '#0D0D14' : '#475569',
                                     textDecoration: 'none',
                                     padding: '6px 2px',
                                     transition: 'color 0.2s ease'
@@ -493,7 +492,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                     padding: '6px 2px',
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isResourcesActive ? '#0f1013' : '#475569',
+                                    color: isResourcesActive ? '#0D0D14' : '#475569',
                                     cursor: 'pointer',
                                     display: 'inline-flex',
                                     alignItems: 'center',
@@ -532,20 +531,20 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                             padding: '10px 12px',
                                             borderRadius: '10px',
                                             textDecoration: 'none',
-                                            backgroundColor: '#f8fafc',
+                                            backgroundColor: '#F7F5FC',
                                             border: '1px solid #e2e8f0',
                                             marginBottom: '6px'
                                         }}
                                     >
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                            <span style={{ fontSize: '13.5px', fontWeight: '700', color: '#0f1013' }}>
+                                            <span style={{ fontSize: '13.5px', fontWeight: '700', color: '#0D0D14' }}>
                                                 Executive Scorecard
                                             </span>
-                                            <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: '#faf6f0', color: '#b89058', border: '1px solid rgba(184, 144, 88, 0.3)', padding: '1px 6px', borderRadius: '10px' }}>
+                                            <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: 'rgba(139, 92, 246, 0.08)', color: '#8B5CF6', border: '1px solid rgba(139, 92, 246, 0.25)', padding: '1px 6px', borderRadius: '10px' }}>
                                                 Free
                                             </span>
                                         </div>
-                                        <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px' }}>
+                                        <div style={{ fontSize: '12px', color: '#6B7280', marginTop: '2px' }}>
                                             Test your digital presence in 3 mins
                                         </div>
                                     </Link>
@@ -561,10 +560,10 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                             textDecoration: 'none'
                                         }}
                                     >
-                                        <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0f1013' }}>
+                                        <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0D0D14' }}>
                                             Resources Library
                                         </div>
-                                        <div style={{ fontSize: '12px', color: '#64748b' }}>
+                                        <div style={{ fontSize: '12px', color: '#6B7280' }}>
                                             Checklists, audit templates &amp; guides
                                         </div>
                                     </Link>
@@ -580,10 +579,10 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                             textDecoration: 'none'
                                         }}
                                     >
-                                        <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0f1013' }}>
+                                        <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0D0D14' }}>
                                             Executive Directory
                                         </div>
-                                        <div style={{ fontSize: '12px', color: '#64748b' }}>
+                                        <div style={{ fontSize: '12px', color: '#6B7280' }}>
                                             Verified contributors &amp; perspectives
                                         </div>
                                     </Link>
@@ -607,7 +606,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                     padding: '6px 2px',
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isMoreActive ? '#0f1013' : '#475569',
+                                    color: isMoreActive ? '#0D0D14' : '#475569',
                                     cursor: 'pointer',
                                     display: 'inline-flex',
                                     alignItems: 'center',
@@ -641,7 +640,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                         href="/about"
                                         onClick={closeAllDropdowns}
                                         className="dropdown_nav_link"
-                                        style={{ display: 'block', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0f1013', fontSize: '13.5px', fontWeight: '700' }}
+                                        style={{ display: 'block', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0D0D14', fontSize: '13.5px', fontWeight: '700' }}
                                     >
                                         About Prominence
                                     </Link>
@@ -649,10 +648,10 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                         href="/careers"
                                         onClick={closeAllDropdowns}
                                         className="dropdown_nav_link"
-                                        style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0f1013', fontSize: '13.5px', fontWeight: '700' }}
+                                        style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0D0D14', fontSize: '13.5px', fontWeight: '700' }}
                                     >
                                         <span>Careers</span>
-                                        <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: '#f1f5f9', color: '#0f1013', border: '1px solid #e2e8f0', padding: '1px 6px', borderRadius: '8px' }}>
+                                        <span style={{ fontSize: '10px', fontWeight: '700', backgroundColor: '#f1f5f9', color: '#0D0D14', border: '1px solid #e2e8f0', padding: '1px 6px', borderRadius: '8px' }}>
                                             Hiring
                                         </span>
                                     </Link>
@@ -660,7 +659,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                         href="/pricing"
                                         onClick={closeAllDropdowns}
                                         className="dropdown_nav_link"
-                                        style={{ display: 'block', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0f1013', fontSize: '13.5px', fontWeight: '700' }}
+                                        style={{ display: 'block', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0D0D14', fontSize: '13.5px', fontWeight: '700' }}
                                     >
                                         Engagement Pricing
                                     </Link>
@@ -668,7 +667,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                         href="/feedback"
                                         onClick={closeAllDropdowns}
                                         className="dropdown_nav_link"
-                                        style={{ display: 'block', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0f1013', fontSize: '13.5px', fontWeight: '700' }}
+                                        style={{ display: 'block', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0D0D14', fontSize: '13.5px', fontWeight: '700' }}
                                     >
                                         Client Endorsements
                                     </Link>
@@ -676,7 +675,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                         href="/faq"
                                         onClick={closeAllDropdowns}
                                         className="dropdown_nav_link"
-                                        style={{ display: 'block', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0f1013', fontSize: '13.5px', fontWeight: '700' }}
+                                        style={{ display: 'block', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0D0D14', fontSize: '13.5px', fontWeight: '700' }}
                                     >
                                         Strategic FAQ
                                     </Link>
@@ -776,11 +775,11 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             alignItems: 'center',
                             justifyContent: 'center',
                             cursor: 'pointer',
-                            color: '#0f1013',
+                            color: '#0D0D14',
                             padding: 0
                         }}
                     >
-                        <i className="fa-solid fa-bars" style={{ fontSize: '16px', color: '#0f1013' }}></i>
+                        <i className="fa-solid fa-bars" style={{ fontSize: '16px', color: '#0D0D14' }}></i>
                     </button>
                 </div>
             </div>
@@ -798,7 +797,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                     }
                 }
                 .dropdown_nav_link:hover {
-                    background-color: #f8fafc !important;
+                    background-color: #F7F5FC !important;
                 }
                 .floating_cta_btn:hover {
                     transform: translateY(-1.5px);

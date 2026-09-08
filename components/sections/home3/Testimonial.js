@@ -23,7 +23,7 @@ const TESTIMONIALS = [
         company: "Sterling & Partners Advisory",
         location: "London, UK",
         avatarInitials: "MS",
-        avatarBg: "linear-gradient(135deg, #1e2025 0%, #0f1013 100%)",
+        avatarBg: "linear-gradient(135deg, #1e2025 0%, #0D0D14 100%)",
         rating: 5,
         quote: "The Google reputation management and thought leadership ghostwriting are world-class. When prospects Google my name today, they find an authoritative, cohesive presence.",
         highlight: "Page 1 Search Authority Restored",
@@ -36,7 +36,7 @@ const TESTIMONIALS = [
         company: "BioHealth Diagnostics",
         location: "Boston, USA",
         avatarInitials: "AT",
-        avatarBg: "linear-gradient(135deg, #2b2d32 0%, #0f1013 100%)",
+        avatarBg: "linear-gradient(135deg, #2b2d32 0%, #0D0D14 100%)",
         rating: 5,
         quote: "Their team understands the subtle distinction between vanity personal branding and genuine executive authority. Exceptional rigor, discretion, and strategic alignment.",
         highlight: "High-Caliber Network Growth",
@@ -84,10 +84,10 @@ export default function Testimonial() {
                                 onClick={() => setActiveIndex(idx)}
                                 style={{
                                     height: "100%",
-                                    backgroundColor: activeIndex === idx ? "#fafbfc" : "#ffffff",
+                                    backgroundColor: activeIndex === idx ? "#F7F5FC" : "#ffffff",
                                     borderRadius: "14px",
                                     padding: "36px 30px",
-                                    border: activeIndex === idx ? "1px solid #0f1013" : "1px solid #eaedf0",
+                                    border: activeIndex === idx ? "1px solid #0D0D14" : "1px solid #eaedf0",
                                     boxShadow: activeIndex === idx
                                         ? "0 16px 36px rgba(15, 16, 19, 0.08)"
                                         : "0 4px 18px rgba(15, 16, 19, 0.02)",
@@ -109,7 +109,7 @@ export default function Testimonial() {
                                     }}>
                                         <div style={{ display: "flex", gap: "4px" }}>
                                             {[...Array(item.rating)].map((_, i) => (
-                                                <i key={i} className="fa-solid fa-star" style={{ color: "#b89058", fontSize: "13px" }}></i>
+                                                <i key={i} className="fa-solid fa-star" style={{ color: "#8B5CF6", fontSize: "13px" }}></i>
                                             ))}
                                         </div>
                                         <span style={{
@@ -185,7 +185,7 @@ export default function Testimonial() {
                                         <h5 style={{
                                             fontSize: "16px",
                                             fontWeight: "700",
-                                            color: "#0f1013",
+                                            color: "#0D0D14",
                                             margin: "0 0 2px",
                                             fontFamily: "var(--primary-font)"
                                         }}>
@@ -193,7 +193,7 @@ export default function Testimonial() {
                                         </h5>
                                         <p style={{
                                             fontSize: "12.5px",
-                                            color: "#64748b",
+                                            color: "#6B7280",
                                             margin: "0 0 2px",
                                             fontWeight: "500",
                                             lineHeight: "1.3"

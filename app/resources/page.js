@@ -111,7 +111,7 @@ export default function ResourcesOverviewPage() {
                         <div className="prominence_header_centered">
                             <div style={{ marginBottom: '12px' }}>
                                 <span className="prominence_tracker">
-                                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#b89058' }}></span>
+                                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#8B5CF6' }}></span>
                                     Executive Toolkits &amp; Diagnostic Frameworks
                                 </span>
                             </div>
@@ -119,7 +119,7 @@ export default function ResourcesOverviewPage() {
                                 fontSize: 'clamp(28px, 4.5vw, 42px)',
                                 fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                 fontWeight: '700',
-                                color: '#0f1013',
+                                color: '#0D0D14',
                                 lineHeight: '1.24',
                                 marginBottom: '16px'
                             }}>
@@ -133,9 +133,9 @@ export default function ResourcesOverviewPage() {
                 </section>
 
                 {/* Flagship Assessment Feature Banner */}
-                <section className="prominence_section_compact" style={{ background: '#FAF8F2' }}>
+                <section className="prominence_section_compact" style={{ background: '#F7F5FC' }}>
                     <div className="container">
-                        <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: 'clamp(32px, 5vw, 52px)', borderTop: '3px solid #b89058' }}>
+                        <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: 'clamp(32px, 5vw, 52px)', borderTop: '3px solid #8B5CF6' }}>
                             <div className="row align-items-center">
                                 <div className="col-lg-8">
                                     <div style={{ marginBottom: '16px' }}>
@@ -157,13 +157,13 @@ export default function ResourcesOverviewPage() {
                                     </p>
                                     <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginBottom: '32px' }}>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: '#cbd5e1' }}>
-                                            <i className="fa-solid fa-circle-check" style={{ color: '#b89058' }}></i> 6 Objective Stature Dimensions
+                                            <i className="fa-solid fa-circle-check" style={{ color: '#8B5CF6' }}></i> 6 Objective Stature Dimensions
                                         </div>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: '#cbd5e1' }}>
-                                            <i className="fa-solid fa-circle-check" style={{ color: '#b89058' }}></i> Immediate Calculated Score (0–100%)
+                                            <i className="fa-solid fa-circle-check" style={{ color: '#8B5CF6' }}></i> Immediate Calculated Score (0–100%)
                                         </div>
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: '#cbd5e1' }}>
-                                            <i className="fa-solid fa-circle-check" style={{ color: '#b89058' }}></i> Tailored Advisory Recommendations
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: '#8B5CF6' }}>
+                                            <i className="fa-solid fa-circle-check" style={{ color: '#8B5CF6' }}></i> Tailored Advisory Recommendations
                                         </div>
                                     </div>
                                     <Link href="/resources/assessment" className="btn_style_gold btn_md">
@@ -192,16 +192,16 @@ export default function ResourcesOverviewPage() {
                 </section>
 
                 {/* Additional Guides & Checklists */}
-                <section className="prominence_section" style={{ background: '#FAF8F2', borderTop: '1px solid #eaedf0' }}>
+                <section className="prominence_section" style={{ background: '#F7F5FC', borderTop: '1px solid #eaedf0' }}>
                     <div className="container">
                         <div className="prominence_header_left">
                             <div style={{ marginBottom: '10px' }}>
                                 <span className="prominence_tracker">
-                                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#b89058' }}></span>
+                                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#8B5CF6' }}></span>
                                     Operational Frameworks
                                 </span>
                             </div>
-                            <h2 style={{ fontSize: '28px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0f1013' }}>
+                            <h2 style={{ fontSize: '28px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0D0D14' }}>
                                 Strategic Toolkits &amp; Blueprints
                             </h2>
                         </div>
@@ -212,7 +212,7 @@ export default function ResourcesOverviewPage() {
                                     <div className="prominence_card prominence_card_equal_height prominence_depth_card" style={{ 
                                         padding: '36px 32px', 
                                         height: '100%',
-                                        borderTop: '3px solid #b89058'
+                                        borderTop: '3px solid #8B5CF6'
                                     }}>
                                         <div className="prominence_card_body">
                                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '18px' }}>
@@ -220,12 +220,12 @@ export default function ResourcesOverviewPage() {
                                                     width: '38px',
                                                     height: '38px',
                                                     borderRadius: '8px',
-                                                    background: 'rgba(184, 144, 88, 0.12)',
-                                                    border: '1px solid rgba(184, 144, 88, 0.25)',
+                                                    background: 'rgba(139, 92, 246, 0.12)',
+                                                    border: '1px solid rgba(139, 92, 246, 0.25)',
                                                     display: 'flex',
                                                     alignItems: 'center',
                                                     justifyContent: 'center',
-                                                    color: '#b89058',
+                                                    color: '#8B5CF6',
                                                     fontSize: '15px'
                                                 }}>
                                                     <i className={res.icon}></i>
@@ -234,15 +234,15 @@ export default function ResourcesOverviewPage() {
                                                     {res.badge}
                                                 </span>
                                             </div>
-                                            <h3 style={{ fontSize: '20px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0f1013', marginBottom: '8px', lineHeight: '1.35' }}>
+                                            <h3 style={{ fontSize: '20px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0D0D14', marginBottom: '8px', lineHeight: '1.35' }}>
                                                 <Link href={res.href} style={{ color: 'inherit', textDecoration: 'none' }}>
                                                     {res.title}
                                                 </Link>
                                             </h3>
-                                            <p style={{ fontSize: '13px', fontWeight: '600', color: '#b89058', marginBottom: '14px' }}>
+                                            <p style={{ fontSize: '13px', fontWeight: '600', color: '#8B5CF6', marginBottom: '14px' }}>
                                                 {res.tagline}
                                             </p>
-                                            <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.7', marginBottom: '18px' }}>
+                                            <p style={{ fontSize: '14px', color: '#6B7280', lineHeight: '1.7', marginBottom: '18px' }}>
                                                 {res.description}
                                             </p>
 

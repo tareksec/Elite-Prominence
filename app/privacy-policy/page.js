@@ -29,7 +29,7 @@ export default function PrivacyPolicyPage() {
         <div className="boxed_wrapper">
             <BreadcrumbJsonLd items={breadcrumbItems} />
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Privacy Policy">
-                <section className="pt_120 pb_120" style={{ backgroundColor: "#f8fafc", minHeight: "80vh" }}>
+                <section className="pt_120 pb_120" style={{ backgroundColor: "#F7F5FC", minHeight: "80vh" }}>
                     <div className="container" style={{ maxWidth: "860px" }}>
                         {/* Title & Metadata Card */}
                         <div style={{
@@ -37,54 +37,54 @@ export default function PrivacyPolicyPage() {
                             borderRadius: "16px",
                             padding: "40px 36px",
                             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)",
-                            border: "1px solid #e2e8f0"
+                            border: "1px solid #eaedf0"
                         }}>
                             <div className="section_title mb_30">
-                                <div className="tag_text"><h6>Legal & Governance</h6></div>
-                                <h1 style={{ fontSize: "clamp(28px, 4vw, 36px)", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", margin: "10px 0" }}>
+                                <div className="tag_text"><h6 style={{ color: "#8B5CF6" }}>Legal & Governance</h6></div>
+                                <h1 style={{ fontSize: "clamp(28px, 4vw, 36px)", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)", margin: "10px 0" }}>
                                     Privacy Policy
                                 </h1>
-                                <p style={{ color: "#64748b", fontSize: "14px", marginTop: "8px", fontStyle: "italic" }}>
+                                <p style={{ color: "#6B7280", fontSize: "14px", marginTop: "8px", fontStyle: "italic" }}>
                                     Last updated: September 7, 2026
                                 </p>
                             </div>
 
-                            <div style={{ color: "#475569", lineHeight: "1.8", fontSize: "16px" }}>
+                            <div style={{ color: "#0D0D14", lineHeight: "1.8", fontSize: "16px" }}>
                                 {/* Section 1 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "30px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "30px", marginBottom: "12px" }}>
                                     1. Who We Are
                                 </h2>
                                 <p>
                                     Elite Prominence (&ldquo;we,&rdquo; &ldquo;us,&rdquo; &ldquo;our&rdquo;) operates{' '}
-                                    <Link href="/" style={{ color: "#0f1013", fontWeight: "600", textDecoration: "underline" }}>
+                                    <Link href="/" style={{ color: "#8B5CF6", fontWeight: "600", textDecoration: "underline" }}>
                                         prominence.agency
                                     </Link>. For any privacy questions, contact us at{' '}
-                                    <Link href="mailto:hello@prominence.agency" style={{ color: "#0f1013", fontWeight: "600", textDecoration: "underline" }}>
+                                    <Link href="mailto:hello@prominence.agency" style={{ color: "#8B5CF6", fontWeight: "600", textDecoration: "underline" }}>
                                         hello@prominence.agency
                                     </Link>.
                                 </p>
 
                                 {/* Section 2 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     2. Information We Collect
                                 </h2>
                                 <ul style={{ paddingLeft: "20px", marginBottom: "15px" }}>
                                     <li style={{ marginBottom: "8px" }}>
-                                        <strong style={{ color: "#0f1013" }}>Account information:</strong> name, email address, role/title, and (if provided) a profile photo, when you sign up for a dashboard account.
+                                        <strong style={{ color: "#0D0D14" }}>Account information:</strong> name, email address, role/title, and (if provided) a profile photo, when you sign up for a dashboard account.
                                     </li>
                                     <li style={{ marginBottom: "8px" }}>
-                                        <strong style={{ color: "#0f1013" }}>Content you submit:</strong> reviews, ratings, and articles you write through your dashboard.
+                                        <strong style={{ color: "#0D0D14" }}>Content you submit:</strong> reviews, ratings, and articles you write through your dashboard.
                                     </li>
                                     <li style={{ marginBottom: "8px" }}>
-                                        <strong style={{ color: "#0f1013" }}>Contact form submissions:</strong> name, email, company, LinkedIn URL, and message, when you book a strategy call or contact us.
+                                        <strong style={{ color: "#0D0D14" }}>Contact form submissions:</strong> name, email, company, LinkedIn URL, and message, when you book a strategy call or contact us.
                                     </li>
                                     <li style={{ marginBottom: "8px" }}>
-                                        <strong style={{ color: "#0f1013" }}>Automatically collected data:</strong> basic analytics (pages visited, general location/device type) via our analytics tool, and session cookies required for login to work.
+                                        <strong style={{ color: "#0D0D14" }}>Automatically collected data:</strong> basic analytics (pages visited, general location/device type) via our analytics tool, and session cookies required for login to work.
                                     </li>
                                 </ul>
 
                                 {/* Section 3 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     3. How We Use Your Information
                                 </h2>
                                 <ul style={{ paddingLeft: "20px", marginBottom: "15px" }}>
@@ -96,25 +96,25 @@ export default function PrivacyPolicyPage() {
                                 </ul>
 
                                 {/* Section 4 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     4. Third-Party Services We Use
                                 </h2>
                                 <ul style={{ paddingLeft: "20px", marginBottom: "15px" }}>
                                     <li style={{ marginBottom: "8px" }}>
-                                        <strong style={{ color: "#0f1013" }}>Supabase</strong> &mdash; authentication and database hosting for account/dashboard data
+                                        <strong style={{ color: "#0D0D14" }}>Supabase</strong> &mdash; authentication and database hosting for account/dashboard data
                                     </li>
                                     <li style={{ marginBottom: "8px" }}>
-                                        <strong style={{ color: "#0f1013" }}>Vercel</strong> &mdash; website hosting and deployment infrastructure
+                                        <strong style={{ color: "#0D0D14" }}>Vercel</strong> &mdash; website hosting and deployment infrastructure
                                     </li>
                                     <li style={{ marginBottom: "8px" }}>
-                                        <strong style={{ color: "#0f1013" }}>Site Analytics</strong> &mdash; privacy-first visitor usage metrics
+                                        <strong style={{ color: "#0D0D14" }}>Site Analytics</strong> &mdash; privacy-first visitor usage metrics
                                     </li>
                                 </ul>
-                                <p style={{ fontWeight: "600", color: "#0f172a", marginTop: "12px" }}>
-                                    <i className="fa-solid fa-circle-check" style={{ marginRight: "6px", color: "#b89058" }}></i> We do not sell your personal information to third parties.
+                                <p style={{ fontWeight: "600", color: "#0D0D14", marginTop: "12px" }}>
+                                    <i className="fa-solid fa-circle-check" style={{ marginRight: "6px", color: "#8B5CF6" }}></i> We do not sell your personal information to third parties.
                                 </p>
 
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontFamily: "var(--primary-font)", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontFamily: "var(--primary-font)", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     5. Cookies & Tracking Technologies
                                 </h2>
                                 <p>
@@ -122,7 +122,7 @@ export default function PrivacyPolicyPage() {
                                 </p>
 
                                 {/* Section 6 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     6. Data Retention
                                 </h2>
                                 <p>
@@ -130,18 +130,18 @@ export default function PrivacyPolicyPage() {
                                 </p>
 
                                 {/* Section 7 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     7. Your Rights
                                 </h2>
                                 <p>
                                     You can request to access, correct, or delete your personal data by emailing{' '}
-                                    <Link href="mailto:hello@prominence.agency" style={{ color: "#0f1013", fontWeight: "600", textDecoration: "underline" }}>
+                                    <Link href="mailto:hello@prominence.agency" style={{ color: "#8B5CF6", fontWeight: "600", textDecoration: "underline" }}>
                                         hello@prominence.agency
                                     </Link>. We will respond within a reasonable timeframe.
                                 </p>
 
                                 {/* Section 8 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     8. Data Security
                                 </h2>
                                 <p>
@@ -149,7 +149,7 @@ export default function PrivacyPolicyPage() {
                                 </p>
 
                                 {/* Section 9 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     9. Children&apos;s Privacy
                                 </h2>
                                 <p>
@@ -157,7 +157,7 @@ export default function PrivacyPolicyPage() {
                                 </p>
 
                                 {/* Section 10 */}
-                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0D0D14", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     10. Changes to This Policy
                                 </h2>
                                 <p>
@@ -168,7 +168,7 @@ export default function PrivacyPolicyPage() {
                                 <div style={{
                                     marginTop: "45px",
                                     paddingTop: "25px",
-                                    borderTop: "1px solid #e2e8f0",
+                                    borderTop: "1px solid #eaedf0",
                                     display: "flex",
                                     justifyContent: "space-between",
                                     alignItems: "center",
@@ -176,8 +176,8 @@ export default function PrivacyPolicyPage() {
                                     gap: "15px"
                                 }}>
                                     <div>
-                                        <div style={{ fontWeight: "700", color: "#0f1013" }}>Have questions about our privacy practices?</div>
-                                        <div style={{ fontSize: "14px", color: "#64748b" }}>Reach out directly to our privacy desk.</div>
+                                        <div style={{ fontWeight: "700", color: "#0D0D14" }}>Have questions about our privacy practices?</div>
+                                        <div style={{ fontSize: "14px", color: "#6B7280" }}>Reach out directly to our privacy desk.</div>
                                     </div>
                                     <Link
                                         href="mailto:hello@prominence.agency"

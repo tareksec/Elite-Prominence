@@ -115,7 +115,7 @@ export default function CaseStudyDetailPage({ params }) {
                                 fontSize: 'clamp(28px, 4.5vw, 40px)',
                                 fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                 fontWeight: '700',
-                                color: '#0f1013',
+                                color: '#0D0D14',
                                 lineHeight: '1.25',
                                 marginBottom: '16px'
                             }}>
@@ -138,7 +138,7 @@ export default function CaseStudyDetailPage({ params }) {
                 </section>
 
                 {/* Metrics Bar */}
-                <section className="pt_50 pb_50" style={{ background: '#0f1013', color: '#fff', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+                <section className="pt_50 pb_50" style={{ background: '#0D0D14', color: '#fff', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
                     <div className="container">
                         <div className="row text-center">
                             {cs.metrics.map((m, idx) => (
@@ -156,30 +156,30 @@ export default function CaseStudyDetailPage({ params }) {
                 </section>
 
                 {/* Narrative Breakdown: Challenge → Strategy → Execution → Results */}
-                <section className="pt_100 pb_90" style={{ background: '#f8fafc' }}>
+                <section className="pt_100 pb_90" style={{ background: '#F7F5FC' }}>
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-lg-10">
                                 
                                 {/* 01. The Challenge */}
                                 <div style={{ marginBottom: '60px' }}>
-                                    <span style={{ color: '#475569', fontWeight: '700', fontSize: '12px', letterSpacing: '1.5px', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                                    <span style={{ color: '#6B7280', fontWeight: '700', fontSize: '12px', letterSpacing: '1.5px', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                                         Phase 01 • The Initial Challenge
                                     </span>
-                                    <h2 style={{ fontSize: '28px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '16px' }}>
+                                    <h2 style={{ fontSize: '28px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0D0D14', marginBottom: '16px' }}>
                                         {cs.challenge.headline}
                                     </h2>
-                                    <p style={{ fontSize: '16px', color: '#475569', lineHeight: '1.8', marginBottom: '24px' }}>
+                                    <p style={{ fontSize: '16px', color: '#6B7280', lineHeight: '1.8', marginBottom: '24px' }}>
                                         {cs.challenge.summary}
                                     </p>
-                                    <div className="prominence_card" style={{ padding: '28px', borderLeft: '4px solid #0f1013' }}>
-                                        <h4 style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
+                                    <div className="prominence_card" style={{ padding: '28px', borderLeft: '4px solid #0D0D14' }}>
+                                        <h4 style={{ fontSize: '13px', fontWeight: '700', color: '#0D0D14', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
                                             Reputational Vulnerabilities Identified
                                         </h4>
                                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                                             {cs.challenge.points.map((pt, i) => (
-                                                 <li key={i} style={{ display: 'flex', gap: '10px', fontSize: '14px', color: '#475569' }}>
-                                                    <i className="fa-solid fa-circle-xmark" style={{ color: '#94a3b8', marginTop: '4px', fontSize: '13px' }}></i>
+                                                 <li key={i} style={{ display: 'flex', gap: '10px', fontSize: '14px', color: '#6B7280' }}>
+                                                    <i className="fa-solid fa-circle-xmark" style={{ color: '#6B7280', marginTop: '4px', fontSize: '13px' }}></i>
                                                     <span>{pt}</span>
                                                 </li>
                                             ))}
@@ -189,23 +189,23 @@ export default function CaseStudyDetailPage({ params }) {
 
                                 {/* 02. The Strategy */}
                                 <div style={{ marginBottom: '60px' }}>
-                                    <span style={{ color: '#475569', fontWeight: '700', fontSize: '12px', letterSpacing: '1.5px', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                                    <span style={{ color: '#6B7280', fontWeight: '700', fontSize: '12px', letterSpacing: '1.5px', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                                         Phase 02 • Strategic Formulation
                                     </span>
-                                    <h2 style={{ fontSize: '28px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '16px' }}>
+                                    <h2 style={{ fontSize: '28px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0D0D14', marginBottom: '16px' }}>
                                         {cs.strategy.headline}
                                     </h2>
-                                    <p style={{ fontSize: '16px', color: '#475569', lineHeight: '1.8', marginBottom: '28px' }}>
+                                    <p style={{ fontSize: '16px', color: '#6B7280', lineHeight: '1.8', marginBottom: '28px' }}>
                                         {cs.strategy.summary}
                                     </p>
                                     <div className="row">
                                         {cs.strategy.pillars.map((pillar, i) => (
                                             <div key={i} className="col-md-4 mb_20">
                                                 <div className="prominence_card" style={{ padding: '24px', height: '100%' }}>
-                                                    <h3 style={{ fontSize: '16px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '10px' }}>
+                                                    <h3 style={{ fontSize: '16px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0D0D14', marginBottom: '10px' }}>
                                                         {pillar.name}
                                                     </h3>
-                                                    <p style={{ fontSize: '13.5px', color: '#64748b', lineHeight: '1.6', margin: 0 }}>
+                                                    <p style={{ fontSize: '13.5px', color: '#6B7280', lineHeight: '1.6', margin: 0 }}>
                                                         {pillar.desc}
                                                     </p>
                                                 </div>
@@ -216,10 +216,10 @@ export default function CaseStudyDetailPage({ params }) {
 
                                 {/* 03. The Execution Protocol */}
                                 <div style={{ marginBottom: '60px' }}>
-                                    <span style={{ color: '#475569', fontWeight: '700', fontSize: '12px', letterSpacing: '1.5px', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                                    <span style={{ color: '#6B7280', fontWeight: '700', fontSize: '12px', letterSpacing: '1.5px', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                                         Phase 03 • Execution Protocol
                                     </span>
-                                    <h2 style={{ fontSize: '28px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '24px' }}>
+                                    <h2 style={{ fontSize: '28px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0D0D14', marginBottom: '24px' }}>
                                         {cs.execution.headline}
                                     </h2>
                                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -231,10 +231,10 @@ export default function CaseStudyDetailPage({ params }) {
                                                     </span>
                                                 </div>
                                                 <div>
-                                                    <h3 style={{ fontSize: '17px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '6px' }}>
+                                                    <h3 style={{ fontSize: '17px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0D0D14', marginBottom: '6px' }}>
                                                         {step.title}
                                                     </h3>
-                                                    <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
+                                                    <p style={{ color: '#6B7280', fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
                                                         {step.desc}
                                                     </p>
                                                 </div>
@@ -245,17 +245,17 @@ export default function CaseStudyDetailPage({ params }) {
 
                                 {/* 04. Measurable Results */}
                                 <div style={{ marginBottom: '60px' }}>
-                                    <span style={{ color: '#475569', fontWeight: '700', fontSize: '12px', letterSpacing: '1.5px', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                                    <span style={{ color: '#6B7280', fontWeight: '700', fontSize: '12px', letterSpacing: '1.5px', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                                         Phase 04 • Measurable Outcomes
                                     </span>
-                                    <h2 style={{ fontSize: '28px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '20px' }}>
+                                    <h2 style={{ fontSize: '28px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0D0D14', marginBottom: '20px' }}>
                                         {cs.results.headline}
                                     </h2>
-                                    <div className="prominence_card" style={{ padding: '28px', borderLeft: '4px solid #b89058' }}>
+                                    <div className="prominence_card" style={{ padding: '28px', borderLeft: '4px solid #8B5CF6' }}>
                                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
                                             {cs.results.points.map((res, i) => (
                                                 <li key={i} style={{ display: 'flex', gap: '12px', fontSize: '15px', color: '#1e293b' }}>
-                                                    <i className="fa-solid fa-circle-check" style={{ color: '#b89058', marginTop: '3px', fontSize: '14px' }}></i>
+                                                    <i className="fa-solid fa-circle-check" style={{ color: '#8B5CF6', marginTop: '3px', fontSize: '14px' }}></i>
                                                     <span>{res}</span>
                                                 </li>
                                             ))}
@@ -293,7 +293,7 @@ export default function CaseStudyDetailPage({ params }) {
                                 <div className="tag_text">
                                     <h6>Related Outcomes</h6>
                                 </div>
-                                <h2 style={{ fontSize: '28px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013' }}>
+                                <h2 style={{ fontSize: '28px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0D0D14' }}>
                                     Additional Executive Proof Briefings
                                 </h2>
                             </div>
@@ -301,15 +301,15 @@ export default function CaseStudyDetailPage({ params }) {
                                 {otherCaseStudies.map((oth) => (
                                     <div key={oth.slug} className="col-lg-6 mb_20">
                                         <div className="prominence_card" style={{ padding: '28px', height: '100%', display: 'flex', flexDirection: 'column' }}>
-                                            <span style={{ fontSize: '11px', fontWeight: '700', color: '#64748b', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>
+                                            <span style={{ fontSize: '11px', fontWeight: '700', color: '#6B7280', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>
                                                 {oth.type}
                                             </span>
                                             <h3 style={{ fontSize: '19px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', marginBottom: '8px' }}>
-                                                <Link href={`/case-studies/${oth.slug}`} style={{ color: '#0f1013', textDecoration: 'none' }}>
+                                                <Link href={`/case-studies/${oth.slug}`} style={{ color: '#0D0D14', textDecoration: 'none' }}>
                                                     {oth.shortTitle}
                                                 </Link>
                                             </h3>
-                                            <p style={{ fontSize: '13.5px', color: '#64748b', lineHeight: '1.6', flex: 1, marginBottom: '16px' }}>
+                                            <p style={{ fontSize: '13.5px', color: '#6B7280', lineHeight: '1.6', flex: 1, marginBottom: '16px' }}>
                                                 {oth.tagline}
                                             </p>
                                             <Link href={`/case-studies/${oth.slug}`} className="btn_style_ghost">
@@ -324,7 +324,7 @@ export default function CaseStudyDetailPage({ params }) {
                 )}
 
                 {/* Final Consultation CTA */}
-                <section className="pt_90 pb_90" style={{ background: '#0f1013', color: '#fff', textAlign: 'center' }}>
+                <section className="pt_90 pb_90" style={{ background: '#0D0D14', color: '#fff', textAlign: 'center' }}>
                     <div className="container">
                         <div style={{ maxWidth: '720px', margin: '0 auto' }}>
                             <div className="tag_text" style={{ marginBottom: '14px' }}>

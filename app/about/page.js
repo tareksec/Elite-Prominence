@@ -100,7 +100,7 @@ export default function About_Page() {
                     <div className="container">
                         <div className="prominence_header_centered" style={{ maxWidth: '780px', margin: '0 auto' }}>
                             <span className="prominence_tracker">Executive Reputation Advisory</span>
-                            <h1 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0f1013', lineHeight: '1.2' }}>
+                            <h1 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0D0D14', lineHeight: '1.2' }}>
                                 Architecting Sovereign Digital Stature for Enterprise Leaders
                             </h1>
                             <p className="prominence_lead_text">
@@ -147,10 +147,10 @@ export default function About_Page() {
                                                 Founder & Managing Partner
                                             </span>
                                         </div>
-                                        <h3 style={{ fontSize: '22px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', margin: '0 0 4px 0' }}>
+                                        <h3 style={{ fontSize: '22px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0D0D14', margin: '0 0 4px 0' }}>
                                             Md Tarek
                                         </h3>
-                                        <p style={{ fontSize: '13.5px', color: '#64748b', margin: '0 0 16px 0', fontWeight: '500' }}>
+                                        <p style={{ fontSize: '13.5px', color: '#6B7280', margin: '0 0 16px 0', fontWeight: '500' }}>
                                             Executive Brand Advisor & Author
                                         </p>
                                         <a
@@ -167,16 +167,16 @@ export default function About_Page() {
                             </div>
                             <div className="col-lg-7 col-md-12 ps-lg-5">
                                 <span className="prominence_tracker">The Founding Conviction</span>
-                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0f1013', marginBottom: '20px', lineHeight: '1.25' }}>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0D0D14', marginBottom: '20px', lineHeight: '1.25' }}>
                                     Reputation Is Sovereign Infrastructure, Not Superficial Vanity
                                 </h2>
-                                <blockquote style={{ fontSize: '17px', fontWeight: '600', color: '#1e293b', borderLeft: '3px solid var(--ep-gold, #b89058)', paddingLeft: '20px', margin: '0 0 24px 0', lineHeight: '1.6' }}>
+                                <blockquote style={{ fontSize: '17px', fontWeight: '600', color: '#1e293b', borderLeft: '3px solid var(--ep-gold, #8B5CF6)', paddingLeft: '20px', margin: '0 0 24px 0', lineHeight: '1.6' }}>
                                     &ldquo;In executive leadership, opportunity is not won by shouting in the town square. It is won by unmistakable credibility recognized before the due diligence begins.&rdquo;
                                 </blockquote>
-                                <p style={{ fontSize: '15.5px', lineHeight: '1.8', color: '#475569', marginBottom: '16px' }}>
+                                <p style={{ fontSize: '15.5px', lineHeight: '1.8', color: '#6B7280', marginBottom: '16px' }}>
                                     Prominence was established on a single undeniable reality: the most accomplished leaders are frequently the least visible online. While they orchestrate nine-figure acquisitions, overhaul enterprise technology, and lead thousands of personnel, their digital footprint often consists of an outdated corporate bio and an unmanaged LinkedIn feed.
                                 </p>
-                                <p style={{ fontSize: '15.5px', lineHeight: '1.8', color: '#475569', marginBottom: '28px' }}>
+                                <p style={{ fontSize: '15.5px', lineHeight: '1.8', color: '#6B7280', marginBottom: '28px' }}>
                                     When board nominating committees, venture partners, or journalists look them up, that silence surrenders narrative control. We provide turnkey, dignified reputation stewardship so your public presence permanently reflects your actual business stature.
                                 </p>
                                 <Link href="/contact" className="btn_style_one">
@@ -188,11 +188,11 @@ export default function About_Page() {
                 </section>
 
                 {/* The 4 Firm Principles */}
-                <section className="prominence_section" style={{ background: '#0f1013', color: '#fff' }}>
+                <section className="prominence_section" style={{ background: '#0D0D14', color: '#fff' }}>
                     <div className="container">
                         <div className="prominence_header_split">
                             <div>
-                                <span className="prominence_tracker" style={{ color: '#b89058' }}>Institutional Pillars</span>
+                                <span className="prominence_tracker" style={{ color: '#8B5CF6' }}>Institutional Pillars</span>
                                 <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#fff' }}>
                                     The Four Prominence Principles
                                 </h2>
@@ -208,7 +208,7 @@ export default function About_Page() {
                             <div className="col-lg-3 col-md-6 mb_30">
                                 <div className="prominence_card_dark" style={{ padding: '32px', height: '100%' }}>
                                     <div style={{ fontSize: '22px', color: '#fff', marginBottom: '18px' }}>
-                                        <i className="fa-solid fa-landmark" style={{ color: '#b89058' }}></i>
+                                        <i className="fa-solid fa-landmark" style={{ color: '#8B5CF6' }}></i>
                                     </div>
                                     <h3 style={{ fontSize: '18px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
                                         Sovereign Assets
@@ -222,7 +222,7 @@ export default function About_Page() {
                             <div className="col-lg-3 col-md-6 mb_30">
                                 <div className="prominence_card_dark" style={{ padding: '32px', height: '100%' }}>
                                     <div style={{ fontSize: '22px', color: '#fff', marginBottom: '18px' }}>
-                                        <i className="fa-solid fa-pen-nib" style={{ color: '#b89058' }}></i>
+                                        <i className="fa-solid fa-pen-nib" style={{ color: '#8B5CF6' }}></i>
                                     </div>
                                     <h3 style={{ fontSize: '18px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
                                         Substance Over Noise
@@ -236,7 +236,7 @@ export default function About_Page() {
                             <div className="col-lg-3 col-md-6 mb_30">
                                 <div className="prominence_card_dark" style={{ padding: '32px', height: '100%' }}>
                                     <div style={{ fontSize: '22px', color: '#fff', marginBottom: '18px' }}>
-                                        <i className="fa-solid fa-shield-halved" style={{ color: '#b89058' }}></i>
+                                        <i className="fa-solid fa-shield-halved" style={{ color: '#8B5CF6' }}></i>
                                     </div>
                                     <h3 style={{ fontSize: '18px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
                                         Absolute Discretion
@@ -250,7 +250,7 @@ export default function About_Page() {
                             <div className="col-lg-3 col-md-6 mb_30">
                                 <div className="prominence_card_dark" style={{ padding: '32px', height: '100%' }}>
                                     <div style={{ fontSize: '22px', color: '#fff', marginBottom: '18px' }}>
-                                        <i className="fa-solid fa-clock" style={{ color: '#b89058' }}></i>
+                                        <i className="fa-solid fa-clock" style={{ color: '#8B5CF6' }}></i>
                                     </div>
                                     <h3 style={{ fontSize: '18px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
                                         Minimal Time Tax
@@ -265,11 +265,11 @@ export default function About_Page() {
                 </section>
 
                 {/* Final Consultation CTA */}
-                <section className="prominence_section" style={{ background: '#FAF8F2', borderTop: '1px solid #eaedf0', textAlign: 'center' }}>
+                <section className="prominence_section" style={{ background: '#F7F5FC', borderTop: '1px solid #eaedf0', textAlign: 'center' }}>
                     <div className="container">
                         <div className="prominence_header_centered" style={{ maxWidth: '740px', margin: '0 auto' }}>
                             <span className="prominence_tracker">Private Engagement</span>
-                            <h2 style={{ fontSize: 'clamp(26px, 3.8vw, 36px)', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0f1013', marginBottom: '16px' }}>
+                            <h2 style={{ fontSize: 'clamp(26px, 3.8vw, 36px)', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0D0D14', marginBottom: '16px' }}>
                                 Ready to Align Your Reputation With Your Stature?
                             </h2>
                             <p className="prominence_lead_text" style={{ marginBottom: '32px' }}>

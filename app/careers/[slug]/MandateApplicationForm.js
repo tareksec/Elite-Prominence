@@ -29,9 +29,9 @@ export default function MandateApplicationForm({ mandateTitle }) {
                     width: '56px',
                     height: '56px',
                     borderRadius: '50%',
-                    background: '#faf6f0',
-                    border: '1px solid rgba(184, 144, 88, 0.4)',
-                    color: '#b89058',
+                    background: '#F7F5FC',
+                    border: '1px solid rgba(139, 92, 246, 0.4)',
+                    color: '#8B5CF6',
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -40,10 +40,10 @@ export default function MandateApplicationForm({ mandateTitle }) {
                 }}>
                     <i className="fa-solid fa-check"></i>
                 </div>
-                <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#0f1013', marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#0D0D14', marginBottom: '10px' }}>
                     Dossier Successfully Transmitted
                 </h3>
-                <p style={{ color: '#59606a', fontSize: '15.5px', maxWidth: '540px', margin: '0 auto', lineHeight: '1.65' }}>
+                <p style={{ color: '#6B7280', fontSize: '15.5px', maxWidth: '540px', margin: '0 auto', lineHeight: '1.65' }}>
                     Thank you, {name}. Your credentials for <strong>{mandateTitle}</strong> have been transferred directly to our managing advisory partners. If there is mutual alignment, we will contact you to schedule a confidential dialogue.
                 </p>
             </div>
@@ -68,7 +68,7 @@ export default function MandateApplicationForm({ mandateTitle }) {
                         readOnly 
                         value={mandateTitle}
                         className="prominence_input"
-                        style={{ background: '#f8fafc', fontWeight: '600', color: '#0f1013' }}
+                        style={{ background: '#F7F5FC', fontWeight: '600', color: '#0D0D14' }}
                     />
                 </div>
                 <div className="col-md-6">

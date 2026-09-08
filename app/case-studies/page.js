@@ -64,7 +64,7 @@ export default function CaseStudiesOverviewPage() {
                         <div className="prominence_header_centered">
                             <div style={{ marginBottom: '12px' }}>
                                 <span className="prominence_tracker">
-                                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#b89058' }}></span>
+                                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#8B5CF6' }}></span>
                                     Documented Impact
                                 </span>
                             </div>
@@ -72,7 +72,7 @@ export default function CaseStudiesOverviewPage() {
                                 fontSize: 'clamp(28px, 4.5vw, 42px)',
                                 fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                 fontWeight: '700',
-                                color: '#0f1013',
+                                color: '#0D0D14',
                                 lineHeight: '1.24',
                                 marginBottom: '16px'
                             }}>
@@ -83,7 +83,7 @@ export default function CaseStudiesOverviewPage() {
                             </p>
                             <div style={{ marginTop: '24px' }}>
                                 <span className="prominence_badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-                                    <i className="fa-solid fa-shield-halved" style={{ color: '#b89058' }}></i> Client names and proprietary metrics are anonymized to honor non-disclosure agreements
+                                    <i className="fa-solid fa-shield-halved" style={{ color: '#8B5CF6' }}></i> Client names and proprietary metrics are anonymized to honor non-disclosure agreements
                                 </span>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ export default function CaseStudiesOverviewPage() {
                 </section>
 
                 {/* Aggregate Proof Metrics Bar */}
-                <section className="prominence_section_compact" style={{ background: '#0f1013', color: '#fff', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+                <section className="prominence_section_compact" style={{ background: '#0D0D14', color: '#fff', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
                     <div className="container">
                         <div className="row text-center">
                             <div className="col-lg-3 col-6 mb_20 mb-lg-0">
@@ -115,7 +115,7 @@ export default function CaseStudiesOverviewPage() {
                 </section>
 
                 {/* Case Studies Grid */}
-                <section className="prominence_section" style={{ background: '#FAF8F2' }}>
+                <section className="prominence_section" style={{ background: '#F7F5FC' }}>
                     <div className="container">
                         <div className="row">
                             {CASE_STUDIES_DATA.map((cs) => (
@@ -124,7 +124,7 @@ export default function CaseStudiesOverviewPage() {
                                         overflow: 'hidden', 
                                         height: '100%',
                                         padding: 0,
-                                        borderTop: '3px solid #b89058',
+                                        borderTop: '3px solid #8B5CF6',
                                         backgroundColor: '#ffffff'
                                     }}>
                                         <div style={{ height: '210px', position: 'relative', overflow: 'hidden' }}>
@@ -137,7 +137,7 @@ export default function CaseStudiesOverviewPage() {
                                                 position: 'absolute', 
                                                 top: '16px', 
                                                 left: '16px', 
-                                                background: 'rgba(15, 16, 19, 0.92)', 
+                                                background: 'rgba(13, 13, 20, 0.92)', 
                                                 color: '#fff', 
                                                 fontSize: '11px', 
                                                 fontWeight: '700', 
@@ -151,11 +151,11 @@ export default function CaseStudiesOverviewPage() {
                                         </div>
 
                                         <div className="prominence_card_body" style={{ padding: '32px' }}>
-                                             <div style={{ fontSize: '12px', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '8px' }}>
+                                             <div style={{ fontSize: '12px', fontWeight: '700', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '8px' }}>
                                                 {cs.clientRole} • {cs.clientIndustry}
                                             </div>
 
-                                            <h3 style={{ fontSize: '20px', fontFamily: 'var(--title-font, "PT Serif", Georgia, serif)', fontWeight: '700', color: '#0f1013', marginBottom: '10px', lineHeight: '1.35' }}>
+                                            <h3 style={{ fontSize: '20px', fontFamily: 'var(--title-font, "PT Serif", Georgia, serif)', fontWeight: '700', color: '#0D0D14', marginBottom: '10px', lineHeight: '1.35' }}>
                                                 <Link href={`/case-studies/${cs.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
                                                     {cs.shortTitle}
                                                 </Link>
@@ -165,17 +165,17 @@ export default function CaseStudiesOverviewPage() {
                                                 {cs.tagline}
                                             </p>
 
-                                            <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.7', marginBottom: '20px' }}>
+                                            <p style={{ color: '#6B7280', fontSize: '14px', lineHeight: '1.7', marginBottom: '20px' }}>
                                                 {cs.challenge.summary.substring(0, 115)}...
                                             </p>
 
                                             {/* Metrics preview */}
-                                            <div style={{ background: '#FAF8F2', borderRadius: '8px', padding: '14px 16px', marginBottom: '20px', border: '1px solid #e2e8f0' }}>
+                                            <div style={{ background: '#F7F5FC', borderRadius: '8px', padding: '14px 16px', marginBottom: '20px', border: '1px solid #e2e8f0' }}>
                                                 <div className="row g-2">
                                                     {cs.metrics.slice(0, 2).map((m, i) => (
                                                         <div key={i} className="col-6">
-                                                            <div style={{ fontSize: '19px', fontFamily: 'var(--title-font, "PT Serif", Georgia, serif)', fontWeight: '700', color: '#0f1013' }}>{m.value}</div>
-                                                            <div style={{ fontSize: '11px', color: '#64748b', lineHeight: '1.3' }}>{m.label}</div>
+                                                            <div style={{ fontSize: '19px', fontFamily: 'var(--title-font, "PT Serif", Georgia, serif)', fontWeight: '700', color: '#0D0D14' }}>{m.value}</div>
+                                                            <div style={{ fontSize: '11px', color: '#6B7280', lineHeight: '1.3' }}>{m.label}</div>
                                                         </div>
                                                     ))}
                                                 </div>
@@ -199,7 +199,7 @@ export default function CaseStudiesOverviewPage() {
                 </section>
 
                 {/* Final Consultation CTA */}
-                <section className="prominence_section" style={{ background: '#0f1013', color: '#fff', textAlign: 'center' }}>
+                <section className="prominence_section" style={{ background: '#0D0D14', color: '#fff', textAlign: 'center' }}>
                     <div className="container">
                         <div style={{ maxWidth: '720px', margin: '0 auto' }}>
                             <div className="tag_text" style={{ marginBottom: '14px' }}>

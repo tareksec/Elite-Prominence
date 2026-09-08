@@ -244,20 +244,20 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             bottom: '80px',
             left: '50%',
             transform: 'translateX(-50%)',
-            background: '#0f1013',
+            background: '#0D0D14',
             color: '#FFFFFF',
             padding: '10px 20px',
             borderRadius: '8px',
             fontSize: '14px',
             fontWeight: '500',
             zIndex: 99999,
-            boxShadow: '0 4px 14px rgba(15, 16, 19, 0.25)',
+            boxShadow: '0 4px 14px rgba(13, 13, 20, 0.25)',
             display: 'flex',
             alignItems: 'center',
             gap: '8px'
           }}
         >
-          <i className="fa-solid fa-circle-check" style={{ color: 'var(--ep-gold, #b89058)', fontSize: '15px' }}></i>
+          <i className="fa-solid fa-circle-check" style={{ color: '#8B5CF6', fontSize: '15px' }}></i>
           {toastMsg}
         </div>
       )}
@@ -271,22 +271,22 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          color: #64748B;
+          color: #6B7280;
           background: #FFFFFF;
           border: 1px solid #E5E7EB;
           cursor: pointer;
           transition: all 0.2s ease;
         }
         .action-btn:hover {
-          color: #0f1013;
-          border-color: #0f1013;
-          background: #F8F9FA;
+          color: #0D0D14;
+          border-color: #0D0D14;
+          background: #F7F5FC;
           transform: scale(1.06);
         }
         .action-btn.active {
-          background: #0f1013 !important;
+          background: #0D0D14 !important;
           color: #FFFFFF !important;
-          border-color: #0f1013 !important;
+          border-color: #0D0D14 !important;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         @media (max-width: 1279px) {

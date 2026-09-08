@@ -69,7 +69,7 @@ export default function SolutionsOverviewPage() {
                         <div className="prominence_header_centered">
                             <div style={{ marginBottom: "12px" }}>
                                 <span className="prominence_tracker">
-                                    <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058" }}></span>
+                                    <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6" }}></span>
                                     Executive Solutions by Role
                                 </span>
                             </div>
@@ -97,7 +97,7 @@ export default function SolutionsOverviewPage() {
                         <div className="row">
                             {SOLUTIONS_DATA.map((solution) => (
                                 <div key={solution.slug} className="col-lg-6 mb_40">
-                                    <div className="prominence_card prominence_card_equal_height prominence_depth_card" style={{ overflow: "hidden", borderTop: "3px solid #b89058" }}>
+                                    <div className="prominence_card prominence_card_equal_height prominence_depth_card" style={{ overflow: "hidden", borderTop: "3px solid #8B5CF6" }}>
                                         <div style={{ height: "220px", margin: "-36px -32px 28px", position: "relative", overflow: "hidden", borderBottom: "1px solid #edf2f7", borderTopLeftRadius: "11px", borderTopRightRadius: "11px" }}>
                                             <img 
                                                 src={solution.heroImage} 
@@ -108,7 +108,7 @@ export default function SolutionsOverviewPage() {
                                                 position: "absolute", 
                                                 top: "16px", 
                                                 left: "16px", 
-                                                background: "rgba(15, 16, 19, 0.9)", 
+                                                background: "rgba(13, 13, 20, 0.9)", 
                                                 color: "#ffffff", 
                                                 fontSize: "11px", 
                                                 fontWeight: "700", 
@@ -123,27 +123,27 @@ export default function SolutionsOverviewPage() {
                                         </div>
 
                                         <div className="prominence_card_body">
-                                            <span style={{ fontSize: "11px", fontWeight: "700", color: "#64748b", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontFamily: "var(--primary-font)", display: "block" }}>
+                                            <span style={{ fontSize: "11px", fontWeight: "700", color: "#6B7280", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontFamily: "var(--primary-font)", display: "block" }}>
                                                 {solution.tagline}
                                             </span>
-                                            <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0f1013", marginBottom: "14px", lineHeight: "1.3", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                            <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0D0D14", marginBottom: "14px", lineHeight: "1.3", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                                 <Link href={`/solutions/${solution.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
                                                     {solution.title}
                                                 </Link>
                                             </h3>
-                                            <p style={{ color: "#59606a", fontSize: "15px", lineHeight: "26px", marginBottom: "24px" }}>
+                                            <p style={{ color: "#6B7280", fontSize: "15px", lineHeight: "26px", marginBottom: "24px" }}>
                                                 {solution.executiveSummary}
                                             </p>
 
-                                            <div style={{ background: "#fafbfc", borderRadius: "8px", padding: "18px 20px", marginBottom: "16px", border: "1px solid #eef2f6" }}>
-                                                <h4 style={{ fontSize: "11px", fontWeight: "700", color: "#64748b", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "10px", fontFamily: "var(--primary-font)" }}>
+                                            <div style={{ background: "#F7F5FC", borderRadius: "8px", padding: "18px 20px", marginBottom: "16px", border: "1px solid #eef2f6" }}>
+                                                <h4 style={{ fontSize: "11px", fontWeight: "700", color: "#6B7280", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "10px", fontFamily: "var(--primary-font)" }}>
                                                     Reputation Vulnerabilities Solved:
                                                 </h4>
                                                 <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                                                     {solution.uniqueChallenges.slice(0, 2).map((ch, i) => (
-                                                        <li key={i} style={{ display: "flex", gap: "10px", fontSize: "13.5px", color: "#334155", marginBottom: "8px", lineHeight: "20px" }}>
-                                                            <span style={{ color: "#64748b", fontWeight: "700" }}>—</span>
-                                                            <span><strong style={{ color: "#0f1013" }}>{ch.title}:</strong> {ch.desc.substring(0, 80)}...</span>
+                                                        <li key={i} style={{ display: "flex", gap: "10px", fontSize: "13.5px", color: "#0D0D14", marginBottom: "8px", lineHeight: "20px" }}>
+                                                            <span style={{ color: "#6B7280", fontWeight: "700" }}>—</span>
+                                                            <span><strong style={{ color: "#0D0D14" }}>{ch.title}:</strong> {ch.desc.substring(0, 80)}...</span>
                                                         </li>
                                                     ))}
                                                 </ul>
@@ -159,7 +159,7 @@ export default function SolutionsOverviewPage() {
                                             </Link>
                                             <Link 
                                                 href="/contact" 
-                                                style={{ fontSize: "13px", fontWeight: "600", color: "#64748b", textDecoration: "none" }}
+                                                style={{ fontSize: "13px", fontWeight: "600", color: "#6B7280", textDecoration: "none" }}
                                             >
                                                 Inquire Confidentially
                                             </Link>
@@ -172,20 +172,20 @@ export default function SolutionsOverviewPage() {
                 </section>
 
                 {/* Self-Audit Banner */}
-                <section className="prominence_section_compact" style={{ background: "#FAF8F2", borderTop: "1px solid #edf2f7" }}>
+                <section className="prominence_section_compact" style={{ background: "#F7F5FC", borderTop: "1px solid #edf2f7" }}>
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-8">
                                 <div style={{ marginBottom: "8px" }}>
                                     <span className="prominence_tracker">
-                                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058" }}></span>
+                                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6" }}></span>
                                         Executive Diagnostic
                                     </span>
                                 </div>
-                                <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0f1013", marginTop: "4px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0D0D14", marginTop: "4px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                     Calculate Your Executive Digital Presence Score
                                 </h2>
-                                <p style={{ color: "#59606a", fontSize: "16px", marginTop: "8px", margin: 0, maxWidth: "680px", lineHeight: "26px" }}>
+                                <p style={{ color: "#6B7280", fontSize: "16px", marginTop: "8px", margin: 0, maxWidth: "680px", lineHeight: "26px" }}>
                                     Audit your Google search placement, LinkedIn gravitas, owned website sovereignty, and media proof in 3 minutes across 6 objective dimensions.
                                 </p>
                             </div>

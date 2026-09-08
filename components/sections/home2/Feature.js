@@ -73,7 +73,7 @@ export default function Feature() {
                                         position: "absolute",
                                         top: "18px",
                                         left: "18px",
-                                        background: "rgba(15, 16, 19, 0.88)",
+                                        background: "rgba(13, 13, 20, 0.88)",
                                         backdropFilter: "blur(8px)",
                                         color: "#ffffff",
                                         padding: "6px 14px",
@@ -87,7 +87,7 @@ export default function Feature() {
                                         border: "1px solid rgba(255,255,255,0.15)",
                                         zIndex: 3
                                     }}>
-                                        <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#b89058", display: "inline-block" }}></span>
+                                        <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#8B5CF6", display: "inline-block" }}></span>
                                         {currentPillar.badge}
                                     </div>
 
@@ -97,19 +97,19 @@ export default function Feature() {
                                         bottom: "18px",
                                         left: "18px",
                                         right: "18px",
-                                        background: "rgba(15, 16, 19, 0.94)",
+                                        background: "rgba(13, 13, 20, 0.94)",
                                         backdropFilter: "blur(12px)",
                                         borderRadius: "12px",
                                         padding: "14px 18px",
                                         color: "#ffffff",
-                                        border: "1px solid rgba(184, 144, 88, 0.35)",
+                                        border: "1px solid rgba(139, 92, 246, 0.35)",
                                         display: "flex",
                                         justifyContent: "space-between",
                                         alignItems: "center",
                                         zIndex: 3
                                     }}>
                                         <div>
-                                            <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "1px", color: "#b89058", fontWeight: "700" }}>Verified Outcome</div>
+                                            <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "1px", color: "#8B5CF6", fontWeight: "700" }}>Verified Outcome</div>
                                             <div style={{ fontSize: "15px", fontWeight: "700" }}>{currentPillar.metric}</div>
                                         </div>
                                         <div style={{ textAlign: "right" }}>
@@ -131,7 +131,7 @@ export default function Feature() {
                                         borderRadius: "14px",
                                         padding: "10px",
                                         boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
-                                        border: isActive.key === 2 ? "2px solid #0f1013" : "1px solid rgba(0,0,0,0.08)",
+                                        border: isActive.key === 2 ? "2px solid #0D0D14" : "1px solid rgba(0,0,0,0.08)",
                                         cursor: "pointer",
                                         zIndex: 4,
                                         transition: "all 0.3s ease",
@@ -155,7 +155,7 @@ export default function Feature() {
                                             borderRadius: "6px",
                                             fontSize: "10px",
                                             fontWeight: "700",
-                                            color: "#1b2534",
+                                            color: "#0D0D14",
                                             display: "flex",
                                             alignItems: "center",
                                             gap: "4px",
@@ -165,10 +165,10 @@ export default function Feature() {
                                         </div>
                                     </div>
                                     <div style={{ marginTop: "8px", padding: "0 4px" }}>
-                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#1b2534", display: "block" }}>
+                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", display: "block" }}>
                                             Pillar 2: Google &amp; Reputation
                                         </span>
-                                        <span style={{ fontSize: "11px", color: "#64748b" }}>
+                                        <span style={{ fontSize: "11px", color: "#6B7280" }}>
                                             Search Authority &amp; Standing
                                         </span>
                                     </div>
@@ -186,7 +186,7 @@ export default function Feature() {
                                         borderRadius: "14px",
                                         padding: "10px",
                                         boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
-                                        border: isActive.key === 3 ? "2px solid #0f1013" : "1px solid rgba(0,0,0,0.08)",
+                                        border: isActive.key === 3 ? "2px solid #0D0D14" : "1px solid rgba(0,0,0,0.08)",
                                         cursor: "pointer",
                                         zIndex: 4,
                                         transition: "all 0.3s ease",
@@ -210,7 +210,7 @@ export default function Feature() {
                                             borderRadius: "6px",
                                             fontSize: "10px",
                                             fontWeight: "700",
-                                            color: "#1b2534",
+                                            color: "#0D0D14",
                                             display: "flex",
                                             alignItems: "center",
                                             gap: "4px",
@@ -220,10 +220,10 @@ export default function Feature() {
                                         </div>
                                     </div>
                                     <div style={{ marginTop: "8px", padding: "0 4px" }}>
-                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#1b2534", display: "block" }}>
+                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", display: "block" }}>
                                             Pillar 3: Social Visibility
                                         </span>
-                                        <span style={{ fontSize: "11px", color: "#64748b" }}>
+                                        <span style={{ fontSize: "11px", color: "#6B7280" }}>
                                             LinkedIn Ghostwriting
                                         </span>
                                     </div>
@@ -242,17 +242,17 @@ export default function Feature() {
                                 <ul className="accordion_box">
                                     <li className={`accordion block ${isActive.key == 1 ? "active-block" : ""}`} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
                                         <div className={isActive.key == 1 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(1)} style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                                            <h3 style={{ margin: 0, color: isActive.key == 1 ? "#0f1013" : "#59606a", fontFamily: "var(--primary-font)" }}>Pillar 1 — Digital HQ (Website)</h3>
-                                            <span style={{ fontSize: "14px", fontWeight: "700", color: isActive.key == 1 ? "#0f1013" : "#94a3b8" }}>{isActive.key == 1 ? "—" : "+"}</span>
+                                            <h3 style={{ margin: 0, color: isActive.key == 1 ? "#0D0D14" : "#6B7280", fontFamily: "var(--primary-font)" }}>Pillar 1 — Digital HQ (Website)</h3>
+                                            <span style={{ fontSize: "14px", fontWeight: "700", color: isActive.key == 1 ? "#0D0D14" : "#6B7280" }}>{isActive.key == 1 ? "—" : "+"}</span>
                                         </div>
                                         <div className={isActive.key == 1 ? "acc-content current" : "acc-content"} style={{ display: isActive.key == 1 ? "block" : "none" }}>
                                             <div className="text">
                                                 <p>A personal website that establishes your digital brand identity, showcasing your bio, expertise, case studies, and career milestones — the definitive hub that represents you everywhere.</p>
                                                 <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
-                                                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#151619", backgroundColor: "#f8fafc", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
+                                                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
                                                         45-Day Launch to Page 1
                                                     </span>
-                                                    <span style={{ fontSize: "12px", fontWeight: "600", color: "#64748b", backgroundColor: "#f8fafc", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
+                                                    <span style={{ fontSize: "12px", fontWeight: "600", color: "#6B7280", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
                                                         100% Owned Domain Authority
                                                     </span>
                                                 </div>
@@ -261,17 +261,17 @@ export default function Feature() {
                                     </li>
                                     <li className={`accordion block ${isActive.key == 2 ? "active-block" : ""}`} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="650">
                                         <div className={isActive.key == 2 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(2)} style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                                            <h3 style={{ margin: 0, color: isActive.key == 2 ? "#0f1013" : "#59606a", fontFamily: "var(--primary-font)" }}>Pillar 2 — Google &amp; Reputation</h3>
-                                            <span style={{ fontSize: "14px", fontWeight: "700", color: isActive.key == 2 ? "#0f1013" : "#94a3b8" }}>{isActive.key == 2 ? "—" : "+"}</span>
+                                            <h3 style={{ margin: 0, color: isActive.key == 2 ? "#0D0D14" : "#6B7280", fontFamily: "var(--primary-font)" }}>Pillar 2 — Google &amp; Reputation</h3>
+                                            <span style={{ fontSize: "14px", fontWeight: "700", color: isActive.key == 2 ? "#0D0D14" : "#6B7280" }}>{isActive.key == 2 ? "—" : "+"}</span>
                                         </div>
                                         <div className={isActive.key == 2 ? "acc-content current" : "acc-content"} style={{ display: isActive.key == 2 ? "block" : "none" }}>
                                             <div className="text">
                                                 <p>When someone searches your name, page one should reflect your executive standing — not silence or outdated noise. We manage your online reputation with owned assets and strategic media coverage so search results validate your authority immediately.</p>
                                                 <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
-                                                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#151619", backgroundColor: "#f8fafc", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
+                                                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
                                                         +340% Inbound Board Inquiries
                                                     </span>
-                                                    <span style={{ fontSize: "12px", fontWeight: "600", color: "#64748b", backgroundColor: "#f8fafc", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
+                                                    <span style={{ fontSize: "12px", fontWeight: "600", color: "#6B7280", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
                                                         Top-3 Search Placement Guaranteed
                                                     </span>
                                                 </div>
@@ -280,17 +280,17 @@ export default function Feature() {
                                     </li>
                                     <li className={`accordion block ${isActive.key == 3 ? "active-block" : ""}`} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="700">
                                         <div className={isActive.key == 3 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(3)} style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                                            <h3 style={{ margin: 0, color: isActive.key == 3 ? "#0f1013" : "#59606a", fontFamily: "var(--primary-font)" }}>Pillar 3 — Social Visibility</h3>
-                                            <span style={{ fontSize: "14px", fontWeight: "700", color: isActive.key == 3 ? "#0f1013" : "#94a3b8" }}>{isActive.key == 3 ? "—" : "+"}</span>
+                                            <h3 style={{ margin: 0, color: isActive.key == 3 ? "#0D0D14" : "#6B7280", fontFamily: "var(--primary-font)" }}>Pillar 3 — Social Visibility</h3>
+                                            <span style={{ fontSize: "14px", fontWeight: "700", color: isActive.key == 3 ? "#0D0D14" : "#6B7280" }}>{isActive.key == 3 ? "—" : "+"}</span>
                                         </div>
                                         <div className={isActive.key == 3 ? "acc-content current" : "acc-content"} style={{ display: isActive.key == 3 ? "block" : "none" }}>
                                             <div className="text">
                                                 <p>Executive ghostwriting and content creation aligned with an intentional brand strategy, keeping your thought leadership active on LinkedIn so you stay visible without becoming a full-time content creator.</p>
                                                 <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
-                                                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#151619", backgroundColor: "#f8fafc", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
+                                                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
                                                         45K+ Avg. Organic Reach
                                                     </span>
-                                                    <span style={{ fontSize: "12px", fontWeight: "600", color: "#64748b", backgroundColor: "#f8fafc", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
+                                                    <span style={{ fontSize: "12px", fontWeight: "600", color: "#6B7280", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
                                                         0 Hours Weekly Time Commitment
                                                     </span>
                                                 </div>

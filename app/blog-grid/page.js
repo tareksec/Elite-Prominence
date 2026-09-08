@@ -56,16 +56,16 @@ export default function Blog_Grid() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogGridSchema) }}
       />
       <Layout headerStyle={4} footerStyle={1} breadcrumbTitle14="Insights for HR Leaders">
-        <section className="blog_section pt_90 pb_120" style={{ backgroundColor: '#FAF8F2' }}>
+        <section className="blog_section pt_90 pb_120" style={{ backgroundColor: '#F7F5FC' }}>
           <div className="container">
             <div className="section_title centred" style={{ marginBottom: '50px' }}>
               <span className="prominence_badge">
                 Executive Thought Leadership
               </span>
-              <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontSize: '42px', color: '#0f1013', letterSpacing: '-0.5px' }}>
+              <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontSize: '42px', color: '#0D0D14', letterSpacing: '-0.5px' }}>
                 Articles &amp; Strategic Frameworks
               </h2>
-              <p style={{ maxWidth: '820px', margin: '15px auto 0', fontSize: '18px', color: '#64748B', lineHeight: '1.7' }}>
+              <p style={{ maxWidth: '820px', margin: '15px auto 0', fontSize: '18px', color: '#6B7280', lineHeight: '1.7' }}>
                 Navigating the C-suite landscape requires human resources executives to command more than internal operational credibility. Explore our field-tested methodologies on executive presence, Google reputation management, and high-signal personal branding.
               </p>
             </div>
@@ -100,7 +100,7 @@ export default function Blog_Grid() {
                           position: 'absolute',
                           top: '14px',
                           left: '14px',
-                          background: '#0f1013',
+                          background: '#0D0D14',
                           color: '#FFFFFF',
                           fontSize: '11px',
                           fontWeight: '700',
@@ -125,12 +125,12 @@ export default function Blog_Grid() {
                       </div>
 
                       <h3 style={{ fontSize: '19px', lineHeight: '1.35', marginBottom: '12px', fontWeight: '700', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                        <Link href={`/blog/${post.slug}`} style={{ color: '#0f1013', textDecoration: 'none' }}>
+                        <Link href={`/blog/${post.slug}`} style={{ color: '#0D0D14', textDecoration: 'none' }}>
                           {post.title}
                         </Link>
                       </h3>
 
-                      <p style={{ color: '#64748B', fontSize: '14px', lineHeight: '1.6', marginBottom: '20px', flex: 1 }}>
+                      <p style={{ color: '#6B7280', fontSize: '14px', lineHeight: '1.6', marginBottom: '20px', flex: 1 }}>
                         {post.excerpt}
                       </p>
 

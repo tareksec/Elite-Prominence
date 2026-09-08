@@ -25,8 +25,8 @@ export default function ArticleCTA({
         backgroundColor: '#FFFFFF',
         borderRadius: '14px',
         border: '1px solid #E5E7EB',
-        borderLeft: '5px solid #0f1013',
-        boxShadow: '0 8px 30px rgba(15, 16, 19, 0.06), 0 2px 8px rgba(15, 16, 19, 0.03)',
+        borderLeft: '5px solid #8B5CF6',
+        boxShadow: '0 8px 30px rgba(13, 13, 20, 0.06), 0 2px 8px rgba(13, 13, 20, 0.03)',
         position: 'relative',
         overflow: 'hidden'
       }}
@@ -40,7 +40,7 @@ export default function ArticleCTA({
           width: '180px',
           height: '180px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(184, 144, 88, 0.15) 0%, rgba(15, 16, 19, 0.03) 70%, transparent 100%)',
+          background: 'radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(13, 13, 20, 0.03) 70%, transparent 100%)',
           pointerEvents: 'none',
           filter: 'blur(16px)'
         }}
@@ -68,7 +68,7 @@ export default function ArticleCTA({
               fontWeight: '700',
               textTransform: 'uppercase',
               letterSpacing: '0.8px',
-              color: '#0f1013',
+              color: '#0D0D14',
               marginBottom: '8px'
             }}
           >
@@ -77,7 +77,7 @@ export default function ArticleCTA({
                 width: '6px',
                 height: '6px',
                 borderRadius: '50%',
-                backgroundColor: '#b89058'
+                backgroundColor: '#8B5CF6'
               }}
             />
             <span>Prominence Executive Advisory</span>
@@ -88,7 +88,7 @@ export default function ArticleCTA({
               fontFamily: "var(--primary-font)",
               fontSize: '23px',
               fontWeight: '700',
-              color: '#0f1013',
+              color: '#0D0D14',
               lineHeight: 1.25,
               margin: '0 0 8px 0'
             }}
@@ -100,7 +100,7 @@ export default function ArticleCTA({
             style={{
               fontSize: '15px',
               lineHeight: 1.6,
-              color: '#4B5563',
+              color: '#6B7280',
               margin: 0
             }}
           >
@@ -114,19 +114,19 @@ export default function ArticleCTA({
               gap: '16px',
               marginTop: '12px',
               fontSize: '12px',
-              color: '#64748B'
+              color: '#6B7280'
             }}
           >
             <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <i className="fa-solid fa-check" style={{ color: '#b89058', fontSize: '11px' }}></i>
+              <i className="fa-solid fa-check" style={{ color: '#8B5CF6', fontSize: '11px' }}></i>
               100% Confidential
             </span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <i className="fa-solid fa-check" style={{ color: '#b89058', fontSize: '11px' }}></i>
+              <i className="fa-solid fa-check" style={{ color: '#8B5CF6', fontSize: '11px' }}></i>
               No Obligation
             </span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <i className="fa-solid fa-check" style={{ color: '#b89058', fontSize: '11px' }}></i>
+              <i className="fa-solid fa-check" style={{ color: '#8B5CF6', fontSize: '11px' }}></i>
               20 Minutes
             </span>
           </div>

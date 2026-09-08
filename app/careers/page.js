@@ -34,12 +34,12 @@ export default function CareersPage() {
                             <h1 style={{
                                 fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                 fontWeight: '700',
-                                color: '#0f1013',
+                                color: '#0D0D14',
                                 lineHeight: '1.2'
                             }}>
                                 Counsel the Leaders Who Shape Global Industry
                             </h1>
-                            <p className="prominence_lead_text">
+                            <p className="prominence_lead_text" style={{ color: '#6B7280' }}>
                                 Prominence is not a marketing agency. We are a specialized executive advisory firm entrusted by CEOs, CHROs, and institutional leaders to architect their sovereign digital stature, defend their search footprint, and articulate their thought leadership.
                             </p>
                             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '32px' }}>
@@ -55,17 +55,17 @@ export default function CareersPage() {
                 </section>
 
                 {/* Operating Principles: Asymmetrical Editorial Manifesto */}
-                <section className="prominence_section" style={{ background: '#FAF8F2', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
+                <section className="prominence_section" style={{ background: '#F7F5FC', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
                         <div className="prominence_header_split">
                             <div>
                                 <span className="prominence_tracker">Our Professional Creed</span>
-                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0f1013', margin: 0, lineHeight: '1.25' }}>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0D0D14', margin: 0, lineHeight: '1.25' }}>
                                     The Three Tenets of the Prominence Practice
                                 </h2>
                             </div>
                             <div>
-                                <p className="prominence_lead_text">
+                                <p className="prominence_lead_text" style={{ color: '#6B7280' }}>
                                     We maintain an uncompromising standard of intellectual rigor. We work with a small, elite cohort of specialists who prize quality over volume and discretion over self-promotion.
                                 </p>
                             </div>
@@ -86,17 +86,17 @@ export default function CareersPage() {
                                     justifyContent: 'space-between'
                                 }}>
                                     <div>
-                                        <div style={{ fontSize: '12px', fontWeight: '700', color: '#b89058', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
+                                        <div style={{ fontSize: '12px', fontWeight: '700', color: '#8B5CF6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
                                             Tenet I
                                         </div>
-                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#0f1013', marginBottom: '16px' }}>
+                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#0D0D14', marginBottom: '16px' }}>
                                             Journalistic Rigor &amp; Commercial Truth
                                         </h3>
-                                        <p style={{ color: '#59606a', fontSize: '15px', lineHeight: '1.7', margin: 0 }}>
+                                        <p style={{ color: '#6B7280', fontSize: '15px', lineHeight: '1.7', margin: 0 }}>
                                             We reject synthetic social noise and generic algorithmic platitudes. Every essay and commentary we craft is grounded in genuine operational truth, balance sheet reality, and boardroom gravity.
                                         </p>
                                     </div>
-                                    <div style={{ marginTop: '28px', paddingTop: '18px', borderTop: '1px solid #f1f5f9', fontSize: '12px', color: '#94a3b8', fontWeight: '600' }}>
+                                    <div style={{ marginTop: '28px', paddingTop: '18px', borderTop: '1px solid #f1f5f9', fontSize: '12px', color: '#6B7280', fontWeight: '600' }}>
                                         Zero AI Platitudes &bull; Nuanced Executive Tone
                                     </div>
                                 </div>
@@ -115,17 +115,17 @@ export default function CareersPage() {
                                     justifyContent: 'space-between'
                                 }}>
                                     <div>
-                                        <div style={{ fontSize: '12px', fontWeight: '700', color: '#b89058', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
+                                        <div style={{ fontSize: '12px', fontWeight: '700', color: '#8B5CF6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
                                             Tenet II
                                         </div>
-                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#0f1013', marginBottom: '16px' }}>
+                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#0D0D14', marginBottom: '16px' }}>
                                             Inviolable Discretion &amp; Governance
                                         </h3>
-                                        <p style={{ color: '#59606a', fontSize: '15px', lineHeight: '1.7', margin: 0 }}>
+                                        <p style={{ color: '#6B7280', fontSize: '15px', lineHeight: '1.7', margin: 0 }}>
                                             Our clients govern publicly traded enterprises, sovereign funds, and market-shaping startups. Absolute confidentiality and institutional security are non-negotiable foundations of our firm.
                                         </p>
                                     </div>
-                                    <div style={{ marginTop: '28px', paddingTop: '18px', borderTop: '1px solid #f1f5f9', fontSize: '12px', color: '#94a3b8', fontWeight: '600' }}>
+                                    <div style={{ marginTop: '28px', paddingTop: '18px', borderTop: '1px solid #f1f5f9', fontSize: '12px', color: '#6B7280', fontWeight: '600' }}>
                                         Strict Legal Non-Disclosure &bull; Zero Leakage
                                     </div>
                                 </div>
@@ -144,17 +144,17 @@ export default function CareersPage() {
                                     justifyContent: 'space-between'
                                 }}>
                                     <div>
-                                        <div style={{ fontSize: '12px', fontWeight: '700', color: '#b89058', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
+                                        <div style={{ fontSize: '12px', fontWeight: '700', color: '#8B5CF6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
                                             Tenet III
                                         </div>
-                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#0f1013', marginBottom: '16px' }}>
+                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#0D0D14', marginBottom: '16px' }}>
                                             Intellectual Autonomy &amp; Deep Space
                                         </h3>
-                                        <p style={{ color: '#59606a', fontSize: '15px', lineHeight: '1.7', margin: 0 }}>
+                                        <p style={{ color: '#6B7280', fontSize: '15px', lineHeight: '1.7', margin: 0 }}>
                                             We operate globally and asynchronously. We do not track keystrokes or enforce arbitrary office hours. We measure talent exclusively by craftsmanship, strategic acumen, and client impact.
                                         </p>
                                     </div>
-                                    <div style={{ marginTop: '28px', paddingTop: '18px', borderTop: '1px solid #f1f5f9', fontSize: '12px', color: '#94a3b8', fontWeight: '600' }}>
+                                    <div style={{ marginTop: '28px', paddingTop: '18px', borderTop: '1px solid #f1f5f9', fontSize: '12px', color: '#6B7280', fontWeight: '600' }}>
                                         Asynchronous Focus &bull; Deep Mastery
                                     </div>
                                 </div>
@@ -164,10 +164,10 @@ export default function CareersPage() {
                 </section>
 
                 {/* Appointment Protocol: Visual 4-Stage Roadmap */}
-                <section className="prominence_section" style={{ background: '#0f1013', color: '#ffffff', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', fontFamily: 'var(--primary-font)' }}>
+                <section className="prominence_section" style={{ background: '#0D0D14', color: '#ffffff', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
                         <div className="prominence_header_centered" style={{ maxWidth: '780px', margin: '0 auto 48px' }}>
-                            <span className="prominence_tracker" style={{ color: '#b89058' }}>
+                            <span className="prominence_tracker" style={{ color: '#8B5CF6' }}>
                                 Vetting &amp; Induction Protocol
                             </span>
                             <h2 style={{
@@ -176,7 +176,7 @@ export default function CareersPage() {
                             }}>
                                 The 4-Stage Evaluation Architecture
                             </h2>
-                            <p className="prominence_lead_text" style={{ color: '#94a3b8' }}>
+                            <p className="prominence_lead_text" style={{ color: '#6B7280' }}>
                                 We evaluate every candidate with the same meticulous rigor we apply to executive client reputations.
                             </p>
                         </div>
@@ -215,13 +215,13 @@ export default function CareersPage() {
                                         flexDirection: 'column',
                                         position: 'relative'
                                     }}>
-                                        <div style={{ fontSize: '24px', fontWeight: '700', color: '#b89058', marginBottom: '16px' }}>
+                                        <div style={{ fontSize: '24px', fontWeight: '700', color: '#8B5CF6', marginBottom: '16px' }}>
                                             {item.stage}
                                         </div>
                                         <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#ffffff', marginBottom: '12px' }}>
                                             {item.title}
                                         </h4>
-                                        <p style={{ fontSize: '13.5px', color: '#94a3b8', lineHeight: '1.65', margin: 0 }}>
+                                        <p style={{ fontSize: '13.5px', color: '#6B7280', lineHeight: '1.65', margin: 0 }}>
                                             {item.desc}
                                         </p>
                                     </div>
@@ -232,17 +232,17 @@ export default function CareersPage() {
                 </section>
 
                 {/* Open Mandates: Editorial Role Dossiers */}
-                <section id="open-mandates" className="prominence_section" style={{ background: '#FAF8F2', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
+                <section id="open-mandates" className="prominence_section" style={{ background: '#F7F5FC', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
                         <div className="prominence_header_split">
                             <div>
                                 <span className="prominence_tracker">Active Retained Searches</span>
-                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", color: '#0D0D14' }}>
                                     Current Practice Mandates
                                 </h2>
                             </div>
                             <div>
-                                <p className="prominence_lead_text">
+                                <p className="prominence_lead_text" style={{ color: '#6B7280' }}>
                                     Each mandate represents a key pillar in our executive reputation and thought leadership advisory.
                                 </p>
                             </div>
@@ -260,10 +260,10 @@ export default function CareersPage() {
                                     {/* Dossier Header */}
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '14px', marginBottom: '18px', paddingBottom: '16px', borderBottom: '1px solid #f1f5f9' }}>
                                         <div>
-                                            <span style={{ fontSize: '11.5px', fontWeight: '700', color: '#b89058', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                                            <span style={{ fontSize: '11.5px', fontWeight: '700', color: '#8B5CF6', textTransform: 'uppercase', letterSpacing: '1px' }}>
                                                 {role.mandate} &bull; {role.practice}
                                             </span>
-                                            <h3 style={{ fontSize: '23px', fontWeight: '700', color: '#0f1013', marginTop: '6px', marginBottom: 0 }}>
+                                            <h3 style={{ fontSize: '23px', fontWeight: '700', color: '#0D0D14', marginTop: '6px', marginBottom: 0 }}>
                                                 {role.title}
                                             </h3>
                                         </div>
@@ -271,44 +271,44 @@ export default function CareersPage() {
                                             <span className="prominence_badge">
                                                 {role.arrangement}
                                             </span>
-                                            <div style={{ fontSize: '12px', color: '#64748b', marginTop: '6px' }}>
-                                                <i className="fa-solid fa-location-dot me-1" style={{ color: '#b89058' }}></i> {role.location}
+                                            <div style={{ fontSize: '12px', color: '#6B7280', marginTop: '6px' }}>
+                                                <i className="fa-solid fa-location-dot me-1" style={{ color: '#8B5CF6' }}></i> {role.location}
                                             </div>
                                         </div>
                                     </div>
 
                                     {/* Mission Statement */}
-                                    <p style={{ color: '#334155', fontSize: '15.5px', lineHeight: '1.7', marginBottom: '22px' }}>
+                                    <p style={{ color: '#0D0D14', fontSize: '15.5px', lineHeight: '1.7', marginBottom: '22px' }}>
                                         {role.mission}
                                     </p>
 
                                     {/* Two-Column Mandate Specs */}
                                     <div className="row g-4 mb-4">
                                         <div className="col-md-7">
-                                            <h4 style={{ fontSize: '11.5px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>
+                                            <h4 style={{ fontSize: '11.5px', fontWeight: '700', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>
                                                 Key Imperatives
                                             </h4>
                                             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                                 {role.imperatives.map((imp, i) => (
-                                                    <li key={i} style={{ display: 'flex', gap: '10px', fontSize: '13.5px', color: '#475569', marginBottom: '9px', lineHeight: '1.5' }}>
-                                                        <i className="fa-solid fa-check" style={{ color: '#b89058', marginTop: '4px', fontSize: '11px' }}></i>
+                                                    <li key={i} style={{ display: 'flex', gap: '10px', fontSize: '13.5px', color: '#6B7280', marginBottom: '9px', lineHeight: '1.5' }}>
+                                                        <i className="fa-solid fa-check" style={{ color: '#8B5CF6', marginTop: '4px', fontSize: '11px' }}></i>
                                                         <span>{imp}</span>
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
                                         <div className="col-md-5">
-                                            <div style={{ background: '#f8fafc', padding: '20px 22px', borderRadius: '12px', border: '1px solid #eaedf0', height: '100%' }}>
-                                                <div style={{ fontSize: '11px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '6px' }}>
+                                            <div style={{ background: '#F7F5FC', padding: '20px 22px', borderRadius: '12px', border: '1px solid #eaedf0', height: '100%' }}>
+                                                <div style={{ fontSize: '11px', fontWeight: '700', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '6px' }}>
                                                     Compensation Terms
                                                 </div>
-                                                <div style={{ fontSize: '14.5px', fontWeight: '700', color: '#0f1013', marginBottom: '14px' }}>
+                                                <div style={{ fontSize: '14.5px', fontWeight: '700', color: '#0D0D14', marginBottom: '14px' }}>
                                                     {role.compensation}
                                                 </div>
-                                                <div style={{ fontSize: '11px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '4px' }}>
+                                                <div style={{ fontSize: '11px', fontWeight: '700', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '4px' }}>
                                                     Ideal Background
                                                 </div>
-                                                <p style={{ fontSize: '12.5px', color: '#64748b', lineHeight: '1.6', margin: 0 }}>
+                                                <p style={{ fontSize: '12.5px', color: '#6B7280', lineHeight: '1.6', margin: 0 }}>
                                                     {role.idealProfile}
                                                 </p>
                                             </div>
@@ -319,7 +319,7 @@ export default function CareersPage() {
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '16px', borderTop: '1px solid #f1f5f9', flexWrap: 'wrap', gap: '12px' }}>
                                         <Link 
                                             href={`/careers/${role.slug || role.id}`}
-                                            style={{ fontSize: '13.5px', fontWeight: '700', color: 'var(--ep-gold, #b89058)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                                            style={{ fontSize: '13.5px', fontWeight: '700', color: '#8B5CF6', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
                                         >
                                             View Full Mandate Dossier <i className="fa-solid fa-arrow-right"></i>
                                         </Link>
@@ -338,17 +338,17 @@ export default function CareersPage() {
                 </section>
 
                 {/* Benefits & Partner Privileges */}
-                <section className="prominence_section" style={{ background: '#FAF8F2', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
+                <section className="prominence_section" style={{ background: '#F7F5FC', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
                         <div className="prominence_header_split">
                             <div>
                                 <span className="prominence_tracker">Partner Privileges</span>
-                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", color: '#0D0D14' }}>
                                     The Sovereign Standard of Stewardship
                                 </h2>
                             </div>
                             <div>
-                                <p className="prominence_lead_text">
+                                <p className="prominence_lead_text" style={{ color: '#6B7280' }}>
                                     We treat specialists as equity partners, not fungible agency cogs. Our practice is built around autonomy, world-class compensation, and deep intellectual space.
                                 </p>
                             </div>
@@ -357,13 +357,13 @@ export default function CareersPage() {
                         <div className="prominence_grid_3">
                             {PARTNER_BENEFITS.map((b, idx) => (
                                 <div key={idx} className="prominence_card" style={{ padding: '32px 28px', height: '100%', display: 'flex', flexDirection: 'column' }}>
-                                    <div style={{ width: '42px', height: '42px', borderRadius: '8px', background: 'rgba(184, 144, 88, 0.1)', color: 'var(--ep-gold)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', marginBottom: '18px' }}>
+                                    <div style={{ width: '42px', height: '42px', borderRadius: '8px', background: 'rgba(139, 92, 246, 0.1)', color: '#8B5CF6', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', marginBottom: '18px' }}>
                                         <i className={b.icon}></i>
                                     </div>
-                                    <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#0f1013', marginBottom: '10px' }}>
+                                    <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#0D0D14', marginBottom: '10px' }}>
                                         {b.title}
                                     </h3>
-                                    <p style={{ fontSize: '14px', color: '#59606a', lineHeight: '1.65', margin: 0 }}>
+                                    <p style={{ fontSize: '14px', color: '#6B7280', lineHeight: '1.65', margin: 0 }}>
                                         {b.desc}
                                     </p>
                                 </div>
@@ -378,17 +378,17 @@ export default function CareersPage() {
                         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
                             <div className="prominence_header_centered" style={{ maxWidth: '720px', margin: '0 auto 40px' }}>
                                 <span className="prominence_tracker">Confidential Dossier Transmission</span>
-                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", color: '#0D0D14' }}>
                                     Submit Your Credentials
                                 </h2>
-                                <p className="prominence_lead_text">
+                                <p className="prominence_lead_text" style={{ color: '#6B7280' }}>
                                     Every submission is handled with strict professional discretion. Please provide links to published pieces, codebases, or past advisory portfolios.
                                 </p>
                             </div>
 
                             {!submitted ? (
                                 <form onSubmit={handleSubmit} style={{
-                                    background: '#fafbfc',
+                                    background: '#F7F5FC',
                                     border: '1px solid #eaedf0',
                                     borderRadius: '16px',
                                     padding: '42px 38px',
@@ -493,13 +493,13 @@ export default function CareersPage() {
                                     textAlign: 'center',
                                     boxShadow: '0 8px 30px rgba(15, 16, 19, 0.05)'
                                 }}>
-                                    <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: '#faf6f0', border: '1px solid rgba(184, 144, 88, 0.4)', color: '#b89058', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px', marginBottom: '18px' }}>
+                                    <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: '#F7F5FC', border: '1px solid rgba(139, 92, 246, 0.4)', color: '#8B5CF6', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px', marginBottom: '18px' }}>
                                         <i className="fa-solid fa-check"></i>
                                     </div>
-                                    <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#0f1013', marginBottom: '10px' }}>
+                                    <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#0D0D14', marginBottom: '10px' }}>
                                         Dossier Successfully Transmitted
                                     </h3>
-                                    <p style={{ color: '#59606a', fontSize: '15.5px', maxWidth: '540px', margin: '0 auto', lineHeight: '1.65' }}>
+                                    <p style={{ color: '#6B7280', fontSize: '15.5px', maxWidth: '540px', margin: '0 auto', lineHeight: '1.65' }}>
                                         Thank you, {name}. Your credentials have been transferred directly to our managing advisory partners. If there is mutual alignment with our active mandates, we will schedule a private dialogue.
                                     </p>
                                 </div>

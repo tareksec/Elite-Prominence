@@ -93,12 +93,12 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
         if (user) {
             return (
                 <div style={{ padding: "14px 0", borderTop: "1px solid #edf2f7", marginTop: "14px" }}>
-                    <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#94a3b8", marginBottom: "8px" }}>
+                    <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#6B7280", marginBottom: "8px" }}>
                         My Account
                     </div>
                     <ul className="navigation clearfix" style={{ listStyle: "none", padding: 0, margin: 0 }}>
                         <li style={{ marginBottom: "6px" }}>
-                            <Link href="/dashboard" onClick={handleClick} style={{ color: "#0f1013", fontWeight: "700", display: "inline-flex", alignItems: "center", gap: "6px", minHeight: "44px", padding: "10px 0" }}>
+                            <Link href="/dashboard" onClick={handleClick} style={{ color: "#0D0D14", fontWeight: "700", display: "inline-flex", alignItems: "center", gap: "6px", minHeight: "44px", padding: "10px 0" }}>
                                 <span>Member Dashboard &rarr;</span>
                             </Link>
                         </li>
@@ -116,7 +116,7 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
                                     background: "none",
                                     border: "none",
                                     padding: "10px 0",
-                                    color: "#64748b",
+                                    color: "#6B7280",
                                     fontSize: "14px",
                                     cursor: "pointer",
                                     minHeight: "44px",
@@ -155,8 +155,8 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
     }
 
     // Desktop layout (compact, secondary weight)
-    const textColor = isDark ? "rgba(255, 255, 255, 0.85)" : "#475569"
-    const hoverColor = "#b89058"
+    const textColor = isDark ? "rgba(255, 255, 255, 0.85)" : "#6B7280"
+    const hoverColor = "#8B5CF6"
 
     if (user) {
         return (
@@ -166,7 +166,7 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
                     style={{
                         fontSize: "14px",
                         fontWeight: "700",
-                        color: isDark ? "#ffffff" : "#0f1013",
+                        color: isDark ? "#ffffff" : "#0D0D14",
                         textDecoration: "none",
                         transition: "color 0.2s ease"
                     }}

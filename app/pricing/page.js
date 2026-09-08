@@ -49,7 +49,7 @@ export default function Pricing_Page() {
                 {/* Clean Executive Hero Header */}
                 <section className="pricing_page_hero" style={{
                     padding: "130px 0 50px",
-                    background: "#FAF8F2",
+                    background: "#F7F5FC",
                     textAlign: "center"
                 }}>
                     <div className="container">
@@ -61,7 +61,7 @@ export default function Pricing_Page() {
                                 fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                 fontSize: "clamp(32px, 5vw, 48px)",
                                 fontWeight: "700",
-                                color: "#0f1013",
+                                color: "#0D0D14",
                                 marginBottom: "18px",
                                 lineHeight: "1.2"
                             }}>
@@ -69,7 +69,7 @@ export default function Pricing_Page() {
                             </h1>
                             <p style={{
                                 fontSize: "18px",
-                                color: "#59606a",
+                                color: "#6B7280",
                                 lineHeight: "1.7",
                                 margin: "0 auto",
                                 maxWidth: "720px"

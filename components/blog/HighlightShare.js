@@ -168,7 +168,7 @@ export default function HighlightShare({ articleTitle = '' }) {
           cursor: 'pointer',
           padding: '6px 8px',
           borderRadius: '6px',
-          color: '#0f1013',
+          color: '#0D0D14',
           display: 'flex',
           alignItems: 'center',
           gap: '4px',
@@ -176,7 +176,7 @@ export default function HighlightShare({ articleTitle = '' }) {
           fontWeight: '600',
           transition: 'background 0.15s ease'
         }}
-        onMouseEnter={(e) => (e.currentTarget.style.background = '#F8F9FA')}
+        onMouseEnter={(e) => (e.currentTarget.style.background = '#F7F5FC')}
         onMouseLeave={(e) => (e.currentTarget.style.background = 'none')}
       >
         <i className="fab fa-x-twitter" style={{ fontSize: '12px' }}></i>
@@ -189,12 +189,12 @@ export default function HighlightShare({ articleTitle = '' }) {
         onClick={copyQuote}
         title="Copy formatted quote"
         style={{
-          background: copied ? '#0f1013' : 'none',
+          background: copied ? '#0D0D14' : 'none',
           border: 'none',
           cursor: 'pointer',
           padding: '6px 8px',
           borderRadius: '6px',
-          color: copied ? '#FFFFFF' : '#0f1013',
+          color: copied ? '#FFFFFF' : '#0D0D14',
           display: 'flex',
           alignItems: 'center',
           gap: '4px',
@@ -203,7 +203,7 @@ export default function HighlightShare({ articleTitle = '' }) {
           transition: 'all 0.15s ease'
         }}
         onMouseEnter={(e) => {
-          if (!copied) e.currentTarget.style.background = '#F8F9FA';
+          if (!copied) e.currentTarget.style.background = '#F7F5FC';
         }}
         onMouseLeave={(e) => {
           if (!copied) e.currentTarget.style.background = 'none';
