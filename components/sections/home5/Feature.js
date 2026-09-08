@@ -11,7 +11,7 @@ export default function Feature_Two() {
                     <div className="col-xl-6 col-lg-6 col-md-12 mb_40">
                         <div className="feature_block_one" style={{ height: "100%", display: "flex", flexDirection: "column", padding: "40px 35px", borderRadius: "12px", background: "#fff", boxShadow: "0 10px 30px rgba(0,0,0,0.04)", border: "1px solid #eaedf0" }} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
                             <div className="tag_text" style={{ marginBottom: "16px" }}>
-                                <span style={{ fontSize: "12px", fontWeight: "700", color: "#8B5CF6", letterSpacing: "0.5px", fontFamily: "var(--primary-font)", display: "inline-block" }}>
+                                <span style={{ fontSize: "12px", fontWeight: "700", color: "#6D28D9", letterSpacing: "0.5px", fontFamily: "var(--primary-font)", display: "inline-block" }}>
                                     Target Mandate
                                 </span>
                             </div>
@@ -26,22 +26,22 @@ export default function Feature_Two() {
                                     { title: "Senior Corporate Executives", desc: "SVPs and EVPs transitioning into public board roles and keynote stages" },
                                     { title: "Elite Consultants & Advisors", desc: "Commanding high five-figure monthly retainers through sovereign positioning" }
                                 ].map((role, idx) => (
-                                    <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#6B7280", display: "flex", alignItems: "flex-start", gap: "12px" }}>
-                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#8B5CF6", fontFamily: "var(--primary-font)", minWidth: "20px", paddingTop: "2px" }}>
+                                    <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#4B5563", display: "flex", alignItems: "flex-start", gap: "12px" }}>
+                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#6D28D9", fontFamily: "var(--primary-font)", minWidth: "20px", paddingTop: "2px" }}>
                                             0{idx + 1}
                                         </span>
                                         <div>
-                                            <strong style={{ color: "#0D0D14" }}>{role.title}:</strong> <span style={{ color: "#6B7280" }}>{role.desc}</span>
+                                            <strong style={{ color: "#0D0D14" }}>{role.title}:</strong> <span style={{ color: "#4B5563" }}>{role.desc}</span>
                                         </div>
                                     </li>
                                 ))}
                             </ul>
-                            <div style={{ background: "#F7F5FC", padding: "16px 20px", borderRadius: "8px", borderLeft: "3px solid #8B5CF6", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <div style={{ background: "#F7F5FC", padding: "16px 20px", borderRadius: "8px", borderLeft: "3px solid #6D28D9", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                 <p style={{ margin: 0, fontSize: "14px", fontWeight: "600", color: "#0D0D14" }}>
                                     Explore tailored solutions for each role
                                 </p>
                                 <Link href="/solutions" style={{ fontSize: "13px", fontWeight: "700", color: "#0D0D14", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
-                                    View All Roles <i className="fa-solid fa-arrow-right" style={{ color: "#8B5CF6", fontSize: "12px" }}></i>
+                                    View All Roles <i className="fa-solid fa-arrow-right" style={{ color: "#6D28D9", fontSize: "12px" }}></i>
                                 </Link>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ export default function Feature_Two() {
                     <div className="col-xl-6 col-lg-6 col-md-12 mb_40">
                         <div className="feature_block_one" style={{ height: "100%", display: "flex", flexDirection: "column", padding: "40px 35px", borderRadius: "12px", background: "#fff", boxShadow: "0 10px 30px rgba(0,0,0,0.04)", border: "1px solid #eaedf0" }} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
                             <div className="tag_text" style={{ marginBottom: "16px" }}>
-                                <span style={{ fontSize: "12px", fontWeight: "700", color: "#8B5CF6", letterSpacing: "0.5px", fontFamily: "var(--primary-font)", display: "inline-block" }}>
+                                <span style={{ fontSize: "12px", fontWeight: "700", color: "#6D28D9", letterSpacing: "0.5px", fontFamily: "var(--primary-font)", display: "inline-block" }}>
                                     Measurable Transformation
                                 </span>
                             </div>
@@ -66,13 +66,13 @@ export default function Feature_Two() {
                                     { anchor: "Knowledge Graph Authority", desc: "Structured JSON-LD schema anchors your entity within Google Knowledge Graph" },
                                     { anchor: "Inbound Advisory Opportunities", desc: "Corporate board directorships (NED) and paid advisory inquiries arrive proactively" }
                                 ].map((item, idx) => (
-                                    <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#6B7280", display: "flex", alignItems: "flex-start", gap: "12px" }}>
+                                    <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#4B5563", display: "flex", alignItems: "flex-start", gap: "12px" }}>
                                         <span style={{
                                             width: "22px",
                                             height: "22px",
                                             borderRadius: "50%",
-                                            background: "rgba(139, 92, 246, 0.12)",
-                                            color: "#8B5CF6",
+                                            background: "rgba(109, 40, 217, 0.10)",
+                                            color: "#6D28D9",
                                             display: "flex",
                                             alignItems: "center",
                                             justifyContent: "center",
@@ -83,17 +83,17 @@ export default function Feature_Two() {
                                             <i className="fa-solid fa-check"></i>
                                         </span>
                                         <div>
-                                            <strong style={{ color: "#0D0D14" }}>{item.anchor}:</strong> <span style={{ color: "#6B7280" }}>{item.desc}</span>
+                                            <strong style={{ color: "#0D0D14" }}>{item.anchor}:</strong> <span style={{ color: "#4B5563" }}>{item.desc}</span>
                                         </div>
                                     </li>
                                 ))}
                             </ul>
-                            <div style={{ background: "#F7F5FC", padding: "16px 20px", borderRadius: "8px", borderLeft: "3px solid #8B5CF6", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <div style={{ background: "#F7F5FC", padding: "16px 20px", borderRadius: "8px", borderLeft: "3px solid #6D28D9", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                 <p style={{ margin: 0, fontSize: "14px", fontWeight: "600", color: "#0D0D14" }}>
                                     Turnkey execution: &lt; 30 min client time per month
                                 </p>
                                 <Link href="/how-it-works" style={{ fontSize: "13px", fontWeight: "700", color: "#0D0D14", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
-                                    Our Methodology <i className="fa-solid fa-arrow-right" style={{ color: "#8B5CF6", fontSize: "12px" }}></i>
+                                    Our Methodology <i className="fa-solid fa-arrow-right" style={{ color: "#6D28D9", fontSize: "12px" }}></i>
                                 </Link>
                             </div>
                         </div>

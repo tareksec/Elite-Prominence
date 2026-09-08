@@ -175,10 +175,10 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                     height: '66px',
                     padding: '0 16px 0 22px',
                     borderRadius: '9999px',
-                    backgroundColor: scroll ? 'rgba(255, 255, 255, 0.94)' : 'rgba(255, 255, 255, 0.86)',
+                    backgroundColor: '#ffffff',
                     backdropFilter: 'blur(20px) saturate(180%)',
                     WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-                    border: '1px solid rgba(255, 255, 255, 0.85)',
+                    border: '1px solid rgba(226, 232, 240, 0.9)',
                     boxShadow: scroll
                         ? '0 16px 42px -4px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(15, 23, 42, 0.05)'
                         : '0 10px 32px -4px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(15, 23, 42, 0.04)',
@@ -228,7 +228,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                     fontWeight: '700',
                                     letterSpacing: '0.5px',
                                     textTransform: 'uppercase',
-                                    color: '#6B7280'
+                                    color: '#4B5563'
                                 }}
                             >
                                 Personal Branding for HR Leaders &amp; Executives
@@ -261,7 +261,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isServicesActive ? '#0D0D14' : '#475569',
+                                    color: isServicesActive ? '#0D0D14' : '#334155',
                                     textDecoration: 'none',
                                     display: 'inline-flex',
                                     alignItems: 'center',
@@ -355,7 +355,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isSolutionsActive ? '#0D0D14' : '#475569',
+                                    color: isSolutionsActive ? '#0D0D14' : '#334155',
                                     textDecoration: 'none',
                                     display: 'inline-flex',
                                     alignItems: 'center',
@@ -430,7 +430,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isActive('/how-it-works') ? '#0D0D14' : '#475569',
+                                    color: isActive('/how-it-works') ? '#0D0D14' : '#334155',
                                     textDecoration: 'none',
                                     padding: '6px 2px',
                                     transition: 'color 0.2s ease'
@@ -448,7 +448,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isActive('/case-studies') ? '#0D0D14' : '#475569',
+                                    color: isActive('/case-studies') ? '#0D0D14' : '#334155',
                                     textDecoration: 'none',
                                     padding: '6px 2px',
                                     transition: 'color 0.2s ease'
@@ -466,7 +466,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isActive('/blog') || isActive('/blog-grid') ? '#0D0D14' : '#475569',
+                                    color: isActive('/blog') || isActive('/blog-grid') ? '#0D0D14' : '#334155',
                                     textDecoration: 'none',
                                     padding: '6px 2px',
                                     transition: 'color 0.2s ease'
@@ -492,7 +492,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                     padding: '6px 2px',
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isResourcesActive ? '#0D0D14' : '#475569',
+                                    color: isResourcesActive ? '#0D0D14' : '#334155',
                                     cursor: 'pointer',
                                     display: 'inline-flex',
                                     alignItems: 'center',
@@ -606,7 +606,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                     padding: '6px 2px',
                                     fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isMoreActive ? '#0D0D14' : '#475569',
+                                    color: isMoreActive ? '#0D0D14' : '#334155',
                                     cursor: 'pointer',
                                     display: 'inline-flex',
                                     alignItems: 'center',
@@ -731,7 +731,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     fontSize: '13px',
                                     fontWeight: '600',
-                                    color: '#64748b',
+                                    color: '#334155',
                                     textDecoration: 'none',
                                     padding: '4px 6px',
                                     transition: 'color 0.2s ease'

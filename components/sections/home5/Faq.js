@@ -19,6 +19,7 @@ export default function Faq() {
                                 display: "flex",
                                 flexDirection: "column",
                                 justifyContent: "center",
+                                backgroundColor: "#0D0D14",
                                 border: "1px solid rgba(255, 255, 255, 0.12)"
                             }} 
                             data-aos="fade-right" 
@@ -38,17 +39,17 @@ export default function Faq() {
                                 height: "100%",
                                 background: "linear-gradient(180deg, rgba(13, 13, 20, 0.45) 0%, rgba(13, 13, 20, 0.95) 100%)"
                             }}></div>
-                            <div style={{ position: "relative", zIndex: 2, padding: "34px 28px", color: "#fff" }}>
+                            <div style={{ position: "relative", zIndex: 2, padding: "34px 28px", color: "#ffffff" }}>
                                 <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "12px" }}>
                                     <span className="prominence_pulse_dot"></span>
-                                    <span style={{ color: "#8B5CF6", textTransform: "uppercase", fontSize: "12px", fontWeight: "700", letterSpacing: "0.8px", fontFamily: "var(--primary-font)" }}>
+                                    <span style={{ color: "#C084FC", textTransform: "uppercase", fontSize: "12px", fontWeight: "700", letterSpacing: "0.8px", fontFamily: "var(--primary-font)" }}>
                                         Executive Consultation
                                     </span>
                                 </div>
-                                <h3 style={{ color: "#fff", fontSize: "22px", fontWeight: "700", marginBottom: "12px", lineHeight: "1.3", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                <h3 style={{ color: "#ffffff", fontSize: "22px", fontWeight: "700", marginBottom: "12px", lineHeight: "1.3", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
                                     Have a Specific Question About Your Digital Stature?
                                 </h3>
-                                <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "14px", lineHeight: "1.6", marginBottom: "22px" }}>
+                                <p style={{ color: "rgba(255,255,255,0.92)", fontSize: "14px", lineHeight: "1.6", marginBottom: "22px", textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}>
                                     Every leader's career trajectory and disclosure constraints are distinct. We conduct confidential 20-minute digital stature assessments to audit your current search standing.
                                 </p>
                                 <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center" }}>

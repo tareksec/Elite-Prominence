@@ -169,6 +169,7 @@ export default function Testimonial() {
                                         width: "46px",
                                         height: "46px",
                                         borderRadius: "50%",
+                                        backgroundColor: "#1e2025",
                                         background: item.avatarBg,
                                         color: "#ffffff",
                                         display: "flex",
@@ -177,7 +178,8 @@ export default function Testimonial() {
                                         fontSize: "15px",
                                         fontWeight: "700",
                                         letterSpacing: "0.5px",
-                                        flexShrink: 0
+                                        flexShrink: 0,
+                                        textShadow: "0 1px 2px rgba(0,0,0,0.5)"
                                     }}>
                                         {item.avatarInitials}
                                     </div>
@@ -193,7 +195,7 @@ export default function Testimonial() {
                                         </h3>
                                         <p style={{
                                             fontSize: "12.5px",
-                                            color: "#6B7280",
+                                            color: "#4B5563",
                                             margin: "0 0 2px",
                                             fontWeight: "500",
                                             lineHeight: "1.3"
@@ -202,7 +204,8 @@ export default function Testimonial() {
                                         </p>
                                         <p style={{
                                             fontSize: "12px",
-                                            color: "#94a3b8",
+                                            color: "#475569",
+                                            fontWeight: "500",
                                             margin: 0
                                         }}>
                                             {item.company} &bull; {item.location}

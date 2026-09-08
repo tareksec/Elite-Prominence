@@ -68,7 +68,7 @@ export default function MethodologyTeaser() {
                     <div>
                         <div style={{ marginBottom: '12px' }}>
                             <span className="prominence_tracker">
-                                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#8B5CF6' }}></span>
+                                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#6D28D9' }}></span>
                                 The Prominence Protocol
                             </span>
                         </div>
@@ -77,7 +77,7 @@ export default function MethodologyTeaser() {
                         </h2>
                     </div>
                     <div>
-                        <p style={{ color: '#6B7280', fontSize: '16px', lineHeight: '27px', maxWidth: '520px', margin: 0 }}>
+                        <p style={{ color: '#4B5563', fontSize: '16px', lineHeight: '27px', maxWidth: '520px', margin: 0 }}>
                             A disciplined, turnkey methodology engineered to establish permanent executive stature with under 30 minutes of client time per month.
                         </p>
                     </div>
@@ -103,7 +103,7 @@ export default function MethodologyTeaser() {
                                     <span style={{ fontSize: '13px', fontWeight: '700', color: '#0D0D14', letterSpacing: '0.5px' }}>
                                         {block.phase}
                                     </span>
-                                    <span className="prominence_badge prominence_badge_gold" style={{ fontSize: '11px', padding: '3px 10px' }}>
+                                    <span className="prominence_badge prominence_badge_gold" style={{ fontSize: '11.5px', fontWeight: '700', padding: '3px 10px', color: '#6D28D9' }}>
                                         {block.timeline}
                                     </span>
                                 </div>
@@ -121,7 +121,7 @@ export default function MethodologyTeaser() {
                                                 height: '32px',
                                                 borderRadius: '6px',
                                                 background: '#0D0D14',
-                                                color: '#8B5CF6',
+                                                color: '#A78BFA',
                                                 fontSize: '12px',
                                                 fontWeight: '700',
                                                 display: 'flex',
@@ -137,12 +137,12 @@ export default function MethodologyTeaser() {
                                                 <h3 style={{ fontSize: '17px', fontWeight: '700', color: '#0D0D14', margin: 0, fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                                     {stage.name}
                                                 </h3>
-                                                <span style={{ fontSize: '10.5px', fontWeight: '600', color: '#6B7280', background: '#F7F5FC', padding: '2px 8px', borderRadius: '6px', border: '1px solid #e2e8f0' }}>
+                                                <span style={{ fontSize: '11px', fontWeight: '600', color: '#4B5563', background: '#F7F5FC', padding: '2px 8px', borderRadius: '6px', border: '1px solid #e2e8f0' }}>
                                                     {stage.badge}
                                                 </span>
                                             </div>
 
-                                            <p style={{ color: '#6B7280', fontSize: '13.5px', lineHeight: '1.6', margin: 0 }}>
+                                            <p style={{ color: '#4B5563', fontSize: '13.5px', lineHeight: '1.6', margin: 0 }}>
                                                 {stage.desc}
                                             </p>
                                         </div>

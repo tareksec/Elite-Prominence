@@ -21,7 +21,7 @@ export default function FinalCta() {
                 <div style={{ maxWidth: "720px", margin: "0 auto" }}>
                     <div className="tag_text" style={{ marginBottom: "14px" }}>
                         <span className="prominence_tracker">
-                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6" }}></span>
+                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#6D28D9" }}></span>
                             Strictly Limited Client Roster
                         </span>
                     </div>
@@ -37,7 +37,7 @@ export default function FinalCta() {
                     </h2>
                     <p style={{
                         fontSize: "17px",
-                        color: "#6B7280",
+                        color: "#4B5563",
                         lineHeight: "28px",
                         maxWidth: "620px",
                         margin: "0 auto 36px"

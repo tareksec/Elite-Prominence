@@ -93,7 +93,7 @@ export default function FaqAccordion() {
                                         fontWeight: "700",
                                         textTransform: "uppercase",
                                         letterSpacing: "0.6px",
-                                        color: "#8B5CF6",
+                                        color: "#6D28D9",
                                         fontFamily: "var(--primary-font)"
                                     }}>
                                         {item.category}
@@ -102,7 +102,7 @@ export default function FaqAccordion() {
                                     <span style={{
                                         fontSize: "12px",
                                         fontWeight: "600",
-                                        color: "#6B7280",
+                                        color: "#4B5563",
                                         backgroundColor: isOpen ? "#ffffff" : "#f1f5f9",
                                         padding: "2px 8px",
                                         borderRadius: "4px",
@@ -116,7 +116,7 @@ export default function FaqAccordion() {
                                     height: "28px",
                                     borderRadius: "50%",
                                     backgroundColor: isOpen ? "#0D0D14" : "#f1f5f9",
-                                    color: isOpen ? "#ffffff" : "#6B7280",
+                                    color: isOpen ? "#ffffff" : "#4B5563",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -149,7 +149,7 @@ export default function FaqAccordion() {
                                 <p style={{
                                     margin: "16px 0 0",
                                     fontSize: "15px",
-                                    color: "#6B7280",
+                                    color: "#4B5563",
                                     lineHeight: "26px"
                                 }}>
                                     {item.answer}

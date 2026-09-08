@@ -72,8 +72,10 @@
 
     /* Text Hierarchy */
     --ep-text-primary: #0D0D14;
-    --ep-text-secondary: #6B7280;
-    --ep-text-muted: #6B7280;
+    --ep-text-secondary: #4B5563;
+    --ep-text-muted: #4B5563;
+    --ep-text-accent: #6D28D9;
+    --ep-brand-purple-accessible: #6D28D9;
     --ep-text-inverse: #ffffff;
     --ep-text-inverse-muted: rgba(255, 255, 255, 0.72);
 
@@ -337,8 +339,10 @@ img {
 /* 1. Primary CTA: Brand Signature Gradient (Canonical #8B5CF6 -> #EC4899) */
 .btn_style_one {
     color: #ffffff !important;
+    background-color: #7C3AED;
     background: var(--ep-brand-gradient);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
     box-shadow: 
         0 4px 14px rgba(139, 92, 246, 0.3),
         0 1px 3px rgba(13, 13, 20, 0.12),
@@ -346,6 +350,7 @@ img {
 }
 .btn_style_one:hover {
     color: #ffffff !important;
+    background-color: #6D28D9;
     background: var(--ep-brand-gradient-hover);
     border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-1.5px);
@@ -368,8 +373,10 @@ img {
 .btn_style_one.btn_gold,
 .btn_style_one.btn_dark {
     color: #ffffff !important;
+    background-color: #7C3AED;
     background: var(--ep-brand-gradient);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
     box-shadow: 
         0 4px 14px rgba(139, 92, 246, 0.3),
         0 1px 3px rgba(0, 0, 0, 0.2),
@@ -1723,7 +1730,7 @@ button:disabled,
     line-height: 34px;
 }
 .banner_style_four .author_content span{
-    color: #6A6A6A;
+    color: #4B5563;
     font-family: var(--secondary-font);
     font-size: 16px;
     font-style: normal;
@@ -1736,6 +1743,7 @@ button:disabled,
     overflow: hidden;
     padding-top: 300px;
     padding-bottom: 185px;
+    background-color: #0D0D14;
 }
 .banner_style_five::before{
     position: absolute;
@@ -1744,7 +1752,7 @@ button:disabled,
     width: 100%;
     height: 100%;
     content: '';
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 53.99%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(13, 13, 20, 0.85) 100%);
     z-index: 1;
 }
 .banner_style_five .bg_layer{
@@ -1765,7 +1773,7 @@ button:disabled,
 }
 .banner_style_five .banner_content h1{
     position: relative;
-    color: #0D0D0D;
+    color: #ffffff;
     font-family: var(--primary-font);
     font-size: 56px;
     font-style: normal;
@@ -1773,11 +1781,8 @@ button:disabled,
     line-height: 1.18;
     display: inline-block;
     z-index: 1;
-    padding: 24px 34px 28px 28px;
     margin-bottom: 35px;
-    background: #FFFFFF;
-    border-radius: 0px 20px 44px 0px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .banner_style_five .banner_content h1:before{
     display: none;
@@ -3642,15 +3647,15 @@ button:disabled,
 }
 .news_block_one .category span{
     font-family: var(--primary-font);
-    font-size: 11px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 700;
     line-height: 18px;
     text-transform: uppercase;
     letter-spacing: 0.6px;
-    color: #8B5CF6;
+    color: #6D28D9;
     background: none;
-    -webkit-text-fill-color: #8B5CF6;
+    -webkit-text-fill-color: #6D28D9;
 }
 .news_block_one h3{
     font-family: var(--primary-font);
@@ -6946,9 +6951,9 @@ h3.widget_title{
 
 .ep-badge-gold,
 .prominence_badge_gold {
-    color: var(--ep-gold) !important;
-    background: var(--ep-gold-dim) !important;
-    border-color: rgba(139, 92, 246, 0.25) !important;
+    color: #6D28D9 !important;
+    background: rgba(109, 40, 217, 0.08) !important;
+    border-color: rgba(109, 40, 217, 0.22) !important;
 }
 
 .ep-badge-obsidian,
@@ -7265,9 +7270,9 @@ img {
 
 .ep-badge-gold,
 .prominence_badge_gold {
-    background: rgba(139, 92, 246, 0.09);
-    color: #8B5CF6;
-    border: 1px solid rgba(139, 92, 246, 0.25);
+    background: rgba(109, 40, 217, 0.08) !important;
+    color: #6D28D9 !important;
+    border: 1px solid rgba(109, 40, 217, 0.22) !important;
 }
 
 .ep-badge-dark,
@@ -7835,11 +7840,11 @@ img {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.2px;
-    color: var(--ep-gold);
+    color: #6D28D9;
     font-family: var(--primary-font);
     margin-bottom: 12px;
 }
@@ -7975,6 +7980,11 @@ img {
     .prominence_page_intro {
         padding: 56px 0 44px !important;
     }
+}
+
+/* Accessibility: Floating Navbar Solid Background Fallback */
+.floating_navbar_pill {
+    background-color: #ffffff;
 }
 
 

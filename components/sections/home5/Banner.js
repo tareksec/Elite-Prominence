@@ -21,17 +21,17 @@ export default function Banner() {
                                 Executive Reputation &amp; Digital Stature
                             </span>
 
-                            <h1 style={{ fontSize: "clamp(32px, 5.5vw, 54px)", fontWeight: "700", lineHeight: "1.18", marginBottom: "22px", color: "#ffffff", letterSpacing: "-0.5px" }}>
+                            <h1 style={{ fontSize: "clamp(32px, 5.5vw, 54px)", fontWeight: "700", lineHeight: "1.18", marginBottom: "22px", color: "#ffffff", letterSpacing: "-0.5px", textShadow: "0 2px 4px rgba(0,0,0,0.6)" }}>
                                 Build a Digital Presence That Commands Attention.
                             </h1>
 
-                            <p style={{ fontSize: "18px", lineHeight: "30px", color: "rgba(255, 255, 255, 0.88)", maxWidth: "640px", marginBottom: "32px" }}>
+                            <p style={{ fontSize: "18px", lineHeight: "30px", color: "rgba(255, 255, 255, 0.95)", maxWidth: "640px", marginBottom: "32px", textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}>
                                 We architect the sovereign websites, search reputation, strategic ghostwriting, and authority assets that represent CEOs, CHROs, Founders, and enterprise leaders before they walk into the room.
                             </p>
 
                             <div className="banner_btn_area" style={{ display: "flex", flexWrap: "wrap", gap: "16px", alignItems: "center" }}>
                                 <div className="link_btn">
-                                    <Link href="/contact" className="btn_style_gold">
+                                    <Link href="/contact" className="btn_style_gold" style={{ textShadow: "0 1px 2px rgba(0,0,0,0.35)" }}>
                                         Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
@@ -39,6 +39,7 @@ export default function Banner() {
                                     <Link 
                                         href="/resources/assessment" 
                                         className="btn_style_two_dark"
+                                        style={{ textShadow: "0 1px 2px rgba(0,0,0,0.35)" }}
                                     >
                                         Audit Your Stature <i className="fa-solid fa-arrow-right"></i>
                                     </Link>

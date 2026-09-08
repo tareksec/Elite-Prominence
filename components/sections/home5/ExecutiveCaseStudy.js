@@ -39,7 +39,7 @@ export default function ExecutiveCaseStudy() {
                             marginBottom: "14px",
                             border: "1px solid #e2e8f0"
                         }}>
-                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6" }}></span>
+                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#6D28D9" }}></span>
                             Executive Proof of Concept
                         </div>
 
@@ -59,7 +59,7 @@ export default function ExecutiveCaseStudy() {
                     <div>
                         <p style={{
                             fontSize: "16px",
-                            color: "#6B7280",
+                            color: "#4B5563",
                             lineHeight: "27px",
                             maxWidth: "520px",
                             margin: 0
@@ -100,8 +100,8 @@ export default function ExecutiveCaseStudy() {
                                 height: "44px", 
                                 margin: "0 auto 14px", 
                                 borderRadius: "8px", 
-                                background: "rgba(139, 92, 246, 0.08)", 
-                                color: "#8B5CF6", 
+                                background: "rgba(109, 40, 217, 0.08)", 
+                                color: "#6D28D9", 
                                 display: "flex", 
                                 alignItems: "center", 
                                 justifyContent: "center", 
@@ -112,7 +112,7 @@ export default function ExecutiveCaseStudy() {
                             <div style={{ fontSize: "24px", fontWeight: "700", color: "#0D0D14", letterSpacing: "-0.5px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 {stat.metric}
                             </div>
-                            <div style={{ fontSize: "12.5px", fontWeight: "600", color: "#6B7280", marginTop: "4px" }}>
+                            <div style={{ fontSize: "12.5px", fontWeight: "600", color: "#4B5563", marginTop: "4px" }}>
                                 {stat.label}
                             </div>
                         </div>
@@ -246,15 +246,15 @@ export default function ExecutiveCaseStudy() {
                                                 </div>
                                                 <div>
                                                     <div style={{ fontSize: "14px", fontWeight: "700", color: "#0D0D14", fontFamily: "var(--primary-font)" }}>{p.title}</div>
-                                                    <div style={{ fontSize: "13px", color: "#6B7280" }}>{p.desc}</div>
+                                                    <div style={{ fontSize: "13px", color: "#4B5563" }}>{p.desc}</div>
                                                 </div>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div style={{ backgroundColor: "#F7F5FC", padding: "32px", borderRadius: "12px", border: "1px solid #eaedf0", borderLeft: "4px solid #8B5CF6" }}>
-                                        <div style={{ fontSize: "12px", letterSpacing: "0.5px", color: "#8B5CF6", fontWeight: "700", marginBottom: "8px" }}>
+                                    <div style={{ backgroundColor: "#F7F5FC", padding: "32px", borderRadius: "12px", border: "1px solid #eaedf0", borderLeft: "4px solid #6D28D9" }}>
+                                        <div style={{ fontSize: "12px", letterSpacing: "0.5px", color: "#6D28D9", fontWeight: "700", marginBottom: "8px" }}>
                                             Client Time Investment
                                         </div>
                                         <div style={{ fontSize: "28px", fontWeight: "700", marginBottom: "8px", fontFamily: "var(--primary-font)", color: "#0D0D14" }}>
@@ -264,7 +264,7 @@ export default function ExecutiveCaseStudy() {
                                             Zero ghostwriting burden. The client sent quick WhatsApp voice notes while commuting; our team converted insights into boardroom-caliber thought leadership.
                                         </p>
                                         <div style={{ padding: "14px 18px", backgroundColor: "#ffffff", borderRadius: "10px", border: "1px solid #eaedf0" }}>
-                                            <span style={{ fontSize: "12px", color: "#6B7280" }}>Strict NDA Compliance:</span>
+                                            <span style={{ fontSize: "12px", color: "#4B5563" }}>Strict NDA Compliance:</span>
                                             <div style={{ fontSize: "13px", color: "#0D0D14", fontWeight: "600", marginTop: "2px" }}>
                                                 100% anonymized corporate data with zero trade-secret disclosures.
                                             </div>

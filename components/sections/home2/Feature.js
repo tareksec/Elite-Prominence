@@ -97,7 +97,8 @@ export default function Feature() {
                                         bottom: "18px",
                                         left: "18px",
                                         right: "18px",
-                                        background: "rgba(13, 13, 20, 0.94)",
+                                        backgroundColor: "#0D0D14",
+                                        background: "rgba(13, 13, 20, 0.95)",
                                         backdropFilter: "blur(12px)",
                                         borderRadius: "12px",
                                         padding: "14px 18px",
@@ -109,12 +110,12 @@ export default function Feature() {
                                         zIndex: 3
                                     }}>
                                         <div>
-                                            <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "1px", color: "#8B5CF6", fontWeight: "700" }}>Verified Outcome</div>
-                                            <div style={{ fontSize: "15px", fontWeight: "700" }}>{currentPillar.metric}</div>
+                                            <div style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", color: "#C084FC", fontWeight: "700" }}>Verified Outcome</div>
+                                            <div style={{ fontSize: "15px", fontWeight: "700", color: "#ffffff" }}>{currentPillar.metric}</div>
                                         </div>
                                         <div style={{ textAlign: "right" }}>
-                                            <div style={{ fontSize: "11px", color: "#cbd5e1" }}>Proof Point</div>
-                                            <div style={{ fontSize: "13px", fontWeight: "600", color: "#f8fafc" }}>{currentPillar.metricDetail}</div>
+                                            <div style={{ fontSize: "12px", color: "#e2e8f0" }}>Proof Point</div>
+                                            <div style={{ fontSize: "13px", fontWeight: "600", color: "#ffffff" }}>{currentPillar.metricDetail}</div>
                                         </div>
                                     </div>
                                 </div>

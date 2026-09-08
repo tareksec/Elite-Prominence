@@ -54,7 +54,7 @@ export default function ExecutiveDirectoryTeaser() {
                     <div>
                         <div style={{ marginBottom: "12px" }}>
                             <span className="prominence_tracker">
-                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6" }}></span>
+                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#6D28D9" }}></span>
                                 Verified Network &amp; Editorial Syndication
                             </span>
                         </div>
@@ -74,7 +74,7 @@ export default function ExecutiveDirectoryTeaser() {
                         <p style={{
                             fontSize: "16px",
                             lineHeight: "27px",
-                            color: "#6B7280",
+                            color: "#4B5563",
                             maxWidth: "520px",
                             margin: 0
                         }}>
@@ -185,7 +185,7 @@ export default function ExecutiveDirectoryTeaser() {
                                     border: "1px solid #eaedf0",
                                     marginBottom: "18px"
                                 }}>
-                                    <span style={{ fontSize: "12px", fontWeight: "700", letterSpacing: "0.5px", color: "#8B5CF6", display: "block", marginBottom: "6px" }}>
+                                    <span style={{ fontSize: "12px", fontWeight: "700", letterSpacing: "0.5px", color: "#6D28D9", display: "block", marginBottom: "6px" }}>
                                         Featured Perspective
                                     </span>
                                     <p style={{ margin: 0, fontSize: "14px", fontWeight: "600", color: "#0D0D14", lineHeight: "1.6" }}>
@@ -200,7 +200,7 @@ export default function ExecutiveDirectoryTeaser() {
                                             key={idx}
                                             style={{
                                                 backgroundColor: "#F7F5FC",
-                                                color: "#6B7280",
+                                                color: "#4B5563",
                                                 fontSize: "12px",
                                                 fontWeight: "600",
                                                 padding: "3px 10px",
@@ -246,7 +246,7 @@ export default function ExecutiveDirectoryTeaser() {
                         <h3 style={{ margin: "0 0 6px", fontSize: "20px", fontWeight: "700", color: "#ffffff", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                             Elevate Your Strategic Executive Footprint
                         </h3>
-                        <p style={{ margin: 0, color: "#6B7280", fontSize: "14px", maxWidth: "600px", lineHeight: "1.6" }}>
+                        <p style={{ margin: 0, color: "#94A3B8", fontSize: "14px", maxWidth: "600px", lineHeight: "1.6" }}>
                             Every Prominence member receives a sovereign personal website, Google Knowledge Graph indexation, and priority publication in our Executive Directory.
                         </p>
                     </div>

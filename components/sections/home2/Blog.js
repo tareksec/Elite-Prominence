@@ -32,7 +32,7 @@ export default function Blog() {
                                     </Link>
                                 </figure>
                                 <div className="lower_content">
-                                    <div className="category"><span>Personal Branding</span></div>
+                                    <div className="category"><span style={{ color: "#6D28D9" }}>Personal Branding</span></div>
                                     <h3><Link href="/blog-details">How to Build a Personal Brand as an HR Leader (Without Becoming a "Content Creator")</Link></h3>
                                     <ul className="post-info">
                                         <li><i className="fa-regular fa-clock" style={{ marginRight: "6px", color: "var(--ep-gold)" }}></i>Executive Brief</li>
@@ -51,7 +51,7 @@ export default function Blog() {
                                     </Link>
                                 </figure>
                                 <div className="lower_content">
-                                    <div className="category"><span>LinkedIn Strategy</span></div>
+                                    <div className="category"><span style={{ color: "#6D28D9" }}>LinkedIn Strategy</span></div>
                                     <h3><Link href="/blog-details-2">A LinkedIn Strategy for CHROs Who Don't Have Time to Post</Link></h3>
                                     <ul className="post-info">
                                         <li><i className="fa-regular fa-clock" style={{ marginRight: "6px", color: "var(--ep-gold)" }}></i>Executive Brief</li>
@@ -70,7 +70,7 @@ export default function Blog() {
                                     </Link>
                                 </figure>
                                 <div className="lower_content">
-                                    <div className="category"><span>Reputation Management</span></div>
+                                    <div className="category"><span style={{ color: "#6D28D9" }}>Reputation Management</span></div>
                                     <h3><Link href="/blog-grid">How to Rank on Google as an Independent Consultant</Link></h3>
                                     <ul className="post-info">
                                         <li><i className="fa-regular fa-clock" style={{ marginRight: "6px", color: "var(--ep-gold)" }}></i>Executive Brief</li>

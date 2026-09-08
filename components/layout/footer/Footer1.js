@@ -267,7 +267,7 @@ export default function Footer1() {
                             </Link>
 
                             <div style={{ marginTop: "16px", borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: "12px" }}>
-                                <div style={{ fontSize: "12px", color: "#64748b", marginBottom: "4px" }}>
+                                <div style={{ fontSize: "12px", color: "#94a3b8", marginBottom: "4px" }}>
                                     Confidential Inquiries:
                                 </div>
                                 <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "8px" }}>
@@ -277,7 +277,7 @@ export default function Footer1() {
                                     >
                                         hello@prominence.agency
                                     </a>
-                                    <span style={{ color: "#475569", fontSize: "12px" }}>&bull;</span>
+                                    <span style={{ color: "#94a3b8", fontSize: "12px" }}>&bull;</span>
                                     <a
                                         href={getWhatsAppUrl()}
                                         target="_blank"
@@ -307,22 +307,22 @@ export default function Footer1() {
                         flexWrap: "wrap",
                         gap: "14px",
                         fontSize: "13px",
-                        color: "#6B7280"
+                        color: "#94a3b8"
                     }}>
                         <div>
                             &copy; {new Date().getFullYear()} Prominence.agency. All rights reserved. International Executive Reputation Advisory.
                         </div>
                         <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
-                            <Link href="/privacy-policy" style={{ color: "#6B7280", textDecoration: "none" }}>
+                            <Link href="/privacy-policy" style={{ color: "#94a3b8", textDecoration: "none" }}>
                                 Privacy Policy
                             </Link>
-                            <Link href="/terms" style={{ color: "#6B7280", textDecoration: "none" }}>
+                            <Link href="/terms" style={{ color: "#94a3b8", textDecoration: "none" }}>
                                 Terms of Engagement
                             </Link>
-                            <Link href="/resources" style={{ color: "#6B7280", textDecoration: "none" }}>
+                            <Link href="/resources" style={{ color: "#94a3b8", textDecoration: "none" }}>
                                 Resources
                             </Link>
-                            <Link href="/login" style={{ color: "#6B7280", textDecoration: "none" }}>
+                            <Link href="/login" style={{ color: "#94a3b8", textDecoration: "none" }}>
                                 Client Portal
                             </Link>
                         </div>

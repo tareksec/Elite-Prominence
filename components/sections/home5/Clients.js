@@ -14,12 +14,12 @@ export default function Clients() {
                                 fontSize: "12px",
                                 fontWeight: "700",
                                 letterSpacing: "0.5px",
-                                color: "#8B5CF6",
+                                color: "#6D28D9",
                                 fontFamily: "var(--primary-font)"
                             }}>
                                 The Governance Paradox
                             </span>
-                            <span style={{ flex: 1, maxWidth: "60px", height: "1px", backgroundColor: "#8B5CF6", opacity: 0.5 }}></span>
+                            <span style={{ flex: 1, maxWidth: "60px", height: "1px", backgroundColor: "#6D28D9", opacity: 0.5 }}></span>
                         </div>
 
                         <h2 style={{
@@ -32,14 +32,14 @@ export default function Clients() {
                             marginBottom: "20px"
                         }}>
                             Your real-world leadership is in the top 5%.
-                            <span style={{ display: "block", color: "#8B5CF6", marginTop: "6px" }}>
+                            <span style={{ display: "block", color: "#6D28D9", marginTop: "6px" }}>
                                 Your public digital stature isn't in the top 50%.
                             </span>
                         </h2>
 
                         <p style={{
                             fontSize: "16.5px",
-                            color: "#6B7280",
+                            color: "#4B5563",
                             lineHeight: "28px",
                             marginBottom: "32px",
                             maxWidth: "600px"
@@ -53,7 +53,7 @@ export default function Clients() {
                                 fontSize: "12px",
                                 fontWeight: "700",
                                 letterSpacing: "0.5px",
-                                color: "#6B7280",
+                                color: "#4B5563",
                                 marginBottom: "14px",
                                 fontFamily: "var(--primary-font)"
                             }}>
@@ -94,7 +94,7 @@ export default function Clients() {
                                             <span style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#8B5CF6", flexShrink: 0 }}></span>
                                             {item.sector}
                                         </div>
-                                        <div style={{ fontSize: "11.5px", color: "#6B7280", marginTop: "2px", paddingLeft: "14px" }}>
+                                        <div style={{ fontSize: "12px", color: "#4B5563", marginTop: "2px", paddingLeft: "14px" }}>
                                             {item.tier}
                                         </div>
                                     </div>
@@ -182,12 +182,12 @@ export default function Clients() {
                                     }}>
                                         <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px", fontWeight: "700", marginBottom: "6px", fontFamily: "var(--primary-font)" }}>
                                             <span style={{ color: "#0D0D14" }}>Prominence Sovereign Architecture</span>
-                                            <span style={{ color: "#8B5CF6" }}>98th %ile</span>
+                                            <span style={{ color: "#6D28D9" }}>98th %ile</span>
                                         </div>
                                         <div style={{ height: "7px", backgroundColor: "#eaedf0", borderRadius: "4px", overflow: "hidden" }}>
                                             <div style={{ width: "98%", height: "100%", background: "linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)", borderRadius: "4px" }}></div>
                                         </div>
-                                        <div style={{ fontSize: "11px", color: "#8B5CF6", fontWeight: "600", marginTop: "4px" }}>
+                                        <div style={{ fontSize: "12px", color: "#6D28D9", fontWeight: "700", marginTop: "4px" }}>
                                             Google Page 1 #1, Knowledge Graph, Inbound Inquiries
                                         </div>
                                     </div>
@@ -196,7 +196,7 @@ export default function Clients() {
                                 {/* Outcome Reassurance Tag */}
                                 <div style={{
                                     fontSize: "12px",
-                                    color: "#6B7280",
+                                    color: "#4B5563",
                                     lineHeight: "1.6",
                                     paddingTop: "14px",
                                     borderTop: "1px solid #f1f5f9",
