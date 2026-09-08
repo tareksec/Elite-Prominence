@@ -24,7 +24,7 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                             <img src="/assets/images/Elite%20Prominence/EliteProminence-iocn.png" alt="Elite Prominence" style={{ height: "34px", width: "auto", display: "block" }} />
                             <div>
                                 <span style={{ fontSize: "17px", fontWeight: "800", color: "#0D0D14", display: "block", lineHeight: '1.2' }}>Elite Prominence</span>
-                                <span style={{ fontSize: "9px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.6px", color: "#6B7280" }}>Personal Branding for HR Leaders &amp; Executives</span>
+                                <span style={{ fontSize: "10.5px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#6B7280", display: "block", marginTop: "2px", whiteSpace: "nowrap" }}>Executive Advisory</span>
                             </div>
                         </Link>
                     </div>

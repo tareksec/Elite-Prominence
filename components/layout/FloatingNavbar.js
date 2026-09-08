@@ -186,7 +186,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                 }}
             >
                 {/* 1. Brand Logo (Left) */}
-                <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div className="navbar_logo_area" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
                     <Link
                         href="/"
                         onClick={closeAllDropdowns}
@@ -194,19 +194,22 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             display: 'inline-flex',
                             alignItems: 'center',
                             gap: '10px',
-                            textDecoration: 'none'
+                            textDecoration: 'none',
+                            flexShrink: 0
                         }}
                     >
                         <img
                             src="/assets/images/Elite%20Prominence/EliteProminence-iocn.png"
                             alt="Elite Prominence"
+                            className="navbar_logo_img"
                             style={{
                                 height: '34px',
                                 width: 'auto',
-                                display: 'block'
+                                display: 'block',
+                                flexShrink: 0
                             }}
                         />
-                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
                             <span
                                 className="logo_wordmark"
                                 style={{
@@ -224,29 +227,43 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             <span
                                 className="logo_subtag"
                                 style={{
-                                    fontSize: '12px',
+                                    fontSize: '10.5px',
                                     fontWeight: '700',
-                                    letterSpacing: '0.5px',
+                                    letterSpacing: '0.6px',
                                     textTransform: 'uppercase',
-                                    color: '#4B5563'
+                                    color: '#4B5563',
+                                    whiteSpace: 'nowrap',
+                                    lineHeight: '1.2'
                                 }}
                             >
-                                Personal Branding for HR Leaders &amp; Executives
+                                Executive Advisory
                             </span>
                         </div>
                     </Link>
                 </div>
 
                 {/* 2. Desktop Navigation Links (Center) */}
-                <nav className="desktop_nav_links" aria-label="Desktop Primary Navigation" style={{ margin: '0 auto' }}>
+                <nav
+                    className="desktop_nav_links"
+                    aria-label="Desktop Primary Navigation"
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flex: 1,
+                        minWidth: 0,
+                        padding: '0 10px'
+                    }}
+                >
                     <ul
                         style={{
                             display: 'flex',
                             alignItems: 'center',
-                            gap: '20px',
+                            gap: 'clamp(6px, 1.1vw, 16px)',
                             listStyle: 'none',
                             margin: 0,
-                            padding: 0
+                            padding: 0,
+                            whiteSpace: 'nowrap'
                         }}
                     >
                         {/* Services Dropdown */}
@@ -254,19 +271,20 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             ref={servicesRef}
                             onMouseEnter={() => handleMouseEnter('services')}
                             onMouseLeave={() => handleMouseLeave('services')}
-                            style={{ position: 'relative' }}
+                            style={{ position: 'relative', flexShrink: 0, whiteSpace: 'nowrap' }}
                         >
                             <Link
                                 href="/services"
                                 style={{
-                                    fontSize: '14px',
+                                    fontSize: '13.5px',
                                     fontWeight: '600',
                                     color: isServicesActive ? '#0D0D14' : '#334155',
                                     textDecoration: 'none',
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '4px',
-                                    padding: '6px 2px',
+                                    padding: '6px 3px',
+                                    whiteSpace: 'nowrap',
                                     transition: 'color 0.2s ease'
                                 }}
                             >
@@ -302,7 +320,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                     </div>
                                     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4px' }}>
                                         {SERVICES_DATA.map((srv) => (
-                                            <Link
+                                             <Link
                                                 key={srv.slug}
                                                 href={`/services/${srv.slug}`}
                                                 onClick={closeAllDropdowns}
@@ -348,19 +366,20 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             ref={solutionsRef}
                             onMouseEnter={() => handleMouseEnter('solutions')}
                             onMouseLeave={() => handleMouseLeave('solutions')}
-                            style={{ position: 'relative' }}
+                            style={{ position: 'relative', flexShrink: 0, whiteSpace: 'nowrap' }}
                         >
                             <Link
                                 href="/solutions"
                                 style={{
-                                    fontSize: '14px',
+                                    fontSize: '13.5px',
                                     fontWeight: '600',
                                     color: isSolutionsActive ? '#0D0D14' : '#334155',
                                     textDecoration: 'none',
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '4px',
-                                    padding: '6px 2px',
+                                    padding: '6px 3px',
+                                    whiteSpace: 'nowrap',
                                     transition: 'color 0.2s ease'
                                 }}
                             >
@@ -423,16 +442,17 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                         </li>
 
                         {/* How It Works */}
-                        <li>
+                        <li style={{ flexShrink: 0, whiteSpace: 'nowrap' }}>
                             <Link
                                 href="/how-it-works"
                                 onClick={closeAllDropdowns}
                                 style={{
-                                    fontSize: '14px',
+                                    fontSize: '13.5px',
                                     fontWeight: '600',
                                     color: isActive('/how-it-works') ? '#0D0D14' : '#334155',
                                     textDecoration: 'none',
-                                    padding: '6px 2px',
+                                    padding: '6px 3px',
+                                    whiteSpace: 'nowrap',
                                     transition: 'color 0.2s ease'
                                 }}
                             >
@@ -441,16 +461,17 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                         </li>
 
                         {/* Case Studies */}
-                        <li>
+                        <li style={{ flexShrink: 0, whiteSpace: 'nowrap' }}>
                             <Link
                                 href="/case-studies"
                                 onClick={closeAllDropdowns}
                                 style={{
-                                    fontSize: '14px',
+                                    fontSize: '13.5px',
                                     fontWeight: '600',
                                     color: isActive('/case-studies') ? '#0D0D14' : '#334155',
                                     textDecoration: 'none',
-                                    padding: '6px 2px',
+                                    padding: '6px 3px',
+                                    whiteSpace: 'nowrap',
                                     transition: 'color 0.2s ease'
                                 }}
                             >
@@ -459,16 +480,17 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                         </li>
 
                         {/* Insights (Blog) */}
-                        <li>
+                        <li style={{ flexShrink: 0, whiteSpace: 'nowrap' }}>
                             <Link
                                 href="/blog-grid"
                                 onClick={closeAllDropdowns}
                                 style={{
-                                    fontSize: '14px',
+                                    fontSize: '13.5px',
                                     fontWeight: '600',
                                     color: isActive('/blog') || isActive('/blog-grid') ? '#0D0D14' : '#334155',
                                     textDecoration: 'none',
-                                    padding: '6px 2px',
+                                    padding: '6px 3px',
+                                    whiteSpace: 'nowrap',
                                     transition: 'color 0.2s ease'
                                 }}
                             >
@@ -481,7 +503,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             ref={resourcesRef}
                             onMouseEnter={() => handleMouseEnter('resources')}
                             onMouseLeave={() => handleMouseLeave('resources')}
-                            style={{ position: 'relative' }}
+                            style={{ position: 'relative', flexShrink: 0, whiteSpace: 'nowrap' }}
                         >
                             <button
                                 type="button"
@@ -489,14 +511,15 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     background: 'none',
                                     border: 'none',
-                                    padding: '6px 2px',
-                                    fontSize: '14px',
+                                    padding: '6px 3px',
+                                    fontSize: '13.5px',
                                     fontWeight: '600',
                                     color: isResourcesActive ? '#0D0D14' : '#334155',
                                     cursor: 'pointer',
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '4px',
+                                    whiteSpace: 'nowrap',
                                     transition: 'color 0.2s ease'
                                 }}
                             >
@@ -595,7 +618,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             ref={moreRef}
                             onMouseEnter={() => handleMouseEnter('more')}
                             onMouseLeave={() => handleMouseLeave('more')}
-                            style={{ position: 'relative' }}
+                            style={{ position: 'relative', flexShrink: 0, whiteSpace: 'nowrap' }}
                         >
                             <button
                                 type="button"
@@ -603,14 +626,15 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     background: 'none',
                                     border: 'none',
-                                    padding: '6px 2px',
-                                    fontSize: '14px',
+                                    padding: '6px 3px',
+                                    fontSize: '13.5px',
                                     fontWeight: '600',
                                     color: isMoreActive ? '#0D0D14' : '#334155',
                                     cursor: 'pointer',
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '4px',
+                                    whiteSpace: 'nowrap',
                                     transition: 'color 0.2s ease'
                                 }}
                             >
@@ -686,9 +710,9 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                 </nav>
 
                 {/* 3. Right: Auth area + Primary Executive Consultation CTA + Mobile Trigger */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <div className="navbar_actions_area" style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
                     {/* Auth links (desktop) */}
-                    <div className="desktop_auth_area" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                    <div className="desktop_auth_area" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', flexShrink: 0 }}>
                         {user ? (
                             <>
                                 <Link
@@ -700,6 +724,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                         textDecoration: 'none',
                                         padding: '4px 8px',
                                         borderRadius: '8px',
+                                        whiteSpace: 'nowrap',
                                         transition: 'color 0.2s ease'
                                     }}
                                 >
@@ -718,6 +743,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                             border: '1px solid rgba(220, 38, 38, 0.2)',
                                             padding: '2px 7px',
                                             borderRadius: '8px',
+                                            whiteSpace: 'nowrap',
                                             textDecoration: 'none'
                                         }}
                                     >
@@ -734,6 +760,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                     color: '#334155',
                                     textDecoration: 'none',
                                     padding: '4px 6px',
+                                    whiteSpace: 'nowrap',
                                     transition: 'color 0.2s ease'
                                 }}
                             >
@@ -750,11 +777,14 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                         style={{
                             padding: '10px 20px',
                             fontSize: '13.5px',
-                            whiteSpace: 'nowrap'
+                            whiteSpace: 'nowrap',
+                            flexShrink: 0
                         }}
                     >
-                        <span className="cta_desktop_text">Book a Private Consultation</span>
+                        <span className="cta_desktop_text cta_text_full">Book a Private Consultation</span>
+                        <span className="cta_desktop_text cta_text_short">Private Consultation</span>
                         <span className="cta_mobile_text">Consultation</span>
+                        <span className="cta_tiny_text">Book</span>
                     </Link>
 
                     {/* Mobile Menu Hamburger */}
@@ -776,7 +806,8 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             justifyContent: 'center',
                             cursor: 'pointer',
                             color: '#0D0D14',
-                            padding: 0
+                            padding: 0,
+                            flexShrink: 0
                         }}
                     >
                         <i className="fa-solid fa-bars" style={{ fontSize: '16px', color: '#0D0D14' }}></i>
@@ -808,11 +839,47 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                     transform: translateY(1px);
                     box-shadow: 0 4px 10px -1px rgba(15, 23, 42, 0.3) !important;
                 }
+
+                /* CTA Responsive Text Visibility */
+                .cta_text_full {
+                    display: inline;
+                }
+                .cta_text_short {
+                    display: none;
+                }
                 .cta_mobile_text {
                     display: none;
                 }
+                .cta_tiny_text {
+                    display: none;
+                }
 
-                @media (max-width: 1100px) {
+                /* Standard Laptop (1181px to 1320px): show compact CTA */
+                @media (max-width: 1320px) and (min-width: 1181px) {
+                    .cta_text_full {
+                        display: none !important;
+                    }
+                    .cta_text_short {
+                        display: inline !important;
+                    }
+                    .desktop_nav_links ul {
+                        gap: 8px !important;
+                    }
+                    .desktop_nav_links a,
+                    .desktop_nav_links button {
+                        font-size: 13px !important;
+                        padding: 4px 2px !important;
+                    }
+                }
+
+                @media (max-width: 1260px) {
+                    .logo_subtag {
+                        display: none !important;
+                    }
+                }
+
+                /* Tablet & Mobile Breakpoint (<= 1180px) */
+                @media (max-width: 1180px) {
                     .desktop_nav_links {
                         display: none !important;
                     }
@@ -822,32 +889,83 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                     .mobile_hamburger_btn {
                         display: inline-flex !important;
                     }
+                    .logo_subtag {
+                        display: none !important;
+                    }
                     .cta_desktop_text {
-                        display: none;
+                        display: none !important;
                     }
                     .cta_mobile_text {
-                        display: inline;
+                        display: inline !important;
+                    }
+                    .cta_tiny_text {
+                        display: none !important;
                     }
                     .floating_navbar_pill {
-                        padding: 0 12px 0 16px !important;
-                        height: 58px !important;
+                        padding: 0 14px 0 18px !important;
+                        height: 60px !important;
                     }
                 }
 
+                /* Standard Mobile (<= 480px) */
                 @media (max-width: 480px) {
                     :global(.floating_navbar_container) {
                         width: calc(100% - 20px) !important;
                         top: 10px !important;
                     }
-                    .logo_subtag {
-                        display: none !important;
-                    }
                     .floating_navbar_pill {
-                        padding: 0 8px 0 12px !important;
+                        padding: 0 10px 0 14px !important;
+                        height: 56px !important;
                     }
                     .floating_cta_btn {
                         padding: 8px 14px !important;
                         font-size: 12.5px !important;
+                    }
+                    .mobile_hamburger_btn {
+                        width: 38px !important;
+                        height: 38px !important;
+                        min-width: 38px !important;
+                        min-height: 38px !important;
+                    }
+                    .navbar_logo_img {
+                        height: 30px !important;
+                    }
+                    .logo_wordmark {
+                        font-size: 16px !important;
+                    }
+                }
+
+                /* Small Screen Mobile (<= 380px) */
+                @media (max-width: 380px) {
+                    :global(.floating_navbar_container) {
+                        width: calc(100% - 14px) !important;
+                        top: 8px !important;
+                    }
+                    .floating_navbar_pill {
+                        padding: 0 8px 0 10px !important;
+                        height: 52px !important;
+                    }
+                    .cta_mobile_text {
+                        display: none !important;
+                    }
+                    .cta_tiny_text {
+                        display: inline !important;
+                    }
+                    .floating_cta_btn {
+                        padding: 7px 10px !important;
+                        font-size: 12px !important;
+                    }
+                    .mobile_hamburger_btn {
+                        width: 34px !important;
+                        height: 34px !important;
+                        min-width: 34px !important;
+                        min-height: 34px !important;
+                    }
+                    .navbar_logo_img {
+                        height: 26px !important;
+                    }
+                    .logo_wordmark {
+                        font-size: 14.5px !important;
                     }
                 }
             `}</style>
