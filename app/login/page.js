@@ -54,7 +54,7 @@ export default function LoginPage() {
         <div className="boxed_wrapper">
             <Layout headerStyle={1} footerStyle={1}>
                 <section className="auth_section" style={{
-                backgroundColor: "#FAF8F2",
+                backgroundColor: "#ffffff",
                 padding: "130px 0 90px",
                 minHeight: "85vh",
                 display: "flex",
@@ -68,8 +68,8 @@ export default function LoginPage() {
                             backgroundColor: "#ffffff",
                             borderRadius: "16px",
                             padding: "40px 32px",
-                            boxShadow: "0 10px 40px rgba(30, 59, 43, 0.08)",
-                            border: "1px solid rgba(30, 59, 43, 0.1)",
+                            boxShadow: "0 10px 40px rgba(15, 16, 19, 0.08)",
+                            border: "1px solid rgba(15, 16, 19, 0.1)",
                             fontFamily: "var(--primary-font)"
                         }}>
                             <div style={{ textAlign: "center", marginBottom: "30px" }}>
@@ -79,15 +79,15 @@ export default function LoginPage() {
                                     fontWeight: "700",
                                     letterSpacing: "1.5px",
                                     textTransform: "uppercase",
-                                    color: "#1e3b2b",
-                                    backgroundColor: "rgba(30, 59, 43, 0.08)",
+                                    color: "#0f1013",
+                                    backgroundColor: "rgba(15, 16, 19, 0.08)",
                                     padding: "4px 14px",
                                     borderRadius: "20px",
                                     marginBottom: "12px"
                                 }}>
                                     Member Access
                                 </span>
-                                <h2 style={{ fontSize: "clamp(24px, 5vw, 32px)", fontWeight: "700", color: "#1e3b2b", margin: 0 }}>
+                                <h2 style={{ fontSize: "clamp(24px, 5vw, 32px)", fontWeight: "700", color: "#0f1013", margin: 0 }}>
                                     Welcome Back
                                 </h2>
                                 <p style={{ fontSize: "15px", color: "#59606a", marginTop: "8px", fontStyle: "italic" }}>
@@ -111,7 +111,7 @@ export default function LoginPage() {
 
                             <form onSubmit={handleLogin}>
                                 <div style={{ marginBottom: "20px" }}>
-                                    <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#1e3b2b", marginBottom: "6px" }}>
+                                    <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
                                         Email Address *
                                     </label>
                                     <input
@@ -134,7 +134,7 @@ export default function LoginPage() {
                                 </div>
 
                                 <div style={{ marginBottom: "26px" }}>
-                                    <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#1e3b2b", marginBottom: "6px" }}>
+                                    <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
                                         Password *
                                     </label>
                                     <input
@@ -159,21 +159,12 @@ export default function LoginPage() {
                                 <button
                                     type="submit"
                                     disabled={loading}
+                                    className="btn_style_one"
                                     style={{
                                         width: "100%",
                                         minHeight: "48px",
-                                        height: "50px",
-                                        backgroundColor: "#1e3b2b",
-                                        color: "#FAF8F2",
-                                        border: "none",
-                                        borderRadius: "30px",
-                                        fontSize: "16px",
-                                        fontWeight: "700",
-                                        fontFamily: "var(--primary-font)",
                                         cursor: loading ? "not-allowed" : "pointer",
                                         opacity: loading ? 0.7 : 1,
-                                        transition: "all 0.3s ease",
-                                        boxShadow: "0 6px 20px rgba(30, 59, 43, 0.2)"
                                     }}
                                 >
                                     {loading ? 'Authenticating...' : 'Sign In'}
@@ -182,7 +173,7 @@ export default function LoginPage() {
 
                             <div style={{ textAlign: "center", marginTop: "24px", fontSize: "15px", color: "#59606a" }}>
                                 Don’t have an account?{' '}
-                                <Link href="/signup" style={{ color: "#1e3b2b", fontWeight: "700", textDecoration: "underline", minHeight: "44px", display: "inline-block", paddingTop: "6px" }}>
+                                <Link href="/signup" style={{ color: "#0f1013", fontWeight: "700", textDecoration: "underline", minHeight: "44px", display: "inline-block", paddingTop: "6px" }}>
                                     Sign up for free
                                 </Link>
                             </div>

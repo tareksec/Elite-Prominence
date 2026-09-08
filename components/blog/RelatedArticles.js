@@ -33,16 +33,17 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
               fontWeight: '700',
               textTransform: 'uppercase',
               letterSpacing: '0.8px',
-              color: '#0D1322'
+              color: '#b89058',
+              fontFamily: 'var(--primary-font)'
             }}
           >
             Further Reading
           </span>
           <h2
             style={{
-              fontFamily: "'DM Serif Display', Georgia, serif",
+              fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
               fontSize: '28px',
-              color: '#0F1235',
+              color: '#0f1013',
               margin: '4px 0 0 0'
             }}
           >
@@ -55,14 +56,14 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
           style={{
             fontSize: '14px',
             fontWeight: '600',
-            color: '#0D1322',
+            color: '#0f1013',
             textDecoration: 'none',
             display: 'inline-flex',
             alignItems: 'center',
             gap: '6px'
           }}
         >
-          View All <i className="fal fa-arrow-right" style={{ fontSize: '12px' }}></i>
+          View All <i className="fa-solid fa-arrow-right" style={{ fontSize: '12px' }}></i>
         </Link>
       </div>
 
@@ -103,9 +104,9 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
                     </p>
                   )}
 
-                  <div style={{ marginTop: 'auto', paddingTop: '12px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '600', color: '#0D1322' }}>
+                  <div style={{ marginTop: 'auto', paddingTop: '12px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '700', color: '#0f1013' }}>
                     <span>Read Article</span>
-                    <i className="fal fa-arrow-right" style={{ fontSize: '12px' }}></i>
+                    <i className="fa-solid fa-arrow-right ms-1" style={{ fontSize: '12px' }}></i>
                   </div>
                 </div>
               </Link>
@@ -131,8 +132,8 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
 
         .ep-related-card:hover {
           transform: translateY(-4px);
-          box-shadow: 0 12px 30px rgba(124, 58, 237, 0.12), 0 4px 10px rgba(15, 18, 53, 0.04);
-          border-color: rgba(192, 38, 168, 0.3);
+          box-shadow: 0 12px 30px rgba(15, 16, 19, 0.08);
+          border-color: #cbd5e1;
         }
 
         .ep-card-img-wrap {
@@ -140,7 +141,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
           width: 100%;
           height: 190px;
           overflow: hidden;
-          background-color: #F8F7FF;
+          background-color: #f8fafc;
         }
 
         .ep-card-img {
@@ -158,23 +159,24 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
           position: absolute;
           top: 12px;
           left: 12px;
-          background: #0D1322;
+          background: #0f1013;
           color: #FFFFFF;
           font-size: 11px;
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 0.5px;
           padding: 4px 10px;
-          border-radius: 9999px;
+          border-radius: 4px;
           border: 1px solid rgba(255, 255, 255, 0.15);
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+          font-family: var(--primary-font);
         }
 
         .ep-card-title {
-          font-family: 'DM Serif Display', Georgia, serif;
+          font-family: var(--ep-font-serif, 'PT Serif', serif);
           font-size: 18px;
           line-height: 1.35;
-          color: #0F1235;
+          color: #0f1013;
           margin: 0 0 8px 0;
           display: -webkit-box;
           -webkit-line-clamp: 2;
@@ -184,7 +186,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
         }
 
         .ep-related-card:hover .ep-card-title {
-          color: #0D1322;
+          color: #b89058;
         }
 
         .ep-card-excerpt {

@@ -10,9 +10,9 @@ const TESTIMONIALS = [
         company: "GlobalTech Solutions",
         location: "New York, USA",
         avatarInitials: "EV",
-        avatarBg: "linear-gradient(135deg, #162d20 0%, #244b34 100%)",
+        avatarBg: "linear-gradient(135deg, #2b2d32 0%, #151619 100%)",
         rating: 5,
-        quote: "Elite Prominence transformed my executive presence. Within 60 days of launching my new digital HQ and executive LinkedIn strategy, I received two board advisory invitations.",
+        quote: "Prominence transformed my executive presence. Within 60 days of launching my new digital HQ and executive LinkedIn strategy, I received two board advisory invitations.",
         highlight: "2 Board Advisory Invitations in 60 Days",
         servicePillar: "Digital HQ & LinkedIn Strategy"
     },
@@ -23,7 +23,7 @@ const TESTIMONIALS = [
         company: "Sterling & Partners Advisory",
         location: "London, UK",
         avatarInitials: "MS",
-        avatarBg: "linear-gradient(135deg, #1e293b 0%, #334155 100%)",
+        avatarBg: "linear-gradient(135deg, #1e2025 0%, #0f1013 100%)",
         rating: 5,
         quote: "The Google reputation management and thought leadership ghostwriting are world-class. When prospects Google my name today, they find an authoritative, cohesive presence.",
         highlight: "Page 1 Search Authority Restored",
@@ -36,7 +36,7 @@ const TESTIMONIALS = [
         company: "BioHealth Diagnostics",
         location: "Boston, USA",
         avatarInitials: "AT",
-        avatarBg: "linear-gradient(135deg, #162d20 0%, #151619 100%)",
+        avatarBg: "linear-gradient(135deg, #2b2d32 0%, #0f1013 100%)",
         rating: 5,
         quote: "Their team understands the subtle distinction between vanity personal branding and genuine executive authority. Exceptional rigor, discretion, and strategic alignment.",
         highlight: "High-Caliber Network Growth",
@@ -55,15 +55,11 @@ export default function Testimonial() {
             data-aos-duration="500"
             style={{
                 backgroundColor: "#ffffff",
-                padding: "95px 0 85px",
+                padding: "100px 0 90px",
                 position: "relative",
-                overflow: "hidden"
+                fontFamily: "var(--primary-font)"
             }}
         >
-            <div className="shape_icon_12 float-bob-y" style={{ opacity: 0.5 }}>
-                <img src="/assets/images/icons/shape_icon_12.png" alt="" />
-            </div>
-
             <div className="container">
                 {/* Section Header */}
                 <div className="row justify-content-center">
@@ -77,33 +73,35 @@ export default function Testimonial() {
                                     padding: "6px 16px",
                                     background: "#f1f5f9",
                                     borderRadius: "30px",
-                                    fontSize: "13px",
+                                    fontSize: "12px",
                                     fontWeight: "700",
-                                    color: "#162d20",
+                                    color: "#0f1013",
                                     textTransform: "uppercase",
-                                    letterSpacing: "0.8px"
+                                    letterSpacing: "0.8px",
+                                    border: "1px solid #e2e8f0"
                                 }}>
-                                    <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#D29D2B" }}></span>
+                                    <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#b89058" }}></span>
                                     Verified Executive Endorsements
                                 </h6>
                             </div>
                             <h2 style={{
                                 fontSize: "38px",
-                                fontWeight: "800",
-                                color: "#162d20",
+                                fontWeight: "700",
+                                color: "#0f1013",
                                 lineHeight: "1.25",
-                                letterSpacing: "-0.5px"
+                                letterSpacing: "-0.5px",
+                                fontFamily: "var(--primary-font)"
                             }}>
                                 Proven Results for Senior People Leaders
                             </h2>
                             <p style={{
                                 fontSize: "16.5px",
-                                color: "#64748b",
+                                color: "#59606a",
                                 maxWidth: "620px",
                                 margin: "14px auto 0",
                                 lineHeight: "1.65"
                             }}>
-                                How CHROs, Chief People Officers, and Managing Directors build undeniable authority, unlock board invitations, and dominate their niche with Elite Prominence.
+                                How CHROs, Chief People Officers, and Managing Directors build undeniable authority, unlock board invitations, and dominate their niche with Prominence.
                             </p>
                         </div>
                     </div>
@@ -117,14 +115,14 @@ export default function Testimonial() {
                                 onClick={() => setActiveIndex(idx)}
                                 style={{
                                     height: "100%",
-                                    backgroundColor: activeIndex === idx ? "#fafaf9" : "#ffffff",
-                                    borderRadius: "18px",
+                                    backgroundColor: activeIndex === idx ? "#fafbfc" : "#ffffff",
+                                    borderRadius: "14px",
                                     padding: "36px 30px",
-                                    border: activeIndex === idx ? "2px solid #D29D2B" : "1px solid #e2e8f0",
+                                    border: activeIndex === idx ? "1px solid #0f1013" : "1px solid #eaedf0",
                                     boxShadow: activeIndex === idx
-                                        ? "0 20px 40px -10px rgba(210, 157, 43, 0.15), 0 4px 12px rgba(0,0,0,0.04)"
-                                        : "0 10px 30px rgba(0,0,0,0.04)",
-                                    transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+                                        ? "0 16px 36px rgba(15, 16, 19, 0.08)"
+                                        : "0 4px 18px rgba(15, 16, 19, 0.02)",
+                                    transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
                                     display: "flex",
                                     flexDirection: "column",
                                     justifyContent: "space-between",
@@ -140,11 +138,9 @@ export default function Testimonial() {
                                         alignItems: "center",
                                         marginBottom: "20px"
                                     }}>
-                                        <div style={{ display: "flex", gap: "3px" }}>
+                                        <div style={{ display: "flex", gap: "4px" }}>
                                             {[...Array(item.rating)].map((_, i) => (
-                                                <svg key={i} width="16" height="16" viewBox="0 0 20 20" fill="#D29D2B">
-                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                                </svg>
+                                                <i key={i} className="fa-solid fa-star" style={{ color: "#b89058", fontSize: "13px" }}></i>
                                             ))}
                                         </div>
                                         <span style={{
@@ -159,9 +155,7 @@ export default function Testimonial() {
                                             alignItems: "center",
                                             gap: "4px"
                                         }}>
-                                            <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                                                <path d="M10 3L4.5 8.5L2 6" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                            </svg>
+                                            <i className="fa-solid fa-check" style={{ fontSize: "9px" }}></i>
                                             Verified Leader
                                         </span>
                                     </div>
@@ -174,20 +168,21 @@ export default function Testimonial() {
                                         fontStyle: "normal",
                                         marginBottom: "24px"
                                     }}>
-                                        "{item.quote}"
+                                        &ldquo;{item.quote}&rdquo;
                                     </p>
 
                                     {/* Highlight Metric Pill */}
                                     <div style={{
                                         display: "inline-block",
-                                        fontSize: "12px",
+                                        fontSize: "11.5px",
                                         fontWeight: "700",
-                                        color: "#162d20",
-                                        backgroundColor: "rgba(210, 157, 43, 0.12)",
-                                        border: "1px solid rgba(210, 157, 43, 0.3)",
+                                        color: "#92400e",
+                                        backgroundColor: "#fef3c7",
+                                        border: "1px solid #fde68a",
                                         padding: "4px 12px",
-                                        borderRadius: "8px",
-                                        marginBottom: "24px"
+                                        borderRadius: "6px",
+                                        marginBottom: "24px",
+                                        letterSpacing: "0.2px"
                                     }}>
                                         {item.highlight}
                                     </div>
@@ -199,19 +194,19 @@ export default function Testimonial() {
                                     alignItems: "center",
                                     gap: "14px",
                                     paddingTop: "18px",
-                                    borderTop: "1px solid #e2e8f0"
+                                    borderTop: "1px solid #eaedf0"
                                 }}>
                                     <div style={{
-                                        width: "48px",
-                                        height: "48px",
+                                        width: "46px",
+                                        height: "46px",
                                         borderRadius: "50%",
                                         background: item.avatarBg,
                                         color: "#ffffff",
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "center",
-                                        fontSize: "16px",
-                                        fontWeight: "800",
+                                        fontSize: "15px",
+                                        fontWeight: "700",
                                         letterSpacing: "0.5px",
                                         flexShrink: 0
                                     }}>
@@ -221,8 +216,9 @@ export default function Testimonial() {
                                         <h5 style={{
                                             fontSize: "16px",
                                             fontWeight: "700",
-                                            color: "#162d20",
-                                            margin: "0 0 2px"
+                                            color: "#0f1013",
+                                            margin: "0 0 2px",
+                                            fontFamily: "var(--primary-font)"
                                         }}>
                                             {item.name}
                                         </h5>
@@ -257,49 +253,14 @@ export default function Testimonial() {
                     flexWrap: "wrap",
                     alignItems: "center",
                     justifyContent: "center",
-                    gap: "18px"
+                    gap: "16px"
                 }}>
-                    <Link
-                        href="/feedback"
-                        style={{
-                            display: "inline-flex",
-                            alignItems: "center",
-                            gap: "8px",
-                            padding: "12px 28px",
-                            borderRadius: "9999px",
-                            backgroundColor: "#162d20",
-                            color: "#ffffff",
-                            fontSize: "14.5px",
-                            fontWeight: "600",
-                            textDecoration: "none",
-                            transition: "all 0.2s ease",
-                            boxShadow: "0 6px 18px rgba(22, 45, 32, 0.18)"
-                        }}
-                    >
-                        <span>View All Client Reviews</span>
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                    <Link href="/feedback" className="btn_style_one">
+                        View All Client Reviews <i className="fa-solid fa-arrow-right"></i>
                     </Link>
 
-                    <Link
-                        href="/community"
-                        style={{
-                            display: "inline-flex",
-                            alignItems: "center",
-                            gap: "8px",
-                            padding: "12px 28px",
-                            borderRadius: "9999px",
-                            backgroundColor: "#ffffff",
-                            color: "#162d20",
-                            fontSize: "14.5px",
-                            fontWeight: "600",
-                            textDecoration: "none",
-                            border: "1px solid #cbd5e1",
-                            transition: "all 0.2s ease"
-                        }}
-                    >
-                        <span>Browse Executive Directory &rarr;</span>
+                    <Link href="/community" className="btn_style_two">
+                        Browse Executive Directory <i className="fa-solid fa-arrow-right"></i>
                     </Link>
                 </div>
             </div>

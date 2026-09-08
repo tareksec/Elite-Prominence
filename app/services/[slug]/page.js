@@ -118,10 +118,10 @@ export default function ServiceDetailPage({ params }) {
                                 <div className="tag_text" style={{ marginBottom: "16px" }}>
                                     <h6>{service.badge}</h6>
                                 </div>
-                                <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#0f1013", lineHeight: "1.2", marginBottom: "16px" }}>
+                                <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#0f1013", lineHeight: "1.2", marginBottom: "16px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
                                     {service.title}
                                 </h1>
-                                <p style={{ fontSize: "18px", fontWeight: "600", color: "#2460e2", marginBottom: "18px", fontFamily: "var(--primary-font)" }}>
+                                <p style={{ fontSize: "17px", fontWeight: "700", color: "#b89058", marginBottom: "18px", fontFamily: "var(--primary-font)", letterSpacing: "0.2px" }}>
                                     {service.tagline}
                                 </p>
                                 <p style={{ fontSize: "17px", color: "#475569", lineHeight: "28px", marginBottom: "32px", maxWidth: "620px" }}>
@@ -129,10 +129,10 @@ export default function ServiceDetailPage({ params }) {
                                 </p>
                                 <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
                                     <Link href="/contact" className="btn_style_one">
-                                        Book a Private Consultation
+                                        Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                     <Link href="/resources/assessment" className="btn_style_two">
-                                        Audit Your Stature <i className="fa-solid fa-angle-right ms-2" style={{ fontSize: "12px" }}></i>
+                                        Audit Your Stature <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
                             </div>
@@ -169,7 +169,7 @@ export default function ServiceDetailPage({ params }) {
                                     <span style={{ color: "#64748b", fontWeight: "700", fontSize: "11px", letterSpacing: "1.5px", textTransform: "uppercase", display: "block", marginBottom: "12px", fontFamily: "var(--primary-font)" }}>
                                         The Executive Reality
                                     </span>
-                                    <h2 style={{ fontSize: "26px", fontWeight: "700", color: "#0f1013", marginBottom: "18px" }}>
+                                    <h2 style={{ fontSize: "26px", fontWeight: "700", color: "#0f1013", marginBottom: "18px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
                                         The Cost of Unmanaged Presence
                                     </h2>
                                     <p style={{ color: "#475569", fontSize: "16px", lineHeight: "28px", margin: 0 }}>
@@ -187,10 +187,10 @@ export default function ServiceDetailPage({ params }) {
                                     height: "100%",
                                     color: "#ffffff"
                                 }}>
-                                    <span style={{ color: "#d29d2b", fontWeight: "700", fontSize: "11px", letterSpacing: "1.5px", textTransform: "uppercase", display: "block", marginBottom: "12px", fontFamily: "var(--primary-font)" }}>
+                                    <span style={{ color: "#b89058", fontWeight: "700", fontSize: "11px", letterSpacing: "1.5px", textTransform: "uppercase", display: "block", marginBottom: "12px", fontFamily: "var(--primary-font)" }}>
                                         Strategic Imperative
                                     </span>
-                                    <h2 style={{ fontSize: "26px", fontWeight: "700", color: "#ffffff", marginBottom: "18px" }}>
+                                    <h2 style={{ fontSize: "26px", fontWeight: "700", color: "#ffffff", marginBottom: "18px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
                                         Why Sovereign Stature Matters
                                     </h2>
                                     <p style={{ color: "#cbd5e1", fontSize: "16px", lineHeight: "28px", margin: 0 }}>
@@ -209,7 +209,7 @@ export default function ServiceDetailPage({ params }) {
                             <div className="tag_text">
                                 <h6>Definitive Scope</h6>
                             </div>
-                            <h2>What Prominence Architects &amp; Delivers</h2>
+                            <h2 style={{ fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>What Prominence Architects &amp; Delivers</h2>
                             <p style={{ color: "#59606a", fontSize: "17px", marginTop: "12px", lineHeight: "28px" }}>
                                 An exhaustive, institutional-grade delivery system built for zero executive friction.
                             </p>
@@ -257,7 +257,7 @@ export default function ServiceDetailPage({ params }) {
                             <div className="tag_text">
                                 <h6>Execution Protocol</h6>
                             </div>
-                            <h2>How We Deliver: The 4-Stage Protocol</h2>
+                            <h2 style={{ fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>How We Deliver: The 4-Stage Protocol</h2>
                             <p style={{ color: "#59606a", fontSize: "17px", marginTop: "12px", lineHeight: "28px" }}>
                                 Engineered for complete executive discretion, compliance, and under 30 minutes of client time per month.
                             </p>
@@ -304,16 +304,16 @@ export default function ServiceDetailPage({ params }) {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-6 mb_40">
-                                <span style={{ color: "#d29d2b", fontWeight: "700", fontSize: "11px", letterSpacing: "1.5px", textTransform: "uppercase", display: "block", marginBottom: "12px", fontFamily: "var(--primary-font)" }}>
+                                <span style={{ color: "#b89058", fontWeight: "700", fontSize: "11px", letterSpacing: "1.5px", textTransform: "uppercase", display: "block", marginBottom: "12px", fontFamily: "var(--primary-font)" }}>
                                     Authority Milestones
                                 </span>
-                                <h2 style={{ fontSize: "30px", fontWeight: "700", color: "#ffffff", marginBottom: "24px" }}>
+                                <h2 style={{ fontSize: "30px", fontWeight: "700", color: "#ffffff", marginBottom: "24px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
                                     Expected Outcomes &amp; Impact
                                 </h2>
                                 <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                                     {service.expectedOutcomes.map((outcome, idx) => (
                                         <div key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
-                                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#d29d2b", marginTop: "10px", flexShrink: 0 }}></span>
+                                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058", marginTop: "10px", flexShrink: 0 }}></span>
                                             <p style={{ color: "#cbd5e1", fontSize: "15.5px", lineHeight: "26px", margin: 0 }}>
                                                 {outcome}
                                             </p>
@@ -326,13 +326,13 @@ export default function ServiceDetailPage({ params }) {
                                 <span style={{ color: "#94a3b8", fontWeight: "700", fontSize: "11px", letterSpacing: "1.5px", textTransform: "uppercase", display: "block", marginBottom: "12px", fontFamily: "var(--primary-font)" }}>
                                     Target Stature
                                 </span>
-                                <h2 style={{ fontSize: "30px", fontWeight: "700", color: "#ffffff", marginBottom: "24px" }}>
+                                <h2 style={{ fontSize: "30px", fontWeight: "700", color: "#ffffff", marginBottom: "24px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
                                     Engineered Specifically For
                                 </h2>
                                 <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                                     {service.whoItsFor.map((persona, idx) => (
                                         <div key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
-                                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#60a5fa", marginTop: "10px", flexShrink: 0 }}></span>
+                                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058", marginTop: "10px", flexShrink: 0 }}></span>
                                             <p style={{ color: "#cbd5e1", fontSize: "15.5px", lineHeight: "26px", margin: 0 }}>
                                                 {persona}
                                             </p>
@@ -375,28 +375,32 @@ export default function ServiceDetailPage({ params }) {
                 <section className="pt_80 pb_80" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7" }}>
                     <div className="container">
                         <div className="section_title centred" style={{ marginBottom: "40px" }}>
-                            <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0f1013" }}>
+                            <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
                                 Complementary Capabilities
                             </h2>
                         </div>
                         <div className="row">
                             {otherServices.map((rel) => (
                                 <div key={rel.slug} className="col-lg-4 col-md-6 mb_20">
-                                    <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "10px", padding: "28px", height: "100%", display: "flex", flexDirection: "column" }}>
-                                        <span style={{ fontSize: "11px", fontWeight: "700", color: "#64748b", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px", fontFamily: "var(--primary-font)" }}>
-                                            Pillar {rel.number}
-                                        </span>
-                                        <h3 style={{ fontSize: "18px", fontWeight: "700", marginBottom: "8px" }}>
-                                            <Link href={`/services/${rel.slug}`} style={{ color: "#0f1013", textDecoration: "none" }}>
-                                                {rel.title}
+                                    <div className="prominence_card_equal_height" style={{ background: "#ffffff", border: "1px solid #eaedf0", borderRadius: "12px", padding: "28px" }}>
+                                        <div className="prominence_card_body">
+                                            <span style={{ fontSize: "11px", fontWeight: "700", color: "#64748b", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px", fontFamily: "var(--primary-font)", display: "block" }}>
+                                                Pillar {rel.number}
+                                            </span>
+                                            <h3 style={{ fontSize: "18px", fontWeight: "700", marginBottom: "8px" }}>
+                                                <Link href={`/services/${rel.slug}`} style={{ color: "#0f1013", textDecoration: "none" }}>
+                                                    {rel.title}
+                                                </Link>
+                                            </h3>
+                                            <p style={{ fontSize: "14px", color: "#64748b", lineHeight: "22px", margin: 0 }}>
+                                                {rel.shortDescription}
+                                            </p>
+                                        </div>
+                                        <div className="prominence_card_footer" style={{ marginTop: "18px" }}>
+                                            <Link href={`/services/${rel.slug}`} className="btn_style_ghost">
+                                                View Scope <i className="fa-solid fa-arrow-right"></i>
                                             </Link>
-                                        </h3>
-                                        <p style={{ fontSize: "14px", color: "#64748b", lineHeight: "22px", flex: 1, marginBottom: "18px" }}>
-                                            {rel.shortDescription}
-                                        </p>
-                                        <Link href={`/services/${rel.slug}`} style={{ fontSize: "13px", fontWeight: "700", color: "#0f1013", textDecoration: "none", fontFamily: "var(--primary-font)" }}>
-                                            View Scope <i className="fa-solid fa-angle-right ms-1"></i>
-                                        </Link>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -411,7 +415,7 @@ export default function ServiceDetailPage({ params }) {
                             <div className="tag_text" style={{ marginBottom: "16px" }}>
                                 <h6>Confidential Engagement</h6>
                             </div>
-                            <h2 style={{ fontSize: "38px", fontWeight: "700", color: "#0f1013", marginBottom: "16px" }}>
+                            <h2 style={{ fontSize: "38px", fontWeight: "700", color: "#0f1013", marginBottom: "16px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
                                 Discuss Your Executive Positioning
                             </h2>
                             <p style={{ color: "#59606a", fontSize: "17px", lineHeight: "28px", marginBottom: "32px" }}>
@@ -419,10 +423,10 @@ export default function ServiceDetailPage({ params }) {
                             </p>
                             <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
                                 <Link href="/contact" className="btn_style_one">
-                                    Book a Private Consultation
+                                    Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                                 <Link href="/solutions" className="btn_style_two">
-                                    Explore Solutions by Role <i className="fa-solid fa-angle-right ms-2" style={{ fontSize: "12px" }}></i>
+                                    Explore Solutions by Role <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>
                         </div>

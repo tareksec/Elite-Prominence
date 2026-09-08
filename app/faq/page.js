@@ -111,22 +111,87 @@ export default function Faq_Page() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle4="Frequently Asked Questions">
-                <section className="faq_section inner_page pt_150 pb_120">
+                <section className="faq_section inner_page pt_120 pb_120" style={{ background: "#f8fafc" }}>
                     <div className="container">
-                        <div className="section_title centred aos-init aos-animate" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
-                            <div className="tag_text"><h6>Common Inquiries</h6></div>
-                            <h2>Common Questions About Our Executive Model</h2>
-                            <p style={{ maxWidth: "780px", margin: "15px auto 0", fontSize: "18px", color: "#59606a", lineHeight: "1.7" }}>
-                                Everything HR leaders and senior leaders need to know about building a personal brand with our done-for-you model, time investment, and outcomes.
-                            </p>
-                        </div>
-                        <div className="inner_box" style={{ maxWidth: "850px", margin: "0 auto" }}>
-                            <FaqAccordion />
+                        <div className="row">
+                            
+                            {/* Left Column: Editorial Advisory Rail (Sticky on Desktop) */}
+                            <div className="col-lg-5 pe-lg-5 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="500">
+                                <div style={{ position: "sticky", top: "120px" }}>
+                                    <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
+                                        <span className="prominence_pulse_dot"></span>
+                                        <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#b89058", fontFamily: "var(--primary-font)" }}>
+                                            Executive Due Diligence
+                                        </span>
+                                    </div>
 
-                            <div className="centred" style={{ marginTop: "50px" }}>
-                                <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "15px" }}>Have another question?</h3>
-                                <Link href="/contact" className="btn_style_one">Book a Strategy Call</Link>
+                                    <h1 style={{
+                                        fontSize: "clamp(30px, 3.8vw, 42px)",
+                                        fontWeight: "700",
+                                        color: "#0f1013",
+                                        fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                        lineHeight: "1.25",
+                                        letterSpacing: "-0.5px",
+                                        marginBottom: "18px"
+                                    }}>
+                                        Boardroom Transparency &amp; Discretion Protocols
+                                    </h1>
+
+                                    <p style={{ fontSize: "16px", color: "#59606a", lineHeight: "28px", marginBottom: "30px" }}>
+                                        Retaining an executive reputation advisory is a high-stakes institutional decision. We provide uncompromising clarity regarding non-disclosure protocols, client time investment, proprietary asset ownership, and measurable governance outcomes.
+                                    </p>
+
+                                    {/* Strict NDA Assurance Box */}
+                                    <div className="prominence_depth_card" style={{ padding: "24px 22px", marginBottom: "24px", backgroundColor: "#ffffff" }}>
+                                        <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
+                                            <i className="fa-solid fa-shield-halved" style={{ color: "#b89058", fontSize: "16px" }}></i>
+                                            <span style={{ fontSize: "13px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)" }}>
+                                                100% Strict NDA Protection
+                                            </span>
+                                        </div>
+                                        <p style={{ fontSize: "13px", color: "#64748b", lineHeight: "22px", margin: 0 }}>
+                                            We operate under bilateral confidentiality agreements. Zero internal corporate data, non-public operational metrics, or confidential board dialogue are ever shared or published.
+                                        </p>
+                                    </div>
+
+                                    {/* Direct Advisory Action Card */}
+                                    <div style={{
+                                        padding: "26px 22px",
+                                        backgroundColor: "#0f1013",
+                                        borderRadius: "14px",
+                                        border: "1px solid rgba(255, 255, 255, 0.1)",
+                                        color: "#ffffff"
+                                    }}>
+                                        <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#b89058", marginBottom: "6px" }}>
+                                            Direct Confidential Access
+                                        </div>
+                                        <div style={{ fontSize: "17px", fontWeight: "700", fontFamily: "var(--primary-font)", marginBottom: "8px" }}>
+                                            Have an Unlisted Governance Inquiry?
+                                        </div>
+                                        <p style={{ fontSize: "13px", color: "#cbd5e1", lineHeight: "22px", marginBottom: "18px" }}>
+                                            Speak directly with a Prominence Managing Partner to evaluate your specific positioning or transition horizon.
+                                        </p>
+                                        <Link href="/contact" className="btn_style_gold btn_block">
+                                            Book Confidential Briefing <i className="fa-solid fa-arrow-right"></i>
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
+
+                            {/* Right Column: Structured Executive FAQ Accordion */}
+                            <div className="col-lg-7" data-aos="fade-left" data-aos-duration="550">
+                                <div style={{ marginBottom: "24px" }}>
+                                    <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#94a3b8", fontFamily: "var(--primary-font)" }}>
+                                        Key Operational Inquiries
+                                    </div>
+                                    <div style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginTop: "2px" }}>
+                                        Frequently Addressed Matters
+                                    </div>
+                                </div>
+
+                                <FaqAccordion />
+                            </div>
+
                         </div>
                     </div>
                 </section>

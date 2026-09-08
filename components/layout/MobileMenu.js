@@ -226,22 +226,9 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                 <Link
                                     href="/contact"
                                     onClick={handleMobileMenu}
-                                    style={{
-                                        display: 'block',
-                                        textAlign: 'center',
-                                        padding: '13px 20px',
-                                        borderRadius: '9999px',
-                                        background: 'linear-gradient(180deg, #1e293b 0%, #0f172a 100%)',
-                                        color: "#ffffff",
-                                        fontSize: "14.5px",
-                                        fontWeight: "600",
-                                        textDecoration: "none",
-                                        border: "1px solid rgba(255, 255, 255, 0.12)",
-                                        boxShadow: "0 8px 20px -2px rgba(15, 23, 42, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35)",
-                                        textShadow: "0 1px 2px rgba(0, 0, 0, 0.4)"
-                                    }}
+                                    className="btn_style_one btn_block"
                                 >
-                                    Book a Private Consultation &rarr;
+                                    Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>
                         </div>

@@ -14,7 +14,7 @@ export default function PricingTabs() {
                     display: 'inline-flex',
                     background: '#ffffff',
                     padding: '6px 8px',
-                    borderRadius: '9999px',
+                    borderRadius: '12px',
                     boxShadow: '0 12px 36px -4px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.03)',
                     border: '1px solid rgba(0, 0, 0, 0.05)',
                     maxWidth: '100%',
@@ -32,7 +32,7 @@ export default function PricingTabs() {
                         onClick={() => setActiveModel('onetime')}
                         style={{
                             padding: '12px 28px',
-                            borderRadius: '9999px',
+                            borderRadius: '8px',
                             border: activeModel === 'onetime' ? '1px solid rgba(255, 255, 255, 0.09)' : '1px solid transparent',
                             fontWeight: '600',
                             fontSize: '15px',
@@ -58,7 +58,7 @@ export default function PricingTabs() {
                         onClick={() => setActiveModel('retainer')}
                         style={{
                             padding: '12px 28px',
-                            borderRadius: '9999px',
+                            borderRadius: '8px',
                             border: activeModel === 'retainer' ? '1px solid rgba(255, 255, 255, 0.09)' : '1px solid transparent',
                             fontWeight: '600',
                             fontSize: '15px',
@@ -154,22 +154,9 @@ export default function PricingTabs() {
                                 <div style={{ marginTop: '35px' }}>
                                     <Link 
                                         href="/contact" 
-                                        style={{
-                                            display: 'block',
-                                            width: '100%',
-                                            textAlign: 'center',
-                                            backgroundColor: '#f1f5f9',
-                                            color: '#1b2534',
-                                            padding: '13px 20px',
-                                            borderRadius: '30px',
-                                            fontSize: '15px',
-                                            fontWeight: '700',
-                                            textDecoration: 'none',
-                                            border: '1px solid #e2e8f0',
-                                            transition: 'all 0.2s ease'
-                                        }}
+                                        className="btn_style_two btn_block"
                                     >
-                                        Book a Strategy Call &rarr;
+                                        <span>Book a Strategy Call</span> <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
                             </div>
@@ -248,15 +235,9 @@ export default function PricingTabs() {
                                 <div style={{ marginTop: '35px' }}>
                                     <Link 
                                         href="/contact" 
-                                        className="btn_style_one"
-                                        style={{
-                                            display: 'flex',
-                                            width: '100%',
-                                            textAlign: 'center',
-                                            justifyContent: 'center'
-                                        }}
+                                        className="btn_style_one btn_block"
                                     >
-                                        Book a Strategy Call &rarr;
+                                        <span>Book a Strategy Call</span> <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
                             </div>
@@ -315,22 +296,9 @@ export default function PricingTabs() {
                                 <div style={{ marginTop: '35px' }}>
                                     <Link 
                                         href="/contact" 
-                                        style={{
-                                            display: 'block',
-                                            width: '100%',
-                                            textAlign: 'center',
-                                            backgroundColor: '#f1f5f9',
-                                            color: '#1b2534',
-                                            padding: '13px 20px',
-                                            borderRadius: '30px',
-                                            fontSize: '15px',
-                                            fontWeight: '700',
-                                            textDecoration: 'none',
-                                            border: '1px solid #e2e8f0',
-                                            transition: 'all 0.2s ease'
-                                        }}
+                                        className="btn_style_two btn_block"
                                     >
-                                        Book a Strategy Call &rarr;
+                                        <span>Book a Strategy Call</span> <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
                             </div>
@@ -422,22 +390,9 @@ export default function PricingTabs() {
                                 <div style={{ marginTop: '35px' }}>
                                     <Link 
                                         href="/contact" 
-                                        style={{
-                                            display: 'block',
-                                            width: '100%',
-                                            textAlign: 'center',
-                                            backgroundColor: '#f1f5f9',
-                                            color: '#1b2534',
-                                            padding: '13px 20px',
-                                            borderRadius: '30px',
-                                            fontSize: '15px',
-                                            fontWeight: '700',
-                                            textDecoration: 'none',
-                                            border: '1px solid #e2e8f0',
-                                            transition: 'all 0.2s ease'
-                                        }}
+                                        className="btn_style_two btn_block"
                                     >
-                                        Book a Strategy Call &rarr;
+                                        <span>Book a Strategy Call</span> <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
                             </div>
@@ -516,15 +471,9 @@ export default function PricingTabs() {
                                 <div style={{ marginTop: '35px' }}>
                                     <Link 
                                         href="/contact" 
-                                        className="btn_style_one"
-                                        style={{
-                                            display: 'flex',
-                                            width: '100%',
-                                            textAlign: 'center',
-                                            justifyContent: 'center'
-                                        }}
+                                        className="btn_style_one btn_block"
                                     >
-                                        Book a Strategy Call &rarr;
+                                        <span>Book a Strategy Call</span> <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
                             </div>
@@ -583,22 +532,9 @@ export default function PricingTabs() {
                                 <div style={{ marginTop: '35px' }}>
                                     <Link 
                                         href="/contact" 
-                                        style={{
-                                            display: 'block',
-                                            width: '100%',
-                                            textAlign: 'center',
-                                            backgroundColor: '#f1f5f9',
-                                            color: '#1b2534',
-                                            padding: '13px 20px',
-                                            borderRadius: '30px',
-                                            fontSize: '15px',
-                                            fontWeight: '700',
-                                            textDecoration: 'none',
-                                            border: '1px solid #e2e8f0',
-                                            transition: 'all 0.2s ease'
-                                        }}
+                                        className="btn_style_two btn_block"
                                     >
-                                        Book a Strategy Call &rarr;
+                                        <span>Book a Strategy Call</span> <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
                             </div>
@@ -706,17 +642,17 @@ export default function PricingTabs() {
                 <p style={{ fontSize: '17px', color: '#59606a', marginBottom: '24px', lineHeight: '1.6' }}>
                     Book a confidential strategy call and we'll evaluate your goals to recommend the right trajectory.
                 </p>
-                <Link href="/contact" className="btn_style_one" style={{ padding: '14px 34px', fontSize: '16px', fontWeight: '700' }}>
-                    Book a Strategy Call &rarr;
+                <Link href="/contact" className="btn_style_one">
+                    Book a Strategy Call <i className="fa-solid fa-arrow-right"></i>
                 </Link>
-                <div style={{ marginTop: '16px', fontSize: '15px', color: '#64748b', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                <div style={{ marginTop: '16px', fontSize: '14px', color: '#64748b', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', flexWrap: 'wrap' }}>
                     <span>or</span>
                     <a
                         href={getWhatsAppUrl("Hi, I'd like to know more about Elite Prominence's services and pricing.")}
                         target="_blank"
                         rel="nofollow noopener noreferrer"
                         style={{
-                            color: '#16a34a',
+                            color: '#0f1013',
                             fontWeight: '600',
                             textDecoration: 'none',
                             display: 'inline-flex',
@@ -727,7 +663,7 @@ export default function PricingTabs() {
                         className="pricing_whatsapp_secondary_link"
                         aria-label="Message Elite Prominence on WhatsApp"
                     >
-                        <i className="fab fa-whatsapp" style={{ fontSize: '18px', color: '#25D366' }}></i>
+                        <i className="fab fa-whatsapp" style={{ fontSize: '16px', color: '#b89058' }}></i>
                         <span>message us on WhatsApp</span>
                     </a>
                 </div>

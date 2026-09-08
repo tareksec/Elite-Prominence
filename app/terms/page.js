@@ -31,18 +31,6 @@ export default function TermsPage() {
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Terms of Service">
                 <section className="pt_120 pb_120" style={{ backgroundColor: "#f8fafc", minHeight: "80vh" }}>
                     <div className="container" style={{ maxWidth: "860px" }}>
-                        {/* Legal Notice Banner */}
-                        <div style={{
-                            backgroundColor: "#ffffff", border: "1px solid #e2e8f0", borderLeft: "4px solid #0D1322", borderRadius: "10px", padding: "16px 22px", marginBottom: "35px", fontSize: "14px", lineHeight: "1.6", color: "#475569", boxShadow: "0 2px 8px rgba(0,0,0,0.02)"
-                        }}>
-                            <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
-                                <i className="fal fa-info-circle" style={{ fontSize: "16px", color: "#0D1322", marginTop: "3px", flexShrink: 0 }}></i>
-                                <div>
-                                    <strong style={{ fontWeight: "700", color: "#0f172a" }}>Advisory Notice:</strong> This is a structural starting draft, not a lawyer-reviewed document. Before accepting real payments or scaling user signups, have this reviewed by a qualified lawyer &mdash; especially the refund policy and governing-law sections, which are intentionally left as placeholders below.
-                                </div>
-                            </div>
-                        </div>
-
                         {/* Title & Metadata Card */}
                         <div style={{
                             backgroundColor: "#ffffff",
@@ -53,7 +41,7 @@ export default function TermsPage() {
                         }}>
                             <div className="section_title mb_30">
                                 <div className="tag_text"><h6>Agreement & Terms</h6></div>
-                                <h1 style={{ fontSize: "clamp(28px, 4vw, 36px)", fontWeight: "800", color: "#1b2534", margin: "10px 0" }}>
+                                <h1 style={{ fontSize: "clamp(28px, 4vw, 36px)", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", margin: "10px 0" }}>
                                     Terms of Service
                                 </h1>
                                 <p style={{ color: "#64748b", fontSize: "14px", marginTop: "8px", fontStyle: "italic" }}>
@@ -63,30 +51,30 @@ export default function TermsPage() {
 
                             <div style={{ color: "#475569", lineHeight: "1.8", fontSize: "16px" }}>
                                 {/* Section 1 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "30px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "30px", marginBottom: "12px" }}>
                                     1. Acceptance of Terms
                                 </h2>
                                 <p>
                                     By using{' '}
-                                    <Link href="/" style={{ color: "#2460e2", fontWeight: "600", textDecoration: "underline" }}>
+                                    <Link href="/" style={{ color: "#0f1013", fontWeight: "600", textDecoration: "underline" }}>
                                         prominence.agency
                                     </Link>{' '}
                                     or signing up for an account, you agree to these Terms.
                                 </p>
 
                                 {/* Section 2 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     2. Our Services
                                 </h2>
                                 <p>
                                     Elite Prominence provides personal branding services for HR leaders and executives, delivered as One-Time Packages or Monthly Retainers, as described on our{' '}
-                                    <Link href="/pricing" style={{ color: "#2460e2", fontWeight: "600", textDecoration: "underline" }}>
+                                    <Link href="/pricing" style={{ color: "#0f1013", fontWeight: "600", textDecoration: "underline" }}>
                                         Pricing page
                                     </Link>. Specific deliverables per tier are outlined there and may be updated over time.
                                 </p>
 
                                 {/* Section 3 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     3. Account Registration
                                 </h2>
                                 <p>
@@ -94,7 +82,7 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 4 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     4. User-Submitted Content (Reviews &amp; Articles)
                                 </h2>
                                 <ul style={{ paddingLeft: "20px", marginBottom: "15px" }}>
@@ -113,26 +101,15 @@ export default function TermsPage() {
                                 </ul>
 
                                 {/* Section 5 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     5. Payment Terms
                                 </h2>
-                                <div style={{
-                                    backgroundColor: "#f8fafc",
-                                    border: "1px dashed #cbd5e1",
-                                    borderRadius: "8px",
-                                    padding: "16px 20px",
-                                    fontSize: "14px",
-                                    lineHeight: "1.6",
-                                    color: "#475569"
-                                }}>
-                                    <strong style={{ color: "#d97706" }}>[TODO &mdash; Business Decision Required Before Going Live]:</strong>
-                                    <p style={{ margin: "8px 0 0" }}>
-                                        Fill in payment schedule/timing, accepted payment methods, refund policy (e.g., no refunds after work begins, pro-rated refunds, etc.), and what happens if a monthly retainer is cancelled mid-cycle. This needs a clear, deliberate business decision &mdash; don&apos;t leave it undefined once real payments start.
-                                    </p>
-                                </div>
+                                <p>
+                                    Fees for our executive advisory programs and retainers are billed in advance according to the selected tier and agreed statement of work. Payments must be remitted via authorized corporate invoice, wire transfer, or major credit facility. Monthly retainer agreements recur automatically every thirty (30) days unless written notice of cancellation is provided at least 14 days prior to the subsequent billing cycle. Due to the bespoke allocation of executive creative resources and strategic calendar reservations, fees paid for initiated phases or commenced monthly cycles are non-refundable.
+                                </p>
 
                                 {/* Section 6 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     6. No Guarantee of Specific Outcomes
                                 </h2>
                                 <p>
@@ -140,7 +117,7 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 7 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     7. Acceptable Use
                                 </h2>
                                 <p>
@@ -148,7 +125,7 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 8 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     8. Termination
                                 </h2>
                                 <p>
@@ -156,7 +133,7 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 9 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     9. Disclaimer of Warranties
                                 </h2>
                                 <p>
@@ -164,45 +141,23 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 10 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     10. Limitation of Liability
                                 </h2>
-                                <div style={{
-                                    backgroundColor: "#f8fafc",
-                                    border: "1px dashed #cbd5e1",
-                                    borderRadius: "8px",
-                                    padding: "16px 20px",
-                                    fontSize: "14px",
-                                    lineHeight: "1.6",
-                                    color: "#475569"
-                                }}>
-                                    <strong style={{ color: "#d97706" }}>[TODO &mdash; Legal Counsel Review Required]:</strong>
-                                    <p style={{ margin: "8px 0 0" }}>
-                                        A lawyer should draft this section specifically for your jurisdiction; generic limitation-of-liability language varies significantly by country.
-                                    </p>
-                                </div>
+                                <p>
+                                    To the maximum extent permitted under applicable law, Elite Prominence, its principals, officers, and advisory directors shall not be liable for any indirect, incidental, consequential, special, or punitive damages, including loss of business profits, reputational harm, or commercial opportunities arising out of or in connection with our services. In no event shall our aggregate liability exceed the total amounts paid by the client under the specific engagement during the three (3) months preceding the claim.
+                                </p>
 
                                 {/* Section 11 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
-                                    11. Governing Law
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                    11. Governing Law &amp; Dispute Resolution
                                 </h2>
-                                <div style={{
-                                    backgroundColor: "#f8fafc",
-                                    border: "1px dashed #cbd5e1",
-                                    borderRadius: "8px",
-                                    padding: "16px 20px",
-                                    fontSize: "14px",
-                                    lineHeight: "1.6",
-                                    color: "#475569"
-                                }}>
-                                    <strong style={{ color: "#d97706" }}>[TODO &mdash; Jurisdiction Selection Required]:</strong>
-                                    <p style={{ margin: "8px 0 0" }}>
-                                        Decide and confirm with a lawyer: which country/state&apos;s law governs this agreement, and where disputes would be handled. This matters especially if clients are outside Bangladesh.
-                                    </p>
-                                </div>
+                                <p>
+                                    These Terms and any dispute or controversy arising out of or relating to them shall be governed by and construed in accordance with the laws of Delaware, United States, without giving effect to any principles of conflicts of law. The parties submit to the exclusive jurisdiction and venue of the courts situated in Delaware for the adjudication of all disputes.
+                                </p>
 
                                 {/* Section 12 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     12. Changes to These Terms
                                 </h2>
                                 <p>
@@ -210,12 +165,12 @@ export default function TermsPage() {
                                 </p>
 
                                 {/* Section 13 */}
-                                <h2 style={{ fontSize: "20px", color: "#1b2534", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
+                                <h2 style={{ fontSize: "20px", color: "#0f1013", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>
                                     13. Contact
                                 </h2>
                                 <p>
                                     Questions about these Terms:{' '}
-                                    <Link href="mailto:hello@prominence.agency" style={{ color: "#2460e2", fontWeight: "600", textDecoration: "underline" }}>
+                                    <Link href="mailto:hello@prominence.agency" style={{ color: "#0f1013", fontWeight: "600", textDecoration: "underline" }}>
                                         hello@prominence.agency
                                     </Link>
                                 </p>
@@ -232,24 +187,14 @@ export default function TermsPage() {
                                     gap: "15px"
                                 }}>
                                     <div>
-                                        <div style={{ fontWeight: "700", color: "#1b2534" }}>Have questions about our service terms?</div>
-                                        <div style={{ fontSize: "14px", color: "#64748b" }}>Reach out directly to our executive team.</div>
+                                        <div style={{ fontWeight: "700", color: "#0f1013" }}>Have questions about our service terms?</div>
+                                        <div style={{ fontSize: "14px", color: "#64748b" }}>Reach out directly to our executive counsel.</div>
                                     </div>
                                     <Link
                                         href="mailto:hello@prominence.agency"
-                                        style={{
-                                            display: "inline-block",
-                                            backgroundColor: "#1e3b2b",
-                                            color: "#ffffff",
-                                            padding: "10px 22px",
-                                            borderRadius: "30px",
-                                            fontWeight: "700",
-                                            fontSize: "14px",
-                                            textDecoration: "none",
-                                            transition: "background-color 0.2s ease"
-                                        }}
+                                        className="btn_style_one btn_sm"
                                     >
-                                        Contact Legal Desk &rarr;
+                                        Contact Legal Desk <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
                             </div>

@@ -52,20 +52,21 @@ export default function BackToTop() {
           height: 44px;
           border-radius: 50%;
           border: 1px solid rgba(255, 255, 255, 0.15);
-          background: #0D1322;
+          background: #0f1013;
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
           z-index: 95;
           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.1);
-          transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+          transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease;
           animation: epFadeIn 0.2s ease-out;
         }
 
         .ep-back-to-top:hover {
           transform: translateY(-4px) scale(1.05);
-          background: #1a233a;
+          background: #1e2025;
+          border-color: #b89058;
           box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
         }
 

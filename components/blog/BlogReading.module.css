@@ -2,25 +2,25 @@
 
 .readingContainer {
   --gradient-brand: linear-gradient(180deg, #2b2d32 0%, #151619 100%);
-  --gradient-brand-subtle: rgba(13, 19, 34, 0.04);
+  --gradient-brand-subtle: rgba(15, 16, 19, 0.04);
   --bg-page: #FFFFFF;
   --bg-surface: #F8F9FA;
   --bg-muted: #F1F3F5;
-  --text-heading: #0F1235;
+  --text-heading: #0f1013;
   --text-body: #374151;
   --text-secondary: #64748B;
   --text-muted: #94A3B8;
-  --purple: #0D1322;
-  --magenta: #0D1322;
-  --pink: #C5A059;
+  --purple: #0f1013;
+  --magenta: #0f1013;
+  --pink: #b89058;
   --border: #E5E7EB;
-  --border-brand: #0D1322;
-  --shadow-sm: 0 1px 3px rgba(15, 18, 53, 0.05);
-  --shadow-md: 0 4px 14px rgba(15, 18, 53, 0.08);
+  --border-brand: #0f1013;
+  --shadow-sm: 0 1px 3px rgba(15, 16, 19, 0.05);
+  --shadow-md: 0 4px 14px rgba(15, 16, 19, 0.08);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.08);
   --shadow-brand: 0 8px 25px rgba(0, 0, 0, 0.15);
-  --font-heading: 'DM Serif Display', Georgia, serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: var(--primary-font), serif;
+  --font-body: var(--secondary-font), -apple-system, BlinkMacSystemFont, sans-serif;
 
   background-color: var(--bg-page);
   color: var(--text-body);
@@ -64,7 +64,7 @@
   font-family: var(--font-heading);
   font-size: 30px;
   line-height: 1.3;
-  color: #0F1235;
+  color: #0f1013;
   border-left: 4px solid var(--purple);
   padding-left: 16px;
   margin-top: 2.75rem;
@@ -87,18 +87,18 @@
   font-family: var(--font-body);
   font-size: 22px;
   font-weight: 600;
-  color: #0F1235;
+  color: #0f1013;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 .articleBody strong {
-  color: #0F1235;
+  color: #0f1013;
   font-weight: 700;
 }
 
 .articleBody a {
-  color: #0D1322;
+  color: #0f1013;
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 500;
@@ -106,18 +106,18 @@
 }
 
 .articleBody a:hover {
-  color: #C5A059;
+  color: #b89058;
 }
 
 .articleBody blockquote {
   position: relative;
   background: #F8F9FA;
-  border-left: 4px solid #0D1322;
+  border-left: 4px solid #b89058;
   border-radius: 0 10px 10px 0;
   padding: 1.25rem 1.75rem;
   margin: 2rem 0;
   font-style: italic;
-  color: #0F1235;
+  color: #0f1013;
   box-shadow: var(--shadow-sm);
 }
 

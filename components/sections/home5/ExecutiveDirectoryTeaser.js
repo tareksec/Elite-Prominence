@@ -41,35 +41,38 @@ const DIRECTORY_TEASER_MEMBERS = [
 export default function ExecutiveDirectoryTeaser() {
     return (
         <section style={{
-            backgroundColor: "#FAF8F2",
-            padding: "90px 0 80px",
+            backgroundColor: "#fafbfc",
+            padding: "95px 0 85px",
             fontFamily: "var(--primary-font)",
             position: "relative",
-            borderTop: "1px solid #e5e3db",
-            borderBottom: "1px solid #e5e3db"
+            borderTop: "1px solid #eaedf0",
+            borderBottom: "1px solid #eaedf0"
         }}>
             <div className="container">
                 {/* Section Header */}
                 <div style={{ textAlign: "center", maxWidth: "780px", margin: "0 auto 48px" }}>
                     <span style={{
-                        display: "inline-block",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
                         fontSize: "12px",
-                        fontWeight: "800",
+                        fontWeight: "700",
                         textTransform: "uppercase",
-                        letterSpacing: "1.5px",
-                        color: "#92400e",
-                        backgroundColor: "rgba(210, 157, 43, 0.15)",
-                        border: "1px solid rgba(210, 157, 43, 0.3)",
-                        padding: "5px 14px",
-                        borderRadius: "20px",
+                        letterSpacing: "0.8px",
+                        color: "#0f1013",
+                        backgroundColor: "#f1f5f9",
+                        border: "1px solid #e2e8f0",
+                        padding: "6px 16px",
+                        borderRadius: "30px",
                         marginBottom: "14px"
                     }}>
+                        <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#b89058" }}></span>
                         Verified Network &amp; Editorial Syndication
                     </span>
                     <h2 style={{
-                        fontSize: "clamp(26px, 4vw, 36px)",
-                        fontWeight: "800",
-                        color: "#162d20",
+                        fontSize: "38px",
+                        fontWeight: "700",
+                        color: "#0f1013",
                         letterSpacing: "-0.5px",
                         margin: "0 0 16px",
                         lineHeight: "1.25"
@@ -77,9 +80,9 @@ export default function ExecutiveDirectoryTeaser() {
                         The Sovereign Executive Contributor Directory
                     </h2>
                     <p style={{
-                        fontSize: "16px",
+                        fontSize: "16.5px",
                         lineHeight: "1.7",
-                        color: "#475569",
+                        color: "#59606a",
                         margin: 0
                     }}>
                         A curated, invitation-only ecosystem where Chief Human Resources Officers, VP People leaders, and executive advisors syndicate battle-tested operational frameworks, establish Google entity equity, and attract board appointments.
@@ -96,42 +99,53 @@ export default function ExecutiveDirectoryTeaser() {
                     {DIRECTORY_TEASER_MEMBERS.map((member) => (
                         <div
                             key={member.id}
+                            className="prominence_card_equal_height"
                             style={{
                                 backgroundColor: "#ffffff",
-                                borderRadius: "18px",
-                                padding: "28px 24px",
-                                border: "1px solid #e5e3db",
-                                boxShadow: "0 8px 24px rgba(22, 45, 32, 0.04)",
+                                borderRadius: "14px",
+                                padding: "30px 26px",
+                                border: "1px solid #eaedf0",
+                                boxShadow: "0 4px 18px rgba(15, 16, 19, 0.03)",
                                 display: "flex",
                                 flexDirection: "column",
-                                justifyContent: "space-between",
-                                transition: "all 0.3s ease"
+                                transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)"
                             }}
                         >
-                            <div>
+                            <div className="prominence_card_body">
                                 {/* Header */}
-                                <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px" }}>
+                                <div style={{ display: "flex", gap: "16px", alignItems: "center", marginBottom: "18px" }}>
                                     <div style={{
-                                        width: "52px",
-                                        height: "52px",
+                                        width: "60px",
+                                        height: "60px",
                                         borderRadius: "50%",
-                                        backgroundColor: "#162d20",
-                                        color: "#D29D2B",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        fontSize: "20px",
-                                        fontWeight: "800",
-                                        flexShrink: 0
+                                        overflow: "hidden",
+                                        flexShrink: 0,
+                                        border: "2px solid #eaedf0"
                                     }}>
-                                        {member.initials}
+                                        <img
+                                            src={member.avatar}
+                                            alt={member.name}
+                                            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                                        />
                                     </div>
-                                    <div>
-                                        <h3 style={{ margin: "0 0 2px", fontSize: "18px", fontWeight: "800", color: "#162d20" }}>
-                                            {member.name}
-                                        </h3>
-                                        <div style={{ fontSize: "13px", color: "#64748b", fontStyle: "italic" }}>
-                                            {member.title} • {member.company}
+                                    <div style={{ minWidth: 0, flex: 1 }}>
+                                        <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                                            <h3 style={{
+                                                fontSize: "17px",
+                                                fontWeight: "700",
+                                                color: "#0f1013",
+                                                margin: 0,
+                                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                                            }}>
+                                                {member.name}
+                                            </h3>
+                                            <i className="fa-solid fa-circle-check" style={{ color: "#b89058", fontSize: "13px" }} title="Verified Prominence Member"></i>
+                                        </div>
+                                        <div style={{ fontSize: "13px", fontWeight: "600", color: "#64748b", marginTop: "2px" }}>
+                                            {member.role}
+                                        </div>
+                                        <div style={{ fontSize: "12px", color: "#94a3b8" }}>
+                                            {member.company}
                                         </div>
                                     </div>
                                 </div>
@@ -143,43 +157,44 @@ export default function ExecutiveDirectoryTeaser() {
                                     fontSize: "12px",
                                     color: "#64748b",
                                     marginBottom: "16px",
-                                    padding: "6px 0",
+                                    padding: "8px 0",
                                     borderTop: "1px solid #f1f5f9",
                                     borderBottom: "1px solid #f1f5f9"
                                 }}>
-                                    <span><i className="fa-solid fa-location-dot me-1"></i>{member.location}</span>
-                                    <span>•</span>
+                                    <span><i className="fa-solid fa-location-dot me-1" style={{ color: "#b89058" }}></i>{member.location}</span>
+                                    <span>&bull;</span>
                                     <span><i className="fa-regular fa-newspaper me-1"></i>{member.articlesCount} Published Articles</span>
                                 </div>
 
                                 {/* Featured Perspective Preview */}
                                 <div style={{
-                                    backgroundColor: "#FAF8F2",
-                                    padding: "12px 14px",
+                                    backgroundColor: "#f8fafc",
+                                    padding: "14px 16px",
                                     borderRadius: "10px",
-                                    border: "1px solid #e5e3db",
+                                    border: "1px solid #eaedf0",
                                     marginBottom: "18px"
                                 }}>
-                                    <span style={{ fontSize: "10px", fontWeight: "800", textTransform: "uppercase", color: "#92400e", display: "block", marginBottom: "4px" }}>
+                                    <span style={{ fontSize: "10.5px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.5px", color: "#b89058", display: "block", marginBottom: "4px" }}>
                                         Featured Perspective
                                     </span>
-                                    <p style={{ margin: 0, fontSize: "13.5px", fontWeight: "700", color: "#162d20", lineHeight: "1.4" }}>
-                                        "{member.quote}"
+                                    <p style={{ margin: 0, fontSize: "13.5px", fontWeight: "600", color: "#1e293b", lineHeight: "1.5" }}>
+                                        &ldquo;{member.quote}&rdquo;
                                     </p>
                                 </div>
 
                                 {/* Tags */}
-                                <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "18px" }}>
+                                <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "20px" }}>
                                     {member.tags.map((tag, idx) => (
                                         <span
                                             key={idx}
                                             style={{
                                                 backgroundColor: "#f1f5f9",
-                                                color: "#334155",
+                                                color: "#475569",
                                                 fontSize: "11px",
-                                                fontWeight: "700",
-                                                padding: "3px 9px",
-                                                borderRadius: "12px"
+                                                fontWeight: "600",
+                                                padding: "3px 10px",
+                                                borderRadius: "6px",
+                                                border: "1px solid #e2e8f0"
                                             }}
                                         >
                                             #{tag}
@@ -189,75 +204,51 @@ export default function ExecutiveDirectoryTeaser() {
                             </div>
 
                             {/* Card Link */}
-                            <Link
-                                href={`/community/${member.id}`}
-                                style={{
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    gap: "6px",
-                                    color: "#162d20",
-                                    fontSize: "13.5px",
-                                    fontWeight: "800",
-                                    textDecoration: "none",
-                                    borderTop: "1px solid #f1f5f9",
-                                    paddingTop: "14px"
-                                }}
-                            >
-                                View Executive Profile &amp; Articles &rarr;
-                            </Link>
+                            <div className="prominence_card_footer" style={{ borderTop: "1px solid #f1f5f9", paddingTop: "14px", marginTop: "auto" }}>
+                                <Link
+                                    href={`/community/${member.id}`}
+                                    className="btn_style_ghost"
+                                >
+                                    View Executive Profile &amp; Articles <i className="fa-solid fa-arrow-right"></i>
+                                </Link>
+                            </div>
                         </div>
                     ))}
                 </div>
 
                 {/* Bottom Value Props Bar & Actions */}
                 <div style={{
-                    backgroundColor: "#162d20",
+                    backgroundColor: "#0f1013",
                     color: "#ffffff",
-                    borderRadius: "18px",
+                    borderRadius: "14px",
                     padding: "32px 36px",
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
                     flexWrap: "wrap",
                     gap: "20px",
-                    boxShadow: "0 10px 30px rgba(22, 45, 32, 0.12)"
+                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)"
                 }}>
                     <div>
-                        <h4 style={{ margin: "0 0 6px", fontSize: "20px", fontWeight: "800", color: "#ffffff" }}>
+                        <h4 style={{ margin: "0 0 6px", fontSize: "20px", fontWeight: "700", color: "#ffffff", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
                             Elevate Your Strategic Executive Footprint
                         </h4>
-                        <p style={{ margin: 0, color: "#c1cfc5", fontSize: "14px", maxWidth: "600px" }}>
-                            Every Elite Prominence member receives a sovereign personal website, Google Knowledge Graph indexation, and priority publication in our Executive Directory.
+                        <p style={{ margin: 0, color: "#94a3b8", fontSize: "14px", maxWidth: "600px", lineHeight: "1.6" }}>
+                            Every Prominence member receives a sovereign personal website, Google Knowledge Graph indexation, and priority publication in our Executive Directory.
                         </p>
                     </div>
 
-                    <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                    <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center" }}>
                         <Link
                             href="/community"
-                            style={{
-                                backgroundColor: "#D29D2B",
-                                color: "#162d20",
-                                padding: "12px 24px",
-                                borderRadius: "30px",
-                                fontWeight: "800",
-                                fontSize: "14px",
-                                textDecoration: "none"
-                            }}
+                            className="btn_style_gold"
                         >
-                            Explore Full Directory &rarr;
+                            Explore Full Directory <i className="fa-solid fa-arrow-right"></i>
                         </Link>
                         <Link
                             href="/contact"
-                            style={{
-                                backgroundColor: "rgba(255, 255, 255, 0.12)",
-                                color: "#ffffff",
-                                border: "1px solid rgba(255, 255, 255, 0.3)",
-                                padding: "12px 22px",
-                                borderRadius: "30px",
-                                fontWeight: "700",
-                                fontSize: "14px",
-                                textDecoration: "none"
-                            }}
+                            className="btn_style_two_dark"
                         >
                             Apply for Contributor Status
                         </Link>

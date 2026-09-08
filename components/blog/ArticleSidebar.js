@@ -252,14 +252,14 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             bottom: '80px',
             left: '50%',
             transform: 'translateX(-50%)',
-            background: '#0F1235',
+            background: '#0f1013',
             color: '#FFFFFF',
             padding: '10px 20px',
             borderRadius: '8px',
             fontSize: '14px',
             fontWeight: '500',
             zIndex: 99999,
-            boxShadow: '0 4px 14px rgba(15, 18, 53, 0.15)',
+            boxShadow: '0 4px 14px rgba(15, 16, 19, 0.25)',
             display: 'flex',
             alignItems: 'center',
             gap: '8px'
@@ -288,15 +288,15 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
           transition: all 0.2s ease;
         }
         .action-btn:hover {
-          color: #0D1322;
-          border-color: #0D1322;
+          color: #0f1013;
+          border-color: #0f1013;
           background: #F8F9FA;
           transform: scale(1.06);
         }
         .action-btn.active {
-          background: #0D1322 !important;
+          background: #0f1013 !important;
           color: #FFFFFF !important;
-          border-color: #0D1322 !important;
+          border-color: #0f1013 !important;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         @media (max-width: 1279px) {

@@ -102,7 +102,7 @@ export default function About_Page() {
                             <div className="tag_text">
                                 <h6>Executive Reputation Advisory</h6>
                             </div>
-                            <h1 style={{ fontSize: '42px', fontWeight: '800', color: '#0f172a', lineHeight: '1.25', marginBottom: '20px' }}>
+                            <h1 style={{ fontSize: '42px', fontFamily: "var(--ep-font-serif, 'PT Serif', serif)", fontWeight: '700', color: '#0f1013', lineHeight: '1.25', marginBottom: '20px' }}>
                                 Architecting Sovereign Digital Stature for Enterprise Leaders
                             </h1>
                             <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.7', margin: '0 auto' }}>
@@ -110,10 +110,10 @@ export default function About_Page() {
                             </p>
                             <div style={{ marginTop: '32px', display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
                                 <Link href="/contact" className="btn_style_one">
-                                    Book a Private Consultation
+                                    Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                                 <Link href="/how-it-works" className="btn_style_two">
-                                    Review Our 6-Stage Protocol
+                                    Review Our 6-Stage Protocol <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>
                         </div>
@@ -149,7 +149,7 @@ export default function About_Page() {
                                                 Founder & Managing Partner
                                             </span>
                                         </div>
-                                        <h3 style={{ fontSize: '22px', fontWeight: '800', color: '#0f172a', margin: '0 0 4px 0' }}>
+                                        <h3 style={{ fontSize: '22px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', margin: '0 0 4px 0' }}>
                                             Md Tarek
                                         </h3>
                                         <p style={{ fontSize: '13.5px', color: '#64748b', margin: '0 0 16px 0', fontWeight: '500' }}>
@@ -159,20 +159,9 @@ export default function About_Page() {
                                             href="https://www.linkedin.com/in/mdtarek404/"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            style={{
-                                                display: 'inline-flex',
-                                                alignItems: 'center',
-                                                gap: '8px',
-                                                padding: '9px 20px',
-                                                borderRadius: '30px',
-                                                background: '#0a66c2',
-                                                color: '#ffffff',
-                                                fontSize: '13px',
-                                                fontWeight: '600',
-                                                textDecoration: 'none'
-                                            }}
+                                            className="btn_style_two btn_sm"
                                         >
-                                            <i className="fab fa-linkedin-in" style={{ fontSize: '14px' }}></i>
+                                            <i className="fa-brands fa-linkedin" style={{ color: '#0a66c2' }}></i>
                                             <span>Connect on LinkedIn</span>
                                         </a>
                                     </div>
@@ -182,10 +171,10 @@ export default function About_Page() {
                                 <div className="tag_text" style={{ marginBottom: '10px' }}>
                                     <h6>The Founding Conviction</h6>
                                 </div>
-                                <h2 style={{ fontSize: '34px', fontWeight: '800', color: '#0f172a', marginBottom: '20px', lineHeight: '1.3' }}>
+                                <h2 style={{ fontSize: '34px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '20px', lineHeight: '1.3' }}>
                                     Reputation Is Sovereign Infrastructure, Not Superficial Vanity
                                 </h2>
-                                <div style={{ fontSize: '18px', fontWeight: '600', color: '#1e293b', borderLeft: '4px solid #0f172a', paddingLeft: '20px', marginBottom: '24px', lineHeight: '1.6' }}>
+                                <div style={{ fontSize: '18px', fontWeight: '600', color: '#1e293b', borderLeft: '4px solid #b89058', paddingLeft: '20px', marginBottom: '24px', lineHeight: '1.6' }}>
                                     &ldquo;In executive leadership, opportunity is not won by shouting in the town square. It is won by unmistakable credibility recognized before the due diligence begins.&rdquo;
                                 </div>
                                 <p style={{ fontSize: '15.5px', lineHeight: '1.8', color: '#475569', marginBottom: '16px' }}>
@@ -203,13 +192,13 @@ export default function About_Page() {
                 </section>
 
                 {/* The 4 Firm Principles */}
-                <section className="pt_100 pb_90" style={{ background: '#0a0f1d', color: '#fff' }}>
+                <section className="pt_100 pb_90" style={{ background: '#0f1013', color: '#fff' }}>
                     <div className="container">
                         <div className="section_title centred" style={{ maxWidth: '760px', margin: '0 auto 60px' }}>
                             <div className="tag_text">
                                 <h6 style={{ color: '#94a3b8' }}>Institutional Pillars</h6>
                             </div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#fff', marginTop: '12px' }}>
+                            <h2 style={{ fontSize: '36px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginTop: '12px' }}>
                                 The Four Prominence Principles
                             </h2>
                             <p style={{ color: '#94a3b8', fontSize: '16px', marginTop: '12px' }}>
@@ -221,9 +210,9 @@ export default function About_Page() {
                             <div className="col-lg-3 col-md-6 mb_30">
                                 <div className="prominence_card_dark" style={{ padding: '32px', height: '100%' }}>
                                     <div style={{ fontSize: '22px', color: '#fff', marginBottom: '18px' }}>
-                                        <i className="fal fa-landmark"></i>
+                                        <i className="fa-solid fa-landmark" style={{ color: '#b89058' }}></i>
                                     </div>
-                                    <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
+                                    <h3 style={{ fontSize: '18px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
                                         Sovereign Assets
                                     </h3>
                                     <p style={{ color: '#94a3b8', fontSize: '13.5px', lineHeight: '1.7', margin: 0 }}>
@@ -235,9 +224,9 @@ export default function About_Page() {
                             <div className="col-lg-3 col-md-6 mb_30">
                                 <div className="prominence_card_dark" style={{ padding: '32px', height: '100%' }}>
                                     <div style={{ fontSize: '22px', color: '#fff', marginBottom: '18px' }}>
-                                        <i className="fal fa-pen-nib"></i>
+                                        <i className="fa-solid fa-pen-nib" style={{ color: '#b89058' }}></i>
                                     </div>
-                                    <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
+                                    <h3 style={{ fontSize: '18px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
                                         Substance Over Noise
                                     </h3>
                                     <p style={{ color: '#94a3b8', fontSize: '13.5px', lineHeight: '1.7', margin: 0 }}>
@@ -249,9 +238,9 @@ export default function About_Page() {
                             <div className="col-lg-3 col-md-6 mb_30">
                                 <div className="prominence_card_dark" style={{ padding: '32px', height: '100%' }}>
                                     <div style={{ fontSize: '22px', color: '#fff', marginBottom: '18px' }}>
-                                        <i className="fal fa-shield-alt"></i>
+                                        <i className="fa-solid fa-shield-halved" style={{ color: '#b89058' }}></i>
                                     </div>
-                                    <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
+                                    <h3 style={{ fontSize: '18px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
                                         Absolute Discretion
                                     </h3>
                                     <p style={{ color: '#94a3b8', fontSize: '13.5px', lineHeight: '1.7', margin: 0 }}>
@@ -263,9 +252,9 @@ export default function About_Page() {
                             <div className="col-lg-3 col-md-6 mb_30">
                                 <div className="prominence_card_dark" style={{ padding: '32px', height: '100%' }}>
                                     <div style={{ fontSize: '22px', color: '#fff', marginBottom: '18px' }}>
-                                        <i className="fal fa-clock"></i>
+                                        <i className="fa-solid fa-clock" style={{ color: '#b89058' }}></i>
                                     </div>
-                                    <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
+                                    <h3 style={{ fontSize: '18px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
                                         Minimal Time Tax
                                     </h3>
                                     <p style={{ color: '#94a3b8', fontSize: '13.5px', lineHeight: '1.7', margin: 0 }}>
@@ -284,7 +273,7 @@ export default function About_Page() {
                             <div className="tag_text" style={{ marginBottom: '14px' }}>
                                 <h6>Private Engagement</h6>
                             </div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
+                            <h2 style={{ fontSize: '36px', fontFamily: "var(--ep-font-serif, 'PT Serif', serif)", fontWeight: '700', color: '#0f1013', marginBottom: '16px' }}>
                                 Ready to Align Your Reputation With Your Stature?
                             </h2>
                             <p style={{ color: '#475569', fontSize: '17px', lineHeight: '1.7', marginBottom: '32px' }}>
@@ -292,10 +281,10 @@ export default function About_Page() {
                             </p>
                             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
                                 <Link href="/contact" className="btn_style_one">
-                                    Book a Private Consultation
+                                    Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                                 <Link href="/resources/assessment" className="btn_style_two">
-                                    Evaluate Digital Stature
+                                    Evaluate Digital Stature <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>
                         </div>

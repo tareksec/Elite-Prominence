@@ -47,46 +47,43 @@ export default function ContactForm() {
     }
 
     return (
-        <div className="inner_box contact_form_inner_box" style={{ maxWidth: "850px", margin: "0 auto", background: "#fff", padding: "50px 40px", borderRadius: "10px", boxShadow: "0 10px 40px rgba(0,0,0,0.06)" }}>
-            <div className="section_title centred" style={{ marginBottom: "25px" }}>
-                <h2 style={{ fontSize: "28px", fontWeight: "700" }}>Book a Strategy Call</h2>
-                <p style={{ color: "#59606a", marginTop: "10px" }}>Fill in the details below to help us prepare for our discussion.</p>
+        <div className="prominence_depth_card" style={{ padding: "44px 38px", backgroundColor: "#ffffff" }}>
+            <div style={{ marginBottom: "26px" }}>
+                <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                    <span className="prominence_pulse_dot"></span>
+                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#b89058", fontFamily: "var(--primary-font)" }}>
+                        Direct Partner Intake
+                    </span>
+                </div>
+                <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", letterSpacing: "-0.3px", margin: 0 }}>
+                    Initiate Confidential Stature Consultation
+                </h3>
+                <p style={{ color: "#64748b", marginTop: "6px", fontSize: "14.5px", lineHeight: "22px" }}>
+                    Provide baseline career context to allow our partners to prepare an initial Google search audit prior to our strategy call.
+                </p>
             </div>
 
-            {/* Inline WhatsApp Quick Action Banner */}
-            <div className="whatsapp_banner" style={{
-                background: "#f0fdf4",
-                border: "1px solid #bbf7d0",
+            {/* Discreet Executive Concierge Banner */}
+            <div style={{
+                background: "#f8fafc",
+                border: "1px solid #eaedf0",
                 borderRadius: "10px",
-                padding: "16px 22px",
-                marginBottom: "30px",
+                padding: "14px 18px",
+                marginBottom: "28px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
                 flexWrap: "wrap",
-                gap: "14px"
+                gap: "12px"
             }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                    <div style={{
-                        width: "40px",
-                        height: "40px",
-                        borderRadius: "50%",
-                        background: "#25D366",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: "#ffffff",
-                        fontSize: "20px",
-                        flexShrink: 0
-                    }}>
-                        <i className="fab fa-whatsapp"></i>
-                    </div>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                    <i className="fa-brands fa-whatsapp" style={{ color: "#b89058", fontSize: "18px" }}></i>
                     <div>
-                        <div style={{ fontWeight: "700", color: "#166534", fontSize: "15px" }}>
-                            Prefer instant messaging?
+                        <div style={{ fontWeight: "700", color: "#0f1013", fontSize: "13.5px", fontFamily: "var(--primary-font)" }}>
+                            Prefer direct encrypted messaging?
                         </div>
-                        <div style={{ color: "#15803d", fontSize: "13.5px" }}>
-                            Chat directly with our executive advisors for immediate answers or payment coordination.
+                        <div style={{ color: "#64748b", fontSize: "12px" }}>
+                            Connect with an executive partner via WhatsApp for immediate coordination.
                         </div>
                     </div>
                 </div>
@@ -94,57 +91,50 @@ export default function ContactForm() {
                     href={getWhatsAppUrl()}
                     target="_blank"
                     rel="nofollow noopener noreferrer"
-                    className="whatsapp_quick_btn"
-                    style={{
-                        background: "#25D366",
-                        color: "#ffffff",
-                        fontWeight: "600",
-                        fontSize: "14px",
-                        padding: "10px 20px",
-                        borderRadius: "8px",
-                        textDecoration: "none",
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: "8px",
-                        boxShadow: "0 2px 10px rgba(37, 211, 102, 0.25)",
-                        whiteSpace: "nowrap",
-                        transition: "all 0.2s ease"
-                    }}
+                    className="btn_style_two btn_sm"
                 >
-                    <i className="fab fa-whatsapp" style={{ fontSize: "17px" }}></i>
-                    <span>Chat with us on WhatsApp</span>
+                    <i className="fa-brands fa-whatsapp me-1" style={{ color: "#25D366" }}></i>
+                    <span>WhatsApp Concierge</span>
                 </a>
             </div>
 
             {submitted ? (
-                <div className="alert alert-success centred" style={{ padding: "30px", borderRadius: "8px", background: "#eef9f2", border: "1px solid #c3e6cb", color: "#155724" }}>
-                    <h3 style={{ color: "#155724", marginBottom: "10px" }}>Thank You!</h3>
-                    <p style={{ marginBottom: "16px" }}>Your details have been received. An executive advisor will review your information and reach out within 1–2 business days.</p>
+                <div style={{ padding: "36px 30px", borderRadius: "10px", background: "#f8fafc", border: "1px solid #eaedf0", textAlign: "center" }}>
+                    <div style={{
+                        width: "48px",
+                        height: "48px",
+                        borderRadius: "50%",
+                        backgroundColor: "#0f1013",
+                        color: "#b89058",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        margin: "0 auto 16px",
+                        fontSize: "20px"
+                    }}>
+                        <i className="fa-solid fa-check"></i>
+                    </div>
+                    <h3 style={{ color: "#0f1013", fontSize: "22px", fontWeight: "700", fontFamily: "var(--primary-font)", marginBottom: "8px" }}>
+                        Inquiry Received Under Strict Confidence
+                    </h3>
+                    <p style={{ color: "#64748b", fontSize: "14.5px", lineHeight: "24px", maxWidth: "520px", margin: "0 auto 20px" }}>
+                        A Prominence Managing Partner will review your public digital baseline and reach out within 24 business hours to schedule your strategy briefing.
+                    </p>
                     <a
-                        href={getWhatsAppUrl("Hi, I just submitted the contact form on your website and would like to follow up.")}
+                        href={getWhatsAppUrl("Hello, I have submitted an executive inquiry on Prominence.agency and would like to confirm receipt.")}
                         target="_blank"
                         rel="nofollow noopener noreferrer"
-                        style={{
-                            background: "#25D366",
-                            color: "#ffffff",
-                            fontWeight: "600",
-                            fontSize: "14px",
-                            padding: "10px 20px",
-                            borderRadius: "8px",
-                            textDecoration: "none",
-                            display: "inline-flex",
-                            alignItems: "center",
-                            gap: "8px"
-                        }}
+                        className="btn_style_two"
+                        style={{ padding: "10px 20px", fontSize: "13px" }}
                     >
-                        <i className="fab fa-whatsapp" style={{ fontSize: "17px" }}></i>
-                        <span>Message us on WhatsApp for fast follow-up</span>
+                        <i className="fa-brands fa-whatsapp" style={{ color: "#0f1013" }}></i>
+                        <span>Confirm via WhatsApp Concierge</span>
                     </a>
                 </div>
             ) : (
                 <form onSubmit={handleSubmit} className="contact_form">
                     {errorMsg && (
-                        <div className="alert alert-danger mb_25" style={{ padding: "12px 18px", borderRadius: "8px", background: "#fdf2f2", border: "1px solid #fca5a5", color: "#b91c1c", fontSize: "14px" }}>
+                        <div style={{ padding: "12px 18px", borderRadius: "8px", background: "#fef2f2", border: "1px solid #fecaca", color: "#b91c1c", fontSize: "13.5px", marginBottom: "20px" }}>
                             {errorMsg}
                         </div>
                     )}
@@ -162,169 +152,110 @@ export default function ContactForm() {
                             onChange={(e) => setHoneypot(e.target.value)}
                         />
                     </div>
-                    <div className="row">
-                        <div className="col-xl-6 col-md-6 col-sm-12">
-                            <div className="form-group mb_20">
-                                <label style={{ fontWeight: "600", marginBottom: "8px", display: "block" }}>Full Name *</label>
-                                <input 
-                                    type="text" 
-                                    name="name" 
-                                    required 
-                                    placeholder="e.g. Sarah Jenkins"
-                                    value={formData.name}
-                                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                                />
-                            </div>
-                        </div>
-                        <div className="col-xl-6 col-md-6 col-sm-12">
-                            <div className="form-group mb_20">
-                                <label style={{ fontWeight: "600", marginBottom: "8px", display: "block" }}>Email Address *</label>
-                                <input 
-                                    type="email" 
-                                    name="email" 
-                                    required 
-                                    placeholder="e.g. s.jenkins@company.com"
-                                    value={formData.email}
-                                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                                />
-                            </div>
-                        </div>
-                        <div className="col-xl-6 col-md-6 col-sm-12">
-                            <div className="form-group mb_20">
-                                <label style={{ fontWeight: "600", marginBottom: "8px", display: "block" }}>Title / Executive Role *</label>
-                                <input 
-                                    type="text" 
-                                    name="role" 
-                                    required 
-                                    placeholder="e.g. Chief People Officer / Independent HR Consultant"
-                                    value={formData.role}
-                                    onChange={(e) => setFormData({...formData, role: e.target.value})}
-                                />
-                            </div>
-                        </div>
-                        <div className="col-xl-6 col-md-6 col-sm-12">
-                            <div className="form-group mb_20">
-                                <label style={{ fontWeight: "600", marginBottom: "8px", display: "block" }}>Company / Practice Name</label>
-                                <input 
-                                    type="text" 
-                                    name="company" 
-                                    placeholder="e.g. Apex Global Consulting"
-                                    value={formData.company}
-                                    onChange={(e) => setFormData({...formData, company: e.target.value})}
-                                />
-                            </div>
-                        </div>
-                        <div className="col-xl-12 col-md-12 col-sm-12">
-                            <div className="form-group mb_20">
-                                <label style={{ fontWeight: "600", marginBottom: "8px", display: "block" }}>LinkedIn Profile URL</label>
-                                <input 
-                                    type="url" 
-                                    name="linkedin" 
-                                    placeholder="https://linkedin.com/in/yourprofile"
-                                    value={formData.linkedin}
-                                    onChange={(e) => setFormData({...formData, linkedin: e.target.value})}
-                                />
-                            </div>
-                        </div>
-                        <div className="col-xl-12 col-md-12 col-sm-12">
-                            <div className="form-group mb_30">
-                                <label style={{ fontWeight: "600", marginBottom: "8px", display: "block" }}>What are you hoping to achieve? (Visibility, speaking, advisory, board roles)</label>
-                                <textarea 
-                                    name="goals" 
-                                    rows={4}
-                                    placeholder="Tell us a bit about your current visibility gap or primary goals..."
-                                    value={formData.goals}
-                                    onChange={(e) => setFormData({...formData, goals: e.target.value})}
-                                ></textarea>
-                            </div>
-                        </div>
-                        <div className="col-xl-12 col-md-12 col-sm-12">
-                            <div className="form-group centred" style={{ marginTop: "10px" }}>
-                                <button
-                                    type="submit"
-                                    disabled={submitting}
-                                    className="btn_style_one"
-                                    style={{
-                                        minHeight: "48px",
-                                        width: "100%",
-                                        maxWidth: "320px",
-                                        display: "inline-flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        opacity: submitting ? 0.7 : 1,
-                                        cursor: submitting ? "not-allowed" : "pointer",
-                                        fontSize: "16px",
-                                        fontWeight: "700"
-                                    }}
-                                >
-                                    {submitting ? 'Submitting Details...' : 'Book a Strategy Call'}
-                                </button>
 
-                                <div style={{ marginTop: "22px", display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
-                                    <span style={{ fontSize: "14px", color: "#64748b" }}>
-                                        or connect instantly via WhatsApp
-                                    </span>
-                                    <a
-                                        href={getWhatsAppUrl()}
-                                        target="_blank"
-                                        rel="nofollow noopener noreferrer"
-                                        className="whatsapp_secondary_btn"
-                                        style={{
-                                            display: "inline-flex",
-                                            alignItems: "center",
-                                            justifyContent: "center",
-                                            gap: "8px",
-                                            color: "#16a34a",
-                                            background: "rgba(37, 211, 102, 0.08)",
-                                            border: "1px solid rgba(37, 211, 102, 0.3)",
-                                            padding: "10px 22px",
-                                            borderRadius: "8px",
-                                            fontWeight: "600",
-                                            fontSize: "14px",
-                                            textDecoration: "none",
-                                            transition: "all 0.2s ease"
-                                        }}
-                                    >
-                                        <i className="fab fa-whatsapp" style={{ fontSize: "18px", color: "#25D366" }}></i>
-                                        <span>Chat with us on WhatsApp</span>
-                                    </a>
-                                </div>
+                    <div className="row">
+                        <div className="col-md-6 col-sm-12 mb_20">
+                            <label style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#475569", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                                Full Name *
+                            </label>
+                            <input 
+                                type="text" 
+                                name="name" 
+                                required 
+                                placeholder="e.g. Marcus Sterling"
+                                value={formData.name}
+                                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                                style={{ width: "100%", height: "48px", padding: "0 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14.5px" }}
+                            />
+                        </div>
+                        <div className="col-md-6 col-sm-12 mb_20">
+                            <label style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#475569", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                                Direct Email Address *
+                            </label>
+                            <input 
+                                type="email" 
+                                name="email" 
+                                required 
+                                placeholder="m.sterling@enterprise.com"
+                                value={formData.email}
+                                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                                style={{ width: "100%", height: "48px", padding: "0 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14.5px" }}
+                            />
+                        </div>
+                        <div className="col-md-6 col-sm-12 mb_20">
+                            <label style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#475569", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                                Executive Title / Role *
+                            </label>
+                            <input 
+                                type="text" 
+                                name="role" 
+                                required 
+                                placeholder="e.g. Chief Human Resources Officer"
+                                value={formData.role}
+                                onChange={(e) => setFormData({...formData, role: e.target.value})}
+                                style={{ width: "100%", height: "48px", padding: "0 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14.5px" }}
+                            />
+                        </div>
+                        <div className="col-md-6 col-sm-12 mb_20">
+                            <label style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#475569", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                                Company / Enterprise Name
+                            </label>
+                            <input 
+                                type="text" 
+                                name="company" 
+                                placeholder="e.g. Global Tech Enterprise ($2B+)"
+                                value={formData.company}
+                                onChange={(e) => setFormData({...formData, company: e.target.value})}
+                                style={{ width: "100%", height: "48px", padding: "0 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14.5px" }}
+                            />
+                        </div>
+                        <div className="col-12 mb_20">
+                            <label style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#475569", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                                LinkedIn Profile URL
+                            </label>
+                            <input 
+                                type="url" 
+                                name="linkedin" 
+                                placeholder="https://www.linkedin.com/in/yourprofile"
+                                value={formData.linkedin}
+                                onChange={(e) => setFormData({...formData, linkedin: e.target.value})}
+                                style={{ width: "100%", height: "48px", padding: "0 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14.5px" }}
+                            />
+                        </div>
+                        <div className="col-12 mb_24">
+                            <label style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#475569", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                                Primary Strategic Focus (Board directorships, capital raises, Google SEO, thought leadership)
+                            </label>
+                            <textarea 
+                                name="goals" 
+                                rows={3}
+                                placeholder="Briefly articulate your current presence deficit or positioning timeline..."
+                                value={formData.goals}
+                                onChange={(e) => setFormData({...formData, goals: e.target.value})}
+                                style={{ width: "100%", padding: "14px 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14.5px", resize: "none" }}
+                            ></textarea>
+                        </div>
+                        <div className="col-12">
+                            <button
+                                type="submit"
+                                disabled={submitting}
+                                className="btn_style_one btn_block btn_lg"
+                                style={{
+                                    cursor: submitting ? "not-allowed" : "pointer"
+                                }}
+                            >
+                                {submitting ? 'Submitting Confidential Intake...' : 'Request Confidential Stature Consultation'}
+                                {!submitting && <i className="fa-solid fa-arrow-right"></i>}
+                            </button>
+                            <div style={{ fontSize: "12px", color: "#94a3b8", textAlign: "center", marginTop: "12px" }}>
+                                <i className="fa-solid fa-lock me-1" style={{ color: "#b89058" }}></i>
+                                100% Strict Bilateral NDA Protection · Zero Third-Party Disclosures
                             </div>
                         </div>
                     </div>
                 </form>
             )}
-
-            <style jsx>{`
-                @media (max-width: 767px) {
-                    :global(.contact_form_inner_box) {
-                        padding: 30px 18px !important;
-                        border-radius: 12px !important;
-                    }
-                    :global(.contact_form input) {
-                        font-size: 16px !important;
-                        padding: 0 16px !important;
-                        height: 52px !important;
-                    }
-                    :global(.contact_form textarea) {
-                        font-size: 16px !important;
-                        padding: 14px 16px !important;
-                    }
-                    :global(.whatsapp_banner) {
-                        flex-direction: column !important;
-                        align-items: flex-start !important;
-                        padding: 16px !important;
-                    }
-                    :global(.whatsapp_quick_btn) {
-                        width: 100% !important;
-                        justify-content: center !important;
-                    }
-                    :global(.whatsapp_secondary_btn) {
-                        width: 100% !important;
-                        max-width: 320px !important;
-                    }
-                }
-            `}</style>
         </div>
     )
 }
+

@@ -5,16 +5,16 @@ import ContactForm from "@/components/elements/ContactForm"
 import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export const metadata = {
-    title: 'Contact & Strategy Session',
-    description: 'Schedule a 30-minute consultation with Elite Prominence. We will evaluate your current digital footprint and discuss your executive personal branding roadmap.',
+    title: 'Confidential Executive Consultation & Stature Audit | Prominence',
+    description: 'Schedule a confidential advisory briefing with Prominence Managing Partners to review your Google search footprint, executive digital assets, and board positioning.',
     alternates: {
         canonical: '/contact',
     },
     openGraph: {
-        title: 'Contact Us | Book an Executive Strategy Session',
-        description: 'Schedule a 30-minute consultation with Elite Prominence. We will evaluate your current digital footprint and discuss your executive personal branding roadmap.',
+        title: 'Confidential Executive Consultation | Prominence Advisory',
+        description: 'Schedule a 30-minute confidential consultation with Prominence. Bilateral NDA assurance, direct partner review, and turnkey reputation roadmap.',
         url: 'https://www.prominence.agency/contact',
-        siteName: 'Elite Prominence',
+        siteName: 'Prominence.agency',
         locale: 'en_US',
         type: 'website',
     },
@@ -42,8 +42,8 @@ const contactSchema = {
         },
         {
             '@type': 'ContactPage',
-            name: 'Contact Elite Prominence',
-            description: 'Schedule a strategy call or get in touch with Elite Prominence executive personal branding consultants.',
+            name: 'Contact Prominence Executive Advisory',
+            description: 'Confidential executive advisory consultation intake for enterprise CEOs, CHROs, and board candidates.',
             url: 'https://www.prominence.agency/contact',
         },
     ],
@@ -56,71 +56,98 @@ export default function Contact_Page() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
             />
-            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle16="Let's Talk About Your Visibility">
-                {/* Contact Intro & Direct Channels */}
-                <section className="contact_info_section pt_150 pb_80">
+            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Confidential Consultation">
+                
+                {/* Executive Consultation & Direct Intake Section */}
+                <section className="pt_120 pb_120" style={{ background: "#f8fafc" }}>
                     <div className="container">
-                        <div className="section_title centred">
-                            <div className="tag_text"><h6>Get in Touch</h6></div>
-                            <h2>Let's Talk About Your Visibility</h2>
-                            <p style={{ maxWidth: "750px", margin: "15px auto 0", fontSize: "18px", color: "#59606a" }}>
-                                Tell us a bit about where you are today, and we'll get back to you within 1–2 business days to schedule a short strategy call.
-                            </p>
-                        </div>
-                        <div className="row" style={{ marginTop: "40px" }}>
-                            {/* Email */}
-                            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                <div className="contact_block_one mb_30" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
-                                    <div className="contact_block_icon"><i className="icon-2"></i></div>
-                                    <div className="contact_block_title"><h3>Direct Email</h3></div>
-                                    <div className="contact_block_text">
-                                        <p><Link href="mailto:hello@prominence.agency">hello@prominence.agency</Link><br/>Inquiries &amp; Introductions</p>
+                        <div className="row align-items-start">
+                            
+                            {/* Left Column: Advisory Charter, Bilateral NDA & Strategic Channels */}
+                            <div className="col-lg-5 pe-lg-5 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="500">
+                                <div style={{ position: "sticky", top: "120px" }}>
+                                    <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
+                                        <span className="prominence_pulse_dot"></span>
+                                        <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#b89058", fontFamily: "var(--primary-font)" }}>
+                                            Confidential Advisory Inquiry
+                                        </span>
+                                    </div>
+
+                                    <h1 style={{
+                                        fontSize: "38px",
+                                        fontWeight: "700",
+                                        color: "#0f1013",
+                                        fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                        lineHeight: "1.22",
+                                        letterSpacing: "-0.6px",
+                                        marginBottom: "18px"
+                                    }}>
+                                        Schedule a Private Stature Consultation
+                                    </h1>
+
+                                    <p style={{ fontSize: "16px", color: "#59606a", lineHeight: "28px", marginBottom: "30px" }}>
+                                        Whether preparing for upcoming board directorships, an enterprise capital event, or active Google search reputation defense, our Managing Partners provide direct, discreet counsel under strict bilateral confidentiality.
+                                    </p>
+
+                                    {/* Bilateral NDA Assurance Card */}
+                                    <div className="prominence_depth_card" style={{ padding: "24px 22px", marginBottom: "26px", backgroundColor: "#ffffff" }}>
+                                        <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
+                                            <i className="fa-solid fa-shield-halved" style={{ color: "#b89058", fontSize: "16px" }}></i>
+                                            <span style={{ fontSize: "13.5px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)" }}>
+                                                Bilateral NDA Protection Guaranteed
+                                            </span>
+                                        </div>
+                                        <p style={{ fontSize: "13px", color: "#64748b", lineHeight: "22px", margin: 0 }}>
+                                            Non-disclosure agreements are executed prior to any detailed career or governance review. Zero operational metrics or confidential board communications are shared.
+                                        </p>
+                                    </div>
+
+                                    {/* Direct Channels List */}
+                                    <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "30px" }}>
+                                        <div style={{ padding: "16px 18px", backgroundColor: "#ffffff", border: "1px solid #eaedf0", borderRadius: "10px", display: "flex", alignItems: "center", gap: "14px" }}>
+                                            <div style={{ width: "36px", height: "36px", borderRadius: "8px", backgroundColor: "#0f1013", display: "flex", alignItems: "center", justifyContent: "center", color: "#b89058", fontSize: "14px", flexShrink: 0 }}>
+                                                <i className="fa-solid fa-envelope"></i>
+                                            </div>
+                                            <div>
+                                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#94a3b8" }}>Direct Partner Office</div>
+                                                <Link href="mailto:hello@prominence.agency" style={{ fontSize: "14px", fontWeight: "700", color: "#0f1013", textDecoration: "none", fontFamily: "var(--primary-font)" }}>
+                                                    hello@prominence.agency
+                                                </Link>
+                                                <div style={{ fontSize: "11px", color: "#64748b" }}>Under 24-Hour Confidential Response SLA</div>
+                                            </div>
+                                        </div>
+
+                                        <div style={{ padding: "16px 18px", backgroundColor: "#ffffff", border: "1px solid #eaedf0", borderRadius: "10px", display: "flex", alignItems: "center", gap: "14px" }}>
+                                            <div style={{ width: "36px", height: "36px", borderRadius: "8px", backgroundColor: "#0f1013", display: "flex", alignItems: "center", justifyContent: "center", color: "#b89058", fontSize: "14px", flexShrink: 0 }}>
+                                                <i className="fa-brands fa-whatsapp"></i>
+                                            </div>
+                                            <div>
+                                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#94a3b8" }}>Encrypted Messaging</div>
+                                                <a href={getWhatsAppUrl()} target="_blank" rel="nofollow noopener noreferrer" style={{ fontSize: "14px", fontWeight: "700", color: "#0f1013", textDecoration: "none", fontFamily: "var(--primary-font)" }}>
+                                                    Direct WhatsApp Concierge <i className="fa-solid fa-arrow-up-right-from-square ms-1" style={{ fontSize: "10px", color: "#b89058" }}></i>
+                                                </a>
+                                                <div style={{ fontSize: "11px", color: "#64748b" }}>Instant Scheduling &amp; Preliminary Inquiry</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Global Advisory Hubs */}
+                                    <div style={{ fontSize: "12px", color: "#94a3b8", display: "flex", alignItems: "center", gap: "8px" }}>
+                                        <i className="fa-solid fa-earth-americas" style={{ color: "#b89058" }}></i>
+                                        <span>Advising Leaders Across: London · Zurich · New York · Singapore</span>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* WhatsApp */}
-                            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                <div className="contact_block_one mb_30" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="550">
-                                    <div className="contact_block_icon"><i className="fab fa-whatsapp" style={{ fontSize: "28px", color: "#25D366" }}></i></div>
-                                    <div className="contact_block_title"><h3>WhatsApp</h3></div>
-                                    <div className="contact_block_text">
-                                        <p><a href={getWhatsAppUrl()} target="_blank" rel="nofollow noopener noreferrer" style={{ color: "#25D366", fontWeight: "600" }}>Chat on WhatsApp</a><br/>Instant Consultation &amp; Support</p>
-                                    </div>
-                                </div>
+                            {/* Right Column: Boardroom Consultation Booking Form */}
+                            <div className="col-lg-7" data-aos="fade-left" data-aos-duration="550">
+                                <ContactForm />
                             </div>
 
-                            {/* LinkedIn */}
-                            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                <div className="contact_block_one mb_30" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
-                                    <div className="contact_block_icon"><i className="fab fa-linkedin-in" style={{ fontSize: "28px" }}></i></div>
-                                    <div className="contact_block_title"><h3>LinkedIn</h3></div>
-                                    <div className="contact_block_text">
-                                        <p><Link href="https://www.linkedin.com/company/elite-prominence" target="_blank" rel="nofollow noopener noreferrer">Elite Prominence</Link><br/>Follow Company Updates</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Facebook */}
-                            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                <div className="contact_block_one mb_30" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="650">
-                                    <div className="contact_block_icon"><i className="fab fa-facebook-f" style={{ fontSize: "28px" }}></i></div>
-                                    <div className="contact_block_title"><h3>Facebook</h3></div>
-                                    <div className="contact_block_text">
-                                        <p><Link href="https://www.facebook.com/EliteProminence/" target="_blank" rel="nofollow noopener noreferrer">Elite Prominence Page</Link><br/>Community Insights</p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Form Section */}
-                <section className="contact_section pb_120" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
-                    <div className="container">
-                        <ContactForm />
-                    </div>
-                </section>
             </Layout>
         </div>
     )

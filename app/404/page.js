@@ -8,7 +8,7 @@ export default function ErrorPage() {
                 <section className="error_section pt_150 pb_150">
                     <div className="container">
                         <div className="error_content centred" style={{ maxWidth: "600px", margin: "0 auto", padding: "60px 30px", background: "#f8fafd", borderRadius: "16px" }}>
-                            <div style={{ fontSize: "72px", fontWeight: "800", color: "#2460e2", marginBottom: "15px", lineHeight: "1" }}>
+                            <div style={{ fontSize: "72px", fontFamily: "var(--primary-font)", fontWeight: "700", color: "#0f1013", marginBottom: "15px", lineHeight: "1" }}>
                                 404
                             </div>
                             <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#1b2534", marginBottom: "15px" }}>Page Not Found</h2>

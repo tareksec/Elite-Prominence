@@ -125,7 +125,7 @@ export default function HighlightShare({ articleTitle = '' }) {
         background: '#FFFFFF',
         borderRadius: '10px',
         padding: '6px 10px',
-        boxShadow: '0 8px 24px rgba(15, 18, 53, 0.16), 0 2px 6px rgba(124, 58, 237, 0.1)',
+        boxShadow: '0 8px 24px rgba(15, 16, 19, 0.12)',
         border: '1px solid #E5E7EB',
         gap: '4px',
         animation: 'epFadeUp 0.18s cubic-bezier(0.16, 1, 0.3, 1)',
@@ -150,7 +150,7 @@ export default function HighlightShare({ articleTitle = '' }) {
           fontWeight: '600',
           transition: 'background 0.15s ease'
         }}
-        onMouseEnter={(e) => (e.currentTarget.style.background = '#F8F7FF')}
+        onMouseEnter={(e) => (e.currentTarget.style.background = '#f1f5f9')}
         onMouseLeave={(e) => (e.currentTarget.style.background = 'none')}
       >
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
@@ -170,7 +170,7 @@ export default function HighlightShare({ articleTitle = '' }) {
           cursor: 'pointer',
           padding: '6px 8px',
           borderRadius: '6px',
-          color: '#0F1235',
+          color: '#0f1013',
           display: 'flex',
           alignItems: 'center',
           gap: '4px',
@@ -193,12 +193,12 @@ export default function HighlightShare({ articleTitle = '' }) {
         onClick={copyQuote}
         title="Copy formatted quote"
         style={{
-          background: copied ? '#0D1322' : 'none',
+          background: copied ? '#0f1013' : 'none',
           border: 'none',
           cursor: 'pointer',
           padding: '6px 8px',
           borderRadius: '6px',
-          color: copied ? '#FFFFFF' : '#0D1322',
+          color: copied ? '#FFFFFF' : '#0f1013',
           display: 'flex',
           alignItems: 'center',
           gap: '4px',

@@ -383,7 +383,7 @@ export default function DashboardPage() {
                 padding: "3px 10px",
                 borderRadius: "14px",
                 fontSize: "11px",
-                fontWeight: "800",
+                fontWeight: "700",
                 backgroundColor: bg,
                 color: color,
                 textTransform: "uppercase",
@@ -430,7 +430,7 @@ export default function DashboardPage() {
 
                         {/* Top Executive Header Bar */}
                         <div style={{
-                            backgroundColor: "#162d20",
+                            backgroundColor: "#0f1013",
                             color: "#FAF8F2",
                             padding: "32px 36px",
                             borderRadius: "18px",
@@ -449,22 +449,22 @@ export default function DashboardPage() {
                                     height: "68px",
                                     borderRadius: "50%",
                                     backgroundColor: "#FAF8F2",
-                                    color: "#162d20",
+                                    color: "#0f1013",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
                                     fontSize: "24px",
-                                    fontWeight: "800",
+                                    fontWeight: "700",
                                     boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
                                     flexShrink: 0
                                 }}>
                                     {initials}
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", color: "#D29D2B", fontWeight: "800", marginBottom: "4px" }}>
+                                    <div style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", color: "#D29D2B", fontWeight: "700", marginBottom: "4px" }}>
                                         Verified Member Studio
                                     </div>
-                                    <h1 style={{ fontSize: "clamp(22px, 4vw, 30px)", fontWeight: "800", color: "#ffffff", margin: 0 }}>
+                                    <h1 style={{ fontSize: "clamp(22px, 4vw, 30px)", fontWeight: "700", color: "#ffffff", margin: 0 }}>
                                         {fullName || profile?.full_name || 'Executive Member'}
                                     </h1>
                                     <p style={{ margin: "4px 0 0", color: "#c1cfc5", fontSize: "15px" }}>
@@ -478,17 +478,10 @@ export default function DashboardPage() {
                                     <Link
                                         href={`/community/${user.id}`}
                                         target="_blank"
+                                        className="btn_style_one"
                                         style={{
-                                            backgroundColor: "#D29D2B",
-                                            color: "#162d20",
-                                            padding: "10px 20px",
-                                            minHeight: "44px",
-                                            display: "inline-flex",
-                                            alignItems: "center",
-                                            borderRadius: "30px",
-                                            fontWeight: "800",
-                                            fontSize: "13px",
-                                            textDecoration: "none"
+                                            padding: "10px 18px",
+                                            fontSize: "13px"
                                         }}
                                     >
                                         <i className="fal fa-external-link-alt" style={{ marginRight: "6px" }}></i> View Public Profile
@@ -498,41 +491,26 @@ export default function DashboardPage() {
                                 {profile?.role === 'admin' && (
                                     <Link
                                         href="/admin"
+                                        className="btn_style_two"
                                         style={{
-                                            backgroundColor: "rgba(255, 255, 255, 0.15)",
-                                            color: "#ffffff",
-                                            border: "1px solid rgba(255, 255, 255, 0.3)",
-                                            padding: "10px 20px",
-                                            minHeight: "44px",
-                                            display: "inline-flex",
-                                            alignItems: "center",
-                                            borderRadius: "30px",
-                                            fontWeight: "700",
-                                            fontSize: "13px",
-                                            textDecoration: "none"
+                                            padding: "10px 18px",
+                                            fontSize: "13px"
                                         }}
                                     >
-                                        <i className="fal fa-shield-alt" style={{ marginRight: "6px" }}></i> Admin Console
+                                        <span><i className="fal fa-shield-alt" style={{ marginRight: "6px" }}></i> Admin Console</span>
                                     </Link>
                                 )}
 
                                 <button
                                     onClick={handleLogout}
+                                    className="btn_style_two"
                                     style={{
-                                        backgroundColor: "transparent",
-                                        color: "#cbd5e1",
-                                        border: "1px solid rgba(255, 255, 255, 0.2)",
                                         padding: "10px 18px",
-                                        minHeight: "44px",
-                                        display: "inline-flex",
-                                        alignItems: "center",
-                                        borderRadius: "30px",
-                                        fontWeight: "600",
                                         fontSize: "13px",
                                         cursor: "pointer"
                                     }}
                                 >
-                                    Sign Out
+                                    <span>Sign Out</span>
                                 </button>
                             </div>
                         </div>
@@ -547,7 +525,7 @@ export default function DashboardPage() {
                             boxShadow: "0 4px 14px rgba(0,0,0,0.03)"
                         }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
-                                <span style={{ fontSize: "14px", fontWeight: "700", color: "#162d20" }}>
+                                <span style={{ fontSize: "14px", fontWeight: "700", color: "#0f1013" }}>
                                     Executive Profile Completeness: <strong>{completeness}%</strong>
                                 </span>
                                 <span style={{ fontSize: "12px", color: completeness === 100 ? "#16a34a" : "#d97706", fontWeight: "700" }}>
@@ -613,8 +591,8 @@ export default function DashboardPage() {
                                     background: "none",
                                     fontSize: "15px",
                                     fontWeight: "700",
-                                    color: activeTab === 'profile' ? "#162d20" : "#64748b",
-                                    borderBottom: activeTab === 'profile' ? "3px solid #162d20" : "3px solid transparent",
+                                    color: activeTab === 'profile' ? "#0f1013" : "#64748b",
+                                    borderBottom: activeTab === 'profile' ? "3px solid #0f1013" : "3px solid transparent",
                                     cursor: "pointer",
                                     marginBottom: "-2px"
                                 }}
@@ -631,8 +609,8 @@ export default function DashboardPage() {
                                     background: "none",
                                     fontSize: "15px",
                                     fontWeight: "700",
-                                    color: activeTab === 'articles' ? "#162d20" : "#64748b",
-                                    borderBottom: activeTab === 'articles' ? "3px solid #162d20" : "3px solid transparent",
+                                    color: activeTab === 'articles' ? "#0f1013" : "#64748b",
+                                    borderBottom: activeTab === 'articles' ? "3px solid #0f1013" : "3px solid transparent",
                                     cursor: "pointer",
                                     marginBottom: "-2px"
                                 }}
@@ -649,8 +627,8 @@ export default function DashboardPage() {
                                     background: "none",
                                     fontSize: "15px",
                                     fontWeight: "700",
-                                    color: activeTab === 'reviews' ? "#162d20" : "#64748b",
-                                    borderBottom: activeTab === 'reviews' ? "3px solid #162d20" : "3px solid transparent",
+                                    color: activeTab === 'reviews' ? "#0f1013" : "#64748b",
+                                    borderBottom: activeTab === 'reviews' ? "3px solid #0f1013" : "3px solid transparent",
                                     cursor: "pointer",
                                     marginBottom: "-2px"
                                 }}
@@ -667,8 +645,8 @@ export default function DashboardPage() {
                                     background: "none",
                                     fontSize: "15px",
                                     fontWeight: "700",
-                                    color: activeTab === 'playbooks' ? "#162d20" : "#64748b",
-                                    borderBottom: activeTab === 'playbooks' ? "3px solid #162d20" : "3px solid transparent",
+                                    color: activeTab === 'playbooks' ? "#0f1013" : "#64748b",
+                                    borderBottom: activeTab === 'playbooks' ? "3px solid #0f1013" : "3px solid transparent",
                                     cursor: "pointer",
                                     marginBottom: "-2px"
                                 }}
@@ -691,7 +669,7 @@ export default function DashboardPage() {
                                     border: "1px solid #e5e3db",
                                     boxShadow: "0 6px 20px rgba(0,0,0,0.03)"
                                 }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "6px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
                                         Executive Profile Details
                                     </h3>
                                     <p style={{ fontSize: "14px", color: "#64748b", margin: "0 0 24px" }}>
@@ -701,7 +679,7 @@ export default function DashboardPage() {
                                     <form onSubmit={handleUpdateProfile}>
                                         {/* Name & Title */}
                                         <div style={{ marginBottom: "18px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Full Name *
                                             </label>
                                             <input
@@ -715,7 +693,7 @@ export default function DashboardPage() {
                                         </div>
 
                                         <div style={{ marginBottom: "18px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Executive Title *
                                             </label>
                                             <input
@@ -731,7 +709,7 @@ export default function DashboardPage() {
                                         {/* Company & Industry */}
                                         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "18px" }}>
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                     Current Company / Board
                                                 </label>
                                                 <input
@@ -744,7 +722,7 @@ export default function DashboardPage() {
                                             </div>
 
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                     Industry Sector
                                                 </label>
                                                 <input
@@ -760,7 +738,7 @@ export default function DashboardPage() {
                                         {/* Location & Experience */}
                                         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "18px" }}>
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                     Location (City, Country)
                                                 </label>
                                                 <input
@@ -773,7 +751,7 @@ export default function DashboardPage() {
                                             </div>
 
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                     Leadership Experience
                                                 </label>
                                                 <select
@@ -792,7 +770,7 @@ export default function DashboardPage() {
 
                                         {/* Executive Bio */}
                                         <div style={{ marginBottom: "18px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Executive Biography & Leadership Philosophy
                                             </label>
                                             <textarea
@@ -806,7 +784,7 @@ export default function DashboardPage() {
 
                                         {/* Personal Branding Links */}
                                         <div style={{ marginBottom: "18px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 LinkedIn Profile URL
                                             </label>
                                             <input
@@ -820,7 +798,7 @@ export default function DashboardPage() {
 
                                         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "18px" }}>
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                     Personal / Advisory Website
                                                 </label>
                                                 <input
@@ -833,7 +811,7 @@ export default function DashboardPage() {
                                             </div>
 
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                     Twitter / X Handle
                                                 </label>
                                                 <input
@@ -848,7 +826,7 @@ export default function DashboardPage() {
 
                                         {/* Core Competencies & Expertise Tags */}
                                         <div style={{ marginBottom: "20px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "6px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
                                                 Core Strategic Domains (Click to toggle)
                                             </label>
                                             <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "10px" }}>
@@ -860,9 +838,9 @@ export default function DashboardPage() {
                                                             type="button"
                                                             onClick={() => toggleExpertiseTag(tag)}
                                                             style={{
-                                                                backgroundColor: selected ? "#162d20" : "#f1f5f9",
+                                                                backgroundColor: selected ? "#0f1013" : "#f1f5f9",
                                                                 color: selected ? "#ffffff" : "#475569",
-                                                                border: selected ? "1px solid #162d20" : "1px solid #e2e8f0",
+                                                                border: selected ? "1px solid #0f1013" : "1px solid #e2e8f0",
                                                                 padding: "4px 12px",
                                                                 borderRadius: "16px",
                                                                 fontSize: "12px",
@@ -897,7 +875,7 @@ export default function DashboardPage() {
 
                                         {/* Keynote Topics */}
                                         <div style={{ marginBottom: "22px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Keynote & Advisory Mandate Topics
                                             </label>
                                             <input
@@ -919,7 +897,7 @@ export default function DashboardPage() {
                                                     style={{ width: "18px", height: "18px" }}
                                                 />
                                                 <div>
-                                                    <div style={{ fontSize: "14px", fontWeight: "700", color: "#162d20" }}>
+                                                    <div style={{ fontSize: "14px", fontWeight: "700", color: "#0f1013" }}>
                                                         Show Profile in Public Executive Directory
                                                     </div>
                                                     <div style={{ fontSize: "12px", color: "#64748b" }}>
@@ -932,17 +910,11 @@ export default function DashboardPage() {
                                         <button
                                             type="submit"
                                             disabled={updatingProfile}
+                                            className="btn_style_one"
                                             style={{
-                                                backgroundColor: "#162d20",
-                                                color: "#FAF8F2",
-                                                border: "none",
-                                                borderRadius: "8px",
-                                                padding: "14px 28px",
-                                                fontSize: "15px",
-                                                fontWeight: "800",
-                                                cursor: "pointer",
                                                 width: "100%",
-                                                boxShadow: "0 4px 14px rgba(22, 45, 32, 0.2)"
+                                                cursor: updatingProfile ? "not-allowed" : "pointer",
+                                                opacity: updatingProfile ? 0.7 : 1
                                             }}
                                         >
                                             {updatingProfile ? 'Saving Executive Profile...' : 'Save & Update Executive Profile'}
@@ -966,7 +938,7 @@ export default function DashboardPage() {
                                                 backgroundColor: "rgba(210, 157, 43, 0.15)",
                                                 color: "#92400e",
                                                 fontSize: "11px",
-                                                fontWeight: "800",
+                                                fontWeight: "700",
                                                 padding: "3px 10px",
                                                 borderRadius: "10px",
                                                 textTransform: "uppercase"
@@ -977,7 +949,7 @@ export default function DashboardPage() {
                                                 <Link
                                                     href={`/community/${user.id}`}
                                                     target="_blank"
-                                                    style={{ fontSize: "12px", color: "#162d20", fontWeight: "700", textDecoration: "underline" }}
+                                                    style={{ fontSize: "12px", color: "#0f1013", fontWeight: "700", textDecoration: "underline" }}
                                                 >
                                                     Open Full Page <i className="fal fa-external-link-alt" style={{ marginLeft: "4px", fontSize: "11px" }}></i>
                                                 </Link>
@@ -990,19 +962,19 @@ export default function DashboardPage() {
                                                 width: "58px",
                                                 height: "58px",
                                                 borderRadius: "50%",
-                                                backgroundColor: "#162d20",
+                                                backgroundColor: "#0f1013",
                                                 color: "#D29D2B",
                                                 display: "flex",
                                                 alignItems: "center",
                                                 justifyContent: "center",
                                                 fontSize: "22px",
-                                                fontWeight: "800",
+                                                fontWeight: "700",
                                                 flexShrink: 0
                                             }}>
                                                 {initials}
                                             </div>
                                             <div>
-                                                <h4 style={{ margin: 0, fontSize: "18px", fontWeight: "800", color: "#162d20" }}>
+                                                <h4 style={{ margin: 0, fontSize: "18px", fontWeight: "700", color: "#0f1013" }}>
                                                     {fullName || 'Your Executive Name'}
                                                 </h4>
                                                 <div style={{ fontSize: "13px", color: "#64748b", fontStyle: "italic", marginTop: "2px" }}>
@@ -1036,7 +1008,7 @@ export default function DashboardPage() {
                                             {coreExpertise.slice(0, 4).map((tag, idx) => (
                                                 <span key={idx} style={{
                                                     backgroundColor: "#FAF8F2",
-                                                    color: "#162d20",
+                                                    color: "#0f1013",
                                                     border: "1px solid #e5e3db",
                                                     padding: "3px 10px",
                                                     borderRadius: "12px",
@@ -1056,7 +1028,7 @@ export default function DashboardPage() {
                                                 </span>
                                             )}
                                             {websiteUrl && (
-                                                <span style={{ fontSize: "12px", color: "#162d20", fontWeight: "700" }}>
+                                                <span style={{ fontSize: "12px", color: "#0f1013", fontWeight: "700" }}>
                                                     <i className="fal fa-globe" style={{ marginRight: "4px" }}></i> Advisory Site
                                                 </span>
                                             )}
@@ -1074,7 +1046,7 @@ export default function DashboardPage() {
                             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "30px" }}>
                                 {/* Left: My Submissions */}
                                 <div>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "16px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "16px" }}>
                                         My Published & Pending Articles ({myArticles.length})
                                     </h3>
 
@@ -1098,9 +1070,9 @@ export default function DashboardPage() {
                                                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
                                                         <span style={{
                                                             fontSize: "11px",
-                                                            fontWeight: "800",
+                                                            fontWeight: "700",
                                                             textTransform: "uppercase",
-                                                            color: "#162d20",
+                                                            color: "#0f1013",
                                                             backgroundColor: "rgba(30, 59, 43, 0.08)",
                                                             padding: "3px 8px",
                                                             borderRadius: "8px"
@@ -1110,7 +1082,7 @@ export default function DashboardPage() {
                                                         {renderStatusBadge(art.status)}
                                                     </div>
 
-                                                    <h4 style={{ fontSize: "18px", fontWeight: "800", color: "#162d20", margin: "6px 0 8px" }}>
+                                                    <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "6px 0 8px" }}>
                                                         {art.title}
                                                     </h4>
 
@@ -1134,7 +1106,7 @@ export default function DashboardPage() {
                                     padding: "32px",
                                     border: "1px solid #e5e3db"
                                 }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "6px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
                                         Write Thought Leadership Perspective
                                     </h3>
                                     <p style={{ fontSize: "13px", color: "#64748b", margin: "0 0 20px" }}>
@@ -1149,7 +1121,7 @@ export default function DashboardPage() {
 
                                     <form onSubmit={handleSubmitArticle}>
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Article Title *
                                             </label>
                                             <input
@@ -1163,7 +1135,7 @@ export default function DashboardPage() {
                                         </div>
 
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Strategic Category
                                             </label>
                                             <select
@@ -1179,7 +1151,7 @@ export default function DashboardPage() {
 
                                         <div style={{ marginBottom: "20px" }}>
                                             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px" }}>
-                                                <label style={{ fontSize: "13px", fontWeight: "700", color: "#162d20" }}>
+                                                <label style={{ fontSize: "13px", fontWeight: "700", color: "#0f1013" }}>
                                                     Article Content Body *
                                                 </label>
                                                 <span style={{ fontSize: "12px", color: "#64748b" }}>
@@ -1199,16 +1171,11 @@ export default function DashboardPage() {
                                         <button
                                             type="submit"
                                             disabled={submittingArticle}
+                                            className="btn_style_one"
                                             style={{
-                                                backgroundColor: "#162d20",
-                                                color: "#FAF8F2",
-                                                border: "none",
-                                                borderRadius: "8px",
-                                                padding: "12px 24px",
-                                                fontSize: "14px",
-                                                fontWeight: "800",
-                                                cursor: "pointer",
-                                                width: "100%"
+                                                width: "100%",
+                                                cursor: submittingArticle ? "not-allowed" : "pointer",
+                                                opacity: submittingArticle ? 0.7 : 1
                                             }}
                                         >
                                             {submittingArticle ? 'Submitting Article...' : 'Submit Article to Editorial Board'}
@@ -1225,7 +1192,7 @@ export default function DashboardPage() {
                             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "30px" }}>
                                 {/* Left: My Reviews */}
                                 <div>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "16px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "16px" }}>
                                         My Endorsements & Reviews ({myReviews.length})
                                     </h3>
 
@@ -1246,8 +1213,14 @@ export default function DashboardPage() {
                                                     border: "1px solid #e5e3db"
                                                 }}>
                                                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
-                                                        <span style={{ color: "#d97706", fontSize: "16px" }}>
-                                                            {'★'.repeat(rev.rating || 5)}{'☆'.repeat(5 - (rev.rating || 5))}
+                                                        <span style={{ fontSize: "14px", display: "inline-flex", gap: "3px" }}>
+                                                            {[...Array(5)].map((_, i) => (
+                                                                <i
+                                                                    key={i}
+                                                                    className={i < (rev.rating || 5) ? "fa-solid fa-star" : "fa-regular fa-star"}
+                                                                    style={{ color: i < (rev.rating || 5) ? "#b89058" : "#cbd5e1" }}
+                                                                />
+                                                            ))}
                                                         </span>
                                                         {renderStatusBadge(rev.status)}
                                                     </div>
@@ -1272,7 +1245,7 @@ export default function DashboardPage() {
                                     padding: "32px",
                                     border: "1px solid #e5e3db"
                                 }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "6px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
                                         Submit Client Endorsement
                                     </h3>
                                     <p style={{ fontSize: "13px", color: "#64748b", margin: "0 0 20px" }}>
@@ -1281,13 +1254,13 @@ export default function DashboardPage() {
 
                                     {reviewSuccess && (
                                         <div style={{ backgroundColor: "#f0fdf4", color: "#15803d", padding: "12px 16px", borderRadius: "8px", fontSize: "13px", marginBottom: "18px", border: "1px solid #86efac" }}>
-                                            <i className="fal fa-check-circle" style={{ marginRight: "6px" }}></i> {reviewSuccess}
+                                            <i className="fa-solid fa-circle-check" style={{ marginRight: "6px", color: "#b89058" }}></i> {reviewSuccess}
                                         </div>
                                     )}
 
                                     <form onSubmit={handleSubmitReview}>
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Star Rating
                                             </label>
                                             <select
@@ -1295,14 +1268,14 @@ export default function DashboardPage() {
                                                 onChange={(e) => setReviewRating(e.target.value)}
                                                 style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                             >
-                                                <option value={5}>★★★★★ (5 Stars - Exceptional Service)</option>
-                                                <option value={4}>★★★★☆ (4 Stars - Great Impact)</option>
-                                                <option value={3}>★★★☆☆ (3 Stars - Satisfactory)</option>
+                                                <option value={5}>5 Stars (Exceptional Service)</option>
+                                                <option value={4}>4 Stars (Great Impact)</option>
+                                                <option value={3}>3 Stars (Satisfactory)</option>
                                             </select>
                                         </div>
 
                                         <div style={{ marginBottom: "20px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Endorsement Narrative *
                                             </label>
                                             <textarea
@@ -1318,16 +1291,11 @@ export default function DashboardPage() {
                                         <button
                                             type="submit"
                                             disabled={submittingReview}
+                                            className="btn_style_one"
                                             style={{
-                                                backgroundColor: "#162d20",
-                                                color: "#FAF8F2",
-                                                border: "none",
-                                                borderRadius: "8px",
-                                                padding: "12px 24px",
-                                                fontSize: "14px",
-                                                fontWeight: "800",
-                                                cursor: "pointer",
-                                                width: "100%"
+                                                width: "100%",
+                                                cursor: submittingReview ? "not-allowed" : "pointer",
+                                                opacity: submittingReview ? 0.7 : 1
                                             }}
                                         >
                                             {submittingReview ? 'Submitting Review...' : 'Submit Endorsement'}
@@ -1343,7 +1311,7 @@ export default function DashboardPage() {
                         {activeTab === 'playbooks' && (
                             <div>
                                 <div style={{ marginBottom: "24px" }}>
-                                    <h3 style={{ fontSize: "22px", fontWeight: "800", color: "#162d20", margin: "0 0 6px" }}>
+                                    <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0f1013", margin: "0 0 6px" }}>
                                         Executive Career & Personal Authority Toolkits
                                     </h3>
                                     <p style={{ color: "#64748b", margin: 0, fontSize: "15px" }}>
@@ -1354,52 +1322,52 @@ export default function DashboardPage() {
                                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px", marginBottom: "36px" }}>
                                     <div style={{ backgroundColor: "#ffffff", padding: "26px", borderRadius: "16px", border: "1px solid #e5e3db" }}>
                                         <div style={{ fontSize: "24px", color: "#0f172a", marginBottom: "10px" }}><i className="fal fa-landmark"></i></div>
-                                        <h4 style={{ fontSize: "18px", fontWeight: "800", color: "#162d20", margin: "0 0 8px" }}>
+                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px" }}>
                                             The 90-Day Executive Authority Blueprint
                                         </h4>
                                         <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 16px" }}>
                                             How senior leaders systematically build page-one Google search presence, executive bio syndication, and inbound board inquiries.
                                         </p>
-                                        <Link href="/blog/how-to-build-a-personal-brand-as-an-hr-leader" style={{ color: "#162d20", fontWeight: "700", fontSize: "13px", textDecoration: "underline" }}>
+                                        <Link href="/blog/how-to-build-a-personal-brand-as-an-hr-leader" style={{ color: "#0f1013", fontWeight: "700", fontSize: "13px", textDecoration: "underline" }}>
                                             Read Strategic Guide &rarr;
                                         </Link>
                                     </div>
 
                                     <div style={{ backgroundColor: "#ffffff", padding: "26px", borderRadius: "16px", border: "1px solid #e5e3db" }}>
                                         <div style={{ fontSize: "24px", color: "#0f172a", marginBottom: "10px" }}><i className="fal fa-briefcase"></i></div>
-                                        <h4 style={{ fontSize: "18px", fontWeight: "800", color: "#162d20", margin: "0 0 8px" }}>
+                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px" }}>
                                             LinkedIn Architecture for C-Suite Leaders
                                         </h4>
                                         <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 16px" }}>
                                             Specific headline formulas, featured asset curation, and engagement protocols that attract executive search recruiters.
                                         </p>
-                                        <Link href="/blog/linkedin-strategy-for-senior-hr-professionals" style={{ color: "#162d20", fontWeight: "700", fontSize: "13px", textDecoration: "underline" }}>
+                                        <Link href="/blog/linkedin-strategy-for-senior-hr-professionals" style={{ color: "#0f1013", fontWeight: "700", fontSize: "13px", textDecoration: "underline" }}>
                                             Read Strategic Guide &rarr;
                                         </Link>
                                     </div>
 
                                     <div style={{ backgroundColor: "#ffffff", padding: "26px", borderRadius: "16px", border: "1px solid #e5e3db" }}>
                                         <div style={{ fontSize: "24px", color: "#0f172a", marginBottom: "10px" }}><i className="fal fa-search"></i></div>
-                                        <h4 style={{ fontSize: "18px", fontWeight: "800", color: "#162d20", margin: "0 0 8px" }}>
+                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px" }}>
                                             Google Knowledge Graph & Entity Authority
                                         </h4>
                                         <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 16px" }}>
                                             Structuring executive digital footprints so Google associates your name with your core operational and boardroom disciplines.
                                         </p>
-                                        <Link href="/blog/how-to-rank-on-google-as-an-independent-hr-consultant" style={{ color: "#162d20", fontWeight: "700", fontSize: "13px", textDecoration: "underline" }}>
+                                        <Link href="/blog/how-to-rank-on-google-as-an-independent-hr-consultant" style={{ color: "#0f1013", fontWeight: "700", fontSize: "13px", textDecoration: "underline" }}>
                                             Read Strategic Guide &rarr;
                                         </Link>
                                     </div>
 
                                     <div style={{ backgroundColor: "#ffffff", padding: "26px", borderRadius: "16px", border: "1px solid #e5e3db" }}>
                                         <div style={{ fontSize: "24px", color: "#0f172a", marginBottom: "10px" }}><i className="fal fa-chart-line"></i></div>
-                                        <h4 style={{ fontSize: "18px", fontWeight: "800", color: "#162d20", margin: "0 0 8px" }}>
+                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px" }}>
                                             Executive Brand ROI & Board Placement
                                         </h4>
                                         <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 16px" }}>
                                             Translating public thought leadership into non-executive director (NED) seats, speaking engagements, and advisory equity.
                                         </p>
-                                        <Link href="/blog/hr-leader-personal-brand-roi" style={{ color: "#162d20", fontWeight: "700", fontSize: "13px", textDecoration: "underline" }}>
+                                        <Link href="/blog/hr-leader-personal-brand-roi" style={{ color: "#0f1013", fontWeight: "700", fontSize: "13px", textDecoration: "underline" }}>
                                             Read Strategic Guide &rarr;
                                         </Link>
                                     </div>
@@ -1407,7 +1375,7 @@ export default function DashboardPage() {
 
                                 {/* Advisory Booking Banner */}
                                 <div style={{
-                                    backgroundColor: "#162d20",
+                                    backgroundColor: "#0f1013",
                                     color: "#ffffff",
                                     padding: "36px 40px",
                                     borderRadius: "18px",
@@ -1419,10 +1387,10 @@ export default function DashboardPage() {
                                     border: "1px solid rgba(210, 157, 43, 0.3)"
                                 }}>
                                     <div>
-                                        <h3 style={{ margin: "0 0 6px", fontSize: "22px", fontWeight: "800", color: "#ffffff" }}>
+                                        <h3 style={{ margin: "0 0 6px", fontSize: "22px", fontWeight: "700", color: "#ffffff" }}>
                                             Schedule an Executive Brand Review
                                         </h3>
-                                        <p style={{ margin: 0, color: "#c1cfc5", fontSize: "15px" }}>
+                                        <p style={{ margin: 0, color: "#94a3b8", fontSize: "15px" }}>
                                             Connect directly with Md Tarek and our advisory strategists to audit your digital footprint.
                                         </p>
                                     </div>
@@ -1431,20 +1399,15 @@ export default function DashboardPage() {
                                         href={getWhatsAppUrl("Hi, I am an active Elite Prominence member and would like to schedule a 1-on-1 executive brand review session.")}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        className="btn_style_two"
                                         style={{
-                                            backgroundColor: "#D29D2B",
-                                            color: "#162d20",
-                                            padding: "12px 28px",
-                                            borderRadius: "30px",
-                                            fontWeight: "800",
-                                            fontSize: "14px",
-                                            textDecoration: "none",
+                                            padding: "12px 24px",
                                             display: "inline-flex",
                                             alignItems: "center",
                                             gap: "8px"
                                         }}
                                     >
-                                        <i className="fab fa-whatsapp" style={{ fontSize: "15px" }}></i> WhatsApp Advisory Session
+                                        <i className="fab fa-whatsapp" style={{ fontSize: "15px", color: "#b89058" }}></i> <span>WhatsApp Advisory Session</span>
                                     </a>
                                 </div>
                             </div>

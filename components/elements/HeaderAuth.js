@@ -98,7 +98,7 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
                     </div>
                     <ul className="navigation clearfix" style={{ listStyle: "none", padding: 0, margin: 0 }}>
                         <li style={{ marginBottom: "6px" }}>
-                            <Link href="/dashboard" onClick={handleClick} style={{ color: "#2460e2", fontWeight: "700", display: "inline-flex", alignItems: "center", gap: "6px", minHeight: "44px", padding: "10px 0" }}>
+                            <Link href="/dashboard" onClick={handleClick} style={{ color: "#0f1013", fontWeight: "700", display: "inline-flex", alignItems: "center", gap: "6px", minHeight: "44px", padding: "10px 0" }}>
                                 <span>Member Dashboard &rarr;</span>
                             </Link>
                         </li>
@@ -138,17 +138,18 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
                     href="/login"
                     onClick={handleClick}
                     style={{
-                        padding: "11px 20px",
-                        borderRadius: "20px",
+                        padding: "10px 18px",
+                        borderRadius: "8px",
                         backgroundColor: "#f1f5f9",
-                        color: "#1b2534",
+                        color: "#0f1013",
                         fontSize: "14px",
                         fontWeight: "700",
                         textDecoration: "none",
                         minHeight: "44px",
                         display: "inline-flex",
                         alignItems: "center",
-                        justifyContent: "center"
+                        justifyContent: "center",
+                        border: "1px solid #e2e8f0"
                     }}
                 >
                     Log In
@@ -157,11 +158,11 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
                     href="/signup"
                     onClick={handleClick}
                     style={{
-                        padding: "11px 20px",
-                        borderRadius: "20px",
-                        backgroundColor: "rgba(36, 96, 226, 0.08)",
-                        color: "#2460e2",
-                        border: "1px solid rgba(36, 96, 226, 0.2)",
+                        padding: "10px 18px",
+                        borderRadius: "8px",
+                        backgroundColor: "#0f1013",
+                        color: "#ffffff",
+                        border: "1px solid #0f1013",
                         fontSize: "14px",
                         fontWeight: "700",
                         textDecoration: "none",
@@ -179,7 +180,7 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
 
     // Desktop layout (compact, secondary weight)
     const textColor = isDark ? "rgba(255, 255, 255, 0.85)" : "#475569"
-    const hoverColor = "#2460e2"
+    const hoverColor = "#b89058"
 
     if (user) {
         return (
@@ -189,7 +190,7 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
                     style={{
                         fontSize: "14px",
                         fontWeight: "700",
-                        color: "#2460e2",
+                        color: isDark ? "#ffffff" : "#0f1013",
                         textDecoration: "none",
                         transition: "color 0.2s ease"
                     }}

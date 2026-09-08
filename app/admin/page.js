@@ -50,7 +50,7 @@ export default function AdminPage() {
             enabled: false,
             text: 'Elite Prominence is accepting executive cohort applications for Q4.',
             link: '/contact',
-            bgColor: '#162d20'
+            bgColor: '#0f1013'
         }
     })
 
@@ -82,7 +82,7 @@ export default function AdminPage() {
         announcement_enabled: false,
         announcement_text: '',
         announcement_link: '',
-        announcement_bgColor: '#162d20'
+        announcement_bgColor: '#0f1013'
     })
 
     // -------------------------------------------------------------
@@ -117,7 +117,7 @@ export default function AdminPage() {
                     announcement_enabled: s.announcement?.enabled || false,
                     announcement_text: s.announcement?.text || '',
                     announcement_link: s.announcement?.link || '',
-                    announcement_bgColor: s.announcement?.bgColor || '#162d20'
+                    announcement_bgColor: s.announcement?.bgColor || '#0f1013'
                 })
             }
 
@@ -529,7 +529,7 @@ export default function AdminPage() {
                 padding: "4px 10px",
                 borderRadius: "14px",
                 fontSize: "11px",
-                fontWeight: "800",
+                fontWeight: "700",
                 backgroundColor: bg,
                 color: color,
                 textTransform: "uppercase",
@@ -544,7 +544,7 @@ export default function AdminPage() {
         <div className="boxed_wrapper">
             <Layout headerStyle={1} footerStyle={1}>
                 <section style={{
-                    backgroundColor: "#FAF8F2",
+                    backgroundColor: "#ffffff",
                     padding: "90px 0 90px",
                     minHeight: "90vh",
                     fontFamily: "var(--primary-font)"
@@ -554,8 +554,8 @@ export default function AdminPage() {
 
                         {/* Top Mission Control Header */}
                         <div style={{
-                            backgroundColor: "#162d20",
-                            color: "#FAF8F2",
+                            backgroundColor: "#0f1013",
+                            color: "#ffffff",
                             padding: "32px 36px",
                             borderRadius: "16px",
                             marginBottom: "24px",
@@ -571,9 +571,9 @@ export default function AdminPage() {
                                 <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "6px" }}>
                                     <span style={{
                                         backgroundColor: "#D29D2B",
-                                        color: "#162d20",
+                                        color: "#0f1013",
                                         fontSize: "11px",
-                                        fontWeight: "800",
+                                        fontWeight: "700",
                                         padding: "3px 10px",
                                         borderRadius: "8px",
                                         textTransform: "uppercase",
@@ -586,7 +586,7 @@ export default function AdminPage() {
                                         Live Admin Console
                                     </span>
                                 </div>
-                                <h1 style={{ fontSize: "clamp(24px, 4vw, 32px)", fontWeight: "800", color: "#ffffff", margin: 0 }}>
+                                <h1 style={{ fontSize: "clamp(24px, 4vw, 32px)", fontWeight: "700", color: "#ffffff", margin: 0 }}>
                                     Elite Prominence Administration
                                 </h1>
                                 <p style={{ margin: "6px 0 0", color: "#c1cfc5", fontSize: "14px" }}>
@@ -637,13 +637,13 @@ export default function AdminPage() {
                                     target="_blank"
                                     style={{
                                         backgroundColor: "#D29D2B",
-                                        color: "#162d20",
+                                        color: "#0f1013",
                                         padding: "10px 20px",
                                         minHeight: "44px",
                                         display: "inline-flex",
                                         alignItems: "center",
                                         borderRadius: "30px",
-                                        fontWeight: "800",
+                                        fontWeight: "700",
                                         fontSize: "14px",
                                         textDecoration: "none"
                                     }}
@@ -662,25 +662,25 @@ export default function AdminPage() {
                         }}>
                             <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #e5e3db", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
                                 <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>Inquiries / Leads</div>
-                                <div style={{ fontSize: "32px", fontWeight: "800", color: "#162d20", marginTop: "4px" }}>{leads.length}</div>
+                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#0f1013", marginTop: "4px" }}>{leads.length}</div>
                                 <div style={{ fontSize: "12px", color: "#16a34a", marginTop: "4px" }}>Active Contact Submissions</div>
                             </div>
 
                             <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #e5e3db", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
                                 <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>Executive Members</div>
-                                <div style={{ fontSize: "32px", fontWeight: "800", color: "#162d20", marginTop: "4px" }}>{users.length}</div>
+                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#0f1013", marginTop: "4px" }}>{users.length}</div>
                                 <div style={{ fontSize: "12px", color: "#d97706", marginTop: "4px" }}>{adminCount} Administrator{adminCount > 1 ? 's' : ''}</div>
                             </div>
 
                             <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #e5e3db", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
                                 <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>Executive Articles</div>
-                                <div style={{ fontSize: "32px", fontWeight: "800", color: "#162d20", marginTop: "4px" }}>{approvedArticles.length}</div>
+                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#0f1013", marginTop: "4px" }}>{approvedArticles.length}</div>
                                 <div style={{ fontSize: "12px", color: "#64748b", marginTop: "4px" }}>{pendingArticles.length} pending moderation</div>
                             </div>
 
                             <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #e5e3db", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
                                 <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>Testimonials</div>
-                                <div style={{ fontSize: "32px", fontWeight: "800", color: "#162d20", marginTop: "4px" }}>{approvedReviews.length}</div>
+                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#0f1013", marginTop: "4px" }}>{approvedReviews.length}</div>
                                 <div style={{ fontSize: "12px", color: "#64748b", marginTop: "4px" }}>{pendingReviews.length} pending moderation</div>
                             </div>
 
@@ -691,7 +691,7 @@ export default function AdminPage() {
                                 border: (pendingReviews.length + pendingArticles.length > 0) ? "1.5px solid #D29D2B" : "1px solid #e2e8f0"
                             }}>
                                 <div style={{ fontSize: "12px", color: "#92400e", fontWeight: "700", textTransform: "uppercase" }}>Urgent Queue</div>
-                                <div style={{ fontSize: "32px", fontWeight: "800", color: "#92400e", marginTop: "4px" }}>
+                                <div style={{ fontSize: "32px", fontWeight: "700", color: "#92400e", marginTop: "4px" }}>
                                     {pendingReviews.length + pendingArticles.length}
                                 </div>
                                 <div style={{ fontSize: "12px", color: "#b45309", marginTop: "4px" }}>Items Awaiting Decision</div>
@@ -724,8 +724,8 @@ export default function AdminPage() {
                                         background: "none",
                                         fontSize: "15px",
                                         fontWeight: "700",
-                                        color: activeTab === 'queue' ? "#162d20" : "#64748b",
-                                        borderBottom: activeTab === 'queue' ? "3px solid #162d20" : "3px solid transparent",
+                                        color: activeTab === 'queue' ? "#0f1013" : "#64748b",
+                                        borderBottom: activeTab === 'queue' ? "3px solid #0f1013" : "3px solid transparent",
                                         cursor: "pointer",
                                         marginBottom: "-2px",
                                         flexShrink: 0
@@ -743,8 +743,8 @@ export default function AdminPage() {
                                         background: "none",
                                         fontSize: "15px",
                                         fontWeight: "700",
-                                        color: activeTab === 'leads' ? "#162d20" : "#64748b",
-                                        borderBottom: activeTab === 'leads' ? "3px solid #162d20" : "3px solid transparent",
+                                        color: activeTab === 'leads' ? "#0f1013" : "#64748b",
+                                        borderBottom: activeTab === 'leads' ? "3px solid #0f1013" : "3px solid transparent",
                                         cursor: "pointer",
                                         marginBottom: "-2px",
                                         flexShrink: 0
@@ -762,8 +762,8 @@ export default function AdminPage() {
                                         background: "none",
                                         fontSize: "15px",
                                         fontWeight: "700",
-                                        color: activeTab === 'reviews' ? "#162d20" : "#64748b",
-                                        borderBottom: activeTab === 'reviews' ? "3px solid #162d20" : "3px solid transparent",
+                                        color: activeTab === 'reviews' ? "#0f1013" : "#64748b",
+                                        borderBottom: activeTab === 'reviews' ? "3px solid #0f1013" : "3px solid transparent",
                                         cursor: "pointer",
                                         marginBottom: "-2px",
                                         flexShrink: 0
@@ -781,8 +781,8 @@ export default function AdminPage() {
                                         background: "none",
                                         fontSize: "15px",
                                         fontWeight: "700",
-                                        color: activeTab === 'articles' ? "#162d20" : "#64748b",
-                                        borderBottom: activeTab === 'articles' ? "3px solid #162d20" : "3px solid transparent",
+                                        color: activeTab === 'articles' ? "#0f1013" : "#64748b",
+                                        borderBottom: activeTab === 'articles' ? "3px solid #0f1013" : "3px solid transparent",
                                         cursor: "pointer",
                                         marginBottom: "-2px",
                                         flexShrink: 0
@@ -800,8 +800,8 @@ export default function AdminPage() {
                                         background: "none",
                                         fontSize: "15px",
                                         fontWeight: "700",
-                                        color: activeTab === 'users' ? "#162d20" : "#64748b",
-                                        borderBottom: activeTab === 'users' ? "3px solid #162d20" : "3px solid transparent",
+                                        color: activeTab === 'users' ? "#0f1013" : "#64748b",
+                                        borderBottom: activeTab === 'users' ? "3px solid #0f1013" : "3px solid transparent",
                                         cursor: "pointer",
                                         marginBottom: "-2px",
                                         flexShrink: 0
@@ -819,8 +819,8 @@ export default function AdminPage() {
                                         background: "none",
                                         fontSize: "15px",
                                         fontWeight: "700",
-                                        color: activeTab === 'settings' ? "#162d20" : "#64748b",
-                                        borderBottom: activeTab === 'settings' ? "3px solid #162d20" : "3px solid transparent",
+                                        color: activeTab === 'settings' ? "#0f1013" : "#64748b",
+                                        borderBottom: activeTab === 'settings' ? "3px solid #0f1013" : "3px solid transparent",
                                         cursor: "pointer",
                                         marginBottom: "-2px",
                                         flexShrink: 0
@@ -919,7 +919,7 @@ export default function AdminPage() {
                                         border: "1px solid #e5e3db"
                                     }}>
                                         <div style={{ fontSize: "36px", color: "#16a34a", marginBottom: "12px" }}><i className="fal fa-check-circle"></i></div>
-                                        <h3 style={{ fontSize: "22px", fontWeight: "800", color: "#162d20", margin: "0 0 8px" }}>
+                                        <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px" }}>
                                             Moderation Queue is Clear
                                         </h3>
                                         <p style={{ color: "#64748b", margin: 0, fontSize: "15px" }}>
@@ -931,7 +931,7 @@ export default function AdminPage() {
                                         {/* Pending Reviews */}
                                         {pendingReviews.length > 0 && (
                                             <div>
-                                                <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "16px" }}>
+                                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "16px" }}>
                                                     Pending Reviews & Testimonials ({pendingReviews.length})
                                                 </h3>
                                                 <div style={{ display: "grid", gap: "16px" }}>
@@ -945,15 +945,21 @@ export default function AdminPage() {
                                                         }}>
                                                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
                                                                 <div>
-                                                                    <h4 style={{ margin: 0, fontSize: "18px", fontWeight: "700", color: "#162d20" }}>
+                                                                    <h4 style={{ margin: 0, fontSize: "18px", fontWeight: "700", color: "#0f1013" }}>
                                                                         {rev.profiles?.full_name || 'Anonymous Client'}
                                                                     </h4>
                                                                     <div style={{ fontSize: "13px", color: "#64748b" }}>
                                                                         {rev.profiles?.role_title || 'Executive Client'} • {new Date(rev.created_at).toLocaleString()}
                                                                     </div>
                                                                 </div>
-                                                                <div style={{ color: "#d97706", fontSize: "18px" }}>
-                                                                    {'★'.repeat(rev.rating || 5)}{'☆'.repeat(5 - (rev.rating || 5))}
+                                                                <div style={{ fontSize: "14px", display: "inline-flex", gap: "3px" }}>
+                                                                    {[...Array(5)].map((_, i) => (
+                                                                        <i
+                                                                            key={i}
+                                                                            className={i < (rev.rating || 5) ? "fa-solid fa-star" : "fa-regular fa-star"}
+                                                                            style={{ color: i < (rev.rating || 5) ? "#b89058" : "#cbd5e1" }}
+                                                                        />
+                                                                    ))}
                                                                 </div>
                                                             </div>
 
@@ -966,8 +972,8 @@ export default function AdminPage() {
                                                                     onClick={() => handleReviewStatus(rev.id, 'approved')}
                                                                     disabled={actionLoading[rev.id]}
                                                                     style={{
-                                                                        backgroundColor: "#162d20",
-                                                                        color: "#FAF8F2",
+                                                                        backgroundColor: "#0f1013",
+                                                                        color: "#ffffff",
                                                                         border: "none",
                                                                         borderRadius: "6px",
                                                                         padding: "8px 20px",
@@ -1004,7 +1010,7 @@ export default function AdminPage() {
                                         {/* Pending Articles */}
                                         {pendingArticles.length > 0 && (
                                             <div>
-                                                <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "16px" }}>
+                                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "16px" }}>
                                                     Pending Executive Articles ({pendingArticles.length})
                                                 </h3>
                                                 <div style={{ display: "grid", gap: "16px" }}>
@@ -1021,7 +1027,7 @@ export default function AdminPage() {
                                                                     fontSize: "12px",
                                                                     fontWeight: "700",
                                                                     textTransform: "uppercase",
-                                                                    color: "#162d20",
+                                                                    color: "#0f1013",
                                                                     backgroundColor: "rgba(30, 59, 43, 0.08)",
                                                                     padding: "3px 10px",
                                                                     borderRadius: "12px",
@@ -1030,7 +1036,7 @@ export default function AdminPage() {
                                                                 }}>
                                                                     {art.category}
                                                                 </span>
-                                                                <h4 style={{ margin: 0, fontSize: "22px", fontWeight: "800", color: "#162d20" }}>
+                                                                <h4 style={{ margin: 0, fontSize: "22px", fontWeight: "700", color: "#0f1013" }}>
                                                                     {art.title}
                                                                 </h4>
                                                                 <div style={{ fontSize: "13px", color: "#64748b", marginTop: "4px" }}>
@@ -1058,8 +1064,8 @@ export default function AdminPage() {
                                                                     onClick={() => handleArticleStatus(art.id, 'approved')}
                                                                     disabled={actionLoading[art.id]}
                                                                     style={{
-                                                                        backgroundColor: "#162d20",
-                                                                        color: "#FAF8F2",
+                                                                        backgroundColor: "#0f1013",
+                                                                        color: "#ffffff",
                                                                         border: "none",
                                                                         borderRadius: "6px",
                                                                         padding: "8px 20px",
@@ -1103,14 +1109,14 @@ export default function AdminPage() {
                         {activeTab === 'leads' && (
                             <div>
                                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "10px" }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", margin: 0 }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", margin: 0 }}>
                                         Contact Inquiries & Strategy Leads ({filteredLeads.length})
                                     </h3>
                                     <button
                                         onClick={exportLeadsToCSV}
                                         style={{
-                                            backgroundColor: "#162d20",
-                                            color: "#FAF8F2",
+                                            backgroundColor: "#0f1013",
+                                            color: "#ffffff",
                                             border: "none",
                                             borderRadius: "20px",
                                             padding: "8px 18px",
@@ -1142,7 +1148,7 @@ export default function AdminPage() {
                                             }}>
                                                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "10px", marginBottom: "10px" }}>
                                                     <div>
-                                                        <h4 style={{ margin: 0, fontSize: "17px", fontWeight: "700", color: "#162d20" }}>
+                                                        <h4 style={{ margin: 0, fontSize: "17px", fontWeight: "700", color: "#0f1013" }}>
                                                             {lead.name}
                                                         </h4>
                                                         <div style={{ fontSize: "14px", color: "#2563eb", fontWeight: "600", marginTop: "2px" }}>
@@ -1173,7 +1179,7 @@ export default function AdminPage() {
                                                     <a
                                                         href={`mailto:${lead.email}?subject=Regarding your inquiry with Elite Prominence`}
                                                         style={{
-                                                            backgroundColor: "#162d20",
+                                                            backgroundColor: "#0f1013",
                                                             color: "#ffffff",
                                                             padding: "7px 16px",
                                                             borderRadius: "6px",
@@ -1241,7 +1247,7 @@ export default function AdminPage() {
                         {activeTab === 'reviews' && (
                             <div>
                                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "10px" }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", margin: 0 }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", margin: 0 }}>
                                         Testimonials & Feedback ({filteredReviews.length})
                                     </h3>
                                     <button
@@ -1251,8 +1257,8 @@ export default function AdminPage() {
                                             setReviewModalOpen(true)
                                         }}
                                         style={{
-                                            backgroundColor: "#162d20",
-                                            color: "#FAF8F2",
+                                            backgroundColor: "#0f1013",
+                                            color: "#ffffff",
                                             border: "none",
                                             borderRadius: "20px",
                                             padding: "8px 20px",
@@ -1278,10 +1284,16 @@ export default function AdminPage() {
                                         }}>
                                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px", flexWrap: "wrap", gap: "8px" }}>
                                                 <div>
-                                                    <strong style={{ fontSize: "16px", color: "#162d20" }}>{rev.profiles?.full_name || 'Direct Client'}</strong>
+                                                    <strong style={{ fontSize: "16px", color: "#0f1013" }}>{rev.profiles?.full_name || 'Direct Client'}</strong>
                                                     <span style={{ color: "#64748b", fontSize: "13px", marginLeft: "6px" }}>({rev.profiles?.role_title || 'Executive Client'})</span>
-                                                    <span style={{ color: "#d97706", marginLeft: "12px", fontSize: "16px" }}>
-                                                        {'★'.repeat(rev.rating || 5)}{'☆'.repeat(5 - (rev.rating || 5))}
+                                                    <span style={{ marginLeft: "12px", fontSize: "13px", display: "inline-flex", gap: "2px", verticalAlign: "middle" }}>
+                                                        {[...Array(5)].map((_, i) => (
+                                                            <i
+                                                                key={i}
+                                                                className={i < (rev.rating || 5) ? "fa-solid fa-star" : "fa-regular fa-star"}
+                                                                style={{ color: i < (rev.rating || 5) ? "#b89058" : "#cbd5e1" }}
+                                                            />
+                                                        ))}
                                                     </span>
                                                 </div>
                                                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -1297,7 +1309,7 @@ export default function AdminPage() {
                                                 {rev.status !== 'approved' && (
                                                     <button
                                                         onClick={() => handleReviewStatus(rev.id, 'approved')}
-                                                        style={{ backgroundColor: "#162d20", color: "#fff", border: "none", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
+                                                        style={{ backgroundColor: "#0f1013", color: "#fff", border: "none", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
                                                     >
                                                         Approve
                                                     </button>
@@ -1342,7 +1354,7 @@ export default function AdminPage() {
                         {activeTab === 'articles' && (
                             <div>
                                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "10px" }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", margin: 0 }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", margin: 0 }}>
                                         Articles & Thought Leadership ({filteredArticles.length})
                                     </h3>
                                     <button
@@ -1352,8 +1364,8 @@ export default function AdminPage() {
                                             setArticleModalOpen(true)
                                         }}
                                         style={{
-                                            backgroundColor: "#162d20",
-                                            color: "#FAF8F2",
+                                            backgroundColor: "#0f1013",
+                                            color: "#ffffff",
                                             border: "none",
                                             borderRadius: "20px",
                                             padding: "8px 20px",
@@ -1378,13 +1390,13 @@ export default function AdminPage() {
                                             border: "1px solid #e5e3db"
                                         }}>
                                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px", flexWrap: "wrap", gap: "8px" }}>
-                                                <span style={{ fontSize: "12px", fontWeight: "800", textTransform: "uppercase", color: "#162d20", backgroundColor: "#e2e8f0", padding: "2px 8px", borderRadius: "6px" }}>
+                                                <span style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", color: "#0f1013", backgroundColor: "#e2e8f0", padding: "2px 8px", borderRadius: "6px" }}>
                                                     {art.category}
                                                 </span>
                                                 {renderStatusBadge(art.status)}
                                             </div>
 
-                                            <h4 style={{ fontSize: "19px", fontWeight: "800", color: "#162d20", margin: "6px 0" }}>
+                                            <h4 style={{ fontSize: "19px", fontWeight: "700", color: "#0f1013", margin: "6px 0" }}>
                                                 {art.title}
                                             </h4>
                                             <div style={{ fontSize: "13px", color: "#64748b", marginBottom: "12px" }}>
@@ -1407,7 +1419,7 @@ export default function AdminPage() {
                                                 {art.status !== 'approved' && (
                                                     <button
                                                         onClick={() => handleArticleStatus(art.id, 'approved')}
-                                                        style={{ backgroundColor: "#162d20", color: "#fff", border: "none", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
+                                                        style={{ backgroundColor: "#0f1013", color: "#fff", border: "none", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
                                                     >
                                                         Approve
                                                     </button>
@@ -1460,17 +1472,17 @@ export default function AdminPage() {
                                 <table style={{ width: "100%", minWidth: "750px", borderCollapse: "collapse", textAlign: "left" }}>
                                     <thead>
                                         <tr style={{ backgroundColor: "#faf9f5", borderBottom: "1px solid #e5e3db" }}>
-                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "800", color: "#162d20", textTransform: "uppercase" }}>Executive Name</th>
-                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "800", color: "#162d20", textTransform: "uppercase" }}>Role Title</th>
-                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "800", color: "#162d20", textTransform: "uppercase" }}>Role</th>
-                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "800", color: "#162d20", textTransform: "uppercase" }}>Registered</th>
-                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "800", color: "#162d20", textTransform: "uppercase", textAlign: "right" }}>Actions</th>
+                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0f1013", textTransform: "uppercase" }}>Executive Name</th>
+                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0f1013", textTransform: "uppercase" }}>Role Title</th>
+                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0f1013", textTransform: "uppercase" }}>Role</th>
+                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0f1013", textTransform: "uppercase" }}>Registered</th>
+                                            <th style={{ padding: "16px 20px", fontSize: "13px", fontWeight: "700", color: "#0f1013", textTransform: "uppercase", textAlign: "right" }}>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {filteredUsers.map((u) => (
                                             <tr key={u.id} style={{ borderBottom: "1px solid #f1f5f9" }}>
-                                                <td style={{ padding: "16px 20px", fontSize: "15px", fontWeight: "700", color: "#162d20" }}>
+                                                <td style={{ padding: "16px 20px", fontSize: "15px", fontWeight: "700", color: "#0f1013" }}>
                                                     {u.full_name || 'Member'}
                                                     {u.id === adminUser?.id && (
                                                         <span style={{ fontSize: "10px", backgroundColor: "#22c55e", color: "#ffffff", padding: "2px 6px", borderRadius: "10px", marginLeft: "6px" }}>YOU</span>
@@ -1482,9 +1494,9 @@ export default function AdminPage() {
                                                 <td style={{ padding: "16px 20px" }}>
                                                     <span style={{
                                                         backgroundColor: u.role === 'admin' ? "#D29D2B" : "#e2e8f0",
-                                                        color: u.role === 'admin' ? "#162d20" : "#334155",
+                                                        color: u.role === 'admin' ? "#0f1013" : "#334155",
                                                         fontSize: "11px",
-                                                        fontWeight: "800",
+                                                        fontWeight: "700",
                                                         padding: "3px 10px",
                                                         borderRadius: "10px",
                                                         textTransform: "uppercase",
@@ -1503,7 +1515,7 @@ export default function AdminPage() {
                                                             disabled={actionLoading[`role_${u.id}`]}
                                                             style={{
                                                                 backgroundColor: u.role === 'admin' ? "#f1f5f9" : "#D29D2B",
-                                                                color: u.role === 'admin' ? "#475569" : "#162d20",
+                                                                color: u.role === 'admin' ? "#475569" : "#0f1013",
                                                                 border: "none",
                                                                 borderRadius: "6px",
                                                                 padding: "6px 12px",
@@ -1571,14 +1583,14 @@ export default function AdminPage() {
                             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
                                 {/* Left Panel: Live WhatsApp & Announcement */}
                                 <div style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "14px", border: "1px solid #e5e3db" }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "20px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "20px" }}>
                                         Live Site Settings
                                     </h3>
 
                                     <form onSubmit={handleSaveSettings}>
                                         {/* WhatsApp Number Control */}
                                         <div style={{ marginBottom: "24px" }}>
-                                            <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#162d20", marginBottom: "6px" }}>
+                                            <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
                                                 Primary WhatsApp Contact Number
                                             </label>
                                             <input
@@ -1605,7 +1617,7 @@ export default function AdminPage() {
                                         {/* Site Announcement Banner Control */}
                                         <div style={{ marginBottom: "20px" }}>
                                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
-                                                <label style={{ fontSize: "15px", fontWeight: "700", color: "#162d20" }}>
+                                                <label style={{ fontSize: "15px", fontWeight: "700", color: "#0f1013" }}>
                                                     Top Announcement Banner
                                                 </label>
                                                 <label style={{ display: "inline-flex", alignItems: "center", gap: "8px", cursor: "pointer" }}>
@@ -1669,13 +1681,13 @@ export default function AdminPage() {
                                             type="submit"
                                             disabled={savingSettings}
                                             style={{
-                                                backgroundColor: "#162d20",
-                                                color: "#FAF8F2",
+                                                backgroundColor: "#0f1013",
+                                                color: "#ffffff",
                                                 border: "none",
                                                 borderRadius: "8px",
                                                 padding: "12px 24px",
                                                 fontSize: "15px",
-                                                fontWeight: "800",
+                                                fontWeight: "700",
                                                 cursor: "pointer",
                                                 width: "100%",
                                                 marginTop: "10px"
@@ -1688,7 +1700,7 @@ export default function AdminPage() {
 
                                 {/* Right Panel: System Infrastructure Status */}
                                 <div style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "14px", border: "1px solid #e5e3db" }}>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "20px" }}>
+                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "20px" }}>
                                         Infrastructure Status
                                     </h3>
 
@@ -1759,7 +1771,7 @@ export default function AdminPage() {
                                     boxShadow: "0 20px 50px rgba(0,0,0,0.2)"
                                 }}>
                                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px" }}>
-                                        <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "800", color: "#162d20" }}>
+                                        <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "700", color: "#0f1013" }}>
                                             {editingReview ? 'Edit Testimonial' : 'Post Direct Testimonial'}
                                         </h3>
                                         <button onClick={() => setReviewModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fal fa-times"></i></button>
@@ -1767,7 +1779,7 @@ export default function AdminPage() {
 
                                     <form onSubmit={handleSaveReviewModal}>
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Star Rating (1 to 5)
                                             </label>
                                             <select
@@ -1775,16 +1787,16 @@ export default function AdminPage() {
                                                 onChange={(e) => setReviewForm(prev => ({ ...prev, rating: Number(e.target.value) }))}
                                                 style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid #cbd5e1" }}
                                             >
-                                                <option value={5}>★★★★★ (5 Stars)</option>
-                                                <option value={4}>★★★★☆ (4 Stars)</option>
-                                                <option value={3}>★★★☆☆ (3 Stars)</option>
-                                                <option value={2}>★★☆☆☆ (2 Stars)</option>
-                                                <option value={1}>★☆☆☆☆ (1 Star)</option>
+                                                <option value={5}>5 Stars (Exceptional)</option>
+                                                <option value={4}>4 Stars (Strong Impact)</option>
+                                                <option value={3}>3 Stars (Satisfactory)</option>
+                                                <option value={2}>2 Stars (Needs Improvement)</option>
+                                                <option value={1}>1 Star (Unsatisfactory)</option>
                                             </select>
                                         </div>
 
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Publication Status
                                             </label>
                                             <select
@@ -1799,7 +1811,7 @@ export default function AdminPage() {
                                         </div>
 
                                         <div style={{ marginBottom: "20px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Testimonial / Review Content
                                             </label>
                                             <textarea
@@ -1823,7 +1835,7 @@ export default function AdminPage() {
                                             <button
                                                 type="submit"
                                                 disabled={actionLoading.reviewSave}
-                                                style={{ padding: "10px 22px", borderRadius: "6px", border: "none", backgroundColor: "#162d20", color: "#FAF8F2", fontWeight: "700", cursor: "pointer" }}
+                                                style={{ padding: "10px 22px", borderRadius: "6px", border: "none", backgroundColor: "#0f1013", color: "#ffffff", fontWeight: "700", cursor: "pointer" }}
                                             >
                                                 {actionLoading.reviewSave ? 'Saving...' : 'Save Testimonial'}
                                             </button>
@@ -1858,7 +1870,7 @@ export default function AdminPage() {
                                     overflowY: "auto"
                                 }}>
                                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px" }}>
-                                        <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "800", color: "#162d20" }}>
+                                        <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "700", color: "#0f1013" }}>
                                             {editingArticle ? 'Edit Article' : 'Write & Publish Executive Article'}
                                         </h3>
                                         <button onClick={() => setArticleModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fal fa-times"></i></button>
@@ -1866,7 +1878,7 @@ export default function AdminPage() {
 
                                     <form onSubmit={handleSaveArticleModal}>
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Article Title
                                             </label>
                                             <input
@@ -1881,7 +1893,7 @@ export default function AdminPage() {
 
                                         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "16px" }}>
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                     Category
                                                 </label>
                                                 <select
@@ -1896,7 +1908,7 @@ export default function AdminPage() {
                                             </div>
 
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                     Publication Status
                                                 </label>
                                                 <select
@@ -1912,7 +1924,7 @@ export default function AdminPage() {
                                         </div>
 
                                         <div style={{ marginBottom: "20px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Article Body (Markdown or Plain Text)
                                             </label>
                                             <textarea
@@ -1936,7 +1948,7 @@ export default function AdminPage() {
                                             <button
                                                 type="submit"
                                                 disabled={actionLoading.articleSave}
-                                                style={{ padding: "10px 22px", borderRadius: "6px", border: "none", backgroundColor: "#162d20", color: "#FAF8F2", fontWeight: "700", cursor: "pointer" }}
+                                                style={{ padding: "10px 22px", borderRadius: "6px", border: "none", backgroundColor: "#0f1013", color: "#ffffff", fontWeight: "700", cursor: "pointer" }}
                                             >
                                                 {actionLoading.articleSave ? 'Saving...' : 'Save & Publish Article'}
                                             </button>
@@ -1969,7 +1981,7 @@ export default function AdminPage() {
                                     boxShadow: "0 20px 50px rgba(0,0,0,0.2)"
                                 }}>
                                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px" }}>
-                                        <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "800", color: "#162d20" }}>
+                                        <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "700", color: "#0f1013" }}>
                                             Edit Member Profile
                                         </h3>
                                         <button onClick={() => setUserModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fal fa-times"></i></button>
@@ -1977,7 +1989,7 @@ export default function AdminPage() {
 
                                     <form onSubmit={handleSaveUserModal}>
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Full Name
                                             </label>
                                             <input
@@ -1990,7 +2002,7 @@ export default function AdminPage() {
                                         </div>
 
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Executive Title
                                             </label>
                                             <input
@@ -2003,7 +2015,7 @@ export default function AdminPage() {
                                         </div>
 
                                         <div style={{ marginBottom: "20px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#162d20", marginBottom: "4px" }}>
+                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
                                                 Account Role
                                             </label>
                                             <select
@@ -2027,7 +2039,7 @@ export default function AdminPage() {
                                             <button
                                                 type="submit"
                                                 disabled={actionLoading.userSave}
-                                                style={{ padding: "10px 22px", borderRadius: "6px", border: "none", backgroundColor: "#162d20", color: "#FAF8F2", fontWeight: "700", cursor: "pointer" }}
+                                                style={{ padding: "10px 22px", borderRadius: "6px", border: "none", backgroundColor: "#0f1013", color: "#ffffff", fontWeight: "700", cursor: "pointer" }}
                                             >
                                                 {actionLoading.userSave ? 'Saving...' : 'Save Profile'}
                                             </button>
@@ -2060,7 +2072,7 @@ export default function AdminPage() {
                                     boxShadow: "0 20px 50px rgba(0,0,0,0.2)"
                                 }}>
                                     <div style={{ fontSize: "32px", color: "#dc2626", marginBottom: "10px" }}><i className="fal fa-exclamation-triangle"></i></div>
-                                    <h3 style={{ margin: "0 0 8px", fontSize: "19px", fontWeight: "800", color: "#991b1b" }}>
+                                    <h3 style={{ margin: "0 0 8px", fontSize: "19px", fontWeight: "700", color: "#991b1b" }}>
                                         Confirm Permanent Deletion
                                     </h3>
                                     <p style={{ margin: "0 0 20px", fontSize: "14px", color: "#475569", lineHeight: "1.5" }}>

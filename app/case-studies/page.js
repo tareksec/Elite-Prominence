@@ -65,7 +65,14 @@ export default function CaseStudiesOverviewPage() {
                             <div className="tag_text">
                                 <h6>Documented Impact</h6>
                             </div>
-                            <h1 style={{ fontSize: '42px', fontWeight: '800', color: '#0f172a', lineHeight: '1.25', marginBottom: '20px' }}>
+                            <h1 style={{
+                                fontSize: 'clamp(28px, 5vw, 42px)',
+                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                fontWeight: '700',
+                                color: '#0f1013',
+                                lineHeight: '1.25',
+                                marginBottom: '20px'
+                            }}>
                                 Proof of Sovereign Authority & Commercial Value
                             </h1>
                             <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.7', margin: '0 auto' }}>
@@ -73,7 +80,7 @@ export default function CaseStudiesOverviewPage() {
                             </p>
                             <div style={{ marginTop: '28px' }}>
                                 <span className="prominence_badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-                                    <i className="fal fa-shield-alt"></i> Client names and proprietary metrics are anonymized to honor non-disclosure agreements
+                                    <i className="fa-solid fa-shield-halved" style={{ color: '#b89058' }}></i> Client names and proprietary metrics are anonymized to honor non-disclosure agreements
                                 </span>
                             </div>
                         </div>
@@ -81,7 +88,7 @@ export default function CaseStudiesOverviewPage() {
                 </section>
 
                 {/* Aggregate Proof Metrics Bar */}
-                <section className="pt_60 pb_60" style={{ background: '#0a0f1d', color: '#fff', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+                <section className="pt_60 pb_60" style={{ background: '#0f1013', color: '#fff', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
                     <div className="container">
                         <div className="row text-center">
                             <div className="col-lg-3 col-6 mb_20 mb-lg-0">
@@ -110,11 +117,9 @@ export default function CaseStudiesOverviewPage() {
                         <div className="row">
                             {CASE_STUDIES_DATA.map((cs) => (
                                 <div key={cs.slug} className="col-lg-4 col-md-6 mb_40">
-                                    <div className="prominence_card" style={{ 
+                                    <div className="prominence_card prominence_card_equal_height" style={{ 
                                         overflow: 'hidden', 
                                         height: '100%',
-                                        display: 'flex',
-                                        flexDirection: 'column',
                                         padding: 0
                                     }}>
                                         <div style={{ height: '210px', position: 'relative', overflow: 'hidden' }}>
@@ -127,12 +132,12 @@ export default function CaseStudiesOverviewPage() {
                                                 position: 'absolute', 
                                                 top: '16px', 
                                                 left: '16px', 
-                                                background: 'rgba(15, 23, 42, 0.9)', 
+                                                background: 'rgba(15, 16, 19, 0.92)', 
                                                 color: '#fff', 
                                                 fontSize: '11px', 
                                                 fontWeight: '700', 
                                                 padding: '4px 12px', 
-                                                borderRadius: '20px',
+                                                borderRadius: '20px', 
                                                 letterSpacing: '0.5px',
                                                 textTransform: 'uppercase'
                                             }}>
@@ -140,12 +145,12 @@ export default function CaseStudiesOverviewPage() {
                                             </div>
                                         </div>
 
-                                        <div style={{ padding: '32px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                                            <div style={{ fontSize: '12px', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '8px' }}>
+                                        <div className="prominence_card_body" style={{ padding: '32px' }}>
+                                             <div style={{ fontSize: '12px', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '8px' }}>
                                                 {cs.clientRole} • {cs.clientIndustry}
                                             </div>
 
-                                            <h3 style={{ fontSize: '20px', fontWeight: '800', color: '#0f172a', marginBottom: '10px', lineHeight: '1.35' }}>
+                                            <h3 style={{ fontSize: '20px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '10px', lineHeight: '1.35' }}>
                                                 <Link href={`/case-studies/${cs.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
                                                     {cs.shortTitle}
                                                 </Link>
@@ -155,7 +160,7 @@ export default function CaseStudiesOverviewPage() {
                                                 {cs.tagline}
                                             </p>
 
-                                            <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.7', marginBottom: '20px', flex: 1 }}>
+                                            <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.7', marginBottom: '20px' }}>
                                                 {cs.challenge.summary.substring(0, 115)}...
                                             </p>
 
@@ -164,29 +169,22 @@ export default function CaseStudiesOverviewPage() {
                                                 <div className="row g-2">
                                                     {cs.metrics.slice(0, 2).map((m, i) => (
                                                         <div key={i} className="col-6">
-                                                            <div style={{ fontSize: '19px', fontWeight: '800', color: '#0f172a' }}>{m.value}</div>
+                                                            <div style={{ fontSize: '19px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013' }}>{m.value}</div>
                                                             <div style={{ fontSize: '11px', color: '#64748b', lineHeight: '1.3' }}>{m.label}</div>
                                                         </div>
                                                     ))}
                                                 </div>
                                             </div>
+                                        </div>
 
-                                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto' }}>
-                                                <Link 
-                                                    href={`/case-studies/${cs.slug}`} 
-                                                    style={{ 
-                                                        fontSize: '13.5px', 
-                                                        fontWeight: '700', 
-                                                        color: '#0f172a', 
-                                                        display: 'inline-flex', 
-                                                        alignItems: 'center', 
-                                                        gap: '8px',
-                                                        textDecoration: 'none' 
-                                                    }}
-                                                >
-                                                    Read Full Case Study <i className="fal fa-arrow-right" style={{ fontSize: '12px' }}></i>
-                                                </Link>
-                                            </div>
+                                        <div className="prominence_card_footer" style={{ padding: '0 32px 32px', borderTop: 'none' }}>
+                                            <Link 
+                                                href={`/case-studies/${cs.slug}`} 
+                                                className="btn_style_ghost"
+                                                style={{ padding: 0 }}
+                                            >
+                                                Read Full Case Study <i className="fa-solid fa-arrow-right"></i>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -196,23 +194,29 @@ export default function CaseStudiesOverviewPage() {
                 </section>
 
                 {/* Final Consultation CTA */}
-                <section className="pt_90 pb_90" style={{ background: '#0a0f1d', color: '#fff', textAlign: 'center' }}>
+                <section className="pt_90 pb_90" style={{ background: '#0f1013', color: '#fff', textAlign: 'center' }}>
                     <div className="container">
                         <div style={{ maxWidth: '720px', margin: '0 auto' }}>
                             <div className="tag_text" style={{ marginBottom: '14px' }}>
                                 <h6 style={{ color: '#94a3b8' }}>Private Engagement</h6>
                             </div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#fff', marginBottom: '16px' }}>
+                            <h2 style={{
+                                fontSize: 'clamp(26px, 4vw, 36px)',
+                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                fontWeight: '700',
+                                color: '#fff',
+                                marginBottom: '16px'
+                            }}>
                                 Architect Your Own Executive Proof Story
                             </h2>
                             <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: '1.7', marginBottom: '32px' }}>
                                 Schedule a 30-minute private consultation with our managing partners to evaluate your current digital posture and define measurable authority milestones.
                             </p>
                             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <Link href="/contact" className="btn_style_one">
-                                    Book a Private Consultation
+                                <Link href="/contact" className="btn_style_gold">
+                                    Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
-                                <Link href="/how-it-works" className="btn_style_two">
+                                <Link href="/how-it-works" className="btn_style_two_dark">
                                     Review Methodology
                                 </Link>
                             </div>

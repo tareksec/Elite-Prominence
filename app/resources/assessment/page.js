@@ -146,7 +146,7 @@ export default function AssessmentPage() {
                             <div className="tag_text">
                                 <h6>Objective Self-Audit</h6>
                             </div>
-                            <h1 style={{ fontSize: '40px', fontWeight: '800', color: '#0f172a', lineHeight: '1.25', marginBottom: '16px' }}>
+                            <h1 style={{ fontSize: '40px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', lineHeight: '1.25', marginBottom: '16px' }}>
                                 Executive Digital Presence Assessment
                             </h1>
                             <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.7', margin: '0 auto' }}>
@@ -158,7 +158,7 @@ export default function AssessmentPage() {
                                 <div style={{ background: '#e2e8f0', borderRadius: '10px', height: '6px', overflow: 'hidden' }}>
                                     <div style={{ 
                                         width: `${progressPercent}%`, 
-                                        background: '#0f172a', 
+                                        background: '#0f1013', 
                                         height: '100%', 
                                         transition: 'width 0.3s ease' 
                                     }} />
@@ -186,11 +186,11 @@ export default function AssessmentPage() {
                                                     </span>
                                                     {answers[q.id] !== undefined && (
                                                         <span className="prominence_badge" style={{ fontSize: '11px', padding: '2px 10px' }}>
-                                                            <i className="fal fa-check" style={{ marginRight: '4px' }}></i> Evaluated
+                                                            <i className="fa-solid fa-check" style={{ marginRight: '4px' }}></i> Evaluated
                                                         </span>
                                                     )}
                                                 </div>
-                                                <h3 style={{ fontSize: '18px', fontWeight: '800', color: '#0f172a', marginBottom: '20px', lineHeight: '1.4' }}>
+                                                <h3 style={{ fontSize: '18px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '20px', lineHeight: '1.4' }}>
                                                     {q.subtitle}
                                                 </h3>
 
@@ -204,8 +204,8 @@ export default function AssessmentPage() {
                                                                 style={{ 
                                                                     padding: '16px 20px', 
                                                                     borderRadius: '8px', 
-                                                                    border: isSelected ? '1px solid #0f172a' : '1px solid #e2e8f0', 
-                                                                    background: isSelected ? '#f1f5f9' : '#fff', 
+                                                                    border: isSelected ? '1px solid #0f1013' : '1px solid #e2e8f0', 
+                                                                    background: isSelected ? '#f8fafc' : '#fff', 
                                                                     cursor: 'pointer',
                                                                     display: 'flex',
                                                                     alignItems: 'center',
@@ -217,11 +217,11 @@ export default function AssessmentPage() {
                                                                     width: '18px', 
                                                                     height: '18px', 
                                                                     borderRadius: '50%', 
-                                                                    border: isSelected ? '5px solid #0f172a' : '2px solid #cbd5e1', 
+                                                                    border: isSelected ? '5px solid #0f1013' : '2px solid #cbd5e1', 
                                                                     background: '#fff',
                                                                     flexShrink: 0
                                                                 }} />
-                                                                <span style={{ fontSize: '14.5px', color: isSelected ? '#0f172a' : '#475569', fontWeight: isSelected ? '600' : '400', lineHeight: '1.5' }}>
+                                                                <span style={{ fontSize: '14.5px', color: isSelected ? '#0f1013' : '#475569', fontWeight: isSelected ? '600' : '400', lineHeight: '1.5' }}>
                                                                     {opt.text}
                                                                 </span>
                                                             </div>
@@ -237,14 +237,10 @@ export default function AssessmentPage() {
                                                 onClick={() => setIsSubmitted(true)}
                                                 disabled={answeredCount < totalQuestions}
                                                 className="btn_style_one"
-                                                style={{ 
-                                                    cursor: answeredCount === totalQuestions ? 'pointer' : 'not-allowed',
-                                                    opacity: answeredCount === totalQuestions ? 1 : 0.5
-                                                }}
                                             >
                                                 {answeredCount === totalQuestions 
                                                     ? 'Calculate Executive Stature Score' 
-                                                    : `Complete All Questions (${answeredCount}/${totalQuestions})`}
+                                                    : `Complete All Questions (${answeredCount}/${totalQuestions})`} <i className="fa-solid fa-arrow-right"></i>
                                             </button>
                                         </div>
                                     </div>
@@ -254,135 +250,134 @@ export default function AssessmentPage() {
                             /* Results View */
                             <div className="row justify-content-center">
                                 <div className="col-lg-8">
-                                    
-                                    {/* Score Card */}
+                                                                     {/* Score Card */}
                                     <div className="prominence_card_dark" style={{ 
-                                        padding: '48px', 
-                                        textAlign: 'center',
-                                        marginBottom: '36px'
-                                    }}>
-                                        <span className="prominence_badge" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }}>
-                                            {tier.badge}
-                                        </span>
+                                         padding: '48px', 
+                                         textAlign: 'center',
+                                         marginBottom: '36px'
+                                     }}>
+                                         <span className="prominence_badge" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }}>
+                                             {tier.badge}
+                                         </span>
 
-                                        <div style={{ fontSize: '72px', fontWeight: '900', color: '#fff', marginTop: '20px', lineHeight: '1' }}>
-                                            {scorePercent}%
-                                        </div>
-                                        <h2 style={{ fontSize: '26px', fontWeight: '800', color: '#fff', marginTop: '12px', marginBottom: '16px' }}>
-                                            {tier.title}
-                                        </h2>
-                                        <p style={{ fontSize: '16px', color: '#94a3b8', lineHeight: '1.7', maxWidth: '600px', margin: '0 auto 24px' }}>
-                                            {tier.summary}
-                                        </p>
+                                         <div style={{ fontSize: '72px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginTop: '20px', lineHeight: '1' }}>
+                                             {scorePercent}%
+                                         </div>
+                                         <h2 style={{ fontSize: '26px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginTop: '12px', marginBottom: '16px' }}>
+                                             {tier.title}
+                                         </h2>
+                                         <p style={{ fontSize: '16px', color: '#94a3b8', lineHeight: '1.7', maxWidth: '600px', margin: '0 auto 24px' }}>
+                                             {tier.summary}
+                                         </p>
 
-                                        <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '10px', padding: '18px 24px', textAlign: 'left' }}>
-                                            <strong style={{ color: '#fff', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '4px' }}>
-                                                Recommended Strategic Priority:
-                                            </strong>
-                                            <p style={{ color: '#cbd5e1', margin: 0, fontSize: '14.5px', lineHeight: '1.6' }}>
-                                                {tier.priority}
-                                            </p>
-                                        </div>
-                                    </div>
+                                         <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '10px', padding: '18px 24px', textAlign: 'left' }}>
+                                             <strong style={{ color: '#fff', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '4px' }}>
+                                                 Recommended Strategic Priority:
+                                             </strong>
+                                             <p style={{ color: '#cbd5e1', margin: 0, fontSize: '14.5px', lineHeight: '1.6' }}>
+                                                 {tier.priority}
+                                             </p>
+                                         </div>
+                                     </div>
 
-                                    {/* Action Next Step: Private Consultation Booking */}
-                                    <div className="prominence_card" style={{ padding: '40px' }}>
-                                        <div className="section_title centred" style={{ marginBottom: '28px' }}>
-                                            <div className="tag_text">
-                                                <h6>Confidential Review</h6>
-                                            </div>
-                                            <h3 style={{ fontSize: '24px', fontWeight: '800', color: '#0f172a', marginTop: '8px' }}>
-                                                Review Your Score With a Prominence Partner
-                                            </h3>
-                                            <p style={{ color: '#64748b', fontSize: '15px', marginTop: '6px' }}>
-                                                Book a confidential 30-minute advisory call. We will review your score breakdown, inspect your current Google Page 1 footprint, and outline how to achieve Tier 1 Sovereign Stature.
-                                            </p>
-                                        </div>
+                                     {/* Action Next Step: Private Consultation Booking */}
+                                     <div className="prominence_card" style={{ padding: '40px' }}>
+                                         <div className="section_title centred" style={{ marginBottom: '28px' }}>
+                                             <div className="tag_text">
+                                                 <h6>Confidential Review</h6>
+                                             </div>
+                                             <h3 style={{ fontSize: '24px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginTop: '8px' }}>
+                                                 Review Your Score With a Prominence Partner
+                                             </h3>
+                                             <p style={{ color: '#64748b', fontSize: '15px', marginTop: '6px' }}>
+                                                 Book a confidential 30-minute advisory call. We will review your score breakdown, inspect your current Google Page 1 footprint, and outline how to achieve Tier 1 Sovereign Stature.
+                                             </p>
+                                         </div>
 
-                                        {!consultationBooked ? (
-                                            <form onSubmit={handleConsultationSubmit}>
-                                                <div className="row g-3">
-                                                    <div className="col-md-6">
-                                                        <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Full Name</label>
-                                                        <input 
-                                                            type="text" 
-                                                            required 
-                                                            value={leadName}
-                                                            onChange={(e) => setLeadName(e.target.value)}
-                                                            placeholder="e.g. Eleanor Vance" 
-                                                            style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
-                                                        />
-                                                    </div>
-                                                    <div className="col-md-6">
-                                                        <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Executive Email</label>
-                                                        <input 
-                                                            type="email" 
-                                                            required 
-                                                            value={leadEmail}
-                                                            onChange={(e) => setLeadEmail(e.target.value)}
-                                                            placeholder="e.g. eleanor@enterprise.com" 
-                                                            style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
-                                                        />
-                                                    </div>
-                                                    <div className="col-md-6">
-                                                        <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Executive Role</label>
-                                                        <input 
-                                                            type="text" 
-                                                            required 
-                                                            value={leadRole}
-                                                            onChange={(e) => setLeadRole(e.target.value)}
-                                                            placeholder="e.g. CEO, CHRO, Founder" 
-                                                            style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
-                                                        />
-                                                    </div>
-                                                    <div className="col-md-6">
-                                                        <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Organization / Firm</label>
-                                                        <input 
-                                                            type="text" 
-                                                            value={leadCompany}
-                                                            onChange={(e) => setLeadCompany(e.target.value)}
-                                                            placeholder="e.g. Global Tech Partners" 
-                                                            style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
-                                                        />
-                                                    </div>
-                                                    <div className="col-12 mt-4 text-center">
-                                                        <button 
-                                                            type="submit" 
-                                                            className="btn_style_one" 
-                                                            style={{ width: '100%' }}
-                                                        >
-                                                            Request Confidential Score Briefing ({scorePercent}% Stature)
-                                                        </button>
-                                                        <span style={{ display: 'block', marginTop: '14px', fontSize: '12px', color: '#94a3b8' }}>
-                                                            <i className="fal fa-shield-alt" style={{ marginRight: '4px' }}></i> Strict NDA applies. Your information is never sold, shared, or publicized.
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        ) : (
-                                            <div className="prominence_card" style={{ padding: '32px', textAlign: 'center', borderLeft: '4px solid #10b981' }}>
-                                                <div style={{ fontSize: '28px', color: '#10b981', marginBottom: '12px' }}>
-                                                    <i className="fal fa-check-circle"></i>
-                                                </div>
-                                                <h4 style={{ fontSize: '20px', fontWeight: '800', color: '#0f172a', marginBottom: '8px' }}>
-                                                    Briefing Request Received
-                                                </h4>
-                                                <p style={{ color: '#64748b', fontSize: '14.5px', margin: 0 }}>
-                                                    Thank you, {leadName}. Our managing partner will review your {scorePercent}% evaluation and reach out directly at {leadEmail} to coordinate your private consultation.
-                                                </p>
-                                            </div>
-                                        )}
+                                         {!consultationBooked ? (
+                                             <form onSubmit={handleConsultationSubmit}>
+                                                 <div className="row g-3">
+                                                     <div className="col-md-6">
+                                                         <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Full Name</label>
+                                                         <input 
+                                                             type="text" 
+                                                             required 
+                                                             value={leadName}
+                                                             onChange={(e) => setLeadName(e.target.value)}
+                                                             placeholder="e.g. Eleanor Vance" 
+                                                             style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
+                                                         />
+                                                     </div>
+                                                     <div className="col-md-6">
+                                                         <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Executive Email</label>
+                                                         <input 
+                                                             type="email" 
+                                                             required 
+                                                             value={leadEmail}
+                                                             onChange={(e) => setLeadEmail(e.target.value)}
+                                                             placeholder="e.g. eleanor@enterprise.com" 
+                                                             style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
+                                                         />
+                                                     </div>
+                                                     <div className="col-md-6">
+                                                         <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Executive Role</label>
+                                                         <input 
+                                                             type="text" 
+                                                             required 
+                                                             value={leadRole}
+                                                             onChange={(e) => setLeadRole(e.target.value)}
+                                                             placeholder="e.g. CEO, CHRO, Founder" 
+                                                             style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
+                                                         />
+                                                     </div>
+                                                     <div className="col-md-6">
+                                                         <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Organization / Firm</label>
+                                                         <input 
+                                                             type="text" 
+                                                             value={leadCompany}
+                                                             onChange={(e) => setLeadCompany(e.target.value)}
+                                                             placeholder="e.g. Global Tech Partners" 
+                                                             style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
+                                                         />
+                                                     </div>
+                                                     <div className="col-12 mt-4 text-center">
+                                                         <button 
+                                                             type="submit" 
+                                                             className="btn_style_one btn_block btn_lg"
+                                                         >
+                                                             Request Confidential Score Briefing ({scorePercent}% Stature) <i className="fa-solid fa-arrow-right"></i>
+                                                         </button>
+                                                         <span style={{ display: 'block', marginTop: '14px', fontSize: '12px', color: '#94a3b8' }}>
+                                                             <i className="fa-solid fa-shield-halved" style={{ color: '#b89058', marginRight: '6px' }}></i> Strict NDA applies. Your information is never sold, shared, or publicized.
+                                                         </span>
+                                                     </div>
+                                                 </div>
+                                             </form>
+                                         ) : (
+                                             <div className="prominence_card" style={{ padding: '32px', textAlign: 'center', borderLeft: '4px solid #b89058' }}>
+                                                 <div style={{ fontSize: '28px', color: '#b89058', marginBottom: '12px' }}>
+                                                     <i className="fa-solid fa-circle-check"></i>
+                                                 </div>
+                                                 <h4 style={{ fontSize: '20px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '8px' }}>
+                                                     Briefing Request Received
+                                                 </h4>
+                                                 <p style={{ color: '#64748b', fontSize: '14.5px', margin: 0 }}>
+                                                     Thank you, {leadName}. Our managing partner will review your {scorePercent}% evaluation and reach out directly at {leadEmail} to coordinate your private consultation.
+                                                 </p>
+                                             </div>
+                                         )}
 
-                                        <div style={{ textAlign: 'center', marginTop: '24px' }}>
-                                            <button 
-                                                onClick={() => { setIsSubmitted(false); setConsultationBooked(false); }}
-                                                style={{ background: 'none', border: 'none', color: '#64748b', fontWeight: '600', fontSize: '13.5px', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
-                                            >
-                                                <i className="fal fa-arrow-left" style={{ fontSize: '11px' }}></i> Retake Assessment
-                                            </button>
-                                        </div>
-                                    </div>
-
+                                         <div style={{ textAlign: 'center', marginTop: '24px' }}>
+                                             <button 
+                                                 type="button"
+                                                 onClick={() => { setIsSubmitted(false); setConsultationBooked(false); }}
+                                                 className="btn_style_ghost"
+                                                 style={{ border: 'none', background: 'transparent' }}
+                                             >
+                                                 <i className="fa-solid fa-arrow-left"></i> Retake Assessment
+                                             </button>
+                                         </div>
+                                     </div>
                                 </div>
                             </div>
                         )}

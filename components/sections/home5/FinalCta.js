@@ -27,7 +27,8 @@ export default function FinalCta() {
                         fontWeight: "700",
                         color: "#0f1013",
                         marginBottom: "16px",
-                        lineHeight: "1.25"
+                        lineHeight: "1.25",
+                        fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
                     }}>
                         Ready to Command Sovereign Stature?
                     </h2>
@@ -41,10 +42,10 @@ export default function FinalCta() {
                     </p>
                     <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
                         <Link href="/contact" className="btn_style_one">
-                            Book a Private Consultation
+                            Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                         </Link>
                         <Link href="/resources/assessment" className="btn_style_two">
-                            Evaluate Your Stature <i className="fa-solid fa-angle-right ms-2" style={{ fontSize: "12px" }}></i>
+                            Evaluate Your Stature <i className="fa-solid fa-arrow-right"></i>
                         </Link>
                     </div>
                 </div>

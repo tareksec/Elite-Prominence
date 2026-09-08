@@ -118,10 +118,10 @@ export default function SolutionDetailPage({ params }) {
                                 <div className="tag_text" style={{ marginBottom: "16px" }}>
                                     <h6>{solution.badge}</h6>
                                 </div>
-                                <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#0f1013", lineHeight: "1.2", marginBottom: "16px" }}>
+                                <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#0f1013", lineHeight: "1.2", marginBottom: "16px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
                                     {solution.title}
                                 </h1>
-                                <p style={{ fontSize: "18px", fontWeight: "600", color: "#2460e2", marginBottom: "18px", fontFamily: "var(--primary-font)" }}>
+                                <p style={{ fontSize: "17px", fontWeight: "700", color: "#b89058", marginBottom: "18px", fontFamily: "var(--primary-font)", letterSpacing: "0.2px" }}>
                                     {solution.subtitle}
                                 </p>
                                 <p style={{ fontSize: "17px", color: "#475569", lineHeight: "28px", marginBottom: "32px", maxWidth: "620px" }}>
@@ -129,10 +129,10 @@ export default function SolutionDetailPage({ params }) {
                                 </p>
                                 <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
                                     <Link href="/contact" className="btn_style_one">
-                                        Book a Private Consultation
+                                        Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                     <Link href="/resources/assessment" className="btn_style_two">
-                                        Audit Your Stature <i className="fa-solid fa-angle-right ms-2" style={{ fontSize: "12px" }}></i>
+                                        Audit Your Stature <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
                             </div>
@@ -161,7 +161,7 @@ export default function SolutionDetailPage({ params }) {
                             <div className="tag_text">
                                 <h6>The Reputation Landscape</h6>
                             </div>
-                            <h2>Distinct Reputation Pressures You Face</h2>
+                            <h2 style={{ fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>Distinct Reputation Pressures You Face</h2>
                             <p style={{ color: "#59606a", fontSize: "17px", marginTop: "12px", lineHeight: "28px" }}>
                                 High-profile leadership carries specific reputational vulnerabilities that generic PR agencies fail to comprehend.
                             </p>
@@ -200,7 +200,7 @@ export default function SolutionDetailPage({ params }) {
                             <div className="tag_text">
                                 <h6>Bespoke Architecture</h6>
                             </div>
-                            <h2>How Prominence Architects Your Sovereign Presence</h2>
+                            <h2 style={{ fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>How Prominence Architects Your Sovereign Presence</h2>
                             <p style={{ color: "#59606a", fontSize: "17px", marginTop: "12px", lineHeight: "28px" }}>
                                 A turnkey operational framework that protects, amplifies, and monetizes your executive authority.
                             </p>
@@ -240,7 +240,7 @@ export default function SolutionDetailPage({ params }) {
                             <div className="tag_text">
                                 <h6>Core Capabilities</h6>
                             </div>
-                            <h2>Tailored Capability Combination</h2>
+                            <h2 style={{ fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>Tailored Capability Combination</h2>
                             <p style={{ color: "#59606a", fontSize: "16px", marginTop: "8px", lineHeight: "26px" }}>
                                 Recommended foundational pillars for this executive profile.
                             </p>
@@ -249,18 +249,22 @@ export default function SolutionDetailPage({ params }) {
                         <div className="row">
                             {solution.relevantServices.map((srv, idx) => (
                                 <div key={idx} className="col-lg-4 col-md-6 mb_20">
-                                    <div style={{ background: "#fafbfc", border: "1px solid #e2e8f0", borderRadius: "10px", padding: "26px", height: "100%", display: "flex", flexDirection: "column" }}>
-                                        <h3 style={{ fontSize: "18px", fontWeight: "700", marginBottom: "10px" }}>
-                                            <Link href={`/services/${srv.slug}`} style={{ color: "#0f1013", textDecoration: "none" }}>
-                                                {srv.name}
+                                    <div className="prominence_card_equal_height" style={{ background: "#fafbfc", border: "1px solid #e2e8f0", borderRadius: "12px", padding: "26px" }}>
+                                        <div className="prominence_card_body">
+                                            <h3 style={{ fontSize: "18px", fontWeight: "700", marginBottom: "10px" }}>
+                                                <Link href={`/services/${srv.slug}`} style={{ color: "#0f1013", textDecoration: "none" }}>
+                                                    {srv.name}
+                                                </Link>
+                                            </h3>
+                                            <p style={{ fontSize: "14px", color: "#64748b", lineHeight: "22px", margin: 0 }}>
+                                                {srv.desc}
+                                            </p>
+                                        </div>
+                                        <div className="prominence_card_footer" style={{ marginTop: "16px" }}>
+                                            <Link href={`/services/${srv.slug}`} className="btn_style_ghost">
+                                                Explore Pillar Scope <i className="fa-solid fa-arrow-right"></i>
                                             </Link>
-                                        </h3>
-                                        <p style={{ fontSize: "14px", color: "#64748b", lineHeight: "22px", flex: 1, marginBottom: "16px" }}>
-                                            {srv.desc}
-                                        </p>
-                                        <Link href={`/services/${srv.slug}`} style={{ fontSize: "13px", fontWeight: "700", color: "#0f1013", textDecoration: "none", fontFamily: "var(--primary-font)" }}>
-                                            Explore Pillar Scope <i className="fa-solid fa-angle-right ms-1"></i>
-                                        </Link>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -270,14 +274,14 @@ export default function SolutionDetailPage({ params }) {
 
                 {/* Case Vignette Callout */}
                 {solution.caseVignette && (
-                    <section className="pt_90 pb_90" style={{ background: "#FAF8F2", borderTop: "1px solid #e5e3db", borderBottom: "1px solid #e5e3db" }}>
+                    <section className="pt_90 pb_90" style={{ background: "#fafbfc", borderTop: "1px solid #eaedf0", borderBottom: "1px solid #eaedf0" }}>
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6 mb_30 mb-lg-0">
                                     <div className="tag_text" style={{ marginBottom: "14px" }}>
                                         <h6>Proof Vignette</h6>
                                     </div>
-                                    <h2 style={{ fontSize: "30px", fontWeight: "700", color: "#162d20", marginBottom: "20px" }}>
+                                    <h2 style={{ fontSize: "30px", fontWeight: "700", color: "#0f1013", marginBottom: "20px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
                                         {solution.caseVignette.title}
                                     </h2>
                                     <div style={{ marginBottom: "18px" }}>
@@ -289,7 +293,7 @@ export default function SolutionDetailPage({ params }) {
                                         </p>
                                     </div>
                                     <div style={{ marginBottom: "18px" }}>
-                                        <h4 style={{ fontSize: "12px", fontWeight: "700", color: "#1e3a8a", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "4px", fontFamily: "var(--primary-font)" }}>
+                                        <h4 style={{ fontSize: "12px", fontWeight: "700", color: "#b89058", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "4px", fontFamily: "var(--primary-font)" }}>
                                             Strategic Intervention:
                                         </h4>
                                         <p style={{ color: "#334155", fontSize: "15px", lineHeight: "24px" }}>
@@ -300,15 +304,15 @@ export default function SolutionDetailPage({ params }) {
                                         <h4 style={{ fontSize: "12px", fontWeight: "700", color: "#166534", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "4px", fontFamily: "var(--primary-font)" }}>
                                             Verified Outcome:
                                         </h4>
-                                        <p style={{ color: "#162d20", fontSize: "15px", fontWeight: "700", lineHeight: "24px" }}>
+                                        <p style={{ color: "#0f1013", fontSize: "15px", fontWeight: "700", lineHeight: "24px" }}>
                                             {solution.caseVignette.outcome}
                                         </p>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div style={{ background: "#ffffff", border: "1px solid #e5e3db", borderRadius: "14px", padding: "40px", boxShadow: "0 6px 24px rgba(0,0,0,0.03)" }}>
+                                    <div style={{ background: "#ffffff", border: "1px solid #eaedf0", borderRadius: "14px", padding: "40px", boxShadow: "0 4px 18px rgba(15, 16, 19, 0.03)" }}>
                                         <p style={{ fontSize: "17px", color: "#1e293b", fontStyle: "italic", lineHeight: "28px", marginBottom: "20px" }}>
-                                            "{solution.caseVignette.quote}"
+                                            &ldquo;{solution.caseVignette.quote}&rdquo;
                                         </p>
                                         <div>
                                             <p style={{ fontSize: "14px", color: "#64748b", margin: 0, fontWeight: "600" }}>
@@ -356,7 +360,7 @@ export default function SolutionDetailPage({ params }) {
                             <div className="tag_text" style={{ marginBottom: "16px" }}>
                                 <h6>Private Engagement</h6>
                             </div>
-                            <h2 style={{ fontSize: "38px", fontWeight: "700", color: "#0f1013", marginBottom: "16px" }}>
+                            <h2 style={{ fontSize: "38px", fontWeight: "700", color: "#0f1013", marginBottom: "16px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
                                 Align Your Digital Reputation With Your Leadership Mandate
                             </h2>
                             <p style={{ color: "#59606a", fontSize: "17px", lineHeight: "28px", marginBottom: "32px" }}>
@@ -364,10 +368,10 @@ export default function SolutionDetailPage({ params }) {
                             </p>
                             <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
                                 <Link href="/contact" className="btn_style_one">
-                                    Book a Private Consultation
+                                    Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                                 <Link href="/resources/assessment" className="btn_style_two">
-                                    Take 3-Min Assessment <i className="fa-solid fa-angle-right ms-2" style={{ fontSize: "12px" }}></i>
+                                    Take 3-Min Assessment <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>
                         </div>

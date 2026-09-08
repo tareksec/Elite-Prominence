@@ -141,7 +141,7 @@ export default function CommunityPage() {
         <div className="boxed_wrapper">
             <Layout headerStyle={4} footerStyle={1}>
                 <section style={{
-                    backgroundColor: "#f8fafd",
+                    backgroundColor: "#f8fafc",
                     padding: "100px 0 100px",
                     minHeight: "80vh",
                     fontFamily: "var(--primary-font)"
@@ -150,30 +150,43 @@ export default function CommunityPage() {
                     {!configured && <SupabaseSetupNotice feature="Community Directory & Approved Thought Leadership" />}
 
                     {/* Hero Header */}
-                    <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 40px" }}>
+                    <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 48px" }}>
                         <span className="prominence_badge">
                             Executive Directory
                         </span>
-                        <h1 style={{ fontSize: "clamp(28px, 5.5vw, 44px)", fontWeight: "700", color: "#1b2534", marginBottom: "18px", lineHeight: "1.25" }}>
+                        <h1 style={{
+                            fontSize: "clamp(28px, 5vw, 44px)",
+                            fontWeight: "700",
+                            color: "#0f1013",
+                            marginBottom: "18px",
+                            lineHeight: "1.25",
+                            fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                        }}>
                             Executive Community &amp; Contributors
                         </h1>
-                        <p style={{ fontSize: "clamp(16px, 2.5vw, 19px)", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
-                            The Elite Prominence Executive Community is an invitation-only collective of senior HR executives, Chief People Officers, and board talent advisors. We empower leaders to translate their operational wisdom into high-visibility personal authority, Google search prominence, and meaningful board advisory appointments.
+                        <p style={{ fontSize: "clamp(16px, 2.5vw, 18px)", color: "#59606a", lineHeight: "1.7", margin: "0 0 26px" }}>
+                            The Elite Prominence Executive Community is an invitation-only collective of senior HR executives, Chief People Officers, and board talent advisors. We empower leaders to translate their operational wisdom into high-visibility personal authority, Google search prominence, and meaningful board appointments.
                         </p>
 
-                        <div style={{ marginTop: "26px" }}>
+                        <div>
                             <Link
                                 href="/signup"
                                 className="btn_style_one"
                             >
-                                Join the Network
+                                Join the Network <i className="fa-solid fa-arrow-right"></i>
                             </Link>
                         </div>
                     </div>
 
                     {/* Member Cards Grid */}
                     <div style={{ textAlign: "center", marginBottom: "32px" }}>
-                        <h2 style={{ fontSize: "clamp(22px, 4vw, 28px)", fontWeight: "700", color: "#1b2534", margin: 0 }}>
+                        <h2 style={{
+                            fontSize: "clamp(22px, 3.5vw, 28px)",
+                            fontWeight: "700",
+                            color: "#0f1013",
+                            margin: 0,
+                            fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                        }}>
                             Directory of Executive Contributors
                         </h2>
                     </div>
@@ -184,115 +197,111 @@ export default function CommunityPage() {
                         marginBottom: "60px"
                     }}>
                         {members.map((member) => (
-                            <div key={member.id} className="community_card" style={{
+                            <div key={member.id} className="community_card prominence_card_equal_height" style={{
                                 backgroundColor: "#ffffff",
                                 borderRadius: "16px",
                                 padding: "32px 28px",
-                                border: "1px solid #e2e8f0",
+                                border: "1px solid #eaedf0",
                                 boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)",
                                 overflowWrap: "break-word",
-                                wordBreak: "break-word"
+                                wordBreak: "break-word",
+                                transition: "all 0.3s ease"
                             }}>
-                                <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "18px" }}>
-                                    <div style={{
-                                        width: "56px",
-                                        height: "56px",
-                                        borderRadius: "50%",
-                                        background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
-                                        color: "#ffffff",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        fontSize: "20px",
-                                        fontWeight: "700",
-                                        flexShrink: 0
-                                    }}>
-                                        {member.full_name?.charAt(0) || 'E'}
-                                    </div>
-                                    <div>
-                                        <h3 style={{ margin: "0 0 4px", fontSize: "20px", fontWeight: "700", color: "#1b2534" }}>
-                                            {member.full_name}
-                                        </h3>
-                                        <div style={{ fontSize: "14px", color: "#64748b", fontStyle: "italic" }}>
-                                            {member.role_title || 'Executive Leader'} {member.company ? `• ${member.company}` : ''}
+                                <div className="prominence_card_body">
+                                    <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "18px" }}>
+                                        <div style={{
+                                            width: "56px",
+                                            height: "56px",
+                                            borderRadius: "50%",
+                                            background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
+                                            color: "#ffffff",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "center",
+                                            fontSize: "20px",
+                                            fontWeight: "700",
+                                            flexShrink: 0
+                                        }}>
+                                            {member.full_name?.charAt(0) || 'E'}
+                                        </div>
+                                        <div>
+                                            <h3 style={{ margin: "0 0 4px", fontSize: "20px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)" }}>
+                                                {member.full_name}
+                                            </h3>
+                                            <div style={{ fontSize: "14px", color: "#64748b", fontStyle: "italic" }}>
+                                                {member.role_title || 'Executive Leader'} {member.company ? `• ${member.company}` : ''}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div style={{
-                                    display: "flex",
-                                    gap: "12px",
-                                    marginBottom: "16px",
-                                    fontSize: "13px",
-                                    color: "#475569",
-                                    borderTop: "1px solid #edf2f7",
-                                    borderBottom: "1px solid #edf2f7",
-                                    padding: "10px 0",
-                                    flexWrap: "wrap"
-                                }}>
-                                    <span>
-                                        <strong>{member.approved_articles_count}</strong> {member.approved_articles_count === 1 ? 'Article' : 'Articles'}
-                                    </span>
-                                    <span>•</span>
-                                    <span>
-                                        <strong>{member.approved_reviews_count}</strong> {member.approved_reviews_count === 1 ? 'Endorsement' : 'Endorsements'}
-                                    </span>
-                                    {member.location && (
-                                        <>
-                                            <span>•</span>
-                                            <span><i className="fal fa-map-marker-alt" style={{ marginRight: "4px" }}></i>{member.location}</span>
-                                        </>
+                                    <div style={{
+                                        display: "flex",
+                                        gap: "12px",
+                                        marginBottom: "16px",
+                                        fontSize: "13px",
+                                        color: "#475569",
+                                        borderTop: "1px solid #edf2f7",
+                                        borderBottom: "1px solid #edf2f7",
+                                        padding: "10px 0",
+                                        flexWrap: "wrap"
+                                    }}>
+                                        <span>
+                                            <strong>{member.approved_articles_count}</strong> {member.approved_articles_count === 1 ? 'Article' : 'Articles'}
+                                        </span>
+                                        <span>•</span>
+                                        <span>
+                                            <strong>{member.approved_reviews_count}</strong> {member.approved_reviews_count === 1 ? 'Endorsement' : 'Endorsements'}
+                                        </span>
+                                        {member.location && (
+                                            <>
+                                                <span>•</span>
+                                                <span><i className="fal fa-map-marker-alt" style={{ marginRight: "4px" }}></i>{member.location}</span>
+                                            </>
+                                        )}
+                                    </div>
+
+                                    {member.articles && member.articles.length > 0 ? (
+                                        <div style={{ marginBottom: "18px" }}>
+                                            <div style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#64748b", marginBottom: "10px" }}>
+                                                Featured Writing:
+                                            </div>
+                                            {member.articles.slice(0, 2).map(art => (
+                                                <div 
+                                                    key={art.id} 
+                                                    onClick={() => setSelectedArticle({ ...art, author: member.full_name, role_title: member.role_title })}
+                                                    style={{
+                                                        backgroundColor: "#f8fafc",
+                                                        padding: "12px 14px",
+                                                        borderRadius: "8px",
+                                                        cursor: "pointer",
+                                                        marginBottom: "8px",
+                                                        transition: "all 0.2s ease",
+                                                        border: "1px solid #eaedf0"
+                                                    }}
+                                                >
+                                                    <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#b89058", marginBottom: "2px" }}>
+                                                        {art.category}
+                                                    </div>
+                                                    <div style={{ fontSize: "14px", fontWeight: "700", color: "#0f1013", lineHeight: "1.4" }}>
+                                                        {art.title} <i className="fa-solid fa-arrow-right ms-1" style={{ fontSize: "11px" }}></i>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        <div style={{ fontSize: "14px", color: "#94a3b8", fontStyle: "italic", marginBottom: "18px" }}>
+                                            Verified executive member of Prominence Network.
+                                        </div>
                                     )}
                                 </div>
 
-                                {member.articles && member.articles.length > 0 ? (
-                                    <div style={{ marginBottom: "18px" }}>
-                                        <div style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#64748b", marginBottom: "10px" }}>
-                                            Featured Writing:
-                                        </div>
-                                        {member.articles.slice(0, 2).map(art => (
-                                            <div 
-                                                key={art.id} 
-                                                onClick={() => setSelectedArticle({ ...art, author: member.full_name, role_title: member.role_title })}
-                                                style={{
-                                                    backgroundColor: "#f8fafd",
-                                                    padding: "12px 14px",
-                                                    borderRadius: "8px",
-                                                    cursor: "pointer",
-                                                    marginBottom: "8px",
-                                                    transition: "all 0.2s ease",
-                                                    border: "1px solid #e2e8f0"
-                                                }}
-                                            >
-                                                <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", color: "#162d20", marginBottom: "2px" }}>
-                                                    {art.category}
-                                                </div>
-                                                <div style={{ fontSize: "14px", fontWeight: "700", color: "#1b2534", lineHeight: "1.4" }}>
-                                                    {art.title} <i className="fal fa-arrow-right" style={{ fontSize: "11px", marginLeft: "4px" }}></i>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                ) : (
-                                    <div style={{ fontSize: "14px", color: "#94a3b8", fontStyle: "italic", marginBottom: "18px" }}>
-                                        Verified executive member of Elite Prominence Network.
-                                    </div>
-                                )}
-
-                                <div style={{ borderTop: "1px solid #edf2f7", paddingTop: "14px" }}>
+                                <div className="prominence_card_footer" style={{ borderTop: "1px solid #eaedf0", paddingTop: "14px" }}>
                                     <Link
                                         href={`/community/${member.id}`}
-                                        style={{
-                                            color: "#162d20",
-                                            fontWeight: "800",
-                                            fontSize: "14px",
-                                            textDecoration: "none",
-                                            display: "inline-flex",
-                                            alignItems: "center",
-                                            gap: "6px"
-                                        }}
+                                        className="btn_style_ghost"
+                                        style={{ padding: 0 }}
                                     >
-                                        View Full Executive Profile & Articles &rarr;
+                                        View Executive Profile &amp; Perspectives <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
                             </div>
@@ -313,7 +322,13 @@ export default function CommunityPage() {
                             <span className="prominence_badge">
                                 Network Architecture
                             </span>
-                            <h2 style={{ fontSize: "clamp(24px, 4.5vw, 34px)", fontWeight: "700", color: "#1b2534", marginBottom: "16px" }}>
+                            <h2 style={{
+                                fontSize: "clamp(24px, 4.5vw, 34px)",
+                                fontWeight: "700",
+                                color: "#0f1013",
+                                marginBottom: "16px",
+                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                            }}>
                                 Four Pillars of the Elite Prominence Network
                             </h2>
                             <p style={{ fontSize: "16px", color: "#64748b", lineHeight: "1.7", margin: 0 }}>
@@ -329,14 +344,14 @@ export default function CommunityPage() {
                             <div style={{
                                 padding: "30px 24px",
                                 borderRadius: "14px",
-                                backgroundColor: "#f8fafd",
+                                backgroundColor: "#f8fafc",
                                 border: "1px solid #e2e8f0"
                             }}>
                                 <div style={{
                                     width: "44px",
                                     height: "44px",
                                     borderRadius: "10px",
-                                    backgroundColor: "#0D1322",
+                                    backgroundColor: "#0f1013",
                                     color: "#ffffff",
                                     display: "flex",
                                     alignItems: "center",
@@ -347,7 +362,7 @@ export default function CommunityPage() {
                                 }}>
                                     01
                                 </div>
-                                <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#1b2534", marginBottom: "10px" }}>
+                                <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginBottom: "10px" }}>
                                     Selective Peer Assembly
                                 </h3>
                                 <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.7", margin: 0 }}>
@@ -365,7 +380,7 @@ export default function CommunityPage() {
                                     width: "44px",
                                     height: "44px",
                                     borderRadius: "10px",
-                                    backgroundColor: "#0D1322",
+                                    backgroundColor: "#0f1013",
                                     color: "#ffffff",
                                     display: "flex",
                                     alignItems: "center",
@@ -376,7 +391,7 @@ export default function CommunityPage() {
                                 }}>
                                     02
                                 </div>
-                                <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#1b2534", marginBottom: "10px" }}>
+                                <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginBottom: "10px" }}>
                                     Editorial Governance &amp; Rigor
                                 </h3>
                                 <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.7", margin: 0 }}>
@@ -394,7 +409,7 @@ export default function CommunityPage() {
                                     width: "44px",
                                     height: "44px",
                                     borderRadius: "10px",
-                                    backgroundColor: "#0D1322",
+                                    backgroundColor: "#0f1013",
                                     color: "#ffffff",
                                     display: "flex",
                                     alignItems: "center",
@@ -405,7 +420,7 @@ export default function CommunityPage() {
                                 }}>
                                     03
                                 </div>
-                                <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#1b2534", marginBottom: "10px" }}>
+                                <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginBottom: "10px" }}>
                                     Google Search &amp; Entity Authority
                                 </h3>
                                 <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.7", margin: 0 }}>
@@ -423,7 +438,7 @@ export default function CommunityPage() {
                                     width: "44px",
                                     height: "44px",
                                     borderRadius: "10px",
-                                    backgroundColor: "#0D1322",
+                                    backgroundColor: "#0f1013",
                                     color: "#ffffff",
                                     display: "flex",
                                     alignItems: "center",
@@ -470,10 +485,10 @@ export default function CommunityPage() {
                                 border: "1px solid #e2e8f0",
                                 position: "relative"
                             }}>
-                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#0D1322", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
+                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#0f1013", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontFamily: "var(--primary-font)" }}>
                                     Stage 01
                                 </div>
-                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1b2534", marginBottom: "12px" }}>
+                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginBottom: "12px" }}>
                                     Executive Verification &amp; Profile Build
                                 </h3>
                                 <p style={{ fontSize: "14px", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
@@ -488,10 +503,10 @@ export default function CommunityPage() {
                                 border: "1px solid #e2e8f0",
                                 position: "relative"
                             }}>
-                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#0D1322", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
+                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#0f1013", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontFamily: "var(--primary-font)" }}>
                                     Stage 02
                                 </div>
-                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1b2534", marginBottom: "12px" }}>
+                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginBottom: "12px" }}>
                                     Framework Co-Creation &amp; Review
                                 </h3>
                                 <p style={{ fontSize: "14px", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
@@ -506,10 +521,10 @@ export default function CommunityPage() {
                                 border: "1px solid #e2e8f0",
                                 position: "relative"
                             }}>
-                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#0D1322", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
+                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#0f1013", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontFamily: "var(--primary-font)" }}>
                                     Stage 03
                                 </div>
-                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1b2534", marginBottom: "12px" }}>
+                                <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginBottom: "12px" }}>
                                     Directory Indexing &amp; Distribution
                                 </h3>
                                 <p style={{ fontSize: "14px", color: "#59606a", lineHeight: "1.7", margin: 0 }}>
@@ -524,26 +539,29 @@ export default function CommunityPage() {
                         marginBottom: "70px",
                         padding: "50px 36px",
                         borderRadius: "18px",
-                        backgroundColor: "#1b2534",
+                        backgroundColor: "#0f1013",
+                        border: "1px solid rgba(255, 255, 255, 0.1)",
+                        boxShadow: "0 16px 40px rgba(0, 0, 0, 0.35)",
                         color: "#ffffff"
                     }}>
                         <div style={{ maxWidth: "720px", marginBottom: "36px" }}>
                             <span style={{
                                 display: "inline-block",
-                                fontSize: "12px",
+                                fontSize: "11.5px",
                                 fontWeight: "700",
-                                letterSpacing: "1.5px",
+                                letterSpacing: "1.2px",
                                 textTransform: "uppercase",
-                                color: "#c4b5fd",
-                                backgroundColor: "rgba(196, 181, 253, 0.15)",
-                                border: "1px solid rgba(196, 181, 253, 0.3)",
+                                color: "#b89058",
+                                backgroundColor: "rgba(184, 144, 88, 0.12)",
+                                border: "1px solid rgba(184, 144, 88, 0.3)",
                                 padding: "4px 14px",
-                                borderRadius: "20px",
+                                borderRadius: "9999px",
+                                fontFamily: "var(--primary-font)",
                                 marginBottom: "12px"
                             }}>
                                 Integrity &amp; Standards
                             </span>
-                            <h2 style={{ fontSize: "clamp(24px, 4.5vw, 32px)", fontWeight: "700", color: "#ffffff", marginBottom: "12px" }}>
+                            <h2 style={{ fontSize: "clamp(24px, 4.5vw, 32px)", fontWeight: "700", color: "#ffffff", fontFamily: "var(--primary-font)", marginBottom: "12px" }}>
                                 Editorial Principles &amp; Governance
                             </h2>
                             <p style={{ fontSize: "15px", color: "#cbd5e1", lineHeight: "1.7", margin: 0 }}>
@@ -606,7 +624,13 @@ export default function CommunityPage() {
                             <span className="prominence_badge">
                                 Got Questions?
                             </span>
-                            <h2 style={{ fontSize: "clamp(24px, 4.5vw, 32px)", fontWeight: "700", color: "#1b2534", margin: 0 }}>
+                            <h2 style={{
+                                fontSize: "clamp(24px, 4.5vw, 32px)",
+                                fontWeight: "700",
+                                color: "#0f1013",
+                                margin: 0,
+                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                            }}>
                                 Frequently Asked Questions About the Community
                             </h2>
                         </div>
@@ -657,12 +681,12 @@ export default function CommunityPage() {
                                             fontFamily: "inherit"
                                         }}
                                     >
-                                        <span style={{ fontSize: "16px", fontWeight: "700", color: "#1b2534" }}>
+                                        <span style={{ fontSize: "16px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)" }}>
                                             {faq.q}
                                         </span>
                                         <span style={{
                                             fontSize: "20px",
-                                            color: "#0D1322",
+                                            color: "#0f1013",
                                             fontWeight: "700",
                                             transition: "transform 0.2s ease",
                                             transform: openFaq === idx ? "rotate(45deg)" : "rotate(0deg)"
@@ -696,7 +720,13 @@ export default function CommunityPage() {
                         boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
                         marginBottom: "40px"
                     }}>
-                        <h2 style={{ fontSize: "clamp(24px, 4.5vw, 36px)", fontWeight: "700", color: "#ffffff", marginBottom: "16px" }}>
+                        <h2 style={{
+                            fontSize: "clamp(24px, 4.5vw, 36px)",
+                            fontWeight: "700",
+                            color: "#ffffff",
+                            marginBottom: "16px",
+                            fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                        }}>
                             Ready to Claim Your Place in the Executive Network?
                         </h2>
                         <p style={{ fontSize: "16px", color: "#cbd5e1", maxWidth: "640px", margin: "0 auto 32px", lineHeight: "1.7" }}>
@@ -705,22 +735,13 @@ export default function CommunityPage() {
                         <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
                             <Link
                                 href="/signup"
-                                className="btn_style_one"
+                                className="btn_style_gold"
                             >
-                                Apply for Directory Status <i className="fal fa-long-arrow-right"></i>
+                                Apply for Directory Status <i className="fa-solid fa-arrow-right"></i>
                             </Link>
                             <Link
                                 href="/contact"
-                                style={{
-                                    backgroundColor: "transparent",
-                                    color: "#ffffff",
-                                    padding: "14px 32px",
-                                    borderRadius: "30px",
-                                    fontSize: "15px",
-                                    fontWeight: "700",
-                                    textDecoration: "none",
-                                    border: "1px solid rgba(255, 255, 255, 0.3)"
-                                }}
+                                className="btn_style_two_dark"
                             >
                                 Book Confidential Strategy Call
                             </Link>
@@ -779,19 +800,20 @@ export default function CommunityPage() {
                                 </button>
 
                                 <span style={{
-                                    fontSize: "12px",
+                                    fontSize: "11.5px",
                                     fontWeight: "700",
                                     textTransform: "uppercase",
-                                    color: "#0D1322", backgroundColor: "rgba(13, 19, 34, 0.05)", border: "1px solid rgba(13, 19, 34, 0.12)",
+                                    color: "#b89058", backgroundColor: "rgba(184, 144, 88, 0.10)", border: "1px solid rgba(184, 144, 88, 0.25)",
                                     padding: "3px 12px",
-                                    borderRadius: "12px",
+                                    borderRadius: "9999px",
                                     display: "inline-block",
-                                    marginBottom: "12px"
+                                    marginBottom: "12px",
+                                    fontFamily: "var(--primary-font)"
                                 }}>
                                     {selectedArticle.category}
                                 </span>
 
-                                <h2 style={{ fontSize: "clamp(22px, 4.5vw, 28px)", fontWeight: "700", color: "#1b2534", marginBottom: "8px", lineHeight: "1.3" }}>
+                                <h2 style={{ fontSize: "clamp(22px, 4.5vw, 28px)", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginBottom: "8px", lineHeight: "1.3" }}>
                                     {selectedArticle.title}
                                 </h2>
 

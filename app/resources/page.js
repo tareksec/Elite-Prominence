@@ -103,7 +103,14 @@ export default function ResourcesOverviewPage() {
                             <div className="tag_text">
                                 <h6>Executive Toolkits & Diagnostic Frameworks</h6>
                             </div>
-                            <h1 style={{ fontSize: '42px', fontWeight: '800', color: '#0f172a', lineHeight: '1.25', marginBottom: '20px' }}>
+                            <h1 style={{
+                                fontSize: 'clamp(28px, 5vw, 42px)',
+                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                fontWeight: '700',
+                                color: '#0f1013',
+                                lineHeight: '1.25',
+                                marginBottom: '20px'
+                            }}>
                                 Frameworks for Evaluating Executive Stature
                             </h1>
                             <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.7', margin: '0 auto' }}>
@@ -116,7 +123,7 @@ export default function ResourcesOverviewPage() {
                 {/* Flagship Assessment Feature Banner */}
                 <section className="pt_80 pb_60" style={{ background: '#f8fafc' }}>
                     <div className="container">
-                        <div className="prominence_card_dark" style={{ padding: '52px' }}>
+                        <div className="prominence_card_dark" style={{ padding: 'clamp(32px, 5vw, 52px)' }}>
                             <div className="row align-items-center">
                                 <div className="col-lg-8">
                                     <div style={{ marginBottom: '16px' }}>
@@ -124,7 +131,13 @@ export default function ResourcesOverviewPage() {
                                             Featured Diagnostic Tool
                                         </span>
                                     </div>
-                                    <h2 style={{ fontSize: '34px', fontWeight: '800', color: '#fff', marginBottom: '16px' }}>
+                                    <h2 style={{
+                                        fontSize: 'clamp(24px, 4vw, 34px)',
+                                        fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                        fontWeight: '700',
+                                        color: '#fff',
+                                        marginBottom: '16px'
+                                    }}>
                                         The Executive Digital Presence Assessment
                                     </h2>
                                     <p style={{ fontSize: '16px', color: '#94a3b8', lineHeight: '1.7', marginBottom: '24px', maxWidth: '680px' }}>
@@ -132,17 +145,17 @@ export default function ResourcesOverviewPage() {
                                     </p>
                                     <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginBottom: '32px' }}>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: '#cbd5e1' }}>
-                                            <i className="fal fa-check-circle" style={{ color: '#fff' }}></i> 6 Objective Stature Dimensions
+                                            <i className="fa-solid fa-circle-check" style={{ color: '#b89058' }}></i> 6 Objective Stature Dimensions
                                         </div>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: '#cbd5e1' }}>
-                                            <i className="fal fa-check-circle" style={{ color: '#fff' }}></i> Immediate Calculated Score (0–100%)
+                                            <i className="fa-solid fa-circle-check" style={{ color: '#b89058' }}></i> Immediate Calculated Score (0–100%)
                                         </div>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: '#cbd5e1' }}>
-                                            <i className="fal fa-check-circle" style={{ color: '#fff' }}></i> Tailored Advisory Recommendations
+                                            <i className="fa-solid fa-circle-check" style={{ color: '#b89058' }}></i> Tailored Advisory Recommendations
                                         </div>
                                     </div>
-                                    <Link href="/resources/assessment" className="btn_style_one">
-                                        Start Assessment Now
+                                    <Link href="/resources/assessment" className="btn_style_gold">
+                                        Start Assessment Now <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
                                 <div className="col-lg-4 text-center mt-4 mt-lg-0">
@@ -153,7 +166,7 @@ export default function ResourcesOverviewPage() {
                                         padding: '32px', 
                                         display: 'inline-block' 
                                     }}>
-                                        <div style={{ fontSize: '52px', fontWeight: '900', color: '#fff', lineHeight: '1' }}>
+                                        <div style={{ fontSize: '52px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', lineHeight: '1' }}>
                                             3 Min
                                         </div>
                                         <div style={{ fontSize: '13px', color: '#94a3b8', marginTop: '10px', fontWeight: '600', letterSpacing: '0.5px' }}>
@@ -173,7 +186,7 @@ export default function ResourcesOverviewPage() {
                             <div className="tag_text">
                                 <h6>Operational Frameworks</h6>
                             </div>
-                            <h2 style={{ fontSize: '28px', fontWeight: '800', color: '#0f172a' }}>
+                            <h2 style={{ fontSize: '28px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013' }}>
                                 Strategic Toolkits & Blueprints
                             </h2>
                         </div>
@@ -181,43 +194,37 @@ export default function ResourcesOverviewPage() {
                         <div className="row">
                             {resources.filter(r => !r.featured).map((res, idx) => (
                                 <div key={idx} className="col-lg-4 col-md-6 mb_30">
-                                    <div className="prominence_card" style={{ 
+                                    <div className="prominence_card prominence_card_equal_height" style={{ 
                                         padding: '32px', 
-                                        height: '100%', 
-                                        display: 'flex', 
-                                        flexDirection: 'column'
+                                        height: '100%'
                                     }}>
-                                        <div style={{ marginBottom: '12px' }}>
-                                            <span className="prominence_badge">
-                                                {res.badge}
-                                            </span>
+                                        <div className="prominence_card_body">
+                                            <div style={{ marginBottom: '12px' }}>
+                                                <span className="prominence_badge">
+                                                    {res.badge}
+                                                </span>
+                                            </div>
+                                            <h3 style={{ fontSize: '19px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '8px', lineHeight: '1.35' }}>
+                                                <Link href={res.href} style={{ color: 'inherit', textDecoration: 'none' }}>
+                                                    {res.title}
+                                                </Link>
+                                            </h3>
+                                            <p style={{ fontSize: '13px', fontWeight: '600', color: '#334155', marginBottom: '14px' }}>
+                                                {res.tagline}
+                                            </p>
+                                            <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.7', marginBottom: '24px' }}>
+                                                {res.description}
+                                            </p>
                                         </div>
-                                        <h3 style={{ fontSize: '19px', fontWeight: '800', color: '#0f172a', marginBottom: '8px', lineHeight: '1.35' }}>
-                                            <Link href={res.href} style={{ color: 'inherit', textDecoration: 'none' }}>
-                                                {res.title}
+                                        <div className="prominence_card_footer" style={{ borderTop: '1px solid #eaedf0', paddingTop: '16px' }}>
+                                            <Link 
+                                                href={res.href} 
+                                                className="btn_style_ghost"
+                                                style={{ padding: 0 }}
+                                            >
+                                                {res.ctaText} <i className="fa-solid fa-arrow-right"></i>
                                             </Link>
-                                        </h3>
-                                        <p style={{ fontSize: '13px', fontWeight: '600', color: '#334155', marginBottom: '14px' }}>
-                                            {res.tagline}
-                                        </p>
-                                        <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.7', marginBottom: '24px', flex: 1 }}>
-                                            {res.description}
-                                        </p>
-                                        <Link 
-                                            href={res.href} 
-                                            style={{ 
-                                                fontSize: '13.5px', 
-                                                fontWeight: '700', 
-                                                color: '#0f172a', 
-                                                textDecoration: 'none', 
-                                                marginTop: 'auto',
-                                                display: 'inline-flex',
-                                                alignItems: 'center',
-                                                gap: '6px' 
-                                            }}
-                                        >
-                                            {res.ctaText} <i className="fal fa-arrow-right" style={{ fontSize: '11px' }}></i>
-                                        </Link>
+                                        </div>
                                     </div>
                                 </div>
                             ))}

@@ -58,9 +58,10 @@ export default function Pricing_Page() {
                                 Investment &amp; Packages
                             </span>
                             <h1 style={{
-                                fontFamily: "'DM Serif Display', Georgia, serif",
+                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
                                 fontSize: "clamp(32px, 5vw, 48px)",
-                                color: "#0F1235",
+                                fontWeight: "700",
+                                color: "#0f1013",
                                 marginBottom: "18px",
                                 lineHeight: "1.2"
                             }}>

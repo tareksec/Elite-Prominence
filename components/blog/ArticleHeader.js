@@ -22,14 +22,15 @@ export default function ArticleHeader({
             alignItems: 'center',
             padding: '6px 20px',
             borderRadius: '9999px',
-            background: '#0D1322',
+            background: '#0f1013',
             color: '#FFFFFF',
-            fontSize: '12px',
+            fontSize: '11.5px',
             fontWeight: '700',
-            letterSpacing: '0.6px',
+            letterSpacing: '0.8px',
             textTransform: 'uppercase',
             border: '1px solid rgba(255, 255, 255, 0.15)',
-            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.15)'
+            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.15)',
+            fontFamily: 'var(--primary-font)'
           }}
         >
           {category}
@@ -39,10 +40,10 @@ export default function ArticleHeader({
       {/* H1 Title */}
       <h1
         style={{
-          fontFamily: "'DM Serif Display', Georgia, serif",
+          fontFamily: "var(--primary-font)",
           fontSize: 'clamp(30px, 4.5vw, 46px)',
           lineHeight: '1.2',
-          color: '#0F1235',
+          color: '#0f1013',
           marginBottom: '24px',
           letterSpacing: '-0.5px'
         }}
@@ -70,7 +71,7 @@ export default function ArticleHeader({
               width: '32px',
               height: '32px',
               borderRadius: '50%',
-              background: '#0D1322',
+              background: '#0f1013',
               padding: '2px',
               display: 'flex',
               alignItems: 'center',
@@ -96,7 +97,7 @@ export default function ArticleHeader({
                   width: '100%',
                   height: '100%',
                   borderRadius: '50%',
-                  background: '#0F1235',
+                  background: '#0f1013',
                   color: '#FFFFFF',
                   display: 'flex',
                   alignItems: 'center',
@@ -109,7 +110,7 @@ export default function ArticleHeader({
               </div>
             )}
           </div>
-          <span style={{ color: '#0F1235', fontWeight: '600' }}>{author}</span>
+          <span style={{ color: '#0f1013', fontWeight: '600' }}>{author}</span>
         </div>
         <span style={{ color: '#CBD5E1' }}>&bull;</span>
         <time>{date}</time>
@@ -136,11 +137,12 @@ export default function ArticleHeader({
                 display: 'inline-block',
                 padding: '5px 14px',
                 borderRadius: '9999px',
-                background: 'rgba(13, 19, 34, 0.05)',
-                color: '#0D1322',
-                border: '1px solid rgba(13, 19, 34, 0.1)',
-                fontSize: '13px',
-                fontWeight: '600'
+                background: 'rgba(15, 16, 19, 0.05)',
+                color: '#0f1013',
+                border: '1px solid rgba(15, 16, 19, 0.1)',
+                fontSize: '12.5px',
+                fontWeight: '600',
+                fontFamily: 'var(--primary-font)'
               }}
             >
               {tag}

@@ -4,58 +4,74 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Layout from '@/components/layout/Layout'
 
-const OPEN_POSITIONS = [
+const MANDATES = [
     {
         id: 'executive-ghostwriter',
+        mandate: 'Mandate Ref. EP-GHOST-01',
         title: 'Executive Ghostwriter & Senior Editorial Strategist',
-        department: 'Editorial & Narrative',
-        location: 'Remote (Global)',
-        type: 'Full-Time or Retained Contract',
-        description: 'Lead narrative extraction interviews and author high-signal thought leadership essays for Fortune 500 CEOs, CHROs, and enterprise founders. Requires deep business journalism experience and the ability to replicate executive voices with nuance.',
-        requirements: [
-            '5+ years experience writing for tier-one business publications, executive advisories, or C-suite leaders',
-            'Demonstrated ability to translate complex corporate transformations and macro theses into compelling prose',
-            'Impeccable editorial judgment with zero reliance on generic generative AI platitudes'
-        ]
+        practice: 'Editorial Architecture & Thought Leadership',
+        arrangement: 'Retained Advisory / Full-Time',
+        compensation: 'Top 1% Global Retainer + Advisory Bonuses',
+        location: 'Remote (London / NY / Zurich / Global)',
+        mission: 'Extract, architect, and author high-signal thought leadership essays for Fortune 500 CEOs, CHROs, and enterprise founders. Must command the nuanced language of governance, talent strategy, and commercial transformation.',
+        imperatives: [
+            'Conduct 30-minute monthly forensic narrative extraction interviews with C-suite clients',
+            'Author publish-ready essays, op-eds, and keynote outlines matching individual executive voices',
+            'Enforce rigorous journalistic standards with zero synthetic or AI-generated filler',
+            'Coordinate with legal/PR teams to ensure absolute compliance with corporate communication disclosures'
+        ],
+        idealProfile: 'Former senior business journalist (FT, WSJ, Bloomberg) or C-suite executive communications counsel with 6+ years advising enterprise leadership.'
     },
     {
         id: 'search-reputation-engineer',
-        title: 'Search Reputation & Entity Knowledge Graph Engineer',
-        department: 'Search & Technical Architecture',
+        mandate: 'Mandate Ref. EP-SEARCH-02',
+        title: 'Search Reputation & Entity Knowledge Graph Architect',
+        practice: 'Technical Reputation & Search Governance',
+        arrangement: 'Full-Time Practice Appointment',
+        compensation: 'Senior Engineering Retainer + Entity Equity Incentives',
         location: 'Remote (Global)',
-        type: 'Full-Time',
-        description: 'Architect Page 1 Google search dominance for high-profile executive names. Build structured JSON-LD entity schemas, optimize Google Knowledge Panels, and resolve complex namesake reconciliation challenges.',
-        requirements: [
-            'Deep expertise in Google Knowledge Graph, entity reconciliation, and executive name search optimization',
-            'Proficiency in semantic HTML, structured JSON-LD schemas, and Wikipedia/Wikidata entity guidelines',
-            'Experience in managing high-stakes corporate or personal reputation search scenarios'
-        ]
+        mission: 'Engineer permanent Google Page 1 stature for globally recognized executive names. Establish immutable Knowledge Graph authority, resolve namesake collision ambiguities, and structure semantic JSON-LD entity graphs.',
+        imperatives: [
+            'Architect and deploy comprehensive schema.org Person and Organization entity structures',
+            'Claim, reconcile, and monitor Google Knowledge Panels for top-tier executives',
+            'Develop defensive search buffers through strategic syndication and owned digital assets',
+            'Analyze organic search engine result pages (SERPs) across global jurisdictions continuously'
+        ],
+        idealProfile: 'Deep technical SEO & entity engineer with proven track record in executive reputation defense, semantic Web standards, and Knowledge Graph validation.'
     },
     {
         id: 'executive-frontend-designer',
-        title: 'Senior Executive UI/UX & Next.js Engineer',
-        department: 'Design & Engineering',
+        mandate: 'Mandate Ref. EP-DESIGN-03',
+        title: 'Senior Executive UI/UX & Next.js Design Engineer',
+        practice: 'Sovereign Digital HQ Engineering',
+        arrangement: 'Full-Time Practice Appointment',
+        compensation: 'Senior Staff Engineering Package',
         location: 'Remote (Global)',
-        type: 'Full-Time',
-        description: 'Design and build bespoke Executive Digital HQs that reflect boardroom gravitas. Work with Next.js, modern CSS, micro-interactions, and 95+ Core Web Vitals performance benchmarks.',
-        requirements: [
-            'Extensive portfolio of minimalist, high-end editorial and executive web applications',
-            'Mastery of Next.js App Router, responsive layout architecture, typography, and performance optimization',
-            'Strong visual taste: avoiding generic startup templates in favor of bespoke, dignified editorial aesthetics'
-        ]
+        mission: 'Design and build bespoke Next.js Executive Digital HQs that reflect boardroom gravitas. Balance architectural elegance, subtle micro-interactions, and 98+ Core Web Vitals performance benchmarks.',
+        imperatives: [
+            'Translate high-level executive personas into museum-grade, bespoke web properties',
+            'Implement semantic, accessible, and responsive components using Next.js App Router and Vanilla CSS',
+            'Eliminate all generic startup and SaaS visual tropes in favor of dignified editorial typography',
+            'Ensure sub-second load times, hardened security, and zero tracking scripts'
+        ],
+        idealProfile: 'Craftsman design technologist with an extensive portfolio of high-end editorial, luxury, or financial institution web architecture.'
     },
     {
         id: 'client-advisory-partner',
-        title: 'Executive Advisory Partner (Client Success)',
-        department: 'Client Advisory',
-        location: 'Remote (US/UK/EU Hours)',
-        type: 'Full-Time',
-        description: 'Act as the trusted liaison and strategic counsel to our CEO and CHRO clients. Oversee engagement delivery, ensure strict PR compliance, and lead quarterly narrative reviews.',
-        requirements: [
-            'Executive presence with experience managing relationships with C-level corporate executives',
-            'Background in strategic communications, executive search, or high-tier management consulting',
-            'Relentless attention to detail, discretion, and operational excellence'
-        ]
+        mandate: 'Mandate Ref. EP-ADVISORY-04',
+        title: 'Executive Advisory Partner (Client Governance)',
+        practice: 'Client Advisory & Engagement Leadership',
+        arrangement: 'Senior Leadership Appointment',
+        compensation: 'Base Executive Retainer + Client Portfolio Share',
+        location: 'Remote (US/UK/EU Working Hours)',
+        mission: 'Act as the strategic counsel and direct liaison to our CEO and CHRO clients. Guide narrative evolution, coordinate cross-functional delivery, and ensure an effortless executive client experience requiring under 30 minutes monthly.',
+        imperatives: [
+            'Lead client onboarding, executive intake interviews, and annual narrative strategic reviews',
+            'Translate client commercial milestones into tactical briefs for our editorial and search teams',
+            'Uphold unwavering confidentiality and institutional discretion at all touchpoints',
+            'Expand executive client opportunities into board appointments and high-tier speaking engagements'
+        ],
+        idealProfile: 'Former management consultant (McKinsey, Bain, BCG), executive search partner (Egon Zehnder, Spencer Stuart, Korn Ferry), or senior corporate affairs director.'
     }
 ]
 
@@ -75,211 +91,379 @@ export default function CareersPage() {
 
     return (
         <div className="boxed_wrapper">
-            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Careers at Prominence">
+            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Advisory Appointments & Mandates">
                 
-                {/* Hero Header */}
-                <section className="prominence_page_intro">
+                {/* Hero Section: Charter Narrative */}
+                <section className="prominence_page_intro" style={{ backgroundColor: '#ffffff', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: '860px', margin: '0 auto' }}>
-                            <div className="tag_text">
-                                <h6>Join Our Advisory Practice</h6>
+                        <div className="section_title centred" style={{ maxWidth: '880px', margin: '0 auto' }}>
+                            <div className="tag_text" style={{ marginBottom: '14px' }}>
+                                <h6 style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                    padding: '6px 16px',
+                                    background: '#f1f5f9',
+                                    borderRadius: '30px',
+                                    fontSize: '12px',
+                                    fontWeight: '700',
+                                    color: '#0f1013',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.8px',
+                                    border: '1px solid #e2e8f0'
+                                }}>
+                                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#b89058' }}></span>
+                                    Practice Charter &amp; Mandates
+                                </h6>
                             </div>
-                            <h1 style={{ fontSize: '42px', fontWeight: '800', color: '#0f172a', lineHeight: '1.25', marginBottom: '20px' }}>
-                                Shape the Sovereign Reputation of Global Leaders
+                            <h1 style={{
+                                fontSize: 'clamp(28px, 5vw, 46px)',
+                                fontWeight: '700',
+                                color: '#0f1013',
+                                lineHeight: '1.2',
+                                letterSpacing: '-0.5px',
+                                marginBottom: '22px',
+                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                            }}>
+                                Counsel the Leaders Who Shape Global Industry
                             </h1>
-                            <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.7', margin: '0 auto' }}>
-                                At Prominence, we advise CEOs, CHROs, enterprise founders, and senior decision-makers. We do not do superficial marketing. We execute high-stakes narrative architecture, sovereign digital engineering, and discreet reputation governance.
+                            <p style={{ fontSize: '18px', color: '#59606a', lineHeight: '1.7', margin: '0 auto 34px', maxWidth: '740px' }}>
+                                Prominence is not a marketing agency. We are a specialized executive advisory firm entrusted by CEOs, CHROs, and institutional leaders to architect their sovereign digital stature, defend their search footprint, and articulate their thought leadership.
                             </p>
-                            <div style={{ marginTop: '32px' }}>
-                                <a href="#open-roles" className="btn_style_one">
-                                    View Open Opportunities
+                            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                                <a href="#open-mandates" className="btn_style_one">
+                                    Review Open Mandates <i className="fa-solid fa-arrow-down"></i>
+                                </a>
+                                <a href="#apply-dossier" className="btn_style_two">
+                                    Submit Direct Dossier
                                 </a>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Cultural Pillars */}
-                <section className="pt_100 pb_90" style={{ background: '#fff' }}>
+                {/* Operating Principles: Asymmetrical Editorial Manifesto */}
+                <section className="pt_100 pb_90" style={{ background: '#fafbfc', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: '760px', margin: '0 auto 60px' }}>
-                            <div className="tag_text">
-                                <h6>Operating Philosophy</h6>
+                        <div className="row align-items-end" style={{ marginBottom: '50px' }}>
+                            <div className="col-lg-7">
+                                <span style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#b89058', display: 'block', marginBottom: '8px' }}>
+                                    Our Professional Creed
+                                </span>
+                                <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#0f1013', margin: 0, letterSpacing: '-0.5px', lineHeight: '1.25' }}>
+                                    The Three Tenets of the Prominence Practice
+                                </h2>
                             </div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#0f172a', marginTop: '12px' }}>
-                                Standards of Intellectual & Professional Rigor
-                            </h2>
+                            <div className="col-lg-5 mt-3 mt-lg-0">
+                                <p style={{ fontSize: '15.5px', color: '#59606a', lineHeight: '1.65', margin: 0 }}>
+                                    We maintain an uncompromising standard of intellectual rigor. We work with a small, elite cohort of specialists who prize quality over volume and discretion over self-promotion.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="row">
-                            <div className="col-lg-4 col-md-6 mb_30">
-                                <div className="prominence_card" style={{ padding: '36px', height: '100%' }}>
-                                    <div style={{ fontSize: '24px', color: '#0f172a', marginBottom: '18px' }}>
-                                        <i className="fal fa-feather-alt"></i>
+                        {/* Asymmetrical Editorial Grid */}
+                        <div className="row g-4">
+                            <div className="col-lg-4 col-md-12">
+                                <div style={{
+                                    background: '#ffffff',
+                                    border: '1px solid #eaedf0',
+                                    borderRadius: '14px',
+                                    padding: '40px 32px',
+                                    height: '100%',
+                                    boxShadow: '0 4px 18px rgba(15, 16, 19, 0.03)',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'space-between'
+                                }}>
+                                    <div>
+                                        <div style={{ fontSize: '12px', fontWeight: '700', color: '#b89058', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
+                                            Tenet I
+                                        </div>
+                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#0f1013', marginBottom: '16px' }}>
+                                            Journalistic Rigor &amp; Commercial Truth
+                                        </h3>
+                                        <p style={{ color: '#59606a', fontSize: '15px', lineHeight: '1.7', margin: 0 }}>
+                                            We reject synthetic social noise and generic algorithmic platitudes. Every essay and commentary we craft is grounded in genuine operational truth, balance sheet reality, and boardroom gravity.
+                                        </p>
                                     </div>
-                                    <h3 style={{ fontSize: '19px', fontWeight: '800', color: '#0f172a', marginBottom: '12px' }}>
-                                        Journalistic Integrity
-                                    </h3>
-                                    <p style={{ color: '#64748b', fontSize: '14.5px', lineHeight: '1.7', margin: 0 }}>
-                                        We reject superficial AI-generated social platitudes. Every piece of thought leadership is grounded in deep commercial reality, intellectual substance, and authentic client perspectives.
-                                    </p>
+                                    <div style={{ marginTop: '28px', paddingTop: '18px', borderTop: '1px solid #f1f5f9', fontSize: '12px', color: '#94a3b8', fontWeight: '600' }}>
+                                        Zero AI Platitudes &bull; Nuanced Executive Tone
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="col-lg-4 col-md-6 mb_30">
-                                <div className="prominence_card" style={{ padding: '36px', height: '100%' }}>
-                                    <div style={{ fontSize: '24px', color: '#0f172a', marginBottom: '18px' }}>
-                                        <i className="fal fa-shield-alt"></i>
+                            <div className="col-lg-4 col-md-12">
+                                <div style={{
+                                    background: '#ffffff',
+                                    border: '1px solid #eaedf0',
+                                    borderRadius: '14px',
+                                    padding: '40px 32px',
+                                    height: '100%',
+                                    boxShadow: '0 4px 18px rgba(15, 16, 19, 0.03)',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'space-between'
+                                }}>
+                                    <div>
+                                        <div style={{ fontSize: '12px', fontWeight: '700', color: '#b89058', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
+                                            Tenet II
+                                        </div>
+                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#0f1013', marginBottom: '16px' }}>
+                                            Inviolable Discretion &amp; Governance
+                                        </h3>
+                                        <p style={{ color: '#59606a', fontSize: '15px', lineHeight: '1.7', margin: 0 }}>
+                                            Our clients govern publicly traded enterprises, sovereign funds, and market-shaping startups. Absolute confidentiality and institutional security are non-negotiable foundations of our firm.
+                                        </p>
                                     </div>
-                                    <h3 style={{ fontSize: '19px', fontWeight: '800', color: '#0f172a', marginBottom: '12px' }}>
-                                        Absolute Discretion
-                                    </h3>
-                                    <p style={{ color: '#64748b', fontSize: '14.5px', lineHeight: '1.7', margin: 0 }}>
-                                        Our clients lead enterprise organizations with high public scrutiny. Confidentiality is not merely a contractual clause—it is the governing ethos of our entire organization.
-                                    </p>
+                                    <div style={{ marginTop: '28px', paddingTop: '18px', borderTop: '1px solid #f1f5f9', fontSize: '12px', color: '#94a3b8', fontWeight: '600' }}>
+                                        Strict Legal Non-Disclosure &bull; Zero Leakage
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="col-lg-4 col-md-6 mb_30">
-                                <div className="prominence_card" style={{ padding: '36px', height: '100%' }}>
-                                    <div style={{ fontSize: '24px', color: '#0f172a', marginBottom: '18px' }}>
-                                        <i className="fal fa-globe"></i>
+                            <div className="col-lg-4 col-md-12">
+                                <div style={{
+                                    background: '#ffffff',
+                                    border: '1px solid #eaedf0',
+                                    borderRadius: '14px',
+                                    padding: '40px 32px',
+                                    height: '100%',
+                                    boxShadow: '0 4px 18px rgba(15, 16, 19, 0.03)',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'space-between'
+                                }}>
+                                    <div>
+                                        <div style={{ fontSize: '12px', fontWeight: '700', color: '#b89058', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
+                                            Tenet III
+                                        </div>
+                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#0f1013', marginBottom: '16px' }}>
+                                            Intellectual Autonomy &amp; Deep Space
+                                        </h3>
+                                        <p style={{ color: '#59606a', fontSize: '15px', lineHeight: '1.7', margin: 0 }}>
+                                            We operate globally and asynchronously. We do not track keystrokes or enforce arbitrary office hours. We measure talent exclusively by craftsmanship, strategic acumen, and client impact.
+                                        </p>
                                     </div>
-                                    <h3 style={{ fontSize: '19px', fontWeight: '800', color: '#0f172a', marginBottom: '12px' }}>
-                                        Autonomous & Remote
-                                    </h3>
-                                    <p style={{ color: '#64748b', fontSize: '14.5px', lineHeight: '1.7', margin: 0 }}>
-                                        We collaborate with world-class professionals across global financial centers. We judge outcomes, not clocked hours. We communicate asynchronously and protect deep focus work.
-                                    </p>
+                                    <div style={{ marginTop: '28px', paddingTop: '18px', borderTop: '1px solid #f1f5f9', fontSize: '12px', color: '#94a3b8', fontWeight: '600' }}>
+                                        Asynchronous Focus &bull; Deep Mastery
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Hiring Process & Standards */}
-                <section className="pt_80 pb_80" style={{ background: '#0a0f1d', color: '#fff' }}>
+                {/* Appointment Protocol: Visual 4-Stage Roadmap */}
+                <section className="pt_100 pb_90" style={{ background: '#0f1013', color: '#ffffff', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: '760px', margin: '0 auto 50px' }}>
-                            <div className="tag_text">
-                                <h6 style={{ color: '#94a3b8' }}>Evaluation Protocol</h6>
+                        <div className="section_title centred" style={{ maxWidth: '780px', margin: '0 auto 55px' }}>
+                            <div className="tag_text" style={{ marginBottom: '12px' }}>
+                                <h6 style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                    padding: '6px 16px',
+                                    background: 'rgba(255, 255, 255, 0.08)',
+                                    borderRadius: '30px',
+                                    fontSize: '12px',
+                                    fontWeight: '700',
+                                    color: '#ffffff',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.8px',
+                                    border: '1px solid rgba(255, 255, 255, 0.15)'
+                                }}>
+                                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#b89058' }}></span>
+                                    Vetting &amp; Induction Protocol
+                                </h6>
                             </div>
-                            <h2 style={{ fontSize: '32px', fontWeight: '800', color: '#fff', marginTop: '12px' }}>
-                                Our Editorial & Engineering Hiring Process
+                            <h2 style={{
+                                fontSize: 'clamp(26px, 4vw, 36px)',
+                                fontWeight: '700',
+                                color: '#ffffff',
+                                letterSpacing: '-0.5px',
+                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                            }}>
+                                The 4-Stage Evaluation Architecture
                             </h2>
-                        </div>
-                        <div className="row">
-                            <div className="col-lg-3 col-md-6 mb_20">
-                                <div className="prominence_card_dark" style={{ padding: '28px', height: '100%' }}>
-                                    <span className="prominence_step_num" style={{ color: '#94a3b8' }}>01</span>
-                                    <h4 style={{ fontSize: '17px', fontWeight: '700', color: '#fff', marginTop: '12px', marginBottom: '8px' }}>
-                                        Credentials Review
-                                    </h4>
-                                    <p style={{ color: '#94a3b8', fontSize: '13.5px', lineHeight: '1.6', margin: 0 }}>
-                                        Rigorous evaluation of verified writing clips, code repositories, or advisory portfolio artifacts.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 mb_20">
-                                <div className="prominence_card_dark" style={{ padding: '28px', height: '100%' }}>
-                                    <span className="prominence_step_num" style={{ color: '#94a3b8' }}>02</span>
-                                    <h4 style={{ fontSize: '17px', fontWeight: '700', color: '#fff', marginTop: '12px', marginBottom: '8px' }}>
-                                        Tactical Case Study
-                                    </h4>
-                                    <p style={{ color: '#94a3b8', fontSize: '13.5px', lineHeight: '1.6', margin: 0 }}>
-                                        A compensated real-world test: extract a narrative thesis or diagnose a complex search scenario.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 mb_20">
-                                <div className="prominence_card_dark" style={{ padding: '28px', height: '100%' }}>
-                                    <span className="prominence_step_num" style={{ color: '#94a3b8' }}>03</span>
-                                    <h4 style={{ fontSize: '17px', fontWeight: '700', color: '#fff', marginTop: '12px', marginBottom: '8px' }}>
-                                        Partner Interview
-                                    </h4>
-                                    <p style={{ color: '#94a3b8', fontSize: '13.5px', lineHeight: '1.6', margin: 0 }}>
-                                        A strategic conversation with our founding partners on taste, governance, and client acumen.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 mb_20">
-                                <div className="prominence_card_dark" style={{ padding: '28px', height: '100%' }}>
-                                    <span className="prominence_step_num" style={{ color: '#94a3b8' }}>04</span>
-                                    <h4 style={{ fontSize: '17px', fontWeight: '700', color: '#fff', marginTop: '12px', marginBottom: '8px' }}>
-                                        Retained Onboarding
-                                    </h4>
-                                    <p style={{ color: '#94a3b8', fontSize: '13.5px', lineHeight: '1.6', margin: 0 }}>
-                                        Comprehensive non-disclosure execution, security clearances, and client assignment match.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Open Positions */}
-                <section id="open-roles" className="pt_90 pb_90" style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
-                    <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: '760px', margin: '0 auto 50px' }}>
-                            <div className="tag_text">
-                                <h6>Current Openings</h6>
-                            </div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#0f172a', marginTop: '12px' }}>
-                                Open Advisory & Engineering Roles
-                            </h2>
-                            <p style={{ color: '#64748b', fontSize: '16px', marginTop: '12px' }}>
-                                Explore full-time and retained advisory appointments.
+                            <p style={{ color: '#94a3b8', fontSize: '16px', marginTop: '12px', lineHeight: '1.7' }}>
+                                We evaluate every candidate with the same meticulous rigor we apply to executive client reputations.
                             </p>
                         </div>
 
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', maxWidth: '920px', margin: '0 auto' }}>
-                            {OPEN_POSITIONS.map((role) => (
-                                <div key={role.id} className="prominence_card" style={{ padding: '36px' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px', marginBottom: '14px' }}>
+                        <div className="row g-4">
+                            {[
+                                {
+                                    stage: '01',
+                                    title: 'Portfolio & Artifact Audit',
+                                    desc: 'Deep forensic examination of verified published journalism, code repositories, or executive advisory deliverables. Zero resume fluff.'
+                                },
+                                {
+                                    stage: '02',
+                                    title: 'Compensated Simulation',
+                                    desc: 'A paid, real-world case study: extract a boardroom narrative or diagnose a complex multi-jurisdiction namesake collision.'
+                                },
+                                {
+                                    stage: '03',
+                                    title: 'Founding Partner Interview',
+                                    desc: 'An in-depth strategic dialogue assessing editorial taste, governance awareness, and intellectual alignment with the practice.'
+                                },
+                                {
+                                    stage: '04',
+                                    title: 'Retained Induction',
+                                    desc: 'Execution of institutional non-disclosure agreements, security clearances, and client assignment matching.'
+                                }
+                            ].map((item, idx) => (
+                                <div key={idx} className="col-lg-3 col-md-6">
+                                    <div style={{
+                                        background: 'rgba(255, 255, 255, 0.03)',
+                                        border: '1px solid rgba(255, 255, 255, 0.08)',
+                                        borderRadius: '14px',
+                                        padding: '32px 24px',
+                                        height: '100%',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        position: 'relative'
+                                    }}>
+                                        <div style={{ fontSize: '24px', fontWeight: '700', color: '#b89058', marginBottom: '16px' }}>
+                                            {item.stage}
+                                        </div>
+                                        <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#ffffff', marginBottom: '12px' }}>
+                                            {item.title}
+                                        </h4>
+                                        <p style={{ fontSize: '13.5px', color: '#94a3b8', lineHeight: '1.65', margin: 0 }}>
+                                            {item.desc}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Open Mandates: Editorial Role Dossiers */}
+                <section id="open-mandates" className="pt_100 pb_90" style={{ background: '#f8fafc', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
+                    <div className="container">
+                        <div className="section_title centred" style={{ maxWidth: '780px', margin: '0 auto 50px' }}>
+                            <div className="tag_text" style={{ marginBottom: '12px' }}>
+                                <h6 style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                    padding: '6px 16px',
+                                    background: '#ffffff',
+                                    borderRadius: '30px',
+                                    fontSize: '12px',
+                                    fontWeight: '700',
+                                    color: '#0f1013',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.8px',
+                                    border: '1px solid #eaedf0'
+                                }}>
+                                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#b89058' }}></span>
+                                    Active Retained Searches
+                                </h6>
+                            </div>
+                            <h2 style={{
+                                fontSize: 'clamp(26px, 4.5vw, 38px)',
+                                fontWeight: '700',
+                                color: '#0f1013',
+                                letterSpacing: '-0.5px',
+                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                            }}>
+                                Current Practice Mandates
+                            </h2>
+                            <p style={{ color: '#59606a', fontSize: '16.5px', marginTop: '14px', lineHeight: '1.7' }}>
+                                Each mandate represents a key pillar in our executive reputation and thought leadership advisory.
+                            </p>
+                        </div>
+
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', maxWidth: '980px', margin: '0 auto' }}>
+                            {MANDATES.map((role) => (
+                                <div key={role.id} style={{
+                                    background: '#ffffff',
+                                    border: '1px solid #eaedf0',
+                                    borderRadius: '16px',
+                                    padding: 'clamp(24px, 4vw, 38px)',
+                                    boxShadow: '0 4px 20px rgba(15, 16, 19, 0.03)'
+                                }}>
+                                    {/* Dossier Header */}
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '14px', marginBottom: '18px', paddingBottom: '16px', borderBottom: '1px solid #f1f5f9' }}>
                                         <div>
-                                            <span style={{ fontSize: '11px', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                                                {role.department}
+                                            <span style={{ fontSize: '11.5px', fontWeight: '700', color: '#b89058', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                                                {role.mandate} &bull; {role.practice}
                                             </span>
-                                            <h3 style={{ fontSize: '21px', fontWeight: '800', color: '#0f172a', marginTop: '4px' }}>
+                                            <h3 style={{ fontSize: '23px', fontWeight: '700', color: '#0f1013', marginTop: '6px', marginBottom: 0 }}>
                                                 {role.title}
                                             </h3>
                                         </div>
                                         <div style={{ textAlign: 'right' }}>
-                                            <span className="prominence_badge">
-                                                {role.type}
+                                            <span style={{
+                                                fontSize: '11.5px',
+                                                fontWeight: '700',
+                                                color: '#0f1013',
+                                                background: '#f1f5f9',
+                                                padding: '4px 12px',
+                                                borderRadius: '20px',
+                                                border: '1px solid #e2e8f0',
+                                                display: 'inline-block'
+                                            }}>
+                                                {role.arrangement}
                                             </span>
                                             <div style={{ fontSize: '12px', color: '#64748b', marginTop: '6px' }}>
-                                                {role.location}
+                                                <i className="fa-solid fa-location-dot me-1" style={{ color: '#b89058' }}></i> {role.location}
                                             </div>
                                         </div>
                                     </div>
 
-                                    <p style={{ color: '#475569', fontSize: '14.5px', lineHeight: '1.7', marginBottom: '18px' }}>
-                                        {role.description}
+                                    {/* Mission Statement */}
+                                    <p style={{ color: '#334155', fontSize: '15.5px', lineHeight: '1.7', marginBottom: '22px' }}>
+                                        {role.mission}
                                     </p>
 
-                                    <div style={{ marginBottom: '24px' }}>
-                                        <h4 style={{ fontSize: '11px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>
-                                            Core Qualifications
-                                        </h4>
-                                        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                                            {role.requirements.map((req, i) => (
-                                                <li key={i} style={{ display: 'flex', gap: '8px', fontSize: '13px', color: '#334155', marginBottom: '8px' }}>
-                                                    <i className="fal fa-check-circle" style={{ color: '#0f172a', marginTop: '3px', fontSize: '12px' }}></i>
-                                                    <span>{req}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
+                                    {/* Two-Column Mandate Specs */}
+                                    <div className="row g-4 mb-4">
+                                        <div className="col-md-7">
+                                            <h4 style={{ fontSize: '11.5px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>
+                                                Key Imperatives
+                                            </h4>
+                                            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                                                {role.imperatives.map((imp, i) => (
+                                                    <li key={i} style={{ display: 'flex', gap: '10px', fontSize: '13.5px', color: '#475569', marginBottom: '9px', lineHeight: '1.5' }}>
+                                                        <i className="fa-solid fa-check" style={{ color: '#b89058', marginTop: '4px', fontSize: '11px' }}></i>
+                                                        <span>{imp}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        <div className="col-md-5">
+                                            <div style={{ background: '#f8fafc', padding: '20px 22px', borderRadius: '12px', border: '1px solid #eaedf0', height: '100%' }}>
+                                                <div style={{ fontSize: '11px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '6px' }}>
+                                                    Compensation Terms
+                                                </div>
+                                                <div style={{ fontSize: '14.5px', fontWeight: '700', color: '#0f1013', marginBottom: '14px' }}>
+                                                    {role.compensation}
+                                                </div>
+                                                <div style={{ fontSize: '11px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '4px' }}>
+                                                    Ideal Background
+                                                </div>
+                                                <p style={{ fontSize: '12.5px', color: '#64748b', lineHeight: '1.6', margin: 0 }}>
+                                                    {role.idealProfile}
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div>
+                                    {/* Action row */}
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '16px', borderTop: '1px solid #f1f5f9', flexWrap: 'wrap', gap: '12px' }}>
+                                        <span style={{ fontSize: '13px', color: '#64748b' }}>
+                                            Discreet, direct application reviewed by practice leaders.
+                                        </span>
                                         <a 
-                                            href="#apply-form" 
+                                            href="#apply-dossier" 
                                             onClick={() => setSelectedRole(role.title)}
-                                            className="btn_style_two" 
-                                            style={{ fontSize: '13px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                                            className="btn_style_one btn_sm"
                                         >
-                                            Apply for this Role <i className="fal fa-arrow-right" style={{ fontSize: '11px' }}></i>
+                                            Apply for Mandate <i className="fa-solid fa-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -288,111 +472,152 @@ export default function CareersPage() {
                     </div>
                 </section>
 
-                {/* Application Form */}
-                <section id="apply-form" className="pt_90 pb_100" style={{ background: '#fff' }}>
+                {/* Direct Dossier Submission Form */}
+                <section id="apply-dossier" className="pt_100 pb_100" style={{ background: '#ffffff', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
-                        <div style={{ maxWidth: '760px', margin: '0 auto' }}>
-                            <div className="section_title centred" style={{ marginBottom: '36px' }}>
-                                <div className="tag_text">
-                                    <h6>Direct Submission</h6>
+                        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                            <div className="section_title centred" style={{ marginBottom: '40px' }}>
+                                <div className="tag_text" style={{ marginBottom: '12px' }}>
+                                    <h6 style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: '8px',
+                                        padding: '6px 16px',
+                                        background: '#f1f5f9',
+                                        borderRadius: '30px',
+                                        fontSize: '12px',
+                                        fontWeight: '700',
+                                        color: '#0f1013',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.8px',
+                                        border: '1px solid #e2e8f0'
+                                    }}>
+                                        <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#b89058' }}></span>
+                                        Confidential Dossier Transmission
+                                    </h6>
                                 </div>
-                                <h2 style={{ fontSize: '32px', fontWeight: '800', color: '#0f172a', marginTop: '8px' }}>
+                                <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#0f1013', letterSpacing: '-0.5px' }}>
                                     Submit Your Credentials
                                 </h2>
-                                <p style={{ color: '#64748b', fontSize: '15px', marginTop: '8px' }}>
-                                    We review every application thoroughly. Please share verified work samples, publications, or code repositories.
+                                <p style={{ color: '#59606a', fontSize: '16px', marginTop: '10px', lineHeight: '1.6' }}>
+                                    Every submission is handled with strict professional discretion. Please provide links to published pieces, codebases, or past advisory portfolios.
                                 </p>
                             </div>
 
                             {!submitted ? (
-                                <form onSubmit={handleSubmit} className="prominence_card" style={{ padding: '40px' }}>
+                                <form onSubmit={handleSubmit} style={{
+                                    background: '#fafbfc',
+                                    border: '1px solid #eaedf0',
+                                    borderRadius: '16px',
+                                    padding: '42px 38px',
+                                    boxShadow: '0 4px 20px rgba(15, 16, 19, 0.03)'
+                                }}>
                                     <div className="row g-3">
                                         <div className="col-12">
-                                            <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Opportunity of Interest</label>
+                                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', display: 'block' }}>
+                                                Mandate of Interest
+                                            </label>
                                             <select 
                                                 value={selectedRole}
                                                 onChange={(e) => setSelectedRole(e.target.value)}
                                                 required
-                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px', background: '#fff' }}
+                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #eaedf0', fontSize: '14px', background: '#ffffff', color: '#0f1013', outline: 'none' }}
                                             >
-                                                <option value="">Select an open position...</option>
-                                                {OPEN_POSITIONS.map((r) => (
+                                                <option value="">Select an open mandate...</option>
+                                                {MANDATES.map((r) => (
                                                     <option key={r.id} value={r.title}>{r.title}</option>
                                                 ))}
-                                                <option value="General Strategic Inquiry">General Strategic Inquiry / Other</option>
+                                                <option value="General Strategic Inquiry">General Strategic Advisory Inquiry / Unlisted Specialization</option>
                                             </select>
                                         </div>
                                         <div className="col-md-6">
-                                            <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Full Name</label>
+                                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', display: 'block' }}>
+                                                Full Legal Name
+                                            </label>
                                             <input 
                                                 type="text" 
                                                 required 
                                                 value={name}
                                                 onChange={(e) => setName(e.target.value)}
-                                                placeholder="Your full name" 
-                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
+                                                placeholder="e.g. Julian Vance" 
+                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #eaedf0', fontSize: '14px', background: '#ffffff', color: '#0f1013', outline: 'none' }} 
                                             />
                                         </div>
                                         <div className="col-md-6">
-                                            <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Email Address</label>
+                                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', display: 'block' }}>
+                                                Direct Contact Email
+                                            </label>
                                             <input 
                                                 type="email" 
                                                 required 
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
-                                                placeholder="your.email@domain.com" 
-                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
+                                                placeholder="e.g. name@domain.com" 
+                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #eaedf0', fontSize: '14px', background: '#ffffff', color: '#0f1013', outline: 'none' }} 
                                             />
                                         </div>
                                         <div className="col-md-6">
-                                            <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>LinkedIn Profile URL</label>
+                                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', display: 'block' }}>
+                                                LinkedIn Profile URL
+                                            </label>
                                             <input 
                                                 type="url" 
                                                 required 
                                                 value={linkedin}
                                                 onChange={(e) => setLinkedin(e.target.value)}
                                                 placeholder="https://linkedin.com/in/username" 
-                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
+                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #eaedf0', fontSize: '14px', background: '#ffffff', color: '#0f1013', outline: 'none' }} 
                                             />
                                         </div>
                                         <div className="col-md-6">
-                                            <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Portfolio / Writing Samples URL</label>
+                                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', display: 'block' }}>
+                                                Portfolio / Publication Archive URL
+                                            </label>
                                             <input 
                                                 type="url" 
                                                 value={portfolio}
                                                 onChange={(e) => setPortfolio(e.target.value)}
-                                                placeholder="https://yourportfolio.com or article links" 
-                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
+                                                placeholder="https://archive.com or articles portfolio" 
+                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #eaedf0', fontSize: '14px', background: '#ffffff', color: '#0f1013', outline: 'none' }} 
                                             />
                                         </div>
                                         <div className="col-12">
-                                            <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Why Prominence?</label>
+                                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', display: 'block' }}>
+                                                Why Prominence? (Executive Rationale)
+                                            </label>
                                             <textarea 
                                                 rows="4" 
                                                 required 
                                                 value={note}
                                                 onChange={(e) => setNote(e.target.value)}
-                                                placeholder="Describe how your background aligns with our standard of executive reputation rigor..." 
-                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }}
+                                                placeholder="Articulate why your editorial rigor or technical depth aligns with high-stakes C-suite representation..." 
+                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #eaedf0', fontSize: '14px', background: '#ffffff', color: '#0f1013', outline: 'none' }}
                                             />
                                         </div>
-                                        <div className="col-12 text-center mt-3">
-                                            <button type="submit" className="btn_style_one" style={{ width: '100%' }}>
-                                                Submit Confidential Application
+                                        <div className="col-12 text-center mt-4">
+                                            <button type="submit" className="btn_style_one btn_block btn_lg">
+                                                Transmit Confidential Application <i className="fa-solid fa-arrow-right"></i>
                                             </button>
                                         </div>
                                     </div>
                                 </form>
                             ) : (
-                                <div className="prominence_card" style={{ padding: '40px', textAlign: 'center', borderLeft: '4px solid #10b981' }}>
-                                    <div style={{ fontSize: '28px', color: '#10b981', marginBottom: '12px' }}>
-                                        <i className="fal fa-check-circle"></i>
+                                <div style={{
+                                    background: '#ffffff',
+                                    border: '1px solid #eaedf0',
+                                    borderRadius: '16px',
+                                    padding: '50px 40px',
+                                    textAlign: 'center',
+                                    boxShadow: '0 8px 30px rgba(15, 16, 19, 0.05)'
+                                }}>
+                                    <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: '#faf6f0', border: '1px solid rgba(184, 144, 88, 0.4)', color: '#b89058', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px', marginBottom: '18px' }}>
+                                        <i className="fa-solid fa-check"></i>
                                     </div>
-                                    <h3 style={{ fontSize: '22px', fontWeight: '800', color: '#0f172a', marginBottom: '8px' }}>
-                                        Application Received
+                                    <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#0f1013', marginBottom: '10px' }}>
+                                        Dossier Successfully Transmitted
                                     </h3>
-                                    <p style={{ color: '#64748b', fontSize: '15px', margin: 0 }}>
-                                        Thank you, {name}. Our managing partners will review your credentials and reach out directly at {email} if there is strong strategic alignment.
+                                    <p style={{ color: '#59606a', fontSize: '15.5px', maxWidth: '540px', margin: '0 auto', lineHeight: '1.65' }}>
+                                        Thank you, {name}. Your credentials have been transferred directly to our managing advisory partners. If there is mutual alignment with our active mandates, we will schedule a private dialogue.
                                     </p>
                                 </div>
                             )}

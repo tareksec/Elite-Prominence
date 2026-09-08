@@ -132,17 +132,17 @@ export default function Blog_Standard() {
                                             </figure>
                                             <div className="lower_content" style={{ padding: "30px" }}>                            
                                                 <ul className="post-info mb_10">
-                                                    <li><div className="category"><span style={{ color: "#2460e2", fontWeight: "700" }}>{post.category}</span></div></li>
+                                                    <li><div className="category"><span style={{ color: "#b89058", fontWeight: "700" }}>{post.category}</span></div></li>
                                                     <li><i className="icon-21"></i>{post.date}</li>
-                                                    <li><i className="icon-20"></i><Link href="/about">Elite Prominence</Link></li>
+                                                    <li><i className="icon-20"></i><Link href="/about">Prominence</Link></li>
                                                 </ul>
-                                                <h3 style={{ fontSize: "24px", fontWeight: "700", marginBottom: "15px" }}>
-                                                    <Link href={post.link} style={{ color: "#1b2534" }}>{post.title}</Link>
+                                                <h3 style={{ fontSize: "24px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)", fontWeight: "700", marginBottom: "15px" }}>
+                                                    <Link href={post.link} style={{ color: "#0f1013" }}>{post.title}</Link>
                                                 </h3>
                                                 <p style={{ color: "#59606a", lineHeight: "1.7", marginBottom: "20px" }}>{post.desc}</p>
                                                 <div className="link_btn">
-                                                    <Link href={post.link} style={{ color: "#2460e2", fontWeight: "700" }}>
-                                                        Read Article <i className="fa-solid fa-angle-right"></i>
+                                                    <Link href={post.link} className="btn_style_ghost">
+                                                        Read Article <i className="fa-solid fa-arrow-right"></i>
                                                     </Link>
                                                 </div>
                                             </div>
@@ -154,30 +154,30 @@ export default function Blog_Standard() {
                             {/* Sidebar */}
                             <div className="col-xl-4 col-lg-4 col-md-12">
                                 <div className="blog_sidebar">
-                                    <div className="sidebar_widget mb_40" style={{ background: "#f8fafd", padding: "30px", borderRadius: "8px" }}>
-                                        <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "20px" }}>Topics</h3>
+                                    <div className="sidebar_widget mb_40" style={{ background: "#f8fafd", padding: "30px", borderRadius: "12px", border: "1px solid #eaedf0" }}>
+                                        <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "20px", color: "#0f1013", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>Topics</h3>
                                         <ul style={{ listStyle: "none", padding: 0 }}>
                                             <li style={{ padding: "8px 0", borderBottom: "1px solid #eef0f4" }}>
-                                                <Link href="/blog-grid" style={{ color: "#1b2534", fontWeight: "600" }}>Personal Branding</Link>
+                                                <Link href="/blog-grid" style={{ color: "#0f1013", fontWeight: "600" }}>Personal Branding</Link>
                                             </li>
                                             <li style={{ padding: "8px 0", borderBottom: "1px solid #eef0f4" }}>
-                                                <Link href="/blog-grid" style={{ color: "#1b2534", fontWeight: "600" }}>LinkedIn Strategy</Link>
+                                                <Link href="/blog-grid" style={{ color: "#0f1013", fontWeight: "600" }}>LinkedIn Strategy</Link>
                                             </li>
                                             <li style={{ padding: "8px 0", borderBottom: "1px solid #eef0f4" }}>
-                                                <Link href="/blog-grid" style={{ color: "#1b2534", fontWeight: "600" }}>Google & SEO Reputation</Link>
+                                                <Link href="/blog-grid" style={{ color: "#0f1013", fontWeight: "600" }}>Google &amp; SEO Reputation</Link>
                                             </li>
                                             <li style={{ padding: "8px 0" }}>
-                                                <Link href="/blog-grid" style={{ color: "#1b2534", fontWeight: "600" }}>Executive Presence</Link>
+                                                <Link href="/blog-grid" style={{ color: "#0f1013", fontWeight: "600" }}>Executive Presence</Link>
                                             </li>
                                         </ul>
                                     </div>
 
-                                    <div className="sidebar_widget" style={{ background: "#1b2534", padding: "35px 30px", borderRadius: "8px", color: "#fff" }}>
-                                        <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#fff", marginBottom: "15px" }}>Ready to Be Seen at the Top?</h3>
-                                        <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "20px", fontSize: "15px" }}>
+                                    <div className="sidebar_widget" style={{ background: "#0f1013", padding: "35px 30px", borderRadius: "12px", border: "1px solid rgba(255, 255, 255, 0.12)", color: "#fff", boxShadow: "0 16px 40px rgba(0, 0, 0, 0.35)" }}>
+                                        <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#fff", fontFamily: "var(--primary-font)", marginBottom: "15px" }}>Ready to Be Seen at the Top?</h3>
+                                        <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "20px", fontSize: "15px", lineHeight: "1.6" }}>
                                             Schedule a confidential 20-minute strategy call with our executive branding team.
                                         </p>
-                                        <Link href="/contact" className="btn_style_one" style={{ padding: "12px 24px", fontSize: "14px" }}>
+                                        <Link href="/contact" className="btn_style_one" style={{ padding: "12px 24px", fontSize: "14px", width: "100%", textAlign: "center" }}>
                                             Book a Strategy Call
                                         </Link>
                                     </div>

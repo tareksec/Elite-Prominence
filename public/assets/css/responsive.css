@@ -881,6 +881,8 @@ html, body {
     /* Standard mobile touch target minimum height */
     .btn_style_one,
     .btn_style_two,
+    .btn_style_gold,
+    .btn_style_two_dark,
     button[type="submit"] {
         min-height: 44px;
         display: inline-flex;

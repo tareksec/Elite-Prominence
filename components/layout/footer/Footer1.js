@@ -271,45 +271,17 @@ export default function Footer1() {
 
                             <Link
                                 href="/contact"
-                                className="footer_cta_btn"
-                                style={{
-                                    display: "block",
-                                    textAlign: "center",
-                                    padding: "12px 20px",
-                                    borderRadius: "9999px",
-                                    background: "linear-gradient(180deg, #1e293b 0%, #0f172a 100%)",
-                                    color: "#ffffff",
-                                    fontSize: "13.5px",
-                                    fontWeight: "600",
-                                    letterSpacing: "0.2px",
-                                    textDecoration: "none",
-                                    border: "1px solid rgba(255, 255, 255, 0.12)",
-                                    boxShadow: "0 8px 20px -2px rgba(0, 0, 0, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35)",
-                                    textShadow: "0 1px 2px rgba(0, 0, 0, 0.4)",
-                                    transition: "all 0.22s ease",
-                                    marginBottom: "12px"
-                                }}
+                                className="btn_style_gold btn_block"
+                                style={{ marginBottom: "12px" }}
                             >
-                                Book a Private Consultation &rarr;
+                                Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                             </Link>
 
                             <Link
                                 href="/resources/assessment"
-                                style={{
-                                    display: "block",
-                                    textAlign: "center",
-                                    padding: "8px 16px",
-                                    borderRadius: "9999px",
-                                    backgroundColor: "rgba(255, 255, 255, 0.05)",
-                                    color: "#cbd5e1",
-                                    fontSize: "12.5px",
-                                    fontWeight: "600",
-                                    textDecoration: "none",
-                                    border: "1px solid rgba(255, 255, 255, 0.1)",
-                                    transition: "all 0.2s ease"
-                                }}
+                                className="btn_style_two_dark btn_block btn_sm"
                             >
-                                Take Executive Digital Assessment &rarr;
+                                <span>Take Executive Assessment</span> <i className="fa-solid fa-angle-right"></i>
                             </Link>
 
                             <div style={{ marginTop: "16px", borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: "12px" }}>
