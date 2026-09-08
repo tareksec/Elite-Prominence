@@ -15,10 +15,10 @@ export default function Faq() {
                             style={{
                                 overflow: "hidden",
                                 position: "relative",
-                                minHeight: "480px",
+                                borderRadius: "14px",
                                 display: "flex",
                                 flexDirection: "column",
-                                justifyContent: "flex-end",
+                                justifyContent: "center",
                                 border: "1px solid rgba(255, 255, 255, 0.12)"
                             }} 
                             data-aos="fade-right" 
@@ -28,7 +28,7 @@ export default function Faq() {
                             <img 
                                 src="/assets/images/elite/blog_4_executive_presence.jpg" 
                                 alt="Executive personal branding consultation and advisory guidance"
-                                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.35) contrast(1.1)" }}
+                                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.32) contrast(1.1)" }}
                             />
                             <div style={{
                                 position: "absolute",
@@ -36,19 +36,19 @@ export default function Faq() {
                                 left: 0,
                                 width: "100%",
                                 height: "100%",
-                                background: "linear-gradient(180deg, rgba(13, 13, 20, 0.25) 0%, rgba(13, 13, 20, 0.95) 100%)"
+                                background: "linear-gradient(180deg, rgba(13, 13, 20, 0.45) 0%, rgba(13, 13, 20, 0.95) 100%)"
                             }}></div>
-                            <div style={{ position: "relative", zIndex: 2, padding: "35px 30px", color: "#fff" }}>
+                            <div style={{ position: "relative", zIndex: 2, padding: "34px 28px", color: "#fff" }}>
                                 <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "12px" }}>
                                     <span className="prominence_pulse_dot"></span>
-                                    <span style={{ color: "#8B5CF6", textTransform: "uppercase", fontSize: "11px", fontWeight: "700", letterSpacing: "1.2px", fontFamily: "var(--primary-font)" }}>
+                                    <span style={{ color: "#8B5CF6", textTransform: "uppercase", fontSize: "12px", fontWeight: "700", letterSpacing: "0.8px", fontFamily: "var(--primary-font)" }}>
                                         Executive Consultation
                                     </span>
                                 </div>
-                                <h3 style={{ color: "#fff", fontSize: "24px", fontWeight: "700", marginBottom: "12px", lineHeight: "1.3", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                <h3 style={{ color: "#fff", fontSize: "22px", fontWeight: "700", marginBottom: "12px", lineHeight: "1.3", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                     Have a Specific Question About Your Digital Stature?
                                 </h3>
-                                <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "14.5px", lineHeight: "1.6", marginBottom: "24px" }}>
+                                <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "14px", lineHeight: "1.6", marginBottom: "22px" }}>
                                     Every leader's career trajectory and disclosure constraints are distinct. We conduct confidential 20-minute digital stature assessments to audit your current search standing.
                                 </p>
                                 <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center" }}>
@@ -66,9 +66,11 @@ export default function Faq() {
                     {/* Right Expanded FAQ Accordion */}
                     <div className="col-xl-7 col-lg-7 col-md-12">
                         <div className="inner_box ps-lg-4" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
-                            <div style={{ marginBottom: "28px" }}>
-                                <span className="prominence_tracker">Strategic FAQ &amp; Guidance</span>
-                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                            <div style={{ marginBottom: "18px" }}>
+                                <span className="prominence_tracker" style={{ display: "inline-block", marginBottom: "8px" }}>
+                                    Strategic FAQ &amp; Guidance
+                                </span>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", margin: 0, fontSize: "clamp(24px, 3.5vw, 32px)", color: "#0D0D14" }}>
                                     Frequently Addressed Governance Matters
                                 </h2>
                             </div>

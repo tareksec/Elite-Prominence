@@ -40,7 +40,7 @@ export default function Footer1() {
                                     <span style={{ fontSize: "20px", fontWeight: "800", color: "#ffffff", letterSpacing: "-0.4px", display: "block", lineHeight: "1.2" }}>
                                         Elite Prominence
                                     </span>
-                                    <span style={{ fontSize: "9.5px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#94a3b8" }}>
+                                    <span style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.5px", color: "#94a3b8" }}>
                                         Personal Branding for HR Leaders &amp; Executives
                                     </span>
                                 </div>
@@ -141,16 +141,15 @@ export default function Footer1() {
 
                         {/* Column 2: Core Services */}
                         <div>
-                            <h4 style={{
-                                fontSize: "14px",
+                            <h3 style={{
+                                fontSize: "15px",
                                 fontWeight: "700",
                                 color: "#ffffff",
-                                textTransform: "uppercase",
-                                letterSpacing: "1px",
+                                letterSpacing: "0.4px",
                                 marginBottom: "20px"
                             }}>
                                 Core Services
-                            </h4>
+                            </h3>
                             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                                 {[
                                     { name: "Executive Digital HQ", href: "/services/executive-digital-hq" },
@@ -183,16 +182,15 @@ export default function Footer1() {
 
                         {/* Column 3: Solutions & Methodology */}
                         <div>
-                            <h4 style={{
-                                fontSize: "14px",
+                            <h3 style={{
+                                fontSize: "15px",
                                 fontWeight: "700",
                                 color: "#ffffff",
-                                textTransform: "uppercase",
-                                letterSpacing: "1px",
+                                letterSpacing: "0.4px",
                                 marginBottom: "20px"
                             }}>
                                 Solutions &amp; Firm
-                            </h4>
+                            </h3>
                             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                                 {[
                                     { name: "For CEOs & Presidents", href: "/solutions/ceos" },
@@ -234,7 +232,7 @@ export default function Footer1() {
                             <span className="prominence_badge" style={{ background: 'rgba(255,255,255,0.08)', color: '#ffffff', borderColor: 'rgba(255,255,255,0.15)', marginBottom: '12px' }}>
                                 Private Advisory
                             </span>
-                            <h4 style={{
+                            <h3 style={{
                                 fontSize: "18px",
                                 fontWeight: "700",
                                 color: "#ffffff",
@@ -243,7 +241,7 @@ export default function Footer1() {
                                 fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                             }}>
                                 Book a Private Consultation
-                            </h4>
+                            </h3>
                             <p style={{
                                 color: "#94a3b8",
                                 fontSize: "13.5px",

@@ -128,53 +128,49 @@ export default function ExecutiveCaseStudy() {
                     overflow: "hidden"
                 }}>
                     {/* Navigation Tabs */}
-                    <div style={{
-                        display: "flex",
-                        borderBottom: "1px solid #eaedf0",
-                        backgroundColor: "#F7F5FC",
-                        overflowX: "auto"
-                    }}>
+                    <div 
+                        role="tablist"
+                        aria-label="Case study progression stages"
+                        style={{
+                            display: "flex",
+                            borderBottom: "1px solid #eaedf0",
+                            backgroundColor: "#F7F5FC",
+                            overflowX: "auto"
+                        }}
+                    >
                         {[
-                            { key: "before", label: "1. The Initial Challenge (Before)", badge: "Invisible Search" },
-                            { key: "process", label: "2. The 90-Day Sprint (Process)", badge: "3 Pillars Executed" },
-                            { key: "after", label: "3. Measurable Outcomes (After)", badge: "Board Appointed" }
+                            { key: "before", label: "1. Initial Challenge" },
+                            { key: "process", label: "2. The 90-Day Sprint" },
+                            { key: "after", label: "3. Measurable Outcomes" }
                         ].map((tab) => (
                             <button
                                 key={tab.key}
                                 type="button"
+                                role="tab"
+                                aria-selected={activeTab === tab.key}
                                 onClick={() => setActiveTab(tab.key)}
                                 style={{
                                     flex: 1,
-                                    padding: "18px 24px",
+                                    padding: "14px 20px",
                                     border: "none",
                                     backgroundColor: activeTab === tab.key ? "#ffffff" : "transparent",
-                                    borderBottom: activeTab === tab.key ? "3px solid #0D0D14" : "3px solid transparent",
+                                    borderBottom: activeTab === tab.key ? "3px solid #8B5CF6" : "3px solid transparent",
                                     cursor: "pointer",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    gap: "10px",
+                                    gap: "8px",
                                     transition: "all 0.2s ease",
                                     whiteSpace: "nowrap"
                                 }}
                             >
                                 <span style={{
                                     fontSize: "14px",
-                                    fontWeight: "700",
-                                    color: activeTab === tab.key ? "#0D0D14" : "#6B7280",
+                                    fontWeight: activeTab === tab.key ? "700" : "600",
+                                    color: activeTab === tab.key ? "#0D0D14" : "#4B5563",
                                     fontFamily: "var(--primary-font)"
                                 }}>
                                     {tab.label}
-                                </span>
-                                <span style={{
-                                    fontSize: "11px",
-                                    fontWeight: "600",
-                                    padding: "2px 8px",
-                                    borderRadius: "6px",
-                                    backgroundColor: activeTab === tab.key ? "#0D0D14" : "#e2e8f0",
-                                    color: activeTab === tab.key ? "#ffffff" : "#6B7280"
-                                }}>
-                                    {tab.badge}
                                 </span>
                             </button>
                         ))}
@@ -257,19 +253,19 @@ export default function ExecutiveCaseStudy() {
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div style={{ backgroundColor: "#0D0D14", padding: "34px", borderRadius: "14px", color: "#ffffff", border: "1px solid rgba(255, 255, 255, 0.08)" }}>
-                                        <div style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "1px", color: "#8B5CF6", fontWeight: "700", marginBottom: "8px" }}>
+                                    <div style={{ backgroundColor: "#F7F5FC", padding: "32px", borderRadius: "12px", border: "1px solid #eaedf0", borderLeft: "4px solid #8B5CF6" }}>
+                                        <div style={{ fontSize: "12px", letterSpacing: "0.5px", color: "#8B5CF6", fontWeight: "700", marginBottom: "8px" }}>
                                             Client Time Investment
                                         </div>
-                                        <div style={{ fontSize: "28px", fontWeight: "700", marginBottom: "8px", fontFamily: "var(--primary-font)" }}>
+                                        <div style={{ fontSize: "28px", fontWeight: "700", marginBottom: "8px", fontFamily: "var(--primary-font)", color: "#0D0D14" }}>
                                             25 Minutes / Month
                                         </div>
-                                        <p style={{ fontSize: "14.5px", color: "#cbd5e1", lineHeight: "1.6", marginBottom: "20px" }}>
+                                        <p style={{ fontSize: "14.5px", color: "#4B5563", lineHeight: "1.6", marginBottom: "20px" }}>
                                             Zero ghostwriting burden. The client sent quick WhatsApp voice notes while commuting; our team converted insights into boardroom-caliber thought leadership.
                                         </p>
-                                        <div style={{ padding: "14px 18px", backgroundColor: "rgba(255,255,255,0.06)", borderRadius: "10px", border: "1px solid rgba(255,255,255,0.12)" }}>
+                                        <div style={{ padding: "14px 18px", backgroundColor: "#ffffff", borderRadius: "10px", border: "1px solid #eaedf0" }}>
                                             <span style={{ fontSize: "12px", color: "#6B7280" }}>Strict NDA Compliance:</span>
-                                            <div style={{ fontSize: "13px", color: "#F7F5FC", fontWeight: "600", marginTop: "2px" }}>
+                                            <div style={{ fontSize: "13px", color: "#0D0D14", fontWeight: "600", marginTop: "2px" }}>
                                                 100% anonymized corporate data with zero trade-secret disclosures.
                                             </div>
                                         </div>
@@ -281,7 +277,7 @@ export default function ExecutiveCaseStudy() {
                         {activeTab === 'after' && (
                             <div className="row align-items-center">
                                 <div className="col-lg-6 mb-4 mb-lg-0">
-                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#166534", backgroundColor: "#f0fdf4", padding: "4px 10px", borderRadius: "6px", border: "1px solid #bbf7d0" }}>
+                                    <span style={{ fontSize: "12px", fontWeight: "700", letterSpacing: "0.5px", color: "#166534", backgroundColor: "#f0fdf4", padding: "4px 10px", borderRadius: "6px", border: "1px solid #bbf7d0" }}>
                                         The Transformation
                                     </span>
                                     <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0D0D14", marginTop: "12px", marginBottom: "16px", fontFamily: "var(--primary-font)" }}>
@@ -328,16 +324,17 @@ export default function ExecutiveCaseStudy() {
 
                     {/* Bottom Action Footer */}
                     <div style={{
-                        padding: "20px 35px",
+                        padding: "26px 35px",
                         backgroundColor: "#F7F5FC",
                         borderTop: "1px solid #eaedf0",
                         display: "flex",
+                        flexDirection: "column",
                         alignItems: "center",
-                        justifyContent: "space-between",
-                        flexWrap: "wrap",
-                        gap: "16px"
+                        justifyContent: "center",
+                        textAlign: "center",
+                        gap: "14px"
                     }}>
-                        <div style={{ fontSize: "14px", color: "#6B7280", fontWeight: "500" }}>
+                        <div style={{ fontSize: "15px", color: "#4B5563", fontWeight: "600" }}>
                             Want similar asymmetric trust for board seats and keynote invitations?
                         </div>
                         <Link href="/contact" className="btn_style_one btn_md">

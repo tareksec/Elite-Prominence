@@ -125,51 +125,41 @@ export default function Feature() {
                                     className="float-bob-y"
                                     style={{
                                         position: "absolute",
-                                        left: "-25px",
-                                        bottom: "15px",
+                                        left: "14px",
+                                        bottom: "16px",
                                         background: "#ffffff",
-                                        borderRadius: "14px",
-                                        padding: "10px",
-                                        boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
-                                        border: isActive.key === 2 ? "2px solid #0D0D14" : "1px solid rgba(0,0,0,0.08)",
+                                        borderRadius: "12px",
+                                        padding: "10px 14px",
+                                        boxShadow: "0 14px 32px rgba(0,0,0,0.12)",
+                                        border: isActive.key === 2 ? "2px solid #8B5CF6" : "1px solid #eaedf0",
                                         cursor: "pointer",
                                         zIndex: 4,
                                         transition: "all 0.3s ease",
-                                        width: "210px"
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: "10px",
+                                        maxWidth: "220px"
                                     }}
                                     title="Click to view Pillar 2: Google & Reputation"
                                 >
-                                    <div style={{ borderRadius: "10px", overflow: "hidden", height: "105px", position: "relative" }}>
-                                        <img
-                                            src="/assets/images/elite/pillar_google_reputation.jpg"
-                                            alt="Pillar 2: Google & Reputation management for executives"
-                                            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                                        />
-                                        <div style={{
-                                            position: "absolute",
-                                            top: "6px",
-                                            left: "6px",
-                                            background: "rgba(255,255,255,0.95)",
-                                            backdropFilter: "blur(4px)",
-                                            padding: "2px 8px",
-                                            borderRadius: "6px",
-                                            fontSize: "10px",
-                                            fontWeight: "700",
-                                            color: "#0D0D14",
-                                            display: "flex",
-                                            alignItems: "center",
-                                            gap: "4px",
-                                            boxShadow: "0 2px 6px rgba(0,0,0,0.1)"
-                                        }}>
-                                            <i className="fab fa-google" style={{ color: "#4285F4", fontSize: "10px" }}></i> Page 1 Google
-                                        </div>
+                                    <div style={{
+                                        width: "36px",
+                                        height: "36px",
+                                        borderRadius: "8px",
+                                        background: "rgba(66, 133, 244, 0.1)",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        flexShrink: 0
+                                    }}>
+                                        <i className="fab fa-google" style={{ color: "#4285F4", fontSize: "16px" }}></i>
                                     </div>
-                                    <div style={{ marginTop: "8px", padding: "0 4px" }}>
-                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", display: "block" }}>
-                                            Pillar 2: Google &amp; Reputation
+                                    <div>
+                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", display: "block", lineHeight: "1.3" }}>
+                                            Pillar 2: Reputation
                                         </span>
-                                        <span style={{ fontSize: "11px", color: "#6B7280" }}>
-                                            Search Authority &amp; Standing
+                                        <span style={{ fontSize: "11.5px", color: "#6B7280" }}>
+                                            Page 1 Google Standing
                                         </span>
                                     </div>
                                 </div>
@@ -180,51 +170,41 @@ export default function Feature() {
                                     className="float-bob-x"
                                     style={{
                                         position: "absolute",
-                                        right: "-30px",
-                                        top: "25px",
+                                        right: "14px",
+                                        top: "20px",
                                         background: "#ffffff",
-                                        borderRadius: "14px",
-                                        padding: "10px",
-                                        boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
-                                        border: isActive.key === 3 ? "2px solid #0D0D14" : "1px solid rgba(0,0,0,0.08)",
+                                        borderRadius: "12px",
+                                        padding: "10px 14px",
+                                        boxShadow: "0 14px 32px rgba(0,0,0,0.12)",
+                                        border: isActive.key === 3 ? "2px solid #8B5CF6" : "1px solid #eaedf0",
                                         cursor: "pointer",
                                         zIndex: 4,
                                         transition: "all 0.3s ease",
-                                        width: "190px"
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: "10px",
+                                        maxWidth: "220px"
                                     }}
                                     title="Click to view Pillar 3: Social Visibility"
                                 >
-                                    <div style={{ borderRadius: "10px", overflow: "hidden", height: "100px", position: "relative" }}>
-                                        <img
-                                            src="/assets/images/elite/pillar_social_visibility.jpg"
-                                            alt="Pillar 3: LinkedIn thought leadership and executive visibility"
-                                            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                                        />
-                                        <div style={{
-                                            position: "absolute",
-                                            top: "6px",
-                                            left: "6px",
-                                            background: "rgba(255,255,255,0.95)",
-                                            backdropFilter: "blur(4px)",
-                                            padding: "2px 8px",
-                                            borderRadius: "6px",
-                                            fontSize: "10px",
-                                            fontWeight: "700",
-                                            color: "#0D0D14",
-                                            display: "flex",
-                                            alignItems: "center",
-                                            gap: "4px",
-                                            boxShadow: "0 2px 6px rgba(0,0,0,0.1)"
-                                        }}>
-                                            <i className="fab fa-linkedin-in" style={{ color: "#0077b5", fontSize: "10px" }}></i> Authority
-                                        </div>
+                                    <div style={{
+                                        width: "36px",
+                                        height: "36px",
+                                        borderRadius: "8px",
+                                        background: "rgba(0, 119, 181, 0.1)",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        flexShrink: 0
+                                    }}>
+                                        <i className="fab fa-linkedin-in" style={{ color: "#0077b5", fontSize: "16px" }}></i>
                                     </div>
-                                    <div style={{ marginTop: "8px", padding: "0 4px" }}>
-                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", display: "block" }}>
-                                            Pillar 3: Social Visibility
+                                    <div>
+                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", display: "block", lineHeight: "1.3" }}>
+                                            Pillar 3: Visibility
                                         </span>
-                                        <span style={{ fontSize: "11px", color: "#6B7280" }}>
-                                            LinkedIn Ghostwriting
+                                        <span style={{ fontSize: "11.5px", color: "#6B7280" }}>
+                                            LinkedIn Thought Leadership
                                         </span>
                                     </div>
                                 </div>
@@ -248,11 +228,13 @@ export default function Feature() {
                                         <div className={isActive.key == 1 ? "acc-content current" : "acc-content"} style={{ display: isActive.key == 1 ? "block" : "none" }}>
                                             <div className="text">
                                                 <p>A personal website that establishes your digital brand identity, showcasing your bio, expertise, case studies, and career milestones — the definitive hub that represents you everywhere.</p>
-                                                <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
-                                                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
+                                                <div style={{ marginTop: "14px", display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
+                                                    <span style={{ fontSize: "13px", fontWeight: "600", color: "#0D0D14", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                                                        <i className="fa-solid fa-check" style={{ color: "#8B5CF6", fontSize: "11px" }}></i>
                                                         45-Day Launch to Page 1
                                                     </span>
-                                                    <span style={{ fontSize: "12px", fontWeight: "600", color: "#6B7280", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
+                                                    <span style={{ fontSize: "13px", fontWeight: "600", color: "#0D0D14", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                                                        <i className="fa-solid fa-check" style={{ color: "#8B5CF6", fontSize: "11px" }}></i>
                                                         100% Owned Domain Authority
                                                     </span>
                                                 </div>
@@ -267,11 +249,13 @@ export default function Feature() {
                                         <div className={isActive.key == 2 ? "acc-content current" : "acc-content"} style={{ display: isActive.key == 2 ? "block" : "none" }}>
                                             <div className="text">
                                                 <p>When someone searches your name, page one should reflect your executive standing — not silence or outdated noise. We manage your online reputation with owned assets and strategic media coverage so search results validate your authority immediately.</p>
-                                                <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
-                                                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
+                                                <div style={{ marginTop: "14px", display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
+                                                    <span style={{ fontSize: "13px", fontWeight: "600", color: "#0D0D14", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                                                        <i className="fa-solid fa-check" style={{ color: "#8B5CF6", fontSize: "11px" }}></i>
                                                         +340% Inbound Board Inquiries
                                                     </span>
-                                                    <span style={{ fontSize: "12px", fontWeight: "600", color: "#6B7280", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
+                                                    <span style={{ fontSize: "13px", fontWeight: "600", color: "#0D0D14", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                                                        <i className="fa-solid fa-check" style={{ color: "#8B5CF6", fontSize: "11px" }}></i>
                                                         Top-3 Search Placement Guaranteed
                                                     </span>
                                                 </div>
@@ -286,11 +270,13 @@ export default function Feature() {
                                         <div className={isActive.key == 3 ? "acc-content current" : "acc-content"} style={{ display: isActive.key == 3 ? "block" : "none" }}>
                                             <div className="text">
                                                 <p>Executive ghostwriting and content creation aligned with an intentional brand strategy, keeping your thought leadership active on LinkedIn so you stay visible without becoming a full-time content creator.</p>
-                                                <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
-                                                    <span style={{ fontSize: "12px", fontWeight: "700", color: "#0D0D14", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
+                                                <div style={{ marginTop: "14px", display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
+                                                    <span style={{ fontSize: "13px", fontWeight: "600", color: "#0D0D14", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                                                        <i className="fa-solid fa-check" style={{ color: "#8B5CF6", fontSize: "11px" }}></i>
                                                         45K+ Avg. Organic Reach
                                                     </span>
-                                                    <span style={{ fontSize: "12px", fontWeight: "600", color: "#6B7280", backgroundColor: "#F7F5FC", padding: "4px 10px", borderRadius: "6px", border: "1px solid #eaedf0" }}>
+                                                    <span style={{ fontSize: "13px", fontWeight: "600", color: "#0D0D14", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                                                        <i className="fa-solid fa-check" style={{ color: "#8B5CF6", fontSize: "11px" }}></i>
                                                         0 Hours Weekly Time Commitment
                                                     </span>
                                                 </div>

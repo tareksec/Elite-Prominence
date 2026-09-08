@@ -224,9 +224,9 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             <span
                                 className="logo_subtag"
                                 style={{
-                                    fontSize: '9px',
+                                    fontSize: '12px',
                                     fontWeight: '700',
-                                    letterSpacing: '0.6px',
+                                    letterSpacing: '0.5px',
                                     textTransform: 'uppercase',
                                     color: '#6B7280'
                                 }}

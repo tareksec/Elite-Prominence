@@ -180,15 +180,15 @@ export default function ExecutiveDirectoryTeaser() {
                                 {/* Featured Perspective Preview */}
                                 <div style={{
                                     backgroundColor: "#F7F5FC",
-                                    padding: "14px 16px",
+                                    padding: "18px 20px",
                                     borderRadius: "10px",
                                     border: "1px solid #eaedf0",
                                     marginBottom: "18px"
                                 }}>
-                                    <span style={{ fontSize: "10.5px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.5px", color: "#8B5CF6", display: "block", marginBottom: "4px" }}>
+                                    <span style={{ fontSize: "12px", fontWeight: "700", letterSpacing: "0.5px", color: "#8B5CF6", display: "block", marginBottom: "6px" }}>
                                         Featured Perspective
                                     </span>
-                                    <p style={{ margin: 0, fontSize: "13.5px", fontWeight: "600", color: "#0D0D14", lineHeight: "1.5" }}>
+                                    <p style={{ margin: 0, fontSize: "14px", fontWeight: "600", color: "#0D0D14", lineHeight: "1.6" }}>
                                         &ldquo;{member.quote}&rdquo;
                                     </p>
                                 </div>
@@ -201,7 +201,7 @@ export default function ExecutiveDirectoryTeaser() {
                                             style={{
                                                 backgroundColor: "#F7F5FC",
                                                 color: "#6B7280",
-                                                fontSize: "11px",
+                                                fontSize: "12px",
                                                 fontWeight: "600",
                                                 padding: "3px 10px",
                                                 borderRadius: "6px",
@@ -218,7 +218,8 @@ export default function ExecutiveDirectoryTeaser() {
                             <div className="prominence_card_footer" style={{ borderTop: "1px solid #f1f5f9", paddingTop: "14px", marginTop: "auto" }}>
                                 <Link
                                     href={`/community/${member.id}`}
-                                    className="btn_style_ghost"
+                                    className="btn_style_two btn_sm"
+                                    style={{ width: "100%", justifyContent: "center" }}
                                 >
                                     View Executive Profile &amp; Articles <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
@@ -242,9 +243,9 @@ export default function ExecutiveDirectoryTeaser() {
                     boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)"
                 }}>
                     <div>
-                        <h4 style={{ margin: "0 0 6px", fontSize: "20px", fontWeight: "700", color: "#ffffff", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                        <h3 style={{ margin: "0 0 6px", fontSize: "20px", fontWeight: "700", color: "#ffffff", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                             Elevate Your Strategic Executive Footprint
-                        </h4>
+                        </h3>
                         <p style={{ margin: 0, color: "#6B7280", fontSize: "14px", maxWidth: "600px", lineHeight: "1.6" }}>
                             Every Prominence member receives a sovereign personal website, Google Knowledge Graph indexation, and priority publication in our Executive Directory.
                         </p>
@@ -261,7 +262,7 @@ export default function ExecutiveDirectoryTeaser() {
                             href="/contact"
                             className="btn_style_two_dark btn_md"
                         >
-                            Apply for Contributor Status
+                            Apply for Contributor Status <i className="fa-solid fa-arrow-right"></i>
                         </Link>
                     </div>
                 </div>

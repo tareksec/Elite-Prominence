@@ -83,16 +83,16 @@ export default function FaqAccordion() {
                                 cursor: "pointer",
                                 display: "flex",
                                 flexDirection: "column",
-                                gap: "8px"
+                                gap: "12px"
                             }}
                         >
                             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                                     <span style={{
-                                        fontSize: "11px",
+                                        fontSize: "12px",
                                         fontWeight: "700",
                                         textTransform: "uppercase",
-                                        letterSpacing: "0.8px",
+                                        letterSpacing: "0.6px",
                                         color: "#8B5CF6",
                                         fontFamily: "var(--primary-font)"
                                     }}>
@@ -100,7 +100,7 @@ export default function FaqAccordion() {
                                     </span>
                                     <span style={{ color: "#cbd5e1" }}>&bull;</span>
                                     <span style={{
-                                        fontSize: "11px",
+                                        fontSize: "12px",
                                         fontWeight: "600",
                                         color: "#6B7280",
                                         backgroundColor: isOpen ? "#ffffff" : "#f1f5f9",
@@ -129,12 +129,12 @@ export default function FaqAccordion() {
                             </div>
 
                             <h3 style={{
-                                margin: "4px 0 0",
-                                fontSize: "17.5px",
+                                margin: "6px 0 0",
+                                fontSize: "17px",
                                 fontWeight: "700",
                                 color: "#0D0D14",
                                 fontFamily: "var(--primary-font)",
-                                lineHeight: "1.35",
+                                lineHeight: "1.4",
                                 letterSpacing: "-0.2px"
                             }}>
                                 {item.question}

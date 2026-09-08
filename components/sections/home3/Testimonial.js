@@ -182,7 +182,7 @@ export default function Testimonial() {
                                         {item.avatarInitials}
                                     </div>
                                     <div>
-                                        <h5 style={{
+                                        <h3 style={{
                                             fontSize: "16px",
                                             fontWeight: "700",
                                             color: "#0D0D14",
@@ -190,7 +190,7 @@ export default function Testimonial() {
                                             fontFamily: "var(--primary-font)"
                                         }}>
                                             {item.name}
-                                        </h5>
+                                        </h3>
                                         <p style={{
                                             fontSize: "12.5px",
                                             color: "#6B7280",

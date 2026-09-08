@@ -11,10 +11,9 @@ export default function Clients() {
                     <div className="col-lg-7 pe-lg-5" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
                         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "18px" }}>
                             <span style={{
-                                fontSize: "11px",
+                                fontSize: "12px",
                                 fontWeight: "700",
-                                textTransform: "uppercase",
-                                letterSpacing: "1.4px",
+                                letterSpacing: "0.5px",
                                 color: "#8B5CF6",
                                 fontFamily: "var(--primary-font)"
                             }}>
@@ -51,10 +50,9 @@ export default function Clients() {
                         {/* Institutional Credential Grid (Editorial 2-Column Matrix) */}
                         <div>
                             <div style={{
-                                fontSize: "11px",
+                                fontSize: "12px",
                                 fontWeight: "700",
-                                textTransform: "uppercase",
-                                letterSpacing: "1px",
+                                letterSpacing: "0.5px",
                                 color: "#6B7280",
                                 marginBottom: "14px",
                                 fontFamily: "var(--primary-font)"
