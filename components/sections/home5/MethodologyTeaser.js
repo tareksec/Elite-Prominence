@@ -61,49 +61,41 @@ const PHASES = [
 
 export default function MethodologyTeaser() {
     return (
-        <section className="pt_100 pb_90" style={{ background: '#fafbfc', borderTop: '1px solid #eaedf0', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
+        <section className="prominence_section" style={{ background: '#fafbfc', borderTop: '1px solid #eaedf0', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
             <div className="container">
-                <div className="section_title centred" style={{ maxWidth: '780px', margin: '0 auto 50px' }}>
-                    <div className="tag_text" style={{ marginBottom: '12px' }}>
-                        <h6 style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '8px',
-                            padding: '6px 16px',
-                            background: '#f1f5f9',
-                            borderRadius: '30px',
-                            fontSize: '12px',
-                            fontWeight: '700',
-                            color: '#0f1013',
-                            textTransform: 'uppercase',
-                            letterSpacing: '0.8px',
-                            border: '1px solid #e2e8f0'
-                        }}>
-                            <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#b89058' }}></span>
-                            The Prominence Protocol
-                        </h6>
+                {/* Section Header: Editorial Split */}
+                <div className="prominence_header_split">
+                    <div>
+                        <div style={{ marginBottom: '12px' }}>
+                            <span className="prominence_tracker">
+                                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#b89058' }}></span>
+                                The Prominence Protocol
+                            </span>
+                        </div>
+                        <h2 style={{ fontSize: 'clamp(26px, 3.6vw, 36px)', fontWeight: '700', color: '#0f1013', letterSpacing: '-0.5px', lineHeight: '1.24', margin: 0, fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                            Our 6-Stage Sovereign Architecture
+                        </h2>
                     </div>
-                    <h2 style={{ fontSize: '38px', fontWeight: '700', color: '#0f1013', letterSpacing: '-0.5px', lineHeight: '1.25' }}>
-                        Our 6-Stage Sovereign Architecture
-                    </h2>
-                    <p style={{ color: '#59606a', fontSize: '16.5px', marginTop: '14px', lineHeight: '1.7', maxWidth: '640px', margin: '14px auto 0' }}>
-                        A disciplined, turnkey methodology engineered to establish permanent executive stature with under 30 minutes of client time per month.
-                    </p>
+                    <div>
+                        <p style={{ color: '#59606a', fontSize: '16px', lineHeight: '27px', maxWidth: '520px', margin: 0 }}>
+                            A disciplined, turnkey methodology engineered to establish permanent executive stature with under 30 minutes of client time per month.
+                        </p>
+                    </div>
                 </div>
 
                 {/* 3-Phase Roadmap Grid */}
                 <div className="row g-4 mb-4">
                     {PHASES.map((block, idx) => (
                         <div key={idx} className="col-lg-4 col-md-12">
-                            <div style={{
+                            <div className="prominence_depth_card" style={{
                                 background: '#ffffff',
                                 border: '1px solid #eaedf0',
+                                borderTop: '3px solid #b89058',
                                 borderRadius: '14px',
-                                padding: '32px 26px',
+                                padding: '34px 28px',
                                 height: '100%',
                                 display: 'flex',
                                 flexDirection: 'column',
-                                boxShadow: '0 4px 18px rgba(15, 16, 19, 0.03)',
                                 position: 'relative'
                             }}>
                                 {/* Phase Header */}
@@ -111,13 +103,13 @@ export default function MethodologyTeaser() {
                                     <span style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', letterSpacing: '0.5px' }}>
                                         {block.phase}
                                     </span>
-                                    <span style={{ fontSize: '11px', fontWeight: '700', color: '#b89058', background: '#faf6f0', padding: '3px 10px', borderRadius: '20px', border: '1px solid rgba(184, 144, 88, 0.3)' }}>
+                                    <span className="prominence_badge prominence_badge_gold" style={{ fontSize: '11px', padding: '3px 10px' }}>
                                         {block.timeline}
                                     </span>
                                 </div>
 
                                 {/* Stages in this Phase */}
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '22px', flexGrow: 1 }}>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', flexGrow: 1 }}>
                                     {block.stages.map((stage) => (
                                         <div key={stage.num} style={{ position: 'relative', paddingLeft: '44px' }}>
                                             {/* Stage Number Bullet */}
@@ -127,24 +119,25 @@ export default function MethodologyTeaser() {
                                                 top: '2px',
                                                 width: '32px',
                                                 height: '32px',
-                                                borderRadius: '8px',
+                                                borderRadius: '6px',
                                                 background: '#0f1013',
-                                                color: '#ffffff',
+                                                color: '#b89058',
                                                 fontSize: '12px',
                                                 fontWeight: '700',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                fontFamily: 'var(--primary-font)'
+                                                fontFamily: 'var(--primary-font)',
+                                                border: '1px solid rgba(184, 144, 88, 0.25)'
                                             }}>
                                                 {stage.num}
                                             </div>
 
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                                                <h3 style={{ fontSize: '17px', fontWeight: '700', color: '#0f1013', margin: 0 }}>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
+                                                <h3 style={{ fontSize: '17px', fontWeight: '700', color: '#0f1013', margin: 0, fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                                     {stage.name}
                                                 </h3>
-                                                <span style={{ fontSize: '10.5px', fontWeight: '600', color: '#64748b', background: '#f1f5f9', padding: '2px 8px', borderRadius: '4px' }}>
+                                                <span style={{ fontSize: '10.5px', fontWeight: '600', color: '#64748b', background: '#f1f5f9', padding: '2px 8px', borderRadius: '6px', border: '1px solid #e2e8f0' }}>
                                                     {stage.badge}
                                                 </span>
                                             </div>
@@ -161,7 +154,7 @@ export default function MethodologyTeaser() {
                 </div>
 
                 <div className="text-center" style={{ marginTop: '40px' }}>
-                    <Link href="/how-it-works" className="btn_style_one">
+                    <Link href="/how-it-works" className="btn_style_one btn_md">
                         Explore the Full Methodology Protocol <i className="fa-solid fa-arrow-right"></i>
                     </Link>
                 </div>

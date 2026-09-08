@@ -226,7 +226,7 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                 <Link
                                     href="/contact"
                                     onClick={handleMobileMenu}
-                                    className="btn_style_one btn_block"
+                                    className="btn_style_one btn_block btn_md"
                                 >
                                     Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>

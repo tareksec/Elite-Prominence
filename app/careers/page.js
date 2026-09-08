@@ -96,45 +96,24 @@ export default function CareersPage() {
                 {/* Hero Section: Charter Narrative */}
                 <section className="prominence_page_intro" style={{ backgroundColor: '#ffffff', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: '880px', margin: '0 auto' }}>
-                            <div className="tag_text" style={{ marginBottom: '14px' }}>
-                                <h6 style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: '8px',
-                                    padding: '6px 16px',
-                                    background: '#f1f5f9',
-                                    borderRadius: '30px',
-                                    fontSize: '12px',
-                                    fontWeight: '700',
-                                    color: '#0f1013',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.8px',
-                                    border: '1px solid #e2e8f0'
-                                }}>
-                                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#b89058' }}></span>
-                                    Practice Charter &amp; Mandates
-                                </h6>
-                            </div>
+                        <div className="prominence_header_centered" style={{ maxWidth: '820px', margin: '0 auto' }}>
+                            <span className="prominence_tracker">Practice Charter &amp; Mandates</span>
                             <h1 style={{
-                                fontSize: 'clamp(28px, 5vw, 46px)',
+                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                 fontWeight: '700',
                                 color: '#0f1013',
-                                lineHeight: '1.2',
-                                letterSpacing: '-0.5px',
-                                marginBottom: '22px',
-                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                                lineHeight: '1.2'
                             }}>
                                 Counsel the Leaders Who Shape Global Industry
                             </h1>
-                            <p style={{ fontSize: '18px', color: '#59606a', lineHeight: '1.7', margin: '0 auto 34px', maxWidth: '740px' }}>
+                            <p className="prominence_lead_text">
                                 Prominence is not a marketing agency. We are a specialized executive advisory firm entrusted by CEOs, CHROs, and institutional leaders to architect their sovereign digital stature, defend their search footprint, and articulate their thought leadership.
                             </p>
-                            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <a href="#open-mandates" className="btn_style_one">
+                            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '32px' }}>
+                                <a href="#open-mandates" className="btn_style_one btn_md">
                                     Review Open Mandates <i className="fa-solid fa-arrow-down"></i>
                                 </a>
-                                <a href="#apply-dossier" className="btn_style_two">
+                                <a href="#apply-dossier" className="btn_style_two btn_md">
                                     Submit Direct Dossier
                                 </a>
                             </div>
@@ -143,19 +122,17 @@ export default function CareersPage() {
                 </section>
 
                 {/* Operating Principles: Asymmetrical Editorial Manifesto */}
-                <section className="pt_100 pb_90" style={{ background: '#fafbfc', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
+                <section className="prominence_section" style={{ background: '#FAF8F2', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
-                        <div className="row align-items-end" style={{ marginBottom: '50px' }}>
-                            <div className="col-lg-7">
-                                <span style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#b89058', display: 'block', marginBottom: '8px' }}>
-                                    Our Professional Creed
-                                </span>
-                                <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#0f1013', margin: 0, letterSpacing: '-0.5px', lineHeight: '1.25' }}>
+                        <div className="prominence_header_split">
+                            <div>
+                                <span className="prominence_tracker">Our Professional Creed</span>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0f1013', margin: 0, lineHeight: '1.25' }}>
                                     The Three Tenets of the Prominence Practice
                                 </h2>
                             </div>
-                            <div className="col-lg-5 mt-3 mt-lg-0">
-                                <p style={{ fontSize: '15.5px', color: '#59606a', lineHeight: '1.65', margin: 0 }}>
+                            <div>
+                                <p className="prominence_lead_text">
                                     We maintain an uncompromising standard of intellectual rigor. We work with a small, elite cohort of specialists who prize quality over volume and discretion over self-promotion.
                                 </p>
                             </div>
@@ -254,38 +231,19 @@ export default function CareersPage() {
                 </section>
 
                 {/* Appointment Protocol: Visual 4-Stage Roadmap */}
-                <section className="pt_100 pb_90" style={{ background: '#0f1013', color: '#ffffff', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', fontFamily: 'var(--primary-font)' }}>
+                <section className="prominence_section" style={{ background: '#0f1013', color: '#ffffff', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: '780px', margin: '0 auto 55px' }}>
-                            <div className="tag_text" style={{ marginBottom: '12px' }}>
-                                <h6 style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: '8px',
-                                    padding: '6px 16px',
-                                    background: 'rgba(255, 255, 255, 0.08)',
-                                    borderRadius: '30px',
-                                    fontSize: '12px',
-                                    fontWeight: '700',
-                                    color: '#ffffff',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.8px',
-                                    border: '1px solid rgba(255, 255, 255, 0.15)'
-                                }}>
-                                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#b89058' }}></span>
-                                    Vetting &amp; Induction Protocol
-                                </h6>
-                            </div>
+                        <div className="prominence_header_centered" style={{ maxWidth: '780px', margin: '0 auto 48px' }}>
+                            <span className="prominence_tracker" style={{ color: '#b89058' }}>
+                                Vetting &amp; Induction Protocol
+                            </span>
                             <h2 style={{
-                                fontSize: 'clamp(26px, 4vw, 36px)',
-                                fontWeight: '700',
                                 color: '#ffffff',
-                                letterSpacing: '-0.5px',
-                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                             }}>
                                 The 4-Stage Evaluation Architecture
                             </h2>
-                            <p style={{ color: '#94a3b8', fontSize: '16px', marginTop: '12px', lineHeight: '1.7' }}>
+                            <p className="prominence_lead_text" style={{ color: '#94a3b8' }}>
                                 We evaluate every candidate with the same meticulous rigor we apply to executive client reputations.
                             </p>
                         </div>
@@ -341,40 +299,20 @@ export default function CareersPage() {
                 </section>
 
                 {/* Open Mandates: Editorial Role Dossiers */}
-                <section id="open-mandates" className="pt_100 pb_90" style={{ background: '#f8fafc', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
+                <section id="open-mandates" className="prominence_section" style={{ background: '#FAF8F2', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: '780px', margin: '0 auto 50px' }}>
-                            <div className="tag_text" style={{ marginBottom: '12px' }}>
-                                <h6 style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: '8px',
-                                    padding: '6px 16px',
-                                    background: '#ffffff',
-                                    borderRadius: '30px',
-                                    fontSize: '12px',
-                                    fontWeight: '700',
-                                    color: '#0f1013',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.8px',
-                                    border: '1px solid #eaedf0'
-                                }}>
-                                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#b89058' }}></span>
-                                    Active Retained Searches
-                                </h6>
+                        <div className="prominence_header_split">
+                            <div>
+                                <span className="prominence_tracker">Active Retained Searches</span>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                    Current Practice Mandates
+                                </h2>
                             </div>
-                            <h2 style={{
-                                fontSize: 'clamp(26px, 4.5vw, 38px)',
-                                fontWeight: '700',
-                                color: '#0f1013',
-                                letterSpacing: '-0.5px',
-                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
-                            }}>
-                                Current Practice Mandates
-                            </h2>
-                            <p style={{ color: '#59606a', fontSize: '16.5px', marginTop: '14px', lineHeight: '1.7' }}>
-                                Each mandate represents a key pillar in our executive reputation and thought leadership advisory.
-                            </p>
+                            <div>
+                                <p className="prominence_lead_text">
+                                    Each mandate represents a key pillar in our executive reputation and thought leadership advisory.
+                                </p>
+                            </div>
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', maxWidth: '980px', margin: '0 auto' }}>
@@ -397,16 +335,7 @@ export default function CareersPage() {
                                             </h3>
                                         </div>
                                         <div style={{ textAlign: 'right' }}>
-                                            <span style={{
-                                                fontSize: '11.5px',
-                                                fontWeight: '700',
-                                                color: '#0f1013',
-                                                background: '#f1f5f9',
-                                                padding: '4px 12px',
-                                                borderRadius: '20px',
-                                                border: '1px solid #e2e8f0',
-                                                display: 'inline-block'
-                                            }}>
+                                            <span className="prominence_badge">
                                                 {role.arrangement}
                                             </span>
                                             <div style={{ fontSize: '12px', color: '#64748b', marginTop: '6px' }}>
@@ -473,33 +402,15 @@ export default function CareersPage() {
                 </section>
 
                 {/* Direct Dossier Submission Form */}
-                <section id="apply-dossier" className="pt_100 pb_100" style={{ background: '#ffffff', fontFamily: 'var(--primary-font)' }}>
+                <section id="apply-dossier" className="prominence_section" style={{ background: '#ffffff', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
                         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                            <div className="section_title centred" style={{ marginBottom: '40px' }}>
-                                <div className="tag_text" style={{ marginBottom: '12px' }}>
-                                    <h6 style={{
-                                        display: 'inline-flex',
-                                        alignItems: 'center',
-                                        gap: '8px',
-                                        padding: '6px 16px',
-                                        background: '#f1f5f9',
-                                        borderRadius: '30px',
-                                        fontSize: '12px',
-                                        fontWeight: '700',
-                                        color: '#0f1013',
-                                        textTransform: 'uppercase',
-                                        letterSpacing: '0.8px',
-                                        border: '1px solid #e2e8f0'
-                                    }}>
-                                        <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#b89058' }}></span>
-                                        Confidential Dossier Transmission
-                                    </h6>
-                                </div>
-                                <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#0f1013', letterSpacing: '-0.5px' }}>
+                            <div className="prominence_header_centered" style={{ maxWidth: '720px', margin: '0 auto 40px' }}>
+                                <span className="prominence_tracker">Confidential Dossier Transmission</span>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                     Submit Your Credentials
                                 </h2>
-                                <p style={{ color: '#59606a', fontSize: '16px', marginTop: '10px', lineHeight: '1.6' }}>
+                                <p className="prominence_lead_text">
                                     Every submission is handled with strict professional discretion. Please provide links to published pieces, codebases, or past advisory portfolios.
                                 </p>
                             </div>
@@ -514,14 +425,14 @@ export default function CareersPage() {
                                 }}>
                                     <div className="row g-3">
                                         <div className="col-12">
-                                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', display: 'block' }}>
+                                            <label className="prominence_label">
                                                 Mandate of Interest
                                             </label>
                                             <select 
                                                 value={selectedRole}
                                                 onChange={(e) => setSelectedRole(e.target.value)}
                                                 required
-                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #eaedf0', fontSize: '14px', background: '#ffffff', color: '#0f1013', outline: 'none' }}
+                                                className="prominence_select"
                                             >
                                                 <option value="">Select an open mandate...</option>
                                                 {MANDATES.map((r) => (
@@ -531,7 +442,7 @@ export default function CareersPage() {
                                             </select>
                                         </div>
                                         <div className="col-md-6">
-                                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', display: 'block' }}>
+                                            <label className="prominence_label">
                                                 Full Legal Name
                                             </label>
                                             <input 
@@ -540,11 +451,11 @@ export default function CareersPage() {
                                                 value={name}
                                                 onChange={(e) => setName(e.target.value)}
                                                 placeholder="e.g. Julian Vance" 
-                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #eaedf0', fontSize: '14px', background: '#ffffff', color: '#0f1013', outline: 'none' }} 
+                                                className="prominence_input"
                                             />
                                         </div>
                                         <div className="col-md-6">
-                                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', display: 'block' }}>
+                                            <label className="prominence_label">
                                                 Direct Contact Email
                                             </label>
                                             <input 
@@ -553,11 +464,11 @@ export default function CareersPage() {
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 placeholder="e.g. name@domain.com" 
-                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #eaedf0', fontSize: '14px', background: '#ffffff', color: '#0f1013', outline: 'none' }} 
+                                                className="prominence_input"
                                             />
                                         </div>
                                         <div className="col-md-6">
-                                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', display: 'block' }}>
+                                            <label className="prominence_label">
                                                 LinkedIn Profile URL
                                             </label>
                                             <input 
@@ -566,11 +477,11 @@ export default function CareersPage() {
                                                 value={linkedin}
                                                 onChange={(e) => setLinkedin(e.target.value)}
                                                 placeholder="https://linkedin.com/in/username" 
-                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #eaedf0', fontSize: '14px', background: '#ffffff', color: '#0f1013', outline: 'none' }} 
+                                                className="prominence_input"
                                             />
                                         </div>
                                         <div className="col-md-6">
-                                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', display: 'block' }}>
+                                            <label className="prominence_label">
                                                 Portfolio / Publication Archive URL
                                             </label>
                                             <input 
@@ -578,11 +489,11 @@ export default function CareersPage() {
                                                 value={portfolio}
                                                 onChange={(e) => setPortfolio(e.target.value)}
                                                 placeholder="https://archive.com or articles portfolio" 
-                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #eaedf0', fontSize: '14px', background: '#ffffff', color: '#0f1013', outline: 'none' }} 
+                                                className="prominence_input"
                                             />
                                         </div>
                                         <div className="col-12">
-                                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', display: 'block' }}>
+                                            <label className="prominence_label">
                                                 Why Prominence? (Executive Rationale)
                                             </label>
                                             <textarea 
@@ -591,7 +502,8 @@ export default function CareersPage() {
                                                 value={note}
                                                 onChange={(e) => setNote(e.target.value)}
                                                 placeholder="Articulate why your editorial rigor or technical depth aligns with high-stakes C-suite representation..." 
-                                                style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #eaedf0', fontSize: '14px', background: '#ffffff', color: '#0f1013', outline: 'none' }}
+                                                className="prominence_textarea"
+                                                style={{ resize: "vertical" }}
                                             />
                                         </div>
                                         <div className="col-12 text-center mt-4">

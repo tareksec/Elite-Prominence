@@ -82,8 +82,8 @@ export default function FeedbackPage() {
         <div className="boxed_wrapper">
             <Layout headerStyle={4} footerStyle={1}>
                 <section style={{
-                    backgroundColor: "#f8fafc",
-                    padding: "100px 0 100px",
+                    backgroundColor: "#FAF8F2",
+                    padding: "var(--ep-section-py) 0",
                     minHeight: "80vh",
                     fontFamily: "var(--primary-font)"
                 }}>
@@ -91,34 +91,37 @@ export default function FeedbackPage() {
                         {!configured && <SupabaseSetupNotice feature="Live Feedback & Testimonials Moderation" />}
 
                         {/* Hero Header */}
-                        <div style={{ textAlign: "center", maxWidth: "780px", margin: "0 auto 48px" }}>
-                            <span className="prominence_badge">
-                                Verified Client Perspectives
-                            </span>
+                        <div className="prominence_header_centered">
+                            <div style={{ marginBottom: "12px" }}>
+                                <span className="prominence_tracker">
+                                    <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058" }}></span>
+                                    Verified Client Perspectives
+                                </span>
+                            </div>
                             <h1 style={{
-                                fontSize: "clamp(28px, 5vw, 44px)",
+                                fontSize: "clamp(28px, 4.5vw, 42px)",
                                 fontWeight: "700",
                                 color: "#0f1013",
-                                marginBottom: "18px",
-                                lineHeight: "1.25",
-                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                                marginBottom: "16px",
+                                lineHeight: "1.24",
+                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                             }}>
                                 Executive Testimonials &amp; Reviews
                             </h1>
-                            <p style={{ fontSize: "clamp(16px, 2.5vw, 18px)", color: "#59606a", lineHeight: "1.7", margin: "0 0 28px" }}>
+                            <p className="prominence_lead_text" style={{ margin: "0 auto 28px" }}>
                                 Hear directly from senior HR leaders, managing directors, and enterprise talent executives who have elevated their authority, board visibility, and career trajectory with Elite Prominence.
                             </p>
 
                             <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
                                 <Link
                                     href="/dashboard?tab=reviews"
-                                    className="btn_style_one"
+                                    className="btn_style_one btn_md"
                                 >
                                     Share Your Feedback <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                                 <Link
                                     href="/community"
-                                    className="btn_style_two"
+                                    className="btn_style_two btn_md"
                                 >
                                     Explore Directory
                                 </Link>
@@ -142,21 +145,21 @@ export default function FeedbackPage() {
                             gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
                             gap: "24px"
                         }}>
-                            {reviews.map((rev) => (
-                                <div key={rev.id} className="feedback_card prominence_card_equal_height" style={{
-                                    backgroundColor: "#ffffff",
-                                    borderRadius: "16px",
-                                    padding: "32px 28px",
+                            {reviews.map((rev, idx) => (
+                                <div key={rev.id} className="feedback_card prominence_card_equal_height prominence_depth_card" style={{
+                                    backgroundColor: idx % 3 === 1 ? "#fafbfc" : "#ffffff",
+                                    borderRadius: "12px",
+                                    padding: "34px 30px",
                                     border: "1px solid #eaedf0",
-                                    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)",
+                                    borderTop: "3px solid #b89058",
                                     overflowWrap: "break-word",
                                     wordBreak: "break-word",
-                                    transition: "all 0.3s ease"
+                                    position: "relative"
                                 }}>
                                     <div className="prominence_card_body">
                                         {/* Star Rating & Verified Badge */}
                                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px", flexWrap: "wrap", gap: "8px" }}>
-                                            <div style={{ fontSize: "14px", display: "inline-flex", gap: "4px" }}>
+                                            <div style={{ fontSize: "13px", display: "inline-flex", gap: "4px" }}>
                                                 {[...Array(5)].map((_, i) => (
                                                     <i 
                                                         key={i} 
@@ -165,21 +168,27 @@ export default function FeedbackPage() {
                                                     />
                                                 ))}
                                             </div>
-                                            <span style={{
-                                                fontSize: "11px",
-                                                fontWeight: "700",
-                                                textTransform: "uppercase",
-                                                color: "#0f1013", backgroundColor: "rgba(15, 16, 19, 0.05)", border: "1px solid rgba(15, 16, 19, 0.12)",
-                                                padding: "3px 10px",
-                                                borderRadius: "12px"
-                                            }}>
-                                                <i className="fa-solid fa-circle-check" style={{ marginRight: "4px", color: "#b89058" }}></i> Verified Client
-                                            </span>
+                                            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                                                <span style={{
+                                                    fontSize: "11px",
+                                                    fontWeight: "700",
+                                                    textTransform: "uppercase",
+                                                    letterSpacing: "0.5px",
+                                                    color: "#0f1013", 
+                                                    backgroundColor: "rgba(184, 144, 88, 0.08)", 
+                                                    border: "1px solid rgba(184, 144, 88, 0.25)",
+                                                    padding: "3px 10px",
+                                                    borderRadius: "6px"
+                                                }}>
+                                                    <i className="fa-solid fa-circle-check" style={{ marginRight: "4px", color: "#b89058" }}></i> Verified Client
+                                                </span>
+                                                <i className="fa-solid fa-quote-right" style={{ color: "rgba(184, 144, 88, 0.22)", fontSize: "18px" }}></i>
+                                            </div>
                                         </div>
 
                                         {/* Quote Body */}
                                         <p style={{
-                                            fontSize: "16px",
+                                            fontSize: "15.5px",
                                             lineHeight: "1.7",
                                             color: "#334155",
                                             margin: "0 0 24px",
@@ -193,10 +202,10 @@ export default function FeedbackPage() {
 
                                     {/* Author Signature */}
                                     <div className="prominence_card_footer" style={{ borderTop: "1px solid #eaedf0", paddingTop: "18px" }}>
-                                        <h3 style={{ margin: "0 0 4px", fontSize: "18px", fontWeight: "700", color: "#0f1013" }}>
+                                        <h3 style={{ margin: "0 0 4px", fontSize: "17px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             {rev.full_name}
                                         </h3>
-                                        <div style={{ fontSize: "14px", color: "#64748b", fontStyle: "italic" }}>
+                                        <div style={{ fontSize: "13px", color: "#64748b", fontStyle: "normal" }}>
                                             {rev.role_title}
                                         </div>
                                     </div>

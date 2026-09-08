@@ -111,7 +111,7 @@ export default function Faq_Page() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle4="Frequently Asked Questions">
-                <section className="faq_section inner_page pt_120 pb_120" style={{ background: "#f8fafc" }}>
+                <section className="faq_section inner_page pt_120 pb_120" style={{ background: "#FAF8F2" }}>
                     <div className="container">
                         <div className="row">
                             
@@ -129,7 +129,7 @@ export default function Faq_Page() {
                                         fontSize: "clamp(30px, 3.8vw, 42px)",
                                         fontWeight: "700",
                                         color: "#0f1013",
-                                        fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                        fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                         lineHeight: "1.25",
                                         letterSpacing: "-0.5px",
                                         marginBottom: "18px"
@@ -165,13 +165,13 @@ export default function Faq_Page() {
                                         <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#b89058", marginBottom: "6px" }}>
                                             Direct Confidential Access
                                         </div>
-                                        <div style={{ fontSize: "17px", fontWeight: "700", fontFamily: "var(--primary-font)", marginBottom: "8px" }}>
+                                        <div style={{ fontSize: "17px", fontWeight: "700", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "8px" }}>
                                             Have an Unlisted Governance Inquiry?
                                         </div>
                                         <p style={{ fontSize: "13px", color: "#cbd5e1", lineHeight: "22px", marginBottom: "18px" }}>
                                             Speak directly with a Prominence Managing Partner to evaluate your specific positioning or transition horizon.
                                         </p>
-                                        <Link href="/contact" className="btn_style_gold btn_block">
+                                        <Link href="/contact" className="btn_style_gold btn_block btn_md">
                                             Book Confidential Briefing <i className="fa-solid fa-arrow-right"></i>
                                         </Link>
                                     </div>
@@ -184,7 +184,7 @@ export default function Faq_Page() {
                                     <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#94a3b8", fontFamily: "var(--primary-font)" }}>
                                         Key Operational Inquiries
                                     </div>
-                                    <div style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginTop: "2px" }}>
+                                    <div style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginTop: "2px" }}>
                                         Frequently Addressed Matters
                                     </div>
                                 </div>

@@ -28,7 +28,7 @@ import Header4 from "./header/Header4"
 import Footer1 from './footer/Footer1'
 import AnnouncementBanner from '../elements/AnnouncementBanner'
 
-export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, breadcrumbTitle2, breadcrumbTitle3, breadcrumbTitle4, breadcrumbTitle5, breadcrumbTitle6, breadcrumbTitle7, breadcrumbTitle8, breadcrumbTitle9, breadcrumbTitle10, breadcrumbTitle11, breadcrumbTitle12, breadcrumbTitle13, breadcrumbTitle14, breadcrumbTitle15, breadcrumbTitle16, children, wrapperCls }) {
+export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, breadcrumbSubtitle, breadcrumbTrail, breadcrumbTitle2, breadcrumbTitle3, breadcrumbTitle4, breadcrumbTitle5, breadcrumbTitle6, breadcrumbTitle7, breadcrumbTitle8, breadcrumbTitle9, breadcrumbTitle10, breadcrumbTitle11, breadcrumbTitle12, breadcrumbTitle13, breadcrumbTitle14, breadcrumbTitle15, breadcrumbTitle16, children, wrapperCls }) {
     const [scroll, setScroll] = useState(0)
     // Mobile Menu
     const [isMobileMenu, setMobileMenu] = useState(false)
@@ -74,7 +74,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, brea
                 <Sidebar isSidebar={isSidebar} handleSidebar={handleSidebar} />
                 <SearchPopup isPopup={isPopup} handlePopup={handlePopup} />
 
-                {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
+                {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} subtitle={breadcrumbSubtitle} breadcrumbTrail={breadcrumbTrail} />}
                 {breadcrumbTitle2 && <Breadcrumb2 breadcrumbTitle2={breadcrumbTitle2} />}
                 {breadcrumbTitle3 && <Breadcrumb3 breadcrumbTitle3={breadcrumbTitle3} />}
                 {breadcrumbTitle4 && <Breadcrumb4 breadcrumbTitle4={breadcrumbTitle4} />}

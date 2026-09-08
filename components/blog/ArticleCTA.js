@@ -117,22 +117,16 @@ export default function ArticleCTA({
               color: '#64748B'
             }}
           >
-            <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#b89058" strokeWidth="2.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-              </svg>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <i className="fa-solid fa-check" style={{ color: '#b89058', fontSize: '11px' }}></i>
               100% Confidential
             </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#b89058" strokeWidth="2.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-              </svg>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <i className="fa-solid fa-check" style={{ color: '#b89058', fontSize: '11px' }}></i>
               No Obligation
             </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#b89058" strokeWidth="2.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-              </svg>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <i className="fa-solid fa-check" style={{ color: '#b89058', fontSize: '11px' }}></i>
               20 Minutes
             </span>
           </div>

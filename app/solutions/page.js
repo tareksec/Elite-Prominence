@@ -66,19 +66,24 @@ export default function SolutionsOverviewPage() {
                 {/* Hero Header */}
                 <section className="prominence_page_intro">
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: "860px", margin: "0 auto" }}>
-                            <div className="tag_text">
-                                <h6>Executive Solutions by Role</h6>
+                        <div className="prominence_header_centered">
+                            <div style={{ marginBottom: "12px" }}>
+                                <span className="prominence_tracker">
+                                    <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058" }}></span>
+                                    Executive Solutions by Role
+                                </span>
                             </div>
-                            <h1>Reputational Architecture Built for Your Specific Mandate</h1>
-                            <p>
+                            <h1 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "16px" }}>
+                                Reputational Architecture Built for Your Specific Mandate
+                            </h1>
+                            <p className="prominence_lead_text" style={{ margin: "0 auto" }}>
                                 A CEO faces investor diligence and market valuation pressure. A CHRO targets corporate governance board appointments. A Founder seeks fundraising gravitas. We engineer bespoke reputation architectures calibrated to your unique career objectives.
                             </p>
                             <div style={{ marginTop: "32px", display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                                <Link href="/contact" className="btn_style_one">
+                                <Link href="/contact" className="btn_style_one btn_md">
                                     Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
-                                <Link href="/resources/assessment" className="btn_style_two">
+                                <Link href="/resources/assessment" className="btn_style_two btn_md">
                                     Evaluate Your Stature <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>
@@ -87,13 +92,13 @@ export default function SolutionsOverviewPage() {
                 </section>
 
                 {/* Persona Cards Grid */}
-                <section className="pt_100 pb_90" style={{ background: "#ffffff" }}>
+                <section className="prominence_section" style={{ background: "#ffffff" }}>
                     <div className="container">
                         <div className="row">
                             {SOLUTIONS_DATA.map((solution) => (
                                 <div key={solution.slug} className="col-lg-6 mb_40">
-                                    <div className="prominence_card prominence_card_equal_height">
-                                        <div style={{ height: "220px", margin: "-36px -32px 28px", position: "relative", overflow: "hidden", borderBottom: "1px solid #edf2f7" }}>
+                                    <div className="prominence_card prominence_card_equal_height prominence_depth_card" style={{ overflow: "hidden", borderTop: "3px solid #b89058" }}>
+                                        <div style={{ height: "220px", margin: "-36px -32px 28px", position: "relative", overflow: "hidden", borderBottom: "1px solid #edf2f7", borderTopLeftRadius: "11px", borderTopRightRadius: "11px" }}>
                                             <img 
                                                 src={solution.heroImage} 
                                                 alt={solution.title} 
@@ -121,7 +126,7 @@ export default function SolutionsOverviewPage() {
                                             <span style={{ fontSize: "11px", fontWeight: "700", color: "#64748b", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontFamily: "var(--primary-font)", display: "block" }}>
                                                 {solution.tagline}
                                             </span>
-                                            <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0f1013", marginBottom: "14px", lineHeight: "1.3", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
+                                            <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0f1013", marginBottom: "14px", lineHeight: "1.3", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                                 <Link href={`/solutions/${solution.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
                                                     {solution.title}
                                                 </Link>
@@ -167,14 +172,17 @@ export default function SolutionsOverviewPage() {
                 </section>
 
                 {/* Self-Audit Banner */}
-                <section className="pt_80 pb_80" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7" }}>
+                <section className="prominence_section_compact" style={{ background: "#FAF8F2", borderTop: "1px solid #edf2f7" }}>
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-8">
-                                <div className="tag_text" style={{ marginBottom: "12px" }}>
-                                    <h6>Executive Diagnostic</h6>
+                                <div style={{ marginBottom: "8px" }}>
+                                    <span className="prominence_tracker">
+                                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058" }}></span>
+                                        Executive Diagnostic
+                                    </span>
                                 </div>
-                                <h2 style={{ fontSize: "32px", fontWeight: "700", color: "#0f1013", marginTop: "8px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
+                                <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0f1013", marginTop: "4px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                     Calculate Your Executive Digital Presence Score
                                 </h2>
                                 <p style={{ color: "#59606a", fontSize: "16px", marginTop: "8px", margin: 0, maxWidth: "680px", lineHeight: "26px" }}>
@@ -182,7 +190,7 @@ export default function SolutionsOverviewPage() {
                                 </p>
                             </div>
                             <div className="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                                <Link href="/resources/assessment" className="btn_style_one">
+                                <Link href="/resources/assessment" className="btn_style_one btn_md">
                                     Start Assessment <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>

@@ -82,7 +82,7 @@ export default function Service_Page() {
                                     lineHeight: "1.2",
                                     letterSpacing: "-0.6px",
                                     marginBottom: "20px",
-                                    fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                                    fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                                 }}>
                                     Sovereign Digital Stature Engineered for Enterprise Leaders
                                 </h1>
@@ -92,10 +92,10 @@ export default function Service_Page() {
                             </div>
                             <div className="col-lg-4 mt-4 mt-lg-0 text-lg-end" data-aos="fade-left" data-aos-duration="550">
                                 <div style={{ display: "inline-flex", flexDirection: "column", gap: "12px", width: "100%", maxWidth: "320px" }}>
-                                    <Link href="/contact" className="btn_style_one btn_block">
+                                    <Link href="/contact" className="btn_style_one btn_block btn_md">
                                         Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
-                                    <Link href="/resources/assessment" className="btn_style_two btn_block">
+                                    <Link href="/resources/assessment" className="btn_style_two btn_block btn_md">
                                         Evaluate Your Stature
                                     </Link>
                                 </div>
@@ -135,7 +135,7 @@ export default function Service_Page() {
                 </section>
 
                 {/* Capability Architecture Section */}
-                <section className="pt_70 pb_90" style={{ background: "#ffffff" }}>
+                <section className="prominence_section" style={{ background: "#ffffff" }}>
                     <div className="container">
                         
                         {/* 1. Flagship Capability Feature: Pillar 01 (Executive Digital HQ) */}
@@ -150,7 +150,7 @@ export default function Service_Page() {
                                             padding: "4px 14px",
                                             backgroundColor: "rgba(184, 144, 88, 0.15)",
                                             border: "1px solid rgba(184, 144, 88, 0.35)",
-                                            borderRadius: "20px",
+                                            borderRadius: "6px",
                                             fontSize: "11px",
                                             fontWeight: "700",
                                             color: "#b89058",
@@ -437,14 +437,12 @@ export default function Service_Page() {
                 </section>
 
                 {/* Strategic Comparison: Editorial Table */}
-                <section className="pt_90 pb_90" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7", borderBottom: "1px solid #edf2f7" }}>
+                <section className="prominence_section" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7", borderBottom: "1px solid #edf2f7" }}>
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: "780px", margin: "0 auto 50px" }}>
-                            <div className="tag_text">
-                                <h6>The Prominence Difference</h6>
-                            </div>
-                            <h2>Owned Authority vs. Rented Noise</h2>
-                            <p style={{ color: "#59606a", fontSize: "17px", marginTop: "12px", lineHeight: "28px" }}>
+                        <div className="prominence_header_centered" style={{ maxWidth: "780px", margin: "0 auto 48px" }}>
+                            <span className="prominence_tracker">The Prominence Difference</span>
+                            <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>Owned Authority vs. Rented Noise</h2>
+                            <p className="prominence_lead_text">
                                 Traditional agencies treat executives like influencers, chasing superficial vanity metrics. Prominence operates as private strategic communications counsel, building sovereign institutional assets.
                             </p>
                         </div>
@@ -519,14 +517,18 @@ export default function Service_Page() {
                 </section>
 
                 {/* FAQ Section */}
-                <section className="pt_100 pb_90" style={{ background: "#ffffff" }}>
+                <section className="prominence_section" style={{ background: "#ffffff" }}>
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: "760px", margin: "0 auto 50px" }}>
-                            <div className="tag_text"><h6>Common Questions</h6></div>
-                            <h2>Frequently Asked Executive Inquiries</h2>
-                            <p style={{ color: "#59606a", marginTop: "12px", fontSize: "17px", lineHeight: "28px" }}>
-                                Answers regarding corporate compliance, time commitment, confidentiality, and measurable outcomes.
-                            </p>
+                        <div className="prominence_header_split">
+                            <div>
+                                <span className="prominence_tracker">Common Questions</span>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>Frequently Asked Executive Inquiries</h2>
+                            </div>
+                            <div>
+                                <p className="prominence_lead_text">
+                                    Answers regarding corporate compliance, time commitment, confidentiality, and measurable outcomes.
+                                </p>
+                            </div>
                         </div>
 
                         <div className="row justify-content-center">
@@ -566,23 +568,21 @@ export default function Service_Page() {
                 </section>
 
                 {/* Final CTA Strip */}
-                <section className="pt_80 pb_80" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
+                <section className="prominence_section" style={{ background: "#FAF8F2", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
                     <div className="container">
-                        <div style={{ maxWidth: "780px", margin: "0 auto" }}>
-                            <div className="tag_text" style={{ marginBottom: "16px" }}>
-                                <h6>Private Consultation</h6>
-                            </div>
-                            <h2 style={{ fontSize: "36px", fontWeight: "700", color: "#0f1013", marginBottom: "14px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
+                        <div className="prominence_header_centered" style={{ maxWidth: "740px", margin: "0 auto" }}>
+                            <span className="prominence_tracker">Private Consultation</span>
+                            <h2 style={{ fontSize: "clamp(26px, 3.8vw, 36px)", fontWeight: "700", color: "#0f1013", marginBottom: "14px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 Ready to Architect Your Sovereign Executive Presence?
                             </h2>
-                            <p style={{ color: "#59606a", fontSize: "17px", lineHeight: "28px", marginBottom: "30px" }}>
+                            <p className="prominence_lead_text" style={{ marginBottom: "32px" }}>
                                 Schedule a confidential 30-minute advisory conversation to audit your search footprint and align your personal brand with your enterprise stature.
                             </p>
                             <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                                <Link href="/contact" className="btn_style_one">
+                                <Link href="/contact" className="btn_style_one btn_md">
                                     Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
-                                <Link href="/resources/assessment" className="btn_style_two">
+                                <Link href="/resources/assessment" className="btn_style_two btn_md">
                                     Audit Your Stature <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>

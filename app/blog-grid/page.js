@@ -56,13 +56,13 @@ export default function Blog_Grid() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogGridSchema) }}
       />
       <Layout headerStyle={4} footerStyle={1} breadcrumbTitle14="Insights for HR Leaders">
-        <section className="blog_section pt_150 pb_120" style={{ backgroundColor: '#F8F9FA' }}>
+        <section className="blog_section pt_90 pb_120" style={{ backgroundColor: '#FAF8F2' }}>
           <div className="container">
             <div className="section_title centred" style={{ marginBottom: '50px' }}>
               <span className="prominence_badge">
                 Executive Thought Leadership
               </span>
-              <h2 style={{ fontFamily: "var(--ep-font-serif, 'PT Serif', serif)", fontSize: '42px', color: '#0f1013', letterSpacing: '-0.5px' }}>
+              <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontSize: '42px', color: '#0f1013', letterSpacing: '-0.5px' }}>
                 Articles &amp; Strategic Frameworks
               </h2>
               <p style={{ maxWidth: '820px', margin: '15px auto 0', fontSize: '18px', color: '#64748B', lineHeight: '1.7' }}>
@@ -124,7 +124,7 @@ export default function Blog_Grid() {
                         <span>{post.readTime}</span>
                       </div>
 
-                      <h3 style={{ fontSize: '19px', lineHeight: '1.35', marginBottom: '12px', fontWeight: '700', fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
+                      <h3 style={{ fontSize: '19px', lineHeight: '1.35', marginBottom: '12px', fontWeight: '700', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                         <Link href={`/blog/${post.slug}`} style={{ color: '#0f1013', textDecoration: 'none' }}>
                           {post.title}
                         </Link>

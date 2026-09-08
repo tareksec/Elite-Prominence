@@ -107,9 +107,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             aria-label="Share on LinkedIn"
             className="action-btn"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.65 1.65 0 0 0-1.66 1.65c0 .91.74 1.65 1.66 1.65.9 0 1.65-.74 1.65-1.65 0-.9-.75-1.65-1.65-1.65z" />
-            </svg>
+            <i className="fab fa-linkedin-in" style={{ fontSize: '15px' }}></i>
           </button>
 
           <button
@@ -118,9 +116,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             aria-label="Share on X"
             className="action-btn"
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-            </svg>
+            <i className="fab fa-x-twitter" style={{ fontSize: '14px' }}></i>
           </button>
 
           <button
@@ -129,9 +125,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             aria-label="Copy Link"
             className="action-btn"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z" />
-            </svg>
+            <i className="fa-solid fa-link" style={{ fontSize: '14px' }}></i>
           </button>
         </div>
 
@@ -146,7 +140,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             title="Endorse"
             aria-label="Endorse"
           >
-            <i className="fal fa-thumbs-up" style={{ fontSize: '14px', lineHeight: 1 }}></i>
+            <i className="fa-solid fa-thumbs-up" style={{ fontSize: '14px', lineHeight: 1 }}></i>
             <span style={{ fontSize: '11px', fontWeight: '700', marginTop: '2px', lineHeight: 1 }}>
               {baseCounts.claps + (reactions.claps ? 1 : 0)}
             </span>
@@ -159,7 +153,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             title="Bookmark"
             aria-label="Bookmark"
           >
-            <i className="fal fa-bookmark" style={{ fontSize: '14px', lineHeight: 1 }}></i>
+            <i className="fa-solid fa-bookmark" style={{ fontSize: '14px', lineHeight: 1 }}></i>
             <span style={{ fontSize: '11px', fontWeight: '700', marginTop: '2px', lineHeight: 1 }}>
               {baseCounts.likes + (reactions.likes ? 1 : 0)}
             </span>
@@ -172,7 +166,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             title="Insightful"
             aria-label="Insightful"
           >
-            <i className="fal fa-lightbulb" style={{ fontSize: '14px', lineHeight: 1 }}></i>
+            <i className="fa-solid fa-lightbulb" style={{ fontSize: '14px', lineHeight: 1 }}></i>
             <span style={{ fontSize: '11px', fontWeight: '700', marginTop: '2px', lineHeight: 1 }}>
               {baseCounts.insights + (reactions.insights ? 1 : 0)}
             </span>
@@ -204,7 +198,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
           className={`action-btn ${reactions.claps ? 'active' : ''}`}
           aria-label="Endorse"
         >
-          <i className="fal fa-thumbs-up" style={{ fontSize: '14px' }}></i>
+          <i className="fa-solid fa-thumbs-up" style={{ fontSize: '14px' }}></i>
           <span style={{ fontSize: '11px', fontWeight: '700' }}>
             {baseCounts.claps + (reactions.claps ? 1 : 0)}
           </span>
@@ -215,7 +209,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
           className={`action-btn ${reactions.likes ? 'active' : ''}`}
           aria-label="Bookmark"
         >
-          <i className="fal fa-bookmark" style={{ fontSize: '14px' }}></i>
+          <i className="fa-solid fa-bookmark" style={{ fontSize: '14px' }}></i>
           <span style={{ fontSize: '11px', fontWeight: '700' }}>
             {baseCounts.likes + (reactions.likes ? 1 : 0)}
           </span>
@@ -226,7 +220,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
           className={`action-btn ${reactions.insights ? 'active' : ''}`}
           aria-label="Insightful"
         >
-          <i className="fal fa-lightbulb" style={{ fontSize: '14px' }}></i>
+          <i className="fa-solid fa-lightbulb" style={{ fontSize: '14px' }}></i>
           <span style={{ fontSize: '11px', fontWeight: '700' }}>
             {baseCounts.insights + (reactions.insights ? 1 : 0)}
           </span>
@@ -237,9 +231,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
           className="action-btn"
           aria-label="Share"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z" />
-          </svg>
+          <i className="fa-solid fa-share-nodes" style={{ fontSize: '15px' }}></i>
         </button>
       </aside>
 
@@ -265,9 +257,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             gap: '8px'
           }}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" strokeWidth="2.5">
-            <path d="M20 6L9 17l-5-5" />
-          </svg>
+          <i className="fa-solid fa-circle-check" style={{ color: 'var(--ep-gold, #b89058)', fontSize: '15px' }}></i>
           {toastMsg}
         </div>
       )}

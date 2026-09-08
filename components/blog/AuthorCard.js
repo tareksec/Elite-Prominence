@@ -105,28 +105,15 @@ export default function AuthorCard({
 
         {/* Bio Content */}
         <div style={{ flex: '1 1 300px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-            <span
-              style={{
-                fontSize: '11.5px',
-                fontWeight: '700',
-                textTransform: 'uppercase',
-                letterSpacing: '0.8px',
-                color: '#b89058',
-                background: 'rgba(184, 144, 88, 0.1)',
-                border: '1px solid rgba(184, 144, 88, 0.25)',
-                padding: '3px 10px',
-                borderRadius: '9999px',
-                fontFamily: 'var(--primary-font)'
-              }}
-            >
-              Author & Advisor
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+            <span className="prominence_badge">
+              Author &amp; Advisor
             </span>
           </div>
 
           <h3
             style={{
-              fontFamily: "var(--primary-font)",
+              fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
               fontSize: '24px',
               color: '#0f1013',
               margin: '4px 0 6px 0',
@@ -173,9 +160,7 @@ export default function AuthorCard({
               rel="noopener noreferrer"
               className="btn_style_two btn_sm"
             >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="#0A66C2" style={{ marginRight: '2px' }}>
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.738-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
+              <i className="fab fa-linkedin-in" style={{ marginRight: '6px', fontSize: '14px' }}></i>
               <span>Follow on LinkedIn</span>
             </a>
 

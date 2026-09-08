@@ -55,55 +55,24 @@ export default function Testimonial() {
             data-aos-duration="500"
             style={{
                 backgroundColor: "#ffffff",
-                padding: "100px 0 90px",
+                padding: "var(--ep-section-py) 0",
                 position: "relative",
                 fontFamily: "var(--primary-font)"
             }}
         >
             <div className="container">
                 {/* Section Header */}
-                <div className="row justify-content-center">
-                    <div className="col-xl-8 col-lg-10 text-center">
-                        <div className="section_title centred" style={{ marginBottom: "45px" }}>
-                            <div className="tag_text" style={{ marginBottom: "12px" }}>
-                                <h6 style={{
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    gap: "8px",
-                                    padding: "6px 16px",
-                                    background: "#f1f5f9",
-                                    borderRadius: "30px",
-                                    fontSize: "12px",
-                                    fontWeight: "700",
-                                    color: "#0f1013",
-                                    textTransform: "uppercase",
-                                    letterSpacing: "0.8px",
-                                    border: "1px solid #e2e8f0"
-                                }}>
-                                    <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#b89058" }}></span>
-                                    Verified Executive Endorsements
-                                </h6>
-                            </div>
-                            <h2 style={{
-                                fontSize: "38px",
-                                fontWeight: "700",
-                                color: "#0f1013",
-                                lineHeight: "1.25",
-                                letterSpacing: "-0.5px",
-                                fontFamily: "var(--primary-font)"
-                            }}>
-                                Proven Results for Senior People Leaders
-                            </h2>
-                            <p style={{
-                                fontSize: "16.5px",
-                                color: "#59606a",
-                                maxWidth: "620px",
-                                margin: "14px auto 0",
-                                lineHeight: "1.65"
-                            }}>
-                                How CHROs, Chief People Officers, and Managing Directors build undeniable authority, unlock board invitations, and dominate their niche with Prominence.
-                            </p>
-                        </div>
+                <div className="prominence_header_split">
+                    <div>
+                        <span className="prominence_tracker">Verified Executive Endorsements</span>
+                        <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                            Proven Results for Senior People Leaders
+                        </h2>
+                    </div>
+                    <div>
+                        <p className="prominence_lead_text">
+                            How CHROs, Chief People Officers, and Managing Directors build undeniable authority, unlock board invitations, and dominate their niche with Prominence.
+                        </p>
                     </div>
                 </div>
 
@@ -149,7 +118,7 @@ export default function Testimonial() {
                                             color: "#166534",
                                             backgroundColor: "#f0fdf4",
                                             padding: "3px 10px",
-                                            borderRadius: "20px",
+                                            borderRadius: "4px",
                                             border: "1px solid #bbf7d0",
                                             display: "inline-flex",
                                             alignItems: "center",
@@ -255,11 +224,11 @@ export default function Testimonial() {
                     justifyContent: "center",
                     gap: "16px"
                 }}>
-                    <Link href="/feedback" className="btn_style_one">
+                    <Link href="/feedback" className="btn_style_one btn_md">
                         View All Client Reviews <i className="fa-solid fa-arrow-right"></i>
                     </Link>
 
-                    <Link href="/community" className="btn_style_two">
+                    <Link href="/community" className="btn_style_two btn_md">
                         Browse Executive Directory <i className="fa-solid fa-arrow-right"></i>
                     </Link>
                 </div>

@@ -54,7 +54,7 @@ export default function Feature() {
 
     return (
         <>
-            <section className="feature_section_two" style={{ position: "relative", overflow: "hidden" }}>
+            <section className="feature_section_two prominence_section" style={{ position: "relative", overflow: "hidden", padding: "var(--ep-section-py) 0" }}>
                 <div className="container">
                     <div className="row align-items-center">
                         {/* 3 Pillars Visual Showcase with all 3 pillar images */}
@@ -77,7 +77,7 @@ export default function Feature() {
                                         backdropFilter: "blur(8px)",
                                         color: "#ffffff",
                                         padding: "6px 14px",
-                                        borderRadius: "30px",
+                                        borderRadius: "6px",
                                         fontSize: "12px",
                                         fontWeight: "700",
                                         letterSpacing: "0.4px",
@@ -152,7 +152,7 @@ export default function Feature() {
                                             background: "rgba(255,255,255,0.95)",
                                             backdropFilter: "blur(4px)",
                                             padding: "2px 8px",
-                                            borderRadius: "20px",
+                                            borderRadius: "6px",
                                             fontSize: "10px",
                                             fontWeight: "700",
                                             color: "#1b2534",
@@ -207,7 +207,7 @@ export default function Feature() {
                                             background: "rgba(255,255,255,0.95)",
                                             backdropFilter: "blur(4px)",
                                             padding: "2px 8px",
-                                            borderRadius: "20px",
+                                            borderRadius: "6px",
                                             fontSize: "10px",
                                             fontWeight: "700",
                                             color: "#1b2534",
@@ -235,9 +235,9 @@ export default function Feature() {
                         {/* Accordion Content Block */}
                         <div className="col-xl-5 col-lg-6 col-md-12 col-sm-12 offset-xl-1">
                             <div className="feature_content_block" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="550">
-                                <div className="section_title">
-                                    <div className="tag_text"><h6>Why Elite Prominence</h6></div>
-                                    <h2>One Agency. Three Pillars. A Complete Digital Presence.</h2>
+                                <div style={{ marginBottom: "28px" }}>
+                                    <span className="prominence_tracker">Three-Pillar Architecture</span>
+                                    <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>One Firm. Three Pillars. A Complete Sovereign Presence.</h2>
                                 </div>
                                 <ul className="accordion_box">
                                     <li className={`accordion block ${isActive.key == 1 ? "active-block" : ""}`} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">

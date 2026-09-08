@@ -42,51 +42,45 @@ export default function ExecutiveDirectoryTeaser() {
     return (
         <section style={{
             backgroundColor: "#fafbfc",
-            padding: "95px 0 85px",
+            padding: "var(--ep-section-py) 0",
             fontFamily: "var(--primary-font)",
             position: "relative",
             borderTop: "1px solid #eaedf0",
             borderBottom: "1px solid #eaedf0"
         }}>
             <div className="container">
-                {/* Section Header */}
-                <div style={{ textAlign: "center", maxWidth: "780px", margin: "0 auto 48px" }}>
-                    <span style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: "8px",
-                        fontSize: "12px",
-                        fontWeight: "700",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.8px",
-                        color: "#0f1013",
-                        backgroundColor: "#f1f5f9",
-                        border: "1px solid #e2e8f0",
-                        padding: "6px 16px",
-                        borderRadius: "30px",
-                        marginBottom: "14px"
-                    }}>
-                        <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#b89058" }}></span>
-                        Verified Network &amp; Editorial Syndication
-                    </span>
-                    <h2 style={{
-                        fontSize: "38px",
-                        fontWeight: "700",
-                        color: "#0f1013",
-                        letterSpacing: "-0.5px",
-                        margin: "0 0 16px",
-                        lineHeight: "1.25"
-                    }}>
-                        The Sovereign Executive Contributor Directory
-                    </h2>
-                    <p style={{
-                        fontSize: "16.5px",
-                        lineHeight: "1.7",
-                        color: "#59606a",
-                        margin: 0
-                    }}>
-                        A curated, invitation-only ecosystem where Chief Human Resources Officers, VP People leaders, and executive advisors syndicate battle-tested operational frameworks, establish Google entity equity, and attract board appointments.
-                    </p>
+                {/* Section Header: Editorial Split */}
+                <div className="prominence_header_split">
+                    <div>
+                        <div style={{ marginBottom: "12px" }}>
+                            <span className="prominence_tracker">
+                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058" }}></span>
+                                Verified Network &amp; Editorial Syndication
+                            </span>
+                        </div>
+                        <h2 style={{
+                            fontSize: "clamp(26px, 3.6vw, 36px)",
+                            fontWeight: "700",
+                            color: "#0f1013",
+                            letterSpacing: "-0.5px",
+                            margin: 0,
+                            lineHeight: "1.24",
+                            fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
+                        }}>
+                            The Sovereign Executive Contributor Directory
+                        </h2>
+                    </div>
+                    <div>
+                        <p style={{
+                            fontSize: "16px",
+                            lineHeight: "27px",
+                            color: "#59606a",
+                            maxWidth: "520px",
+                            margin: 0
+                        }}>
+                            A curated, invitation-only ecosystem where Chief Human Resources Officers, VP People leaders, and executive advisors syndicate battle-tested operational frameworks, establish Google entity equity, and attract board appointments.
+                        </p>
+                    </div>
                 </div>
 
                 {/* 3 Contributor Preview Cards */}
@@ -99,13 +93,13 @@ export default function ExecutiveDirectoryTeaser() {
                     {DIRECTORY_TEASER_MEMBERS.map((member) => (
                         <div
                             key={member.id}
-                            className="prominence_card_equal_height"
+                            className="prominence_card_equal_height prominence_depth_card"
                             style={{
                                 backgroundColor: "#ffffff",
                                 borderRadius: "14px",
-                                padding: "30px 26px",
+                                padding: "32px 28px",
                                 border: "1px solid #eaedf0",
-                                boxShadow: "0 4px 18px rgba(15, 16, 19, 0.03)",
+                                borderTop: "3px solid #b89058",
                                 display: "flex",
                                 flexDirection: "column",
                                 transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)"
@@ -122,11 +116,28 @@ export default function ExecutiveDirectoryTeaser() {
                                         flexShrink: 0,
                                         border: "2px solid #eaedf0"
                                     }}>
-                                        <img
-                                            src={member.avatar}
-                                            alt={member.name}
-                                            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                                        />
+                                        {member.avatar ? (
+                                            <img
+                                                src={member.avatar}
+                                                alt={member.name}
+                                                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                                            />
+                                        ) : (
+                                            <div style={{
+                                                width: "100%",
+                                                height: "100%",
+                                                backgroundColor: "#0f1013",
+                                                color: "#b89058",
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                fontWeight: "700",
+                                                fontSize: "18px",
+                                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
+                                            }}>
+                                                {member.initials || member.name.charAt(0)}
+                                            </div>
+                                        )}
                                     </div>
                                     <div style={{ minWidth: 0, flex: 1 }}>
                                         <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
@@ -135,14 +146,14 @@ export default function ExecutiveDirectoryTeaser() {
                                                 fontWeight: "700",
                                                 color: "#0f1013",
                                                 margin: 0,
-                                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                                             }}>
                                                 {member.name}
                                             </h3>
                                             <i className="fa-solid fa-circle-check" style={{ color: "#b89058", fontSize: "13px" }} title="Verified Prominence Member"></i>
                                         </div>
                                         <div style={{ fontSize: "13px", fontWeight: "600", color: "#64748b", marginTop: "2px" }}>
-                                            {member.role}
+                                            {member.role || member.title}
                                         </div>
                                         <div style={{ fontSize: "12px", color: "#94a3b8" }}>
                                             {member.company}
@@ -163,7 +174,7 @@ export default function ExecutiveDirectoryTeaser() {
                                 }}>
                                     <span><i className="fa-solid fa-location-dot me-1" style={{ color: "#b89058" }}></i>{member.location}</span>
                                     <span>&bull;</span>
-                                    <span><i className="fa-regular fa-newspaper me-1"></i>{member.articlesCount} Published Articles</span>
+                                    <span><i className="fa-solid fa-newspaper me-1" style={{ color: "#64748b" }}></i>{member.articlesCount} Published Articles</span>
                                 </div>
 
                                 {/* Featured Perspective Preview */}
@@ -231,7 +242,7 @@ export default function ExecutiveDirectoryTeaser() {
                     boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)"
                 }}>
                     <div>
-                        <h4 style={{ margin: "0 0 6px", fontSize: "20px", fontWeight: "700", color: "#ffffff", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
+                        <h4 style={{ margin: "0 0 6px", fontSize: "20px", fontWeight: "700", color: "#ffffff", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                             Elevate Your Strategic Executive Footprint
                         </h4>
                         <p style={{ margin: 0, color: "#94a3b8", fontSize: "14px", maxWidth: "600px", lineHeight: "1.6" }}>
@@ -242,13 +253,13 @@ export default function ExecutiveDirectoryTeaser() {
                     <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center" }}>
                         <Link
                             href="/community"
-                            className="btn_style_gold"
+                            className="btn_style_gold btn_md"
                         >
                             Explore Full Directory <i className="fa-solid fa-arrow-right"></i>
                         </Link>
                         <Link
                             href="/contact"
-                            className="btn_style_two_dark"
+                            className="btn_style_two_dark btn_md"
                         >
                             Apply for Contributor Status
                         </Link>

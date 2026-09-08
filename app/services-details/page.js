@@ -40,7 +40,9 @@ export default function Service_Details() {
                                     <li><i className="fa-solid fa-check" style={{ color: "#b89058", marginRight: "10px" }}></i> Professional copywriting & narrative development</li>
                                     <li><i className="fa-solid fa-check" style={{ color: "#b89058", marginRight: "10px" }}></i> Mobile-first, high-speed optimization</li>
                                 </ul>
-                                <Link href="/contact" className="btn_style_one">Book a Strategy Call</Link>
+                                <Link href="/contact" className="btn_style_one btn_md">
+                                    Book a Strategy Call <i className="fa-solid fa-arrow-right" style={{ marginLeft: "8px" }}></i>
+                                </Link>
                             </div>
                         </div>
 
@@ -66,7 +68,9 @@ export default function Service_Details() {
                                     <li><i className="fa-solid fa-check" style={{ color: "#b89058", marginRight: "10px" }}></i> Knowledge panel & profile optimization</li>
                                     <li><i className="fa-solid fa-check" style={{ color: "#b89058", marginRight: "10px" }}></i> Positive asset ranking & suppression of outdated results</li>
                                 </ul>
-                                <Link href="/contact" className="btn_style_one">Book a Strategy Call</Link>
+                                <Link href="/contact" className="btn_style_one btn_md">
+                                    Book a Strategy Call <i className="fa-solid fa-arrow-right" style={{ marginLeft: "8px" }}></i>
+                                </Link>
                             </div>
                         </div>
 
@@ -92,7 +96,9 @@ export default function Service_Details() {
                                     <li><i className="fa-solid fa-check" style={{ color: "#b89058", marginRight: "10px" }}></i> Strategic topic mapping tailored to senior HR leaders</li>
                                     <li><i className="fa-solid fa-check" style={{ color: "#b89058", marginRight: "10px" }}></i> Peer and executive network engagement</li>
                                 </ul>
-                                <Link href="/contact" className="btn_style_one">Book a Strategy Call</Link>
+                                <Link href="/contact" className="btn_style_one btn_md">
+                                    Book a Strategy Call <i className="fa-solid fa-arrow-right" style={{ marginLeft: "8px" }}></i>
+                                </Link>
                             </div>
                         </div>
                     </div>

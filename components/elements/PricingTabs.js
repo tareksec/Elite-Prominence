@@ -81,20 +81,10 @@ export default function PricingTabs() {
             {activeModel === 'onetime' && (
                 <div id="pricing-tabpanel-onetime" role="tabpanel" aria-labelledby="pricing-tab-onetime" className="model_one_content" style={{ animation: 'fadeInTab 0.35s ease-out' }}>
                     <div className="model_header centred mb_40">
-                        <span style={{
-                            display: "inline-block",
-                            fontSize: "12px",
-                            fontWeight: "700",
-                            letterSpacing: "1.2px",
-                            textTransform: "uppercase",
-                            color: "#0D1322", backgroundColor: "rgba(13, 19, 34, 0.05)", border: "1px solid rgba(13, 19, 34, 0.12)",
-                            padding: "4px 14px",
-                            borderRadius: "20px",
-                            marginBottom: "10px"
-                        }}>
+                        <span className="prominence_badge" style={{ marginBottom: "10px" }}>
                             Fixed-Scope Engagement
                         </span>
-                        <h3 style={{ fontSize: '30px', fontWeight: '700', color: '#1b2534', margin: '0 0 8px' }}>
+                        <h3 style={{ fontSize: '30px', fontWeight: '700', color: '#0f1013', margin: '0 0 8px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                             Model 1 — One-Time Package (3-Month Sprint)
                         </h3>
                         <p style={{ color: '#59606a', fontSize: '17px', margin: 0 }}>
@@ -105,13 +95,13 @@ export default function PricingTabs() {
                     <div className="row justify-content-center align-items-stretch">
                         {/* Basic */}
                         <div className="col-lg-4 col-md-6 col-sm-12 mb_30">
-                            <div className="pricing_card_item" style={{
+                            <div className="pricing_card_item prominence_depth_card" style={{
                                 height: '100%',
                                 backgroundColor: '#ffffff',
                                 borderRadius: '16px',
                                 padding: '40px 32px',
                                 border: '1px solid #e2e8f0',
-                                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.04)',
+                                borderTop: '3px solid #94a3b8',
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'space-between',
@@ -119,42 +109,47 @@ export default function PricingTabs() {
                             }}>
                                 <div>
                                     <div style={{ marginBottom: '20px' }}>
-                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#1b2534', marginBottom: '6px' }}>
+                                        <div style={{ marginBottom: '8px' }}>
+                                            <span className="prominence_badge prominence_badge_dark" style={{ fontSize: '10px', padding: '2px 8px' }}>
+                                                Foundation Stature
+                                            </span>
+                                        </div>
+                                        <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             Basic
                                         </h3>
                                         <p style={{ fontSize: '14px', color: '#64748b', minHeight: '40px', lineHeight: '1.5' }}>
-                                            Foundation personal branding setup
+                                            Foundation personal branding and digital footprint setup
                                         </p>
                                     </div>
                                     <div style={{ margin: '20px 0 28px', borderBottom: '1px solid #edf2f7', paddingBottom: '20px' }}>
-                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#1b2534', lineHeight: '1' }}>
+                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#0f1013', lineHeight: '1', fontFamily: 'var(--primary-font)' }}>
                                             $49
                                         </span>
-                                        <span style={{ fontSize: '15px', color: '#64748b', fontWeight: '500', marginLeft: '6px' }}>
-                                            / one-time
+                                        <span style={{ fontSize: '14px', color: '#64748b', fontWeight: '500', marginLeft: '6px' }}>
+                                            / 3-month sprint
                                         </span>
                                     </div>
-                                    <div style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#94a3b8', marginBottom: '14px' }}>
-                                        What's Included:
+                                    <div style={{ fontSize: '11.5px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#94a3b8', marginBottom: '14px' }}>
+                                        Included Capabilities:
                                     </div>
                                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                         {[
                                             "Free website (3–5 pages)",
-                                            "LinkedIn optimization",
-                                            "Basic Google presence",
+                                            "LinkedIn profile optimization",
+                                            "Basic Google presence setup",
                                             "Brand building across 6 platforms"
                                         ].map((feat, idx) => (
-                                            <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                                <i className="fal fa-check-circle" style={{ color: '#0f172a', fontSize: '14px', marginTop: '3px' }}></i>
+                                            <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '14.5px', color: '#334155', lineHeight: '1.5' }}>
+                                                <i className="fa-solid fa-check" style={{ color: '#b89058', fontSize: '13px', marginTop: '4px', flexShrink: 0 }}></i>
                                                 <span>{feat}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
-                                <div style={{ marginTop: '35px' }}>
+                                <div style={{ marginTop: 'auto', paddingTop: '30px' }}>
                                     <Link 
                                         href="/contact" 
-                                        className="btn_style_two btn_block"
+                                        className="btn_style_two btn_block btn_md"
                                     >
                                         <span>Book a Strategy Call</span> <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
@@ -164,13 +159,14 @@ export default function PricingTabs() {
 
                         {/* Growth - Highlighted */}
                         <div className="col-lg-4 col-md-6 col-sm-12 mb_30">
-                            <div className="pricing_card_item recommended" style={{
+                            <div className="pricing_card_item recommended prominence_depth_card" style={{
                                 height: '100%',
                                 backgroundColor: '#ffffff',
                                 borderRadius: '16px',
                                 padding: '40px 32px',
-                                border: "2px solid #0D1322",
-                                boxShadow: "0 16px 40px rgba(0, 0, 0, 0.08)",
+                                border: "1px solid rgba(184, 144, 88, 0.45)",
+                                borderTop: "3px solid #b89058",
+                                boxShadow: "0 20px 45px -10px rgba(184, 144, 88, 0.16), 0 4px 12px rgba(0, 0, 0, 0.04)",
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'space-between',
@@ -178,64 +174,54 @@ export default function PricingTabs() {
                                 transform: 'translateY(-6px)',
                                 transition: 'transform 0.3s ease, box-shadow 0.3s ease'
                             }}>
-                                <span style={{
-                                    position: 'absolute',
-                                    top: '-13px',
-                                    left: '50%',
-                                    transform: 'translateX(-50%)',
-                                    background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
-                                    color: '#ffffff',
-                                    fontSize: '11px',
-                                    fontWeight: '800',
-                                    letterSpacing: '1px',
-                                    textTransform: 'uppercase',
-                                    padding: '4px 16px',
-                                    borderRadius: '20px',
-                                    border: '1px solid rgba(255, 255, 255, 0.18)',
-                                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.25)"
-                                }}>
-                                    Most Popular
+                                <span className="prominence_floating_badge">
+                                    Most Popular · C-Suite Standard
                                 </span>
                                 <div>
                                     <div style={{ marginBottom: '20px' }}>
-                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#1b2534', marginBottom: '6px' }}>
+                                        <div style={{ marginBottom: '8px' }}>
+                                            <span className="prominence_badge prominence_badge_gold" style={{ fontSize: '10px', padding: '2px 8px' }}>
+                                                Expanded Influence
+                                            </span>
+                                        </div>
+                                        <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             Growth
                                         </h3>
                                         <p style={{ fontSize: '14px', color: '#64748b', minHeight: '40px', lineHeight: '1.5' }}>
-                                            Expanded reach &amp; regular content publishing
+                                            Expanded executive reach &amp; structured publishing
                                         </p>
                                     </div>
                                     <div style={{ margin: '20px 0 28px', borderBottom: '1px solid #edf2f7', paddingBottom: '20px' }}>
-                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#0D1322', lineHeight: '1' }}>
+                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#0f1013', lineHeight: '1', fontFamily: 'var(--primary-font)' }}>
                                             $69
                                         </span>
-                                        <span style={{ fontSize: '15px', color: '#64748b', fontWeight: '500', marginLeft: '6px' }}>
-                                            / one-time
+                                        <span style={{ fontSize: '14px', color: '#64748b', fontWeight: '500', marginLeft: '6px' }}>
+                                            / 3-month sprint
                                         </span>
                                     </div>
-                                    <div style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#0D1322', marginBottom: '14px' }}>
-                                        What's Included:
+                                    <div style={{ fontSize: '11.5px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#b89058', marginBottom: '14px' }}>
+                                        Included Capabilities:
                                     </div>
                                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                         {[
                                             "Everything in Basic, upgraded to a paid website",
                                             "On-page SEO optimization",
-                                            "10 posts (LinkedIn + Facebook/X)",
-                                            "Strategic content calendar",
-                                            "Local citation profile building (Google Business, directories)",
+                                            "10 strategic executive posts (LinkedIn + X)",
+                                            "Strategic content calendar & narrative alignment",
+                                            "Local citation profile building (Google Business)",
                                             "15+ reference & article postings"
                                         ].map((feat, idx) => (
-                                            <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                                <i className="fal fa-check-circle" style={{ color: '#0f172a', fontSize: '14px', marginTop: '3px' }}></i>
+                                            <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '14.5px', color: '#334155', lineHeight: '1.5' }}>
+                                                <i className="fa-solid fa-check" style={{ color: '#b89058', fontSize: '13px', marginTop: '4px', flexShrink: 0 }}></i>
                                                 <span dangerouslySetInnerHTML={{ __html: feat.replace("Everything in Basic", "<strong>Everything in Basic</strong>") }}></span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
-                                <div style={{ marginTop: '35px' }}>
+                                <div style={{ marginTop: 'auto', paddingTop: '30px' }}>
                                     <Link 
                                         href="/contact" 
-                                        className="btn_style_one btn_block"
+                                        className="btn_style_gold btn_block btn_md"
                                     >
                                         <span>Book a Strategy Call</span> <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
@@ -243,60 +229,70 @@ export default function PricingTabs() {
                             </div>
                         </div>
 
-                        {/* Premium */}
+                        {/* Premium - Sovereign Dark Card */}
                         <div className="col-lg-4 col-md-6 col-sm-12 mb_30">
-                            <div className="pricing_card_item" style={{
+                            <div className="pricing_card_item prominence_depth_card_dark" style={{
                                 height: '100%',
-                                backgroundColor: '#ffffff',
+                                backgroundColor: '#0f1013',
                                 borderRadius: '16px',
                                 padding: '40px 32px',
-                                border: '1px solid #e2e8f0',
-                                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.04)',
+                                border: '1px solid rgba(255, 255, 255, 0.12)',
+                                borderTop: '3px solid #b89058',
+                                boxShadow: '0 20px 45px -10px rgba(0, 0, 0, 0.35)',
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'space-between',
+                                position: 'relative',
                                 transition: 'transform 0.3s ease, box-shadow 0.3s ease'
                             }}>
+                                <span className="prominence_floating_badge_dark">
+                                    Sovereign Suite
+                                </span>
                                 <div>
                                     <div style={{ marginBottom: '20px' }}>
-                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#1b2534', marginBottom: '6px' }}>
+                                        <div style={{ marginBottom: '8px' }}>
+                                            <span className="prominence_badge prominence_badge_white" style={{ fontSize: '10px', padding: '2px 8px' }}>
+                                                Boardroom Ready
+                                            </span>
+                                        </div>
+                                        <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#ffffff', marginBottom: '6px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             Premium
                                         </h3>
-                                        <p style={{ fontSize: '14px', color: '#64748b', minHeight: '40px', lineHeight: '1.5' }}>
-                                            Complete executive presence &amp; PR sprint
+                                        <p style={{ fontSize: '14px', color: '#94a3b8', minHeight: '40px', lineHeight: '1.5' }}>
+                                            Complete executive presence, media syndication &amp; PR sprint
                                         </p>
                                     </div>
-                                    <div style={{ margin: '20px 0 28px', borderBottom: '1px solid #edf2f7', paddingBottom: '20px' }}>
-                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#1b2534', lineHeight: '1' }}>
+                                    <div style={{ margin: '20px 0 28px', borderBottom: '1px solid rgba(255, 255, 255, 0.1)', paddingBottom: '20px' }}>
+                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#ffffff', lineHeight: '1', fontFamily: 'var(--primary-font)' }}>
                                             $99
                                         </span>
-                                        <span style={{ fontSize: '15px', color: '#64748b', fontWeight: '500', marginLeft: '6px' }}>
-                                            / one-time
+                                        <span style={{ fontSize: '14px', color: '#94a3b8', fontWeight: '500', marginLeft: '6px' }}>
+                                            / 3-month sprint
                                         </span>
                                     </div>
-                                    <div style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#94a3b8', marginBottom: '14px' }}>
-                                        What's Included:
+                                    <div style={{ fontSize: '11.5px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#b89058', marginBottom: '14px' }}>
+                                        Included Capabilities:
                                     </div>
                                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                         {[
                                             "Everything in Growth",
-                                            "Google reputation cleanup",
-                                            "50+ high-authority backlinks & brand mentions (guest articles, directories, PR placements)",
+                                            "Google Page 1 reputation cleanup",
+                                            "50+ high-authority backlinks & media brand mentions",
                                             "Full 3 months of consistent multi-platform posting",
-                                            "1 speaking or podcast opportunity sourced",
+                                            "1 speaking or tier-one podcast opportunity",
                                             "Full name-search coverage across page one"
                                         ].map((feat, idx) => (
-                                            <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                                <i className="fal fa-check-circle" style={{ color: '#0f172a', fontSize: '14px', marginTop: '3px' }}></i>
-                                                <span dangerouslySetInnerHTML={{ __html: feat.replace("Everything in Growth", "<strong>Everything in Growth</strong>") }}></span>
+                                            <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '14.5px', color: '#cbd5e1', lineHeight: '1.5' }}>
+                                                <i className="fa-solid fa-check" style={{ color: '#b89058', fontSize: '13px', marginTop: '4px', flexShrink: 0 }}></i>
+                                                <span dangerouslySetInnerHTML={{ __html: feat.replace("Everything in Growth", "<strong style='color:#ffffff'>Everything in Growth</strong>") }}></span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
-                                <div style={{ marginTop: '35px' }}>
+                                <div style={{ marginTop: 'auto', paddingTop: '30px' }}>
                                     <Link 
                                         href="/contact" 
-                                        className="btn_style_two btn_block"
+                                        className="btn_style_gold btn_block btn_md"
                                     >
                                         <span>Book a Strategy Call</span> <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
@@ -317,20 +313,10 @@ export default function PricingTabs() {
             {activeModel === 'retainer' && (
                 <div id="pricing-tabpanel-retainer" role="tabpanel" aria-labelledby="pricing-tab-retainer" className="model_two_content" style={{ animation: 'fadeInTab 0.35s ease-out' }}>
                     <div className="model_header centred mb_40">
-                        <span style={{
-                            display: "inline-block",
-                            fontSize: "12px",
-                            fontWeight: "700",
-                            letterSpacing: "1.2px",
-                            textTransform: "uppercase",
-                            color: "#0D1322", backgroundColor: "rgba(13, 19, 34, 0.05)", border: "1px solid rgba(13, 19, 34, 0.12)",
-                            padding: "4px 14px",
-                            borderRadius: "20px",
-                            marginBottom: "10px"
-                        }}>
+                        <span className="prominence_badge" style={{ marginBottom: "10px" }}>
                             Ongoing Authority Management
                         </span>
-                        <h3 style={{ fontSize: '30px', fontWeight: '700', color: '#1b2534', margin: '0 0 8px' }}>
+                        <h3 style={{ fontSize: '30px', fontWeight: '700', color: '#0f1013', margin: '0 0 8px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                             Model 2 — Monthly Retainer
                         </h3>
                         <p style={{ color: '#59606a', fontSize: '17px', margin: 0 }}>
@@ -341,13 +327,13 @@ export default function PricingTabs() {
                     <div className="row justify-content-center align-items-stretch">
                         {/* Basic */}
                         <div className="col-lg-4 col-md-6 col-sm-12 mb_30">
-                            <div className="pricing_card_item" style={{
+                            <div className="pricing_card_item prominence_depth_card" style={{
                                 height: '100%',
                                 backgroundColor: '#ffffff',
                                 borderRadius: '16px',
                                 padding: '40px 32px',
                                 border: '1px solid #e2e8f0',
-                                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.04)',
+                                borderTop: '3px solid #94a3b8',
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'space-between',
@@ -355,23 +341,28 @@ export default function PricingTabs() {
                             }}>
                                 <div>
                                     <div style={{ marginBottom: '20px' }}>
-                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#1b2534', marginBottom: '6px' }}>
+                                        <div style={{ marginBottom: '8px' }}>
+                                            <span className="prominence_badge prominence_badge_dark" style={{ fontSize: '10px', padding: '2px 8px' }}>
+                                                Baseline Maintenance
+                                            </span>
+                                        </div>
+                                        <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             Basic
                                         </h3>
                                         <p style={{ fontSize: '14px', color: '#64748b', minHeight: '40px', lineHeight: '1.5' }}>
-                                            Continuous social &amp; profile presence
+                                            Continuous social presence &amp; profile maintenance
                                         </p>
                                     </div>
                                     <div style={{ margin: '20px 0 28px', borderBottom: '1px solid #edf2f7', paddingBottom: '20px' }}>
-                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#1b2534', lineHeight: '1' }}>
+                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#0f1013', lineHeight: '1', fontFamily: 'var(--primary-font)' }}>
                                             $29
                                         </span>
-                                        <span style={{ fontSize: '15px', color: '#64748b', fontWeight: '500', marginLeft: '6px' }}>
+                                        <span style={{ fontSize: '14px', color: '#64748b', fontWeight: '500', marginLeft: '6px' }}>
                                             / month
                                         </span>
                                     </div>
-                                    <div style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#94a3b8', marginBottom: '14px' }}>
-                                        What's Included:
+                                    <div style={{ fontSize: '11.5px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#94a3b8', marginBottom: '14px' }}>
+                                        Included Capabilities:
                                     </div>
                                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                         {[
@@ -380,17 +371,17 @@ export default function PricingTabs() {
                                             "Brand building across 5 platforms",
                                             "Google presence upkeep"
                                         ].map((feat, idx) => (
-                                            <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                                <i className="fal fa-check-circle" style={{ color: '#0f172a', fontSize: '14px', marginTop: '3px' }}></i>
+                                            <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '14.5px', color: '#334155', lineHeight: '1.5' }}>
+                                                <i className="fa-solid fa-check" style={{ color: '#b89058', fontSize: '13px', marginTop: '4px', flexShrink: 0 }}></i>
                                                 <span>{feat}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
-                                <div style={{ marginTop: '35px' }}>
+                                <div style={{ marginTop: 'auto', paddingTop: '30px' }}>
                                     <Link 
                                         href="/contact" 
-                                        className="btn_style_two btn_block"
+                                        className="btn_style_two btn_block btn_md"
                                     >
                                         <span>Book a Strategy Call</span> <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
@@ -400,13 +391,14 @@ export default function PricingTabs() {
 
                         {/* Growth - Highlighted */}
                         <div className="col-lg-4 col-md-6 col-sm-12 mb_30">
-                            <div className="pricing_card_item recommended" style={{
+                            <div className="pricing_card_item recommended prominence_depth_card" style={{
                                 height: '100%',
                                 backgroundColor: '#ffffff',
                                 borderRadius: '16px',
                                 padding: '40px 32px',
-                                border: "2px solid #0D1322",
-                                boxShadow: "0 16px 40px rgba(0, 0, 0, 0.08)",
+                                border: "1px solid rgba(184, 144, 88, 0.45)",
+                                borderTop: "3px solid #b89058",
+                                boxShadow: "0 20px 45px -10px rgba(184, 144, 88, 0.16), 0 4px 12px rgba(0, 0, 0, 0.04)",
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'space-between',
@@ -414,64 +406,54 @@ export default function PricingTabs() {
                                 transform: 'translateY(-6px)',
                                 transition: 'transform 0.3s ease, box-shadow 0.3s ease'
                             }}>
-                                <span style={{
-                                    position: 'absolute',
-                                    top: '-13px',
-                                    left: '50%',
-                                    transform: 'translateX(-50%)',
-                                    background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
-                                    color: '#ffffff',
-                                    fontSize: '11px',
-                                    fontWeight: '800',
-                                    letterSpacing: '1px',
-                                    textTransform: 'uppercase',
-                                    padding: '4px 16px',
-                                    borderRadius: '20px',
-                                    border: '1px solid rgba(255, 255, 255, 0.18)',
-                                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.25)"
-                                }}>
-                                    Most Popular
+                                <span className="prominence_floating_badge">
+                                    Most Popular · C-Suite Standard
                                 </span>
                                 <div>
                                     <div style={{ marginBottom: '20px' }}>
-                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#1b2534', marginBottom: '6px' }}>
+                                        <div style={{ marginBottom: '8px' }}>
+                                            <span className="prominence_badge prominence_badge_gold" style={{ fontSize: '10px', padding: '2px 8px' }}>
+                                                Ongoing Velocity
+                                            </span>
+                                        </div>
+                                        <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#0f1013', marginBottom: '6px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             Growth
                                         </h3>
                                         <p style={{ fontSize: '14px', color: '#64748b', minHeight: '40px', lineHeight: '1.5' }}>
-                                            Website upkeep &amp; regular multi-platform content
+                                            Website upkeep &amp; regular multi-platform content cadence
                                         </p>
                                     </div>
                                     <div style={{ margin: '20px 0 28px', borderBottom: '1px solid #edf2f7', paddingBottom: '20px' }}>
-                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#0D1322', lineHeight: '1' }}>
+                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#0f1013', lineHeight: '1', fontFamily: 'var(--primary-font)' }}>
                                             $39
                                         </span>
-                                        <span style={{ fontSize: '15px', color: '#64748b', fontWeight: '500', marginLeft: '6px' }}>
+                                        <span style={{ fontSize: '14px', color: '#64748b', fontWeight: '500', marginLeft: '6px' }}>
                                             / month
                                         </span>
                                     </div>
-                                    <div style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#0D1322', marginBottom: '14px' }}>
-                                        What's Included:
+                                    <div style={{ fontSize: '11.5px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#b89058', marginBottom: '14px' }}>
+                                        Included Capabilities:
                                     </div>
                                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                         {[
                                             "Everything in Basic, upgraded to a paid website",
-                                            "Full website maintenance & updates",
+                                            "Full website maintenance & security updates",
                                             "Ongoing SEO & keyword monitoring",
                                             "12–15 posts/month across multiple platforms",
                                             "Local citation profile building",
                                             "5–8 reference/article posts per month"
                                         ].map((feat, idx) => (
-                                            <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                                <i className="fal fa-check-circle" style={{ color: '#0f172a', fontSize: '14px', marginTop: '3px' }}></i>
+                                            <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '14.5px', color: '#334155', lineHeight: '1.5' }}>
+                                                <i className="fa-solid fa-check" style={{ color: '#b89058', fontSize: '13px', marginTop: '4px', flexShrink: 0 }}></i>
                                                 <span dangerouslySetInnerHTML={{ __html: feat.replace("Everything in Basic", "<strong>Everything in Basic</strong>") }}></span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
-                                <div style={{ marginTop: '35px' }}>
+                                <div style={{ marginTop: 'auto', paddingTop: '30px' }}>
                                     <Link 
                                         href="/contact" 
-                                        className="btn_style_one btn_block"
+                                        className="btn_style_gold btn_block btn_md"
                                     >
                                         <span>Book a Strategy Call</span> <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
@@ -479,60 +461,70 @@ export default function PricingTabs() {
                             </div>
                         </div>
 
-                        {/* Premium */}
+                        {/* Premium - Sovereign Dark Card */}
                         <div className="col-lg-4 col-md-6 col-sm-12 mb_30">
-                            <div className="pricing_card_item" style={{
+                            <div className="pricing_card_item prominence_depth_card_dark" style={{
                                 height: '100%',
-                                backgroundColor: '#ffffff',
+                                backgroundColor: '#0f1013',
                                 borderRadius: '16px',
                                 padding: '40px 32px',
-                                border: '1px solid #e2e8f0',
-                                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.04)',
+                                border: '1px solid rgba(255, 255, 255, 0.12)',
+                                borderTop: '3px solid #b89058',
+                                boxShadow: '0 20px 45px -10px rgba(0, 0, 0, 0.35)',
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'space-between',
+                                position: 'relative',
                                 transition: 'transform 0.3s ease, box-shadow 0.3s ease'
                             }}>
+                                <span className="prominence_floating_badge_dark">
+                                    Sovereign Suite
+                                </span>
                                 <div>
                                     <div style={{ marginBottom: '20px' }}>
-                                        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#1b2534', marginBottom: '6px' }}>
+                                        <div style={{ marginBottom: '8px' }}>
+                                            <span className="prominence_badge prominence_badge_white" style={{ fontSize: '10px', padding: '2px 8px' }}>
+                                                Boardroom Ready
+                                            </span>
+                                        </div>
+                                        <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#ffffff', marginBottom: '6px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             Premium
                                         </h3>
-                                        <p style={{ fontSize: '14px', color: '#64748b', minHeight: '40px', lineHeight: '1.5' }}>
-                                            Full ongoing authority &amp; name-search management
+                                        <p style={{ fontSize: '14px', color: '#94a3b8', minHeight: '40px', lineHeight: '1.5' }}>
+                                            Full ongoing authority, PR management &amp; search protection
                                         </p>
                                     </div>
-                                    <div style={{ margin: '20px 0 28px', borderBottom: '1px solid #edf2f7', paddingBottom: '20px' }}>
-                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#1b2534', lineHeight: '1' }}>
+                                    <div style={{ margin: '20px 0 28px', borderBottom: '1px solid rgba(255, 255, 255, 0.1)', paddingBottom: '20px' }}>
+                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#ffffff', lineHeight: '1', fontFamily: 'var(--primary-font)' }}>
                                             $99
                                         </span>
-                                        <span style={{ fontSize: '15px', color: '#64748b', fontWeight: '500', marginLeft: '6px' }}>
+                                        <span style={{ fontSize: '14px', color: '#94a3b8', fontWeight: '500', marginLeft: '6px' }}>
                                             / month
                                         </span>
                                     </div>
-                                    <div style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#94a3b8', marginBottom: '14px' }}>
-                                        What's Included:
+                                    <div style={{ fontSize: '11.5px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#b89058', marginBottom: '14px' }}>
+                                        Included Capabilities:
                                     </div>
                                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                         {[
                                             "Everything in Growth",
                                             "5–10 high-authority backlinks/mentions per month",
-                                            "Continuous reputation monitoring",
-                                            "Monthly analytics & progress report",
-                                            "Speaking opportunity sourcing",
+                                            "Continuous Google search reputation monitoring",
+                                            "Monthly analytics & progress dossier",
+                                            "Proactive speaking & podcast opportunity sourcing",
                                             "Full name-search coverage, maintained ongoingly"
                                         ].map((feat, idx) => (
-                                            <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                                <i className="fal fa-check-circle" style={{ color: '#0f172a', fontSize: '14px', marginTop: '3px' }}></i>
-                                                <span dangerouslySetInnerHTML={{ __html: feat.replace("Everything in Growth", "<strong>Everything in Growth</strong>") }}></span>
+                                            <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '14.5px', color: '#cbd5e1', lineHeight: '1.5' }}>
+                                                <i className="fa-solid fa-check" style={{ color: '#b89058', fontSize: '13px', marginTop: '4px', flexShrink: 0 }}></i>
+                                                <span dangerouslySetInnerHTML={{ __html: feat.replace("Everything in Growth", "<strong style='color:#ffffff'>Everything in Growth</strong>") }}></span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
-                                <div style={{ marginTop: '35px' }}>
+                                <div style={{ marginTop: 'auto', paddingTop: '30px' }}>
                                     <Link 
                                         href="/contact" 
-                                        className="btn_style_two btn_block"
+                                        className="btn_style_gold btn_block btn_md"
                                     >
                                         <span>Book a Strategy Call</span> <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
@@ -545,35 +537,28 @@ export default function PricingTabs() {
 
             {/* Retainer Timeline — 4-Step Stepper (Horizontal on Desktop, Collapsing to Vertical on Mobile) */}
             <div className="retainer_timeline_section mt_70 mb_60" data-aos="fade-up" data-aos-duration="500">
-                <div className="section_title centred mb_40">
-                    <span style={{
-                        display: "inline-block",
-                        fontSize: "12px",
-                        fontWeight: "700",
-                        letterSpacing: "1.2px",
-                        textTransform: "uppercase",
-                        color: "#0D1322", backgroundColor: "rgba(13, 19, 34, 0.05)", border: "1px solid rgba(13, 19, 34, 0.12)",
-                        padding: "4px 14px",
-                        borderRadius: "20px",
-                        marginBottom: "10px"
-                    }}>
-                        Executive Roadmap
-                    </span>
-                    <h3 style={{ fontSize: '30px', fontWeight: '700', color: '#1b2534', margin: '0 0 8px' }}>
+                <div className="prominence_header_centered" style={{ marginBottom: "36px" }}>
+                    <div style={{ marginBottom: "10px" }}>
+                        <span className="prominence_tracker">
+                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058" }}></span>
+                            Executive Roadmap
+                        </span>
+                    </div>
+                    <h3 style={{ fontSize: '28px', fontWeight: '700', color: '#0f1013', margin: '0 0 8px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                         Retainer Timeline
                     </h3>
-                    <p style={{ color: '#59606a', fontSize: '17px', margin: 0 }}>
+                    <p className="prominence_lead_text" style={{ margin: "0 auto" }}>
                         What to expect, phase by phase, as your digital authority compounds.
                     </p>
                 </div>
 
                 {/* Styled Stepper Container */}
-                <div className="stepper_wrapper" style={{
+                <div className="stepper_wrapper prominence_depth_card" style={{
                     backgroundColor: '#ffffff',
                     borderRadius: '16px',
                     padding: '40px 30px',
                     border: '1px solid #e2e8f0',
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.04)'
+                    borderTop: '3px solid #b89058'
                 }}>
                     <div className="timeline_stepper">
                         {[
@@ -628,21 +613,21 @@ export default function PricingTabs() {
 
             {/* Bottom CTA */}
             <div className="pricing_bottom_cta centred" style={{
-                background: 'linear-gradient(135deg, #f8fafd 0%, #edf2f7 100%)',
+                background: '#FAF8F2',
                 padding: '44px 32px',
                 borderRadius: '16px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #eaedf0',
                 maxWidth: '780px',
                 margin: '40px auto 0',
                 boxShadow: '0 8px 24px rgba(0,0,0,0.03)'
             }}>
-                <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#1b2534', marginBottom: '8px' }}>
+                <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#1b2534', marginBottom: '8px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                     Not sure which model or tier fits?
                 </h3>
                 <p style={{ fontSize: '17px', color: '#59606a', marginBottom: '24px', lineHeight: '1.6' }}>
                     Book a confidential strategy call and we'll evaluate your goals to recommend the right trajectory.
                 </p>
-                <Link href="/contact" className="btn_style_one">
+                <Link href="/contact" className="btn_style_one btn_md">
                     Book a Strategy Call <i className="fa-solid fa-arrow-right"></i>
                 </Link>
                 <div style={{ marginTop: '16px', fontSize: '14px', color: '#64748b', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', flexWrap: 'wrap' }}>

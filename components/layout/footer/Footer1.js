@@ -27,12 +27,7 @@ export default function Footer1() {
             {/* Main Footer Content */}
             <div style={{ padding: "80px 0 60px" }}>
                 <div className="container">
-                    <div className="footer_grid_layout" style={{
-                        display: "grid",
-                        gridTemplateColumns: "1.2fr 1fr 1fr 1.2fr",
-                        gap: "40px",
-                        alignItems: "start"
-                    }}>
+                    <div className="footer_grid_layout">
                         {/* Column 1: Brand & Firm Stature */}
                         <div>
                             <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: "10px", textDecoration: "none", marginBottom: "16px" }}>
@@ -236,19 +231,7 @@ export default function Footer1() {
                             padding: "26px 22px",
                             backdropFilter: "blur(10px)"
                         }}>
-                            <span style={{
-                                display: "inline-block",
-                                fontSize: "11px",
-                                fontWeight: "700",
-                                textTransform: "uppercase",
-                                letterSpacing: "1px",
-                                color: "#e2e8f0",
-                                backgroundColor: "rgba(255, 255, 255, 0.08)",
-                                border: "1px solid rgba(255, 255, 255, 0.15)",
-                                padding: "3px 10px",
-                                borderRadius: "12px",
-                                marginBottom: "12px"
-                            }}>
+                            <span className="prominence_badge" style={{ background: 'rgba(255,255,255,0.08)', color: '#ffffff', borderColor: 'rgba(255,255,255,0.15)', marginBottom: '12px' }}>
                                 Private Advisory
                             </span>
                             <h4 style={{
@@ -256,7 +239,8 @@ export default function Footer1() {
                                 fontWeight: "700",
                                 color: "#ffffff",
                                 margin: "0 0 8px",
-                                lineHeight: "1.3"
+                                lineHeight: "1.3",
+                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                             }}>
                                 Book a Private Consultation
                             </h4>
@@ -271,7 +255,7 @@ export default function Footer1() {
 
                             <Link
                                 href="/contact"
-                                className="btn_style_gold btn_block"
+                                className="btn_style_gold btn_block btn_md"
                                 style={{ marginBottom: "12px" }}
                             >
                                 Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>

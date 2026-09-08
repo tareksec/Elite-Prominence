@@ -118,7 +118,7 @@ export default function ServiceDetailPage({ params }) {
                                 <div className="tag_text" style={{ marginBottom: "16px" }}>
                                     <h6>{service.badge}</h6>
                                 </div>
-                                <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#0f1013", lineHeight: "1.2", marginBottom: "16px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
+                                <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#0f1013", lineHeight: "1.2", marginBottom: "16px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                     {service.title}
                                 </h1>
                                 <p style={{ fontSize: "17px", fontWeight: "700", color: "#b89058", marginBottom: "18px", fontFamily: "var(--primary-font)", letterSpacing: "0.2px" }}>
@@ -128,10 +128,10 @@ export default function ServiceDetailPage({ params }) {
                                     {service.shortDescription}
                                 </p>
                                 <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
-                                    <Link href="/contact" className="btn_style_one">
+                                    <Link href="/contact" className="btn_style_one btn_md">
                                         Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
-                                    <Link href="/resources/assessment" className="btn_style_two">
+                                    <Link href="/resources/assessment" className="btn_style_two btn_md">
                                         Audit Your Stature <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
@@ -409,23 +409,23 @@ export default function ServiceDetailPage({ params }) {
                 </section>
 
                 {/* Final Consultation CTA */}
-                <section className="pt_90 pb_90" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
+                <section className="pt_90 pb_90" style={{ background: "#FAF8F2", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
                     <div className="container">
                         <div style={{ maxWidth: "740px", margin: "0 auto" }}>
                             <div className="tag_text" style={{ marginBottom: "16px" }}>
                                 <h6>Confidential Engagement</h6>
                             </div>
-                            <h2 style={{ fontSize: "38px", fontWeight: "700", color: "#0f1013", marginBottom: "16px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
+                            <h2 style={{ fontSize: "38px", fontWeight: "700", color: "#0f1013", marginBottom: "16px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 Discuss Your Executive Positioning
                             </h2>
                             <p style={{ color: "#59606a", fontSize: "17px", lineHeight: "28px", marginBottom: "32px" }}>
                                 Schedule a 30-minute private consultation with our advisory team. We will review your current search footprint, executive narrative, and scope a tailored engagement.
                             </p>
                             <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                                <Link href="/contact" className="btn_style_one">
+                                <Link href="/contact" className="btn_style_one btn_md">
                                     Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
-                                <Link href="/solutions" className="btn_style_two">
+                                <Link href="/solutions" className="btn_style_two btn_md">
                                     Explore Solutions by Role <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>

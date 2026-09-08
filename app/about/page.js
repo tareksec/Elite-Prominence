@@ -98,21 +98,19 @@ export default function About_Page() {
                 {/* Hero Banner */}
                 <section className="prominence_page_intro">
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: '860px', margin: '0 auto' }}>
-                            <div className="tag_text">
-                                <h6>Executive Reputation Advisory</h6>
-                            </div>
-                            <h1 style={{ fontSize: '42px', fontFamily: "var(--ep-font-serif, 'PT Serif', serif)", fontWeight: '700', color: '#0f1013', lineHeight: '1.25', marginBottom: '20px' }}>
+                        <div className="prominence_header_centered" style={{ maxWidth: '780px', margin: '0 auto' }}>
+                            <span className="prominence_tracker">Executive Reputation Advisory</span>
+                            <h1 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0f1013', lineHeight: '1.2' }}>
                                 Architecting Sovereign Digital Stature for Enterprise Leaders
                             </h1>
-                            <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.7', margin: '0 auto' }}>
+                            <p className="prominence_lead_text">
                                 Every executive we counsel has already accomplished the formidable part: leading enterprise transformations, governing risk, and directing complex organizations. What most lack is an owned digital footprint that communicates their caliber before they walk into the room. Prominence exists to permanently close that authority gap.
                             </p>
                             <div style={{ marginTop: '32px', display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <Link href="/contact" className="btn_style_one">
+                                <Link href="/contact" className="btn_style_one btn_md">
                                     Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
-                                <Link href="/how-it-works" className="btn_style_two">
+                                <Link href="/how-it-works" className="btn_style_two btn_md">
                                     Review Our 6-Stage Protocol <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>
@@ -121,7 +119,7 @@ export default function About_Page() {
                 </section>
 
                 {/* Founder Narrative & Stature */}
-                <section className="pt_100 pb_90" style={{ background: '#fff' }}>
+                <section className="prominence_section" style={{ background: '#fff' }}>
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-5 col-md-12 mb-4 mb-lg-0">
@@ -168,15 +166,13 @@ export default function About_Page() {
                                 </div>
                             </div>
                             <div className="col-lg-7 col-md-12 ps-lg-5">
-                                <div className="tag_text" style={{ marginBottom: '10px' }}>
-                                    <h6>The Founding Conviction</h6>
-                                </div>
-                                <h2 style={{ fontSize: '34px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '20px', lineHeight: '1.3' }}>
+                                <span className="prominence_tracker">The Founding Conviction</span>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0f1013', marginBottom: '20px', lineHeight: '1.25' }}>
                                     Reputation Is Sovereign Infrastructure, Not Superficial Vanity
                                 </h2>
-                                <div style={{ fontSize: '18px', fontWeight: '600', color: '#1e293b', borderLeft: '4px solid #b89058', paddingLeft: '20px', marginBottom: '24px', lineHeight: '1.6' }}>
+                                <blockquote style={{ fontSize: '17px', fontWeight: '600', color: '#1e293b', borderLeft: '3px solid var(--ep-gold, #b89058)', paddingLeft: '20px', margin: '0 0 24px 0', lineHeight: '1.6' }}>
                                     &ldquo;In executive leadership, opportunity is not won by shouting in the town square. It is won by unmistakable credibility recognized before the due diligence begins.&rdquo;
-                                </div>
+                                </blockquote>
                                 <p style={{ fontSize: '15.5px', lineHeight: '1.8', color: '#475569', marginBottom: '16px' }}>
                                     Prominence was established on a single undeniable reality: the most accomplished leaders are frequently the least visible online. While they orchestrate nine-figure acquisitions, overhaul enterprise technology, and lead thousands of personnel, their digital footprint often consists of an outdated corporate bio and an unmanaged LinkedIn feed.
                                 </p>
@@ -192,18 +188,20 @@ export default function About_Page() {
                 </section>
 
                 {/* The 4 Firm Principles */}
-                <section className="pt_100 pb_90" style={{ background: '#0f1013', color: '#fff' }}>
+                <section className="prominence_section" style={{ background: '#0f1013', color: '#fff' }}>
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: '760px', margin: '0 auto 60px' }}>
-                            <div className="tag_text">
-                                <h6 style={{ color: '#94a3b8' }}>Institutional Pillars</h6>
+                        <div className="prominence_header_split">
+                            <div>
+                                <span className="prominence_tracker" style={{ color: '#b89058' }}>Institutional Pillars</span>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#fff' }}>
+                                    The Four Prominence Principles
+                                </h2>
                             </div>
-                            <h2 style={{ fontSize: '36px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginTop: '12px' }}>
-                                The Four Prominence Principles
-                            </h2>
-                            <p style={{ color: '#94a3b8', fontSize: '16px', marginTop: '12px' }}>
-                                How our advisory firm differs fundamentally from traditional marketing agencies.
-                            </p>
+                            <div>
+                                <p className="prominence_lead_text" style={{ color: '#94a3b8' }}>
+                                    How our advisory firm differs fundamentally from traditional marketing agencies.
+                                </p>
+                            </div>
                         </div>
 
                         <div className="row">
@@ -267,23 +265,21 @@ export default function About_Page() {
                 </section>
 
                 {/* Final Consultation CTA */}
-                <section className="pt_90 pb_90" style={{ background: '#fff', borderTop: '1px solid #e2e8f0', textAlign: 'center' }}>
+                <section className="prominence_section" style={{ background: '#FAF8F2', borderTop: '1px solid #eaedf0', textAlign: 'center' }}>
                     <div className="container">
-                        <div style={{ maxWidth: '760px', margin: '0 auto' }}>
-                            <div className="tag_text" style={{ marginBottom: '14px' }}>
-                                <h6>Private Engagement</h6>
-                            </div>
-                            <h2 style={{ fontSize: '36px', fontFamily: "var(--ep-font-serif, 'PT Serif', serif)", fontWeight: '700', color: '#0f1013', marginBottom: '16px' }}>
+                        <div className="prominence_header_centered" style={{ maxWidth: '740px', margin: '0 auto' }}>
+                            <span className="prominence_tracker">Private Engagement</span>
+                            <h2 style={{ fontSize: 'clamp(26px, 3.8vw, 36px)', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0f1013', marginBottom: '16px' }}>
                                 Ready to Align Your Reputation With Your Stature?
                             </h2>
-                            <p style={{ color: '#475569', fontSize: '17px', lineHeight: '1.7', marginBottom: '32px' }}>
+                            <p className="prominence_lead_text" style={{ marginBottom: '32px' }}>
                                 Schedule a confidential 30-minute private consultation with our managing partners.
                             </p>
                             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <Link href="/contact" className="btn_style_one">
+                                <Link href="/contact" className="btn_style_one btn_md">
                                     Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
-                                <Link href="/resources/assessment" className="btn_style_two">
+                                <Link href="/resources/assessment" className="btn_style_two btn_md">
                                     Evaluate Digital Stature <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>

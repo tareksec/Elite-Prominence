@@ -2,13 +2,10 @@ import Link from "next/link"
 
 export default function Breadcrumb2({ breadcrumbTitle2 }) {
     return (
-        <>
-
-        <section className="page_breadcrumb style_two">
-            <div className="bg_layer" style={{ backgroundImage: "url(assets/images/background/breadcrumb_bg.jpg)" }}></div>
+        <section className="page_breadcrumb">
             <div className="container">
                 <div className="breadcrumb_content centred">
-                    <div className="breadcrumb_sutitle">Our Services</div>
+                    <div className="breadcrumb_sutitle"><h6>Our Capabilities</h6></div>
                     <h1 className="breadcrumb_title">{breadcrumbTitle2}</h1>
                     <ul className="breadcrumb_menu">
                         <li><Link href="/">Home</Link></li>
@@ -18,7 +15,5 @@ export default function Breadcrumb2({ breadcrumbTitle2 }) {
                 </div>
             </div>
         </section>
-
-        </>
     )
 }

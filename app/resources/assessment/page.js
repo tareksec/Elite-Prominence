@@ -158,7 +158,7 @@ export default function AssessmentPage() {
                                 <div style={{ background: '#e2e8f0', borderRadius: '10px', height: '6px', overflow: 'hidden' }}>
                                     <div style={{ 
                                         width: `${progressPercent}%`, 
-                                        background: '#0f1013', 
+                                        background: '#b89058', 
                                         height: '100%', 
                                         transition: 'width 0.3s ease' 
                                     }} />
@@ -172,7 +172,7 @@ export default function AssessmentPage() {
                 </section>
 
                 {/* Assessment Body */}
-                <section className="pt_70 pb_90" style={{ background: '#f8fafc' }}>
+                <section className="pt_70 pb_90" style={{ background: '#FAF8F2' }}>
                     <div className="container">
                         {!isSubmitted ? (
                             <div className="row justify-content-center">
@@ -181,7 +181,7 @@ export default function AssessmentPage() {
                                         {QUESTIONS.map((q) => (
                                             <div key={q.id} className="prominence_card" style={{ padding: '36px 40px' }}>
                                                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
-                                                    <span style={{ fontSize: '12px', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                                                    <span style={{ fontSize: '12px', fontWeight: '700', color: '#b89058', textTransform: 'uppercase', letterSpacing: '1px' }}>
                                                         {q.dimension}
                                                     </span>
                                                     {answers[q.id] !== undefined && (
@@ -190,7 +190,7 @@ export default function AssessmentPage() {
                                                         </span>
                                                     )}
                                                 </div>
-                                                <h3 style={{ fontSize: '18px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '20px', lineHeight: '1.4' }}>
+                                                <h3 style={{ fontSize: '18px', fontFamily: 'var(--title-font, "PT Serif", Georgia, serif)', fontWeight: '700', color: '#0f1013', marginBottom: '20px', lineHeight: '1.4' }}>
                                                     {q.subtitle}
                                                 </h3>
 
@@ -204,20 +204,21 @@ export default function AssessmentPage() {
                                                                 style={{ 
                                                                     padding: '16px 20px', 
                                                                     borderRadius: '8px', 
-                                                                    border: isSelected ? '1px solid #0f1013' : '1px solid #e2e8f0', 
-                                                                    background: isSelected ? '#f8fafc' : '#fff', 
+                                                                    border: isSelected ? '1.5px solid #b89058' : '1px solid #e2e8f0', 
+                                                                    background: isSelected ? '#FAF8F2' : '#fff', 
                                                                     cursor: 'pointer',
                                                                     display: 'flex',
                                                                     alignItems: 'center',
                                                                     gap: '14px',
-                                                                    transition: 'all 0.2s ease'
+                                                                    transition: 'all 0.2s ease',
+                                                                    boxShadow: isSelected ? '0 2px 8px rgba(184, 144, 88, 0.12)' : 'none'
                                                                 }}
                                                             >
                                                                 <div style={{ 
                                                                     width: '18px', 
                                                                     height: '18px', 
                                                                     borderRadius: '50%', 
-                                                                    border: isSelected ? '5px solid #0f1013' : '2px solid #cbd5e1', 
+                                                                    border: isSelected ? '5px solid #b89058' : '2px solid #cbd5e1', 
                                                                     background: '#fff',
                                                                     flexShrink: 0
                                                                 }} />
@@ -236,7 +237,7 @@ export default function AssessmentPage() {
                                             <button 
                                                 onClick={() => setIsSubmitted(true)}
                                                 disabled={answeredCount < totalQuestions}
-                                                className="btn_style_one"
+                                                className="btn_style_one btn_lg"
                                             >
                                                 {answeredCount === totalQuestions 
                                                     ? 'Calculate Executive Stature Score' 
@@ -251,19 +252,20 @@ export default function AssessmentPage() {
                             <div className="row justify-content-center">
                                 <div className="col-lg-8">
                                                                      {/* Score Card */}
-                                    <div className="prominence_card_dark" style={{ 
+                                    <div className="prominence_card_dark prominence_depth_card_dark" style={{ 
                                          padding: '48px', 
                                          textAlign: 'center',
-                                         marginBottom: '36px'
+                                         marginBottom: '36px',
+                                         borderTop: '3px solid #b89058'
                                      }}>
                                          <span className="prominence_badge" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }}>
                                              {tier.badge}
                                          </span>
 
-                                         <div style={{ fontSize: '72px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginTop: '20px', lineHeight: '1' }}>
+                                         <div style={{ fontSize: '72px', fontFamily: 'var(--title-font, "PT Serif", Georgia, serif)', fontWeight: '700', color: '#fff', marginTop: '20px', lineHeight: '1' }}>
                                              {scorePercent}%
                                          </div>
-                                         <h2 style={{ fontSize: '26px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', marginTop: '12px', marginBottom: '16px' }}>
+                                         <h2 style={{ fontSize: '26px', fontFamily: 'var(--title-font, "PT Serif", Georgia, serif)', fontWeight: '700', color: '#fff', marginTop: '12px', marginBottom: '16px' }}>
                                              {tier.title}
                                          </h2>
                                          <p style={{ fontSize: '16px', color: '#94a3b8', lineHeight: '1.7', maxWidth: '600px', margin: '0 auto 24px' }}>
@@ -281,7 +283,7 @@ export default function AssessmentPage() {
                                      </div>
 
                                      {/* Action Next Step: Private Consultation Booking */}
-                                     <div className="prominence_card" style={{ padding: '40px' }}>
+                                     <div className="prominence_card prominence_depth_card" style={{ padding: '40px', borderTop: '3px solid #b89058' }}>
                                          <div className="section_title centred" style={{ marginBottom: '28px' }}>
                                              <div className="tag_text">
                                                  <h6>Confidential Review</h6>
@@ -297,49 +299,49 @@ export default function AssessmentPage() {
                                          {!consultationBooked ? (
                                              <form onSubmit={handleConsultationSubmit}>
                                                  <div className="row g-3">
-                                                     <div className="col-md-6">
-                                                         <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Full Name</label>
-                                                         <input 
-                                                             type="text" 
-                                                             required 
-                                                             value={leadName}
-                                                             onChange={(e) => setLeadName(e.target.value)}
-                                                             placeholder="e.g. Eleanor Vance" 
-                                                             style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
-                                                         />
-                                                     </div>
-                                                     <div className="col-md-6">
-                                                         <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Executive Email</label>
-                                                         <input 
-                                                             type="email" 
-                                                             required 
-                                                             value={leadEmail}
-                                                             onChange={(e) => setLeadEmail(e.target.value)}
-                                                             placeholder="e.g. eleanor@enterprise.com" 
-                                                             style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
-                                                         />
-                                                     </div>
-                                                     <div className="col-md-6">
-                                                         <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Executive Role</label>
-                                                         <input 
-                                                             type="text" 
-                                                             required 
-                                                             value={leadRole}
-                                                             onChange={(e) => setLeadRole(e.target.value)}
-                                                             placeholder="e.g. CEO, CHRO, Founder" 
-                                                             style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
-                                                         />
-                                                     </div>
-                                                     <div className="col-md-6">
-                                                         <label style={{ fontSize: '12.5px', fontWeight: '700', color: '#334155', marginBottom: '6px', display: 'block' }}>Organization / Firm</label>
-                                                         <input 
-                                                             type="text" 
-                                                             value={leadCompany}
-                                                             onChange={(e) => setLeadCompany(e.target.value)}
-                                                             placeholder="e.g. Global Tech Partners" 
-                                                             style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '14px' }} 
-                                                         />
-                                                     </div>
+                                                      <div className="col-md-6">
+                                                          <label className="prominence_label">Full Name</label>
+                                                          <input 
+                                                              type="text" 
+                                                              required 
+                                                              className="prominence_input"
+                                                              value={leadName}
+                                                              onChange={(e) => setLeadName(e.target.value)}
+                                                              placeholder="e.g. Eleanor Vance" 
+                                                          />
+                                                      </div>
+                                                      <div className="col-md-6">
+                                                          <label className="prominence_label">Executive Email</label>
+                                                          <input 
+                                                              type="email" 
+                                                              required 
+                                                              className="prominence_input"
+                                                              value={leadEmail}
+                                                              onChange={(e) => setLeadEmail(e.target.value)}
+                                                              placeholder="e.g. eleanor@enterprise.com" 
+                                                          />
+                                                      </div>
+                                                      <div className="col-md-6">
+                                                          <label className="prominence_label">Executive Role</label>
+                                                          <input 
+                                                              type="text" 
+                                                              required 
+                                                              className="prominence_input"
+                                                              value={leadRole}
+                                                              onChange={(e) => setLeadRole(e.target.value)}
+                                                              placeholder="e.g. CEO, CHRO, Founder" 
+                                                          />
+                                                      </div>
+                                                      <div className="col-md-6">
+                                                          <label className="prominence_label">Organization / Firm</label>
+                                                          <input 
+                                                              type="text" 
+                                                              className="prominence_input"
+                                                              value={leadCompany}
+                                                              onChange={(e) => setLeadCompany(e.target.value)}
+                                                              placeholder="e.g. Global Tech Partners" 
+                                                          />
+                                                      </div>
                                                      <div className="col-12 mt-4 text-center">
                                                          <button 
                                                              type="submit" 

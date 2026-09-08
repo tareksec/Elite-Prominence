@@ -13,7 +13,7 @@ export default function ExecutiveCaseStudy() {
             data-aos-duration="550"
             style={{
                 backgroundColor: "#fafbfc",
-                padding: "100px 0 95px",
+                padding: "var(--ep-section-py) 0",
                 position: "relative",
                 borderTop: "1px solid #eaedf0",
                 borderBottom: "1px solid #eaedf0",
@@ -21,17 +21,17 @@ export default function ExecutiveCaseStudy() {
             }}
         >
             <div className="container">
-                {/* Section Header */}
-                <div className="row justify-content-center text-center" style={{ marginBottom: "50px" }}>
-                    <div className="col-xl-8 col-lg-10">
+                {/* Section Header: Editorial Split */}
+                <div className="prominence_header_split">
+                    <div>
                         <div style={{
                             display: "inline-flex",
                             alignItems: "center",
                             gap: "8px",
-                            padding: "6px 16px",
+                            padding: "5px 14px",
                             background: "#f1f5f9",
-                            borderRadius: "30px",
-                            fontSize: "12px",
+                            borderRadius: "6px",
+                            fontSize: "11px",
                             fontWeight: "700",
                             color: "#0f1013",
                             textTransform: "uppercase",
@@ -39,28 +39,30 @@ export default function ExecutiveCaseStudy() {
                             marginBottom: "14px",
                             border: "1px solid #e2e8f0"
                         }}>
-                            <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#b89058" }}></span>
+                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058" }}></span>
                             Executive Proof of Concept
                         </div>
 
                         <h2 style={{
-                            fontSize: "36px",
+                            fontSize: "clamp(26px, 3.6vw, 36px)",
                             fontWeight: "700",
                             color: "#0f1013",
-                            lineHeight: "1.25",
+                            lineHeight: "1.24",
                             letterSpacing: "-0.5px",
-                            marginBottom: "16px",
-                            fontFamily: "var(--primary-font)"
+                            margin: 0,
+                            fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                         }}>
                             Case Study: From Operational Operator to Boardroom Authority in 90 Days
                         </h2>
+                    </div>
 
+                    <div>
                         <p style={{
-                            fontSize: "16.5px",
+                            fontSize: "16px",
                             color: "#59606a",
-                            lineHeight: "1.7",
-                            maxWidth: "680px",
-                            margin: "0 auto"
+                            lineHeight: "27px",
+                            maxWidth: "520px",
+                            margin: 0
                         }}>
                             How a senior Vice President of People at a $4B global technology enterprise transformed an invisible online presence into two Non-Executive Director (NED) board appointments.
                         </p>
@@ -75,26 +77,39 @@ export default function ExecutiveCaseStudy() {
                     marginBottom: "45px"
                 }}>
                     {[
-                        { metric: "2 Board Seats", label: "NED Appointments in 90 Days", icon: "icon-33" },
-                        { metric: "Page 1 #1", label: "Google Placement for Exact Name", icon: "icon-32" },
-                        { metric: "+420%", label: "Inbound Recruiter & CEO Outreach", icon: "icon-48" },
-                        { metric: "< 30 Mins", label: "Monthly Executive Time Invested", icon: "icon-28" }
+                        { metric: "2 Board Seats", label: "NED Appointments in 90 Days", icon: "fa-solid fa-chair" },
+                        { metric: "Page 1 #1", label: "Google Placement for Exact Name", icon: "fa-solid fa-magnifying-glass" },
+                        { metric: "+420%", label: "Inbound Recruiter & CEO Outreach", icon: "fa-solid fa-arrow-trend-up" },
+                        { metric: "< 30 Mins", label: "Monthly Executive Time Invested", icon: "fa-solid fa-clock" }
                     ].map((stat, idx) => (
                         <div
                             key={idx}
+                            className="prominence_depth_card"
                             style={{
                                 backgroundColor: "#ffffff",
-                                padding: "26px 22px",
+                                padding: "28px 22px",
                                 borderRadius: "12px",
                                 border: "1px solid #eaedf0",
-                                boxShadow: "0 4px 18px rgba(15, 16, 19, 0.03)",
-                                textAlign: "center"
+                                borderTop: "3px solid #b89058",
+                                textAlign: "center",
+                                transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)"
                             }}
                         >
-                            <div style={{ fontSize: "22px", marginBottom: "8px", color: "#0f1013" }}>
+                            <div style={{ 
+                                width: "44px", 
+                                height: "44px", 
+                                margin: "0 auto 14px", 
+                                borderRadius: "8px", 
+                                background: "rgba(184, 144, 88, 0.08)", 
+                                color: "#b89058", 
+                                display: "flex", 
+                                alignItems: "center", 
+                                justifyContent: "center", 
+                                fontSize: "16px" 
+                            }}>
                                 <i className={stat.icon}></i>
                             </div>
-                            <div style={{ fontSize: "26px", fontWeight: "700", color: "#0f1013", letterSpacing: "-0.5px", fontFamily: "var(--primary-font)" }}>
+                            <div style={{ fontSize: "24px", fontWeight: "700", color: "#0f1013", letterSpacing: "-0.5px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 {stat.metric}
                             </div>
                             <div style={{ fontSize: "12.5px", fontWeight: "600", color: "#64748b", marginTop: "4px" }}>
@@ -155,7 +170,7 @@ export default function ExecutiveCaseStudy() {
                                     fontSize: "11px",
                                     fontWeight: "600",
                                     padding: "2px 8px",
-                                    borderRadius: "12px",
+                                    borderRadius: "6px",
                                     backgroundColor: activeTab === tab.key ? "#0f1013" : "#e2e8f0",
                                     color: activeTab === tab.key ? "#ffffff" : "#64748b"
                                 }}>
@@ -325,7 +340,7 @@ export default function ExecutiveCaseStudy() {
                         <div style={{ fontSize: "14px", color: "#64748b", fontWeight: "500" }}>
                             Want similar asymmetric trust for board seats and keynote invitations?
                         </div>
-                        <Link href="/contact" className="btn_style_one">
+                        <Link href="/contact" className="btn_style_one btn_md">
                             Book Confidential Brand Assessment <i className="fa-solid fa-arrow-right"></i>
                         </Link>
                     </div>

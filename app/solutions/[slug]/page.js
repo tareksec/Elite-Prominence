@@ -118,7 +118,7 @@ export default function SolutionDetailPage({ params }) {
                                 <div className="tag_text" style={{ marginBottom: "16px" }}>
                                     <h6>{solution.badge}</h6>
                                 </div>
-                                <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#0f1013", lineHeight: "1.2", marginBottom: "16px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
+                                <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#0f1013", lineHeight: "1.2", marginBottom: "16px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                     {solution.title}
                                 </h1>
                                 <p style={{ fontSize: "17px", fontWeight: "700", color: "#b89058", marginBottom: "18px", fontFamily: "var(--primary-font)", letterSpacing: "0.2px" }}>
@@ -128,10 +128,10 @@ export default function SolutionDetailPage({ params }) {
                                     {solution.executiveSummary}
                                 </p>
                                 <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
-                                    <Link href="/contact" className="btn_style_one">
+                                    <Link href="/contact" className="btn_style_one btn_md">
                                         Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
-                                    <Link href="/resources/assessment" className="btn_style_two">
+                                    <Link href="/resources/assessment" className="btn_style_two btn_md">
                                         Audit Your Stature <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
@@ -161,7 +161,7 @@ export default function SolutionDetailPage({ params }) {
                             <div className="tag_text">
                                 <h6>The Reputation Landscape</h6>
                             </div>
-                            <h2 style={{ fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>Distinct Reputation Pressures You Face</h2>
+                            <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>Distinct Reputation Pressures You Face</h2>
                             <p style={{ color: "#59606a", fontSize: "17px", marginTop: "12px", lineHeight: "28px" }}>
                                 High-profile leadership carries specific reputational vulnerabilities that generic PR agencies fail to comprehend.
                             </p>
@@ -194,13 +194,13 @@ export default function SolutionDetailPage({ params }) {
                 </section>
 
                 {/* What Prominence Builds */}
-                <section className="pt_100 pb_90" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7", borderBottom: "1px solid #edf2f7" }}>
+                <section className="pt_100 pb_90" style={{ background: "#FAF8F2", borderTop: "1px solid #edf2f7", borderBottom: "1px solid #edf2f7" }}>
                     <div className="container">
                         <div className="section_title centred" style={{ maxWidth: "780px", margin: "0 auto 60px" }}>
                             <div className="tag_text">
                                 <h6>Bespoke Architecture</h6>
                             </div>
-                            <h2 style={{ fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>How Prominence Architects Your Sovereign Presence</h2>
+                            <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>How Prominence Architects Your Sovereign Presence</h2>
                             <p style={{ color: "#59606a", fontSize: "17px", marginTop: "12px", lineHeight: "28px" }}>
                                 A turnkey operational framework that protects, amplifies, and monetizes your executive authority.
                             </p>
@@ -240,7 +240,7 @@ export default function SolutionDetailPage({ params }) {
                             <div className="tag_text">
                                 <h6>Core Capabilities</h6>
                             </div>
-                            <h2 style={{ fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>Tailored Capability Combination</h2>
+                            <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>Tailored Capability Combination</h2>
                             <p style={{ color: "#59606a", fontSize: "16px", marginTop: "8px", lineHeight: "26px" }}>
                                 Recommended foundational pillars for this executive profile.
                             </p>
@@ -274,14 +274,14 @@ export default function SolutionDetailPage({ params }) {
 
                 {/* Case Vignette Callout */}
                 {solution.caseVignette && (
-                    <section className="pt_90 pb_90" style={{ background: "#fafbfc", borderTop: "1px solid #eaedf0", borderBottom: "1px solid #eaedf0" }}>
+                    <section className="pt_90 pb_90" style={{ background: "#FAF8F2", borderTop: "1px solid #eaedf0", borderBottom: "1px solid #eaedf0" }}>
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6 mb_30 mb-lg-0">
                                     <div className="tag_text" style={{ marginBottom: "14px" }}>
                                         <h6>Proof Vignette</h6>
                                     </div>
-                                    <h2 style={{ fontSize: "30px", fontWeight: "700", color: "#0f1013", marginBottom: "20px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
+                                    <h2 style={{ fontSize: "30px", fontWeight: "700", color: "#0f1013", marginBottom: "20px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                         {solution.caseVignette.title}
                                     </h2>
                                     <div style={{ marginBottom: "18px" }}>
@@ -354,23 +354,23 @@ export default function SolutionDetailPage({ params }) {
                 </section>
 
                 {/* Final CTA */}
-                <section className="pt_90 pb_90" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
+                <section className="pt_90 pb_90" style={{ background: "#FAF8F2", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
                     <div className="container">
                         <div style={{ maxWidth: "740px", margin: "0 auto" }}>
                             <div className="tag_text" style={{ marginBottom: "16px" }}>
                                 <h6>Private Engagement</h6>
                             </div>
-                            <h2 style={{ fontSize: "38px", fontWeight: "700", color: "#0f1013", marginBottom: "16px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>
+                            <h2 style={{ fontSize: "38px", fontWeight: "700", color: "#0f1013", marginBottom: "16px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 Align Your Digital Reputation With Your Leadership Mandate
                             </h2>
                             <p style={{ color: "#59606a", fontSize: "17px", lineHeight: "28px", marginBottom: "32px" }}>
                                 Schedule a 30-minute confidential discussion with our partners. We will audit your current search footprint and scope a sovereign reputation architecture tailored for your role.
                             </p>
                             <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                                <Link href="/contact" className="btn_style_one">
+                                <Link href="/contact" className="btn_style_one btn_md">
                                     Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
-                                <Link href="/resources/assessment" className="btn_style_two">
+                                <Link href="/resources/assessment" className="btn_style_two btn_md">
                                     Take 3-Min Assessment <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>

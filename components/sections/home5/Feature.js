@@ -13,7 +13,7 @@ export default function Feature_Two() {
                             <div className="tag_text" style={{ marginBottom: "16px" }}>
                                 <h6>Target Mandate</h6>
                             </div>
-                            <h2 style={{ fontSize: "28px", fontWeight: "700", marginBottom: "20px", color: "#0f1013" }}>
+                            <h2 style={{ fontSize: "28px", fontWeight: "700", marginBottom: "20px", color: "#0f1013", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 Who Prominence Advises
                             </h2>
                             <ul style={{ listStyle: "none", padding: 0, margin: "0 0 25px 0", flex: 1 }}>
@@ -25,7 +25,7 @@ export default function Feature_Two() {
                                     { title: "Elite Consultants & Advisors", desc: "Commanding high five-figure monthly retainers through sovereign positioning" }
                                 ].map((role, idx) => (
                                     <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#1e293b", display: "flex", alignItems: "flex-start", gap: "12px" }}>
-                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#64748b", fontFamily: "var(--primary-font)", minWidth: "20px", paddingTop: "2px" }}>
+                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#b89058", fontFamily: "var(--primary-font)", minWidth: "20px", paddingTop: "2px" }}>
                                             0{idx + 1}
                                         </span>
                                         <div>
@@ -34,12 +34,12 @@ export default function Feature_Two() {
                                     </li>
                                 ))}
                             </ul>
-                            <div style={{ background: "#f8fafd", padding: "16px 20px", borderRadius: "8px", borderLeft: "3px solid #151619", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <div style={{ background: "#FAF8F2", padding: "16px 20px", borderRadius: "8px", borderLeft: "3px solid #b89058", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                 <p style={{ margin: 0, fontSize: "14px", fontWeight: "600", color: "#1e2025" }}>
                                     Explore tailored solutions for each role
                                 </p>
-                                <Link href="/solutions" style={{ fontSize: "13px", fontWeight: "700", color: "#151619", textDecoration: "none" }}>
-                                    View All Roles <i className="fa-solid fa-angle-right ms-1"></i>
+                                <Link href="/solutions" style={{ fontSize: "13px", fontWeight: "700", color: "#0f1013", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                                    View All Roles <i className="fa-solid fa-arrow-right" style={{ color: "#b89058", fontSize: "12px" }}></i>
                                 </Link>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ export default function Feature_Two() {
                             <div className="tag_text" style={{ marginBottom: "16px" }}>
                                 <h6>Measurable Transformation</h6>
                             </div>
-                            <h2 style={{ fontSize: "28px", fontWeight: "700", marginBottom: "20px", color: "#0f1013" }}>
+                            <h2 style={{ fontSize: "28px", fontWeight: "700", marginBottom: "20px", color: "#0f1013", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                 What Changes in 60–90 Days
                             </h2>
                             <ul style={{ listStyle: "none", padding: 0, margin: "0 0 25px 0", flex: 1 }}>
@@ -63,17 +63,17 @@ export default function Feature_Two() {
                                     "Inbound requests for corporate board seats, keynote appearances, and advisory mandates begin arriving proactively"
                                 ].map((item, idx) => (
                                     <li key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f0f3f6", fontSize: "15px", color: "#475569", display: "flex", alignItems: "flex-start", gap: "12px" }}>
-                                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#151619", marginTop: "9px", flexShrink: 0 }}></span>
+                                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#b89058", marginTop: "9px", flexShrink: 0 }}></span>
                                         <span>{item}</span>
                                     </li>
                                 ))}
                             </ul>
-                            <div style={{ background: "#f8fafd", padding: "16px 20px", borderRadius: "8px", borderLeft: "3px solid #151619", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <div style={{ background: "#FAF8F2", padding: "16px 20px", borderRadius: "8px", borderLeft: "3px solid #b89058", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                 <p style={{ margin: 0, fontSize: "14px", fontWeight: "600", color: "#1e2025" }}>
                                     Turnkey execution: &lt; 30 min client time per month
                                 </p>
-                                <Link href="/how-it-works" style={{ fontSize: "13px", fontWeight: "700", color: "#151619", textDecoration: "none" }}>
-                                    Our Methodology <i className="fa-solid fa-angle-right ms-1"></i>
+                                <Link href="/how-it-works" style={{ fontSize: "13px", fontWeight: "700", color: "#0f1013", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                                    Our Methodology <i className="fa-solid fa-arrow-right" style={{ color: "#b89058", fontSize: "12px" }}></i>
                                 </Link>
                             </div>
                         </div>

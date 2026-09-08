@@ -101,7 +101,7 @@ export default function AnnouncementBanner() {
                     padding: "4px 8px"
                 }}
             >
-                <i className="fal fa-times"></i>
+                <i className="fa-solid fa-xmark"></i>
             </button>
         </div>
     )

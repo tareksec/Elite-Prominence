@@ -118,7 +118,7 @@ export default function Blog_Standard() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStandardSchema) }}
             />
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle14="Insights & Articles">
-                <section className="blog_section pt_150 pb_120">
+                <section className="blog_section pt_90 pb_120">
                     <div className="container">
                         <div className="row">
                             <div className="col-xl-8 col-lg-8 col-md-12">
@@ -136,7 +136,7 @@ export default function Blog_Standard() {
                                                     <li><i className="icon-21"></i>{post.date}</li>
                                                     <li><i className="icon-20"></i><Link href="/about">Prominence</Link></li>
                                                 </ul>
-                                                <h3 style={{ fontSize: "24px", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)", fontWeight: "700", marginBottom: "15px" }}>
+                                                <h3 style={{ fontSize: "24px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: "700", marginBottom: "15px" }}>
                                                     <Link href={post.link} style={{ color: "#0f1013" }}>{post.title}</Link>
                                                 </h3>
                                                 <p style={{ color: "#59606a", lineHeight: "1.7", marginBottom: "20px" }}>{post.desc}</p>
@@ -154,8 +154,8 @@ export default function Blog_Standard() {
                             {/* Sidebar */}
                             <div className="col-xl-4 col-lg-4 col-md-12">
                                 <div className="blog_sidebar">
-                                    <div className="sidebar_widget mb_40" style={{ background: "#f8fafd", padding: "30px", borderRadius: "12px", border: "1px solid #eaedf0" }}>
-                                        <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "20px", color: "#0f1013", fontFamily: "var(--ep-font-serif, 'PT Serif', serif)" }}>Topics</h3>
+                                    <div className="sidebar_widget mb_40" style={{ background: "#FAF8F2", padding: "30px", borderRadius: "12px", border: "1px solid #eaedf0" }}>
+                                        <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "20px", color: "#0f1013", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>Topics</h3>
                                         <ul style={{ listStyle: "none", padding: 0 }}>
                                             <li style={{ padding: "8px 0", borderBottom: "1px solid #eef0f4" }}>
                                                 <Link href="/blog-grid" style={{ color: "#0f1013", fontWeight: "600" }}>Personal Branding</Link>
@@ -173,12 +173,12 @@ export default function Blog_Standard() {
                                     </div>
 
                                     <div className="sidebar_widget" style={{ background: "#0f1013", padding: "35px 30px", borderRadius: "12px", border: "1px solid rgba(255, 255, 255, 0.12)", color: "#fff", boxShadow: "0 16px 40px rgba(0, 0, 0, 0.35)" }}>
-                                        <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#fff", fontFamily: "var(--primary-font)", marginBottom: "15px" }}>Ready to Be Seen at the Top?</h3>
+                                        <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#fff", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "15px" }}>Ready to Be Seen at the Top?</h3>
                                         <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "20px", fontSize: "15px", lineHeight: "1.6" }}>
                                             Schedule a confidential 20-minute strategy call with our executive branding team.
                                         </p>
-                                        <Link href="/contact" className="btn_style_one" style={{ padding: "12px 24px", fontSize: "14px", width: "100%", textAlign: "center" }}>
-                                            Book a Strategy Call
+                                        <Link href="/contact" className="btn_style_gold btn_block btn_md">
+                                            Book a Strategy Call <i className="fa-solid fa-arrow-right"></i>
                                         </Link>
                                     </div>
                                 </div>

@@ -113,7 +113,7 @@ export default function CaseStudyDetailPage({ params }) {
 
                             <h1 style={{
                                 fontSize: 'clamp(28px, 4.5vw, 40px)',
-                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                 fontWeight: '700',
                                 color: '#0f1013',
                                 lineHeight: '1.25',
@@ -126,10 +126,10 @@ export default function CaseStudyDetailPage({ params }) {
                             </p>
 
                             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <Link href="/contact" className="btn_style_one">
+                                <Link href="/contact" className="btn_style_one btn_md">
                                     Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
-                                <Link href="/case-studies" className="btn_style_two">
+                                <Link href="/case-studies" className="btn_style_two btn_md">
                                     All Case Studies
                                 </Link>
                             </div>
@@ -304,7 +304,7 @@ export default function CaseStudyDetailPage({ params }) {
                                             <span style={{ fontSize: '11px', fontWeight: '700', color: '#64748b', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>
                                                 {oth.type}
                                             </span>
-                                            <h3 style={{ fontSize: '19px', fontFamily: 'var(--primary-font)', fontWeight: '700', marginBottom: '8px' }}>
+                                            <h3 style={{ fontSize: '19px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', marginBottom: '8px' }}>
                                                 <Link href={`/case-studies/${oth.slug}`} style={{ color: '#0f1013', textDecoration: 'none' }}>
                                                     {oth.shortTitle}
                                                 </Link>
@@ -332,7 +332,7 @@ export default function CaseStudyDetailPage({ params }) {
                             </div>
                             <h2 style={{
                                 fontSize: 'clamp(26px, 4vw, 36px)',
-                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                 fontWeight: '700',
                                 color: '#fff',
                                 marginBottom: '16px'
@@ -343,10 +343,10 @@ export default function CaseStudyDetailPage({ params }) {
                                 Connect directly with our managing partners for a 30-minute private consultation.
                             </p>
                             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <Link href="/contact" className="btn_style_gold">
+                                <Link href="/contact" className="btn_style_gold btn_md">
                                     Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
-                                <Link href="/how-it-works" className="btn_style_two_dark">
+                                <Link href="/how-it-works" className="btn_style_two_dark btn_md">
                                     Review Methodology
                                 </Link>
                             </div>

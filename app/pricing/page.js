@@ -49,7 +49,7 @@ export default function Pricing_Page() {
                 {/* Clean Executive Hero Header */}
                 <section className="pricing_page_hero" style={{
                     padding: "130px 0 50px",
-                    background: "#F8F9FA",
+                    background: "#FAF8F2",
                     textAlign: "center"
                 }}>
                     <div className="container">
@@ -58,7 +58,7 @@ export default function Pricing_Page() {
                                 Investment &amp; Packages
                             </span>
                             <h1 style={{
-                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                 fontSize: "clamp(32px, 5vw, 48px)",
                                 fontWeight: "700",
                                 color: "#0f1013",

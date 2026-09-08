@@ -272,9 +272,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 }}
                             >
                                 <span>Services</span>
-                                <svg width="9" height="5" viewBox="0 0 10 6" fill="none">
-                                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                                <i className="fa-solid fa-chevron-down" style={{ fontSize: '9px', opacity: 0.7, marginLeft: '2px', transition: 'transform 0.2s ease', transform: servicesOpen ? 'rotate(180deg)' : 'none' }}></i>
                             </Link>
 
                             {servicesOpen && (
@@ -368,9 +366,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 }}
                             >
                                 <span>Solutions</span>
-                                <svg width="9" height="5" viewBox="0 0 10 6" fill="none">
-                                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                                <i className="fa-solid fa-chevron-down" style={{ fontSize: '9px', opacity: 0.7, marginLeft: '2px', transition: 'transform 0.2s ease', transform: solutionsOpen ? 'rotate(180deg)' : 'none' }}></i>
                             </Link>
 
                             {solutionsOpen && (
@@ -506,9 +502,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 }}
                             >
                                 <span>Resources</span>
-                                <svg width="9" height="5" viewBox="0 0 10 6" fill="none">
-                                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                                <i className="fa-solid fa-chevron-down" style={{ fontSize: '9px', opacity: 0.7, marginLeft: '2px', transition: 'transform 0.2s ease', transform: resourcesOpen ? 'rotate(180deg)' : 'none' }}></i>
                             </button>
 
                             {resourcesOpen && (
@@ -622,9 +616,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 }}
                             >
                                 <span>Firm</span>
-                                <svg width="9" height="5" viewBox="0 0 10 6" fill="none">
-                                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                                <i className="fa-solid fa-chevron-down" style={{ fontSize: '9px', opacity: 0.7, marginLeft: '2px', transition: 'transform 0.2s ease', transform: moreOpen ? 'rotate(180deg)' : 'none' }}></i>
                             </button>
 
                             {moreOpen && (
@@ -788,9 +780,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             padding: 0
                         }}
                     >
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1H17M1 7H17M1 13H17" stroke="#0f1013" strokeWidth="2" strokeLinecap="round" />
-                        </svg>
+                        <i className="fa-solid fa-bars" style={{ fontSize: '16px', color: '#0f1013' }}></i>
                     </button>
                 </div>
             </div>

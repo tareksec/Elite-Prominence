@@ -363,32 +363,19 @@ export default function DashboardPage() {
     }
 
     const renderStatusBadge = (status) => {
-        let bg = "#FEF3C7"
-        let color = "#92400E"
+        let badgeClass = "prominence_badge prominence_badge_gold"
         let text = "Pending Review"
 
         if (status === 'approved') {
-            bg = "#D1FAE5"
-            color = "#065F46"
+            badgeClass = "prominence_badge prominence_badge_green"
             text = "Approved & Live"
         } else if (status === 'rejected') {
-            bg = "#FEE2E2"
-            color = "#991B1B"
+            badgeClass = "prominence_badge prominence_badge_red"
             text = "Declined"
         }
 
         return (
-            <span style={{
-                display: "inline-block",
-                padding: "3px 10px",
-                borderRadius: "14px",
-                fontSize: "11px",
-                fontWeight: "700",
-                backgroundColor: bg,
-                color: color,
-                textTransform: "uppercase",
-                letterSpacing: "0.5px"
-            }}>
+            <span className={badgeClass}>
                 {text}
             </span>
         )
@@ -441,7 +428,7 @@ export default function DashboardPage() {
                             flexWrap: "wrap",
                             gap: "20px",
                             boxShadow: "0 10px 30px rgba(22, 45, 32, 0.15)",
-                            border: "1px solid rgba(210, 157, 43, 0.25)"
+                            border: "1px solid rgba(184, 144, 88, 0.25)"
                         }}>
                             <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
                                 <div style={{
@@ -461,7 +448,7 @@ export default function DashboardPage() {
                                     {initials}
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", color: "#D29D2B", fontWeight: "700", marginBottom: "4px" }}>
+                                    <div style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", color: "#b89058", fontWeight: "700", marginBottom: "4px" }}>
                                         Verified Member Studio
                                     </div>
                                     <h1 style={{ fontSize: "clamp(22px, 4vw, 30px)", fontWeight: "700", color: "#ffffff", margin: 0 }}>
@@ -478,39 +465,26 @@ export default function DashboardPage() {
                                     <Link
                                         href={`/community/${user.id}`}
                                         target="_blank"
-                                        className="btn_style_one"
-                                        style={{
-                                            padding: "10px 18px",
-                                            fontSize: "13px"
-                                        }}
+                                        className="btn_style_gold btn_sm"
                                     >
-                                        <i className="fal fa-external-link-alt" style={{ marginRight: "6px" }}></i> View Public Profile
+                                        <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginRight: "6px" }}></i> View Public Profile
                                     </Link>
                                 )}
 
                                 {profile?.role === 'admin' && (
                                     <Link
                                         href="/admin"
-                                        className="btn_style_two"
-                                        style={{
-                                            padding: "10px 18px",
-                                            fontSize: "13px"
-                                        }}
+                                        className="btn_style_two_dark btn_sm"
                                     >
-                                        <span><i className="fal fa-shield-alt" style={{ marginRight: "6px" }}></i> Admin Console</span>
+                                        <i className="fa-solid fa-shield-halved" style={{ marginRight: "6px" }}></i> Admin Console
                                     </Link>
                                 )}
 
                                 <button
                                     onClick={handleLogout}
-                                    className="btn_style_two"
-                                    style={{
-                                        padding: "10px 18px",
-                                        fontSize: "13px",
-                                        cursor: "pointer"
-                                    }}
+                                    className="btn_style_two_dark btn_sm"
                                 >
-                                    <span>Sign Out</span>
+                                    Sign Out
                                 </button>
                             </div>
                         </div>
@@ -536,7 +510,7 @@ export default function DashboardPage() {
                                 <div style={{
                                     width: `${completeness}%`,
                                     height: "100%",
-                                    backgroundColor: completeness === 100 ? "#22c55e" : "#D29D2B",
+                                    backgroundColor: completeness === 100 ? "#22c55e" : "#b89058",
                                     borderRadius: "6px",
                                     transition: "width 0.4s ease"
                                 }}></div>
@@ -554,7 +528,7 @@ export default function DashboardPage() {
                                 marginBottom: "24px",
                                 border: "1px solid #86efac"
                             }}>
-                                <i className="fal fa-check-circle" style={{ marginRight: "6px" }}></i> {profileSuccess}
+                                <i className="fa-solid fa-circle-check" style={{ marginRight: "6px" }}></i> {profileSuccess}
                             </div>
                         )}
 
@@ -568,7 +542,7 @@ export default function DashboardPage() {
                                 marginBottom: "24px",
                                 border: "1px solid #fca5a5"
                             }}>
-                                <i className="fal fa-exclamation-triangle" style={{ marginRight: "6px" }}></i> {globalError}
+                                <i className="fa-solid fa-triangle-exclamation" style={{ marginRight: "6px" }}></i> {globalError}
                             </div>
                         )}
 
@@ -597,7 +571,7 @@ export default function DashboardPage() {
                                     marginBottom: "-2px"
                                 }}
                             >
-                                <i className="fal fa-user" style={{ marginRight: "8px" }}></i> Executive Profile Studio
+                                <i className="fa-solid fa-user-tie" style={{ marginRight: "8px" }}></i> Executive Profile Studio
                             </button>
 
                             <button
@@ -615,7 +589,7 @@ export default function DashboardPage() {
                                     marginBottom: "-2px"
                                 }}
                             >
-                                <i className="fal fa-newspaper" style={{ marginRight: "8px" }}></i> Thought Leadership Articles ({myArticles.length})
+                                <i className="fa-solid fa-newspaper" style={{ marginRight: "8px" }}></i> Thought Leadership Articles ({myArticles.length})
                             </button>
 
                             <button
@@ -633,7 +607,7 @@ export default function DashboardPage() {
                                     marginBottom: "-2px"
                                 }}
                             >
-                                <i className="fal fa-star" style={{ marginRight: "8px" }}></i> Client Testimonials ({myReviews.length})
+                                <i className="fa-solid fa-star" style={{ marginRight: "8px" }}></i> Client Testimonials ({myReviews.length})
                             </button>
 
                             <button
@@ -651,7 +625,7 @@ export default function DashboardPage() {
                                     marginBottom: "-2px"
                                 }}
                             >
-                                <i className="fal fa-compass" style={{ marginRight: "8px" }}></i> Executive Playbooks & Advisory
+                                <i className="fa-solid fa-compass" style={{ marginRight: "8px" }}></i> Executive Playbooks & Advisory
                             </button>
                         </div>
 
@@ -679,7 +653,7 @@ export default function DashboardPage() {
                                     <form onSubmit={handleUpdateProfile}>
                                         {/* Name & Title */}
                                         <div style={{ marginBottom: "18px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Full Name *
                                             </label>
                                             <input
@@ -688,12 +662,12 @@ export default function DashboardPage() {
                                                 value={fullName}
                                                 onChange={(e) => setFullName(e.target.value)}
                                                 placeholder="e.g. Eleanor Vance"
-                                                style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
+                                                className="prominence_input"
                                             />
                                         </div>
 
                                         <div style={{ marginBottom: "18px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Executive Title *
                                             </label>
                                             <input
@@ -702,14 +676,14 @@ export default function DashboardPage() {
                                                 value={roleTitle}
                                                 onChange={(e) => setRoleTitle(e.target.value)}
                                                 placeholder="e.g. Chief Human Resources Officer / VP People"
-                                                style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
+                                                className="prominence_input"
                                             />
                                         </div>
 
                                         {/* Company & Industry */}
                                         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "18px" }}>
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                                <label className="prominence_label">
                                                     Current Company / Board
                                                 </label>
                                                 <input
@@ -717,12 +691,12 @@ export default function DashboardPage() {
                                                     value={company}
                                                     onChange={(e) => setCompany(e.target.value)}
                                                     placeholder="e.g. GlobalTech Solutions"
-                                                    style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
+                                                    className="prominence_input"
                                                 />
                                             </div>
 
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                                <label className="prominence_label">
                                                     Industry Sector
                                                 </label>
                                                 <input
@@ -730,7 +704,7 @@ export default function DashboardPage() {
                                                     value={industry}
                                                     onChange={(e) => setIndustry(e.target.value)}
                                                     placeholder="e.g. Technology & SaaS"
-                                                    style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
+                                                    className="prominence_input"
                                                 />
                                             </div>
                                         </div>
@@ -738,7 +712,7 @@ export default function DashboardPage() {
                                         {/* Location & Experience */}
                                         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "18px" }}>
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                                <label className="prominence_label">
                                                     Location (City, Country)
                                                 </label>
                                                 <input
@@ -746,18 +720,18 @@ export default function DashboardPage() {
                                                     value={location}
                                                     onChange={(e) => setLocation(e.target.value)}
                                                     placeholder="e.g. London, UK or New York"
-                                                    style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
+                                                    className="prominence_input"
                                                 />
                                             </div>
 
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                                <label className="prominence_label">
                                                     Leadership Experience
                                                 </label>
                                                 <select
                                                     value={yearsExp}
                                                     onChange={(e) => setYearsExp(e.target.value)}
-                                                    style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
+                                                    className="prominence_select"
                                                 >
                                                     <option value="5-10 Years">5–10 Years</option>
                                                     <option value="10-15 Years">10–15 Years</option>
@@ -770,63 +744,64 @@ export default function DashboardPage() {
 
                                         {/* Executive Bio */}
                                         <div style={{ marginBottom: "18px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Executive Biography & Leadership Philosophy
                                             </label>
                                             <textarea
                                                 rows={5}
+                                                className="prominence_textarea"
                                                 value={bio}
                                                 onChange={(e) => setBio(e.target.value)}
                                                 placeholder="Provide an overview of your operational leadership journey, governance focus, and career milestones..."
-                                                style={{ width: "100%", padding: "12px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px", lineHeight: "1.6" }}
+                                                style={{ lineHeight: "1.6" }}
                                             />
                                         </div>
 
                                         {/* Personal Branding Links */}
                                         <div style={{ marginBottom: "18px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 LinkedIn Profile URL
                                             </label>
                                             <input
                                                 type="url"
+                                                className="prominence_input"
                                                 value={linkedinUrl}
                                                 onChange={(e) => setLinkedinUrl(e.target.value)}
                                                 placeholder="https://www.linkedin.com/in/your-profile"
-                                                style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                             />
                                         </div>
 
                                         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "18px" }}>
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                                <label className="prominence_label">
                                                     Personal / Advisory Website
                                                 </label>
                                                 <input
                                                     type="url"
+                                                    className="prominence_input"
                                                     value={websiteUrl}
                                                     onChange={(e) => setWebsiteUrl(e.target.value)}
                                                     placeholder="https://yourname.com"
-                                                    style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                                 />
                                             </div>
 
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                                <label className="prominence_label">
                                                     Twitter / X Handle
                                                 </label>
                                                 <input
                                                     type="text"
+                                                    className="prominence_input"
                                                     value={twitterUrl}
                                                     onChange={(e) => setTwitterUrl(e.target.value)}
                                                     placeholder="@handle"
-                                                    style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                                 />
                                             </div>
                                         </div>
 
                                         {/* Core Competencies & Expertise Tags */}
                                         <div style={{ marginBottom: "20px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
+                                            <label className="prominence_label" style={{ marginBottom: "8px" }}>
                                                 Core Strategic Domains (Click to toggle)
                                             </label>
                                             <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "10px" }}>
@@ -837,15 +812,15 @@ export default function DashboardPage() {
                                                             key={tag}
                                                             type="button"
                                                             onClick={() => toggleExpertiseTag(tag)}
+                                                            className={`prominence_badge ${selected ? 'prominence_badge_dark' : ''}`}
                                                             style={{
+                                                                cursor: "pointer",
+                                                                border: selected ? "1px solid #0f1013" : "1px solid #e2e8f0",
                                                                 backgroundColor: selected ? "#0f1013" : "#f1f5f9",
                                                                 color: selected ? "#ffffff" : "#475569",
-                                                                border: selected ? "1px solid #0f1013" : "1px solid #e2e8f0",
-                                                                padding: "4px 12px",
-                                                                borderRadius: "16px",
+                                                                padding: "5px 12px",
                                                                 fontSize: "12px",
-                                                                fontWeight: "700",
-                                                                cursor: "pointer"
+                                                                fontWeight: "700"
                                                             }}
                                                         >
                                                             {selected ? "• " : "+ "}{tag}
@@ -858,15 +833,17 @@ export default function DashboardPage() {
                                             <div style={{ display: "flex", gap: "8px" }}>
                                                 <input
                                                     type="text"
+                                                    className="prominence_input"
                                                     value={customTagInput}
                                                     onChange={(e) => setCustomTagInput(e.target.value)}
                                                     placeholder="Add custom domain tag..."
-                                                    style={{ flex: 1, padding: "8px 12px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "13px" }}
+                                                    style={{ flex: 1, padding: "8px 12px", fontSize: "13px" }}
                                                 />
                                                 <button
                                                     type="button"
                                                     onClick={addCustomTag}
-                                                    style={{ backgroundColor: "#f1f5f9", color: "#1e293b", border: "1px solid #cbd5e1", padding: "8px 14px", borderRadius: "8px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
+                                                    className="btn_style_two btn_sm"
+                                                    style={{ whiteSpace: "nowrap", padding: "8px 16px" }}
                                                 >
                                                     Add Tag
                                                 </button>
@@ -875,15 +852,15 @@ export default function DashboardPage() {
 
                                         {/* Keynote Topics */}
                                         <div style={{ marginBottom: "22px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Keynote & Advisory Mandate Topics
                                             </label>
                                             <input
                                                 type="text"
+                                                className="prominence_input"
                                                 value={speakingTopics}
                                                 onChange={(e) => setSpeakingTopics(e.target.value)}
                                                 placeholder="e.g. The Sovereign Leader in AI, Boardroom Culture Architecture"
-                                                style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                             />
                                         </div>
 
@@ -910,9 +887,8 @@ export default function DashboardPage() {
                                         <button
                                             type="submit"
                                             disabled={updatingProfile}
-                                            className="btn_style_one"
+                                            className="btn_style_one btn_block btn_md"
                                             style={{
-                                                width: "100%",
                                                 cursor: updatingProfile ? "not-allowed" : "pointer",
                                                 opacity: updatingProfile ? 0.7 : 1
                                             }}
@@ -928,19 +904,19 @@ export default function DashboardPage() {
                                         backgroundColor: "#ffffff",
                                         borderRadius: "16px",
                                         padding: "30px 26px",
-                                        border: "1.5px solid #D29D2B",
+                                        border: "1px solid rgba(184, 144, 88, 0.3)",
                                         boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
                                         position: "sticky",
                                         top: "20px"
                                     }}>
                                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
                                             <span style={{
-                                                backgroundColor: "rgba(210, 157, 43, 0.15)",
+                                                backgroundColor: "rgba(184, 144, 88, 0.15)",
                                                 color: "#92400e",
                                                 fontSize: "11px",
                                                 fontWeight: "700",
                                                 padding: "3px 10px",
-                                                borderRadius: "10px",
+                                                borderRadius: "6px",
                                                 textTransform: "uppercase"
                                             }}>
                                                 Live Directory Preview
@@ -951,7 +927,7 @@ export default function DashboardPage() {
                                                     target="_blank"
                                                     style={{ fontSize: "12px", color: "#0f1013", fontWeight: "700", textDecoration: "underline" }}
                                                 >
-                                                    Open Full Page <i className="fal fa-external-link-alt" style={{ marginLeft: "4px", fontSize: "11px" }}></i>
+                                                    Open Full Page <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: "4px", fontSize: "11px" }}></i>
                                                 </Link>
                                             )}
                                         </div>
@@ -963,7 +939,7 @@ export default function DashboardPage() {
                                                 height: "58px",
                                                 borderRadius: "50%",
                                                 backgroundColor: "#0f1013",
-                                                color: "#D29D2B",
+                                                color: "#b89058",
                                                 display: "flex",
                                                 alignItems: "center",
                                                 justifyContent: "center",
@@ -985,9 +961,9 @@ export default function DashboardPage() {
 
                                         {/* Metadata */}
                                         <div style={{ display: "flex", gap: "10px", fontSize: "12px", color: "#64748b", marginBottom: "14px", flexWrap: "wrap" }}>
-                                            {location && <span><i className="fal fa-map-marker-alt" style={{ marginRight: "4px" }}></i>{location}</span>}
-                                            {industry && <span><i className="fal fa-building" style={{ marginRight: "4px" }}></i>{industry}</span>}
-                                            <span><i className="fal fa-clock" style={{ marginRight: "4px" }}></i>{yearsExp}</span>
+                                            {location && <span><i className="fa-solid fa-location-dot" style={{ marginRight: "4px", color: "#b89058" }}></i>{location}</span>}
+                                            {industry && <span><i className="fa-solid fa-building" style={{ marginRight: "4px", color: "#b89058" }}></i>{industry}</span>}
+                                            <span><i className="fa-solid fa-clock" style={{ marginRight: "4px", color: "#b89058" }}></i>{yearsExp}</span>
                                         </div>
 
                                         {/* Bio Snippet */}
@@ -1029,7 +1005,7 @@ export default function DashboardPage() {
                                             )}
                                             {websiteUrl && (
                                                 <span style={{ fontSize: "12px", color: "#0f1013", fontWeight: "700" }}>
-                                                    <i className="fal fa-globe" style={{ marginRight: "4px" }}></i> Advisory Site
+                                                    <i className="fa-solid fa-globe" style={{ marginRight: "4px", color: "#b89058" }}></i> Advisory Site
                                                 </span>
                                             )}
                                         </div>
@@ -1052,7 +1028,7 @@ export default function DashboardPage() {
 
                                     {myArticles.length === 0 ? (
                                         <div style={{ backgroundColor: "#ffffff", padding: "40px", borderRadius: "14px", textAlign: "center", border: "1px solid #e5e3db" }}>
-                                            <div style={{ fontSize: "28px", color: "#64748b", marginBottom: "10px" }}><i className="fal fa-feather-alt"></i></div>
+                                            <div style={{ fontSize: "28px", color: "#64748b", marginBottom: "10px" }}><i className="fa-solid fa-feather"></i></div>
                                             <p style={{ margin: 0, color: "#64748b", fontSize: "15px" }}>
                                                 You haven't submitted any thought leadership articles yet. Use the writer studio on the right to publish your first executive article.
                                             </p>
@@ -1115,33 +1091,33 @@ export default function DashboardPage() {
 
                                     {articleSuccess && (
                                         <div style={{ backgroundColor: "#f0fdf4", color: "#15803d", padding: "12px 16px", borderRadius: "8px", fontSize: "13px", marginBottom: "18px", border: "1px solid #86efac" }}>
-                                            <i className="fal fa-check-circle" style={{ marginRight: "6px" }}></i> {articleSuccess}
+                                            <i className="fa-solid fa-circle-check" style={{ marginRight: "6px" }}></i> {articleSuccess}
                                         </div>
                                     )}
 
                                     <form onSubmit={handleSubmitArticle}>
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Article Title *
                                             </label>
                                             <input
                                                 type="text"
                                                 required
+                                                className="prominence_input"
                                                 value={articleTitle}
                                                 onChange={(e) => setArticleTitle(e.target.value)}
                                                 placeholder="e.g. The Strategic Transition from Operator to Board Advisor"
-                                                style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                             />
                                         </div>
 
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Strategic Category
                                             </label>
                                             <select
+                                                className="prominence_select"
                                                 value={articleCategory}
                                                 onChange={(e) => setArticleCategory(e.target.value)}
-                                                style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                             >
                                                 {ARTICLE_CATEGORIES.map(cat => (
                                                     <option key={cat} value={cat}>{cat}</option>
@@ -1150,8 +1126,8 @@ export default function DashboardPage() {
                                         </div>
 
                                         <div style={{ marginBottom: "20px" }}>
-                                            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px" }}>
-                                                <label style={{ fontSize: "13px", fontWeight: "700", color: "#0f1013" }}>
+                                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
+                                                <label className="prominence_label" style={{ marginBottom: 0 }}>
                                                     Article Content Body *
                                                 </label>
                                                 <span style={{ fontSize: "12px", color: "#64748b" }}>
@@ -1161,19 +1137,19 @@ export default function DashboardPage() {
                                             <textarea
                                                 rows={9}
                                                 required
+                                                className="prominence_textarea"
                                                 value={articleBody}
                                                 onChange={(e) => setArticleBody(e.target.value)}
                                                 placeholder="Write your article narrative here..."
-                                                style={{ width: "100%", padding: "12px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px", lineHeight: "1.6" }}
+                                                style={{ lineHeight: "1.6" }}
                                             />
                                         </div>
 
                                         <button
                                             type="submit"
                                             disabled={submittingArticle}
-                                            className="btn_style_one"
+                                            className="btn_style_one btn_block btn_md"
                                             style={{
-                                                width: "100%",
                                                 cursor: submittingArticle ? "not-allowed" : "pointer",
                                                 opacity: submittingArticle ? 0.7 : 1
                                             }}
@@ -1198,7 +1174,7 @@ export default function DashboardPage() {
 
                                     {myReviews.length === 0 ? (
                                         <div style={{ backgroundColor: "#ffffff", padding: "40px", borderRadius: "14px", textAlign: "center", border: "1px solid #e5e3db" }}>
-                                            <div style={{ fontSize: "28px", color: "#64748b", marginBottom: "10px" }}><i className="fal fa-star"></i></div>
+                                            <div style={{ fontSize: "28px", color: "#b89058", marginBottom: "10px" }}><i className="fa-solid fa-star"></i></div>
                                             <p style={{ margin: 0, color: "#64748b", fontSize: "15px" }}>
                                                 You haven't submitted a client review or advisory endorsement yet.
                                             </p>
@@ -1260,13 +1236,13 @@ export default function DashboardPage() {
 
                                     <form onSubmit={handleSubmitReview}>
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Star Rating
                                             </label>
                                             <select
+                                                className="prominence_select"
                                                 value={reviewRating}
                                                 onChange={(e) => setReviewRating(e.target.value)}
-                                                style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                             >
                                                 <option value={5}>5 Stars (Exceptional Service)</option>
                                                 <option value={4}>4 Stars (Great Impact)</option>
@@ -1275,25 +1251,25 @@ export default function DashboardPage() {
                                         </div>
 
                                         <div style={{ marginBottom: "20px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Endorsement Narrative *
                                             </label>
                                             <textarea
                                                 rows={5}
                                                 required
+                                                className="prominence_textarea"
                                                 value={reviewContent}
                                                 onChange={(e) => setReviewContent(e.target.value)}
                                                 placeholder="Share your operational experience partnering with Elite Prominence..."
-                                                style={{ width: "100%", padding: "12px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px", lineHeight: "1.6" }}
+                                                style={{ lineHeight: "1.6" }}
                                             />
                                         </div>
 
                                         <button
                                             type="submit"
                                             disabled={submittingReview}
-                                            className="btn_style_one"
+                                            className="btn_style_one btn_block btn_md"
                                             style={{
-                                                width: "100%",
                                                 cursor: submittingReview ? "not-allowed" : "pointer",
                                                 opacity: submittingReview ? 0.7 : 1
                                             }}
@@ -1320,55 +1296,55 @@ export default function DashboardPage() {
                                 </div>
 
                                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px", marginBottom: "36px" }}>
-                                    <div style={{ backgroundColor: "#ffffff", padding: "26px", borderRadius: "16px", border: "1px solid #e5e3db" }}>
-                                        <div style={{ fontSize: "24px", color: "#0f172a", marginBottom: "10px" }}><i className="fal fa-landmark"></i></div>
-                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px" }}>
+                                    <div className="prominence_depth_card" style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "16px", border: "1px solid #e5e3db", borderTop: "3px solid #b89058" }}>
+                                        <div style={{ width: "42px", height: "42px", borderRadius: "10px", background: "rgba(184, 144, 88, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#b89058", marginBottom: "16px" }}><i className="fa-solid fa-landmark"></i></div>
+                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             The 90-Day Executive Authority Blueprint
                                         </h4>
                                         <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 16px" }}>
                                             How senior leaders systematically build page-one Google search presence, executive bio syndication, and inbound board inquiries.
                                         </p>
-                                        <Link href="/blog/how-to-build-a-personal-brand-as-an-hr-leader" style={{ color: "#0f1013", fontWeight: "700", fontSize: "13px", textDecoration: "underline" }}>
-                                            Read Strategic Guide &rarr;
+                                        <Link href="/blog/how-to-build-a-personal-brand-as-an-hr-leader" style={{ color: "#b89058", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
+                                            Read Strategic Guide <i className="fa-solid fa-arrow-right" style={{ marginLeft: "4px" }}></i>
                                         </Link>
                                     </div>
 
-                                    <div style={{ backgroundColor: "#ffffff", padding: "26px", borderRadius: "16px", border: "1px solid #e5e3db" }}>
-                                        <div style={{ fontSize: "24px", color: "#0f172a", marginBottom: "10px" }}><i className="fal fa-briefcase"></i></div>
-                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px" }}>
+                                    <div className="prominence_depth_card" style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "16px", border: "1px solid #e5e3db", borderTop: "3px solid #b89058" }}>
+                                        <div style={{ width: "42px", height: "42px", borderRadius: "10px", background: "rgba(184, 144, 88, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#b89058", marginBottom: "16px" }}><i className="fa-solid fa-briefcase"></i></div>
+                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             LinkedIn Architecture for C-Suite Leaders
                                         </h4>
                                         <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 16px" }}>
                                             Specific headline formulas, featured asset curation, and engagement protocols that attract executive search recruiters.
                                         </p>
-                                        <Link href="/blog/linkedin-strategy-for-senior-hr-professionals" style={{ color: "#0f1013", fontWeight: "700", fontSize: "13px", textDecoration: "underline" }}>
-                                            Read Strategic Guide &rarr;
+                                        <Link href="/blog/linkedin-strategy-for-senior-hr-professionals" style={{ color: "#b89058", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
+                                            Read Strategic Guide <i className="fa-solid fa-arrow-right" style={{ marginLeft: "4px" }}></i>
                                         </Link>
                                     </div>
 
-                                    <div style={{ backgroundColor: "#ffffff", padding: "26px", borderRadius: "16px", border: "1px solid #e5e3db" }}>
-                                        <div style={{ fontSize: "24px", color: "#0f172a", marginBottom: "10px" }}><i className="fal fa-search"></i></div>
-                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px" }}>
+                                    <div className="prominence_depth_card" style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "16px", border: "1px solid #e5e3db", borderTop: "3px solid #b89058" }}>
+                                        <div style={{ width: "42px", height: "42px", borderRadius: "10px", background: "rgba(184, 144, 88, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#b89058", marginBottom: "16px" }}><i className="fa-solid fa-magnifying-glass"></i></div>
+                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             Google Knowledge Graph & Entity Authority
                                         </h4>
                                         <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 16px" }}>
                                             Structuring executive digital footprints so Google associates your name with your core operational and boardroom disciplines.
                                         </p>
-                                        <Link href="/blog/how-to-rank-on-google-as-an-independent-hr-consultant" style={{ color: "#0f1013", fontWeight: "700", fontSize: "13px", textDecoration: "underline" }}>
-                                            Read Strategic Guide &rarr;
+                                        <Link href="/blog/how-to-rank-on-google-as-an-independent-hr-consultant" style={{ color: "#b89058", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
+                                            Read Strategic Guide <i className="fa-solid fa-arrow-right" style={{ marginLeft: "4px" }}></i>
                                         </Link>
                                     </div>
 
-                                    <div style={{ backgroundColor: "#ffffff", padding: "26px", borderRadius: "16px", border: "1px solid #e5e3db" }}>
-                                        <div style={{ fontSize: "24px", color: "#0f172a", marginBottom: "10px" }}><i className="fal fa-chart-line"></i></div>
-                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px" }}>
+                                    <div className="prominence_depth_card" style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "16px", border: "1px solid #e5e3db", borderTop: "3px solid #b89058" }}>
+                                        <div style={{ width: "42px", height: "42px", borderRadius: "10px", background: "rgba(184, 144, 88, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#b89058", marginBottom: "16px" }}><i className="fa-solid fa-chart-line"></i></div>
+                                        <h4 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                             Executive Brand ROI & Board Placement
                                         </h4>
                                         <p style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6", margin: "0 0 16px" }}>
                                             Translating public thought leadership into non-executive director (NED) seats, speaking engagements, and advisory equity.
                                         </p>
-                                        <Link href="/blog/hr-leader-personal-brand-roi" style={{ color: "#0f1013", fontWeight: "700", fontSize: "13px", textDecoration: "underline" }}>
-                                            Read Strategic Guide &rarr;
+                                        <Link href="/blog/hr-leader-personal-brand-roi" style={{ color: "#b89058", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
+                                            Read Strategic Guide <i className="fa-solid fa-arrow-right" style={{ marginLeft: "4px" }}></i>
                                         </Link>
                                     </div>
                                 </div>
@@ -1399,15 +1375,9 @@ export default function DashboardPage() {
                                         href={getWhatsAppUrl("Hi, I am an active Elite Prominence member and would like to schedule a 1-on-1 executive brand review session.")}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="btn_style_two"
-                                        style={{
-                                            padding: "12px 24px",
-                                            display: "inline-flex",
-                                            alignItems: "center",
-                                            gap: "8px"
-                                        }}
+                                        className="btn_style_gold btn_md"
                                     >
-                                        <i className="fab fa-whatsapp" style={{ fontSize: "15px", color: "#b89058" }}></i> <span>WhatsApp Advisory Session</span>
+                                        <i className="fab fa-whatsapp" style={{ marginRight: "8px" }}></i>WhatsApp Advisory Session
                                     </a>
                                 </div>
                             </div>

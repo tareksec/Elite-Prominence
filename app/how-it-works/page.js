@@ -192,7 +192,7 @@ export default function HowItWorksPage() {
                                     gap: '8px',
                                     padding: '6px 16px',
                                     background: '#f1f5f9',
-                                    borderRadius: '30px',
+                                    borderRadius: '6px',
                                     fontSize: '12px',
                                     fontWeight: '700',
                                     color: '#0f1013',
@@ -211,7 +211,7 @@ export default function HowItWorksPage() {
                                 lineHeight: '1.2',
                                 letterSpacing: '-0.5px',
                                 marginBottom: '20px',
-                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                             }}>
                                 The Sovereign Stature Architecture Protocol
                             </h1>
@@ -219,10 +219,10 @@ export default function HowItWorksPage() {
                                 Establishing a commanding executive presence demands strategic rigor, journalistic precision, and absolute discretion. Our 6-stage protocol delivers turnkey execution requiring under 30 minutes of executive time each month.
                             </p>
                             <div style={{ marginTop: '32px', display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <Link href="/contact" className="btn_style_one">
+                                <Link href="/contact" className="btn_style_one btn_md">
                                     Schedule a Confidential Briefing <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
-                                <Link href="/case-studies" className="btn_style_two">
+                                <Link href="/case-studies" className="btn_style_two btn_md">
                                     Review Case Studies
                                 </Link>
                             </div>
@@ -230,116 +230,178 @@ export default function HowItWorksPage() {
                     </div>
                 </section>
 
-                {/* 6 Stages Deep Dive */}
+                {/* 6 Stages Deep Dive — Alternating Card vs Editorial Layout */}
                 <section className="pt_100 pb_90" style={{ background: '#fafbfc', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-                            {stages.map((stage) => (
-                                <div key={stage.number} className="prominence_card" style={{ padding: '42px 46px' }}>
-                                    <div className="row align-items-start">
-                                        <div className="col-lg-4 mb_30 mb-lg-0">
-                                            <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '12px' }}>
-                                                <span className="prominence_step_num" style={{ color: '#0f1013' }}>
-                                                    {stage.number}
-                                                </span>
-                                                <span style={{ fontSize: '11px', fontWeight: '700', color: '#b89058', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                                                    Stage {stage.number} of 06
-                                                </span>
-                                            </div>
-                                            <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#0f1013', marginBottom: '8px' }}>
-                                                {stage.name}
-                                            </h2>
-                                            <p style={{ fontSize: '14.5px', fontWeight: '600', color: '#59606a', marginBottom: '22px' }}>
-                                                {stage.tagline}
-                                            </p>
-                                            
-                                            <div style={{ background: '#f8fafc', borderRadius: '10px', padding: '16px 20px', border: '1px solid #eaedf0' }}>
-                                                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '13px' }}>
-                                                    <span style={{ color: '#64748b' }}>Execution Horizon:</span>
-                                                    <strong style={{ color: '#0f1013' }}>{stage.duration}</strong>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
+                            {stages.map((stage, idx) => {
+                                const isCard = idx % 2 === 0; // Alternates: 01, 03, 05 are cards; 02, 04, 06 are deliberate non-card editorial rows
+                                
+                                if (isCard) {
+                                    return (
+                                        <div key={stage.number} className="prominence_card prominence_depth_card" style={{ padding: '44px 48px', borderTop: '3px solid #b89058' }}>
+                                            <div className="row align-items-start">
+                                                <div className="col-lg-4 mb_30 mb-lg-0">
+                                                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '12px' }}>
+                                                        <span className="prominence_step_num" style={{ color: '#0f1013' }}>
+                                                            {stage.number}
+                                                        </span>
+                                                        <span style={{ fontSize: '11px', fontWeight: '700', color: '#b89058', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                                                            Stage {stage.number} of 06 · Flagship Protocol
+                                                        </span>
+                                                    </div>
+                                                    <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#0f1013', marginBottom: '8px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                                        {stage.name}
+                                                    </h2>
+                                                    <p style={{ fontSize: '14.5px', fontWeight: '600', color: '#b89058', marginBottom: '22px' }}>
+                                                        {stage.tagline}
+                                                    </p>
+                                                    
+                                                    <div className="prominence_meta_grid">
+                                                        <div className="prominence_meta_item">
+                                                            <span className="prominence_meta_label">Execution Horizon</span>
+                                                            <span className="prominence_meta_value">{stage.duration}</span>
+                                                        </div>
+                                                        <div className="prominence_meta_item">
+                                                            <span className="prominence_meta_label">Client Commitment</span>
+                                                            <span className="prominence_meta_value" style={{ color: '#b89058' }}>{stage.clientTime}</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px' }}>
-                                                    <span style={{ color: '#64748b' }}>Client Time:</span>
-                                                    <strong style={{ color: '#b89058' }}>{stage.clientTime}</strong>
+
+                                                <div className="col-lg-8">
+                                                    <div style={{ paddingLeft: '20px' }}>
+                                                        <p style={{ fontSize: '15.5px', color: '#475569', lineHeight: '1.75', marginBottom: '24px' }}>
+                                                            {stage.overview}
+                                                        </p>
+
+                                                        <h3 style={{ fontSize: '11.5px', fontWeight: '700', color: '#0f1013', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>
+                                                            Tangible Protocol Deliverables
+                                                        </h3>
+
+                                                        <div className="row">
+                                                            {stage.deliverables.map((del, i) => (
+                                                                <div key={i} className="col-md-6 mb_16">
+                                                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                                                                        <span style={{ color: '#b89058', fontSize: '12px', marginTop: '4px' }}>
+                                                                            <i className="fa-solid fa-check"></i>
+                                                                        </span>
+                                                                        <span style={{ fontSize: '13.5px', color: '#475569', lineHeight: '1.6' }}>{del}</span>
+                                                                    </div>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    )
+                                }
 
-                                        <div className="col-lg-8">
-                                            <div style={{ paddingLeft: '20px' }}>
-                                                <p style={{ fontSize: '15.5px', color: '#475569', lineHeight: '1.75', marginBottom: '24px' }}>
-                                                    {stage.overview}
+                                // Deliberate Non-Card Editorial Layout
+                                return (
+                                    <div key={stage.number} style={{ 
+                                        padding: '40px 24px', 
+                                        borderTop: '1px solid #e2e8f0', 
+                                        borderBottom: '1px solid #e2e8f0',
+                                        background: 'transparent'
+                                    }}>
+                                        <div className="row align-items-start">
+                                            <div className="col-lg-4 mb_30 mb-lg-0">
+                                                <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '12px' }}>
+                                                    <span style={{ fontSize: '38px', fontWeight: '800', color: '#cbd5e1', lineHeight: '1', fontFamily: 'var(--primary-font)' }}>
+                                                        {stage.number}
+                                                    </span>
+                                                    <span style={{ fontSize: '11px', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                                                        Stage {stage.number} of 06 · Editorial Briefing
+                                                    </span>
+                                                </div>
+                                                <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#0f1013', marginBottom: '8px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                                    {stage.name}
+                                                </h2>
+                                                <p style={{ fontSize: '14.5px', fontWeight: '600', color: '#475569', marginBottom: '22px' }}>
+                                                    {stage.tagline}
                                                 </p>
+                                                
+                                                <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                                                    <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '8px 14px', fontSize: '12.5px' }}>
+                                                        <span style={{ color: '#64748b', marginRight: '6px' }}>Horizon:</span>
+                                                        <strong style={{ color: '#0f1013' }}>{stage.duration}</strong>
+                                                    </div>
+                                                    <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '8px 14px', fontSize: '12.5px' }}>
+                                                        <span style={{ color: '#64748b', marginRight: '6px' }}>Client:</span>
+                                                        <strong style={{ color: '#b89058' }}>{stage.clientTime}</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                                <h3 style={{ fontSize: '12px', fontWeight: '700', color: '#0f1013', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>
-                                                    Tangible Stage Deliverables
-                                                </h3>
+                                            <div className="col-lg-8">
+                                                <div style={{ paddingLeft: '20px' }}>
+                                                    <p style={{ fontSize: '15.5px', color: '#475569', lineHeight: '1.75', marginBottom: '24px' }}>
+                                                        {stage.overview}
+                                                    </p>
 
-                                                <div className="row">
-                                                    {stage.deliverables.map((del, i) => (
-                                                        <div key={i} className="col-md-6 mb_16">
-                                                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                                                                <span style={{ color: '#b89058', fontSize: '12px', marginTop: '4px' }}>
-                                                                    <i className="fa-solid fa-check"></i>
-                                                                </span>
-                                                                <span style={{ fontSize: '13.5px', color: '#475569', lineHeight: '1.6' }}>{del}</span>
+                                                    <h3 style={{ fontSize: '11.5px', fontWeight: '700', color: '#0f1013', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>
+                                                        Tangible Protocol Deliverables
+                                                    </h3>
+
+                                                    <div className="row">
+                                                        {stage.deliverables.map((del, i) => (
+                                                            <div key={i} className="col-md-6 mb_16">
+                                                                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                                                                    <span style={{ color: '#b89058', fontSize: '12px', marginTop: '4px' }}>
+                                                                        <i className="fa-solid fa-circle-check"></i>
+                                                                    </span>
+                                                                    <span style={{ fontSize: '13.5px', color: '#475569', lineHeight: '1.6' }}>{del}</span>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    ))}
+                                                        ))}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </section>
 
                 {/* Confidentiality, PR & Legal Governance */}
-                <section className="pt_100 pb_90" style={{ background: '#0f1013', color: '#ffffff', fontFamily: 'var(--primary-font)' }}>
+                <section className="prominence_section" style={{ background: '#0f1013', color: '#ffffff', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: '780px', margin: '0 auto 60px' }}>
-                            <div className="tag_text" style={{ marginBottom: '12px' }}>
-                                <h6 style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: '8px',
-                                    padding: '6px 16px',
-                                    background: 'rgba(255, 255, 255, 0.08)',
-                                    borderRadius: '30px',
-                                    fontSize: '12px',
+                        <div className="prominence_header_split">
+                            <div>
+                                <div style={{ marginBottom: '12px' }}>
+                                    <span className="prominence_badge" style={{ background: 'rgba(255, 255, 255, 0.08)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
+                                        Institutional Trust
+                                    </span>
+                                </div>
+                                <h2 style={{
+                                    fontSize: 'clamp(26px, 3.6vw, 36px)',
                                     fontWeight: '700',
                                     color: '#ffffff',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.8px',
-                                    border: '1px solid rgba(255, 255, 255, 0.15)'
+                                    letterSpacing: '-0.5px',
+                                    margin: 0,
+                                    fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                                 }}>
-                                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#b89058' }}></span>
-                                    Institutional Trust
-                                </h6>
+                                    Enterprise Confidentiality &amp; PR Governance
+                                </h2>
                             </div>
-                            <h2 style={{
-                                fontSize: 'clamp(26px, 4vw, 36px)',
-                                fontWeight: '700',
-                                color: '#ffffff',
-                                letterSpacing: '-0.5px',
-                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
-                            }}>
-                                Enterprise Confidentiality &amp; PR Governance
-                            </h2>
-                            <p style={{ color: '#94a3b8', fontSize: '16px', marginTop: '12px', lineHeight: '1.7' }}>
-                                We work with executives managing sensitive public company disclosures, imminent transactions, and complex governance environments. Our security standards are non-negotiable.
-                            </p>
+                            <div>
+                                <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: '27px', maxWidth: '520px', margin: 0 }}>
+                                    We work with executives managing sensitive public company disclosures, imminent transactions, and complex governance environments. Our security standards are non-negotiable.
+                                </p>
+                            </div>
                         </div>
 
                         <div className="row g-4">
                             <div className="col-lg-4 col-md-6">
-                                <div className="prominence_card_dark" style={{ padding: '36px 30px', height: '100%' }}>
+                                <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: '36px 30px', height: '100%', borderTop: '3px solid #b89058' }}>
                                     <div style={{ fontSize: '22px', color: '#b89058', marginBottom: '18px' }}>
                                         <i className="fa-solid fa-file-shield"></i>
                                     </div>
-                                    <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff', marginBottom: '12px' }}>
+                                    <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff', marginBottom: '12px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                         Strict Non-Disclosure
                                     </h3>
                                     <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.7', margin: 0 }}>
@@ -349,11 +411,11 @@ export default function HowItWorksPage() {
                             </div>
 
                             <div className="col-lg-4 col-md-6">
-                                <div className="prominence_card_dark" style={{ padding: '36px 30px', height: '100%' }}>
+                                <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: '36px 30px', height: '100%', borderTop: '3px solid #b89058' }}>
                                     <div style={{ fontSize: '22px', color: '#b89058', marginBottom: '18px' }}>
                                         <i className="fa-solid fa-scale-balanced"></i>
                                     </div>
-                                    <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff', marginBottom: '12px' }}>
+                                    <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff', marginBottom: '12px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                         Corporate PR Alignment
                                     </h3>
                                     <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.7', margin: 0 }}>
@@ -363,11 +425,11 @@ export default function HowItWorksPage() {
                             </div>
 
                             <div className="col-lg-4 col-md-6">
-                                <div className="prominence_card_dark" style={{ padding: '36px 30px', height: '100%' }}>
+                                <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: '36px 30px', height: '100%', borderTop: '3px solid #b89058' }}>
                                     <div style={{ fontSize: '22px', color: '#b89058', marginBottom: '18px' }}>
                                         <i className="fa-solid fa-certificate"></i>
                                     </div>
-                                    <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff', marginBottom: '12px' }}>
+                                    <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff', marginBottom: '12px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                         Sovereign Ownership
                                     </h3>
                                     <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.7', margin: 0 }}>
@@ -380,27 +442,13 @@ export default function HowItWorksPage() {
                 </section>
 
                 {/* Final Consultation CTA */}
-                <section className="pt_100 pb_100" style={{ background: '#ffffff', borderTop: '1px solid #eaedf0', textAlign: 'center', fontFamily: 'var(--primary-font)' }}>
+                <section className="prominence_section" style={{ background: '#ffffff', borderTop: '1px solid #eaedf0', textAlign: 'center', fontFamily: 'var(--primary-font)' }}>
                     <div className="container">
                         <div style={{ maxWidth: '760px', margin: '0 auto' }}>
                             <div className="tag_text" style={{ marginBottom: '14px' }}>
-                                <h6 style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: '8px',
-                                    padding: '6px 16px',
-                                    background: '#f1f5f9',
-                                    borderRadius: '30px',
-                                    fontSize: '12px',
-                                    fontWeight: '700',
-                                    color: '#0f1013',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.8px',
-                                    border: '1px solid #e2e8f0'
-                                }}>
-                                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#b89058' }}></span>
+                                <span className="prominence_badge">
                                     Initiate Engagement
-                                </h6>
+                                </span>
                             </div>
                             <h2 style={{
                                 fontSize: 'clamp(26px, 4.5vw, 38px)',
@@ -408,7 +456,7 @@ export default function HowItWorksPage() {
                                 color: '#0f1013',
                                 letterSpacing: '-0.5px',
                                 marginBottom: '16px',
-                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                             }}>
                                 Put the Prominence Protocol to Work for Your Career
                             </h2>
@@ -416,10 +464,10 @@ export default function HowItWorksPage() {
                                 Connect directly with our managing partners for a 30-minute private consultation. We will analyze your public search posture and explain how Stage 01 will proceed.
                             </p>
                             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <Link href="/contact" className="btn_style_one">
+                                <Link href="/contact" className="btn_style_one btn_md">
                                     Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
-                                <Link href="/pricing" className="btn_style_two">
+                                <Link href="/pricing" className="btn_style_two btn_md">
                                     View Engagement Tiers
                                 </Link>
                             </div>

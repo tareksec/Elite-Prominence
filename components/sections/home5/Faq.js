@@ -5,7 +5,7 @@ import FaqAccordion from "@/components/elements/FaqAccordion"
 
 export default function Faq() {
     return (
-        <section className="faq_section home_four pt_120 pb_120" style={{ backgroundColor: "#ffffff", borderTop: "1px solid #eaedf0" }}>
+        <section className="faq_section home_four prominence_section" style={{ backgroundColor: "#ffffff", borderTop: "1px solid #eaedf0" }}>
             <div className="container">
                 <div className="row align-items-start">
                     {/* Left Sticky Consultation Card */}
@@ -45,18 +45,18 @@ export default function Faq() {
                                         Executive Consultation
                                     </span>
                                 </div>
-                                <h3 style={{ color: "#fff", fontSize: "24px", fontWeight: "700", marginBottom: "12px", lineHeight: "1.3", fontFamily: "var(--primary-font)" }}>
+                                <h3 style={{ color: "#fff", fontSize: "24px", fontWeight: "700", marginBottom: "12px", lineHeight: "1.3", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                     Have a Specific Question About Your Digital Stature?
                                 </h3>
                                 <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "14.5px", lineHeight: "1.6", marginBottom: "24px" }}>
                                     Every leader's career trajectory and disclosure constraints are distinct. We conduct confidential 20-minute digital stature assessments to audit your current search standing.
                                 </p>
                                 <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center" }}>
-                                    <Link href="/contact" className="btn_style_gold">
-                                        Book Strategy Call
+                                    <Link href="/contact" className="btn_style_gold btn_md">
+                                        Book Strategy Call <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
-                                    <Link href="/pricing" className="btn_style_two_dark">
-                                        <span>View Pricing</span>
+                                    <Link href="/pricing" className="btn_style_two_dark btn_md">
+                                        View Pricing
                                     </Link>
                                 </div>
                             </div>
@@ -66,13 +66,9 @@ export default function Faq() {
                     {/* Right Expanded FAQ Accordion */}
                     <div className="col-xl-7 col-lg-7 col-md-12">
                         <div className="inner_box ps-lg-4" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
-                            <div className="section_title" style={{ marginBottom: "30px" }}>
-                                <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "12px" }}>
-                                    <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.2px", color: "#b89058", fontFamily: "var(--primary-font)" }}>
-                                        Strategic FAQ &amp; Guidance
-                                    </span>
-                                </div>
-                                <h2 style={{ fontSize: "34px", fontFamily: "var(--primary-font)", fontWeight: "700", color: "#0f1013", letterSpacing: "-0.5px" }}>
+                            <div style={{ marginBottom: "28px" }}>
+                                <span className="prominence_tracker">Strategic FAQ &amp; Guidance</span>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
                                     Frequently Addressed Governance Matters
                                 </h2>
                             </div>

@@ -73,21 +73,10 @@ export default function LoginPage() {
                             fontFamily: "var(--primary-font)"
                         }}>
                             <div style={{ textAlign: "center", marginBottom: "30px" }}>
-                                <span style={{
-                                    display: "inline-block",
-                                    fontSize: "13px",
-                                    fontWeight: "700",
-                                    letterSpacing: "1.5px",
-                                    textTransform: "uppercase",
-                                    color: "#0f1013",
-                                    backgroundColor: "rgba(15, 16, 19, 0.08)",
-                                    padding: "4px 14px",
-                                    borderRadius: "20px",
-                                    marginBottom: "12px"
-                                }}>
+                                <span className="prominence_badge prominence_badge_dark" style={{ marginBottom: "12px" }}>
                                     Member Access
                                 </span>
-                                <h2 style={{ fontSize: "clamp(24px, 5vw, 32px)", fontWeight: "700", color: "#0f1013", margin: 0 }}>
+                                <h2 style={{ fontSize: "clamp(24px, 5vw, 32px)", fontWeight: "700", color: "#0f1013", margin: 0, fontFamily: "var(--title-font)" }}>
                                     Welcome Back
                                 </h2>
                                 <p style={{ fontSize: "15px", color: "#59606a", marginTop: "8px", fontStyle: "italic" }}>
@@ -111,7 +100,7 @@ export default function LoginPage() {
 
                             <form onSubmit={handleLogin}>
                                 <div style={{ marginBottom: "20px" }}>
-                                    <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
+                                    <label className="prominence_label">
                                         Email Address *
                                     </label>
                                     <input
@@ -120,21 +109,12 @@ export default function LoginPage() {
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         placeholder="your@email.com"
-                                        style={{
-                                            width: "100%",
-                                            height: "48px",
-                                            border: "1.5px solid #dcdad3",
-                                            borderRadius: "8px",
-                                            padding: "0 16px",
-                                            fontSize: "16px",
-                                            fontFamily: "var(--primary-font)",
-                                            outline: "none"
-                                        }}
+                                        className="prominence_input"
                                     />
                                 </div>
 
                                 <div style={{ marginBottom: "26px" }}>
-                                    <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
+                                    <label className="prominence_label">
                                         Password *
                                     </label>
                                     <input
@@ -143,26 +123,15 @@ export default function LoginPage() {
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
                                         placeholder="Enter your password"
-                                        style={{
-                                            width: "100%",
-                                            height: "48px",
-                                            border: "1.5px solid #dcdad3",
-                                            borderRadius: "8px",
-                                            padding: "0 16px",
-                                            fontSize: "16px",
-                                            fontFamily: "var(--primary-font)",
-                                            outline: "none"
-                                        }}
+                                        className="prominence_input"
                                     />
                                 </div>
 
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="btn_style_one"
+                                    className="btn_style_one btn_block btn_lg"
                                     style={{
-                                        width: "100%",
-                                        minHeight: "48px",
                                         cursor: loading ? "not-allowed" : "pointer",
                                         opacity: loading ? 0.7 : 1,
                                     }}

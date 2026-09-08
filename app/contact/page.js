@@ -59,7 +59,7 @@ export default function Contact_Page() {
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Confidential Consultation">
                 
                 {/* Executive Consultation & Direct Intake Section */}
-                <section className="pt_120 pb_120" style={{ background: "#f8fafc" }}>
+                <section className="pt_120 pb_120" style={{ background: "#FAF8F2" }}>
                     <div className="container">
                         <div className="row align-items-start">
                             
@@ -77,7 +77,7 @@ export default function Contact_Page() {
                                         fontSize: "38px",
                                         fontWeight: "700",
                                         color: "#0f1013",
-                                        fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                        fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                         lineHeight: "1.22",
                                         letterSpacing: "-0.6px",
                                         marginBottom: "18px"

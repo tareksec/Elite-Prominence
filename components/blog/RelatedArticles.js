@@ -41,7 +41,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
           </span>
           <h2
             style={{
-              fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+              fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
               fontSize: '28px',
               color: '#0f1013',
               margin: '4px 0 0 0'
@@ -173,7 +173,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
         }
 
         .ep-card-title {
-          font-family: var(--ep-font-serif, 'PT Serif', serif);
+          font-family: var(--title-font, 'PT Serif', Georgia, serif);
           font-size: 18px;
           line-height: 1.35;
           color: #0f1013;

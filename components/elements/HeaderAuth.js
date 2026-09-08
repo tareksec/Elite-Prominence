@@ -137,40 +137,16 @@ export default function HeaderAuth({ isDark = false, isMobile = false, onMobileN
                 <Link
                     href="/login"
                     onClick={handleClick}
-                    style={{
-                        padding: "10px 18px",
-                        borderRadius: "8px",
-                        backgroundColor: "#f1f5f9",
-                        color: "#0f1013",
-                        fontSize: "14px",
-                        fontWeight: "700",
-                        textDecoration: "none",
-                        minHeight: "44px",
-                        display: "inline-flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        border: "1px solid #e2e8f0"
-                    }}
+                    className="btn_style_two btn_sm"
+                    style={{ flex: 1, minHeight: "44px" }}
                 >
                     Log In
                 </Link>
                 <Link
                     href="/signup"
                     onClick={handleClick}
-                    style={{
-                        padding: "10px 18px",
-                        borderRadius: "8px",
-                        backgroundColor: "#0f1013",
-                        color: "#ffffff",
-                        border: "1px solid #0f1013",
-                        fontSize: "14px",
-                        fontWeight: "700",
-                        textDecoration: "none",
-                        minHeight: "44px",
-                        display: "inline-flex",
-                        alignItems: "center",
-                        justifyContent: "center"
-                    }}
+                    className="btn_style_one btn_sm"
+                    style={{ flex: 1, minHeight: "44px" }}
                 >
                     Sign Up
                 </Link>

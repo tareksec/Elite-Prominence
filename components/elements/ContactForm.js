@@ -124,10 +124,9 @@ export default function ContactForm() {
                         href={getWhatsAppUrl("Hello, I have submitted an executive inquiry on Prominence.agency and would like to confirm receipt.")}
                         target="_blank"
                         rel="nofollow noopener noreferrer"
-                        className="btn_style_two"
-                        style={{ padding: "10px 20px", fontSize: "13px" }}
+                        className="btn_style_two btn_md"
                     >
-                        <i className="fa-brands fa-whatsapp" style={{ color: "#0f1013" }}></i>
+                        <i className="fa-brands fa-whatsapp" style={{ color: "#25D366", marginRight: "6px" }}></i>
                         <span>Confirm via WhatsApp Concierge</span>
                     </a>
                 </div>
@@ -155,7 +154,7 @@ export default function ContactForm() {
 
                     <div className="row">
                         <div className="col-md-6 col-sm-12 mb_20">
-                            <label style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#475569", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                            <label className="prominence_label">
                                 Full Name *
                             </label>
                             <input 
@@ -165,11 +164,11 @@ export default function ContactForm() {
                                 placeholder="e.g. Marcus Sterling"
                                 value={formData.name}
                                 onChange={(e) => setFormData({...formData, name: e.target.value})}
-                                style={{ width: "100%", height: "48px", padding: "0 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14.5px" }}
+                                className="prominence_input"
                             />
                         </div>
                         <div className="col-md-6 col-sm-12 mb_20">
-                            <label style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#475569", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                            <label className="prominence_label">
                                 Direct Email Address *
                             </label>
                             <input 
@@ -179,11 +178,11 @@ export default function ContactForm() {
                                 placeholder="m.sterling@enterprise.com"
                                 value={formData.email}
                                 onChange={(e) => setFormData({...formData, email: e.target.value})}
-                                style={{ width: "100%", height: "48px", padding: "0 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14.5px" }}
+                                className="prominence_input"
                             />
                         </div>
                         <div className="col-md-6 col-sm-12 mb_20">
-                            <label style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#475569", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                            <label className="prominence_label">
                                 Executive Title / Role *
                             </label>
                             <input 
@@ -193,11 +192,11 @@ export default function ContactForm() {
                                 placeholder="e.g. Chief Human Resources Officer"
                                 value={formData.role}
                                 onChange={(e) => setFormData({...formData, role: e.target.value})}
-                                style={{ width: "100%", height: "48px", padding: "0 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14.5px" }}
+                                className="prominence_input"
                             />
                         </div>
                         <div className="col-md-6 col-sm-12 mb_20">
-                            <label style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#475569", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                            <label className="prominence_label">
                                 Company / Enterprise Name
                             </label>
                             <input 
@@ -206,11 +205,11 @@ export default function ContactForm() {
                                 placeholder="e.g. Global Tech Enterprise ($2B+)"
                                 value={formData.company}
                                 onChange={(e) => setFormData({...formData, company: e.target.value})}
-                                style={{ width: "100%", height: "48px", padding: "0 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14.5px" }}
+                                className="prominence_input"
                             />
                         </div>
                         <div className="col-12 mb_20">
-                            <label style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#475569", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                            <label className="prominence_label">
                                 LinkedIn Profile URL
                             </label>
                             <input 
@@ -219,11 +218,11 @@ export default function ContactForm() {
                                 placeholder="https://www.linkedin.com/in/yourprofile"
                                 value={formData.linkedin}
                                 onChange={(e) => setFormData({...formData, linkedin: e.target.value})}
-                                style={{ width: "100%", height: "48px", padding: "0 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14.5px" }}
+                                className="prominence_input"
                             />
                         </div>
                         <div className="col-12 mb_24">
-                            <label style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", color: "#475569", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                            <label className="prominence_label">
                                 Primary Strategic Focus (Board directorships, capital raises, Google SEO, thought leadership)
                             </label>
                             <textarea 
@@ -232,7 +231,8 @@ export default function ContactForm() {
                                 placeholder="Briefly articulate your current presence deficit or positioning timeline..."
                                 value={formData.goals}
                                 onChange={(e) => setFormData({...formData, goals: e.target.value})}
-                                style={{ width: "100%", padding: "14px 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14.5px", resize: "none" }}
+                                className="prominence_textarea"
+                                style={{ resize: "none" }}
                             ></textarea>
                         </div>
                         <div className="col-12">

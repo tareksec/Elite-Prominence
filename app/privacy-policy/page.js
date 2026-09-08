@@ -111,7 +111,7 @@ export default function PrivacyPolicyPage() {
                                     </li>
                                 </ul>
                                 <p style={{ fontWeight: "600", color: "#0f172a", marginTop: "12px" }}>
-                                    <i className="fal fa-check-circle" style={{ marginRight: "6px" }}></i> We do not sell your personal information to third parties.
+                                    <i className="fa-solid fa-circle-check" style={{ marginRight: "6px", color: "#b89058" }}></i> We do not sell your personal information to third parties.
                                 </p>
 
                                 <h2 style={{ fontSize: "20px", color: "#0f1013", fontFamily: "var(--primary-font)", fontWeight: "700", marginTop: "32px", marginBottom: "12px" }}>

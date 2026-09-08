@@ -66,7 +66,10 @@ export default function ResourcesOverviewPage() {
             description: 'A comprehensive specification of what a Fortune 500 CEO or board director website requires: domain sovereignty, JSON-LD schema, board dossier presentation, and strict data security.',
             href: '/services/executive-digital-hq',
             ctaText: 'Explore Blueprint',
-            featured: false
+            featured: false,
+            icon: 'fa-solid fa-file-shield',
+            format: '12-Point Architecture Spec',
+            scope: 'Owned Digital HQ'
         },
         {
             badge: 'Search Guide',
@@ -75,7 +78,10 @@ export default function ResourcesOverviewPage() {
             description: 'Understand how Google indexes executive names, how Knowledge Graph entity reconciliation works, and how to permanently control your first 10 search results.',
             href: '/services/digital-reputation',
             ctaText: 'View Guide',
-            featured: false
+            featured: false,
+            icon: 'fa-solid fa-magnifying-glass-chart',
+            format: 'Algorithm Reconciliation Rubric',
+            scope: 'Page 1 & Entity Graph'
         },
         {
             badge: 'Editorial Rubric',
@@ -84,7 +90,10 @@ export default function ResourcesOverviewPage() {
             description: 'How to rewrite your LinkedIn headline, summary thesis, and experience section to signal enterprise governance and attract board directorship inquiries.',
             href: '/services/linkedin-authority',
             ctaText: 'Review Rubric',
-            featured: false
+            featured: false,
+            icon: 'fa-solid fa-id-card-clip',
+            format: 'Boardroom Governance Framework',
+            scope: 'C-Suite Narrative'
         }
     ]
 
@@ -99,21 +108,24 @@ export default function ResourcesOverviewPage() {
                 {/* Hero Header */}
                 <section className="prominence_page_intro">
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: '860px', margin: '0 auto' }}>
-                            <div className="tag_text">
-                                <h6>Executive Toolkits & Diagnostic Frameworks</h6>
+                        <div className="prominence_header_centered">
+                            <div style={{ marginBottom: '12px' }}>
+                                <span className="prominence_tracker">
+                                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#b89058' }}></span>
+                                    Executive Toolkits &amp; Diagnostic Frameworks
+                                </span>
                             </div>
                             <h1 style={{
-                                fontSize: 'clamp(28px, 5vw, 42px)',
-                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                fontSize: 'clamp(28px, 4.5vw, 42px)',
+                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                 fontWeight: '700',
                                 color: '#0f1013',
-                                lineHeight: '1.25',
-                                marginBottom: '20px'
+                                lineHeight: '1.24',
+                                marginBottom: '16px'
                             }}>
                                 Frameworks for Evaluating Executive Stature
                             </h1>
-                            <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.7', margin: '0 auto' }}>
+                            <p className="prominence_lead_text" style={{ margin: '0 auto' }}>
                                 Diagnostic tools, architectural checklists, and editorial standards developed by Prominence to help enterprise leaders benchmark their digital footprint and eliminate their authority gap.
                             </p>
                         </div>
@@ -121,26 +133,26 @@ export default function ResourcesOverviewPage() {
                 </section>
 
                 {/* Flagship Assessment Feature Banner */}
-                <section className="pt_80 pb_60" style={{ background: '#f8fafc' }}>
+                <section className="prominence_section_compact" style={{ background: '#FAF8F2' }}>
                     <div className="container">
-                        <div className="prominence_card_dark" style={{ padding: 'clamp(32px, 5vw, 52px)' }}>
+                        <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: 'clamp(32px, 5vw, 52px)', borderTop: '3px solid #b89058' }}>
                             <div className="row align-items-center">
                                 <div className="col-lg-8">
                                     <div style={{ marginBottom: '16px' }}>
-                                        <span className="prominence_badge" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }}>
+                                        <span className="prominence_badge prominence_badge_white">
                                             Featured Diagnostic Tool
                                         </span>
                                     </div>
                                     <h2 style={{
-                                        fontSize: 'clamp(24px, 4vw, 34px)',
-                                        fontFamily: "var(--ep-font-serif, 'PT Serif', serif)",
+                                        fontSize: 'clamp(24px, 3.5vw, 32px)',
+                                        fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
                                         fontWeight: '700',
                                         color: '#fff',
                                         marginBottom: '16px'
                                     }}>
                                         The Executive Digital Presence Assessment
                                     </h2>
-                                    <p style={{ fontSize: '16px', color: '#94a3b8', lineHeight: '1.7', marginBottom: '24px', maxWidth: '680px' }}>
+                                    <p style={{ fontSize: '16px', color: '#94a3b8', lineHeight: '1.7', marginBottom: '24px', maxWidth: '640px' }}>
                                         Assess your digital standing across Google visibility, personal website ownership, LinkedIn authority, and third-party validation in 3 minutes. Zero fluff, completely transparent scoring rubric.
                                     </p>
                                     <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginBottom: '32px' }}>
@@ -154,7 +166,7 @@ export default function ResourcesOverviewPage() {
                                             <i className="fa-solid fa-circle-check" style={{ color: '#b89058' }}></i> Tailored Advisory Recommendations
                                         </div>
                                     </div>
-                                    <Link href="/resources/assessment" className="btn_style_gold">
+                                    <Link href="/resources/assessment" className="btn_style_gold btn_md">
                                         Start Assessment Now <i className="fa-solid fa-arrow-right"></i>
                                     </Link>
                                 </div>
@@ -166,7 +178,7 @@ export default function ResourcesOverviewPage() {
                                         padding: '32px', 
                                         display: 'inline-block' 
                                     }}>
-                                        <div style={{ fontSize: '52px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#fff', lineHeight: '1' }}>
+                                        <div style={{ fontSize: '48px', fontFamily: 'var(--title-font, "PT Serif", Georgia, serif)', fontWeight: '700', color: '#fff', lineHeight: '1' }}>
                                             3 Min
                                         </div>
                                         <div style={{ fontSize: '13px', color: '#94a3b8', marginTop: '10px', fontWeight: '600', letterSpacing: '0.5px' }}>
@@ -180,41 +192,71 @@ export default function ResourcesOverviewPage() {
                 </section>
 
                 {/* Additional Guides & Checklists */}
-                <section className="pt_40 pb_90" style={{ background: '#f8fafc' }}>
+                <section className="prominence_section" style={{ background: '#FAF8F2', borderTop: '1px solid #eaedf0' }}>
                     <div className="container">
-                        <div className="section_title" style={{ marginBottom: '36px' }}>
-                            <div className="tag_text">
-                                <h6>Operational Frameworks</h6>
+                        <div className="prominence_header_left">
+                            <div style={{ marginBottom: '10px' }}>
+                                <span className="prominence_tracker">
+                                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#b89058' }}></span>
+                                    Operational Frameworks
+                                </span>
                             </div>
-                            <h2 style={{ fontSize: '28px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013' }}>
-                                Strategic Toolkits & Blueprints
+                            <h2 style={{ fontSize: '28px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0f1013' }}>
+                                Strategic Toolkits &amp; Blueprints
                             </h2>
                         </div>
 
                         <div className="row">
                             {resources.filter(r => !r.featured).map((res, idx) => (
                                 <div key={idx} className="col-lg-4 col-md-6 mb_30">
-                                    <div className="prominence_card prominence_card_equal_height" style={{ 
-                                        padding: '32px', 
-                                        height: '100%'
+                                    <div className="prominence_card prominence_card_equal_height prominence_depth_card" style={{ 
+                                        padding: '36px 32px', 
+                                        height: '100%',
+                                        borderTop: '3px solid #b89058'
                                     }}>
                                         <div className="prominence_card_body">
-                                            <div style={{ marginBottom: '12px' }}>
-                                                <span className="prominence_badge">
+                                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '18px' }}>
+                                                <div style={{
+                                                    width: '38px',
+                                                    height: '38px',
+                                                    borderRadius: '8px',
+                                                    background: 'rgba(184, 144, 88, 0.12)',
+                                                    border: '1px solid rgba(184, 144, 88, 0.25)',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    color: '#b89058',
+                                                    fontSize: '15px'
+                                                }}>
+                                                    <i className={res.icon}></i>
+                                                </div>
+                                                <span className="prominence_badge prominence_badge_dark">
                                                     {res.badge}
                                                 </span>
                                             </div>
-                                            <h3 style={{ fontSize: '19px', fontFamily: 'var(--primary-font)', fontWeight: '700', color: '#0f1013', marginBottom: '8px', lineHeight: '1.35' }}>
+                                            <h3 style={{ fontSize: '20px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: '700', color: '#0f1013', marginBottom: '8px', lineHeight: '1.35' }}>
                                                 <Link href={res.href} style={{ color: 'inherit', textDecoration: 'none' }}>
                                                     {res.title}
                                                 </Link>
                                             </h3>
-                                            <p style={{ fontSize: '13px', fontWeight: '600', color: '#334155', marginBottom: '14px' }}>
+                                            <p style={{ fontSize: '13px', fontWeight: '600', color: '#b89058', marginBottom: '14px' }}>
                                                 {res.tagline}
                                             </p>
-                                            <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.7', marginBottom: '24px' }}>
+                                            <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.7', marginBottom: '18px' }}>
                                                 {res.description}
                                             </p>
+
+                                            {/* Micro-Metadata Chips */}
+                                            <div className="prominence_meta_grid" style={{ marginBottom: '20px' }}>
+                                                <div className="prominence_meta_item">
+                                                    <span className="prominence_meta_label">Specification</span>
+                                                    <span className="prominence_meta_value" style={{ fontSize: '12px' }}>{res.format}</span>
+                                                </div>
+                                                <div className="prominence_meta_item">
+                                                    <span className="prominence_meta_label">Scope</span>
+                                                    <span className="prominence_meta_value" style={{ fontSize: '12px' }}>{res.scope}</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div className="prominence_card_footer" style={{ borderTop: '1px solid #eaedf0', paddingTop: '16px' }}>
                                             <Link 

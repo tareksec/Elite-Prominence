@@ -153,9 +153,7 @@ export default function HighlightShare({ articleTitle = '' }) {
         onMouseEnter={(e) => (e.currentTarget.style.background = '#f1f5f9')}
         onMouseLeave={(e) => (e.currentTarget.style.background = 'none')}
       >
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.738-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-        </svg>
+        <i className="fab fa-linkedin-in" style={{ fontSize: '13px' }}></i>
         <span>LinkedIn</span>
       </button>
 
@@ -181,9 +179,7 @@ export default function HighlightShare({ articleTitle = '' }) {
         onMouseEnter={(e) => (e.currentTarget.style.background = '#F8F9FA')}
         onMouseLeave={(e) => (e.currentTarget.style.background = 'none')}
       >
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-        </svg>
+        <i className="fab fa-x-twitter" style={{ fontSize: '12px' }}></i>
         <span>Post</span>
       </button>
 
@@ -215,16 +211,12 @@ export default function HighlightShare({ articleTitle = '' }) {
       >
         {copied ? (
           <>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-            </svg>
+            <i className="fa-solid fa-check" style={{ fontSize: '12px' }}></i>
             <span>Copied!</span>
           </>
         ) : (
           <>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
-            </svg>
+            <i className="fa-solid fa-quote-left" style={{ fontSize: '12px' }}></i>
             <span>Quote</span>
           </>
         )}

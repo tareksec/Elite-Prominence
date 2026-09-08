@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Clients() {
     return (
-        <section className="problem_section" style={{ padding: "100px 0 95px", background: "#f8fafc", borderTop: "1px solid #eaedf0", borderBottom: "1px solid #eaedf0" }}>
+        <section className="problem_section" style={{ padding: "var(--ep-section-py) 0", background: "#f8fafc", borderTop: "1px solid #eaedf0", borderBottom: "1px solid #eaedf0" }}>
             <div className="container">
                 <div className="row align-items-center">
                     
@@ -24,8 +24,8 @@ export default function Clients() {
                         </div>
 
                         <h2 style={{
-                            fontFamily: "var(--primary-font)",
-                            fontSize: "38px",
+                            fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
+                            fontSize: "clamp(26px, 4vw, 38px)",
                             fontWeight: "700",
                             color: "#0f1013",
                             lineHeight: "1.22",
@@ -64,7 +64,7 @@ export default function Clients() {
 
                             <div style={{
                                 display: "grid",
-                                gridTemplateColumns: "repeat(2, 1fr)",
+                                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
                                 gap: "12px",
                                 maxWidth: "580px"
                             }}>
@@ -127,13 +127,13 @@ export default function Clients() {
                             </div>
 
                             {/* Main Diagnostic Card with Layered Depth */}
-                            <div className="prominence_depth_card" style={{ padding: "36px 30px" }}>
+                            <div className="prominence_depth_card" style={{ padding: "36px 30px", borderTop: "3px solid #b89058" }}>
                                 <div style={{ borderBottom: "1px solid #f1f5f9", paddingBottom: "18px", marginBottom: "22px" }}>
                                     <div style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#64748b", fontFamily: "var(--primary-font)" }}>
                                         Executive Stature Audit
                                     </div>
                                     <div style={{ display: "flex", alignItems: "baseline", gap: "10px", marginTop: "4px" }}>
-                                        <span style={{ fontSize: "32px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", letterSpacing: "-0.5px" }}>
+                                        <span style={{ fontSize: "34px", fontWeight: "700", color: "#0f1013", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", letterSpacing: "-0.5px" }}>
                                             -48%
                                         </span>
                                         <span style={{ fontSize: "13px", fontWeight: "600", color: "#b91c1c", backgroundColor: "#fef2f2", padding: "2px 8px", borderRadius: "6px" }}>

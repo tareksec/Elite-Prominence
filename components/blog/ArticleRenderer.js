@@ -46,9 +46,7 @@ export default function ArticleRenderer({ sections = [] }) {
               {sec.definition && (
                 <div className={styles.definitionBox}>
                   <div className={styles.defTitle}>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.002 6.002 0 00-4-5.659V5a2 2 0 114 0v2.091a6.002 6.002 0 004 5.659v5.25m-8 0h8" />
-                    </svg>
+                    <i className="fa-solid fa-lightbulb" style={{ fontSize: '13px', color: '#b89058' }}></i>
                     <span>{sec.definition.title}</span>
                   </div>
                   <p style={{ margin: 0, fontSize: '16px', color: '#1F2937', lineHeight: 1.6 }}>

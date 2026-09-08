@@ -515,26 +515,14 @@ export default function AdminPage() {
     }
 
     const renderStatusBadge = (status) => {
-        let bg = "#FEF3C7"
-        let color = "#92400E"
+        let badgeClass = "prominence_badge prominence_badge_gold"
         if (status === 'approved') {
-            bg = "#D1FAE5"
-            color = "#065F46"
+            badgeClass = "prominence_badge prominence_badge_green"
         } else if (status === 'rejected') {
-            bg = "#FEE2E2"
-            color = "#991B1B"
+            badgeClass = "prominence_badge prominence_badge_red"
         }
         return (
-            <span style={{
-                padding: "4px 10px",
-                borderRadius: "14px",
-                fontSize: "11px",
-                fontWeight: "700",
-                backgroundColor: bg,
-                color: color,
-                textTransform: "uppercase",
-                letterSpacing: "0.5px"
-            }}>
+            <span className={badgeClass}>
                 {status}
             </span>
         )
@@ -565,17 +553,17 @@ export default function AdminPage() {
                             flexWrap: "wrap",
                             gap: "18px",
                             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)",
-                            border: "1px solid rgba(210, 157, 43, 0.25)"
+                            border: "1px solid rgba(184, 144, 88, 0.25)"
                         }}>
                             <div>
                                 <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "6px" }}>
                                     <span style={{
-                                        backgroundColor: "#D29D2B",
+                                        backgroundColor: "#b89058",
                                         color: "#0f1013",
                                         fontSize: "11px",
                                         fontWeight: "700",
                                         padding: "3px 10px",
-                                        borderRadius: "8px",
+                                        borderRadius: "6px",
                                         textTransform: "uppercase",
                                         letterSpacing: "1px"
                                     }}>
@@ -586,7 +574,7 @@ export default function AdminPage() {
                                         Live Admin Console
                                     </span>
                                 </div>
-                                <h1 style={{ fontSize: "clamp(24px, 4vw, 32px)", fontWeight: "700", color: "#ffffff", margin: 0 }}>
+                                <h1 style={{ fontSize: "clamp(24px, 4vw, 32px)", fontWeight: "700", color: "#ffffff", margin: 0, fontFamily: "var(--title-font)" }}>
                                     Elite Prominence Administration
                                 </h1>
                                 <p style={{ margin: "6px 0 0", color: "#c1cfc5", fontSize: "14px" }}>
@@ -597,58 +585,23 @@ export default function AdminPage() {
                             <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
                                 <Link
                                     href="/dashboard"
-                                    style={{
-                                        backgroundColor: "rgba(255, 255, 255, 0.12)",
-                                        color: "#ffffff",
-                                        border: "1px solid rgba(255, 255, 255, 0.25)",
-                                        padding: "10px 18px",
-                                        minHeight: "44px",
-                                        display: "inline-flex",
-                                        alignItems: "center",
-                                        borderRadius: "30px",
-                                        fontWeight: "600",
-                                        fontSize: "14px",
-                                        textDecoration: "none"
-                                    }}
+                                    className="btn_style_two_dark btn_sm"
                                 >
-                                    <i className="fal fa-arrow-left" style={{ marginRight: "8px" }}></i>User Dashboard
+                                    <i className="fa-solid fa-arrow-left" style={{ marginRight: "6px" }}></i>User Dashboard
                                 </Link>
                                 <Link
                                     href="/community"
                                     target="_blank"
-                                    style={{
-                                        backgroundColor: "rgba(255, 255, 255, 0.12)",
-                                        color: "#ffffff",
-                                        border: "1px solid rgba(255, 255, 255, 0.25)",
-                                        padding: "10px 18px",
-                                        minHeight: "44px",
-                                        display: "inline-flex",
-                                        alignItems: "center",
-                                        borderRadius: "30px",
-                                        fontWeight: "600",
-                                        fontSize: "14px",
-                                        textDecoration: "none"
-                                    }}
+                                    className="btn_style_two_dark btn_sm"
                                 >
-                                    Community <i className="fal fa-external-link-alt" style={{ marginLeft: "6px", fontSize: "11px" }}></i>
+                                    Community <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: "6px", fontSize: "11px" }}></i>
                                 </Link>
                                 <Link
                                     href="/feedback"
                                     target="_blank"
-                                    style={{
-                                        backgroundColor: "#D29D2B",
-                                        color: "#0f1013",
-                                        padding: "10px 20px",
-                                        minHeight: "44px",
-                                        display: "inline-flex",
-                                        alignItems: "center",
-                                        borderRadius: "30px",
-                                        fontWeight: "700",
-                                        fontSize: "14px",
-                                        textDecoration: "none"
-                                    }}
+                                    className="btn_style_gold btn_sm"
                                 >
-                                    Public Reviews <i className="fal fa-external-link-alt" style={{ marginLeft: "6px", fontSize: "11px" }}></i>
+                                    Public Reviews <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: "6px", fontSize: "11px" }}></i>
                                 </Link>
                             </div>
                         </div>
@@ -688,7 +641,7 @@ export default function AdminPage() {
                                 backgroundColor: (pendingReviews.length + pendingArticles.length > 0) ? "#fef3c7" : "#f1f5f9",
                                 padding: "20px",
                                 borderRadius: "14px",
-                                border: (pendingReviews.length + pendingArticles.length > 0) ? "1.5px solid #D29D2B" : "1px solid #e2e8f0"
+                                border: (pendingReviews.length + pendingArticles.length > 0) ? "1.5px solid #b89058" : "1px solid #e2e8f0"
                             }}>
                                 <div style={{ fontSize: "12px", color: "#92400e", fontWeight: "700", textTransform: "uppercase" }}>Urgent Queue</div>
                                 <div style={{ fontSize: "32px", fontWeight: "700", color: "#92400e", marginTop: "4px" }}>
@@ -838,25 +791,15 @@ export default function AdminPage() {
                                         placeholder={`Search ${activeTab}...`}
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
-                                        style={{
-                                            padding: "8px 14px",
-                                            borderRadius: "20px",
-                                            border: "1px solid #cbd5e1",
-                                            fontSize: "14px",
-                                            minWidth: "200px"
-                                        }}
+                                        className="prominence_input"
+                                        style={{ minWidth: "220px", height: "40px", padding: "0 14px" }}
                                     />
                                     {(activeTab === 'reviews' || activeTab === 'articles') && (
                                         <select
                                             value={filterStatus}
                                             onChange={(e) => setFilterStatus(e.target.value)}
-                                            style={{
-                                                padding: "8px 12px",
-                                                borderRadius: "20px",
-                                                border: "1px solid #cbd5e1",
-                                                fontSize: "13px",
-                                                backgroundColor: "#ffffff"
-                                            }}
+                                            className="prominence_select"
+                                            style={{ height: "40px", padding: "0 14px", width: "auto" }}
                                         >
                                             <option value="all">All Status</option>
                                             <option value="approved">Approved</option>
@@ -882,8 +825,8 @@ export default function AdminPage() {
                                 justifyContent: "space-between",
                                 alignItems: "center"
                             }}>
-                                <span><i className="fal fa-check-circle" style={{ marginRight: "6px" }}></i> {feedbackMessage}</span>
-                                <button onClick={() => setFeedbackMessage('')} style={{ background: "none", border: "none", cursor: "pointer", color: "#15803d", fontWeight: "700" }}><i className="fal fa-times"></i></button>
+                                <span><i className="fa-solid fa-circle-check" style={{ marginRight: "6px" }}></i> {feedbackMessage}</span>
+                                <button onClick={() => setFeedbackMessage('')} style={{ background: "none", border: "none", cursor: "pointer", color: "#15803d", fontWeight: "700" }}><i className="fa-solid fa-xmark"></i></button>
                             </div>
                         )}
 
@@ -900,8 +843,8 @@ export default function AdminPage() {
                                 justifyContent: "space-between",
                                 alignItems: "center"
                             }}>
-                                <span><i className="fal fa-exclamation-triangle" style={{ marginRight: "6px" }}></i> {errorMessage}</span>
-                                <button onClick={() => setErrorMessage('')} style={{ background: "none", border: "none", cursor: "pointer", color: "#b91c1c", fontWeight: "700" }}><i className="fal fa-times"></i></button>
+                                <span><i className="fa-solid fa-triangle-exclamation" style={{ marginRight: "6px" }}></i> {errorMessage}</span>
+                                <button onClick={() => setErrorMessage('')} style={{ background: "none", border: "none", cursor: "pointer", color: "#b91c1c", fontWeight: "700" }}><i className="fa-solid fa-xmark"></i></button>
                             </div>
                         )}
 
@@ -918,7 +861,7 @@ export default function AdminPage() {
                                         textAlign: "center",
                                         border: "1px solid #e5e3db"
                                     }}>
-                                        <div style={{ fontSize: "36px", color: "#16a34a", marginBottom: "12px" }}><i className="fal fa-check-circle"></i></div>
+                                        <div style={{ fontSize: "36px", color: "#16a34a", marginBottom: "12px" }}><i className="fa-solid fa-circle-check"></i></div>
                                         <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0f1013", margin: "0 0 8px" }}>
                                             Moderation Queue is Clear
                                         </h3>
@@ -971,32 +914,14 @@ export default function AdminPage() {
                                                                 <button
                                                                     onClick={() => handleReviewStatus(rev.id, 'approved')}
                                                                     disabled={actionLoading[rev.id]}
-                                                                    style={{
-                                                                        backgroundColor: "#0f1013",
-                                                                        color: "#ffffff",
-                                                                        border: "none",
-                                                                        borderRadius: "6px",
-                                                                        padding: "8px 20px",
-                                                                        fontSize: "14px",
-                                                                        fontWeight: "700",
-                                                                        cursor: "pointer"
-                                                                    }}
+                                                                    className="btn_style_one btn_sm"
                                                                 >
                                                                     Approve & Publish Live
                                                                 </button>
                                                                 <button
                                                                     onClick={() => handleReviewStatus(rev.id, 'rejected')}
                                                                     disabled={actionLoading[rev.id]}
-                                                                    style={{
-                                                                        backgroundColor: "#fef2f2",
-                                                                        color: "#991b1b",
-                                                                        border: "1px solid #fca5a5",
-                                                                        borderRadius: "6px",
-                                                                        padding: "8px 18px",
-                                                                        fontSize: "14px",
-                                                                        fontWeight: "600",
-                                                                        cursor: "pointer"
-                                                                    }}
+                                                                    className="btn_style_danger btn_sm"
                                                                 >
                                                                     Decline
                                                                 </button>
@@ -1019,7 +944,7 @@ export default function AdminPage() {
                                                             backgroundColor: "#ffffff",
                                                             borderRadius: "12px",
                                                             padding: "26px",
-                                                            border: "1.5px solid #D29D2B",
+                                                            border: "1.5px solid #b89058",
                                                             boxShadow: "0 4px 14px rgba(0,0,0,0.04)"
                                                         }}>
                                                             <div style={{ marginBottom: "10px" }}>
@@ -1028,9 +953,9 @@ export default function AdminPage() {
                                                                     fontWeight: "700",
                                                                     textTransform: "uppercase",
                                                                     color: "#0f1013",
-                                                                    backgroundColor: "rgba(30, 59, 43, 0.08)",
+                                                                    backgroundColor: "rgba(184, 144, 88, 0.12)",
                                                                     padding: "3px 10px",
-                                                                    borderRadius: "12px",
+                                                                    borderRadius: "6px",
                                                                     display: "inline-block",
                                                                     marginBottom: "6px"
                                                                 }}>
@@ -1063,32 +988,14 @@ export default function AdminPage() {
                                                                 <button
                                                                     onClick={() => handleArticleStatus(art.id, 'approved')}
                                                                     disabled={actionLoading[art.id]}
-                                                                    style={{
-                                                                        backgroundColor: "#0f1013",
-                                                                        color: "#ffffff",
-                                                                        border: "none",
-                                                                        borderRadius: "6px",
-                                                                        padding: "8px 20px",
-                                                                        fontSize: "14px",
-                                                                        fontWeight: "700",
-                                                                        cursor: "pointer"
-                                                                    }}
+                                                                    className="btn_style_one btn_sm"
                                                                 >
                                                                     Approve & Publish to Community
                                                                 </button>
                                                                 <button
                                                                     onClick={() => handleArticleStatus(art.id, 'rejected')}
                                                                     disabled={actionLoading[art.id]}
-                                                                    style={{
-                                                                        backgroundColor: "#fef2f2",
-                                                                        color: "#991b1b",
-                                                                        border: "1px solid #fca5a5",
-                                                                        borderRadius: "6px",
-                                                                        padding: "8px 18px",
-                                                                        fontSize: "14px",
-                                                                        fontWeight: "600",
-                                                                        cursor: "pointer"
-                                                                    }}
+                                                                    className="btn_style_danger btn_sm"
                                                                 >
                                                                     Decline
                                                                 </button>
@@ -1114,21 +1021,9 @@ export default function AdminPage() {
                                     </h3>
                                     <button
                                         onClick={exportLeadsToCSV}
-                                        style={{
-                                            backgroundColor: "#0f1013",
-                                            color: "#ffffff",
-                                            border: "none",
-                                            borderRadius: "20px",
-                                            padding: "8px 18px",
-                                            fontSize: "13px",
-                                            fontWeight: "700",
-                                            cursor: "pointer",
-                                            display: "inline-flex",
-                                            alignItems: "center",
-                                            gap: "6px"
-                                        }}
+                                        className="btn_style_one btn_sm"
                                     >
-                                        Export to CSV / Excel
+                                        <i className="fa-solid fa-file-excel"></i> Export to CSV / Excel
                                     </button>
                                 </div>
 
@@ -1153,12 +1048,12 @@ export default function AdminPage() {
                                                         </h4>
                                                         <div style={{ fontSize: "14px", color: "#2563eb", fontWeight: "600", marginTop: "2px" }}>
                                                             <a href={`mailto:${lead.email}`} style={{ textDecoration: "none", color: "inherit" }}>
-                                                                <i className="fal fa-envelope" style={{ marginRight: "4px" }}></i>{lead.email}
+                                                                <i className="fa-solid fa-envelope" style={{ marginRight: "4px" }}></i>{lead.email}
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <span style={{ fontSize: "12px", color: "#64748b", backgroundColor: "#f1f5f9", padding: "4px 10px", borderRadius: "12px" }}>
-                                                        <i className="fal fa-calendar-alt" style={{ marginRight: "4px" }}></i>{new Date(lead.created_at).toLocaleString()}
+                                                        <i className="fa-solid fa-calendar" style={{ marginRight: "4px" }}></i>{new Date(lead.created_at).toLocaleString()}
                                                     </span>
                                                 </div>
 
@@ -1191,7 +1086,7 @@ export default function AdminPage() {
                                                             gap: "6px"
                                                         }}
                                                     >
-                                                        <i className="fal fa-reply" style={{ marginRight: "4px" }}></i> Reply via Email
+                                                        <i className="fa-solid fa-reply" style={{ marginRight: "4px" }}></i> Reply via Email
                                                     </a>
 
                                                     <a
@@ -1256,21 +1151,9 @@ export default function AdminPage() {
                                             setReviewForm({ content: '', rating: 5, status: 'approved' })
                                             setReviewModalOpen(true)
                                         }}
-                                        style={{
-                                            backgroundColor: "#0f1013",
-                                            color: "#ffffff",
-                                            border: "none",
-                                            borderRadius: "20px",
-                                            padding: "8px 20px",
-                                            fontSize: "13px",
-                                            fontWeight: "700",
-                                            cursor: "pointer",
-                                            display: "inline-flex",
-                                            alignItems: "center",
-                                            gap: "6px"
-                                        }}
+                                        className="btn_style_one btn_sm"
                                     >
-                                        Post Review Directly
+                                        <i className="fa-solid fa-plus"></i> Post Review Directly
                                     </button>
                                 </div>
 
@@ -1309,7 +1192,7 @@ export default function AdminPage() {
                                                 {rev.status !== 'approved' && (
                                                     <button
                                                         onClick={() => handleReviewStatus(rev.id, 'approved')}
-                                                        style={{ backgroundColor: "#0f1013", color: "#fff", border: "none", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
+                                                        className="btn_style_one btn_sm"
                                                     >
                                                         Approve
                                                     </button>
@@ -1317,7 +1200,7 @@ export default function AdminPage() {
                                                 {rev.status !== 'rejected' && (
                                                     <button
                                                         onClick={() => handleReviewStatus(rev.id, 'rejected')}
-                                                        style={{ backgroundColor: "#fef2f2", color: "#991b1b", border: "1px solid #fca5a5", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
+                                                        className="btn_style_danger btn_sm"
                                                     >
                                                         Reject
                                                     </button>
@@ -1328,7 +1211,7 @@ export default function AdminPage() {
                                                         setReviewForm({ content: rev.content, rating: rev.rating || 5, status: rev.status })
                                                         setReviewModalOpen(true)
                                                     }}
-                                                    style={{ backgroundColor: "#f1f5f9", color: "#1e293b", border: "1px solid #cbd5e1", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
+                                                    className="btn_style_two btn_sm"
                                                 >
                                                     Edit
                                                 </button>
@@ -1337,9 +1220,10 @@ export default function AdminPage() {
                                                         setDeleteTarget({ type: 'review', id: rev.id, title: `Testimonial from ${rev.profiles?.full_name || 'Client'}` })
                                                         setDeleteModalOpen(true)
                                                     }}
-                                                    style={{ backgroundColor: "transparent", color: "#ef4444", border: "1px solid #fca5a5", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer", marginLeft: "auto" }}
+                                                    className="btn_style_danger_ghost"
+                                                    style={{ marginLeft: "auto" }}
                                                 >
-                                                    Delete
+                                                    <i className="fa-solid fa-trash-can"></i> Delete
                                                 </button>
                                             </div>
                                         </div>
@@ -1363,21 +1247,9 @@ export default function AdminPage() {
                                             setArticleForm({ title: '', category: ARTICLE_CATEGORIES[0], body: '', status: 'approved' })
                                             setArticleModalOpen(true)
                                         }}
-                                        style={{
-                                            backgroundColor: "#0f1013",
-                                            color: "#ffffff",
-                                            border: "none",
-                                            borderRadius: "20px",
-                                            padding: "8px 20px",
-                                            fontSize: "13px",
-                                            fontWeight: "700",
-                                            cursor: "pointer",
-                                            display: "inline-flex",
-                                            alignItems: "center",
-                                            gap: "6px"
-                                        }}
+                                        className="btn_style_one btn_sm"
                                     >
-                                        Write & Publish Article
+                                        <i className="fa-solid fa-pen-nib"></i> Write & Publish Article
                                     </button>
                                 </div>
 
@@ -1419,7 +1291,7 @@ export default function AdminPage() {
                                                 {art.status !== 'approved' && (
                                                     <button
                                                         onClick={() => handleArticleStatus(art.id, 'approved')}
-                                                        style={{ backgroundColor: "#0f1013", color: "#fff", border: "none", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
+                                                        className="btn_style_one btn_sm"
                                                     >
                                                         Approve
                                                     </button>
@@ -1427,7 +1299,7 @@ export default function AdminPage() {
                                                 {art.status !== 'rejected' && (
                                                     <button
                                                         onClick={() => handleArticleStatus(art.id, 'rejected')}
-                                                        style={{ backgroundColor: "#fef2f2", color: "#991b1b", border: "1px solid #fca5a5", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
+                                                        className="btn_style_danger btn_sm"
                                                     >
                                                         Reject
                                                     </button>
@@ -1438,7 +1310,7 @@ export default function AdminPage() {
                                                         setArticleForm({ title: art.title, category: art.category, body: art.body, status: art.status })
                                                         setArticleModalOpen(true)
                                                     }}
-                                                    style={{ backgroundColor: "#f1f5f9", color: "#1e293b", border: "1px solid #cbd5e1", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
+                                                    className="btn_style_two btn_sm"
                                                 >
                                                     Edit
                                                 </button>
@@ -1447,9 +1319,10 @@ export default function AdminPage() {
                                                         setDeleteTarget({ type: 'article', id: art.id, title: art.title })
                                                         setDeleteModalOpen(true)
                                                     }}
-                                                    style={{ backgroundColor: "transparent", color: "#ef4444", border: "1px solid #fca5a5", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer", marginLeft: "auto" }}
+                                                    className="btn_style_danger_ghost"
+                                                    style={{ marginLeft: "auto" }}
                                                 >
-                                                    Delete
+                                                    <i className="fa-solid fa-trash-can"></i> Delete
                                                 </button>
                                             </div>
                                         </div>
@@ -1462,7 +1335,7 @@ export default function AdminPage() {
                         {/* TAB 5: USER DIRECTORY & ROLE CONTROLS                         */}
                         {/* ------------------------------------------------------------- */}
                         {activeTab === 'users' && (
-                            <div style={{
+                            <div className="prominence_table_wrapper" style={{
                                 backgroundColor: "#ffffff",
                                 borderRadius: "14px",
                                 border: "1px solid #e5e3db",
@@ -1485,7 +1358,7 @@ export default function AdminPage() {
                                                 <td style={{ padding: "16px 20px", fontSize: "15px", fontWeight: "700", color: "#0f1013" }}>
                                                     {u.full_name || 'Member'}
                                                     {u.id === adminUser?.id && (
-                                                        <span style={{ fontSize: "10px", backgroundColor: "#22c55e", color: "#ffffff", padding: "2px 6px", borderRadius: "10px", marginLeft: "6px" }}>YOU</span>
+                                                        <span style={{ fontSize: "10px", backgroundColor: "#22c55e", color: "#ffffff", padding: "2px 6px", borderRadius: "4px", marginLeft: "6px" }}>YOU</span>
                                                     )}
                                                 </td>
                                                 <td style={{ padding: "16px 20px", fontSize: "14px", color: "#475569" }}>
@@ -1493,12 +1366,12 @@ export default function AdminPage() {
                                                 </td>
                                                 <td style={{ padding: "16px 20px" }}>
                                                     <span style={{
-                                                        backgroundColor: u.role === 'admin' ? "#D29D2B" : "#e2e8f0",
+                                                        backgroundColor: u.role === 'admin' ? "#b89058" : "#e2e8f0",
                                                         color: u.role === 'admin' ? "#0f1013" : "#334155",
                                                         fontSize: "11px",
                                                         fontWeight: "700",
                                                         padding: "3px 10px",
-                                                        borderRadius: "10px",
+                                                        borderRadius: "6px",
                                                         textTransform: "uppercase",
                                                         letterSpacing: "0.5px"
                                                     }}>
@@ -1513,16 +1386,7 @@ export default function AdminPage() {
                                                         <button
                                                             onClick={() => handleToggleRole(u)}
                                                             disabled={actionLoading[`role_${u.id}`]}
-                                                            style={{
-                                                                backgroundColor: u.role === 'admin' ? "#f1f5f9" : "#D29D2B",
-                                                                color: u.role === 'admin' ? "#475569" : "#0f1013",
-                                                                border: "none",
-                                                                borderRadius: "6px",
-                                                                padding: "6px 12px",
-                                                                fontSize: "12px",
-                                                                fontWeight: "700",
-                                                                cursor: "pointer"
-                                                            }}
+                                                            className={u.role === 'admin' ? "btn_style_two btn_sm" : "btn_style_gold btn_sm"}
                                                         >
                                                             {u.role === 'admin' ? 'Demote' : 'Make Admin'}
                                                         </button>
@@ -1533,16 +1397,7 @@ export default function AdminPage() {
                                                                 setUserForm({ full_name: u.full_name, role_title: u.role_title || '', role: u.role })
                                                                 setUserModalOpen(true)
                                                             }}
-                                                            style={{
-                                                                backgroundColor: "#f8fafc",
-                                                                color: "#334155",
-                                                                border: "1px solid #cbd5e1",
-                                                                borderRadius: "6px",
-                                                                padding: "6px 12px",
-                                                                fontSize: "12px",
-                                                                fontWeight: "600",
-                                                                cursor: "pointer"
-                                                            }}
+                                                            className="btn_style_two btn_sm"
                                                         >
                                                             Edit
                                                         </button>
@@ -1553,18 +1408,10 @@ export default function AdminPage() {
                                                                     setDeleteTarget({ type: 'user', id: u.id, title: u.full_name || 'Member Account' })
                                                                     setDeleteModalOpen(true)
                                                                 }}
-                                                                style={{
-                                                                    backgroundColor: "transparent",
-                                                                    color: "#ef4444",
-                                                                    border: "1px solid #fca5a5",
-                                                                    borderRadius: "6px",
-                                                                    padding: "6px 10px",
-                                                                    fontSize: "12px",
-                                                                    fontWeight: "600",
-                                                                    cursor: "pointer"
-                                                                }}
+                                                                className="btn_style_danger_ghost btn_sm"
+                                                                title="Delete Member"
                                                             >
-                                                                <i className="fal fa-trash-alt"></i>
+                                                                <i className="fa-solid fa-trash-can"></i>
                                                             </button>
                                                         )}
                                                     </div>
@@ -1590,20 +1437,16 @@ export default function AdminPage() {
                                     <form onSubmit={handleSaveSettings}>
                                         {/* WhatsApp Number Control */}
                                         <div style={{ marginBottom: "24px" }}>
-                                            <label style={{ display: "block", fontSize: "14px", fontWeight: "700", color: "#0f1013", marginBottom: "6px" }}>
+                                            <label className="prominence_label">
                                                 Primary WhatsApp Contact Number
                                             </label>
                                             <input
                                                 type="text"
+                                                className="prominence_input"
                                                 value={settingsForm.whatsapp_number}
                                                 onChange={(e) => setSettingsForm(prev => ({ ...prev, whatsapp_number: e.target.value }))}
                                                 placeholder="e.g. 8801645441584 or 01645441584"
                                                 style={{
-                                                    width: "100%",
-                                                    padding: "10px 14px",
-                                                    borderRadius: "8px",
-                                                    border: "1px solid #cbd5e1",
-                                                    fontSize: "15px",
                                                     fontFamily: "monospace"
                                                 }}
                                             />
@@ -1634,28 +1477,28 @@ export default function AdminPage() {
                                             </div>
 
                                             <div style={{ marginBottom: "14px" }}>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "#475569", marginBottom: "4px" }}>
+                                                <label className="prominence_label">
                                                     Banner Text
                                                 </label>
                                                 <input
                                                     type="text"
+                                                    className="prominence_input"
                                                     value={settingsForm.announcement_text}
                                                     onChange={(e) => setSettingsForm(prev => ({ ...prev, announcement_text: e.target.value }))}
                                                     placeholder="e.g. Elite Prominence is accepting applications for the Q4 Executive Cohort."
-                                                    style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                                 />
                                             </div>
 
                                             <div style={{ marginBottom: "14px" }}>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "#475569", marginBottom: "4px" }}>
+                                                <label className="prominence_label">
                                                     Action Link (optional)
                                                 </label>
                                                 <input
                                                     type="text"
+                                                    className="prominence_input"
                                                     value={settingsForm.announcement_link}
                                                     onChange={(e) => setSettingsForm(prev => ({ ...prev, announcement_link: e.target.value }))}
                                                     placeholder="e.g. /contact or /pricing"
-                                                    style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                                 />
                                             </div>
 
@@ -1680,19 +1523,10 @@ export default function AdminPage() {
                                         <button
                                             type="submit"
                                             disabled={savingSettings}
-                                            style={{
-                                                backgroundColor: "#0f1013",
-                                                color: "#ffffff",
-                                                border: "none",
-                                                borderRadius: "8px",
-                                                padding: "12px 24px",
-                                                fontSize: "15px",
-                                                fontWeight: "700",
-                                                cursor: "pointer",
-                                                width: "100%",
-                                                marginTop: "10px"
-                                            }}
+                                            className="btn_style_one btn_block btn_md"
+                                            style={{ marginTop: "16px" }}
                                         >
+                                            <i className="fa-solid fa-floppy-disk" style={{ marginRight: "8px" }}></i>
                                             {savingSettings ? 'Saving Settings...' : 'Save & Publish Settings Live'}
                                         </button>
                                     </form>
@@ -1774,18 +1608,18 @@ export default function AdminPage() {
                                         <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "700", color: "#0f1013" }}>
                                             {editingReview ? 'Edit Testimonial' : 'Post Direct Testimonial'}
                                         </h3>
-                                        <button onClick={() => setReviewModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fal fa-times"></i></button>
+                                        <button onClick={() => setReviewModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fa-solid fa-xmark"></i></button>
                                     </div>
 
                                     <form onSubmit={handleSaveReviewModal}>
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Star Rating (1 to 5)
                                             </label>
                                             <select
+                                                className="prominence_select"
                                                 value={reviewForm.rating}
                                                 onChange={(e) => setReviewForm(prev => ({ ...prev, rating: Number(e.target.value) }))}
-                                                style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid #cbd5e1" }}
                                             >
                                                 <option value={5}>5 Stars (Exceptional)</option>
                                                 <option value={4}>4 Stars (Strong Impact)</option>
@@ -1796,13 +1630,13 @@ export default function AdminPage() {
                                         </div>
 
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Publication Status
                                             </label>
                                             <select
+                                                className="prominence_select"
                                                 value={reviewForm.status}
                                                 onChange={(e) => setReviewForm(prev => ({ ...prev, status: e.target.value }))}
-                                                style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid #cbd5e1" }}
                                             >
                                                 <option value="approved">Approved & Published Live</option>
                                                 <option value="pending">Pending Review</option>
@@ -1811,16 +1645,16 @@ export default function AdminPage() {
                                         </div>
 
                                         <div style={{ marginBottom: "20px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Testimonial / Review Content
                                             </label>
                                             <textarea
                                                 rows={5}
                                                 required
+                                                className="prominence_textarea"
                                                 value={reviewForm.content}
                                                 onChange={(e) => setReviewForm(prev => ({ ...prev, content: e.target.value }))}
                                                 placeholder="Enter testimonial text..."
-                                                style={{ width: "100%", padding: "12px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                             />
                                         </div>
 
@@ -1828,14 +1662,14 @@ export default function AdminPage() {
                                             <button
                                                 type="button"
                                                 onClick={() => setReviewModalOpen(false)}
-                                                style={{ padding: "10px 18px", borderRadius: "6px", border: "1px solid #cbd5e1", background: "none", cursor: "pointer", fontWeight: "600" }}
+                                                className="btn_style_two btn_sm"
                                             >
                                                 Cancel
                                             </button>
                                             <button
                                                 type="submit"
                                                 disabled={actionLoading.reviewSave}
-                                                style={{ padding: "10px 22px", borderRadius: "6px", border: "none", backgroundColor: "#0f1013", color: "#ffffff", fontWeight: "700", cursor: "pointer" }}
+                                                className="btn_style_one btn_sm"
                                             >
                                                 {actionLoading.reviewSave ? 'Saving...' : 'Save Testimonial'}
                                             </button>
@@ -1873,33 +1707,33 @@ export default function AdminPage() {
                                         <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "700", color: "#0f1013" }}>
                                             {editingArticle ? 'Edit Article' : 'Write & Publish Executive Article'}
                                         </h3>
-                                        <button onClick={() => setArticleModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fal fa-times"></i></button>
+                                        <button onClick={() => setArticleModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fa-solid fa-xmark"></i></button>
                                     </div>
 
                                     <form onSubmit={handleSaveArticleModal}>
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Article Title
                                             </label>
                                             <input
                                                 type="text"
                                                 required
+                                                className="prominence_input"
                                                 value={articleForm.title}
                                                 onChange={(e) => setArticleForm(prev => ({ ...prev, title: e.target.value }))}
                                                 placeholder="e.g. Why CHROs Need a Sovereign Personal Brand in 2026"
-                                                style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "15px" }}
                                             />
                                         </div>
 
                                         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "16px" }}>
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                                <label className="prominence_label">
                                                     Category
                                                 </label>
                                                 <select
+                                                    className="prominence_select"
                                                     value={articleForm.category}
                                                     onChange={(e) => setArticleForm(prev => ({ ...prev, category: e.target.value }))}
-                                                    style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid #cbd5e1" }}
                                                 >
                                                     {ARTICLE_CATEGORIES.map(cat => (
                                                         <option key={cat} value={cat}>{cat}</option>
@@ -1908,13 +1742,13 @@ export default function AdminPage() {
                                             </div>
 
                                             <div>
-                                                <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                                <label className="prominence_label">
                                                     Publication Status
                                                 </label>
                                                 <select
+                                                    className="prominence_select"
                                                     value={articleForm.status}
                                                     onChange={(e) => setArticleForm(prev => ({ ...prev, status: e.target.value }))}
-                                                    style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid #cbd5e1" }}
                                                 >
                                                     <option value="approved">Approved & Published Live</option>
                                                     <option value="pending">Pending Moderation</option>
@@ -1924,16 +1758,17 @@ export default function AdminPage() {
                                         </div>
 
                                         <div style={{ marginBottom: "20px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Article Body (Markdown or Plain Text)
                                             </label>
                                             <textarea
                                                 rows={10}
                                                 required
+                                                className="prominence_textarea"
                                                 value={articleForm.body}
                                                 onChange={(e) => setArticleForm(prev => ({ ...prev, body: e.target.value }))}
                                                 placeholder="Write full article body here..."
-                                                style={{ width: "100%", padding: "14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px", lineHeight: "1.6" }}
+                                                style={{ lineHeight: "1.6" }}
                                             />
                                         </div>
 
@@ -1941,14 +1776,14 @@ export default function AdminPage() {
                                             <button
                                                 type="button"
                                                 onClick={() => setArticleModalOpen(false)}
-                                                style={{ padding: "10px 18px", borderRadius: "6px", border: "1px solid #cbd5e1", background: "none", cursor: "pointer", fontWeight: "600" }}
+                                                className="btn_style_two btn_sm"
                                             >
                                                 Cancel
                                             </button>
                                             <button
                                                 type="submit"
                                                 disabled={actionLoading.articleSave}
-                                                style={{ padding: "10px 22px", borderRadius: "6px", border: "none", backgroundColor: "#0f1013", color: "#ffffff", fontWeight: "700", cursor: "pointer" }}
+                                                className="btn_style_one btn_sm"
                                             >
                                                 {actionLoading.articleSave ? 'Saving...' : 'Save & Publish Article'}
                                             </button>
@@ -1984,44 +1819,44 @@ export default function AdminPage() {
                                         <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "700", color: "#0f1013" }}>
                                             Edit Member Profile
                                         </h3>
-                                        <button onClick={() => setUserModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fal fa-times"></i></button>
+                                        <button onClick={() => setUserModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fa-solid fa-xmark"></i></button>
                                     </div>
 
                                     <form onSubmit={handleSaveUserModal}>
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Full Name
                                             </label>
                                             <input
                                                 type="text"
                                                 required
+                                                className="prominence_input"
                                                 value={userForm.full_name}
                                                 onChange={(e) => setUserForm(prev => ({ ...prev, full_name: e.target.value }))}
-                                                style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                             />
                                         </div>
 
                                         <div style={{ marginBottom: "16px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Executive Title
                                             </label>
                                             <input
                                                 type="text"
+                                                className="prominence_input"
                                                 value={userForm.role_title}
                                                 onChange={(e) => setUserForm(prev => ({ ...prev, role_title: e.target.value }))}
                                                 placeholder="e.g. Chief People Officer, VP Talent"
-                                                style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
                                             />
                                         </div>
 
                                         <div style={{ marginBottom: "20px" }}>
-                                            <label style={{ display: "block", fontSize: "13px", fontWeight: "700", color: "#0f1013", marginBottom: "4px" }}>
+                                            <label className="prominence_label">
                                                 Account Role
                                             </label>
                                             <select
+                                                className="prominence_select"
                                                 value={userForm.role}
                                                 onChange={(e) => setUserForm(prev => ({ ...prev, role: e.target.value }))}
-                                                style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid #cbd5e1" }}
                                             >
                                                 <option value="user">Regular Member (user)</option>
                                                 <option value="admin">Full Administrator (admin)</option>
@@ -2032,14 +1867,14 @@ export default function AdminPage() {
                                             <button
                                                 type="button"
                                                 onClick={() => setUserModalOpen(false)}
-                                                style={{ padding: "10px 18px", borderRadius: "6px", border: "1px solid #cbd5e1", background: "none", cursor: "pointer", fontWeight: "600" }}
+                                                className="btn_style_two btn_sm"
                                             >
                                                 Cancel
                                             </button>
                                             <button
                                                 type="submit"
                                                 disabled={actionLoading.userSave}
-                                                style={{ padding: "10px 22px", borderRadius: "6px", border: "none", backgroundColor: "#0f1013", color: "#ffffff", fontWeight: "700", cursor: "pointer" }}
+                                                className="btn_style_one btn_sm"
                                             >
                                                 {actionLoading.userSave ? 'Saving...' : 'Save Profile'}
                                             </button>
@@ -2071,7 +1906,7 @@ export default function AdminPage() {
                                     padding: "28px",
                                     boxShadow: "0 20px 50px rgba(0,0,0,0.2)"
                                 }}>
-                                    <div style={{ fontSize: "32px", color: "#dc2626", marginBottom: "10px" }}><i className="fal fa-exclamation-triangle"></i></div>
+                                    <div style={{ fontSize: "32px", color: "#dc2626", marginBottom: "10px" }}><i className="fa-solid fa-triangle-exclamation"></i></div>
                                     <h3 style={{ margin: "0 0 8px", fontSize: "19px", fontWeight: "700", color: "#991b1b" }}>
                                         Confirm Permanent Deletion
                                     </h3>
@@ -2083,7 +1918,7 @@ export default function AdminPage() {
                                         <button
                                             type="button"
                                             onClick={() => setDeleteModalOpen(false)}
-                                            style={{ padding: "10px 18px", borderRadius: "6px", border: "1px solid #cbd5e1", background: "none", cursor: "pointer", fontWeight: "600" }}
+                                            className="btn_style_two btn_sm"
                                         >
                                             Cancel
                                         </button>
@@ -2091,7 +1926,7 @@ export default function AdminPage() {
                                             type="button"
                                             onClick={handleExecuteDelete}
                                             disabled={actionLoading.confirmDelete}
-                                            style={{ padding: "10px 22px", borderRadius: "6px", border: "none", backgroundColor: "#dc2626", color: "#ffffff", fontWeight: "700", cursor: "pointer" }}
+                                            className="btn_style_danger btn_sm"
                                         >
                                             {actionLoading.confirmDelete ? 'Deleting...' : 'Yes, Delete Permanently'}
                                         </button>

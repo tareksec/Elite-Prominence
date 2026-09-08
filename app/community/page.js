@@ -141,7 +141,7 @@ export default function CommunityPage() {
         <div className="boxed_wrapper">
             <Layout headerStyle={4} footerStyle={1}>
                 <section style={{
-                    backgroundColor: "#f8fafc",
+                    backgroundColor: "#FAF8F2",
                     padding: "100px 0 100px",
                     minHeight: "80vh",
                     fontFamily: "var(--primary-font)"
@@ -160,7 +160,7 @@ export default function CommunityPage() {
                             color: "#0f1013",
                             marginBottom: "18px",
                             lineHeight: "1.25",
-                            fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                            fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                         }}>
                             Executive Community &amp; Contributors
                         </h1>
@@ -171,7 +171,7 @@ export default function CommunityPage() {
                         <div>
                             <Link
                                 href="/signup"
-                                className="btn_style_one"
+                                className="btn_style_one btn_md"
                             >
                                 Join the Network <i className="fa-solid fa-arrow-right"></i>
                             </Link>
@@ -185,7 +185,7 @@ export default function CommunityPage() {
                             fontWeight: "700",
                             color: "#0f1013",
                             margin: 0,
-                            fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                            fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                         }}>
                             Directory of Executive Contributors
                         </h2>
@@ -255,7 +255,7 @@ export default function CommunityPage() {
                                         {member.location && (
                                             <>
                                                 <span>•</span>
-                                                <span><i className="fal fa-map-marker-alt" style={{ marginRight: "4px" }}></i>{member.location}</span>
+                                                <span><i className="fa-solid fa-location-dot" style={{ marginRight: "4px", color: "#b89058" }}></i>{member.location}</span>
                                             </>
                                         )}
                                     </div>
@@ -555,13 +555,13 @@ export default function CommunityPage() {
                                 backgroundColor: "rgba(184, 144, 88, 0.12)",
                                 border: "1px solid rgba(184, 144, 88, 0.3)",
                                 padding: "4px 14px",
-                                borderRadius: "9999px",
+                                borderRadius: "6px",
                                 fontFamily: "var(--primary-font)",
                                 marginBottom: "12px"
                             }}>
                                 Integrity &amp; Standards
                             </span>
-                            <h2 style={{ fontSize: "clamp(24px, 4.5vw, 32px)", fontWeight: "700", color: "#ffffff", fontFamily: "var(--primary-font)", marginBottom: "12px" }}>
+                            <h2 style={{ fontSize: "clamp(24px, 4.5vw, 32px)", fontWeight: "700", color: "#ffffff", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "12px" }}>
                                 Editorial Principles &amp; Governance
                             </h2>
                             <p style={{ fontSize: "15px", color: "#cbd5e1", lineHeight: "1.7", margin: 0 }}>
@@ -796,7 +796,7 @@ export default function CommunityPage() {
                                         justifyContent: "center"
                                     }}
                                 >
-                                    <i className="fal fa-times"></i>
+                                    <i className="fa-solid fa-xmark"></i>
                                 </button>
 
                                 <span style={{
@@ -805,7 +805,7 @@ export default function CommunityPage() {
                                     textTransform: "uppercase",
                                     color: "#b89058", backgroundColor: "rgba(184, 144, 88, 0.10)", border: "1px solid rgba(184, 144, 88, 0.25)",
                                     padding: "3px 12px",
-                                    borderRadius: "9999px",
+                                    borderRadius: "6px",
                                     display: "inline-block",
                                     marginBottom: "12px",
                                     fontFamily: "var(--primary-font)"
@@ -813,7 +813,7 @@ export default function CommunityPage() {
                                     {selectedArticle.category}
                                 </span>
 
-                                <h2 style={{ fontSize: "clamp(22px, 4.5vw, 28px)", fontWeight: "700", color: "#0f1013", fontFamily: "var(--primary-font)", marginBottom: "8px", lineHeight: "1.3" }}>
+                                <h2 style={{ fontSize: "clamp(22px, 4.5vw, 28px)", fontWeight: "700", color: "#0f1013", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "8px", lineHeight: "1.3" }}>
                                     {selectedArticle.title}
                                 </h2>
 

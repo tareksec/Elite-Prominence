@@ -163,7 +163,7 @@ export default function MemberProfilePage({ params }) {
                 <Layout headerStyle={1} footerStyle={1}>
                     <div style={{ padding: "160px 0 120px", textAlign: "center", backgroundColor: "#FAF8F2", minHeight: "80vh" }}>
                         <div className="container" style={{ maxWidth: "600px", margin: "0 auto" }}>
-                            <div style={{ fontSize: "36px", color: "#64748b", marginBottom: "16px" }}><i className="fal fa-search"></i></div>
+                            <div style={{ fontSize: "36px", color: "#64748b", marginBottom: "16px" }}><i className="fa-solid fa-magnifying-glass"></i></div>
                             <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0f1013", marginBottom: "12px" }}>
                                 Executive Profile Not Found
                             </h2>
@@ -174,7 +174,7 @@ export default function MemberProfilePage({ params }) {
                                 href="/community"
                                 className="btn_style_one"
                             >
-                                <i className="fal fa-arrow-left" style={{ marginRight: "8px" }}></i>Return to Community Directory
+                                <i className="fa-solid fa-arrow-left" style={{ marginRight: "8px" }}></i>Return to Community Directory
                             </Link>
                         </div>
                     </div>
@@ -268,7 +268,7 @@ export default function MemberProfilePage({ params }) {
                                     </div>
 
                                     {/* Action Links */}
-                                    <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                                    <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "center" }}>
                                         {member.linkedin_url && (
                                             <a
                                                 href={member.linkedin_url}
@@ -277,7 +277,7 @@ export default function MemberProfilePage({ params }) {
                                                 style={{
                                                     backgroundColor: "#0077B5",
                                                     color: "#ffffff",
-                                                    padding: "9px 16px",
+                                                    padding: "8px 16px",
                                                     borderRadius: "8px",
                                                     fontSize: "13px",
                                                     fontWeight: "600",
@@ -287,7 +287,7 @@ export default function MemberProfilePage({ params }) {
                                                     gap: "6px"
                                                 }}
                                             >
-                                                <span>in</span> LinkedIn Profile <i className="fal fa-external-link-alt" style={{ marginLeft: "4px", fontSize: "11px" }}></i>
+                                                <i className="fab fa-linkedin-in" style={{ marginRight: "4px" }}></i> LinkedIn Profile <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: "4px", fontSize: "11px" }}></i>
                                             </a>
                                         )}
 
@@ -296,21 +296,9 @@ export default function MemberProfilePage({ params }) {
                                                 href={member.website_url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                style={{
-                                                    backgroundColor: "#ffffff",
-                                                    color: "#0f1013",
-                                                    border: "1px solid #eaedf0",
-                                                    padding: "9px 16px",
-                                                    borderRadius: "8px",
-                                                    fontSize: "13px",
-                                                    fontWeight: "600",
-                                                    textDecoration: "none",
-                                                    display: "inline-flex",
-                                                    alignItems: "center",
-                                                    gap: "6px"
-                                                }}
+                                                className="btn_style_two btn_sm"
                                             >
-                                                <i className="fal fa-globe" style={{ marginRight: "6px" }}></i> Personal Website <i className="fal fa-external-link-alt" style={{ fontSize: "11px", marginLeft: "4px" }}></i>
+                                                <i className="fa-solid fa-globe" style={{ marginRight: "6px" }}></i> Personal Website <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: "11px", marginLeft: "4px" }}></i>
                                             </a>
                                         )}
 
@@ -318,21 +306,9 @@ export default function MemberProfilePage({ params }) {
                                             href={getWhatsAppUrl(`Hi, I saw ${member.full_name}'s executive profile on Elite Prominence and would like to discuss an advisory engagement.`)}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            style={{
-                                                backgroundColor: "#0f1013",
-                                                color: "#ffffff",
-                                                border: "1px solid rgba(184, 144, 88, 0.3)",
-                                                padding: "9px 16px",
-                                                borderRadius: "8px",
-                                                fontSize: "13px",
-                                                fontWeight: "600",
-                                                textDecoration: "none",
-                                                display: "inline-flex",
-                                                alignItems: "center",
-                                                gap: "6px"
-                                            }}
+                                            className="btn_style_one btn_sm"
                                         >
-                                            <i className="fab fa-whatsapp" style={{ fontSize: "14px", color: "#25D366" }}></i> Contact via Advisory
+                                            <i className="fab fa-whatsapp" style={{ fontSize: "14px", color: "#b89058", marginRight: "6px" }}></i> Contact via Advisory
                                         </a>
                                     </div>
                                 </div>
@@ -345,7 +321,7 @@ export default function MemberProfilePage({ params }) {
                                             fontWeight: "700",
                                             color: "#0f1013",
                                             margin: 0,
-                                            fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                                            fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                                         }}>
                                             {member.full_name}
                                         </h1>
@@ -370,15 +346,15 @@ export default function MemberProfilePage({ params }) {
                                     {/* Meta pills */}
                                     <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", fontSize: "13px", color: "#64748b", marginBottom: "20px" }}>
                                         {member.industry && (
-                                            <span><i className="fal fa-building" style={{ marginRight: "4px" }}></i><strong>Industry:</strong> {member.industry}</span>
+                                            <span><i className="fa-solid fa-building" style={{ marginRight: "4px", color: "#b89058" }}></i><strong>Industry:</strong> {member.industry}</span>
                                         )}
                                         {member.location && (
-                                            <span><i className="fal fa-map-marker-alt" style={{ marginRight: "4px" }}></i><strong>Location:</strong> {member.location}</span>
+                                            <span><i className="fa-solid fa-location-dot" style={{ marginRight: "4px", color: "#b89058" }}></i><strong>Location:</strong> {member.location}</span>
                                         )}
                                         {member.years_of_experience && (
-                                            <span><i className="fal fa-clock" style={{ marginRight: "4px" }}></i><strong>Experience:</strong> {member.years_of_experience}</span>
+                                            <span><i className="fa-solid fa-clock" style={{ marginRight: "4px", color: "#b89058" }}></i><strong>Experience:</strong> {member.years_of_experience}</span>
                                         )}
-                                        <span><i className="fal fa-newspaper" style={{ marginRight: "4px" }}></i><strong>Articles:</strong> {articles.length} Published</span>
+                                        <span><i className="fa-solid fa-newspaper" style={{ marginRight: "4px", color: "#b89058" }}></i><strong>Articles:</strong> {articles.length} Published</span>
                                     </div>
 
                                     <hr style={{ border: "none", borderTop: "1px solid #f1f5f9", margin: "20px 0" }} />
@@ -419,7 +395,7 @@ export default function MemberProfilePage({ params }) {
                                     {member.speaking_topics && (
                                         <div style={{ marginBottom: "10px", padding: "16px 20px", borderRadius: "12px", backgroundColor: "#f8fafc", border: "1px solid #eaedf0" }}>
                                             <h4 style={{ margin: "0 0 6px", fontSize: "14px", fontWeight: "700", color: "#0f1013", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                                                <i className="fal fa-microphone" style={{ marginRight: "6px" }}></i> Keynote Topics & Advisory Mandates
+                                                <i className="fa-solid fa-microphone" style={{ marginRight: "6px", color: "#b89058" }}></i> Keynote Topics & Advisory Mandates
                                             </h4>
                                             <p style={{ margin: 0, fontSize: "14px", color: "#475569", lineHeight: "1.5" }}>
                                                 {member.speaking_topics}
@@ -519,7 +495,7 @@ export default function MemberProfilePage({ params }) {
                                 fontWeight: "700",
                                 color: "#ffffff",
                                 marginBottom: "12px",
-                                fontFamily: "var(--ep-font-serif, 'PT Serif', serif)"
+                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
                             }}>
                                 Connect with {member.full_name} or Apply for Directory Status
                             </h3>
@@ -529,13 +505,13 @@ export default function MemberProfilePage({ params }) {
                             <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
                                 <Link
                                     href="/contact"
-                                    className="btn_style_gold"
+                                    className="btn_style_gold btn_md"
                                 >
                                     Book Executive Audit <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                                 <Link
                                     href="/community"
-                                    className="btn_style_two_dark"
+                                    className="btn_style_two_dark btn_md"
                                 >
                                     Browse All Leaders
                                 </Link>
@@ -581,7 +557,7 @@ export default function MemberProfilePage({ params }) {
                                     color: "#94a3b8"
                                 }}
                             >
-                                <i className="fal fa-times"></i>
+                                <i className="fa-solid fa-xmark"></i>
                             </button>
 
                             <span style={{

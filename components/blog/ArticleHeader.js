@@ -17,20 +17,11 @@ export default function ArticleHeader({
       {/* Category Badge */}
       <div style={{ marginBottom: '20px' }}>
         <span
+          className="prominence_badge"
           style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            padding: '6px 20px',
-            borderRadius: '9999px',
             background: '#0f1013',
             color: '#FFFFFF',
-            fontSize: '11.5px',
-            fontWeight: '700',
-            letterSpacing: '0.8px',
-            textTransform: 'uppercase',
-            border: '1px solid rgba(255, 255, 255, 0.15)',
-            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.15)',
-            fontFamily: 'var(--primary-font)'
+            borderColor: 'rgba(255, 255, 255, 0.2)'
           }}
         >
           {category}
@@ -40,7 +31,7 @@ export default function ArticleHeader({
       {/* H1 Title */}
       <h1
         style={{
-          fontFamily: "var(--primary-font)",
+          fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
           fontSize: 'clamp(30px, 4.5vw, 46px)',
           lineHeight: '1.2',
           color: '#0f1013',
@@ -136,7 +127,7 @@ export default function ArticleHeader({
               style={{
                 display: 'inline-block',
                 padding: '5px 14px',
-                borderRadius: '9999px',
+                borderRadius: '6px',
                 background: 'rgba(15, 16, 19, 0.05)',
                 color: '#0f1013',
                 border: '1px solid rgba(15, 16, 19, 0.1)',

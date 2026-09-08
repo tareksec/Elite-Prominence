@@ -17,8 +17,8 @@ export default function SupabaseSetupNotice({ feature = "this feature" }) {
             gap: "18px",
             alignItems: "flex-start"
         }}>
-            <div style={{ fontSize: "20px", lineHeight: "1", color: "#0D1322", marginTop: "2px", flexShrink: 0 }}>
-                <i className="fal fa-database"></i>
+            <div style={{ fontSize: "20px", lineHeight: "1", color: "#b89058", marginTop: "2px", flexShrink: 0 }}>
+                <i className="fa-solid fa-database"></i>
             </div>
             <div>
                 <h4 style={{ margin: "0 0 8px", color: "#1b2534", fontSize: "18px", fontWeight: "700" }}>
@@ -46,7 +46,7 @@ export default function SupabaseSetupNotice({ feature = "this feature" }) {
                         }}
                     >
                         <span>Open Supabase Dashboard</span>
-                        <i className="fal fa-external-link-alt" style={{ fontSize: "11px" }}></i>
+                        <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: "11px" }}></i>
                     </a>
                     <span style={{ fontSize: "13px", color: "#64748b" }}>
                         Setup file: <code>supabase/schema.sql</code>
