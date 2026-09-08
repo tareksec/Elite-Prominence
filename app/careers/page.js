@@ -3,77 +3,10 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Layout from '@/components/layout/Layout'
+import { MANDATES_DATA, PARTNER_BENEFITS, HIRING_PROTOCOL } from '@/lib/careersData'
 
-const MANDATES = [
-    {
-        id: 'executive-ghostwriter',
-        mandate: 'Mandate Ref. EP-GHOST-01',
-        title: 'Executive Ghostwriter & Senior Editorial Strategist',
-        practice: 'Editorial Architecture & Thought Leadership',
-        arrangement: 'Retained Advisory / Full-Time',
-        compensation: 'Top 1% Global Retainer + Advisory Bonuses',
-        location: 'Remote (London / NY / Zurich / Global)',
-        mission: 'Extract, architect, and author high-signal thought leadership essays for Fortune 500 CEOs, CHROs, and enterprise founders. Must command the nuanced language of governance, talent strategy, and commercial transformation.',
-        imperatives: [
-            'Conduct 30-minute monthly forensic narrative extraction interviews with C-suite clients',
-            'Author publish-ready essays, op-eds, and keynote outlines matching individual executive voices',
-            'Enforce rigorous journalistic standards with zero synthetic or AI-generated filler',
-            'Coordinate with legal/PR teams to ensure absolute compliance with corporate communication disclosures'
-        ],
-        idealProfile: 'Former senior business journalist (FT, WSJ, Bloomberg) or C-suite executive communications counsel with 6+ years advising enterprise leadership.'
-    },
-    {
-        id: 'search-reputation-engineer',
-        mandate: 'Mandate Ref. EP-SEARCH-02',
-        title: 'Search Reputation & Entity Knowledge Graph Architect',
-        practice: 'Technical Reputation & Search Governance',
-        arrangement: 'Full-Time Practice Appointment',
-        compensation: 'Senior Engineering Retainer + Entity Equity Incentives',
-        location: 'Remote (Global)',
-        mission: 'Engineer permanent Google Page 1 stature for globally recognized executive names. Establish immutable Knowledge Graph authority, resolve namesake collision ambiguities, and structure semantic JSON-LD entity graphs.',
-        imperatives: [
-            'Architect and deploy comprehensive schema.org Person and Organization entity structures',
-            'Claim, reconcile, and monitor Google Knowledge Panels for top-tier executives',
-            'Develop defensive search buffers through strategic syndication and owned digital assets',
-            'Analyze organic search engine result pages (SERPs) across global jurisdictions continuously'
-        ],
-        idealProfile: 'Deep technical SEO & entity engineer with proven track record in executive reputation defense, semantic Web standards, and Knowledge Graph validation.'
-    },
-    {
-        id: 'executive-frontend-designer',
-        mandate: 'Mandate Ref. EP-DESIGN-03',
-        title: 'Senior Executive UI/UX & Next.js Design Engineer',
-        practice: 'Sovereign Digital HQ Engineering',
-        arrangement: 'Full-Time Practice Appointment',
-        compensation: 'Senior Staff Engineering Package',
-        location: 'Remote (Global)',
-        mission: 'Design and build bespoke Next.js Executive Digital HQs that reflect boardroom gravitas. Balance architectural elegance, subtle micro-interactions, and 98+ Core Web Vitals performance benchmarks.',
-        imperatives: [
-            'Translate high-level executive personas into museum-grade, bespoke web properties',
-            'Implement semantic, accessible, and responsive components using Next.js App Router and Vanilla CSS',
-            'Eliminate all generic startup and SaaS visual tropes in favor of dignified editorial typography',
-            'Ensure sub-second load times, hardened security, and zero tracking scripts'
-        ],
-        idealProfile: 'Craftsman design technologist with an extensive portfolio of high-end editorial, luxury, or financial institution web architecture.'
-    },
-    {
-        id: 'client-advisory-partner',
-        mandate: 'Mandate Ref. EP-ADVISORY-04',
-        title: 'Executive Advisory Partner (Client Governance)',
-        practice: 'Client Advisory & Engagement Leadership',
-        arrangement: 'Senior Leadership Appointment',
-        compensation: 'Base Executive Retainer + Client Portfolio Share',
-        location: 'Remote (US/UK/EU Working Hours)',
-        mission: 'Act as the strategic counsel and direct liaison to our CEO and CHRO clients. Guide narrative evolution, coordinate cross-functional delivery, and ensure an effortless executive client experience requiring under 30 minutes monthly.',
-        imperatives: [
-            'Lead client onboarding, executive intake interviews, and annual narrative strategic reviews',
-            'Translate client commercial milestones into tactical briefs for our editorial and search teams',
-            'Uphold unwavering confidentiality and institutional discretion at all touchpoints',
-            'Expand executive client opportunities into board appointments and high-tier speaking engagements'
-        ],
-        idealProfile: 'Former management consultant (McKinsey, Bain, BCG), executive search partner (Egon Zehnder, Spencer Stuart, Korn Ferry), or senior corporate affairs director.'
-    }
-]
+const MANDATES = MANDATES_DATA
+
 
 export default function CareersPage() {
     const [selectedRole, setSelectedRole] = useState('')
@@ -384,9 +317,12 @@ export default function CareersPage() {
 
                                     {/* Action row */}
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '16px', borderTop: '1px solid #f1f5f9', flexWrap: 'wrap', gap: '12px' }}>
-                                        <span style={{ fontSize: '13px', color: '#64748b' }}>
-                                            Discreet, direct application reviewed by practice leaders.
-                                        </span>
+                                        <Link 
+                                            href={`/careers/${role.slug || role.id}`}
+                                            style={{ fontSize: '13.5px', fontWeight: '700', color: 'var(--ep-gold, #b89058)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                                        >
+                                            View Full Mandate Dossier <i className="fa-solid fa-arrow-right"></i>
+                                        </Link>
                                         <a 
                                             href="#apply-dossier" 
                                             onClick={() => setSelectedRole(role.title)}
@@ -395,6 +331,41 @@ export default function CareersPage() {
                                             Apply for Mandate <i className="fa-solid fa-arrow-right"></i>
                                         </a>
                                     </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Benefits & Partner Privileges */}
+                <section className="prominence_section" style={{ background: '#FAF8F2', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
+                    <div className="container">
+                        <div className="prominence_header_split">
+                            <div>
+                                <span className="prominence_tracker">Partner Privileges</span>
+                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                    The Sovereign Standard of Stewardship
+                                </h2>
+                            </div>
+                            <div>
+                                <p className="prominence_lead_text">
+                                    We treat specialists as equity partners, not fungible agency cogs. Our practice is built around autonomy, world-class compensation, and deep intellectual space.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="prominence_grid_3">
+                            {PARTNER_BENEFITS.map((b, idx) => (
+                                <div key={idx} className="prominence_card" style={{ padding: '32px 28px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                    <div style={{ width: '42px', height: '42px', borderRadius: '8px', background: 'rgba(184, 144, 88, 0.1)', color: 'var(--ep-gold)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', marginBottom: '18px' }}>
+                                        <i className={b.icon}></i>
+                                    </div>
+                                    <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#0f1013', marginBottom: '10px' }}>
+                                        {b.title}
+                                    </h3>
+                                    <p style={{ fontSize: '14px', color: '#59606a', lineHeight: '1.65', margin: 0 }}>
+                                        {b.desc}
+                                    </p>
                                 </div>
                             ))}
                         </div>

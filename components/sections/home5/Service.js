@@ -41,13 +41,13 @@ export default function Service() {
                                 <i className="fa-solid fa-globe"></i>
                             </div>
                             <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "12px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                                <Link href="/services" style={{ color: "inherit", textDecoration: "none" }}>Digital HQ (Website)</Link>
+                                <Link href="/services/executive-digital-hq" style={{ color: "inherit", textDecoration: "none" }}>Digital HQ (Website)</Link>
                             </h3>
                             <p style={{ color: "#59606a", fontSize: "15px", lineHeight: "25px", marginBottom: "20px" }}>
                                 A bespoke personal website built around your biography, core expertise, case studies, and testimonials — the definitive hub you provide to search chairs and keynote organizers.
                             </p>
                             <div style={{ marginTop: "auto", paddingTop: "14px", borderTop: "1px solid #f1f5f9" }}>
-                                <Link href="/services" className="btn_style_ghost" style={{ padding: 0 }}>
+                                <Link href="/services/executive-digital-hq" className="btn_style_ghost" style={{ padding: 0 }}>
                                     Explore Digital HQ <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>
@@ -60,13 +60,13 @@ export default function Service() {
                                 <i className="fa-solid fa-magnifying-glass"></i>
                             </div>
                             <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "12px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                                <Link href="/services" style={{ color: "inherit", textDecoration: "none" }}>Google Reputation</Link>
+                                <Link href="/services/digital-reputation" style={{ color: "inherit", textDecoration: "none" }}>Google Reputation</Link>
                             </h3>
                             <p style={{ color: "#59606a", fontSize: "15px", lineHeight: "25px", marginBottom: "20px" }}>
                                 When search committees search your name, page one reflects your executive stature — structured entity schema and tier-1 syndication pushing down outdated namesake noise.
                             </p>
                             <div style={{ marginTop: "auto", paddingTop: "14px", borderTop: "1px solid #f1f5f9" }}>
-                                <Link href="/services" className="btn_style_ghost" style={{ padding: 0 }}>
+                                <Link href="/services/digital-reputation" className="btn_style_ghost" style={{ padding: 0 }}>
                                     Explore Reputation Management <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>
@@ -79,13 +79,13 @@ export default function Service() {
                                 <i className="fab fa-linkedin-in"></i>
                             </div>
                             <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "12px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                                <Link href="/services" style={{ color: "inherit", textDecoration: "none" }}>LinkedIn Thought Leadership</Link>
+                                <Link href="/services/thought-leadership" style={{ color: "inherit", textDecoration: "none" }}>LinkedIn Thought Leadership</Link>
                             </h3>
                             <p style={{ color: "#59606a", fontSize: "15px", lineHeight: "25px", marginBottom: "20px" }}>
                                 Strategic ghostwriting that captures your authentic leadership voice — keeping you top-of-mind with board nominating committees without consuming your executive calendar.
                             </p>
                             <div style={{ marginTop: "auto", paddingTop: "14px", borderTop: "1px solid #f1f5f9" }}>
-                                <Link href="/services" className="btn_style_ghost" style={{ padding: 0 }}>
+                                <Link href="/services/thought-leadership" className="btn_style_ghost" style={{ padding: 0 }}>
                                     Explore Executive Voice <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>

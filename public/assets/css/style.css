@@ -639,51 +639,37 @@ button:disabled,
     transform:scale(1) translateY(0px);
 }
 
-.float-bob-y {
-    animation-name: float-bob-y;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    -webkit-animation-name: float-bob-y;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-name: float-bob-y;
-    -moz-animation-duration: 2s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-    -ms-animation-name: float-bob-y;
-    -ms-animation-duration: 2s;
-    -ms-animation-iteration-count: infinite;
-    -ms-animation-timing-function: linear;
-    -o-animation-name: float-bob-y;
-    -o-animation-duration: 2s;
-    -o-animation-iteration-count: infinite;
-    -o-animation-timing-function: linear;
-  }
-  
-  .float-bob-x{
-    animation-name: float-bob-x;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    -webkit-animation-name: float-bob-x;
-    -webkit-animation-duration: 15s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-name: float-bob-x;
-    -moz-animation-duration: 15s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-    -ms-animation-name: float-bob-x;
-    -ms-animation-duration: 15s;
-    -ms-animation-iteration-count: infinite;
-    -ms-animation-timing-function: linear;
-    -o-animation-name: float-bob-x;
-    -o-animation-duration: 15s;
-    -o-animation-iteration-count: infinite;
-    -o-animation-timing-function: linear;
-  }
+/* Sophisticated Subtle Transitions (replaces legacy constant float bobbing) */
+.float-bob-y,
+.float-bob-x {
+    animation: none;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.float-bob-y:hover,
+.float-bob-x:hover {
+    transform: translateY(-4px);
+}
+
+/* Global Prefers-Reduced-Motion Compliance */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+    .float-bob-y,
+    .float-bob-x,
+    .rotated_element,
+    [data-aos] {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
 
   @-webkit-keyframes ripple {
     70% {
@@ -7874,6 +7860,87 @@ img {
         gap: 20px;
     }
 }
+
+/* ==========================================================================
+   Section 15: Mobile Is Not An Afterthought — Mobile Ergonomics
+   ========================================================================== */
+@media (max-width: 767px) {
+    /* Responsive Padding & Cards: Reclaiming screen real-estate */
+    .prominence_card,
+    .prominence_card_dark,
+    .prominence_depth_card,
+    .prominence_depth_card_dark {
+        padding: 24px 20px !important;
+        border-radius: var(--ep-radius-lg, 12px) !important;
+    }
+    
+    /* Header Split Refinement on Mobile */
+    .prominence_header_split {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        margin-bottom: 36px !important;
+        text-align: left;
+    }
+    
+    .prominence_header_centered {
+        margin-bottom: 36px !important;
+        padding: 0 4px;
+    }
+    
+    .prominence_lead_text {
+        font-size: 15px !important;
+        line-height: 24px !important;
+    }
+    
+    /* Full-Width Touch Buttons on Mobile */
+    .banner_btn_area,
+    .prominence_btn_group {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 12px !important;
+    }
+    
+    .banner_btn_area .link_btn,
+    .banner_btn_area .link_btn a,
+    .prominence_btn_group .btn_style_one,
+    .prominence_btn_group .btn_style_two,
+    .prominence_btn_group .btn_style_gold,
+    .prominence_btn_group .btn_style_two_dark {
+        width: 100% !important;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    /* Touch-Safe Horizontal Scrollers */
+    .prominence_table_wrapper {
+        margin: 0 -12px;
+        padding: 0 12px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Sticky Elements Gracefully Unstuck on Mobile */
+    .prominence_sticky_card {
+        position: relative !important;
+        top: 0 !important;
+        margin-bottom: 32px !important;
+    }
+
+    /* Form Inputs on Mobile (16px prevents iOS Safari zoom) */
+    .prominence_input,
+    .prominence_select,
+    .prominence_textarea {
+        font-size: 16px !important;
+        min-height: 48px;
+    }
+
+    /* Page Intro Padding */
+    .prominence_page_intro {
+        padding: 56px 0 44px !important;
+    }
+}
+
 
 
 
