@@ -11,7 +11,7 @@ export default function Banner() {
                     backgroundImage: "url(/assets/images/elite/hero_executive.jpg)", 
                     backgroundPosition: "right 25%", 
                     backgroundSize: "cover",
-                    filter: "brightness(1.18) contrast(1.04)"
+                    filter: "brightness(1.3) contrast(1.1)"
                 }}
             />
             <div className="container">
@@ -23,11 +23,11 @@ export default function Banner() {
                                 Executive Reputation &amp; Digital Stature
                             </span>
 
-                            <h1 style={{ fontSize: "clamp(30px, 4.5vw, 50px)", fontWeight: "700", lineHeight: "1.18", marginBottom: "20px", color: "#ffffff", letterSpacing: "-0.5px", textShadow: "0 2px 4px rgba(0,0,0,0.6)" }}>
+                            <h1 style={{ fontSize: "clamp(30px, 4.5vw, 50px)", fontWeight: "700", lineHeight: "1.18", marginBottom: "20px", color: "#ffffff", letterSpacing: "-0.5px", textShadow: "0 2px 10px rgba(0,0,0,0.85), 0 1px 3px rgba(0,0,0,0.9)" }}>
                                 Build a Digital Presence That Commands Attention.
                             </h1>
 
-                            <p style={{ fontSize: "17.5px", lineHeight: "29px", color: "rgba(255, 255, 255, 0.95)", maxWidth: "600px", marginBottom: "30px", textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}>
+                            <p style={{ fontSize: "17.5px", lineHeight: "29px", color: "rgba(255, 255, 255, 0.95)", maxWidth: "600px", marginBottom: "30px", textShadow: "0 2px 8px rgba(0,0,0,0.85), 0 1px 3px rgba(0,0,0,0.9)" }}>
                                 We architect the sovereign websites, search reputation, strategic ghostwriting, and authority assets that represent CEOs, CHROs, Founders, and enterprise leaders before they walk into the room.
                             </p>
 
@@ -49,17 +49,17 @@ export default function Banner() {
                             </div>
 
                             {/* Executive Trust Badges */}
-                            <div style={{ marginTop: "32px", paddingTop: "22px", borderTop: "1px solid rgba(255, 255, 255, 0.16)", display: "flex", flexWrap: "wrap", gap: "18px", alignItems: "center" }}>
-                                <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "rgba(255, 255, 255, 0.92)", fontSize: "12.5px", fontWeight: "600" }}>
-                                    <i className="fa-solid fa-shield-halved" style={{ color: "#A78BFA", fontSize: "14px" }}></i>
+                            <div style={{ marginTop: "32px", padding: "12px 18px", backgroundColor: "rgba(13, 13, 20, 0.5)", backdropFilter: "blur(8px)", border: "1px solid rgba(255, 255, 255, 0.14)", borderRadius: "12px", display: "inline-flex", flexWrap: "wrap", gap: "20px", alignItems: "center" }}>
+                                <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "#ffffff", fontSize: "12.5px", fontWeight: "600", textShadow: "0 1px 2px rgba(0,0,0,0.6)" }}>
+                                    <i className="fa-solid fa-shield-halved" style={{ color: "#C084FC", fontSize: "14px" }}></i>
                                     <span>Strict Corporate NDA</span>
                                 </div>
-                                <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "rgba(255, 255, 255, 0.92)", fontSize: "12.5px", fontWeight: "600" }}>
-                                    <i className="fa-solid fa-building-columns" style={{ color: "#A78BFA", fontSize: "14px" }}></i>
+                                <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "#ffffff", fontSize: "12.5px", fontWeight: "600", textShadow: "0 1px 2px rgba(0,0,0,0.6)" }}>
+                                    <i className="fa-solid fa-building-columns" style={{ color: "#C084FC", fontSize: "14px" }}></i>
                                     <span>Fortune 500 Leaders</span>
                                 </div>
-                                <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "rgba(255, 255, 255, 0.92)", fontSize: "12.5px", fontWeight: "600" }}>
-                                    <i className="fa-solid fa-chart-line" style={{ color: "#A78BFA", fontSize: "14px" }}></i>
+                                <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "#ffffff", fontSize: "12.5px", fontWeight: "600", textShadow: "0 1px 2px rgba(0,0,0,0.6)" }}>
+                                    <i className="fa-solid fa-chart-line" style={{ color: "#C084FC", fontSize: "14px" }}></i>
                                     <span>Google Page 1 Guaranteed</span>
                                 </div>
                             </div>
