@@ -10,7 +10,8 @@ export default function Banner() {
                 style={{ 
                     backgroundImage: "url(/assets/images/elite/hero_executive.jpg)", 
                     backgroundPosition: "right 25%", 
-                    backgroundSize: "cover" 
+                    backgroundSize: "cover",
+                    filter: "brightness(1.18) contrast(1.04)"
                 }}
             />
             <div className="container">
@@ -106,8 +107,8 @@ export default function Banner() {
                                 }}
                             >
                                 <img
-                                    src="/assets/images/elite/executive_stature_dashboard.jpg"
-                                    alt="Executive Digital Reputation & Stature Dashboard"
+                                    src="/assets/images/elite/executive_presence_platform.jpg"
+                                    alt="Executive Presence & Digital Authority Platform"
                                     style={{
                                         width: "100%",
                                         height: "auto",
