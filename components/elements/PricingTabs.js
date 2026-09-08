@@ -87,7 +87,7 @@ export default function PricingTabs() {
                             fontWeight: "700",
                             letterSpacing: "1.2px",
                             textTransform: "uppercase",
-                            color: "#7c3aed", backgroundColor: "#f3e8ff", border: "1px solid rgba(124, 58, 237, 0.2)",
+                            color: "#0D1322", backgroundColor: "rgba(13, 19, 34, 0.05)", border: "1px solid rgba(13, 19, 34, 0.12)",
                             padding: "4px 14px",
                             borderRadius: "20px",
                             marginBottom: "10px"
@@ -145,7 +145,7 @@ export default function PricingTabs() {
                                             "Brand building across 6 platforms"
                                         ].map((feat, idx) => (
                                             <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                                <span style={{ color: '#7c3aed', fontWeight: '800', fontSize: '16px', lineHeight: '1' }}>✓</span>
+                                                <i className="fal fa-check-circle" style={{ color: '#0f172a', fontSize: '14px', marginTop: '3px' }}></i>
                                                 <span>{feat}</span>
                                             </li>
                                         ))}
@@ -182,8 +182,8 @@ export default function PricingTabs() {
                                 backgroundColor: '#ffffff',
                                 borderRadius: '16px',
                                 padding: '40px 32px',
-                                border: "2px solid #7c3aed",
-                                boxShadow: "0 16px 40px rgba(124, 58, 237, 0.15)",
+                                border: "2px solid #0D1322",
+                                boxShadow: "0 16px 40px rgba(0, 0, 0, 0.08)",
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'space-between',
@@ -196,7 +196,7 @@ export default function PricingTabs() {
                                     top: '-13px',
                                     left: '50%',
                                     transform: 'translateX(-50%)',
-                                    background: "linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)",
+                                    background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
                                     color: '#ffffff',
                                     fontSize: '11px',
                                     fontWeight: '800',
@@ -204,7 +204,8 @@ export default function PricingTabs() {
                                     textTransform: 'uppercase',
                                     padding: '4px 16px',
                                     borderRadius: '20px',
-                                    boxShadow: "0 4px 12px rgba(192, 38, 168, 0.35)"
+                                    border: '1px solid rgba(255, 255, 255, 0.18)',
+                                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.25)"
                                 }}>
                                     Most Popular
                                 </span>
@@ -218,14 +219,14 @@ export default function PricingTabs() {
                                         </p>
                                     </div>
                                     <div style={{ margin: '20px 0 28px', borderBottom: '1px solid #edf2f7', paddingBottom: '20px' }}>
-                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#7c3aed', lineHeight: '1' }}>
+                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#0D1322', lineHeight: '1' }}>
                                             $69
                                         </span>
                                         <span style={{ fontSize: '15px', color: '#64748b', fontWeight: '500', marginLeft: '6px' }}>
                                             / one-time
                                         </span>
                                     </div>
-                                    <div style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#7c3aed', marginBottom: '14px' }}>
+                                    <div style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#0D1322', marginBottom: '14px' }}>
                                         What's Included:
                                     </div>
                                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
@@ -238,7 +239,7 @@ export default function PricingTabs() {
                                             "15+ reference & article postings"
                                         ].map((feat, idx) => (
                                             <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                                <span style={{ color: '#7c3aed', fontWeight: '800', fontSize: '16px', lineHeight: '1' }}>✓</span>
+                                                <i className="fal fa-check-circle" style={{ color: '#0f172a', fontSize: '14px', marginTop: '3px' }}></i>
                                                 <span dangerouslySetInnerHTML={{ __html: feat.replace("Everything in Basic", "<strong>Everything in Basic</strong>") }}></span>
                                             </li>
                                         ))}
@@ -305,7 +306,7 @@ export default function PricingTabs() {
                                             "Full name-search coverage across page one"
                                         ].map((feat, idx) => (
                                             <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                                <span style={{ color: '#7c3aed', fontWeight: '800', fontSize: '16px', lineHeight: '1' }}>✓</span>
+                                                <i className="fal fa-check-circle" style={{ color: '#0f172a', fontSize: '14px', marginTop: '3px' }}></i>
                                                 <span dangerouslySetInnerHTML={{ __html: feat.replace("Everything in Growth", "<strong>Everything in Growth</strong>") }}></span>
                                             </li>
                                         ))}
@@ -354,7 +355,7 @@ export default function PricingTabs() {
                             fontWeight: "700",
                             letterSpacing: "1.2px",
                             textTransform: "uppercase",
-                            color: "#7c3aed", backgroundColor: "#f3e8ff", border: "1px solid rgba(124, 58, 237, 0.2)",
+                            color: "#0D1322", backgroundColor: "rgba(13, 19, 34, 0.05)", border: "1px solid rgba(13, 19, 34, 0.12)",
                             padding: "4px 14px",
                             borderRadius: "20px",
                             marginBottom: "10px"
@@ -412,7 +413,7 @@ export default function PricingTabs() {
                                             "Google presence upkeep"
                                         ].map((feat, idx) => (
                                             <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                                <span style={{ color: '#7c3aed', fontWeight: '800', fontSize: '16px', lineHeight: '1' }}>✓</span>
+                                                <i className="fal fa-check-circle" style={{ color: '#0f172a', fontSize: '14px', marginTop: '3px' }}></i>
                                                 <span>{feat}</span>
                                             </li>
                                         ))}
@@ -449,8 +450,8 @@ export default function PricingTabs() {
                                 backgroundColor: '#ffffff',
                                 borderRadius: '16px',
                                 padding: '40px 32px',
-                                border: "2px solid #7c3aed",
-                                boxShadow: "0 16px 40px rgba(124, 58, 237, 0.15)",
+                                border: "2px solid #0D1322",
+                                boxShadow: "0 16px 40px rgba(0, 0, 0, 0.08)",
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'space-between',
@@ -463,7 +464,7 @@ export default function PricingTabs() {
                                     top: '-13px',
                                     left: '50%',
                                     transform: 'translateX(-50%)',
-                                    background: "linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)",
+                                    background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
                                     color: '#ffffff',
                                     fontSize: '11px',
                                     fontWeight: '800',
@@ -471,7 +472,8 @@ export default function PricingTabs() {
                                     textTransform: 'uppercase',
                                     padding: '4px 16px',
                                     borderRadius: '20px',
-                                    boxShadow: "0 4px 12px rgba(192, 38, 168, 0.35)"
+                                    border: '1px solid rgba(255, 255, 255, 0.18)',
+                                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.25)"
                                 }}>
                                     Most Popular
                                 </span>
@@ -485,14 +487,14 @@ export default function PricingTabs() {
                                         </p>
                                     </div>
                                     <div style={{ margin: '20px 0 28px', borderBottom: '1px solid #edf2f7', paddingBottom: '20px' }}>
-                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#7c3aed', lineHeight: '1' }}>
+                                        <span style={{ fontSize: '46px', fontWeight: '800', color: '#0D1322', lineHeight: '1' }}>
                                             $39
                                         </span>
                                         <span style={{ fontSize: '15px', color: '#64748b', fontWeight: '500', marginLeft: '6px' }}>
                                             / month
                                         </span>
                                     </div>
-                                    <div style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#7c3aed', marginBottom: '14px' }}>
+                                    <div style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', color: '#0D1322', marginBottom: '14px' }}>
                                         What's Included:
                                     </div>
                                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
@@ -505,7 +507,7 @@ export default function PricingTabs() {
                                             "5–8 reference/article posts per month"
                                         ].map((feat, idx) => (
                                             <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                                <span style={{ color: '#7c3aed', fontWeight: '800', fontSize: '16px', lineHeight: '1' }}>✓</span>
+                                                <i className="fal fa-check-circle" style={{ color: '#0f172a', fontSize: '14px', marginTop: '3px' }}></i>
                                                 <span dangerouslySetInnerHTML={{ __html: feat.replace("Everything in Basic", "<strong>Everything in Basic</strong>") }}></span>
                                             </li>
                                         ))}
@@ -572,7 +574,7 @@ export default function PricingTabs() {
                                             "Full name-search coverage, maintained ongoingly"
                                         ].map((feat, idx) => (
                                             <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                                <span style={{ color: '#7c3aed', fontWeight: '800', fontSize: '16px', lineHeight: '1' }}>✓</span>
+                                                <i className="fal fa-check-circle" style={{ color: '#0f172a', fontSize: '14px', marginTop: '3px' }}></i>
                                                 <span dangerouslySetInnerHTML={{ __html: feat.replace("Everything in Growth", "<strong>Everything in Growth</strong>") }}></span>
                                             </li>
                                         ))}
@@ -614,7 +616,7 @@ export default function PricingTabs() {
                         fontWeight: "700",
                         letterSpacing: "1.2px",
                         textTransform: "uppercase",
-                        color: "#7c3aed", backgroundColor: "#f3e8ff", border: "1px solid rgba(124, 58, 237, 0.2)",
+                        color: "#0D1322", backgroundColor: "rgba(13, 19, 34, 0.05)", border: "1px solid rgba(13, 19, 34, 0.12)",
                         padding: "4px 14px",
                         borderRadius: "20px",
                         marginBottom: "10px"
@@ -760,7 +762,7 @@ export default function PricingTabs() {
                     width: 48px;
                     height: 48px;
                     border-radius: 50%;
-                    background-color: #7c3aed;
+                    background-color: #0D1322;
                     color: #ffffff;
                     display: flex;
                     align-items: center;
@@ -768,7 +770,7 @@ export default function PricingTabs() {
                     font-size: 15px;
                     font-weight: 800;
                     z-index: 2;
-                    box-shadow: 0 4px 12px rgba(192, 38, 168, 0.35);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
                     border: 3px solid #ffffff;
                     flex-shrink: 0;
                 }
@@ -778,7 +780,7 @@ export default function PricingTabs() {
                     left: 50%;
                     width: 100%;
                     height: 3px;
-                    background: linear-gradient(90deg, #7c3aed, #93c5fd);
+                    background: #E5E7EB;
                     z-index: 1;
                     transform: translateY(-50%);
                 }
@@ -795,7 +797,7 @@ export default function PricingTabs() {
                     transition: transform 0.2s ease, border-color 0.2s ease;
                 }
                 .step_card_content:hover {
-                    border-color: #7c3aed;
+                    border-color: #0D1322;
                     transform: translateY(-3px);
                 }
                 .step_badge {
@@ -804,9 +806,9 @@ export default function PricingTabs() {
                     font-weight: 700;
                     text-transform: uppercase;
                     letter-spacing: 0.8px;
-                    color: #7c3aed;
-                    background-color: rgba(36, 96, 226, 0.08);
-                    border: 1px solid rgba(36, 96, 226, 0.2);
+                    color: #0D1322;
+                    background-color: rgba(13, 19, 34, 0.05);
+                    border: 1px solid rgba(13, 19, 34, 0.12);
                     padding: 2px 10px;
                     borderRadius: 12px;
                     margin-bottom: 8px;
@@ -874,7 +876,7 @@ export default function PricingTabs() {
                         width: 3px;
                         height: auto;
                         transform: none;
-                        background: linear-gradient(180deg, #7c3aed, #93c5fd);
+                        background: #E5E7EB;
                     }
                     .step_card_content {
                         align-items: flex-start;

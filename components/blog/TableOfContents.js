@@ -117,11 +117,11 @@ export default function TableOfContents({ headings = [] }) {
                     padding: heading.level === 3 ? '6px 12px 6px 28px' : '6px 12px 6px 16px',
                     fontSize: heading.level === 3 ? '13px' : '14px',
                     lineHeight: '1.4',
-                    color: isActive ? '#7C3AED' : '#64748B',
-                    fontWeight: isActive ? '600' : '400',
-                    borderLeft: isActive ? '2px solid #7C3AED' : '2px solid transparent',
+                    color: isActive ? '#0D1322' : '#64748B',
+                    fontWeight: isActive ? '700' : '400',
+                    borderLeft: isActive ? '2px solid #0D1322' : '2px solid transparent',
                     marginLeft: '-2px',
-                    background: isActive ? 'linear-gradient(90deg, rgba(124, 58, 237, 0.06) 0%, transparent 100%)' : 'transparent',
+                    background: isActive ? 'rgba(13, 19, 34, 0.04)' : 'transparent',
                     textDecoration: 'none',
                     transition: 'all 0.2s ease'
                   }}
@@ -144,17 +144,17 @@ export default function TableOfContents({ headings = [] }) {
           position: 'fixed',
           bottom: '84px',
           right: '20px',
-          background: 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)',
+          background: '#0D1322',
           color: '#FFFFFF',
           borderRadius: '9999px',
           padding: '10px 18px',
           fontSize: '13px',
           fontWeight: '600',
-          boxShadow: '0 8px 25px rgba(192, 38, 168, 0.25)',
+          boxShadow: '0 8px 25px rgba(0, 0, 0, 0.35)',
           zIndex: 999,
           alignItems: 'center',
           gap: '6px',
-          border: 'none',
+          border: '1px solid rgba(255, 255, 255, 0.15)',
           cursor: 'pointer'
         }}
       >
@@ -221,8 +221,8 @@ export default function TableOfContents({ headings = [] }) {
                         display: 'block',
                         padding: heading.level === 3 ? '8px 12px 8px 24px' : '8px 12px 8px 16px',
                         fontSize: heading.level === 3 ? '13px' : '14px',
-                        color: isActive ? '#7C3AED' : '#64748B',
-                        fontWeight: isActive ? '600' : '400',
+                        color: isActive ? '#0D1322' : '#64748B',
+                        fontWeight: isActive ? '700' : '400',
                         textDecoration: 'none'
                       }}
                     >

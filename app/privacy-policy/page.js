@@ -33,12 +33,12 @@ export default function PrivacyPolicyPage() {
                     <div className="container" style={{ maxWidth: "860px" }}>
                         {/* Legal Notice Banner */}
                         <div style={{
-                            backgroundColor: "#ffffff", border: "1px solid #e2e8f0", borderLeft: "4px solid #7c3aed", borderRadius: "10px", padding: "16px 22px", marginBottom: "35px", fontSize: "14px", lineHeight: "1.6", color: "#475569", boxShadow: "0 2px 8px rgba(0,0,0,0.02)"
+                            backgroundColor: "#ffffff", border: "1px solid #e2e8f0", borderLeft: "4px solid #0D1322", borderRadius: "10px", padding: "16px 22px", marginBottom: "35px", fontSize: "14px", lineHeight: "1.6", color: "#475569", boxShadow: "0 2px 8px rgba(0,0,0,0.02)"
                         }}>
                             <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
-                                <span style={{ fontSize: "16px", color: "#7c3aed", fontWeight: "700" }}>ℹ️</span>
+                                <i className="fal fa-info-circle" style={{ fontSize: "16px", color: "#0D1322", marginTop: "3px", flexShrink: 0 }}></i>
                                 <div>
-                                    <strong style={{ fontWeight: "700", color: "#0f172a" }}>Privacy Notice:</strong> This is a structural starting draft, not a lawyer-reviewed document. Before accepting real payments or scaling user signups, have this reviewed by a qualified lawyer.
+                                    <strong style={{ fontWeight: "700", color: "#0f172a" }}>Advisory Notice:</strong> This is a structural starting draft, not a lawyer-reviewed document. Before accepting real payments or scaling user signups, have this reviewed by a qualified lawyer &mdash; especially the GDPR / CCPA sections, which are intentionally left as placeholders below.
                                 </div>
                             </div>
                         </div>
@@ -122,8 +122,8 @@ export default function PrivacyPolicyPage() {
                                         <strong style={{ color: "#1b2534" }}>Google Analytics (or equivalent)</strong> &mdash; site analytics and visitor usage metrics
                                     </li>
                                 </ul>
-                                <p style={{ fontWeight: "600", color: "#1e3b2b", marginTop: "12px" }}>
-                                    ✓ We do not sell your personal information to third parties.
+                                <p style={{ fontWeight: "600", color: "#0f172a", marginTop: "12px" }}>
+                                    <i className="fal fa-check-circle" style={{ marginRight: "6px" }}></i> We do not sell your personal information to third parties.
                                 </p>
 
                                 {/* Section 5 */}
@@ -142,7 +142,7 @@ export default function PrivacyPolicyPage() {
                                     fontSize: "14px",
                                     color: "#64748b"
                                 }}>
-                                    ℹ️ <em>Note for European / UK compliance: Add a cookie-consent banner if serving EU/UK visitors, since that is a legal requirement there — flagged for lawyer review.</em>
+                                    <i className="fal fa-info-circle" style={{ marginRight: "6px" }}></i><em>Note for European / UK compliance: Add a cookie-consent banner if serving EU/UK visitors, since that is a legal requirement there — flagged for lawyer review.</em>
                                 </div>
 
                                 {/* Section 6 */}

@@ -147,9 +147,9 @@ export default function ExecutiveDirectoryTeaser() {
                                     borderTop: "1px solid #f1f5f9",
                                     borderBottom: "1px solid #f1f5f9"
                                 }}>
-                                    <span>📍 {member.location}</span>
+                                    <span><i className="fa-solid fa-location-dot me-1"></i>{member.location}</span>
                                     <span>•</span>
-                                    <span>📰 {member.articlesCount} Published Articles</span>
+                                    <span><i className="fa-regular fa-newspaper me-1"></i>{member.articlesCount} Published Articles</span>
                                 </div>
 
                                 {/* Featured Perspective Preview */}

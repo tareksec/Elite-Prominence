@@ -491,7 +491,7 @@ export default function DashboardPage() {
                                             textDecoration: "none"
                                         }}
                                     >
-                                        🌐 View My Public Profile ↗
+                                        <i className="fal fa-external-link-alt" style={{ marginRight: "6px" }}></i> View Public Profile
                                     </Link>
                                 )}
 
@@ -512,7 +512,7 @@ export default function DashboardPage() {
                                             textDecoration: "none"
                                         }}
                                     >
-                                        🛡️ Admin Console
+                                        <i className="fal fa-shield-alt" style={{ marginRight: "6px" }}></i> Admin Console
                                     </Link>
                                 )}
 
@@ -551,7 +551,7 @@ export default function DashboardPage() {
                                     Executive Profile Completeness: <strong>{completeness}%</strong>
                                 </span>
                                 <span style={{ fontSize: "12px", color: completeness === 100 ? "#16a34a" : "#d97706", fontWeight: "700" }}>
-                                    {completeness === 100 ? "✓ Ready for Google Search & Directory Syndication" : "Complete bio and LinkedIn for maximum reach"}
+                                    {completeness === 100 ? "Ready for Google Search & Directory Syndication" : "Complete bio and LinkedIn for maximum reach"}
                                 </span>
                             </div>
                             <div style={{ width: "100%", height: "8px", backgroundColor: "#f1f5f9", borderRadius: "6px", overflow: "hidden" }}>
@@ -576,7 +576,7 @@ export default function DashboardPage() {
                                 marginBottom: "24px",
                                 border: "1px solid #86efac"
                             }}>
-                                ✓ {profileSuccess}
+                                <i className="fal fa-check-circle" style={{ marginRight: "6px" }}></i> {profileSuccess}
                             </div>
                         )}
 
@@ -590,7 +590,7 @@ export default function DashboardPage() {
                                 marginBottom: "24px",
                                 border: "1px solid #fca5a5"
                             }}>
-                                ⚠️ {globalError}
+                                <i className="fal fa-exclamation-triangle" style={{ marginRight: "6px" }}></i> {globalError}
                             </div>
                         )}
 
@@ -619,7 +619,7 @@ export default function DashboardPage() {
                                     marginBottom: "-2px"
                                 }}
                             >
-                                👤 Executive Profile Studio
+                                <i className="fal fa-user" style={{ marginRight: "8px" }}></i> Executive Profile Studio
                             </button>
 
                             <button
@@ -637,7 +637,7 @@ export default function DashboardPage() {
                                     marginBottom: "-2px"
                                 }}
                             >
-                                📰 Thought Leadership Articles ({myArticles.length})
+                                <i className="fal fa-newspaper" style={{ marginRight: "8px" }}></i> Thought Leadership Articles ({myArticles.length})
                             </button>
 
                             <button
@@ -655,7 +655,7 @@ export default function DashboardPage() {
                                     marginBottom: "-2px"
                                 }}
                             >
-                                ⭐ Client Testimonials ({myReviews.length})
+                                <i className="fal fa-star" style={{ marginRight: "8px" }}></i> Client Testimonials ({myReviews.length})
                             </button>
 
                             <button
@@ -673,7 +673,7 @@ export default function DashboardPage() {
                                     marginBottom: "-2px"
                                 }}
                             >
-                                🧭 Executive Playbooks & Advisory
+                                <i className="fal fa-compass" style={{ marginRight: "8px" }}></i> Executive Playbooks & Advisory
                             </button>
                         </div>
 
@@ -870,7 +870,7 @@ export default function DashboardPage() {
                                                                 cursor: "pointer"
                                                             }}
                                                         >
-                                                            {selected ? "✓ " : "+ "}{tag}
+                                                            {selected ? "• " : "+ "}{tag}
                                                         </button>
                                                     )
                                                 })}
@@ -945,7 +945,7 @@ export default function DashboardPage() {
                                                 boxShadow: "0 4px 14px rgba(22, 45, 32, 0.2)"
                                             }}
                                         >
-                                            {updatingProfile ? 'Saving Executive Profile...' : '💾 Save & Update Executive Profile'}
+                                            {updatingProfile ? 'Saving Executive Profile...' : 'Save & Update Executive Profile'}
                                         </button>
                                     </form>
                                 </div>
@@ -979,7 +979,7 @@ export default function DashboardPage() {
                                                     target="_blank"
                                                     style={{ fontSize: "12px", color: "#162d20", fontWeight: "700", textDecoration: "underline" }}
                                                 >
-                                                    Open Full Page ↗
+                                                    Open Full Page <i className="fal fa-external-link-alt" style={{ marginLeft: "4px", fontSize: "11px" }}></i>
                                                 </Link>
                                             )}
                                         </div>
@@ -1013,9 +1013,9 @@ export default function DashboardPage() {
 
                                         {/* Metadata */}
                                         <div style={{ display: "flex", gap: "10px", fontSize: "12px", color: "#64748b", marginBottom: "14px", flexWrap: "wrap" }}>
-                                            {location && <span>📍 {location}</span>}
-                                            {industry && <span>🏢 {industry}</span>}
-                                            <span>⏱️ {yearsExp}</span>
+                                            {location && <span><i className="fal fa-map-marker-alt" style={{ marginRight: "4px" }}></i>{location}</span>}
+                                            {industry && <span><i className="fal fa-building" style={{ marginRight: "4px" }}></i>{industry}</span>}
+                                            <span><i className="fal fa-clock" style={{ marginRight: "4px" }}></i>{yearsExp}</span>
                                         </div>
 
                                         {/* Bio Snippet */}
@@ -1057,7 +1057,7 @@ export default function DashboardPage() {
                                             )}
                                             {websiteUrl && (
                                                 <span style={{ fontSize: "12px", color: "#162d20", fontWeight: "700" }}>
-                                                    🌐 Advisory Site
+                                                    <i className="fal fa-globe" style={{ marginRight: "4px" }}></i> Advisory Site
                                                 </span>
                                             )}
                                         </div>
@@ -1080,7 +1080,7 @@ export default function DashboardPage() {
 
                                     {myArticles.length === 0 ? (
                                         <div style={{ backgroundColor: "#ffffff", padding: "40px", borderRadius: "14px", textAlign: "center", border: "1px solid #e5e3db" }}>
-                                            <div style={{ fontSize: "36px", marginBottom: "10px" }}>✍️</div>
+                                            <div style={{ fontSize: "28px", color: "#64748b", marginBottom: "10px" }}><i className="fal fa-feather-alt"></i></div>
                                             <p style={{ margin: 0, color: "#64748b", fontSize: "15px" }}>
                                                 You haven't submitted any thought leadership articles yet. Use the writer studio on the right to publish your first executive article.
                                             </p>
@@ -1143,7 +1143,7 @@ export default function DashboardPage() {
 
                                     {articleSuccess && (
                                         <div style={{ backgroundColor: "#f0fdf4", color: "#15803d", padding: "12px 16px", borderRadius: "8px", fontSize: "13px", marginBottom: "18px", border: "1px solid #86efac" }}>
-                                            ✓ {articleSuccess}
+                                            <i className="fal fa-check-circle" style={{ marginRight: "6px" }}></i> {articleSuccess}
                                         </div>
                                     )}
 
@@ -1211,7 +1211,7 @@ export default function DashboardPage() {
                                                 width: "100%"
                                             }}
                                         >
-                                            {submittingArticle ? 'Submitting Article...' : '🚀 Submit Article to Editorial Board'}
+                                            {submittingArticle ? 'Submitting Article...' : 'Submit Article to Editorial Board'}
                                         </button>
                                     </form>
                                 </div>
@@ -1231,7 +1231,7 @@ export default function DashboardPage() {
 
                                     {myReviews.length === 0 ? (
                                         <div style={{ backgroundColor: "#ffffff", padding: "40px", borderRadius: "14px", textAlign: "center", border: "1px solid #e5e3db" }}>
-                                            <div style={{ fontSize: "36px", marginBottom: "10px" }}>⭐</div>
+                                            <div style={{ fontSize: "28px", color: "#64748b", marginBottom: "10px" }}><i className="fal fa-star"></i></div>
                                             <p style={{ margin: 0, color: "#64748b", fontSize: "15px" }}>
                                                 You haven't submitted a client review or advisory endorsement yet.
                                             </p>
@@ -1281,7 +1281,7 @@ export default function DashboardPage() {
 
                                     {reviewSuccess && (
                                         <div style={{ backgroundColor: "#f0fdf4", color: "#15803d", padding: "12px 16px", borderRadius: "8px", fontSize: "13px", marginBottom: "18px", border: "1px solid #86efac" }}>
-                                            ✓ {reviewSuccess}
+                                            <i className="fal fa-check-circle" style={{ marginRight: "6px" }}></i> {reviewSuccess}
                                         </div>
                                     )}
 
@@ -1330,7 +1330,7 @@ export default function DashboardPage() {
                                                 width: "100%"
                                             }}
                                         >
-                                            {submittingReview ? 'Submitting Review...' : '⭐ Submit Endorsement'}
+                                            {submittingReview ? 'Submitting Review...' : 'Submit Endorsement'}
                                         </button>
                                     </form>
                                 </div>
@@ -1353,7 +1353,7 @@ export default function DashboardPage() {
 
                                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px", marginBottom: "36px" }}>
                                     <div style={{ backgroundColor: "#ffffff", padding: "26px", borderRadius: "16px", border: "1px solid #e5e3db" }}>
-                                        <div style={{ fontSize: "28px", marginBottom: "10px" }}>🏛️</div>
+                                        <div style={{ fontSize: "24px", color: "#0f172a", marginBottom: "10px" }}><i className="fal fa-landmark"></i></div>
                                         <h4 style={{ fontSize: "18px", fontWeight: "800", color: "#162d20", margin: "0 0 8px" }}>
                                             The 90-Day Executive Authority Blueprint
                                         </h4>
@@ -1366,7 +1366,7 @@ export default function DashboardPage() {
                                     </div>
 
                                     <div style={{ backgroundColor: "#ffffff", padding: "26px", borderRadius: "16px", border: "1px solid #e5e3db" }}>
-                                        <div style={{ fontSize: "28px", marginBottom: "10px" }}>💼</div>
+                                        <div style={{ fontSize: "24px", color: "#0f172a", marginBottom: "10px" }}><i className="fal fa-briefcase"></i></div>
                                         <h4 style={{ fontSize: "18px", fontWeight: "800", color: "#162d20", margin: "0 0 8px" }}>
                                             LinkedIn Architecture for C-Suite Leaders
                                         </h4>
@@ -1379,7 +1379,7 @@ export default function DashboardPage() {
                                     </div>
 
                                     <div style={{ backgroundColor: "#ffffff", padding: "26px", borderRadius: "16px", border: "1px solid #e5e3db" }}>
-                                        <div style={{ fontSize: "28px", marginBottom: "10px" }}>🔍</div>
+                                        <div style={{ fontSize: "24px", color: "#0f172a", marginBottom: "10px" }}><i className="fal fa-search"></i></div>
                                         <h4 style={{ fontSize: "18px", fontWeight: "800", color: "#162d20", margin: "0 0 8px" }}>
                                             Google Knowledge Graph & Entity Authority
                                         </h4>
@@ -1392,7 +1392,7 @@ export default function DashboardPage() {
                                     </div>
 
                                     <div style={{ backgroundColor: "#ffffff", padding: "26px", borderRadius: "16px", border: "1px solid #e5e3db" }}>
-                                        <div style={{ fontSize: "28px", marginBottom: "10px" }}>📈</div>
+                                        <div style={{ fontSize: "24px", color: "#0f172a", marginBottom: "10px" }}><i className="fal fa-chart-line"></i></div>
                                         <h4 style={{ fontSize: "18px", fontWeight: "800", color: "#162d20", margin: "0 0 8px" }}>
                                             Executive Brand ROI & Board Placement
                                         </h4>
@@ -1444,7 +1444,7 @@ export default function DashboardPage() {
                                             gap: "8px"
                                         }}
                                     >
-                                        💬 WhatsApp Advisory Session
+                                        <i className="fab fa-whatsapp" style={{ fontSize: "15px" }}></i> WhatsApp Advisory Session
                                     </a>
                                 </div>
                             </div>

@@ -92,17 +92,7 @@ export default function FeedbackPage() {
 
                         {/* Hero Header */}
                         <div style={{ textAlign: "center", maxWidth: "780px", margin: "0 auto 40px" }}>
-                            <span style={{
-                                display: "inline-block",
-                                fontSize: "13px",
-                                fontWeight: "700",
-                                letterSpacing: "1.5px",
-                                textTransform: "uppercase",
-                                color: "#7c3aed", backgroundColor: "#f3e8ff", border: "1px solid rgba(124, 58, 237, 0.2)",
-                                padding: "4px 16px",
-                                borderRadius: "20px",
-                                marginBottom: "14px"
-                            }}>
+                            <span className="prominence_badge">
                                 Verified Client Feedback
                             </span>
                             <h1 style={{ fontSize: "clamp(28px, 5.5vw, 44px)", fontWeight: "700", color: "#1b2534", marginBottom: "18px", lineHeight: "1.25" }}>
@@ -112,44 +102,18 @@ export default function FeedbackPage() {
                                 Hear directly from senior HR leaders, managing directors, and consultants who have elevated their authority, reputation, and career trajectory with Elite Prominence.
                             </p>
 
-                            <div style={{ marginTop: "28px", display: "flex", justifyContent: "center", gap: "14px", flexWrap: "wrap" }}>
+                            <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", marginTop: "28px" }}>
                                 <Link
-                                    href="/dashboard"
-                                    style={{
-                                        background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
-                                        color: "#ffffff",
-                                        padding: "12px 28px",
-                                        minHeight: "44px",
-                                        display: "inline-flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        borderRadius: "30px",
-                                        fontSize: "15px",
-                                        fontWeight: "700",
-                                        textDecoration: "none",
-                                        boxShadow: "0 8px 20px -2px rgba(0, 0, 0, 0.35)"
-                                    }}
+                                    href="/dashboard?tab=reviews"
+                                    className="btn_style_one"
                                 >
-                                    Share Your Feedback →
+                                    Share Your Feedback
                                 </Link>
                                 <Link
                                     href="/community"
-                                    style={{
-                                        backgroundColor: "#ffffff",
-                                        color: "#7c3aed",
-                                        border: "1.5px solid #7c3aed",
-                                        padding: "12px 26px",
-                                        minHeight: "44px",
-                                        display: "inline-flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        borderRadius: "30px",
-                                        fontSize: "15px",
-                                        fontWeight: "700",
-                                        textDecoration: "none"
-                                    }}
+                                    className="btn_style_two"
                                 >
-                                    Explore Community Directory →
+                                    Explore Community Directory
                                 </Link>
                             </div>
                         </div>
@@ -189,11 +153,11 @@ export default function FeedbackPage() {
                                                 fontSize: "11px",
                                                 fontWeight: "700",
                                                 textTransform: "uppercase",
-                                                color: "#7c3aed", backgroundColor: "#f3e8ff", border: "1px solid rgba(124, 58, 237, 0.2)",
+                                                color: "#0D1322", backgroundColor: "rgba(13, 19, 34, 0.05)", border: "1px solid rgba(13, 19, 34, 0.12)",
                                                 padding: "3px 10px",
                                                 borderRadius: "12px"
                                             }}>
-                                                ✓ Verified Client
+                                                <i className="fal fa-check-circle" style={{ marginRight: "4px" }}></i> Verified Client
                                             </span>
                                         </div>
 

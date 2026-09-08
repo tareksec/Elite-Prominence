@@ -33,10 +33,10 @@ export default function TermsPage() {
                     <div className="container" style={{ maxWidth: "860px" }}>
                         {/* Legal Notice Banner */}
                         <div style={{
-                            backgroundColor: "#ffffff", border: "1px solid #e2e8f0", borderLeft: "4px solid #7c3aed", borderRadius: "10px", padding: "16px 22px", marginBottom: "35px", fontSize: "14px", lineHeight: "1.6", color: "#475569", boxShadow: "0 2px 8px rgba(0,0,0,0.02)"
+                            backgroundColor: "#ffffff", border: "1px solid #e2e8f0", borderLeft: "4px solid #0D1322", borderRadius: "10px", padding: "16px 22px", marginBottom: "35px", fontSize: "14px", lineHeight: "1.6", color: "#475569", boxShadow: "0 2px 8px rgba(0,0,0,0.02)"
                         }}>
                             <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
-                                <span style={{ fontSize: "16px", color: "#7c3aed", fontWeight: "700" }}>ℹ️</span>
+                                <i className="fal fa-info-circle" style={{ fontSize: "16px", color: "#0D1322", marginTop: "3px", flexShrink: 0 }}></i>
                                 <div>
                                     <strong style={{ fontWeight: "700", color: "#0f172a" }}>Advisory Notice:</strong> This is a structural starting draft, not a lawyer-reviewed document. Before accepting real payments or scaling user signups, have this reviewed by a qualified lawyer &mdash; especially the refund policy and governing-law sections, which are intentionally left as placeholders below.
                                 </div>

@@ -93,12 +93,12 @@ export default function HowItWorksPage() {
             tagline: 'Deep Reputation Audit & Narrative Extraction',
             duration: 'Weeks 1–2',
             clientTime: '45 Minutes Total',
-            overview: 'Before writing a single word or configuring a domain, we conduct a forensic investigation into your current public footprint across Google search, corporate databases, news archives, and professional networks.',
+            overview: 'Before authoring positioning copy or configuring technical infrastructure, we conduct a forensic audit across Google search surfaces, proprietary executive databases, news archives, and professional networks.',
             deliverables: [
                 'Forensic audit of your Google Page 1 results, namesake conflicts, and search sentiment',
                 'Comprehensive inventory of existing corporate bios, interview archives, and conference recordings',
-                'One 45-minute narrative extraction session with a senior executive communications strategist',
-                'Reputational gap analysis comparing your public footprint against peer industry leaders'
+                'One 45-minute structured narrative extraction session with a senior communications partner',
+                'Reputational gap analysis benchmarked against peer industry leaders and board candidates'
             ]
         },
         {
@@ -107,12 +107,12 @@ export default function HowItWorksPage() {
             tagline: 'Strategic Governance Thesis & Editorial Guardrails',
             duration: 'Weeks 2–3',
             clientTime: '15 Minutes Review',
-            overview: 'We crystallize your leadership thesis into an unassailable executive narrative. We establish clear boundaries with your corporate PR and legal teams to guarantee 100% compliance with non-disclosure agreements.',
+            overview: 'We crystallize your leadership thesis into an authoritative executive narrative. We establish clear boundaries with your corporate PR and legal teams to guarantee 100% compliance with non-disclosure and disclosure standards.',
             deliverables: [
-                'Calibrated Executive Positioning Document outlining your 3 core thought leadership pillars',
-                'Boardroom-ready executive biography, board candidate profile, and media summary',
-                'Corporate compliance protocol aligning all public output with employer communications policies',
-                'Voice and speech pattern analysis guide ensuring all written materials replicate your authentic cadence'
+                'Calibrated Executive Positioning Document articulating your core leadership pillars',
+                'Boardroom-ready executive biography, committee candidate profile, and media summary',
+                'Corporate compliance protocol aligning public commentary with employer communications policies',
+                'Cadence and lexicon analysis guide ensuring all written materials replicate your authentic speaking style'
             ]
         },
         {
@@ -182,36 +182,24 @@ export default function HowItWorksPage() {
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="The Prominence Methodology">
                 
                 {/* Hero Header */}
-                <section className="pt_120 pb_70" style={{ background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
+                <section className="prominence_page_intro">
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: "860px", margin: "0 auto" }}>
-                            <div className="tag_text" style={{ marginBottom: "16px" }}>
-                                <span style={{ 
-                                    display: 'inline-block', 
-                                    padding: '6px 16px', 
-                                    background: '#ecf3ff', 
-                                    color: '#2460e2', 
-                                    fontWeight: '700', 
-                                    fontSize: '12px', 
-                                    letterSpacing: '1px', 
-                                    textTransform: 'uppercase', 
-                                    borderRadius: '50px' 
-                                }}>
-                                    The 6-Stage Methodology
-                                </span>
+                        <div className="section_title centred" style={{ maxWidth: '860px', margin: '0 auto' }}>
+                            <div className="tag_text">
+                                <h6>The 6-Stage Methodology</h6>
                             </div>
-                            <h1 style={{ fontSize: "44px", fontWeight: "800", color: "#0d1b2a", lineHeight: "1.2", marginBottom: "20px" }}>
+                            <h1 style={{ fontSize: '42px', fontWeight: '800', color: '#0f172a', lineHeight: '1.25', marginBottom: '20px' }}>
                                 The Sovereign Stature Architecture Protocol
                             </h1>
-                            <p style={{ fontSize: "19px", color: "#475569", lineHeight: "1.7" }}>
-                                Building a commanding executive digital presence requires strategic rigor, journalistic precision, and absolute discretion. Our 6-stage protocol is engineered to deliver complete turnkey ownership with less than 30 minutes of your time per month.
+                            <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.7', margin: '0 auto' }}>
+                                Establishing a commanding executive presence demands strategic rigor, journalistic precision, and absolute discretion. Our 6-stage protocol delivers turnkey execution requiring under 30 minutes of executive time each month.
                             </p>
-                            <div style={{ marginTop: "32px", display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-                                <Link href="/contact" className="btn_style_one" style={{ padding: "14px 32px", fontSize: "15px" }}>
+                            <div style={{ marginTop: '32px', display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                                <Link href="/contact" className="btn_style_one">
                                     Schedule a Confidential Briefing
                                 </Link>
-                                <Link href="/case-studies" className="btn_style_two" style={{ padding: "14px 28px", fontSize: "15px", background: "#fff" }}>
-                                    View Pilot Case Studies
+                                <Link href="/case-studies" className="btn_style_two">
+                                    Review Case Studies
                                 </Link>
                             </div>
                         </div>
@@ -219,62 +207,58 @@ export default function HowItWorksPage() {
                 </section>
 
                 {/* 6 Stages Deep Dive */}
-                <section className="pt_100 pb_90">
+                <section className="pt_100 pb_90" style={{ background: '#f8fafc' }}>
                     <div className="container">
-                        <div style={{ display: "flex", flexDirection: "column", gap: "50px" }}>
-                            {stages.map((stage, idx) => (
-                                <div key={stage.number} style={{ 
-                                    background: "#fff", 
-                                    border: "1px solid #e2e8f0", 
-                                    borderRadius: "16px", 
-                                    padding: "48px", 
-                                    boxShadow: "0 10px 35px rgba(0,0,0,0.04)" 
-                                }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
+                            {stages.map((stage) => (
+                                <div key={stage.number} className="prominence_card" style={{ padding: '44px 48px' }}>
                                     <div className="row align-items-start">
                                         <div className="col-lg-4 mb_30 mb-lg-0">
-                                            <div style={{ display: "flex", alignItems: "baseline", gap: "12px", marginBottom: "12px" }}>
-                                                <span style={{ fontSize: "48px", fontWeight: "900", color: "#2460e2", lineHeight: "1" }}>
+                                            <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '12px' }}>
+                                                <span className="prominence_step_num">
                                                     {stage.number}
                                                 </span>
-                                                <span style={{ fontSize: "12px", fontWeight: "700", color: "#94a3b8", textTransform: "uppercase", letterSpacing: "1px" }}>
+                                                <span style={{ fontSize: '11px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>
                                                     Stage {stage.number} of 06
                                                 </span>
                                             </div>
-                                            <h2 style={{ fontSize: "32px", fontWeight: "800", color: "#0d1b2a", marginBottom: "12px" }}>
+                                            <h2 style={{ fontSize: '28px', fontWeight: '800', color: '#0f172a', marginBottom: '8px' }}>
                                                 {stage.name}
                                             </h2>
-                                            <p style={{ fontSize: "15px", fontWeight: "600", color: "#2460e2", marginBottom: "20px" }}>
+                                            <p style={{ fontSize: '14px', fontWeight: '600', color: '#334155', marginBottom: '24px' }}>
                                                 {stage.tagline}
                                             </p>
                                             
-                                            <div style={{ background: "#f8fafc", borderRadius: "8px", padding: "16px", border: "1px solid #eef2f6" }}>
-                                                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "8px", fontSize: "13px" }}>
-                                                    <span style={{ color: "#64748b" }}>Execution Horizon:</span>
-                                                    <strong style={{ color: "#0d1b2a" }}>{stage.duration}</strong>
+                                            <div style={{ background: '#f8fafc', borderRadius: '10px', padding: '16px 20px', border: '1px solid #e2e8f0' }}>
+                                                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '13px' }}>
+                                                    <span style={{ color: '#64748b' }}>Execution Horizon:</span>
+                                                    <strong style={{ color: '#0f172a' }}>{stage.duration}</strong>
                                                 </div>
-                                                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "13px" }}>
-                                                    <span style={{ color: "#64748b" }}>Client Time Required:</span>
-                                                    <strong style={{ color: "#10b981" }}>{stage.clientTime}</strong>
+                                                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px' }}>
+                                                    <span style={{ color: '#64748b' }}>Client Time:</span>
+                                                    <strong style={{ color: '#0f172a' }}>{stage.clientTime}</strong>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div className="col-lg-8">
-                                            <div style={{ paddingLeft: "15px" }}>
-                                                <p style={{ fontSize: "17px", color: "#334155", lineHeight: "1.8", marginBottom: "28px" }}>
+                                            <div style={{ paddingLeft: '20px' }}>
+                                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: '1.8', marginBottom: '24px' }}>
                                                     {stage.overview}
                                                 </p>
 
-                                                <h3 style={{ fontSize: "14px", fontWeight: "700", color: "#475569", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "16px" }}>
-                                                    Tangible Stage Deliverables:
+                                                <h3 style={{ fontSize: '13px', fontWeight: '700', color: '#0f172a', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>
+                                                    Tangible Stage Deliverables
                                                 </h3>
 
                                                 <div className="row">
                                                     {stage.deliverables.map((del, i) => (
                                                         <div key={i} className="col-md-6 mb_16">
-                                                            <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
-                                                                <span style={{ color: "#2460e2", fontWeight: "bold", fontSize: "14px", marginTop: "2px" }}>✓</span>
-                                                                <span style={{ fontSize: "14px", color: "#475569", lineHeight: "1.6" }}>{del}</span>
+                                                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                                                                <span style={{ color: '#0f172a', fontSize: '12px', marginTop: '3px' }}>
+                                                                    <i className="fal fa-check-circle" style={{ color: '#0f172a' }}></i>
+                                                                </span>
+                                                                <span style={{ fontSize: '13.5px', color: '#475569', lineHeight: '1.6' }}>{del}</span>
                                                             </div>
                                                         </div>
                                                     ))}
@@ -289,52 +273,58 @@ export default function HowItWorksPage() {
                 </section>
 
                 {/* Confidentiality, PR & Legal Governance */}
-                <section className="pt_90 pb_90" style={{ background: "#0d1b2a", color: "#fff" }}>
+                <section className="pt_90 pb_90" style={{ background: '#0a0f1d', color: '#fff' }}>
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: "760px", margin: "0 auto 60px" }}>
-                            <span style={{ color: "#d29d2b", fontWeight: "700", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                                Institutional Trust
-                            </span>
-                            <h2 style={{ fontSize: "36px", fontWeight: "800", color: "#fff", marginTop: "12px" }}>
+                        <div className="section_title centred" style={{ maxWidth: '760px', margin: '0 auto 60px' }}>
+                            <div className="tag_text">
+                                <h6 style={{ color: '#94a3b8' }}>Institutional Trust</h6>
+                            </div>
+                            <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#fff', marginTop: '12px' }}>
                                 Enterprise Confidentiality & PR Governance
                             </h2>
-                            <p style={{ color: "#94a3b8", fontSize: "16px", marginTop: "12px", lineHeight: "1.7" }}>
-                                We work with executives managing sensitive public company disclosures, imminent transactions, and complex governance environments. Our standards are non-negotiable.
+                            <p style={{ color: '#94a3b8', fontSize: '16px', marginTop: '12px', lineHeight: '1.7' }}>
+                                We work with executives managing sensitive public company disclosures, imminent transactions, and complex governance environments. Our security standards are non-negotiable.
                             </p>
                         </div>
 
                         <div className="row">
                             <div className="col-lg-4 col-md-6 mb_30">
-                                <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "12px", padding: "32px", height: "100%" }}>
-                                    <div style={{ fontSize: "28px", color: "#d29d2b", marginBottom: "16px" }}>🔒</div>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#fff", marginBottom: "12px" }}>
+                                <div className="prominence_card_dark">
+                                    <div style={{ fontSize: '22px', color: '#fff', marginBottom: '20px' }}>
+                                        <i className="fal fa-file-contract"></i>
+                                    </div>
+                                    <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
                                         Strict Non-Disclosure
                                     </h3>
-                                    <p style={{ color: "#94a3b8", fontSize: "14px", lineHeight: "1.7", margin: 0 }}>
+                                    <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.7', margin: 0 }}>
                                         All team members sign comprehensive NDAs. We never disclose client identities, private advisory notes, or confidential strategy documents without express written consent.
                                     </p>
                                 </div>
                             </div>
 
                             <div className="col-lg-4 col-md-6 mb_30">
-                                <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "12px", padding: "32px", height: "100%" }}>
-                                    <div style={{ fontSize: "28px", color: "#38bdf8", marginBottom: "16px" }}>⚖️</div>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#fff", marginBottom: "12px" }}>
+                                <div className="prominence_card_dark">
+                                    <div style={{ fontSize: '22px', color: '#fff', marginBottom: '20px' }}>
+                                        <i className="fal fa-balance-scale"></i>
+                                    </div>
+                                    <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
                                         Corporate PR Alignment
                                     </h3>
-                                    <p style={{ color: "#94a3b8", fontSize: "14px", lineHeight: "1.7", margin: 0 }}>
+                                    <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.7', margin: 0 }}>
                                         We establish clear topic guardrails that complement employer PR policies. We never publish speculative operational forecasts, insider disclosures, or sensitive corporate data.
                                     </p>
                                 </div>
                             </div>
 
                             <div className="col-lg-4 col-md-6 mb_30">
-                                <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "12px", padding: "32px", height: "100%" }}>
-                                    <div style={{ fontSize: "28px", color: "#34d399", marginBottom: "16px" }}>🛡️</div>
-                                    <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#fff", marginBottom: "12px" }}>
+                                <div className="prominence_card_dark">
+                                    <div style={{ fontSize: '22px', color: '#fff', marginBottom: '20px' }}>
+                                        <i className="fal fa-shield-alt"></i>
+                                    </div>
+                                    <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#fff', marginBottom: '12px' }}>
                                         Sovereign Ownership
                                     </h3>
-                                    <p style={{ color: "#94a3b8", fontSize: "14px", lineHeight: "1.7", margin: 0 }}>
+                                    <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.7', margin: 0 }}>
                                         You own 100% of the domains, content, code, and digital assets we build. Nothing is leased, locked in proprietary platforms, or dependent on our ongoing involvement.
                                     </p>
                                 </div>
@@ -344,23 +334,23 @@ export default function HowItWorksPage() {
                 </section>
 
                 {/* Final Consultation CTA */}
-                <section className="pt_90 pb_90" style={{ background: "#ecf3ff", borderTop: "1px solid #dbeafe", textAlign: "center" }}>
+                <section className="pt_90 pb_90" style={{ background: '#fff', borderTop: '1px solid #e2e8f0', textAlign: 'center' }}>
                     <div className="container">
-                        <div style={{ maxWidth: "760px", margin: "0 auto" }}>
-                            <span style={{ color: "#2460e2", fontWeight: "700", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                                Initiate Engagement
-                            </span>
-                            <h2 style={{ fontSize: "38px", fontWeight: "800", color: "#0d1b2a", marginTop: "12px", marginBottom: "16px" }}>
+                        <div style={{ maxWidth: '760px', margin: '0 auto' }}>
+                            <div className="tag_text" style={{ marginBottom: '14px' }}>
+                                <h6>Initiate Engagement</h6>
+                            </div>
+                            <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
                                 Put the Prominence Protocol to Work for Your Career
                             </h2>
-                            <p style={{ color: "#475569", fontSize: "17px", lineHeight: "1.7", marginBottom: "32px" }}>
+                            <p style={{ color: '#475569', fontSize: '17px', lineHeight: '1.7', marginBottom: '32px' }}>
                                 Connect directly with our managing partners for a 30-minute private consultation. We will analyze your public search posture and explain how Stage 01 will proceed.
                             </p>
-                            <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-                                <Link href="/contact" className="btn_style_one" style={{ padding: "16px 36px", fontSize: "16px" }}>
+                            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                                <Link href="/contact" className="btn_style_one">
                                     Book a Private Consultation
                                 </Link>
-                                <Link href="/pricing" className="btn_style_two" style={{ padding: "16px 32px", fontSize: "16px", background: "#fff" }}>
+                                <Link href="/pricing" className="btn_style_two">
                                     View Engagement Tiers
                                 </Link>
                             </div>

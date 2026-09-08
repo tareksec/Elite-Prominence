@@ -111,48 +111,36 @@ export default function SolutionDetailPage({ params }) {
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle={solution.shortTitle}>
                 
                 {/* Hero Banner */}
-                <section className="pt_120 pb_80" style={{ background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
+                <section className="prominence_page_intro">
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-7">
-                                <div style={{ marginBottom: "16px" }}>
-                                    <span style={{ 
-                                        display: 'inline-block', 
-                                        padding: '6px 16px', 
-                                        background: '#ecf3ff', 
-                                        color: '#2460e2', 
-                                        fontWeight: '700', 
-                                        fontSize: '12px', 
-                                        letterSpacing: '1px', 
-                                        textTransform: 'uppercase', 
-                                        borderRadius: '50px' 
-                                    }}>
-                                        {solution.badge}
-                                    </span>
+                                <div className="tag_text" style={{ marginBottom: "16px" }}>
+                                    <h6>{solution.badge}</h6>
                                 </div>
-                                <h1 style={{ fontSize: "44px", fontWeight: "800", color: "#0d1b2a", lineHeight: "1.2", marginBottom: "16px" }}>
+                                <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#0f1013", lineHeight: "1.2", marginBottom: "16px" }}>
                                     {solution.title}
                                 </h1>
-                                <p style={{ fontSize: "20px", fontWeight: "600", color: "#2460e2", marginBottom: "18px" }}>
+                                <p style={{ fontSize: "18px", fontWeight: "600", color: "#2460e2", marginBottom: "18px", fontFamily: "var(--primary-font)" }}>
                                     {solution.subtitle}
                                 </p>
-                                <p style={{ fontSize: "17px", color: "#475569", lineHeight: "1.7", marginBottom: "30px", maxWidth: "620px" }}>
+                                <p style={{ fontSize: "17px", color: "#475569", lineHeight: "28px", marginBottom: "32px", maxWidth: "620px" }}>
                                     {solution.executiveSummary}
                                 </p>
-                                <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-                                    <Link href="/contact" className="btn_style_one" style={{ padding: "14px 32px", fontSize: "15px" }}>
+                                <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
+                                    <Link href="/contact" className="btn_style_one">
                                         Book a Private Consultation
                                     </Link>
-                                    <Link href="/resources/assessment" className="btn_style_two" style={{ padding: "14px 28px", fontSize: "15px", background: "#fff" }}>
-                                        Audit Your Digital Stature
+                                    <Link href="/resources/assessment" className="btn_style_two">
+                                        Audit Your Stature <i className="fa-solid fa-angle-right ms-2" style={{ fontSize: "12px" }}></i>
                                     </Link>
                                 </div>
                             </div>
                             <div className="col-lg-5 mt-4 mt-lg-0">
                                 <div style={{ 
-                                    borderRadius: "16px", 
+                                    borderRadius: "14px", 
                                     overflow: "hidden", 
-                                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                                    boxShadow: "0 16px 40px rgba(0,0,0,0.08)",
                                     border: "1px solid #e2e8f0" 
                                 }}>
                                     <img 
@@ -167,16 +155,14 @@ export default function SolutionDetailPage({ params }) {
                 </section>
 
                 {/* Unique Reputation Challenges */}
-                <section className="pt_100 pb_90" style={{ background: "#fff" }}>
+                <section className="pt_100 pb_90" style={{ background: "#ffffff" }}>
                     <div className="container">
                         <div className="section_title centred" style={{ maxWidth: "780px", margin: "0 auto 60px" }}>
-                            <span style={{ color: "#e53e3e", fontWeight: "700", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                                The Reputation Landscape
-                            </span>
-                            <h2 style={{ fontSize: "36px", fontWeight: "800", color: "#0d1b2a", marginTop: "12px" }}>
-                                Distinct Reputation Pressures You Face
-                            </h2>
-                            <p style={{ color: "#64748b", fontSize: "16px", marginTop: "12px" }}>
+                            <div className="tag_text">
+                                <h6>The Reputation Landscape</h6>
+                            </div>
+                            <h2>Distinct Reputation Pressures You Face</h2>
+                            <p style={{ color: "#59606a", fontSize: "17px", marginTop: "12px", lineHeight: "28px" }}>
                                 High-profile leadership carries specific reputational vulnerabilities that generic PR agencies fail to comprehend.
                             </p>
                         </div>
@@ -185,19 +171,19 @@ export default function SolutionDetailPage({ params }) {
                             {solution.uniqueChallenges.map((challenge, idx) => (
                                 <div key={idx} className="col-lg-6 mb_30">
                                     <div style={{ 
-                                        background: "#fff9f9", 
-                                        border: "1px solid #fed7d7", 
+                                        background: "#fafbfc", 
+                                        border: "1px solid #e5e7eb", 
                                         borderRadius: "12px", 
                                         padding: "32px", 
                                         height: "100%" 
                                     }}>
-                                        <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "14px" }}>
-                                            <span style={{ color: "#e53e3e", fontSize: "20px", fontWeight: "bold" }}>✕</span>
-                                            <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1a202c", margin: 0 }}>
-                                                {challenge.title}
-                                            </h3>
-                                        </div>
-                                        <p style={{ color: "#4a5568", fontSize: "15px", lineHeight: "1.7", margin: 0 }}>
+                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#94a3b8", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                                            Friction Point 0{idx + 1}
+                                        </span>
+                                        <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "12px" }}>
+                                            {challenge.title}
+                                        </h3>
+                                        <p style={{ color: "#475569", fontSize: "15px", lineHeight: "24px", margin: 0 }}>
                                             {challenge.desc}
                                         </p>
                                     </div>
@@ -208,16 +194,14 @@ export default function SolutionDetailPage({ params }) {
                 </section>
 
                 {/* What Prominence Builds */}
-                <section className="pt_100 pb_90" style={{ background: "#f8fafc", borderTop: "1px solid #e2e8f0", borderBottom: "1px solid #e2e8f0" }}>
+                <section className="pt_100 pb_90" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7", borderBottom: "1px solid #edf2f7" }}>
                     <div className="container">
                         <div className="section_title centred" style={{ maxWidth: "780px", margin: "0 auto 60px" }}>
-                            <span style={{ color: "#2460e2", fontWeight: "700", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                                Bespoke Architecture
-                            </span>
-                            <h2 style={{ fontSize: "36px", fontWeight: "800", color: "#0d1b2a", marginTop: "12px" }}>
-                                How Prominence Architects Your Sovereign Presence
-                            </h2>
-                            <p style={{ color: "#64748b", fontSize: "16px", marginTop: "12px" }}>
+                            <div className="tag_text">
+                                <h6>Bespoke Architecture</h6>
+                            </div>
+                            <h2>How Prominence Architects Your Sovereign Presence</h2>
+                            <p style={{ color: "#59606a", fontSize: "17px", marginTop: "12px", lineHeight: "28px" }}>
                                 A turnkey operational framework that protects, amplifies, and monetizes your executive authority.
                             </p>
                         </div>
@@ -226,34 +210,20 @@ export default function SolutionDetailPage({ params }) {
                             {solution.whatProminenceDoes.map((item, idx) => (
                                 <div key={idx} className="col-lg-6 mb_30">
                                     <div style={{ 
-                                        background: "#fff", 
+                                        background: "#ffffff", 
                                         border: "1px solid #e2e8f0", 
                                         borderRadius: "12px", 
                                         padding: "32px", 
                                         height: "100%",
-                                        boxShadow: "0 4px 15px rgba(0,0,0,0.02)" 
+                                        boxShadow: "0 2px 10px rgba(0,0,0,0.02)" 
                                     }}>
-                                        <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "14px" }}>
-                                            <span style={{ 
-                                                width: "30px", 
-                                                height: "30px", 
-                                                borderRadius: "50%", 
-                                                background: "#ecf3ff", 
-                                                color: "#2460e2", 
-                                                display: "flex", 
-                                                alignItems: "center", 
-                                                justifyContent: "center", 
-                                                fontWeight: "800", 
-                                                fontSize: "14px",
-                                                flexShrink: 0
-                                            }}>
-                                                ✓
-                                            </span>
-                                            <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0d1b2a", margin: 0 }}>
-                                                {item.title}
-                                            </h3>
-                                        </div>
-                                        <p style={{ color: "#475569", fontSize: "15px", lineHeight: "1.7", margin: 0 }}>
+                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#94a3b8", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
+                                            Capability 0{idx + 1}
+                                        </span>
+                                        <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0f1013", marginBottom: "12px" }}>
+                                            {item.title}
+                                        </h3>
+                                        <p style={{ color: "#475569", fontSize: "15px", lineHeight: "24px", margin: 0 }}>
                                             {item.desc}
                                         </p>
                                     </div>
@@ -264,16 +234,14 @@ export default function SolutionDetailPage({ params }) {
                 </section>
 
                 {/* Core Recommended Services */}
-                <section className="pt_90 pb_90" style={{ background: "#fff" }}>
+                <section className="pt_90 pb_90" style={{ background: "#ffffff" }}>
                     <div className="container">
                         <div className="section_title centred" style={{ maxWidth: "760px", margin: "0 auto 50px" }}>
-                            <span style={{ color: "#2460e2", fontWeight: "700", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                                Core Modular Capabilities
-                            </span>
-                            <h2 style={{ fontSize: "32px", fontWeight: "800", color: "#0d1b2a", marginTop: "10px" }}>
-                                Tailored Service Combination
-                            </h2>
-                            <p style={{ color: "#64748b", fontSize: "15px", marginTop: "8px" }}>
+                            <div className="tag_text">
+                                <h6>Core Capabilities</h6>
+                            </div>
+                            <h2>Tailored Capability Combination</h2>
+                            <p style={{ color: "#59606a", fontSize: "16px", marginTop: "8px", lineHeight: "26px" }}>
                                 Recommended foundational pillars for this executive profile.
                             </p>
                         </div>
@@ -281,17 +249,17 @@ export default function SolutionDetailPage({ params }) {
                         <div className="row">
                             {solution.relevantServices.map((srv, idx) => (
                                 <div key={idx} className="col-lg-4 col-md-6 mb_20">
-                                    <div style={{ background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "10px", padding: "24px", height: "100%", display: "flex", flexDirection: "column" }}>
+                                    <div style={{ background: "#fafbfc", border: "1px solid #e2e8f0", borderRadius: "10px", padding: "26px", height: "100%", display: "flex", flexDirection: "column" }}>
                                         <h3 style={{ fontSize: "18px", fontWeight: "700", marginBottom: "10px" }}>
-                                            <Link href={`/services/${srv.slug}`} style={{ color: "#0d1b2a", textDecoration: "none" }}>
+                                            <Link href={`/services/${srv.slug}`} style={{ color: "#0f1013", textDecoration: "none" }}>
                                                 {srv.name}
                                             </Link>
                                         </h3>
-                                        <p style={{ fontSize: "14px", color: "#64748b", lineHeight: "1.6", flex: 1, marginBottom: "16px" }}>
+                                        <p style={{ fontSize: "14px", color: "#64748b", lineHeight: "22px", flex: 1, marginBottom: "16px" }}>
                                             {srv.desc}
                                         </p>
-                                        <Link href={`/services/${srv.slug}`} style={{ fontSize: "13px", fontWeight: "700", color: "#2460e2", textDecoration: "none" }}>
-                                            Explore Pillar Scope →
+                                        <Link href={`/services/${srv.slug}`} style={{ fontSize: "13px", fontWeight: "700", color: "#0f1013", textDecoration: "none", fontFamily: "var(--primary-font)" }}>
+                                            Explore Pillar Scope <i className="fa-solid fa-angle-right ms-1"></i>
                                         </Link>
                                     </div>
                                 </div>
@@ -300,51 +268,50 @@ export default function SolutionDetailPage({ params }) {
                     </div>
                 </section>
 
-                {/* Case Vignette / Proof of Concept Callout */}
+                {/* Case Vignette Callout */}
                 {solution.caseVignette && (
-                    <section className="pt_90 pb_90" style={{ background: "#0d1b2a", color: "#fff" }}>
+                    <section className="pt_90 pb_90" style={{ background: "#FAF8F2", borderTop: "1px solid #e5e3db", borderBottom: "1px solid #e5e3db" }}>
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6 mb_30 mb-lg-0">
-                                    <span style={{ color: "#d29d2b", fontWeight: "700", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                                        Demonstration Case Vignette
-                                    </span>
-                                    <h2 style={{ fontSize: "32px", fontWeight: "800", color: "#fff", marginTop: "12px", marginBottom: "20px" }}>
+                                    <div className="tag_text" style={{ marginBottom: "14px" }}>
+                                        <h6>Proof Vignette</h6>
+                                    </div>
+                                    <h2 style={{ fontSize: "30px", fontWeight: "700", color: "#162d20", marginBottom: "20px" }}>
                                         {solution.caseVignette.title}
                                     </h2>
                                     <div style={{ marginBottom: "18px" }}>
-                                        <h4 style={{ fontSize: "13px", fontWeight: "700", color: "#94a3b8", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "6px" }}>
-                                            The Challenge:
+                                        <h4 style={{ fontSize: "12px", fontWeight: "700", color: "#64748b", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "4px", fontFamily: "var(--primary-font)" }}>
+                                            Initial Situation:
                                         </h4>
-                                        <p style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: "1.7" }}>
+                                        <p style={{ color: "#334155", fontSize: "15px", lineHeight: "24px" }}>
                                             {solution.caseVignette.challenge}
                                         </p>
                                     </div>
                                     <div style={{ marginBottom: "18px" }}>
-                                        <h4 style={{ fontSize: "13px", fontWeight: "700", color: "#38bdf8", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "6px" }}>
-                                            The Prominence Intervention:
+                                        <h4 style={{ fontSize: "12px", fontWeight: "700", color: "#1e3a8a", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "4px", fontFamily: "var(--primary-font)" }}>
+                                            Strategic Intervention:
                                         </h4>
-                                        <p style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: "1.7" }}>
+                                        <p style={{ color: "#334155", fontSize: "15px", lineHeight: "24px" }}>
                                             {solution.caseVignette.solution}
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 style={{ fontSize: "13px", fontWeight: "700", color: "#34d399", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "6px" }}>
-                                            The Outcome:
+                                        <h4 style={{ fontSize: "12px", fontWeight: "700", color: "#166534", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "4px", fontFamily: "var(--primary-font)" }}>
+                                            Verified Outcome:
                                         </h4>
-                                        <p style={{ color: "#e2e8f0", fontSize: "15px", fontWeight: "600", lineHeight: "1.7" }}>
+                                        <p style={{ color: "#162d20", fontSize: "15px", fontWeight: "700", lineHeight: "24px" }}>
                                             {solution.caseVignette.outcome}
                                         </p>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "14px", padding: "40px" }}>
-                                        <span style={{ fontSize: "40px", color: "#d29d2b", lineHeight: "1", display: "block", marginBottom: "16px" }}>“</span>
-                                        <p style={{ fontSize: "18px", color: "#f8fafc", fontStyle: "italic", lineHeight: "1.8", marginBottom: "24px" }}>
-                                            {solution.caseVignette.quote}
+                                    <div style={{ background: "#ffffff", border: "1px solid #e5e3db", borderRadius: "14px", padding: "40px", boxShadow: "0 6px 24px rgba(0,0,0,0.03)" }}>
+                                        <p style={{ fontSize: "17px", color: "#1e293b", fontStyle: "italic", lineHeight: "28px", marginBottom: "20px" }}>
+                                            "{solution.caseVignette.quote}"
                                         </p>
                                         <div>
-                                            <p style={{ fontSize: "14px", color: "#94a3b8", margin: 0, fontWeight: "600" }}>
+                                            <p style={{ fontSize: "14px", color: "#64748b", margin: 0, fontWeight: "600" }}>
                                                 — {solution.caseVignette.authorTitle}
                                             </p>
                                         </div>
@@ -356,24 +323,22 @@ export default function SolutionDetailPage({ params }) {
                 )}
 
                 {/* Persona FAQs */}
-                <section className="pt_100 pb_90" style={{ background: "#fff" }}>
+                <section className="pt_100 pb_90" style={{ background: "#ffffff" }}>
                     <div className="container">
                         <div className="section_title centred" style={{ maxWidth: "760px", margin: "0 auto 50px" }}>
-                            <div className="tag_text"><h6>Specific Inquiries</h6></div>
-                            <h2 style={{ fontSize: "36px", fontWeight: "800", color: "#0d1b2a" }}>
-                                Inquiries for {solution.shortTitle}
-                            </h2>
+                            <div className="tag_text"><h6>Role Clarifications</h6></div>
+                            <h2>Inquiries for {solution.shortTitle}</h2>
                         </div>
 
                         <div className="row justify-content-center">
                             <div className="col-lg-9">
-                                <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+                                <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
                                     {solution.faqs.map((faq, i) => (
-                                        <div key={i} style={{ border: "1px solid #e2e8f0", borderRadius: "10px", padding: "28px 32px", background: "#f8fafc" }}>
-                                            <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#0d1b2a", marginBottom: "12px" }}>
+                                        <div key={i} style={{ border: "1px solid #e2e8f0", borderRadius: "10px", padding: "26px 30px", background: "#fafbfc" }}>
+                                            <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", marginBottom: "10px" }}>
                                                 {faq.question}
                                             </h3>
-                                            <p style={{ color: "#475569", lineHeight: "1.7", margin: 0, fontSize: "15px" }}>
+                                            <p style={{ color: "#475569", lineHeight: "24px", margin: 0, fontSize: "15px" }}>
                                                 {faq.answer}
                                             </p>
                                         </div>
@@ -384,58 +349,25 @@ export default function SolutionDetailPage({ params }) {
                     </div>
                 </section>
 
-                {/* Other Solutions Strip */}
-                <section className="pt_80 pb_80" style={{ background: "#f8fafc", borderTop: "1px solid #e2e8f0" }}>
-                    <div className="container">
-                        <div className="section_title centred" style={{ marginBottom: "40px" }}>
-                            <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0d1b2a" }}>
-                                Explore Other Leadership Roles
-                            </h2>
-                        </div>
-                        <div className="row">
-                            {otherSolutions.map((oth) => (
-                                <div key={oth.slug} className="col-lg-4 col-md-6 mb_20">
-                                    <div style={{ background: "#fff", border: "1px solid #e2e8f0", borderRadius: "10px", padding: "24px", height: "100%", display: "flex", flexDirection: "column" }}>
-                                        <span style={{ fontSize: "11px", fontWeight: "700", color: "#2460e2", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "6px" }}>
-                                            {oth.badge}
-                                        </span>
-                                        <h3 style={{ fontSize: "18px", fontWeight: "700", marginBottom: "8px" }}>
-                                            <Link href={`/solutions/${oth.slug}`} style={{ color: "#0d1b2a", textDecoration: "none" }}>
-                                                {oth.shortTitle}
-                                            </Link>
-                                        </h3>
-                                        <p style={{ fontSize: "14px", color: "#64748b", lineHeight: "1.6", flex: 1, marginBottom: "16px" }}>
-                                            {oth.tagline}
-                                        </p>
-                                        <Link href={`/solutions/${oth.slug}`} style={{ fontSize: "13px", fontWeight: "700", color: "#2460e2", textDecoration: "none" }}>
-                                            View Profile Architecture →
-                                        </Link>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
                 {/* Final CTA */}
-                <section className="pt_90 pb_90" style={{ background: "#0d1b2a", color: "#fff", textAlign: "center" }}>
+                <section className="pt_90 pb_90" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
                     <div className="container">
-                        <div style={{ maxWidth: "720px", margin: "0 auto" }}>
-                            <span style={{ color: "#d29d2b", fontWeight: "700", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                                Private Engagement
-                            </span>
-                            <h2 style={{ fontSize: "38px", fontWeight: "800", color: "#fff", marginTop: "12px", marginBottom: "16px" }}>
+                        <div style={{ maxWidth: "740px", margin: "0 auto" }}>
+                            <div className="tag_text" style={{ marginBottom: "16px" }}>
+                                <h6>Private Engagement</h6>
+                            </div>
+                            <h2 style={{ fontSize: "38px", fontWeight: "700", color: "#0f1013", marginBottom: "16px" }}>
                                 Align Your Digital Reputation With Your Leadership Mandate
                             </h2>
-                            <p style={{ color: "#94a3b8", fontSize: "17px", lineHeight: "1.7", marginBottom: "32px" }}>
+                            <p style={{ color: "#59606a", fontSize: "17px", lineHeight: "28px", marginBottom: "32px" }}>
                                 Schedule a 30-minute confidential discussion with our partners. We will audit your current search footprint and scope a sovereign reputation architecture tailored for your role.
                             </p>
-                            <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-                                <Link href="/contact" className="btn_style_one" style={{ padding: "16px 36px", fontSize: "16px" }}>
+                            <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
+                                <Link href="/contact" className="btn_style_one">
                                     Book a Private Consultation
                                 </Link>
-                                <Link href="/resources/assessment" className="btn_style_two" style={{ padding: "16px 32px", fontSize: "16px", background: "transparent", color: "#fff", borderColor: "rgba(255,255,255,0.3)" }}>
-                                    Take 3-Min Assessment
+                                <Link href="/resources/assessment" className="btn_style_two">
+                                    Take 3-Min Assessment <i className="fa-solid fa-angle-right ms-2" style={{ fontSize: "12px" }}></i>
                                 </Link>
                             </div>
                         </div>

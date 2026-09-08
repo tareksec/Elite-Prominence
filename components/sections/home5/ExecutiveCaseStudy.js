@@ -73,10 +73,10 @@ export default function ExecutiveCaseStudy() {
                     marginBottom: "45px"
                 }}>
                     {[
-                        { metric: "2 Board Seats", label: "NED Appointments in 90 Days", icon: "🏛️" },
-                        { metric: "Page 1 #1", label: "Google Placement for Exact Name", icon: "🔍" },
-                        { metric: "+420%", label: "Inbound Recruiter & CEO Outreach", icon: "📈" },
-                        { metric: "< 30 Mins", label: "Monthly Executive Time Invested", icon: "⏱️" }
+                        { metric: "2 Board Seats", label: "NED Appointments in 90 Days", icon: "icon-33" },
+                        { metric: "Page 1 #1", label: "Google Placement for Exact Name", icon: "icon-32" },
+                        { metric: "+420%", label: "Inbound Recruiter & CEO Outreach", icon: "icon-48" },
+                        { metric: "< 30 Mins", label: "Monthly Executive Time Invested", icon: "icon-28" }
                     ].map((stat, idx) => (
                         <div
                             key={idx}
@@ -85,11 +85,13 @@ export default function ExecutiveCaseStudy() {
                                 padding: "24px 20px",
                                 borderRadius: "14px",
                                 border: "1px solid #e2e8f0",
-                                boxShadow: "0 4px 16px rgba(0,0,0,0.04)",
+                                boxShadow: "0 4px 16px rgba(0,0,0,0.03)",
                                 textAlign: "center"
                             }}
                         >
-                            <div style={{ fontSize: "24px", marginBottom: "8px" }}>{stat.icon}</div>
+                            <div style={{ fontSize: "22px", marginBottom: "8px", color: "#162d20" }}>
+                                <i className={stat.icon}></i>
+                            </div>
                             <div style={{ fontSize: "26px", fontWeight: "800", color: "#162d20", letterSpacing: "-0.5px" }}>
                                 {stat.metric}
                             </div>
@@ -278,7 +280,7 @@ export default function ExecutiveCaseStudy() {
                                             "Over 65,000 organic impressions on LinkedIn from C-suite peers"
                                         ].map((item, i) => (
                                             <li key={i} style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "14.5px", color: "#1b2534", fontWeight: "600", marginBottom: "10px" }}>
-                                                <span style={{ color: "#16a34a", fontWeight: "800" }}>&#10003;</span>
+                                                <i className="fa-solid fa-check" style={{ color: "#16a34a", fontSize: "13px" }}></i>
                                                 {item}
                                             </li>
                                         ))}
@@ -288,7 +290,7 @@ export default function ExecutiveCaseStudy() {
                                     <div style={{ backgroundColor: "#f0fdf4", padding: "30px", borderRadius: "16px", border: "1px solid #bbf7d0" }}>
                                         <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "12px" }}>
                                             {[...Array(5)].map((_, i) => (
-                                                <span key={i} style={{ color: "#D29D2B", fontSize: "18px" }}>★</span>
+                                                <i key={i} className="fa-solid fa-star" style={{ color: "#D29D2B", fontSize: "13px" }}></i>
                                             ))}
                                         </div>
                                         <p style={{ fontSize: "16px", color: "#166534", lineHeight: "1.7", fontStyle: "italic", marginBottom: "18px" }}>

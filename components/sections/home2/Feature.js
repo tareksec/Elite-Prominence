@@ -251,7 +251,7 @@ export default function Feature() {
                                                 <p>A personal website that establishes your digital brand identity, showcasing your bio, expertise, case studies, and career milestones — the definitive hub that represents you everywhere.</p>
                                                 <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
                                                     <span style={{ fontSize: "12px", fontWeight: "700", color: "#166534", backgroundColor: "#f0fdf4", padding: "4px 10px", borderRadius: "6px", border: "1px solid #bbf7d0" }}>
-                                                        ✓ 45-Day Launch to Page 1
+                                                        45-Day Launch to Page 1
                                                     </span>
                                                     <span style={{ fontSize: "12px", fontWeight: "600", color: "#475569", backgroundColor: "#f8fafc", padding: "4px 10px", borderRadius: "6px", border: "1px solid #e2e8f0" }}>
                                                         100% Owned Domain Authority
@@ -270,7 +270,7 @@ export default function Feature() {
                                                 <p>When someone searches your name, page one should reflect your executive standing — not silence or outdated noise. We manage your online reputation with owned assets and strategic media coverage so search results validate your authority immediately.</p>
                                                 <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
                                                     <span style={{ fontSize: "12px", fontWeight: "700", color: "#166534", backgroundColor: "#f0fdf4", padding: "4px 10px", borderRadius: "6px", border: "1px solid #bbf7d0" }}>
-                                                        ✓ +340% Inbound Board Inquiries
+                                                        +340% Inbound Board Inquiries
                                                     </span>
                                                     <span style={{ fontSize: "12px", fontWeight: "600", color: "#475569", backgroundColor: "#f8fafc", padding: "4px 10px", borderRadius: "6px", border: "1px solid #e2e8f0" }}>
                                                         Top-3 Search Placement Guaranteed
@@ -289,7 +289,7 @@ export default function Feature() {
                                                 <p>Executive ghostwriting and content creation aligned with an intentional brand strategy, keeping your thought leadership active on LinkedIn so you stay visible without becoming a full-time content creator.</p>
                                                 <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
                                                     <span style={{ fontSize: "12px", fontWeight: "700", color: "#166534", backgroundColor: "#f0fdf4", padding: "4px 10px", borderRadius: "6px", border: "1px solid #bbf7d0" }}>
-                                                        ✓ 45K+ Avg. Organic Reach
+                                                        45K+ Avg. Organic Reach
                                                     </span>
                                                     <span style={{ fontSize: "12px", fontWeight: "600", color: "#475569", backgroundColor: "#f8fafc", padding: "4px 10px", borderRadius: "6px", border: "1px solid #e2e8f0" }}>
                                                         0 Hours Weekly Time Commitment

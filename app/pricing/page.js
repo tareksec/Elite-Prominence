@@ -49,23 +49,12 @@ export default function Pricing_Page() {
                 {/* Clean Executive Hero Header */}
                 <section className="pricing_page_hero" style={{
                     padding: "130px 0 50px",
-                    background: "linear-gradient(180deg, #F8F7FF 0%, #FFFFFF 100%)",
+                    background: "#F8F9FA",
                     textAlign: "center"
                 }}>
                     <div className="container">
                         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-                            <span style={{
-                                display: "inline-block",
-                                fontSize: "12px",
-                                fontWeight: "700",
-                                letterSpacing: "1.2px",
-                                textTransform: "uppercase",
-                                color: "#7c3aed",
-                                background: "#f3e8ff",
-                                padding: "6px 18px",
-                                borderRadius: "9999px",
-                                marginBottom: "18px"
-                            }}>
+                            <span className="prominence_badge">
                                 Investment &amp; Packages
                             </span>
                             <h1 style={{

@@ -30,7 +30,7 @@ export default function ReadingProgressBar() {
         left: 0,
         width: `${progress}%`,
         height: '3px',
-        background: 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)',
+        background: '#0D1322',
         zIndex: 99999,
         transition: 'width 0.1s ease-out',
         pointerEvents: 'none'

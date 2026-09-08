@@ -15,35 +15,21 @@ export default function Banner() {
             />
             <div className="container">
                 <div className="banner_content" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
-                    <div style={{ marginBottom: "18px" }}>
-                        <span style={{ 
-                            display: "inline-block", 
-                            padding: "6px 18px", 
-                            borderRadius: "50px", 
-                            background: "rgba(255, 255, 255, 0.15)", 
-                            backdropFilter: "blur(10px)", 
-                            border: "1px solid rgba(255, 255, 255, 0.3)",
-                            color: "#fff", 
-                            fontSize: "12px", 
-                            fontWeight: "700", 
-                            letterSpacing: "1.2px", 
-                            textTransform: "uppercase" 
-                        }}>
-                            Executive Reputation &amp; Personal Branding Advisory
-                        </span>
+                    <div className="tag_text" style={{ background: "rgba(255, 255, 255, 0.12)", borderColor: "rgba(255, 255, 255, 0.25)", backdropFilter: "blur(10px)" }}>
+                        <h6 style={{ color: "#ffffff" }}>Executive Reputation &amp; Digital Stature</h6>
                     </div>
 
-                    <h1 style={{ fontSize: "52px", fontWeight: "900", lineHeight: "1.15", marginBottom: "20px", color: "#fff" }}>
-                        Build a Digital Presence <br/>That Commands <br/>Attention.
+                    <h1 style={{ fontSize: "54px", fontWeight: "700", lineHeight: "1.18", marginBottom: "22px", color: "#ffffff", letterSpacing: "-0.5px" }}>
+                        Build a Digital Presence That Commands Attention.
                     </h1>
 
-                    <p style={{ fontSize: "19px", lineHeight: "1.7", color: "rgba(255, 255, 255, 0.9)", maxWidth: "660px", marginBottom: "30px" }}>
-                        We build the sovereign websites, search reputation, strategic ghostwriting, and authority assets that represent CEOs, CHROs, Founders, and enterprise executives before they walk into the room.
+                    <p style={{ fontSize: "18px", lineHeight: "30px", color: "rgba(255, 255, 255, 0.88)", maxWidth: "640px", marginBottom: "32px" }}>
+                        We architect the sovereign websites, search reputation, strategic ghostwriting, and authority assets that represent CEOs, CHROs, Founders, and enterprise leaders before they walk into the room.
                     </p>
 
                     <div className="banner_btn_area" style={{ display: "flex", flexWrap: "wrap", gap: "16px", alignItems: "center" }}>
                         <div className="link_btn">
-                            <Link href="/contact" className="btn_style_one" style={{ padding: "16px 36px", fontSize: "15px" }}>
+                            <Link href="/contact" className="btn_style_one">
                                 Book a Private Consultation
                             </Link>
                         </div>
@@ -55,7 +41,7 @@ export default function Banner() {
                                     display: "inline-flex", 
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    padding: "15px 30px", 
+                                    padding: "12px 28px", 
                                     borderRadius: "9999px", 
                                     border: "1px solid rgba(255, 255, 255, 0.4)", 
                                     color: "#ffffff", 
@@ -69,7 +55,7 @@ export default function Banner() {
                                     textDecoration: "none"
                                 }}
                             >
-                                Audit Your Stature &rarr;
+                                Audit Your Stature <i className="fa-solid fa-angle-right ms-2" style={{ fontSize: "12px" }}></i>
                             </Link>
                         </div>
                     </div>            

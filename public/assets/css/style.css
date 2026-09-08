@@ -6456,3 +6456,164 @@ h3.widget_title{
     color: #2460e2;
     text-decoration: underline;
 }
+
+/* ======================================================== */
+/* PROMINENCE EXECUTIVE DESIGN SYSTEM TOKENS & UTILITIES     */
+/* ======================================================== */
+
+.prominence_page_intro {
+    background-color: #fafbfc;
+    border-bottom: 1px solid #edf2f7;
+    padding: 120px 0 70px;
+    position: relative;
+}
+
+.prominence_page_intro .section_title {
+    margin-bottom: 0;
+}
+
+.prominence_page_intro h1 {
+    font-size: 46px;
+    line-height: 56px;
+    font-weight: 700;
+    color: #0f1013;
+    letter-spacing: -0.5px;
+    margin-bottom: 18px;
+    font-family: var(--primary-font);
+}
+
+.prominence_page_intro p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #4b5563;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+/* Executive Dossier Card */
+.prominence_card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 36px 32px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.prominence_card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    border-color: #cbd5e1;
+}
+
+.prominence_card_dark {
+    background: #0f1013;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 36px 32px;
+    color: #ffffff;
+}
+
+/* Badge Tokens */
+.prominence_badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1e293b;
+    background: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    font-family: var(--primary-font);
+}
+
+.prominence_badge_gold {
+    color: #92400e;
+    background: #fef3c7;
+    border-color: #fde68a;
+}
+
+.prominence_badge_navy {
+    color: #1e3a8a;
+    background: #dbeafe;
+    border-color: #bfdbfe;
+}
+
+/* Minimal Checkmark & Indicator Lists */
+.prominence_check_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.prominence_check_list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #475569;
+}
+
+.prominence_check_list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #151619;
+}
+
+/* Numbered Process Stage */
+.prominence_step_num {
+    font-size: 13px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Editorial Metric Stat */
+.prominence_stat_val {
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: 700;
+    color: #0f1013;
+    font-family: var(--primary-font);
+    letter-spacing: -0.5px;
+}
+
+.prominence_stat_val_light {
+    color: #ffffff;
+}
+
+.prominence_stat_label {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #64748b;
+    margin-top: 6px;
+    letter-spacing: 0.3px;
+}
+
+.prominence_stat_label_light {
+    color: #94a3b8;
+}
+
+/* Strip Emojis Replacement Icons */
+.prominence_icon {
+    font-size: 18px;
+    color: #151619;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

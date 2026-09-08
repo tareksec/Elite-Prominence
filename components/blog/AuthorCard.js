@@ -35,7 +35,7 @@ export default function AuthorCard({
         boxShadow: '0 4px 20px rgba(15, 18, 53, 0.04)'
       }}
     >
-      {/* Subtle brand gradient accent bar at top */}
+      {/* Subtle brand accent bar at top */}
       <div
         style={{
           position: 'absolute',
@@ -43,7 +43,7 @@ export default function AuthorCard({
           left: 0,
           right: 0,
           height: '4px',
-          background: 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)'
+          background: '#0D1322'
         }}
       />
 
@@ -63,12 +63,12 @@ export default function AuthorCard({
               width: '76px',
               height: '76px',
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)',
+              background: '#0D1322',
               padding: '3px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 6px 16px rgba(124, 58, 237, 0.25)'
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
             }}
           >
             {author.avatar ? (
@@ -112,8 +112,9 @@ export default function AuthorCard({
                 fontWeight: '700',
                 textTransform: 'uppercase',
                 letterSpacing: '0.8px',
-                color: '#7C3AED',
-                background: '#F1F0F9',
+                color: '#0D1322',
+                background: 'rgba(13, 19, 34, 0.05)',
+                border: '1px solid rgba(13, 19, 34, 0.1)',
                 padding: '3px 8px',
                 borderRadius: '4px'
               }}
@@ -199,35 +200,12 @@ export default function AuthorCard({
             </a>
 
             <a
-              href="https://prominence.agency/contact"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                padding: '11px 22px',
-                borderRadius: '8px',
-                fontSize: '14px',
-                fontWeight: '600',
-                color: '#FFFFFF',
-                background: 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)',
-                border: 'none',
-                textDecoration: 'none',
-                boxShadow: '0 4px 14px rgba(192, 38, 168, 0.35)',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 6px 18px rgba(192, 38, 168, 0.5)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 14px rgba(192, 38, 168, 0.35)';
-              }}
+              href="/contact"
+              className="btn_style_one"
+              style={{ fontSize: '13px', padding: '10px 22px' }}
             >
               <span>Book a Strategy Call</span>
-              <span aria-hidden="true">→</span>
+              <i className="fal fa-arrow-right" style={{ fontSize: '12px' }}></i>
             </a>
           </div>
         </div>

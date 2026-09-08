@@ -611,7 +611,7 @@ export default function AdminPage() {
                                         textDecoration: "none"
                                     }}
                                 >
-                                    ← User Dashboard
+                                    <i className="fal fa-arrow-left" style={{ marginRight: "8px" }}></i>User Dashboard
                                 </Link>
                                 <Link
                                     href="/community"
@@ -630,7 +630,7 @@ export default function AdminPage() {
                                         textDecoration: "none"
                                     }}
                                 >
-                                    Community ↗
+                                    Community <i className="fal fa-external-link-alt" style={{ marginLeft: "6px", fontSize: "11px" }}></i>
                                 </Link>
                                 <Link
                                     href="/feedback"
@@ -648,7 +648,7 @@ export default function AdminPage() {
                                         textDecoration: "none"
                                     }}
                                 >
-                                    Public Reviews ↗
+                                    Public Reviews <i className="fal fa-external-link-alt" style={{ marginLeft: "6px", fontSize: "11px" }}></i>
                                 </Link>
                             </div>
                         </div>
@@ -661,25 +661,25 @@ export default function AdminPage() {
                             marginBottom: "28px"
                         }}>
                             <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #e5e3db", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
-                                <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>📥 Inquiries / Leads</div>
+                                <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>Inquiries / Leads</div>
                                 <div style={{ fontSize: "32px", fontWeight: "800", color: "#162d20", marginTop: "4px" }}>{leads.length}</div>
                                 <div style={{ fontSize: "12px", color: "#16a34a", marginTop: "4px" }}>Active Contact Submissions</div>
                             </div>
 
                             <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #e5e3db", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
-                                <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>👥 Executive Members</div>
+                                <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>Executive Members</div>
                                 <div style={{ fontSize: "32px", fontWeight: "800", color: "#162d20", marginTop: "4px" }}>{users.length}</div>
                                 <div style={{ fontSize: "12px", color: "#d97706", marginTop: "4px" }}>{adminCount} Administrator{adminCount > 1 ? 's' : ''}</div>
                             </div>
 
                             <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #e5e3db", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
-                                <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>📰 Executive Articles</div>
+                                <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>Executive Articles</div>
                                 <div style={{ fontSize: "32px", fontWeight: "800", color: "#162d20", marginTop: "4px" }}>{approvedArticles.length}</div>
                                 <div style={{ fontSize: "12px", color: "#64748b", marginTop: "4px" }}>{pendingArticles.length} pending moderation</div>
                             </div>
 
                             <div style={{ backgroundColor: "#ffffff", padding: "20px", borderRadius: "14px", border: "1px solid #e5e3db", boxShadow: "0 4px 12px rgba(0,0,0,0.03)" }}>
-                                <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>⭐ Testimonials</div>
+                                <div style={{ fontSize: "12px", color: "#64748b", fontWeight: "700", textTransform: "uppercase" }}>Testimonials</div>
                                 <div style={{ fontSize: "32px", fontWeight: "800", color: "#162d20", marginTop: "4px" }}>{approvedReviews.length}</div>
                                 <div style={{ fontSize: "12px", color: "#64748b", marginTop: "4px" }}>{pendingReviews.length} pending moderation</div>
                             </div>
@@ -690,7 +690,7 @@ export default function AdminPage() {
                                 borderRadius: "14px",
                                 border: (pendingReviews.length + pendingArticles.length > 0) ? "1.5px solid #D29D2B" : "1px solid #e2e8f0"
                             }}>
-                                <div style={{ fontSize: "12px", color: "#92400e", fontWeight: "700", textTransform: "uppercase" }}>⏳ Urgent Queue</div>
+                                <div style={{ fontSize: "12px", color: "#92400e", fontWeight: "700", textTransform: "uppercase" }}>Urgent Queue</div>
                                 <div style={{ fontSize: "32px", fontWeight: "800", color: "#92400e", marginTop: "4px" }}>
                                     {pendingReviews.length + pendingArticles.length}
                                 </div>
@@ -731,7 +731,7 @@ export default function AdminPage() {
                                         flexShrink: 0
                                     }}
                                 >
-                                    ⏳ Queue ({pendingReviews.length + pendingArticles.length})
+                                    Queue ({pendingReviews.length + pendingArticles.length})
                                 </button>
 
                                 <button
@@ -750,7 +750,7 @@ export default function AdminPage() {
                                         flexShrink: 0
                                     }}
                                 >
-                                    📥 Inquiries ({leads.length})
+                                    Inquiries ({leads.length})
                                 </button>
 
                                 <button
@@ -769,7 +769,7 @@ export default function AdminPage() {
                                         flexShrink: 0
                                     }}
                                 >
-                                    ⭐ Reviews ({reviews.length})
+                                    Reviews ({reviews.length})
                                 </button>
 
                                 <button
@@ -788,7 +788,7 @@ export default function AdminPage() {
                                         flexShrink: 0
                                     }}
                                 >
-                                    📰 Articles ({articles.length})
+                                    Articles ({articles.length})
                                 </button>
 
                                 <button
@@ -807,7 +807,7 @@ export default function AdminPage() {
                                         flexShrink: 0
                                     }}
                                 >
-                                    👥 Users ({users.length})
+                                    Users ({users.length})
                                 </button>
 
                                 <button
@@ -826,7 +826,7 @@ export default function AdminPage() {
                                         flexShrink: 0
                                     }}
                                 >
-                                    ⚙️ Site Settings
+                                    Site Settings
                                 </button>
                             </div>
 
@@ -882,8 +882,8 @@ export default function AdminPage() {
                                 justifyContent: "space-between",
                                 alignItems: "center"
                             }}>
-                                <span>✓ {feedbackMessage}</span>
-                                <button onClick={() => setFeedbackMessage('')} style={{ background: "none", border: "none", cursor: "pointer", color: "#15803d", fontWeight: "700" }}>✕</button>
+                                <span><i className="fal fa-check-circle" style={{ marginRight: "6px" }}></i> {feedbackMessage}</span>
+                                <button onClick={() => setFeedbackMessage('')} style={{ background: "none", border: "none", cursor: "pointer", color: "#15803d", fontWeight: "700" }}><i className="fal fa-times"></i></button>
                             </div>
                         )}
 
@@ -900,8 +900,8 @@ export default function AdminPage() {
                                 justifyContent: "space-between",
                                 alignItems: "center"
                             }}>
-                                <span>⚠️ {errorMessage}</span>
-                                <button onClick={() => setErrorMessage('')} style={{ background: "none", border: "none", cursor: "pointer", color: "#b91c1c", fontWeight: "700" }}>✕</button>
+                                <span><i className="fal fa-exclamation-triangle" style={{ marginRight: "6px" }}></i> {errorMessage}</span>
+                                <button onClick={() => setErrorMessage('')} style={{ background: "none", border: "none", cursor: "pointer", color: "#b91c1c", fontWeight: "700" }}><i className="fal fa-times"></i></button>
                             </div>
                         )}
 
@@ -918,7 +918,7 @@ export default function AdminPage() {
                                         textAlign: "center",
                                         border: "1px solid #e5e3db"
                                     }}>
-                                        <div style={{ fontSize: "40px", marginBottom: "12px" }}>🎉</div>
+                                        <div style={{ fontSize: "36px", color: "#16a34a", marginBottom: "12px" }}><i className="fal fa-check-circle"></i></div>
                                         <h3 style={{ fontSize: "22px", fontWeight: "800", color: "#162d20", margin: "0 0 8px" }}>
                                             Moderation Queue is Clear
                                         </h3>
@@ -932,7 +932,7 @@ export default function AdminPage() {
                                         {pendingReviews.length > 0 && (
                                             <div>
                                                 <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "16px" }}>
-                                                    ⭐ Pending Reviews & Testimonials ({pendingReviews.length})
+                                                    Pending Reviews & Testimonials ({pendingReviews.length})
                                                 </h3>
                                                 <div style={{ display: "grid", gap: "16px" }}>
                                                     {pendingReviews.map((rev) => (
@@ -976,7 +976,7 @@ export default function AdminPage() {
                                                                         cursor: "pointer"
                                                                     }}
                                                                 >
-                                                                    ✓ Approve & Publish Live
+                                                                    Approve & Publish Live
                                                                 </button>
                                                                 <button
                                                                     onClick={() => handleReviewStatus(rev.id, 'rejected')}
@@ -992,7 +992,7 @@ export default function AdminPage() {
                                                                         cursor: "pointer"
                                                                     }}
                                                                 >
-                                                                    ✕ Decline
+                                                                    Decline
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -1005,7 +1005,7 @@ export default function AdminPage() {
                                         {pendingArticles.length > 0 && (
                                             <div>
                                                 <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "16px" }}>
-                                                    📰 Pending Executive Articles ({pendingArticles.length})
+                                                    Pending Executive Articles ({pendingArticles.length})
                                                 </h3>
                                                 <div style={{ display: "grid", gap: "16px" }}>
                                                     {pendingArticles.map((art) => (
@@ -1068,7 +1068,7 @@ export default function AdminPage() {
                                                                         cursor: "pointer"
                                                                     }}
                                                                 >
-                                                                    ✓ Approve & Publish to Community
+                                                                    Approve & Publish to Community
                                                                 </button>
                                                                 <button
                                                                     onClick={() => handleArticleStatus(art.id, 'rejected')}
@@ -1084,7 +1084,7 @@ export default function AdminPage() {
                                                                         cursor: "pointer"
                                                                     }}
                                                                 >
-                                                                    ✕ Decline
+                                                                    Decline
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -1122,7 +1122,7 @@ export default function AdminPage() {
                                             gap: "6px"
                                         }}
                                     >
-                                        📥 Export to CSV / Excel
+                                        Export to CSV / Excel
                                     </button>
                                 </div>
 
@@ -1147,12 +1147,12 @@ export default function AdminPage() {
                                                         </h4>
                                                         <div style={{ fontSize: "14px", color: "#2563eb", fontWeight: "600", marginTop: "2px" }}>
                                                             <a href={`mailto:${lead.email}`} style={{ textDecoration: "none", color: "inherit" }}>
-                                                                ✉️ {lead.email}
+                                                                <i className="fal fa-envelope" style={{ marginRight: "4px" }}></i>{lead.email}
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <span style={{ fontSize: "12px", color: "#64748b", backgroundColor: "#f1f5f9", padding: "4px 10px", borderRadius: "12px" }}>
-                                                        📅 {new Date(lead.created_at).toLocaleString()}
+                                                        <i className="fal fa-calendar-alt" style={{ marginRight: "4px" }}></i>{new Date(lead.created_at).toLocaleString()}
                                                     </span>
                                                 </div>
 
@@ -1185,7 +1185,7 @@ export default function AdminPage() {
                                                             gap: "6px"
                                                         }}
                                                     >
-                                                        ✉️ Reply via Email
+                                                        <i className="fal fa-reply" style={{ marginRight: "4px" }}></i> Reply via Email
                                                     </a>
 
                                                     <a
@@ -1205,7 +1205,7 @@ export default function AdminPage() {
                                                             gap: "6px"
                                                         }}
                                                     >
-                                                        💬 WhatsApp
+                                                        <i className="fab fa-whatsapp" style={{ marginRight: "4px" }}></i>WhatsApp
                                                     </a>
 
                                                     <button
@@ -1225,7 +1225,7 @@ export default function AdminPage() {
                                                             marginLeft: "auto"
                                                         }}
                                                     >
-                                                        🗑️ Delete
+                                                        Delete
                                                     </button>
                                                 </div>
                                             </div>
@@ -1264,7 +1264,7 @@ export default function AdminPage() {
                                             gap: "6px"
                                         }}
                                     >
-                                        ➕ Post Review Directly
+                                        Post Review Directly
                                     </button>
                                 </div>
 
@@ -1318,7 +1318,7 @@ export default function AdminPage() {
                                                     }}
                                                     style={{ backgroundColor: "#f1f5f9", color: "#1e293b", border: "1px solid #cbd5e1", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
                                                 >
-                                                    ✏️ Edit
+                                                    Edit
                                                 </button>
                                                 <button
                                                     onClick={() => {
@@ -1327,7 +1327,7 @@ export default function AdminPage() {
                                                     }}
                                                     style={{ backgroundColor: "transparent", color: "#ef4444", border: "1px solid #fca5a5", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer", marginLeft: "auto" }}
                                                 >
-                                                    🗑️ Delete
+                                                    Delete
                                                 </button>
                                             </div>
                                         </div>
@@ -1365,7 +1365,7 @@ export default function AdminPage() {
                                             gap: "6px"
                                         }}
                                     >
-                                        ➕ Write & Publish Article
+                                        Write & Publish Article
                                     </button>
                                 </div>
 
@@ -1428,7 +1428,7 @@ export default function AdminPage() {
                                                     }}
                                                     style={{ backgroundColor: "#f1f5f9", color: "#1e293b", border: "1px solid #cbd5e1", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
                                                 >
-                                                    ✏️ Edit
+                                                    Edit
                                                 </button>
                                                 <button
                                                     onClick={() => {
@@ -1437,7 +1437,7 @@ export default function AdminPage() {
                                                     }}
                                                     style={{ backgroundColor: "transparent", color: "#ef4444", border: "1px solid #fca5a5", padding: "5px 14px", borderRadius: "4px", fontSize: "12px", fontWeight: "700", cursor: "pointer", marginLeft: "auto" }}
                                                 >
-                                                    🗑️ Delete
+                                                    Delete
                                                 </button>
                                             </div>
                                         </div>
@@ -1512,7 +1512,7 @@ export default function AdminPage() {
                                                                 cursor: "pointer"
                                                             }}
                                                         >
-                                                            {u.role === 'admin' ? '👤 Demote' : '⭐ Make Admin'}
+                                                            {u.role === 'admin' ? 'Demote' : 'Make Admin'}
                                                         </button>
 
                                                         <button
@@ -1532,7 +1532,7 @@ export default function AdminPage() {
                                                                 cursor: "pointer"
                                                             }}
                                                         >
-                                                            ✏️ Edit
+                                                            Edit
                                                         </button>
 
                                                         {u.id !== adminUser?.id && (
@@ -1552,7 +1552,7 @@ export default function AdminPage() {
                                                                     cursor: "pointer"
                                                                 }}
                                                             >
-                                                                🗑️
+                                                                <i className="fal fa-trash-alt"></i>
                                                             </button>
                                                         )}
                                                     </div>
@@ -1572,7 +1572,7 @@ export default function AdminPage() {
                                 {/* Left Panel: Live WhatsApp & Announcement */}
                                 <div style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "14px", border: "1px solid #e5e3db" }}>
                                     <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "20px" }}>
-                                        ⚙️ Live Site Settings
+                                        Live Site Settings
                                     </h3>
 
                                     <form onSubmit={handleSaveSettings}>
@@ -1681,7 +1681,7 @@ export default function AdminPage() {
                                                 marginTop: "10px"
                                             }}
                                         >
-                                            {savingSettings ? 'Saving Settings...' : '💾 Save & Publish Settings Live'}
+                                            {savingSettings ? 'Saving Settings...' : 'Save & Publish Settings Live'}
                                         </button>
                                     </form>
                                 </div>
@@ -1689,7 +1689,7 @@ export default function AdminPage() {
                                 {/* Right Panel: System Infrastructure Status */}
                                 <div style={{ backgroundColor: "#ffffff", padding: "28px", borderRadius: "14px", border: "1px solid #e5e3db" }}>
                                     <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#162d20", marginBottom: "20px" }}>
-                                        🛡️ Infrastructure Status
+                                        Infrastructure Status
                                     </h3>
 
                                     <div style={{ display: "grid", gap: "16px" }}>
@@ -1726,7 +1726,7 @@ export default function AdminPage() {
 
                                     <div style={{ marginTop: "24px", padding: "16px", borderRadius: "10px", backgroundColor: "#fef9c3", border: "1px solid #fde047" }}>
                                         <h5 style={{ margin: "0 0 6px", color: "#854d0e", fontSize: "14px", fontWeight: "700" }}>
-                                            💡 Admin Tip
+                                            Admin Tip
                                         </h5>
                                         <p style={{ margin: 0, fontSize: "13px", color: "#713f12", lineHeight: "1.5" }}>
                                             Changes to reviews and articles publish directly to the live site. Always verify executive claims and confidentiality before approving.
@@ -1760,9 +1760,9 @@ export default function AdminPage() {
                                 }}>
                                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px" }}>
                                         <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "800", color: "#162d20" }}>
-                                            {editingReview ? '✏️ Edit Testimonial' : '➕ Post Direct Testimonial'}
+                                            {editingReview ? 'Edit Testimonial' : 'Post Direct Testimonial'}
                                         </h3>
-                                        <button onClick={() => setReviewModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}>✕</button>
+                                        <button onClick={() => setReviewModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fal fa-times"></i></button>
                                     </div>
 
                                     <form onSubmit={handleSaveReviewModal}>
@@ -1859,9 +1859,9 @@ export default function AdminPage() {
                                 }}>
                                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px" }}>
                                         <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "800", color: "#162d20" }}>
-                                            {editingArticle ? '✏️ Edit Article' : '➕ Write & Publish Executive Article'}
+                                            {editingArticle ? 'Edit Article' : 'Write & Publish Executive Article'}
                                         </h3>
-                                        <button onClick={() => setArticleModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}>✕</button>
+                                        <button onClick={() => setArticleModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fal fa-times"></i></button>
                                     </div>
 
                                     <form onSubmit={handleSaveArticleModal}>
@@ -1970,9 +1970,9 @@ export default function AdminPage() {
                                 }}>
                                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px" }}>
                                         <h3 style={{ margin: 0, fontSize: "20px", fontWeight: "800", color: "#162d20" }}>
-                                            ✏️ Edit Member Profile
+                                            Edit Member Profile
                                         </h3>
-                                        <button onClick={() => setUserModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}>✕</button>
+                                        <button onClick={() => setUserModalOpen(false)} style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#94a3b8" }}><i className="fal fa-times"></i></button>
                                     </div>
 
                                     <form onSubmit={handleSaveUserModal}>
@@ -2059,7 +2059,7 @@ export default function AdminPage() {
                                     padding: "28px",
                                     boxShadow: "0 20px 50px rgba(0,0,0,0.2)"
                                 }}>
-                                    <div style={{ fontSize: "36px", marginBottom: "10px" }}>⚠️</div>
+                                    <div style={{ fontSize: "32px", color: "#dc2626", marginBottom: "10px" }}><i className="fal fa-exclamation-triangle"></i></div>
                                     <h3 style={{ margin: "0 0 8px", fontSize: "19px", fontWeight: "800", color: "#991b1b" }}>
                                         Confirm Permanent Deletion
                                     </h3>

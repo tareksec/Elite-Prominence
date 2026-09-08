@@ -257,7 +257,7 @@ export default function ContactForm() {
                                         fontWeight: "700"
                                     }}
                                 >
-                                    {submitting ? 'Submitting Details...' : 'Book a Strategy Call →'}
+                                    {submitting ? 'Submitting Details...' : 'Book a Strategy Call'}
                                 </button>
 
                                 <div style={{ marginTop: "22px", display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>

@@ -62,39 +62,25 @@ export default function Service_Page() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
             />
-            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Executive Reputation Architecture">
+            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Executive Capabilities">
                 
                 {/* Services Hero Header */}
-                <section className="service_page_intro pt_120 pb_70" style={{ background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
+                <section className="prominence_page_intro">
                     <div className="container">
                         <div className="section_title centred" style={{ maxWidth: "860px", margin: "0 auto" }}>
-                            <div className="tag_text" style={{ marginBottom: "16px" }}>
-                                <span style={{ 
-                                    display: 'inline-block', 
-                                    padding: '6px 16px', 
-                                    background: '#ecf3ff', 
-                                    color: '#2460e2', 
-                                    fontWeight: '700', 
-                                    fontSize: '12px', 
-                                    letterSpacing: '1px', 
-                                    textTransform: 'uppercase', 
-                                    borderRadius: '50px' 
-                                }}>
-                                    The 7 Core Capabilities
-                                </span>
+                            <div className="tag_text">
+                                <h6>The 7 Core Capabilities</h6>
                             </div>
-                            <h1 style={{ fontSize: "44px", fontWeight: "800", color: "#0d1b2a", lineHeight: "1.2", marginBottom: "20px" }}>
-                                Sovereign Digital Stature Engineered for Enterprise Leaders
-                            </h1>
-                            <p style={{ fontSize: "19px", color: "#475569", lineHeight: "1.7" }}>
-                                Prominence does not offer generic marketing retainers or superficial social management. We build permanent, owned reputation assets that establish institutional authority, protect against reputational risk, and unlock boardroom, investor, and career opportunities.
+                            <h1>Sovereign Digital Stature Engineered for Enterprise Leaders</h1>
+                            <p>
+                                Prominence does not offer generic marketing retainers or superficial social media management. We build permanent, owned reputation assets that establish institutional authority, protect against reputational risk, and unlock boardroom, investor, and career opportunities.
                             </p>
-                            <div style={{ marginTop: "32px", display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-                                <Link href="/contact" className="btn_style_one" style={{ padding: "14px 32px", fontSize: "15px" }}>
+                            <div style={{ marginTop: "32px", display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
+                                <Link href="/contact" className="btn_style_one">
                                     Book a Private Consultation
                                 </Link>
-                                <Link href="/resources/assessment" className="btn_style_two" style={{ padding: "14px 28px", fontSize: "15px", background: "#fff" }}>
-                                    Evaluate Your Digital Stature
+                                <Link href="/resources/assessment" className="btn_style_two">
+                                    Evaluate Your Stature <i className="fa-solid fa-angle-right ms-2" style={{ fontSize: "12px" }}></i>
                                 </Link>
                             </div>
                         </div>
@@ -102,23 +88,13 @@ export default function Service_Page() {
                 </section>
 
                 {/* The 7 Core Services Grid */}
-                <section className="service_details_section pt_100 pb_90">
+                <section className="pt_100 pb_90" style={{ background: "#ffffff" }}>
                     <div className="container">
                         <div className="row">
                             {SERVICES_DATA.map((service, idx) => (
                                 <div key={service.slug} className="col-lg-4 col-md-6 col-sm-12 mb_40">
-                                    <div className="service_card_executive" style={{ 
-                                        height: "100%", 
-                                        background: "#fff", 
-                                        borderRadius: "14px", 
-                                        overflow: "hidden", 
-                                        boxShadow: "0 10px 35px rgba(0,0,0,0.06)", 
-                                        border: "1px solid #eef2f6",
-                                        display: "flex", 
-                                        flexDirection: "column",
-                                        transition: "transform 0.25s ease, box-shadow 0.25s ease" 
-                                    }}>
-                                        <div style={{ height: "200px", overflow: "hidden", position: "relative" }}>
+                                    <div className="prominence_card">
+                                        <div style={{ height: "200px", margin: "-36px -32px 28px", overflow: "hidden", position: "relative", borderBottom: "1px solid #edf2f7" }}>
                                             <img 
                                                 src={service.heroImage} 
                                                 alt={service.title} 
@@ -128,72 +104,72 @@ export default function Service_Page() {
                                                 position: "absolute", 
                                                 top: "16px", 
                                                 left: "16px", 
-                                                background: "rgba(13, 27, 42, 0.85)", 
-                                                backdropFilter: "blur(6px)",
-                                                color: "#fff", 
+                                                background: "rgba(15, 16, 19, 0.9)", 
+                                                color: "#ffffff", 
                                                 fontSize: "11px", 
                                                 fontWeight: "700", 
                                                 padding: "4px 12px", 
-                                                borderRadius: "20px",
-                                                letterSpacing: "0.5px"
+                                                borderRadius: "4px",
+                                                letterSpacing: "0.8px",
+                                                textTransform: "uppercase",
+                                                fontFamily: "var(--primary-font)"
                                             }}>
-                                                {service.badge}
+                                                Pillar {service.number}
                                             </div>
                                         </div>
-                                        <div style={{ padding: "32px", flex: 1, display: "flex", flexDirection: "column" }}>
-                                            <span style={{ fontSize: "12px", fontWeight: "700", color: "#2460e2", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px" }}>
-                                                {service.tagline}
-                                            </span>
-                                            <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0d1b2a", marginBottom: "14px", lineHeight: "1.3" }}>
-                                                <Link href={`/services/${service.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
-                                                    {service.title}
-                                                </Link>
-                                            </h3>
-                                            <p style={{ color: "#64748b", lineHeight: "1.7", marginBottom: "24px", fontSize: "15px", flex: 1 }}>
-                                                {service.shortDescription}
-                                            </p>
 
-                                            <div style={{ borderTop: "1px solid #f1f5f9", paddingTop: "18px", marginBottom: "24px" }}>
-                                                <h4 style={{ fontSize: "12px", fontWeight: "700", color: "#94a3b8", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "10px" }}>
-                                                    Core Strategic Deliverables
-                                                </h4>
-                                                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                                                    {service.deliverables.slice(0, 3).map((item, i) => (
-                                                        <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#334155", marginBottom: "6px" }}>
-                                                            <span style={{ color: "#2460e2", fontWeight: "bold" }}>✓</span>
-                                                            <span style={{ lineHeight: "1.4" }}>{item}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
+                                        <span style={{ fontSize: "11px", fontWeight: "700", color: "#64748b", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px", fontFamily: "var(--primary-font)" }}>
+                                            {service.tagline}
+                                        </span>
+                                        <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#0f1013", marginBottom: "14px", lineHeight: "1.3" }}>
+                                            <Link href={`/services/${service.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
+                                                {service.title}
+                                            </Link>
+                                        </h3>
+                                        <p style={{ color: "#59606a", lineHeight: "26px", marginBottom: "24px", fontSize: "15px", flex: 1 }}>
+                                            {service.shortDescription}
+                                        </p>
 
-                                            <div style={{ marginTop: "auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                                                <Link 
-                                                    href={`/services/${service.slug}`} 
-                                                    style={{ 
-                                                        fontSize: "14px", 
-                                                        fontWeight: "700", 
-                                                        color: "#2460e2", 
-                                                        display: "inline-flex", 
-                                                        alignItems: "center", 
-                                                        gap: "6px",
-                                                        textDecoration: "none" 
-                                                    }}
-                                                >
-                                                    Explore Full Scope <span>→</span>
-                                                </Link>
-                                                <Link 
-                                                    href="/contact" 
-                                                    style={{ 
-                                                        fontSize: "13px", 
-                                                        fontWeight: "600", 
-                                                        color: "#64748b",
-                                                        textDecoration: "none" 
-                                                    }}
-                                                >
-                                                    Inquire
-                                                </Link>
-                                            </div>
+                                        <div style={{ borderTop: "1px solid #f1f5f9", paddingTop: "20px", marginBottom: "24px" }}>
+                                            <h4 style={{ fontSize: "11px", fontWeight: "700", color: "#94a3b8", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "12px", fontFamily: "var(--primary-font)" }}>
+                                                Core Deliverables
+                                            </h4>
+                                            <ul className="prominence_check_list">
+                                                {service.deliverables.slice(0, 3).map((item, i) => (
+                                                    <li key={i} style={{ fontSize: "13.5px", color: "#334155", lineHeight: "20px" }}>
+                                                        {item}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+
+                                        <div style={{ marginTop: "auto", display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: "12px", borderTop: "1px solid #f8fafc" }}>
+                                            <Link 
+                                                href={`/services/${service.slug}`} 
+                                                style={{ 
+                                                    fontSize: "14px", 
+                                                    fontWeight: "700", 
+                                                    color: "#0f1013", 
+                                                    display: "inline-flex", 
+                                                    alignItems: "center", 
+                                                    gap: "6px",
+                                                    textDecoration: "none",
+                                                    fontFamily: "var(--primary-font)"
+                                                }}
+                                            >
+                                                Explore Scope <i className="fa-solid fa-angle-right" style={{ fontSize: "11px" }}></i>
+                                            </Link>
+                                            <Link 
+                                                href="/contact" 
+                                                style={{ 
+                                                    fontSize: "13px", 
+                                                    fontWeight: "600", 
+                                                    color: "#64748b",
+                                                    textDecoration: "none" 
+                                                }}
+                                            >
+                                                Inquire
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -202,71 +178,82 @@ export default function Service_Page() {
                     </div>
                 </section>
 
-                {/* Strategic Comparison: Owned Authority vs. Rented Noise */}
-                <section className="pt_90 pb_90" style={{ background: "#0d1b2a", color: "#fff" }}>
+                {/* Strategic Comparison: Editorial Table */}
+                <section className="pt_90 pb_90" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7", borderBottom: "1px solid #edf2f7" }}>
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: "800px", margin: "0 auto 60px" }}>
-                            <span style={{ color: "#d29d2b", fontWeight: "700", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                                The Prominence Difference
-                            </span>
-                            <h2 style={{ fontSize: "38px", fontWeight: "800", color: "#fff", marginTop: "12px" }}>
-                                Owned Authority vs. Rented Noise
-                            </h2>
-                            <p style={{ color: "#94a3b8", fontSize: "17px", marginTop: "14px", lineHeight: "1.7" }}>
-                                Traditional marketing agencies treat executives like influencers, chasing superficial vanity metrics. Prominence operates as a private strategic communications counsel, building sovereign institutional assets.
+                        <div className="section_title centred" style={{ maxWidth: "780px", margin: "0 auto 50px" }}>
+                            <div className="tag_text">
+                                <h6>The Prominence Difference</h6>
+                            </div>
+                            <h2>Owned Authority vs. Rented Noise</h2>
+                            <p style={{ color: "#59606a", fontSize: "17px", marginTop: "12px", lineHeight: "28px" }}>
+                                Traditional agencies treat executives like influencers, chasing superficial vanity metrics. Prominence operates as private strategic communications counsel, building sovereign institutional assets.
                             </p>
                         </div>
 
-                        <div className="row">
-                            <div className="col-lg-6 mb_30">
-                                <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "12px", padding: "40px", height: "100%" }}>
-                                    <span style={{ color: "#ef4444", fontWeight: "700", fontSize: "13px", letterSpacing: "1px", textTransform: "uppercase", display: "block", marginBottom: "16px" }}>
-                                        ✕ Typical Digital Agencies & Freelancers
-                                    </span>
-                                    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "16px", color: "#cbd5e1", fontSize: "15px" }}>
-                                        <li style={{ display: "flex", gap: "12px" }}>
-                                            <span style={{ color: "#ef4444" }}>—</span>
-                                            <div><strong>Generic Templates:</strong> Cheap WordPress or Wix sites that look indistinguishable from junior consultants.</div>
-                                        </li>
-                                        <li style={{ display: "flex", gap: "12px" }}>
-                                            <span style={{ color: "#ef4444" }}>—</span>
-                                            <div><strong>Shallow Social Posts:</strong> Generic AI-generated platitudes that dilute executive gravitas and embarrass corporate PR.</div>
-                                        </li>
-                                        <li style={{ display: "flex", gap: "12px" }}>
-                                            <span style={{ color: "#ef4444" }}>—</span>
-                                            <div><strong>Rented Land Only:</strong> 100% dependent on LinkedIn algorithms with zero owned domain presence or Google Knowledge Panel.</div>
-                                        </li>
-                                        <li style={{ display: "flex", gap: "12px" }}>
-                                            <span style={{ color: "#ef4444" }}>—</span>
-                                            <div><strong>High Client Time Tax:</strong> Constant review requests, confusing task boards, and dozens of revisions.</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <div className="row justify-content-center">
+                            <div className="col-lg-10">
+                                <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "14px", overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.03)" }}>
+                                    <div className="row g-0" style={{ borderBottom: "1px solid #e2e8f0", background: "#fafbfc" }}>
+                                        <div className="col-md-6 p-4" style={{ borderRight: "1px solid #e2e8f0" }}>
+                                            <span style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "1.2px", textTransform: "uppercase", color: "#64748b", display: "block" }}>
+                                                Conventional Agency Approach
+                                            </span>
+                                            <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#0f1013", marginTop: "4px" }}>
+                                                Rented Social Retainers
+                                            </h3>
+                                        </div>
+                                        <div className="col-md-6 p-4" style={{ background: "#f8fafd" }}>
+                                            <span style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "1.2px", textTransform: "uppercase", color: "#2460e2", display: "block" }}>
+                                                The Prominence Sovereign Standard
+                                            </span>
+                                            <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#0f1013", marginTop: "4px" }}>
+                                                Permanent Owned Architecture
+                                            </h3>
+                                        </div>
+                                    </div>
 
-                            <div className="col-lg-6 mb_30">
-                                <div style={{ background: "linear-gradient(135deg, rgba(36,96,226,0.15) 0%, rgba(210,157,43,0.1) 100%)", border: "1px solid rgba(36,96,226,0.4)", borderRadius: "12px", padding: "40px", height: "100%" }}>
-                                    <span style={{ color: "#38bdf8", fontWeight: "700", fontSize: "13px", letterSpacing: "1px", textTransform: "uppercase", display: "block", marginBottom: "16px" }}>
-                                        ✓ The Prominence Sovereign Standard
-                                    </span>
-                                    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "16px", color: "#f8fafc", fontSize: "15px" }}>
-                                        <li style={{ display: "flex", gap: "12px" }}>
-                                            <span style={{ color: "#38bdf8" }}>✓</span>
-                                            <div><strong>Bespoke Engineering:</strong> Next.js custom Digital HQ architected for boardroom due diligence and instant credibility.</div>
-                                        </li>
-                                        <li style={{ display: "flex", gap: "12px" }}>
-                                            <span style={{ color: "#38bdf8" }}>✓</span>
-                                            <div><strong>Substantive Editorial Content:</strong> Strategic essays authored by senior journalists calibrated to your exact executive voice.</div>
-                                        </li>
-                                        <li style={{ display: "flex", gap: "12px" }}>
-                                            <span style={{ color: "#38bdf8" }}>✓</span>
-                                            <div><strong>Permanent Search Domination:</strong> Page 1 Google control, structured JSON-LD entity schema, and media syndication.</div>
-                                        </li>
-                                        <li style={{ display: "flex", gap: "12px" }}>
-                                            <span style={{ color: "#38bdf8" }}>✓</span>
-                                            <div><strong>Frictionless Execution:</strong> Requires under 30 minutes of your time per month with complete discretion.</div>
-                                        </li>
-                                    </ul>
+                                    {[
+                                        {
+                                            dimension: "Asset Ownership",
+                                            traditional: "Dependent entirely on LinkedIn algorithms; zero owned website or Knowledge Graph presence.",
+                                            prominence: "Sovereign Executive Digital HQ on your custom domain, ranking #1 on Google with rich entity schemas."
+                                        },
+                                        {
+                                            dimension: "Editorial Quality",
+                                            traditional: "Junior staff or generic AI prompts producing platitudes that dilute executive gravitas.",
+                                            prominence: "Senior business journalists conducting narrative extraction interviews and authoring boardroom-caliber essays."
+                                        },
+                                        {
+                                            dimension: "Search Placement",
+                                            traditional: "Unmanaged Page 1 search results leaving namesake confusion and outdated bios visible.",
+                                            prominence: "Systematic search reputation management ensuring Page 1 reflects your definitive leadership standing."
+                                        },
+                                        {
+                                            dimension: "Executive Time Tax",
+                                            traditional: "Dozens of hours required for reviewing drafts, managing tasks, and providing micro-direction.",
+                                            prominence: "Turnkey operational model requiring less than 30 minutes of client time per month."
+                                        }
+                                    ].map((row, i) => (
+                                        <div key={i} className="row g-0" style={{ borderBottom: i < 3 ? "1px solid #f1f5f9" : "none" }}>
+                                            <div className="col-md-6 p-4" style={{ borderRight: "1px solid #e2e8f0" }}>
+                                                <span style={{ fontSize: "12px", fontWeight: "700", color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.5px", display: "block", marginBottom: "4px" }}>
+                                                    {row.dimension}
+                                                </span>
+                                                <p style={{ color: "#64748b", fontSize: "14.5px", lineHeight: "22px", margin: 0 }}>
+                                                    {row.traditional}
+                                                </p>
+                                            </div>
+                                            <div className="col-md-6 p-4" style={{ background: "#fafbfc" }}>
+                                                <span style={{ fontSize: "12px", fontWeight: "700", color: "#1e293b", textTransform: "uppercase", letterSpacing: "0.5px", display: "block", marginBottom: "4px" }}>
+                                                    {row.dimension}
+                                                </span>
+                                                <p style={{ color: "#0f1013", fontSize: "14.5px", lineHeight: "22px", margin: 0, fontWeight: "500" }}>
+                                                    {row.prominence}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -274,25 +261,23 @@ export default function Service_Page() {
                 </section>
 
                 {/* FAQ Section */}
-                <section className="pt_100 pb_90" style={{ background: "#fff" }}>
+                <section className="pt_100 pb_90" style={{ background: "#ffffff" }}>
                     <div className="container">
                         <div className="section_title centred" style={{ maxWidth: "760px", margin: "0 auto 50px" }}>
                             <div className="tag_text"><h6>Common Questions</h6></div>
-                            <h2 style={{ fontSize: "36px", fontWeight: "800", color: "#0d1b2a" }}>
-                                Frequently Asked Executive Inquiries
-                            </h2>
-                            <p style={{ color: "#64748b", marginTop: "12px", fontSize: "16px" }}>
-                                Answers regarding corporate compliance, time commitment, confidentiality, and measurable ROI.
+                            <h2>Frequently Asked Executive Inquiries</h2>
+                            <p style={{ color: "#59606a", marginTop: "12px", fontSize: "17px", lineHeight: "28px" }}>
+                                Answers regarding corporate compliance, time commitment, confidentiality, and measurable outcomes.
                             </p>
                         </div>
 
                         <div className="row justify-content-center">
-                            <div className="col-lg-10">
+                            <div className="col-lg-9">
                                 <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
                                     {[
                                         {
                                             q: "Will this service conflict with my company's corporate communications or PR team?",
-                                            a: "No. In fact, enterprise PR departments routinely welcome our work because we relieve them of managing personal leadership profiles while strictly adhering to corporate communication guidelines, disclosure restrictions, and brand guardrails."
+                                            a: "No. Enterprise PR departments routinely welcome our counsel because we relieve them of managing personal leadership profiles while strictly adhering to corporate communication guidelines, disclosure restrictions, and brand guardrails."
                                         },
                                         {
                                             q: "How much of my personal time is required each month?",
@@ -307,11 +292,11 @@ export default function Service_Page() {
                                             a: "SEO agencies focus on keywords; PR agencies focus on temporary press cycles. Prominence builds sovereign digital assets you own permanently—your personal website, Google Knowledge Graph presence, curated search results, and verified thought leadership repository."
                                         }
                                     ].map((faq, i) => (
-                                        <div key={i} style={{ border: "1px solid #e2e8f0", borderRadius: "10px", padding: "28px 32px", background: "#f8fafc" }}>
-                                            <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#0d1b2a", marginBottom: "12px" }}>
+                                        <div key={i} style={{ border: "1px solid #e2e8f0", borderRadius: "10px", padding: "28px 32px", background: "#fafbfc" }}>
+                                            <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1013", marginBottom: "10px" }}>
                                                 {faq.q}
                                             </h3>
-                                            <p style={{ color: "#475569", lineHeight: "1.7", margin: 0, fontSize: "15px" }}>
+                                            <p style={{ color: "#475569", lineHeight: "24px", margin: 0, fontSize: "15px" }}>
                                                 {faq.a}
                                             </p>
                                         </div>
@@ -323,23 +308,24 @@ export default function Service_Page() {
                 </section>
 
                 {/* Final CTA Strip */}
-                <section className="pt_80 pb_80" style={{ background: "#ecf3ff", borderTop: "1px solid #dbeafe" }}>
+                <section className="pt_80 pb_80" style={{ background: "#f8fafd", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
                     <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-lg-8">
-                                <span style={{ color: "#2460e2", fontWeight: "700", fontSize: "13px", letterSpacing: "1px", textTransform: "uppercase" }}>
-                                    Private Consultation
-                                </span>
-                                <h2 style={{ fontSize: "32px", fontWeight: "800", color: "#0d1b2a", marginTop: "8px" }}>
-                                    Ready to Architect Your Sovereign Executive Presence?
-                                </h2>
-                                <p style={{ color: "#475569", fontSize: "16px", marginTop: "8px", margin: 0 }}>
-                                    Schedule a confidential 30-minute advisory conversation to audit your search footprint and align your personal brand with your enterprise stature.
-                                </p>
+                        <div style={{ maxWidth: "780px", margin: "0 auto" }}>
+                            <div className="tag_text" style={{ marginBottom: "16px" }}>
+                                <h6>Private Consultation</h6>
                             </div>
-                            <div className="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                                <Link href="/contact" className="btn_style_one" style={{ padding: "16px 36px", fontSize: "16px" }}>
+                            <h2 style={{ fontSize: "36px", fontWeight: "700", color: "#0f1013", marginBottom: "14px" }}>
+                                Ready to Architect Your Sovereign Executive Presence?
+                            </h2>
+                            <p style={{ color: "#59606a", fontSize: "17px", lineHeight: "28px", marginBottom: "30px" }}>
+                                Schedule a confidential 30-minute advisory conversation to audit your search footprint and align your personal brand with your enterprise stature.
+                            </p>
+                            <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
+                                <Link href="/contact" className="btn_style_one">
                                     Book a Private Consultation
+                                </Link>
+                                <Link href="/resources/assessment" className="btn_style_two">
+                                    Audit Your Stature <i className="fa-solid fa-angle-right ms-2" style={{ fontSize: "12px" }}></i>
                                 </Link>
                             </div>
                         </div>

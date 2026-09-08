@@ -124,7 +124,7 @@ export default function FontSizeControl() {
                 borderRadius: '6px',
                 border: 'none',
                 background: isActive
-                  ? 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)'
+                  ? '#0D1322'
                   : 'transparent',
                 color: isActive ? '#FFFFFF' : '#64748B',
                 fontSize: '11px',

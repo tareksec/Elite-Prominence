@@ -151,17 +151,7 @@ export default function CommunityPage() {
 
                     {/* Hero Header */}
                     <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 40px" }}>
-                        <span style={{
-                            display: "inline-block",
-                            fontSize: "13px",
-                            fontWeight: "700",
-                            letterSpacing: "1.5px",
-                            textTransform: "uppercase",
-                            color: "#7c3aed", backgroundColor: "#f3e8ff", border: "1px solid rgba(124, 58, 237, 0.2)",
-                            padding: "4px 16px",
-                            borderRadius: "20px",
-                            marginBottom: "14px"
-                        }}>
+                        <span className="prominence_badge">
                             Executive Directory
                         </span>
                         <h1 style={{ fontSize: "clamp(28px, 5.5vw, 44px)", fontWeight: "700", color: "#1b2534", marginBottom: "18px", lineHeight: "1.25" }}>
@@ -174,22 +164,9 @@ export default function CommunityPage() {
                         <div style={{ marginTop: "26px" }}>
                             <Link
                                 href="/signup"
-                                style={{
-                                    background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
-                                    color: "#ffffff",
-                                    padding: "12px 28px",
-                                    minHeight: "44px",
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    borderRadius: "30px",
-                                    fontSize: "15px",
-                                    fontWeight: "700",
-                                    textDecoration: "none",
-                                    boxShadow: "0 8px 20px -2px rgba(0, 0, 0, 0.35)"
-                                }}
+                                className="btn_style_one"
                             >
-                                Join the Network →
+                                Join the Network
                             </Link>
                         </div>
                     </div>
@@ -263,7 +240,7 @@ export default function CommunityPage() {
                                     {member.location && (
                                         <>
                                             <span>•</span>
-                                            <span>📍 {member.location}</span>
+                                            <span><i className="fal fa-map-marker-alt" style={{ marginRight: "4px" }}></i>{member.location}</span>
                                         </>
                                     )}
                                 </div>
@@ -291,7 +268,7 @@ export default function CommunityPage() {
                                                     {art.category}
                                                 </div>
                                                 <div style={{ fontSize: "14px", fontWeight: "700", color: "#1b2534", lineHeight: "1.4" }}>
-                                                    {art.title} →
+                                                    {art.title} <i className="fal fa-arrow-right" style={{ fontSize: "11px", marginLeft: "4px" }}></i>
                                                 </div>
                                             </div>
                                         ))}
@@ -333,19 +310,7 @@ export default function CommunityPage() {
                         boxShadow: "0 10px 30px rgba(0, 0, 0, 0.03)"
                     }}>
                         <div style={{ textAlign: "center", maxWidth: "760px", margin: "0 auto 48px" }}>
-                            <span style={{
-                                display: "inline-block",
-                                fontSize: "12px",
-                                fontWeight: "700",
-                                letterSpacing: "1.5px",
-                                textTransform: "uppercase",
-                                color: "#7c3aed",
-                                backgroundColor: "#f3e8ff",
-                                border: "1px solid rgba(124, 58, 237, 0.2)",
-                                padding: "4px 14px",
-                                borderRadius: "20px",
-                                marginBottom: "12px"
-                            }}>
+                            <span className="prominence_badge">
                                 Network Architecture
                             </span>
                             <h2 style={{ fontSize: "clamp(24px, 4.5vw, 34px)", fontWeight: "700", color: "#1b2534", marginBottom: "16px" }}>
@@ -371,8 +336,8 @@ export default function CommunityPage() {
                                     width: "44px",
                                     height: "44px",
                                     borderRadius: "10px",
-                                    backgroundColor: "#ede9fe",
-                                    color: "#7c3aed",
+                                    backgroundColor: "#0D1322",
+                                    color: "#ffffff",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -400,8 +365,8 @@ export default function CommunityPage() {
                                     width: "44px",
                                     height: "44px",
                                     borderRadius: "10px",
-                                    backgroundColor: "#ede9fe",
-                                    color: "#7c3aed",
+                                    backgroundColor: "#0D1322",
+                                    color: "#ffffff",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -429,8 +394,8 @@ export default function CommunityPage() {
                                     width: "44px",
                                     height: "44px",
                                     borderRadius: "10px",
-                                    backgroundColor: "#ede9fe",
-                                    color: "#7c3aed",
+                                    backgroundColor: "#0D1322",
+                                    color: "#ffffff",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -458,8 +423,8 @@ export default function CommunityPage() {
                                     width: "44px",
                                     height: "44px",
                                     borderRadius: "10px",
-                                    backgroundColor: "#ede9fe",
-                                    color: "#7c3aed",
+                                    backgroundColor: "#0D1322",
+                                    color: "#ffffff",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -482,19 +447,7 @@ export default function CommunityPage() {
                     {/* How It Works: Contributor Journey */}
                     <div style={{ marginBottom: "70px" }}>
                         <div style={{ textAlign: "center", maxWidth: "700px", margin: "0 auto 44px" }}>
-                            <span style={{
-                                display: "inline-block",
-                                fontSize: "12px",
-                                fontWeight: "700",
-                                letterSpacing: "1.5px",
-                                textTransform: "uppercase",
-                                color: "#7c3aed",
-                                backgroundColor: "#f3e8ff",
-                                border: "1px solid rgba(124, 58, 237, 0.2)",
-                                padding: "4px 14px",
-                                borderRadius: "20px",
-                                marginBottom: "12px"
-                            }}>
+                            <span className="prominence_badge">
                                 Contributor Process
                             </span>
                             <h2 style={{ fontSize: "clamp(24px, 4.5vw, 34px)", fontWeight: "700", color: "#1b2534", marginBottom: "14px" }}>
@@ -517,7 +470,7 @@ export default function CommunityPage() {
                                 border: "1px solid #e2e8f0",
                                 position: "relative"
                             }}>
-                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#7c3aed", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
+                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#0D1322", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
                                     Stage 01
                                 </div>
                                 <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1b2534", marginBottom: "12px" }}>
@@ -535,7 +488,7 @@ export default function CommunityPage() {
                                 border: "1px solid #e2e8f0",
                                 position: "relative"
                             }}>
-                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#7c3aed", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
+                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#0D1322", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
                                     Stage 02
                                 </div>
                                 <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1b2534", marginBottom: "12px" }}>
@@ -553,7 +506,7 @@ export default function CommunityPage() {
                                 border: "1px solid #e2e8f0",
                                 position: "relative"
                             }}>
-                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#7c3aed", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
+                                <div style={{ fontSize: "13px", fontWeight: "800", color: "#0D1322", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
                                     Stage 03
                                 </div>
                                 <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1b2534", marginBottom: "12px" }}>
@@ -650,19 +603,7 @@ export default function CommunityPage() {
                     {/* Community FAQ Section */}
                     <div style={{ marginBottom: "80px", maxWidth: "860px", margin: "0 auto 80px" }}>
                         <div style={{ textAlign: "center", marginBottom: "40px" }}>
-                            <span style={{
-                                display: "inline-block",
-                                fontSize: "12px",
-                                fontWeight: "700",
-                                letterSpacing: "1.5px",
-                                textTransform: "uppercase",
-                                color: "#7c3aed",
-                                backgroundColor: "#f3e8ff",
-                                border: "1px solid rgba(124, 58, 237, 0.2)",
-                                padding: "4px 14px",
-                                borderRadius: "20px",
-                                marginBottom: "12px"
-                            }}>
+                            <span className="prominence_badge">
                                 Got Questions?
                             </span>
                             <h2 style={{ fontSize: "clamp(24px, 4.5vw, 32px)", fontWeight: "700", color: "#1b2534", margin: 0 }}>
@@ -721,7 +662,7 @@ export default function CommunityPage() {
                                         </span>
                                         <span style={{
                                             fontSize: "20px",
-                                            color: "#7c3aed",
+                                            color: "#0D1322",
                                             fontWeight: "700",
                                             transition: "transform 0.2s ease",
                                             transform: openFaq === idx ? "rotate(45deg)" : "rotate(0deg)"
@@ -764,18 +705,9 @@ export default function CommunityPage() {
                         <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
                             <Link
                                 href="/signup"
-                                style={{
-                                    backgroundColor: "#ffffff",
-                                    color: "#151619",
-                                    padding: "14px 32px",
-                                    borderRadius: "30px",
-                                    fontSize: "15px",
-                                    fontWeight: "700",
-                                    textDecoration: "none",
-                                    boxShadow: "0 8px 20px rgba(255, 255, 255, 0.2)"
-                                }}
+                                className="btn_style_one"
                             >
-                                Apply for Directory Status →
+                                Apply for Directory Status <i className="fal fa-long-arrow-right"></i>
                             </Link>
                             <Link
                                 href="/contact"
@@ -843,14 +775,14 @@ export default function CommunityPage() {
                                         justifyContent: "center"
                                     }}
                                 >
-                                    ✕
+                                    <i className="fal fa-times"></i>
                                 </button>
 
                                 <span style={{
                                     fontSize: "12px",
                                     fontWeight: "700",
                                     textTransform: "uppercase",
-                                    color: "#7c3aed", backgroundColor: "#f3e8ff", border: "1px solid rgba(124, 58, 237, 0.2)",
+                                    color: "#0D1322", backgroundColor: "rgba(13, 19, 34, 0.05)", border: "1px solid rgba(13, 19, 34, 0.12)",
                                     padding: "3px 12px",
                                     borderRadius: "12px",
                                     display: "inline-block",

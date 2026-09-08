@@ -1,24 +1,24 @@
-/* Elite Prominence — HackerNoon-Style Blog Reading CSS Module */
+/* Elite Prominence — Executive Blog Reading CSS Module */
 
 .readingContainer {
-  --gradient-brand: linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%);
-  --gradient-brand-subtle: linear-gradient(135deg, rgba(124, 58, 237, 0.08) 0%, rgba(192, 38, 168, 0.08) 50%, rgba(244, 114, 182, 0.08) 100%);
+  --gradient-brand: linear-gradient(180deg, #2b2d32 0%, #151619 100%);
+  --gradient-brand-subtle: rgba(13, 19, 34, 0.04);
   --bg-page: #FFFFFF;
-  --bg-surface: #F8F7FF;
-  --bg-muted: #F1F0F9;
+  --bg-surface: #F8F9FA;
+  --bg-muted: #F1F3F5;
   --text-heading: #0F1235;
   --text-body: #374151;
   --text-secondary: #64748B;
   --text-muted: #94A3B8;
-  --purple: #7C3AED;
-  --magenta: #C026A8;
-  --pink: #F472B6;
+  --purple: #0D1322;
+  --magenta: #0D1322;
+  --pink: #C5A059;
   --border: #E5E7EB;
-  --border-brand: #C026A8;
+  --border-brand: #0D1322;
   --shadow-sm: 0 1px 3px rgba(15, 18, 53, 0.05);
   --shadow-md: 0 4px 14px rgba(15, 18, 53, 0.08);
-  --shadow-lg: 0 10px 30px rgba(124, 58, 237, 0.12);
-  --shadow-brand: 0 8px 25px rgba(192, 38, 168, 0.25);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-brand: 0 8px 25px rgba(0, 0, 0, 0.15);
   --font-heading: 'DM Serif Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -93,25 +93,26 @@
 }
 
 .articleBody strong {
-  color: #7C3AED;
-  font-weight: 600;
+  color: #0F1235;
+  font-weight: 700;
 }
 
 .articleBody a {
-  color: #C026A8;
+  color: #0D1322;
   text-decoration: underline;
   text-underline-offset: 3px;
+  font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .articleBody a:hover {
-  color: #7C3AED;
+  color: #C5A059;
 }
 
 .articleBody blockquote {
   position: relative;
-  background: #F8F7FF;
-  border-left: 4px solid #7C3AED;
+  background: #F8F9FA;
+  border-left: 4px solid #0D1322;
   border-radius: 0 10px 10px 0;
   padding: 1.25rem 1.75rem;
   margin: 2rem 0;
@@ -161,7 +162,7 @@
 /* Definition Box */
 .definitionBox {
   background: var(--bg-surface);
-  border: 1px solid rgba(192, 38, 168, 0.2);
+  border: 1px solid #E5E7EB;
   border-left: 4px solid var(--purple);
   border-radius: 12px;
   padding: 1.5rem;

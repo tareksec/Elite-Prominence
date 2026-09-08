@@ -60,15 +60,15 @@ export async function sendContactForm(formData) {
     const detailsHtml = []
     if (role) detailsHtml.push(`<p style="margin: 6px 0;"><strong>Executive Role:</strong> ${role}</p>`)
     if (company) detailsHtml.push(`<p style="margin: 6px 0;"><strong>Company:</strong> ${company}</p>`)
-    if (linkedin) detailsHtml.push(`<p style="margin: 6px 0;"><strong>LinkedIn:</strong> <a href="${linkedin}" style="color: #7c3aed;">${linkedin}</a></p>`)
-    if (goals) detailsHtml.push(`<div style="margin: 12px 0;"><strong>Goals / Inquiries:</strong><div style="background: #f8fafc; padding: 12px; border-left: 3px solid #7c3aed; border-radius: 4px; margin-top: 4px;">${String(goals).replace(/\n/g, '<br/>')}</div></div>`)
-    if (message && message !== goals) detailsHtml.push(`<div style="margin: 12px 0;"><strong>Message:</strong><div style="background: #f8fafc; padding: 12px; border-left: 3px solid #7c3aed; border-radius: 4px; margin-top: 4px;">${String(message).replace(/\n/g, '<br/>')}</div></div>`)
+    if (linkedin) detailsHtml.push(`<p style="margin: 6px 0;"><strong>LinkedIn:</strong> <a href="${linkedin}" style="color: #0D1322; font-weight: 600;">${linkedin}</a></p>`)
+    if (goals) detailsHtml.push(`<div style="margin: 12px 0;"><strong>Goals / Inquiries:</strong><div style="background: #f8fafc; padding: 12px; border-left: 3px solid #0D1322; border-radius: 4px; margin-top: 4px;">${String(goals).replace(/\n/g, '<br/>')}</div></div>`)
+    if (message && message !== goals) detailsHtml.push(`<div style="margin: 12px 0;"><strong>Message:</strong><div style="background: #f8fafc; padding: 12px; border-left: 3px solid #0D1322; border-radius: 4px; margin-top: 4px;">${String(message).replace(/\n/g, '<br/>')}</div></div>`)
 
     const htmlContent = `
       <div style="font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #1e293b; max-width: 620px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background-color: #ffffff;">
-        <div style="background: linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%); padding: 24px; color: #ffffff;">
+        <div style="background: #0D1322; padding: 24px; color: #ffffff; border-bottom: 2px solid #C5A059;">
           <h2 style="margin: 0; font-size: 22px; font-weight: 700; color: #ffffff;">New Contact Form Submission</h2>
-          <p style="margin: 6px 0 0 0; font-size: 14px; opacity: 0.9;">Elite Prominence Website Notification</p>
+          <p style="margin: 6px 0 0 0; font-size: 14px; opacity: 0.9; color: #E2C285;">Elite Prominence Executive Notification</p>
         </div>
         
         <div style="padding: 24px;">
@@ -79,15 +79,15 @@ export async function sendContactForm(formData) {
             </tr>
             <tr>
               <td style="padding: 8px 0; color: #64748b; font-weight: 600;">Email:</td>
-              <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #7c3aed; text-decoration: none;">${email}</a></td>
+              <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #0D1322; font-weight: 600; text-decoration: none;">${email}</a></td>
             </tr>
           </table>
 
-          ${detailsHtml.length > 0 ? detailsHtml.join('') : `<div style="background: #f8fafc; padding: 12px; border-left: 3px solid #7c3aed; border-radius: 4px; margin-top: 10px;">${String(finalMessage).replace(/\n/g, '<br/>')}</div>`}
+          ${detailsHtml.length > 0 ? detailsHtml.join('') : `<div style="background: #f8fafc; padding: 12px; border-left: 3px solid #0D1322; border-radius: 4px; margin-top: 10px;">${String(finalMessage).replace(/\n/g, '<br/>')}</div>`}
         </div>
 
         <div style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 16px 24px; font-size: 13px; color: #94a3b8;">
-          This message was sent from the contact form at <a href="https://prominence.agency" style="color: #7c3aed;">prominence.agency</a>.
+          This message was sent from the contact form at <a href="https://prominence.agency" style="color: #0D1322; font-weight: 600;">prominence.agency</a>.
           You can reply directly to this email to respond to <strong>${name}</strong> (${email}).
         </div>
       </div>

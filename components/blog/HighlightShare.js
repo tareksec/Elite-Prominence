@@ -178,7 +178,7 @@ export default function HighlightShare({ articleTitle = '' }) {
           fontWeight: '600',
           transition: 'background 0.15s ease'
         }}
-        onMouseEnter={(e) => (e.currentTarget.style.background = '#F8F7FF')}
+        onMouseEnter={(e) => (e.currentTarget.style.background = '#F8F9FA')}
         onMouseLeave={(e) => (e.currentTarget.style.background = 'none')}
       >
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
@@ -193,12 +193,12 @@ export default function HighlightShare({ articleTitle = '' }) {
         onClick={copyQuote}
         title="Copy formatted quote"
         style={{
-          background: copied ? 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)' : 'none',
+          background: copied ? '#0D1322' : 'none',
           border: 'none',
           cursor: 'pointer',
           padding: '6px 8px',
           borderRadius: '6px',
-          color: copied ? '#FFFFFF' : '#7C3AED',
+          color: copied ? '#FFFFFF' : '#0D1322',
           display: 'flex',
           alignItems: 'center',
           gap: '4px',
@@ -207,7 +207,7 @@ export default function HighlightShare({ articleTitle = '' }) {
           transition: 'all 0.15s ease'
         }}
         onMouseEnter={(e) => {
-          if (!copied) e.currentTarget.style.background = '#F8F7FF';
+          if (!copied) e.currentTarget.style.background = '#F8F9FA';
         }}
         onMouseLeave={(e) => {
           if (!copied) e.currentTarget.style.background = 'none';

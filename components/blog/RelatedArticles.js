@@ -33,7 +33,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
               fontWeight: '700',
               textTransform: 'uppercase',
               letterSpacing: '0.8px',
-              color: '#7C3AED'
+              color: '#0D1322'
             }}
           >
             Further Reading
@@ -55,14 +55,14 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
           style={{
             fontSize: '14px',
             fontWeight: '600',
-            color: '#C026A8',
+            color: '#0D1322',
             textDecoration: 'none',
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '4px'
+            gap: '6px'
           }}
         >
-          View All <span aria-hidden="true">→</span>
+          View All <i className="fal fa-arrow-right" style={{ fontSize: '12px' }}></i>
         </Link>
       </div>
 
@@ -103,9 +103,9 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
                     </p>
                   )}
 
-                  <div style={{ marginTop: 'auto', paddingTop: '12px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '600', color: '#7C3AED' }}>
+                  <div style={{ marginTop: 'auto', paddingTop: '12px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '600', color: '#0D1322' }}>
                     <span>Read Article</span>
-                    <span aria-hidden="true">→</span>
+                    <i className="fal fa-arrow-right" style={{ fontSize: '12px' }}></i>
                   </div>
                 </div>
               </Link>
@@ -158,7 +158,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
           position: absolute;
           top: 12px;
           left: 12px;
-          background: linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%);
+          background: #0D1322;
           color: #FFFFFF;
           font-size: 11px;
           font-weight: 700;
@@ -166,7 +166,8 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
           letter-spacing: 0.5px;
           padding: 4px 10px;
           border-radius: 9999px;
-          box-shadow: 0 2px 8px rgba(15, 18, 53, 0.2);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .ep-card-title {
@@ -183,7 +184,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
         }
 
         .ep-related-card:hover .ep-card-title {
-          color: #7C3AED;
+          color: #0D1322;
         }
 
         .ep-card-excerpt {

@@ -139,14 +139,14 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
 
         {/* Reactions */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
-          {/* Clap */}
+          {/* Clap / Endorsement */}
           <button
             onClick={() => toggleReaction('claps')}
             className={`action-btn ${reactions.claps ? 'active' : ''}`}
-            title="Clap"
-            aria-label="Clap"
+            title="Endorse"
+            aria-label="Endorse"
           >
-            <span style={{ fontSize: '16px', lineHeight: 1 }}>👏</span>
+            <i className="fal fa-thumbs-up" style={{ fontSize: '14px', lineHeight: 1 }}></i>
             <span style={{ fontSize: '11px', fontWeight: '700', marginTop: '2px', lineHeight: 1 }}>
               {baseCounts.claps + (reactions.claps ? 1 : 0)}
             </span>
@@ -156,10 +156,10 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
           <button
             onClick={() => toggleReaction('likes')}
             className={`action-btn ${reactions.likes ? 'active' : ''}`}
-            title="Like"
-            aria-label="Like"
+            title="Bookmark"
+            aria-label="Bookmark"
           >
-            <span style={{ fontSize: '16px', lineHeight: 1 }}>❤️</span>
+            <i className="fal fa-bookmark" style={{ fontSize: '14px', lineHeight: 1 }}></i>
             <span style={{ fontSize: '11px', fontWeight: '700', marginTop: '2px', lineHeight: 1 }}>
               {baseCounts.likes + (reactions.likes ? 1 : 0)}
             </span>
@@ -172,7 +172,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             title="Insightful"
             aria-label="Insightful"
           >
-            <span style={{ fontSize: '16px', lineHeight: 1 }}>💡</span>
+            <i className="fal fa-lightbulb" style={{ fontSize: '14px', lineHeight: 1 }}></i>
             <span style={{ fontSize: '11px', fontWeight: '700', marginTop: '2px', lineHeight: 1 }}>
               {baseCounts.insights + (reactions.insights ? 1 : 0)}
             </span>
@@ -202,9 +202,9 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
         <button
           onClick={() => toggleReaction('claps')}
           className={`action-btn ${reactions.claps ? 'active' : ''}`}
-          aria-label="Clap"
+          aria-label="Endorse"
         >
-          <span style={{ fontSize: '15px' }}>👏</span>
+          <i className="fal fa-thumbs-up" style={{ fontSize: '14px' }}></i>
           <span style={{ fontSize: '11px', fontWeight: '700' }}>
             {baseCounts.claps + (reactions.claps ? 1 : 0)}
           </span>
@@ -213,9 +213,9 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
         <button
           onClick={() => toggleReaction('likes')}
           className={`action-btn ${reactions.likes ? 'active' : ''}`}
-          aria-label="Like"
+          aria-label="Bookmark"
         >
-          <span style={{ fontSize: '15px' }}>❤️</span>
+          <i className="fal fa-bookmark" style={{ fontSize: '14px' }}></i>
           <span style={{ fontSize: '11px', fontWeight: '700' }}>
             {baseCounts.likes + (reactions.likes ? 1 : 0)}
           </span>
@@ -226,7 +226,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
           className={`action-btn ${reactions.insights ? 'active' : ''}`}
           aria-label="Insightful"
         >
-          <span style={{ fontSize: '15px' }}>💡</span>
+          <i className="fal fa-lightbulb" style={{ fontSize: '14px' }}></i>
           <span style={{ fontSize: '11px', fontWeight: '700' }}>
             {baseCounts.insights + (reactions.insights ? 1 : 0)}
           </span>
@@ -288,16 +288,16 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
           transition: all 0.2s ease;
         }
         .action-btn:hover {
-          color: #7C3AED;
-          border-color: #7C3AED;
-          background: #F8F7FF;
-          transform: scale(1.08);
+          color: #0D1322;
+          border-color: #0D1322;
+          background: #F8F9FA;
+          transform: scale(1.06);
         }
         .action-btn.active {
-          background: linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%) !important;
+          background: #0D1322 !important;
           color: #FFFFFF !important;
-          border-color: transparent !important;
-          box-shadow: 0 4px 12px rgba(192, 38, 168, 0.3);
+          border-color: #0D1322 !important;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         @media (max-width: 1279px) {
           .sidebar-desktop {

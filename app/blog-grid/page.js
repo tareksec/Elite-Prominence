@@ -56,28 +56,14 @@ export default function Blog_Grid() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogGridSchema) }}
       />
       <Layout headerStyle={4} footerStyle={1} breadcrumbTitle14="Insights for HR Leaders">
-        <section className="blog_section pt_150 pb_120" style={{ backgroundColor: '#F8F7FF' }}>
+        <section className="blog_section pt_150 pb_120" style={{ backgroundColor: '#F8F9FA' }}>
           <div className="container">
             <div className="section_title centred" style={{ marginBottom: '50px' }}>
-              <div
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  padding: '6px 18px',
-                  borderRadius: '9999px',
-                  background: 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)',
-                  color: '#FFFFFF',
-                  fontSize: '12px',
-                  fontWeight: '700',
-                  letterSpacing: '0.6px',
-                  textTransform: 'uppercase',
-                  marginBottom: '16px'
-                }}
-              >
+              <span className="prominence_badge">
                 Executive Thought Leadership
-              </div>
+              </span>
               <h2 style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: '42px', color: '#0F1235' }}>
-                Articles & Strategic Frameworks
+                Articles &amp; Strategic Frameworks
               </h2>
               <p style={{ maxWidth: '820px', margin: '15px auto 0', fontSize: '18px', color: '#64748B', lineHeight: '1.7' }}>
                 Navigating the C-suite landscape requires human resources executives to command more than internal operational credibility. Explore our field-tested methodologies on executive presence, Google reputation management, and high-signal personal branding.
@@ -114,7 +100,7 @@ export default function Blog_Grid() {
                           position: 'absolute',
                           top: '14px',
                           left: '14px',
-                          background: 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)',
+                          background: '#0D1322',
                           color: '#FFFFFF',
                           fontSize: '11px',
                           fontWeight: '700',
@@ -122,7 +108,8 @@ export default function Blog_Grid() {
                           letterSpacing: '0.5px',
                           padding: '4px 10px',
                           borderRadius: '9999px',
-                          boxShadow: '0 2px 8px rgba(15, 18, 53, 0.25)'
+                          border: '1px solid rgba(255, 255, 255, 0.15)',
+                          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)'
                         }}
                       >
                         {post.category}
@@ -147,9 +134,9 @@ export default function Blog_Grid() {
                       </p>
 
                       <div style={{ borderTop: '1px solid #F1F0F9', paddingTop: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <span style={{ fontSize: '13px', fontWeight: '600', color: '#7C3AED' }}>
-                          <Link href={`/blog/${post.slug}`} style={{ color: '#7C3AED', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                            Read Article <span aria-hidden="true">→</span>
+                        <span style={{ fontSize: '13px', fontWeight: '600', color: '#0D1322' }}>
+                          <Link href={`/blog/${post.slug}`} style={{ color: '#0D1322', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                            Read Article <i className="fal fa-arrow-right" style={{ fontSize: '12px' }}></i>
                           </Link>
                         </span>
                         <span style={{ fontSize: '12px', color: '#94A3B8' }}>{post.author.name}</span>

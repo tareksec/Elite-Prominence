@@ -52,42 +52,38 @@ export default function ResourcesOverviewPage() {
     const resources = [
         {
             badge: 'Interactive Tool',
-            badgeColor: '#2460e2',
             title: 'Executive Digital Presence Assessment',
             tagline: 'Audit your public stature across 6 objective dimensions in 3 minutes',
-            description: 'Evaluate your Google search dominance, personal website sovereignty, LinkedIn gravitas, media proof, and corporate PR compliance. Receive an immediate authority score and gap analysis.',
+            description: 'Evaluate your Google search dominance, personal website sovereignty, LinkedIn gravitas, media proof, and corporate PR compliance. Receive an immediate calculated score and gap analysis.',
             href: '/resources/assessment',
-            ctaText: 'Start Assessment →',
+            ctaText: 'Start Assessment',
             featured: true
         },
         {
             badge: 'Audit Checklist',
-            badgeColor: '#059669',
             title: 'The Sovereign Digital HQ Architecture Checklist',
             tagline: '12-Point Technical & Content Blueprint',
             description: 'A comprehensive specification of what a Fortune 500 CEO or board director website requires: domain sovereignty, JSON-LD schema, board dossier presentation, and strict data security.',
             href: '/services/executive-digital-hq',
-            ctaText: 'Explore Blueprint →',
+            ctaText: 'Explore Blueprint',
             featured: false
         },
         {
             badge: 'Search Guide',
-            badgeColor: '#d97706',
             title: 'Executive Google Search & Entity Optimization Guide',
             tagline: 'Defeating Namesake Conflicts & Owning Page 1',
             description: 'Understand how Google indexes executive names, how Knowledge Graph entity reconciliation works, and how to permanently control your first 10 search results.',
             href: '/services/digital-reputation',
-            ctaText: 'View Guide →',
+            ctaText: 'View Guide',
             featured: false
         },
         {
             badge: 'Editorial Rubric',
-            badgeColor: '#7c3aed',
             title: 'LinkedIn Gravitas & Boardroom Profile Audit',
             tagline: 'Moving from Operational Resume to Strategic Authority',
             description: 'How to rewrite your LinkedIn headline, summary thesis, and experience section to signal enterprise governance and attract board directorship inquiries.',
             href: '/services/linkedin-authority',
-            ctaText: 'Review Rubric →',
+            ctaText: 'Review Rubric',
             featured: false
         }
     ]
@@ -101,91 +97,66 @@ export default function ResourcesOverviewPage() {
             <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Executive Resources & Tools">
                 
                 {/* Hero Header */}
-                <section className="pt_120 pb_70" style={{ background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
+                <section className="prominence_page_intro">
                     <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: "860px", margin: "0 auto" }}>
-                            <div className="tag_text" style={{ marginBottom: "16px" }}>
-                                <span style={{ 
-                                    display: 'inline-block', 
-                                    padding: '6px 16px', 
-                                    background: '#ecf3ff', 
-                                    color: '#2460e2', 
-                                    fontWeight: '700', 
-                                    fontSize: '12px', 
-                                    letterSpacing: '1px', 
-                                    textTransform: 'uppercase', 
-                                    borderRadius: '50px' 
-                                }}>
-                                    Executive Toolkits & Self-Audits
-                                </span>
+                        <div className="section_title centred" style={{ maxWidth: '860px', margin: '0 auto' }}>
+                            <div className="tag_text">
+                                <h6>Executive Toolkits & Diagnostic Frameworks</h6>
                             </div>
-                            <h1 style={{ fontSize: "44px", fontWeight: "800", color: "#0d1b2a", lineHeight: "1.2", marginBottom: "20px" }}>
-                                Practical Frameworks for Evaluating Executive Stature
+                            <h1 style={{ fontSize: '42px', fontWeight: '800', color: '#0f172a', lineHeight: '1.25', marginBottom: '20px' }}>
+                                Frameworks for Evaluating Executive Stature
                             </h1>
-                            <p style={{ fontSize: "19px", color: "#475569", lineHeight: "1.7" }}>
-                                Diagnostic tools, architectural checklists, and editorial standards developed by Prominence to help enterprise leaders evaluate their digital footprint and close their authority gap.
+                            <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.7', margin: '0 auto' }}>
+                                Diagnostic tools, architectural checklists, and editorial standards developed by Prominence to help enterprise leaders benchmark their digital footprint and eliminate their authority gap.
                             </p>
                         </div>
                     </div>
                 </section>
 
                 {/* Flagship Assessment Feature Banner */}
-                <section className="pt_80 pb_60">
+                <section className="pt_80 pb_60" style={{ background: '#f8fafc' }}>
                     <div className="container">
-                        <div style={{ 
-                            background: "linear-gradient(135deg, #0d1b2a 0%, #1e3a8a 100%)", 
-                            borderRadius: "16px", 
-                            padding: "50px", 
-                            color: "#fff",
-                            boxShadow: "0 20px 45px rgba(13,27,42,0.15)"
-                        }}>
+                        <div className="prominence_card_dark" style={{ padding: '52px' }}>
                             <div className="row align-items-center">
                                 <div className="col-lg-8">
-                                    <span style={{ 
-                                        background: "#d29d2b", 
-                                        color: "#0d1b2a", 
-                                        fontWeight: "800", 
-                                        fontSize: "11px", 
-                                        padding: "4px 12px", 
-                                        borderRadius: "20px", 
-                                        textTransform: "uppercase", 
-                                        letterSpacing: "1px" 
-                                    }}>
-                                        Featured Diagnostic Tool
-                                    </span>
-                                    <h2 style={{ fontSize: "36px", fontWeight: "800", color: "#fff", marginTop: "16px", marginBottom: "16px" }}>
+                                    <div style={{ marginBottom: '16px' }}>
+                                        <span className="prominence_badge" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }}>
+                                            Featured Diagnostic Tool
+                                        </span>
+                                    </div>
+                                    <h2 style={{ fontSize: '34px', fontWeight: '800', color: '#fff', marginBottom: '16px' }}>
                                         The Executive Digital Presence Assessment
                                     </h2>
-                                    <p style={{ fontSize: "17px", color: "#cbd5e1", lineHeight: "1.7", marginBottom: "24px", maxWidth: "680px" }}>
+                                    <p style={{ fontSize: '16px', color: '#94a3b8', lineHeight: '1.7', marginBottom: '24px', maxWidth: '680px' }}>
                                         Assess your digital standing across Google visibility, personal website ownership, LinkedIn authority, and third-party validation in 3 minutes. Zero fluff, completely transparent scoring rubric.
                                     </p>
-                                    <div style={{ display: "flex", gap: "24px", flexWrap: "wrap", marginBottom: "28px" }}>
-                                        <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", color: "#93c5fd" }}>
-                                            <span>✓</span> 6 Objective Stature Dimensions
+                                    <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginBottom: '32px' }}>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: '#cbd5e1' }}>
+                                            <i className="fal fa-check-circle" style={{ color: '#fff' }}></i> 6 Objective Stature Dimensions
                                         </div>
-                                        <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", color: "#93c5fd" }}>
-                                            <span>✓</span> Immediate Calculated Score (0–100%)
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: '#cbd5e1' }}>
+                                            <i className="fal fa-check-circle" style={{ color: '#fff' }}></i> Immediate Calculated Score (0–100%)
                                         </div>
-                                        <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", color: "#93c5fd" }}>
-                                            <span>✓</span> Tailored Advisory Recommendations
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: '#cbd5e1' }}>
+                                            <i className="fal fa-check-circle" style={{ color: '#fff' }}></i> Tailored Advisory Recommendations
                                         </div>
                                     </div>
-                                    <Link href="/resources/assessment" className="btn_style_one" style={{ padding: "16px 36px", fontSize: "15px" }}>
-                                        Start Assessment Now →
+                                    <Link href="/resources/assessment" className="btn_style_one">
+                                        Start Assessment Now
                                     </Link>
                                 </div>
                                 <div className="col-lg-4 text-center mt-4 mt-lg-0">
                                     <div style={{ 
-                                        background: "rgba(255,255,255,0.08)", 
-                                        border: "1px solid rgba(255,255,255,0.15)", 
-                                        borderRadius: "14px", 
-                                        padding: "30px", 
-                                        display: "inline-block" 
+                                        background: 'rgba(255,255,255,0.04)', 
+                                        border: '1px solid rgba(255,255,255,0.1)', 
+                                        borderRadius: '12px', 
+                                        padding: '32px', 
+                                        display: 'inline-block' 
                                     }}>
-                                        <div style={{ fontSize: "56px", fontWeight: "900", color: "#d29d2b", lineHeight: "1" }}>
+                                        <div style={{ fontSize: '52px', fontWeight: '900', color: '#fff', lineHeight: '1' }}>
                                             3 Min
                                         </div>
-                                        <div style={{ fontSize: "14px", color: "#e2e8f0", marginTop: "8px", fontWeight: "600" }}>
+                                        <div style={{ fontSize: '13px', color: '#94a3b8', marginTop: '10px', fontWeight: '600', letterSpacing: '0.5px' }}>
                                             Confidential Self-Audit
                                         </div>
                                     </div>
@@ -196,10 +167,13 @@ export default function ResourcesOverviewPage() {
                 </section>
 
                 {/* Additional Guides & Checklists */}
-                <section className="pt_40 pb_90">
+                <section className="pt_40 pb_90" style={{ background: '#f8fafc' }}>
                     <div className="container">
-                        <div className="section_title" style={{ marginBottom: "36px" }}>
-                            <h2 style={{ fontSize: "28px", fontWeight: "800", color: "#0d1b2a" }}>
+                        <div className="section_title" style={{ marginBottom: '36px' }}>
+                            <div className="tag_text">
+                                <h6>Operational Frameworks</h6>
+                            </div>
+                            <h2 style={{ fontSize: '28px', fontWeight: '800', color: '#0f172a' }}>
                                 Strategic Toolkits & Blueprints
                             </h2>
                         </div>
@@ -207,52 +181,42 @@ export default function ResourcesOverviewPage() {
                         <div className="row">
                             {resources.filter(r => !r.featured).map((res, idx) => (
                                 <div key={idx} className="col-lg-4 col-md-6 mb_30">
-                                    <div style={{ 
-                                        background: "#fff", 
-                                        border: "1px solid #e2e8f0", 
-                                        borderRadius: "12px", 
-                                        padding: "32px", 
-                                        height: "100%", 
-                                        display: "flex", 
-                                        flexDirection: "column",
-                                        boxShadow: "0 4px 15px rgba(0,0,0,0.03)" 
+                                    <div className="prominence_card" style={{ 
+                                        padding: '32px', 
+                                        height: '100%', 
+                                        display: 'flex', 
+                                        flexDirection: 'column'
                                     }}>
-                                        <span style={{ 
-                                            display: "inline-block", 
-                                            fontSize: "11px", 
-                                            fontWeight: "700", 
-                                            color: res.badgeColor, 
-                                            textTransform: "uppercase", 
-                                            letterSpacing: "1px", 
-                                            marginBottom: "10px" 
-                                        }}>
-                                            {res.badge}
-                                        </span>
-                                        <h3 style={{ fontSize: "20px", fontWeight: "800", color: "#0d1b2a", marginBottom: "8px", lineHeight: "1.3" }}>
-                                            <Link href={res.href} style={{ color: "inherit", textDecoration: "none" }}>
+                                        <div style={{ marginBottom: '12px' }}>
+                                            <span className="prominence_badge">
+                                                {res.badge}
+                                            </span>
+                                        </div>
+                                        <h3 style={{ fontSize: '19px', fontWeight: '800', color: '#0f172a', marginBottom: '8px', lineHeight: '1.35' }}>
+                                            <Link href={res.href} style={{ color: 'inherit', textDecoration: 'none' }}>
                                                 {res.title}
                                             </Link>
                                         </h3>
-                                        <p style={{ fontSize: "13px", fontWeight: "600", color: "#2460e2", marginBottom: "14px" }}>
+                                        <p style={{ fontSize: '13px', fontWeight: '600', color: '#334155', marginBottom: '14px' }}>
                                             {res.tagline}
                                         </p>
-                                        <p style={{ fontSize: "14px", color: "#64748b", lineHeight: "1.7", marginBottom: "24px", flex: 1 }}>
+                                        <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.7', marginBottom: '24px', flex: 1 }}>
                                             {res.description}
                                         </p>
                                         <Link 
                                             href={res.href} 
                                             style={{ 
-                                                fontSize: "14px", 
-                                                fontWeight: "700", 
-                                                color: "#2460e2", 
-                                                textDecoration: "none", 
-                                                marginTop: "auto",
-                                                display: "inline-flex",
-                                                alignItems: "center",
-                                                gap: "6px" 
+                                                fontSize: '13.5px', 
+                                                fontWeight: '700', 
+                                                color: '#0f172a', 
+                                                textDecoration: 'none', 
+                                                marginTop: 'auto',
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                gap: '6px' 
                                             }}
                                         >
-                                            {res.ctaText}
+                                            {res.ctaText} <i className="fal fa-arrow-right" style={{ fontSize: '11px' }}></i>
                                         </Link>
                                     </div>
                                 </div>

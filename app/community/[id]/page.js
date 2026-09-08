@@ -163,7 +163,7 @@ export default function MemberProfilePage({ params }) {
                 <Layout headerStyle={1} footerStyle={1}>
                     <div style={{ padding: "160px 0 120px", textAlign: "center", backgroundColor: "#FAF8F2", minHeight: "80vh" }}>
                         <div className="container" style={{ maxWidth: "600px", margin: "0 auto" }}>
-                            <div style={{ fontSize: "48px", marginBottom: "16px" }}>🔍</div>
+                            <div style={{ fontSize: "36px", color: "#64748b", marginBottom: "16px" }}><i className="fal fa-search"></i></div>
                             <h2 style={{ fontSize: "28px", fontWeight: "800", color: "#162d20", marginBottom: "12px" }}>
                                 Executive Profile Not Found
                             </h2>
@@ -183,7 +183,7 @@ export default function MemberProfilePage({ params }) {
                                     display: "inline-block"
                                 }}
                             >
-                                ← Return to Community Directory
+                                <i className="fal fa-arrow-left" style={{ marginRight: "8px" }}></i>Return to Community Directory
                             </Link>
                         </div>
                     </div>
@@ -296,7 +296,7 @@ export default function MemberProfilePage({ params }) {
                                                     gap: "6px"
                                                 }}
                                             >
-                                                <span>in</span> LinkedIn Profile ↗
+                                                <span>in</span> LinkedIn Profile <i className="fal fa-external-link-alt" style={{ marginLeft: "4px", fontSize: "11px" }}></i>
                                             </a>
                                         )}
 
@@ -319,7 +319,7 @@ export default function MemberProfilePage({ params }) {
                                                     gap: "6px"
                                                 }}
                                             >
-                                                🌐 Personal Website ↗
+                                                <i className="fal fa-globe" style={{ marginRight: "6px" }}></i> Personal Website <i className="fal fa-external-link-alt" style={{ fontSize: "11px", marginLeft: "4px" }}></i>
                                             </a>
                                         )}
 
@@ -340,7 +340,7 @@ export default function MemberProfilePage({ params }) {
                                                 gap: "6px"
                                             }}
                                         >
-                                            💬 Contact via Advisory
+                                            <i className="fab fa-whatsapp" style={{ fontSize: "14px" }}></i> Contact via Advisory
                                         </a>
                                     </div>
                                 </div>
@@ -360,7 +360,7 @@ export default function MemberProfilePage({ params }) {
                                             borderRadius: "10px",
                                             textTransform: "uppercase"
                                         }}>
-                                            ✓ Contributor Member
+                                            <i className="fal fa-check-circle" style={{ marginRight: "4px" }}></i> Contributor Member
                                         </span>
                                     </div>
 
@@ -371,15 +371,15 @@ export default function MemberProfilePage({ params }) {
                                     {/* Meta pills */}
                                     <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", fontSize: "13px", color: "#64748b", marginBottom: "20px" }}>
                                         {member.industry && (
-                                            <span>🏢 <strong>Industry:</strong> {member.industry}</span>
+                                            <span><i className="fal fa-building" style={{ marginRight: "4px" }}></i><strong>Industry:</strong> {member.industry}</span>
                                         )}
                                         {member.location && (
-                                            <span>📍 <strong>Location:</strong> {member.location}</span>
+                                            <span><i className="fal fa-map-marker-alt" style={{ marginRight: "4px" }}></i><strong>Location:</strong> {member.location}</span>
                                         )}
                                         {member.years_of_experience && (
-                                            <span>⏱️ <strong>Experience:</strong> {member.years_of_experience}</span>
+                                            <span><i className="fal fa-clock" style={{ marginRight: "4px" }}></i><strong>Experience:</strong> {member.years_of_experience}</span>
                                         )}
-                                        <span>📰 <strong>Articles:</strong> {articles.length} Published</span>
+                                        <span><i className="fal fa-newspaper" style={{ marginRight: "4px" }}></i><strong>Articles:</strong> {articles.length} Published</span>
                                     </div>
 
                                     <hr style={{ border: "none", borderTop: "1px solid #f1f5f9", margin: "20px 0" }} />
@@ -420,7 +420,7 @@ export default function MemberProfilePage({ params }) {
                                     {member.speaking_topics && (
                                         <div style={{ marginBottom: "10px", padding: "16px 20px", borderRadius: "12px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0" }}>
                                             <h4 style={{ margin: "0 0 6px", fontSize: "14px", fontWeight: "800", color: "#162d20", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                                                🎙️ Keynote Topics & Advisory Mandates
+                                                <i className="fal fa-microphone" style={{ marginRight: "6px" }}></i> Keynote Topics & Advisory Mandates
                                             </h4>
                                             <p style={{ margin: 0, fontSize: "14px", color: "#475569", lineHeight: "1.5" }}>
                                                 {member.speaking_topics}
@@ -551,7 +551,7 @@ export default function MemberProfilePage({ params }) {
                                         textDecoration: "none"
                                     }}
                                 >
-                                    ← Browse All Leaders
+                                    <i className="fal fa-arrow-left" style={{ marginRight: "8px" }}></i>Browse All Leaders
                                 </Link>
                             </div>
                         </div>
@@ -595,7 +595,7 @@ export default function MemberProfilePage({ params }) {
                                     color: "#94a3b8"
                                 }}
                             >
-                                ✕
+                                <i className="fal fa-times"></i>
                             </button>
 
                             <span style={{

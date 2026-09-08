@@ -147,7 +147,7 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                         <ul style={{ listStyle: 'none', padding: '4px 0 8px 18px', margin: 0, backgroundColor: '#f8fafc', borderRadius: '8px' }}>
                                             <li style={{ padding: '6px 0' }}>
                                                 <Link href="/resources/assessment" onClick={handleMobileMenu} style={{ fontSize: '13.5px', fontWeight: '700', color: '#1d4ed8' }}>
-                                                    ⚡ Executive Digital Scorecard
+                                                    Executive Digital Scorecard
                                                 </Link>
                                             </li>
                                             <li style={{ padding: '6px 0' }}>

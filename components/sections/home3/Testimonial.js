@@ -189,7 +189,7 @@ export default function Testimonial() {
                                         borderRadius: "8px",
                                         marginBottom: "24px"
                                     }}>
-                                        🎯 {item.highlight}
+                                        {item.highlight}
                                     </div>
                                 </div>
 

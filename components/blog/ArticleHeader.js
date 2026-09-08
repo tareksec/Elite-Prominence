@@ -22,13 +22,14 @@ export default function ArticleHeader({
             alignItems: 'center',
             padding: '6px 20px',
             borderRadius: '9999px',
-            background: 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)',
+            background: '#0D1322',
             color: '#FFFFFF',
             fontSize: '12px',
             fontWeight: '700',
             letterSpacing: '0.6px',
             textTransform: 'uppercase',
-            boxShadow: '0 4px 14px rgba(124, 58, 237, 0.22)'
+            border: '1px solid rgba(255, 255, 255, 0.15)',
+            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.15)'
           }}
         >
           {category}
@@ -69,12 +70,12 @@ export default function ArticleHeader({
               width: '32px',
               height: '32px',
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #7C3AED 0%, #C026A8 50%, #F472B6 100%)',
+              background: '#0D1322',
               padding: '2px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 2px 8px rgba(124, 58, 237, 0.25)',
+              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)',
               overflow: 'hidden'
             }}
           >
@@ -135,10 +136,11 @@ export default function ArticleHeader({
                 display: 'inline-block',
                 padding: '5px 14px',
                 borderRadius: '9999px',
-                background: '#F1F0F9',
-                color: '#7C3AED',
+                background: 'rgba(13, 19, 34, 0.05)',
+                color: '#0D1322',
+                border: '1px solid rgba(13, 19, 34, 0.1)',
                 fontSize: '13px',
-                fontWeight: '500'
+                fontWeight: '600'
               }}
             >
               {tag}

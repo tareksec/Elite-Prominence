@@ -301,7 +301,7 @@ export default function SignupPage() {
                                         boxShadow: "0 6px 20px rgba(30, 59, 43, 0.2)"
                                     }}
                                 >
-                                    {loading ? 'Creating Account...' : 'Complete Registration →'}
+                                    {loading ? 'Creating Account...' : 'Complete Registration'}
                                 </button>
                             </form>
 
