@@ -6,21 +6,21 @@ import { getWhatsAppUrl } from "@/lib/whatsapp"
 export default function Footer1() {
     return (
         <footer className="elite_site_footer" style={{
-            backgroundColor: "#0b1120",
+            backgroundColor: "#070b14",
             color: "#e2e8f0",
             fontFamily: "var(--primary-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif)",
             position: "relative",
             borderTop: "1px solid rgba(255, 255, 255, 0.08)",
             overflow: "hidden"
         }}>
-            {/* Top Purple-to-Magenta Ambient Accent Line */}
+            {/* Top Subtle Ambient Accent Line */}
             <div style={{
                 position: "absolute",
                 top: 0,
                 left: 0,
                 right: 0,
                 height: "1px",
-                background: "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.2) 70%, transparent 100%)",
+                background: "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.15) 70%, transparent 100%)",
                 zIndex: 2
             }} />
 
@@ -29,43 +29,49 @@ export default function Footer1() {
                 <div className="container">
                     <div className="footer_grid_layout" style={{
                         display: "grid",
-                        gridTemplateColumns: "1.3fr 0.9fr 1fr 1.2fr",
-                        gap: "48px",
+                        gridTemplateColumns: "1.2fr 1fr 1fr 1.2fr",
+                        gap: "40px",
                         alignItems: "start"
                     }}>
-                        {/* Column 1: Brand & Positioning */}
+                        {/* Column 1: Brand & Firm Stature */}
                         <div>
                             <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: "10px", textDecoration: "none", marginBottom: "16px" }}>
                                 <img
                                     src="/assets/images/Elite%20Prominence/EliteProminence-iocn.png"
-                                    alt="Elite Prominence"
+                                    alt="Prominence.agency"
                                     style={{ height: "34px", width: "auto", display: "block", borderRadius: "6px" }}
                                 />
-                                <span style={{ fontSize: "20px", fontWeight: "800", color: "#ffffff", letterSpacing: "-0.4px" }}>
-                                    Elite Prominence
-                                </span>
+                                <div>
+                                    <span style={{ fontSize: "20px", fontWeight: "800", color: "#ffffff", letterSpacing: "-0.4px", display: "block", lineHeight: "1.2" }}>
+                                        Prominence
+                                    </span>
+                                    <span style={{ fontSize: "10px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1px", color: "#94a3b8" }}>
+                                        Executive Advisory
+                                    </span>
+                                </div>
                             </Link>
+
                             <p style={{
-                                color: "#a5b4fc",
+                                color: "#cbd5e1",
                                 fontSize: "14px",
                                 fontWeight: "600",
-                                letterSpacing: "0.5px",
-                                margin: "0 0 14px"
+                                letterSpacing: "0.3px",
+                                margin: "0 0 12px"
                             }}>
-                                Be Seen at the Top
+                                Build a Digital Presence That Commands Attention.
                             </p>
                             <p style={{
                                 color: "#94a3b8",
-                                fontSize: "14.5px",
+                                fontSize: "14px",
                                 lineHeight: "1.7",
-                                margin: "0 0 24px",
+                                margin: "0 0 22px",
                                 maxWidth: "320px"
                             }}>
-                                Elite Prominence builds a complete digital presence for senior HR leaders and consultants — website, Google reputation, and LinkedIn authority — done for you.
+                                We engineer the bespoke websites, Google reputation, thought leadership, and search authority that represent C-suite leaders and founders before they enter the room.
                             </p>
 
-                            {/* Social Media Links */}
-                            <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+                            {/* Social Media & Instant Channels */}
+                            <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
                                 <Link
                                     href="https://www.linkedin.com/company/elite-prominence"
                                     target="_blank"
@@ -76,10 +82,8 @@ export default function Footer1() {
                                         display: "inline-flex",
                                         alignItems: "center",
                                         justifyContent: "center",
-                                        minWidth: "44px",
-                                        minHeight: "44px",
-                                        width: "44px",
-                                        height: "44px",
+                                        width: "42px",
+                                        height: "42px",
                                         borderRadius: "50%",
                                         backgroundColor: "rgba(255, 255, 255, 0.05)",
                                         border: "1px solid rgba(255, 255, 255, 0.15)",
@@ -101,10 +105,8 @@ export default function Footer1() {
                                         display: "inline-flex",
                                         alignItems: "center",
                                         justifyContent: "center",
-                                        minWidth: "44px",
-                                        minHeight: "44px",
-                                        width: "44px",
-                                        height: "44px",
+                                        width: "42px",
+                                        height: "42px",
                                         borderRadius: "50%",
                                         backgroundColor: "rgba(255, 255, 255, 0.05)",
                                         border: "1px solid rgba(255, 255, 255, 0.15)",
@@ -120,16 +122,14 @@ export default function Footer1() {
                                     href={getWhatsAppUrl()}
                                     target="_blank"
                                     rel="nofollow noopener noreferrer"
-                                    aria-label="WhatsApp"
+                                    aria-label="WhatsApp Executive Line"
                                     className="footer_social_pill"
                                     style={{
                                         display: "inline-flex",
                                         alignItems: "center",
                                         justifyContent: "center",
-                                        minWidth: "44px",
-                                        minHeight: "44px",
-                                        width: "44px",
-                                        height: "44px",
+                                        width: "42px",
+                                        height: "42px",
                                         borderRadius: "50%",
                                         backgroundColor: "rgba(37, 211, 102, 0.1)",
                                         border: "1px solid rgba(37, 211, 102, 0.3)",
@@ -144,38 +144,39 @@ export default function Footer1() {
                             </div>
                         </div>
 
-                        {/* Column 2: Navigation Links */}
+                        {/* Column 2: Core Services */}
                         <div>
                             <h4 style={{
-                                fontSize: "15px",
+                                fontSize: "14px",
                                 fontWeight: "700",
                                 color: "#ffffff",
                                 textTransform: "uppercase",
                                 letterSpacing: "1px",
                                 marginBottom: "20px"
                             }}>
-                                Agency
+                                Core Services
                             </h4>
                             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                                 {[
-                                    { name: "Home", href: "/" },
-                                    { name: "About Us", href: "/about" },
-                                    { name: "Services", href: "/services" },
-                                    { name: "Pricing & Packages", href: "/pricing" },
-                                    { name: "Insights & Articles", href: "/blog-grid" },
-                                    { name: "Contact", href: "/contact" }
+                                    { name: "Executive Digital HQ", href: "/services/executive-digital-hq" },
+                                    { name: "Digital Reputation", href: "/services/digital-reputation" },
+                                    { name: "LinkedIn Authority", href: "/services/linkedin-authority" },
+                                    { name: "Executive Content", href: "/services/executive-content" },
+                                    { name: "Executive SEO", href: "/services/executive-seo" },
+                                    { name: "Brand Strategy", href: "/services/personal-brand-strategy" },
+                                    { name: "Authority & Speaking", href: "/services/authority-building" },
+                                    { name: "All Services Overview", href: "/services" }
                                 ].map((item, idx) => (
-                                    <li key={idx} style={{ marginBottom: "12px" }}>
+                                    <li key={idx} style={{ marginBottom: "11px" }}>
                                         <Link
                                             href={item.href}
                                             className="footer_link_item"
                                             style={{
                                                 color: "#94a3b8",
-                                                fontSize: "14.5px",
+                                                fontSize: "14px",
                                                 fontWeight: "500",
                                                 textDecoration: "none",
-                                                transition: "all 0.2s ease",
-                                                display: "inline-block"
+                                                transition: "all 0.2s ease"
                                             }}
                                         >
                                             {item.name}
@@ -185,38 +186,39 @@ export default function Footer1() {
                             </ul>
                         </div>
 
-                        {/* Column 3: Resources & Community */}
+                        {/* Column 3: Solutions & Methodology */}
                         <div>
                             <h4 style={{
-                                fontSize: "15px",
+                                fontSize: "14px",
                                 fontWeight: "700",
                                 color: "#ffffff",
                                 textTransform: "uppercase",
                                 letterSpacing: "1px",
                                 marginBottom: "20px"
                             }}>
-                                Community &amp; Portal
+                                Solutions &amp; Firm
                             </h4>
                             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                                 {[
-                                    { name: "Client Reviews", href: "/feedback" },
-                                    { name: "Executive Directory", href: "/community" },
-                                    { name: "Member Dashboard", href: "/dashboard" },
-                                    { name: "Strategic FAQ", href: "/faq" },
-                                    { name: "Terms of Service", href: "/terms" },
-                                    { name: "Privacy Policy", href: "/privacy-policy" }
+                                    { name: "For CEOs & Presidents", href: "/solutions/ceos" },
+                                    { name: "For CHROs & HR Leaders", href: "/solutions/chros" },
+                                    { name: "For Founders & Tech Leaders", href: "/solutions/founders" },
+                                    { name: "For Senior Executives & NEDs", href: "/solutions/executives" },
+                                    { name: "For Consultants & Advisors", href: "/solutions/consultants" },
+                                    { name: "How It Works (Methodology)", href: "/how-it-works" },
+                                    { name: "Case Studies & Proof", href: "/case-studies" },
+                                    { name: "Careers at Prominence", href: "/careers" }
                                 ].map((item, idx) => (
-                                    <li key={idx} style={{ marginBottom: "12px" }}>
+                                    <li key={idx} style={{ marginBottom: "11px" }}>
                                         <Link
                                             href={item.href}
                                             className="footer_link_item"
                                             style={{
                                                 color: "#94a3b8",
-                                                fontSize: "14.5px",
+                                                fontSize: "14px",
                                                 fontWeight: "500",
                                                 textDecoration: "none",
-                                                transition: "all 0.2s ease",
-                                                display: "inline-block"
+                                                transition: "all 0.2s ease"
                                             }}
                                         >
                                             {item.name}
@@ -226,12 +228,12 @@ export default function Footer1() {
                             </ul>
                         </div>
 
-                        {/* Column 4: Next Step & Executive Strategy Call */}
+                        {/* Column 4: Private Consultation Card */}
                         <div style={{
                             backgroundColor: "rgba(255, 255, 255, 0.03)",
                             border: "1px solid rgba(255, 255, 255, 0.08)",
                             borderRadius: "16px",
-                            padding: "28px 24px",
+                            padding: "26px 22px",
                             backdropFilter: "blur(10px)"
                         }}>
                             <span style={{
@@ -247,7 +249,7 @@ export default function Footer1() {
                                 borderRadius: "12px",
                                 marginBottom: "12px"
                             }}>
-                                Direct Consultation
+                                Private Advisory
                             </span>
                             <h4 style={{
                                 fontSize: "18px",
@@ -256,15 +258,15 @@ export default function Footer1() {
                                 margin: "0 0 8px",
                                 lineHeight: "1.3"
                             }}>
-                                Ready to Be Seen at the Top?
+                                Book a Private Consultation
                             </h4>
                             <p style={{
                                 color: "#94a3b8",
                                 fontSize: "13.5px",
                                 lineHeight: "1.6",
-                                margin: "0 0 20px"
+                                margin: "0 0 18px"
                             }}>
-                                Book a confidential strategy call to audit your current digital footprint and plan your authority roadmap.
+                                Evaluate your current search footprint, identify blind spots, and architect your executive authority roadmap.
                             </p>
 
                             <Link
@@ -273,38 +275,51 @@ export default function Footer1() {
                                 style={{
                                     display: "block",
                                     textAlign: "center",
-                                    padding: "12px 24px",
+                                    padding: "12px 20px",
                                     borderRadius: "9999px",
-                                    background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
+                                    background: "linear-gradient(180deg, #1e293b 0%, #0f172a 100%)",
                                     color: "#ffffff",
-                                    fontSize: "14px",
+                                    fontSize: "13.5px",
                                     fontWeight: "600",
                                     letterSpacing: "0.2px",
                                     textDecoration: "none",
                                     border: "1px solid rgba(255, 255, 255, 0.12)",
-                                    boxShadow: "0 8px 20px -2px rgba(0, 0, 0, 0.5), 0 2px 6px -1px rgba(0, 0, 0, 0.3), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6)",
+                                    boxShadow: "0 8px 20px -2px rgba(0, 0, 0, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35)",
                                     textShadow: "0 1px 2px rgba(0, 0, 0, 0.4)",
-                                    transition: "all 0.22s cubic-bezier(0.16, 1, 0.3, 1)"
+                                    transition: "all 0.22s ease",
+                                    marginBottom: "12px"
                                 }}
                             >
-                                Book a Strategy Call &rarr;
+                                Book a Private Consultation &rarr;
                             </Link>
 
-                            <div style={{ marginTop: "18px", borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: "14px" }}>
-                                <div style={{ fontSize: "13px", color: "#64748b", marginBottom: "6px" }}>
-                                    Inquiries &amp; Confidential Briefs:
+                            <Link
+                                href="/resources/assessment"
+                                style={{
+                                    display: "block",
+                                    textAlign: "center",
+                                    padding: "8px 16px",
+                                    borderRadius: "9999px",
+                                    backgroundColor: "rgba(255, 255, 255, 0.05)",
+                                    color: "#cbd5e1",
+                                    fontSize: "12.5px",
+                                    fontWeight: "600",
+                                    textDecoration: "none",
+                                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                                    transition: "all 0.2s ease"
+                                }}
+                            >
+                                Take Executive Digital Assessment &rarr;
+                            </Link>
+
+                            <div style={{ marginTop: "16px", borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: "12px" }}>
+                                <div style={{ fontSize: "12px", color: "#64748b", marginBottom: "4px" }}>
+                                    Confidential Inquiries:
                                 </div>
-                                <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "10px" }}>
+                                <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "8px" }}>
                                     <a
                                         href="mailto:hello@prominence.agency"
-                                        style={{
-                                            color: "#cbd5e1",
-                                            fontSize: "14px",
-                                            fontWeight: "600",
-                                            textDecoration: "none",
-                                            transition: "color 0.2s ease"
-                                        }}
-                                        className="footer_email_link"
+                                        style={{ color: "#cbd5e1", fontSize: "13px", fontWeight: "600", textDecoration: "none" }}
                                     >
                                         hello@prominence.agency
                                     </a>
@@ -313,21 +328,9 @@ export default function Footer1() {
                                         href={getWhatsAppUrl()}
                                         target="_blank"
                                         rel="nofollow noopener noreferrer"
-                                        style={{
-                                            color: "#25D366",
-                                            fontSize: "14px",
-                                            fontWeight: "600",
-                                            textDecoration: "none",
-                                            display: "inline-flex",
-                                            alignItems: "center",
-                                            gap: "6px",
-                                            transition: "opacity 0.2s ease"
-                                        }}
-                                        className="footer_whatsapp_link"
-                                        aria-label="Chat with Elite Prominence on WhatsApp"
+                                        style={{ color: "#25D366", fontSize: "13px", fontWeight: "600", textDecoration: "none" }}
                                     >
-                                        <i className="fab fa-whatsapp" style={{ fontSize: "15px" }}></i>
-                                        <span>WhatsApp</span>
+                                        WhatsApp VIP
                                     </a>
                                 </div>
                             </div>
@@ -336,11 +339,11 @@ export default function Footer1() {
                 </div>
             </div>
 
-            {/* Bottom Sub-Footer Bar */}
+            {/* Bottom Legal Sub-Footer Bar */}
             <div style={{
-                backgroundColor: "#070b14",
+                backgroundColor: "#030712",
                 borderTop: "1px solid rgba(255, 255, 255, 0.06)",
-                padding: "22px 0"
+                padding: "20px 0"
             }}>
                 <div className="container">
                     <div style={{
@@ -349,74 +352,57 @@ export default function Footer1() {
                         alignItems: "center",
                         flexWrap: "wrap",
                         gap: "14px",
-                        fontSize: "13.5px",
+                        fontSize: "13px",
                         color: "#64748b"
                     }}>
                         <div>
-                            &copy; {new Date().getFullYear()} Elite Prominence. All rights reserved.
+                            &copy; {new Date().getFullYear()} Prominence.agency. All rights reserved. International Executive Reputation Advisory.
                         </div>
                         <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
-                            <Link href="/privacy-policy" className="footer_legal_link" style={{ color: "#64748b", textDecoration: "none", transition: "color 0.2s ease", minHeight: "44px", display: "inline-flex", alignItems: "center" }}>
+                            <Link href="/privacy-policy" style={{ color: "#64748b", textDecoration: "none" }}>
                                 Privacy Policy
                             </Link>
-                            <Link href="/terms" className="footer_legal_link" style={{ color: "#64748b", textDecoration: "none", transition: "color 0.2s ease", minHeight: "44px", display: "inline-flex", alignItems: "center" }}>
-                                Terms of Service
+                            <Link href="/terms" style={{ color: "#64748b", textDecoration: "none" }}>
+                                Terms of Engagement
                             </Link>
-                            <Link href="/login" className="footer_legal_link" style={{ color: "#64748b", textDecoration: "none", transition: "color 0.2s ease", minHeight: "44px", display: "inline-flex", alignItems: "center" }}>
-                                Client Login
+                            <Link href="/resources" style={{ color: "#64748b", textDecoration: "none" }}>
+                                Resources
+                            </Link>
+                            <Link href="/login" style={{ color: "#64748b", textDecoration: "none" }}>
+                                Client Portal
                             </Link>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Hover Effects & Media Queries */}
             <style jsx>{`
                 .footer_link_item:hover {
                     color: #ffffff !important;
-                    transform: translateX(4px);
+                    transform: translateX(3px);
                 }
                 .footer_social_pill:hover {
                     background: #ffffff !important;
                     color: #0f172a !important;
                     border-color: #ffffff !important;
                     transform: translateY(-2px);
-                    box-shadow: 0 4px 14px rgba(255, 255, 255, 0.2) !important;
                 }
                 .footer_cta_btn:hover {
                     transform: translateY(-2px);
-                    box-shadow: 0 12px 28px -2px rgba(0, 0, 0, 0.6), inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6) !important;
-                    filter: brightness(1.05);
-                }
-                .footer_cta_btn:active {
-                    transform: translateY(1px);
-                    box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.35), inset 0 1px 2px 0 rgba(0, 0, 0, 0.7) !important;
-                }
-                .footer_email_link:hover {
-                    color: #ffffff !important;
-                }
-                .footer_legal_link:hover {
-                    color: #cbd5e1 !important;
-                    text-decoration: underline;
+                    filter: brightness(1.08);
                 }
 
                 @media (max-width: 1024px) {
                     .footer_grid_layout {
                         grid-template-columns: 1fr 1fr !important;
-                        gap: 40px !important;
+                        gap: 36px !important;
                     }
                 }
 
                 @media (max-width: 767px) {
                     .footer_grid_layout {
                         grid-template-columns: 1fr !important;
-                        gap: 36px !important;
-                    }
-                    .footer_link_item {
-                        min-height: 44px;
-                        display: inline-flex !important;
-                        align-items: center;
-                        padding: 6px 0;
+                        gap: 32px !important;
                     }
                 }
             `}</style>

@@ -19,62 +19,79 @@ export default function FinalCta() {
             data-aos-duration="500"
         >
             <div className="container">
-                <div style={{ maxWidth: "760px", margin: "0 auto" }}>
+                <div style={{ maxWidth: "800px", margin: "0 auto" }}>
                     <span style={{
                         display: "inline-block",
                         fontSize: "12px",
                         fontWeight: "700",
                         textTransform: "uppercase",
                         letterSpacing: "1.2px",
-                        color: "#334155",
-                        backgroundColor: "#ffffff",
-                        border: "1px solid rgba(0, 0, 0, 0.08)",
-                        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
-                        padding: "5px 16px",
+                        color: "#2460e2",
+                        backgroundColor: "#ecf3ff",
+                        border: "1px solid rgba(36, 96, 226, 0.2)",
+                        padding: "5px 18px",
                         borderRadius: "9999px",
                         marginBottom: "16px"
                     }}>
-                        Exclusive Client Roster
+                        Strictly Limited Client Roster
                     </span>
                     <h2 style={{
-                        fontSize: "40px",
-                        fontWeight: "700",
-                        color: "#1b2534",
+                        fontSize: "42px",
+                        fontWeight: "800",
+                        color: "#0d1b2a",
                         marginBottom: "16px",
                         lineHeight: "1.25"
                     }}>
-                        Ready to Be Seen at the Top?
+                        Ready to Command Sovereign Stature?
                     </h2>
                     <p style={{
                         fontSize: "18px",
-                        color: "#59606a",
+                        color: "#475569",
                         lineHeight: "1.7",
-                        marginBottom: "32px"
+                        marginBottom: "36px"
                     }}>
-                        We work with a limited number of senior HR leaders and executive consultants at a time to maintain uncompromising quality and individualized attention.
+                        We accept a strictly limited roster of CEOs, CHROs, Founders, and senior leaders each quarter to maintain uncompromising discretion, bespoke engineering, and dedicated partner attention.
                     </p>
-                    <div>
+                    <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
                         <Link
                             href="/contact"
                             style={{
                                 display: "inline-flex",
                                 alignItems: "center",
                                 gap: "10px",
-                                background: "linear-gradient(180deg, #2b2d32 0%, #151619 100%)",
+                                background: "linear-gradient(180deg, #2460e2 0%, #1d4ed8 100%)",
                                 color: "#ffffff",
                                 fontSize: "16px",
-                                fontWeight: "600",
-                                padding: "16px 42px",
+                                fontWeight: "700",
+                                padding: "16px 38px",
                                 borderRadius: "9999px",
                                 textDecoration: "none",
-                                border: "1px solid rgba(255, 255, 255, 0.09)",
-                                boxShadow: "0 12px 28px -2px rgba(0, 0, 0, 0.45), 0 4px 10px -1px rgba(0, 0, 0, 0.22), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6)",
-                                textShadow: "0 1px 2px rgba(0, 0, 0, 0.4)",
+                                boxShadow: "0 10px 25px rgba(36, 96, 226, 0.3)",
                                 transition: "all 0.22s cubic-bezier(0.16, 1, 0.3, 1)"
                             }}
                             className="final_cta_btn"
                         >
-                            Book a Strategy Call &rarr;
+                            Book a Private Consultation &rarr;
+                        </Link>
+                        <Link
+                            href="/resources/assessment"
+                            style={{
+                                display: "inline-flex",
+                                alignItems: "center",
+                                gap: "10px",
+                                background: "#ffffff",
+                                color: "#0d1b2a",
+                                fontSize: "16px",
+                                fontWeight: "600",
+                                padding: "16px 32px",
+                                borderRadius: "9999px",
+                                textDecoration: "none",
+                                border: "1px solid #cbd5e1",
+                                boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+                                transition: "all 0.22s cubic-bezier(0.16, 1, 0.3, 1)"
+                            }}
+                        >
+                            Evaluate Your Digital Presence
                         </Link>
                     </div>
                 </div>
@@ -83,12 +100,8 @@ export default function FinalCta() {
             <style jsx>{`
                 .final_cta_btn:hover {
                     transform: translateY(-2px);
-                    box-shadow: 0 16px 36px -2px rgba(0, 0, 0, 0.55), 0 6px 14px -1px rgba(0, 0, 0, 0.3), inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.48), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6) !important;
-                    filter: brightness(1.04);
-                }
-                .final_cta_btn:active {
-                    transform: translateY(1px);
-                    box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.32), inset 0 1px 2px 0 rgba(0, 0, 0, 0.7) !important;
+                    box-shadow: 0 14px 30px rgba(36, 96, 226, 0.4) !important;
+                    filter: brightness(1.05);
                 }
             `}</style>
         </section>

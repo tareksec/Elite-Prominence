@@ -1,0 +1,428 @@
+'use client'
+
+import React, { useState } from 'react'
+import Link from 'next/link'
+import Layout from '@/components/layout/Layout'
+
+const QUESTIONS = [
+    {
+        id: 'google',
+        dimension: '01. Google Search & Name Dominance',
+        subtitle: 'What appears on Page 1 when an investor or board chair searches your full name?',
+        options: [
+            { points: 0, text: 'Namesake confusion, outdated directory entries, or irrelevant search results dominate Page 1.' },
+            { points: 1, text: 'Only my current employer bio and a standard LinkedIn link appear; no personal assets.' },
+            { points: 2, text: 'Strong corporate press and active LinkedIn, but no owned personal website or Knowledge Panel.' },
+            { points: 3, text: 'Definitive Page 1 control: My personal website ranks #1 alongside verified profiles, interviews, and press.' },
+        ]
+    },
+    {
+        id: 'website',
+        dimension: '02. Owned Digital HQ (Sovereignty)',
+        subtitle: 'Do you possess an independent, sovereign digital headquarters online?',
+        options: [
+            { points: 0, text: 'No personal website or domain name registered.' },
+            { points: 1, text: 'I own my domain name, but it simply redirects to LinkedIn or is an inactive placeholder.' },
+            { points: 2, text: 'I have a personal site, but it lacks boardroom positioning, case studies, or entity schema.' },
+            { points: 3, text: 'Bespoke Executive Digital HQ featuring governance thesis, board dossier, media kit, and rich JSON-LD schema.' },
+        ]
+    },
+    {
+        id: 'linkedin',
+        dimension: '03. LinkedIn Executive Gravitas',
+        subtitle: 'Does your LinkedIn profile convey institutional authority or an operational job search?',
+        options: [
+            { points: 0, text: 'Inactive or dated profile that reads like a junior operational resume.' },
+            { points: 1, text: 'Polished profile, but passive—rarely updated and contains no published strategic perspectives.' },
+            { points: 2, text: 'Regular company reposts, but lacks a distinct executive voice or original leadership commentary.' },
+            { points: 3, text: 'Authoritative leadership presence with distinct positioning, calibrated essays, and engagement from industry peers.' },
+        ]
+    },
+    {
+        id: 'content',
+        dimension: '04. Strategic Voice & Thought Leadership',
+        subtitle: 'How consistently are your strategic viewpoints articulated in public?',
+        options: [
+            { points: 0, text: 'Zero public essays, articles, or strategic commentary published under my name.' },
+            { points: 1, text: 'Infrequent, ad-hoc posts with inconsistent cadence and no thematic focus.' },
+            { points: 2, text: 'Regular posting, but primarily summarizing common business news rather than original industry frameworks.' },
+            { points: 3, text: 'High-signal, ghostwritten or authored essays published monthly that shape industry conversation.' },
+        ]
+    },
+    {
+        id: 'media',
+        dimension: '05. Third-Party Proof & Authority Signals',
+        subtitle: 'What external credibility signals validate your executive stature?',
+        options: [
+            { points: 0, text: 'No external press quotes, podcast appearances, keynote recordings, or advisory boards.' },
+            { points: 1, text: 'Occasional corporate press releases where my name is listed among company officers.' },
+            { points: 2, text: 'Several podcast interviews and regional conference panel appearances.' },
+            { points: 3, text: 'Regular tier-one media quotes, keynote addresses at premier global summits, or paid board directorships.' },
+        ]
+    },
+    {
+        id: 'compliance',
+        dimension: '06. PR Compliance & Crisis Resilience',
+        subtitle: 'How resilient is your public presence against reputational shocks and PR conflicts?',
+        options: [
+            { points: 0, text: 'Vulnerable to competitor attacks, unmanaged search queries, or negative commentary.' },
+            { points: 1, text: 'Unclear guardrails with employer corporate communications; potential compliance risk.' },
+            { points: 2, text: 'Compliant with corporate PR, but passive—lacks positive search assets to buffer reputational risk.' },
+            { points: 3, text: 'Robust, employer-aligned guardrails with permanent positive assets that insulate against reputational shocks.' },
+        ]
+    }
+]
+
+export default function AssessmentPage() {
+    const [answers, setAnswers] = useState({})
+    const [isSubmitted, setIsSubmitted] = useState(false)
+    const [leadName, setLeadName] = useState('')
+    const [leadEmail, setLeadEmail] = useState('')
+    const [leadRole, setLeadRole] = useState('')
+    const [leadCompany, setLeadCompany] = useState('')
+    const [consultationBooked, setConsultationBooked] = useState(false)
+
+    const handleSelect = (questionId, points) => {
+        setAnswers(prev => ({ ...prev, [questionId]: points }))
+    }
+
+    const totalQuestions = QUESTIONS.length
+    const answeredCount = Object.keys(answers).length
+    const progressPercent = Math.round((answeredCount / totalQuestions) * 100)
+
+    // Calculate score
+    const totalPoints = Object.values(answers).reduce((acc, curr) => acc + curr, 0)
+    const maxPoints = totalQuestions * 3
+    const scorePercent = Math.round((totalPoints / maxPoints) * 100)
+
+    const getScoreTier = (score) => {
+        if (score >= 85) {
+            return {
+                title: 'Sovereign Executive Stature',
+                color: '#10b981',
+                badge: 'Tier 1: Market Leading',
+                summary: 'Your digital presence reflects your executive standing. You possess strong narrative assets and defensible search dominance. Your primary opportunity is scaling keynote speaking and tier-one media amplification.',
+                priority: 'Amplify: Keynote stages, corporate board positioning, and Google Knowledge Graph optimization.'
+            }
+        }
+        if (score >= 65) {
+            return {
+                title: 'Emerging Authority',
+                color: '#2460e2',
+                badge: 'Tier 2: High Potential',
+                summary: 'You have solid professional credibility and active engagement, but your assets are fragmented. Relying primarily on LinkedIn or employer pages leaves your authority vulnerable to algorithm shifts and career transitions.',
+                priority: 'Anchor: Build an owned Executive Digital HQ and secure permanent Google Page 1 ownership.'
+            }
+        }
+        if (score >= 40) {
+            return {
+                title: 'Conventional Executive (Authority Gap)',
+                color: '#d97706',
+                badge: 'Tier 3: The Authority Gap',
+                summary: 'There is a significant disconnect between your enterprise responsibility and your public digital footprint. While you command real-world budgets and teams, stakeholders searching your name find silence or outdated bios.',
+                priority: 'Establish: Narrative extraction, board-level bio rewriting, and sovereign website engineering.'
+            }
+        }
+        return {
+            title: 'Fragmented Public Footprint',
+            color: '#ef4444',
+            badge: 'Tier 4: Immediate Action Needed',
+            summary: 'Your digital footprint is almost entirely unmanaged. This exposes you to namesake confusion, recruiter oversight, and loss of commercial due diligence confidence before critical meetings.',
+            priority: 'Reputation Defense: Urgent search audit, namesake suppression, and digital reputation architecture.'
+        }
+    }
+
+    const tier = getScoreTier(scorePercent)
+
+    const handleConsultationSubmit = (e) => {
+        e.preventDefault()
+        setConsultationBooked(true)
+    }
+
+    return (
+        <div className="boxed_wrapper">
+            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Executive Stature Assessment">
+                
+                {/* Intro Header */}
+                <section className="pt_120 pb_60" style={{ background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
+                    <div className="container">
+                        <div className="section_title centred" style={{ maxWidth: "820px", margin: "0 auto" }}>
+                            <div className="tag_text" style={{ marginBottom: "14px" }}>
+                                <span style={{ 
+                                    display: 'inline-block', 
+                                    padding: '6px 16px', 
+                                    background: '#ecf3ff', 
+                                    color: '#2460e2', 
+                                    fontWeight: '700', 
+                                    fontSize: '12px', 
+                                    letterSpacing: '1px', 
+                                    textTransform: 'uppercase', 
+                                    borderRadius: '50px' 
+                                }}>
+                                    Objective Self-Audit
+                                </span>
+                            </div>
+                            <h1 style={{ fontSize: "40px", fontWeight: "800", color: "#0d1b2a", lineHeight: "1.2", marginBottom: "16px" }}>
+                                Executive Digital Presence Assessment
+                            </h1>
+                            <p style={{ fontSize: "18px", color: "#475569", lineHeight: "1.7" }}>
+                                Evaluate your public digital authority across 6 core dimensions: Google dominance, website sovereignty, LinkedIn gravitas, thought leadership, media proof, and PR resilience.
+                            </p>
+                            
+                            {/* Progress bar */}
+                            <div style={{ marginTop: "30px", background: "#e2e8f0", borderRadius: "10px", height: "8px", overflow: "hidden" }}>
+                                <div style={{ 
+                                    width: `${progressPercent}%`, 
+                                    background: "#2460e2", 
+                                    height: "100%", 
+                                    transition: "width 0.3s ease" 
+                                }} />
+                            </div>
+                            <div style={{ marginTop: "8px", fontSize: "13px", color: "#64748b", fontWeight: "600" }}>
+                                {answeredCount} of {totalQuestions} dimensions evaluated ({progressPercent}%)
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Assessment Body */}
+                <section className="pt_70 pb_90">
+                    <div className="container">
+                        {!isSubmitted ? (
+                            <div className="row justify-content-center">
+                                <div className="col-lg-9">
+                                    <div style={{ display: "flex", flexDirection: "column", gap: "36px" }}>
+                                        {QUESTIONS.map((q, qIdx) => (
+                                            <div key={q.id} style={{ 
+                                                background: "#fff", 
+                                                border: "1px solid #e2e8f0", 
+                                                borderRadius: "14px", 
+                                                padding: "32px", 
+                                                boxShadow: "0 4px 20px rgba(0,0,0,0.03)" 
+                                            }}>
+                                                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
+                                                    <span style={{ fontSize: "13px", fontWeight: "800", color: "#2460e2", textTransform: "uppercase", letterSpacing: "1px" }}>
+                                                        {q.dimension}
+                                                    </span>
+                                                    {answers[q.id] !== undefined && (
+                                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#10b981", background: "#ecfdf5", padding: "2px 8px", borderRadius: "12px" }}>
+                                                            ✓ Selected
+                                                        </span>
+                                                    )}
+                                                </div>
+                                                <h3 style={{ fontSize: "19px", fontWeight: "700", color: "#0d1b2a", marginBottom: "20px" }}>
+                                                    {q.subtitle}
+                                                </h3>
+
+                                                <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                                                    {q.options.map((opt, oIdx) => {
+                                                        const isSelected = answers[q.id] === opt.points
+                                                        return (
+                                                            <div 
+                                                                key={oIdx}
+                                                                onClick={() => handleSelect(q.id, opt.points)}
+                                                                style={{ 
+                                                                    padding: "16px 20px", 
+                                                                    borderRadius: "10px", 
+                                                                    border: isSelected ? "2px solid #2460e2" : "1px solid #e2e8f0", 
+                                                                    background: isSelected ? "#f0f7ff" : "#f8fafc", 
+                                                                    cursor: "pointer",
+                                                                    display: "flex",
+                                                                    alignItems: "center",
+                                                                    gap: "14px",
+                                                                    transition: "all 0.2s ease"
+                                                                }}
+                                                            >
+                                                                <div style={{ 
+                                                                    width: "20px", 
+                                                                    height: "20px", 
+                                                                    borderRadius: "50%", 
+                                                                    border: isSelected ? "6px solid #2460e2" : "2px solid #cbd5e1", 
+                                                                    background: "#fff",
+                                                                    flexShrink: 0
+                                                                }} />
+                                                                <span style={{ fontSize: "15px", color: isSelected ? "#0d1b2a" : "#475569", fontWeight: isSelected ? "600" : "400", lineHeight: "1.5" }}>
+                                                                    {opt.text}
+                                                                </span>
+                                                            </div>
+                                                        )
+                                                    })}
+                                                </div>
+                                            </div>
+                                        ))}
+
+                                        {/* Submit Button */}
+                                        <div style={{ textAlign: "center", marginTop: "20px" }}>
+                                            <button 
+                                                onClick={() => setIsSubmitted(true)}
+                                                disabled={answeredCount < totalQuestions}
+                                                className="btn_style_one"
+                                                style={{ 
+                                                    padding: "18px 48px", 
+                                                    fontSize: "17px", 
+                                                    cursor: answeredCount === totalQuestions ? "pointer" : "not-allowed",
+                                                    opacity: answeredCount === totalQuestions ? 1 : 0.6
+                                                }}
+                                            >
+                                                {answeredCount === totalQuestions 
+                                                    ? "Calculate My Executive Presence Score →" 
+                                                    : `Complete All Questions to Reveal Score (${answeredCount}/${totalQuestions})`}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ) : (
+                            /* Results View */
+                            <div className="row justify-content-center">
+                                <div className="col-lg-8">
+                                    
+                                    {/* Score Card */}
+                                    <div style={{ 
+                                        background: "#0d1b2a", 
+                                        color: "#fff", 
+                                        borderRadius: "16px", 
+                                        padding: "48px", 
+                                        textAlign: "center",
+                                        marginBottom: "40px",
+                                        boxShadow: "0 20px 50px rgba(0,0,0,0.15)"
+                                    }}>
+                                        <span style={{ 
+                                            background: tier.color, 
+                                            color: "#fff", 
+                                            padding: "4px 14px", 
+                                            borderRadius: "20px", 
+                                            fontSize: "12px", 
+                                            fontWeight: "800", 
+                                            textTransform: "uppercase", 
+                                            letterSpacing: "1px" 
+                                        }}>
+                                            {tier.badge}
+                                        </span>
+
+                                        <div style={{ fontSize: "76px", fontWeight: "900", color: "#fff", marginTop: "20px", lineHeight: "1" }}>
+                                            {scorePercent}%
+                                        </div>
+                                        <h2 style={{ fontSize: "28px", fontWeight: "800", color: tier.color, marginTop: "12px", marginBottom: "16px" }}>
+                                            {tier.title}
+                                        </h2>
+                                        <p style={{ fontSize: "17px", color: "#cbd5e1", lineHeight: "1.8", maxWidth: "600px", margin: "0 auto 24px" }}>
+                                            {tier.summary}
+                                        </p>
+
+                                        <div style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "10px", padding: "18px 24px", textAlign: "left" }}>
+                                            <strong style={{ color: "#d29d2b", fontSize: "13px", textTransform: "uppercase", letterSpacing: "1px", display: "block", marginBottom: "4px" }}>
+                                                Recommended Strategic Priority:
+                                            </strong>
+                                            <p style={{ color: "#f8fafc", margin: 0, fontSize: "15px", lineHeight: "1.6" }}>
+                                                {tier.priority}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Action Next Step: Private Consultation Booking */}
+                                    <div style={{ background: "#fff", border: "1px solid #e2e8f0", borderRadius: "14px", padding: "40px", boxShadow: "0 10px 30px rgba(0,0,0,0.05)" }}>
+                                        <div className="section_title centred" style={{ marginBottom: "28px" }}>
+                                            <span style={{ color: "#2460e2", fontWeight: "700", fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase" }}>
+                                                Confidential Review
+                                            </span>
+                                            <h3 style={{ fontSize: "26px", fontWeight: "800", color: "#0d1b2a", marginTop: "8px" }}>
+                                                Review Your Score With a Prominence Partner
+                                            </h3>
+                                            <p style={{ color: "#64748b", fontSize: "15px", marginTop: "6px" }}>
+                                                Book a confidential 30-minute advisory call. We will review your score breakdown, inspect your current Google Page 1 footprint, and outline how to achieve Tier 1 Sovereign Stature.
+                                            </p>
+                                        </div>
+
+                                        {!consultationBooked ? (
+                                            <form onSubmit={handleConsultationSubmit}>
+                                                <div className="row g-3">
+                                                    <div className="col-md-6">
+                                                        <label style={{ fontSize: "13px", fontWeight: "700", color: "#334155", marginBottom: "6px", display: "block" }}>Full Name</label>
+                                                        <input 
+                                                            type="text" 
+                                                            required 
+                                                            value={leadName}
+                                                            onChange={(e) => setLeadName(e.target.value)}
+                                                            placeholder="e.g. Eleanor Vance" 
+                                                            style={{ width: "100%", padding: "12px 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "15px" }} 
+                                                        />
+                                                    </div>
+                                                    <div className="col-md-6">
+                                                        <label style={{ fontSize: "13px", fontWeight: "700", color: "#334155", marginBottom: "6px", display: "block" }}>Executive Email</label>
+                                                        <input 
+                                                            type="email" 
+                                                            required 
+                                                            value={leadEmail}
+                                                            onChange={(e) => setLeadEmail(e.target.value)}
+                                                            placeholder="e.g. eleanor@enterprise.com" 
+                                                            style={{ width: "100%", padding: "12px 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "15px" }} 
+                                                        />
+                                                    </div>
+                                                    <div className="col-md-6">
+                                                        <label style={{ fontSize: "13px", fontWeight: "700", color: "#334155", marginBottom: "6px", display: "block" }}>Executive Role</label>
+                                                        <input 
+                                                            type="text" 
+                                                            required 
+                                                            value={leadRole}
+                                                            onChange={(e) => setLeadRole(e.target.value)}
+                                                            placeholder="e.g. CEO, CHRO, Founder" 
+                                                            style={{ width: "100%", padding: "12px 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "15px" }} 
+                                                        />
+                                                    </div>
+                                                    <div className="col-md-6">
+                                                        <label style={{ fontSize: "13px", fontWeight: "700", color: "#334155", marginBottom: "6px", display: "block" }}>Organization / Firm</label>
+                                                        <input 
+                                                            type="text" 
+                                                            value={leadCompany}
+                                                            onChange={(e) => setLeadCompany(e.target.value)}
+                                                            placeholder="e.g. Global Tech Partners" 
+                                                            style={{ width: "100%", padding: "12px 16px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "15px" }} 
+                                                        />
+                                                    </div>
+                                                    <div className="col-12 mt-4 text-center">
+                                                        <button 
+                                                            type="submit" 
+                                                            className="btn_style_one" 
+                                                            style={{ padding: "16px 40px", fontSize: "16px", width: "100%" }}
+                                                        >
+                                                            Request Confidential Score Briefing ({scorePercent}% Stature) →
+                                                        </button>
+                                                        <span style={{ display: "block", marginTop: "12px", fontSize: "12px", color: "#94a3b8" }}>
+                                                            🔒 Strict NDA applies. Your information is never sold, shared, or publicized.
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        ) : (
+                                            <div style={{ background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius: "10px", padding: "32px", textAlign: "center" }}>
+                                                <div style={{ fontSize: "36px", color: "#10b981", marginBottom: "12px" }}>✓</div>
+                                                <h4 style={{ fontSize: "22px", fontWeight: "800", color: "#166534", marginBottom: "8px" }}>
+                                                    Briefing Request Received
+                                                </h4>
+                                                <p style={{ color: "#15803d", fontSize: "15px", margin: 0 }}>
+                                                    Thank you, {leadName}. Our managing partner will review your {scorePercent}% evaluation and reach out directly at {leadEmail} to schedule your private consultation.
+                                                </p>
+                                            </div>
+                                        )}
+
+                                        <div style={{ textAlign: "center", marginTop: "24px" }}>
+                                            <button 
+                                                onClick={() => { setIsSubmitted(false); setConsultationBooked(false); }}
+                                                style={{ background: "none", border: "none", color: "#2460e2", fontWeight: "700", fontSize: "14px", cursor: "pointer" }}
+                                            >
+                                                ← Retake Assessment
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </section>
+
+            </Layout>
+        </div>
+    )
+}

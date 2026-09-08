@@ -3,6 +3,7 @@ import Banner from "@/components/sections/home5/Banner"
 import Clients from "@/components/sections/home5/Clients"
 import Feature from "@/components/sections/home2/Feature"
 import Feature_Two from "@/components/sections/home5/Feature"
+import MethodologyTeaser from "@/components/sections/home5/MethodologyTeaser"
 import ExecutiveCaseStudy from "@/components/sections/home5/ExecutiveCaseStudy"
 import Testimonial from "@/components/sections/home3/Testimonial"
 import ExecutiveDirectoryTeaser from "@/components/sections/home5/ExecutiveDirectoryTeaser"
@@ -12,17 +13,17 @@ import FinalCta from "@/components/sections/home5/FinalCta"
 
 export const metadata = {
     title: {
-        absolute: 'Personal Branding for HR Leaders & CHROs | Elite Prominence',
+        absolute: 'Executive Personal Branding & Digital Reputation Advisory | Prominence',
     },
-    description: 'Done-for-you personal branding agency for HR leaders, CHROs, and senior executives. We build your private digital HQ, Google reputation, and high-impact LinkedIn authority.',
+    description: 'Prominence advises CEOs, CHROs, enterprise founders, and senior leaders on sovereign digital reputation architecture, personal executive websites, and LinkedIn thought leadership.',
     alternates: {
         canonical: 'https://www.prominence.agency',
     },
     openGraph: {
-        title: 'Personal Branding for HR Leaders & CHROs | Elite Prominence',
-        description: 'Elevate your executive authority. Elite Prominence designs bespoke digital HQs, Google Knowledge Panels, and strategic LinkedIn presence for HR leaders & CHROs.',
+        title: 'Executive Personal Branding & Digital Reputation Advisory | Prominence',
+        description: 'Build a digital presence that commands attention. Prominence architects bespoke digital HQs, Google Page 1 search control, and high-impact thought leadership for enterprise leaders.',
         url: 'https://www.prominence.agency',
-        siteName: 'Elite Prominence',
+        siteName: 'Prominence.agency',
         locale: 'en_US',
         type: 'website',
         images: [
@@ -30,14 +31,14 @@ export const metadata = {
                 url: '/assets/images/Elite%20Prominence/EliteProminence-coverphoto.png',
                 width: 1200,
                 height: 630,
-                alt: 'Elite Prominence — Personal Branding for HR Leaders & Executives',
+                alt: 'Prominence — Executive Personal Branding & Digital Reputation Advisory',
             },
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Personal Branding for HR Leaders & CHROs | Elite Prominence',
-        description: 'Turn HR leadership into executive influence. Bespoke digital HQ, search reputation, and LinkedIn thought leadership for CHROs.',
+        title: 'Executive Personal Branding & Digital Reputation Advisory | Prominence',
+        description: 'Turn leadership excellence into sovereign executive influence. Bespoke digital HQ, search reputation, and thought leadership for enterprise leaders.',
         images: ['/assets/images/Elite%20Prominence/EliteProminence-coverphoto.png'],
     },
 }
@@ -49,8 +50,8 @@ const homepageSchemaGraph = {
             '@type': 'WebSite',
             '@id': 'https://www.prominence.agency/#website',
             url: 'https://www.prominence.agency',
-            name: 'Elite Prominence',
-            description: 'Specialized executive personal branding agency for CHROs, VP HR, and senior leaders.',
+            name: 'Prominence',
+            description: 'Premier executive personal branding and digital reputation advisory for CEOs, CHROs, enterprise founders, and senior leaders.',
             publisher: {
                 '@id': 'https://www.prominence.agency/#organization',
             },
@@ -58,23 +59,22 @@ const homepageSchemaGraph = {
         {
             '@type': 'ProfessionalService',
             '@id': 'https://www.prominence.agency/#organization',
-            name: 'Elite Prominence',
+            name: 'Prominence',
             url: 'https://www.prominence.agency',
             logo: 'https://www.prominence.agency/assets/images/Elite%20Prominence/EliteProminence-iocn.png',
             image: 'https://www.prominence.agency/assets/images/Elite%20Prominence/EliteProminence-coverphoto.png',
-            description: 'Done-for-you personal branding agency for HR leaders, CHROs, and senior executives. We build your private digital HQ, Google reputation, and high-impact LinkedIn authority.',
+            description: 'Bespoke executive personal branding and digital reputation advisory firm for enterprise executives and founders.',
             telephone: '+8801645441584',
             email: 'hello@prominence.agency',
             priceRange: '$$$$',
             founder: {
                 '@type': 'Person',
                 name: 'Md Tarek',
-                jobTitle: 'Founder & Executive Brand Advisor',
+                jobTitle: 'Founder & Managing Partner',
                 url: 'https://www.linkedin.com/in/mdtarek404/',
             },
             sameAs: [
                 'https://www.linkedin.com/company/elite-prominence',
-                'https://www.facebook.com/EliteProminence/',
             ],
             aggregateRating: {
                 '@type': 'AggregateRating',
@@ -95,7 +95,7 @@ const homepageSchemaGraph = {
                         '@type': 'Rating',
                         ratingValue: '5',
                     },
-                    reviewBody: 'Elite Prominence transformed my executive presence. Within 60 days of launching my new digital HQ and executive LinkedIn strategy, I received two board advisory invitations.',
+                    reviewBody: 'Prominence transformed my executive presence. Within 60 days of launching my new digital HQ and executive LinkedIn strategy, I received two board advisory invitations.',
                 },
                 {
                     '@type': 'Review',
@@ -134,7 +134,7 @@ const homepageSchemaGraph = {
                     name: "I'm already busy. How much time will this take from me?",
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Very little. This is a done-for-you model designed specifically for busy HR leaders — most clients spend under 30 minutes a month once onboarding is complete.',
+                        text: 'Very little. This is a done-for-you model designed specifically for busy enterprise leaders — most clients spend under 30 minutes a month once onboarding is complete.',
                     },
                 },
                 {
@@ -142,7 +142,7 @@ const homepageSchemaGraph = {
                     name: 'Is building a personal brand with you just about LinkedIn content, or more than that?',
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: "It's significantly more. Building a personal brand requires an integrated presence: we combine an executive personal website, Google reputation management, and high-impact LinkedIn thought leadership — whereas most agencies only handle one piece.",
+                        text: "It's significantly more. Building sovereign authority requires an integrated presence: we combine a personal executive website, Google reputation management, structured entity schemas, and high-impact thought leadership — whereas standard agencies only handle one piece.",
                     },
                 },
                 {
@@ -150,20 +150,20 @@ const homepageSchemaGraph = {
                     name: 'How long before I see results?',
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Website and reputation work typically shows visible change within 60–90 days; social growth and inbound opportunities build over 6–12 months.',
+                        text: 'Website and search reputation work typically shows visible change within 45–60 days; inbound board inquiries and speaking opportunities compound over 3–6 months.',
                     },
                 },
                 {
                     '@type': 'Question',
-                    name: 'How much does executive personal branding cost for an HR leader?',
+                    name: 'How much does executive personal branding cost?',
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'We offer tailored executive engagements, ranging from our intensive 90-Day Authority Sprint to ongoing quarterly executive advisory retainers. Packages reflect the bespoke nature of building proprietary digital assets and Google Page 1 placement. Transparent pricing tiers are published on our Pricing page.',
+                        text: 'We offer tailored executive engagements, ranging from our intensive 90-Day Sovereign Stature Sprint to ongoing quarterly executive advisory retainers. Packages reflect the bespoke nature of building proprietary digital assets and Google Page 1 placement. Transparent pricing tiers are published on our Pricing page.',
                     },
                 },
                 {
                     '@type': 'Question',
-                    name: 'Why do CHROs and VP HR need a dedicated personal website (Digital HQ)?',
+                    name: 'Why do enterprise executives need a dedicated personal website (Digital HQ)?',
                     acceptedAnswer: {
                         '@type': 'Answer',
                         text: 'Because social platforms are rented digital land. Algorithms change, accounts can be restricted, and social feeds are ephemeral. A personal website is an owned executive asset that ranks #1 on Google when search committees, CEOs, and journalists research your credentials.',
@@ -174,7 +174,7 @@ const homepageSchemaGraph = {
                     name: 'How do you protect employer confidentiality and strict non-disclosure?',
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Discretion is our foremost principle. We adhere strictly to corporate NDAs and employment agreements. All thought leadership focuses on macro talent architecture, workplace governance, and organizational transformation without disclosing private employer data or internal communications.',
+                        text: 'Discretion is our foremost principle. We adhere strictly to corporate NDAs and employment agreements. All thought leadership focuses on macro industry architecture, governance, and organizational transformation without disclosing private employer operational data.',
                     },
                 },
                 {
@@ -182,7 +182,7 @@ const homepageSchemaGraph = {
                     name: 'Who is this NOT a good fit for?',
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Early-career practitioners without an established track record yet — our work is designed specifically for senior leaders who already possess substantive expertise and commercial outcomes to showcase.',
+                        text: 'Early-career practitioners without an established track record — our work is engineered specifically for senior leaders who already possess substantive commercial outcomes to showcase.',
                     },
                 },
             ],
@@ -202,6 +202,7 @@ export default function Home() {
                 <Clients/>
                 <Feature/>
                 <Feature_Two/>
+                <MethodologyTeaser/>
                 <ExecutiveCaseStudy/>
                 <Testimonial/>
                 <ExecutiveDirectoryTeaser/>

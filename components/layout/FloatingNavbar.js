@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { getSupabaseBrowserClient } from '@/lib/supabase/client'
 import { isSupabaseConfigured } from '@/lib/supabase/config'
+import { SERVICES_DATA } from '@/lib/servicesData'
+import { SOLUTIONS_DATA } from '@/lib/solutionsData'
 
 export default function FloatingNavbar({ scroll, handleMobileMenu }) {
     const pathname = usePathname()
@@ -12,9 +14,22 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
 
     const [user, setUser] = useState(null)
     const [role, setRole] = useState(null)
+
+    // Dropdown states
+    const [servicesOpen, setServicesOpen] = useState(false)
+    const [solutionsOpen, setSolutionsOpen] = useState(false)
+    const [resourcesOpen, setResourcesOpen] = useState(false)
     const [moreOpen, setMoreOpen] = useState(false)
-    const moreDropdownRef = useRef(null)
-    const moreTimerRef = useRef(null)
+
+    const servicesRef = useRef(null)
+    const solutionsRef = useRef(null)
+    const resourcesRef = useRef(null)
+    const moreRef = useRef(null)
+
+    const servicesTimer = useRef(null)
+    const solutionsTimer = useRef(null)
+    const resourcesTimer = useRef(null)
+    const moreTimer = useRef(null)
 
     // Auth state management
     useEffect(() => {
@@ -64,39 +79,64 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
         }
     }, [configured])
 
-    // Close "More" dropdown when clicking outside
+    // Close dropdowns when clicking outside
     useEffect(() => {
         const handleClickOutside = (e) => {
-            if (moreDropdownRef.current && !moreDropdownRef.current.contains(e.target)) {
-                setMoreOpen(false)
-            }
+            if (servicesRef.current && !servicesRef.current.contains(e.target)) setServicesOpen(false)
+            if (solutionsRef.current && !solutionsRef.current.contains(e.target)) setSolutionsOpen(false)
+            if (resourcesRef.current && !resourcesRef.current.contains(e.target)) setResourcesOpen(false)
+            if (moreRef.current && !moreRef.current.contains(e.target)) setMoreOpen(false)
         }
         document.addEventListener('mousedown', handleClickOutside)
         return () => document.removeEventListener('mousedown', handleClickOutside)
     }, [])
 
-    const handleMouseEnterMore = () => {
-        if (moreTimerRef.current) clearTimeout(moreTimerRef.current)
-        setMoreOpen(true)
-    }
-
-    const handleMouseLeaveMore = () => {
-        moreTimerRef.current = setTimeout(() => {
+    // Hover helpers
+    const handleMouseEnter = (type) => {
+        if (type === 'services') {
+            if (servicesTimer.current) clearTimeout(servicesTimer.current)
+            setServicesOpen(true)
+            setSolutionsOpen(false)
+            setResourcesOpen(false)
             setMoreOpen(false)
-        }, 180)
+        } else if (type === 'solutions') {
+            if (solutionsTimer.current) clearTimeout(solutionsTimer.current)
+            setSolutionsOpen(true)
+            setServicesOpen(false)
+            setResourcesOpen(false)
+            setMoreOpen(false)
+        } else if (type === 'resources') {
+            if (resourcesTimer.current) clearTimeout(resourcesTimer.current)
+            setResourcesOpen(true)
+            setServicesOpen(false)
+            setSolutionsOpen(false)
+            setMoreOpen(false)
+        } else if (type === 'more') {
+            if (moreTimer.current) clearTimeout(moreTimer.current)
+            setMoreOpen(true)
+            setServicesOpen(false)
+            setSolutionsOpen(false)
+            setResourcesOpen(false)
+        }
     }
 
-    const handleSignOut = async () => {
-        try {
-            if (configured) {
-                const supabase = getSupabaseBrowserClient()
-                await supabase.auth.signOut()
-            }
-            setUser(null)
-            setRole(null)
-            router.push('/')
-            router.refresh()
-        } catch (err) {}
+    const handleMouseLeave = (type) => {
+        if (type === 'services') {
+            servicesTimer.current = setTimeout(() => setServicesOpen(false), 160)
+        } else if (type === 'solutions') {
+            solutionsTimer.current = setTimeout(() => setSolutionsOpen(false), 160)
+        } else if (type === 'resources') {
+            resourcesTimer.current = setTimeout(() => setResourcesOpen(false), 160)
+        } else if (type === 'more') {
+            moreTimer.current = setTimeout(() => setMoreOpen(false), 160)
+        }
+    }
+
+    const closeAllDropdowns = () => {
+        setServicesOpen(false)
+        setSolutionsOpen(false)
+        setResourcesOpen(false)
+        setMoreOpen(false)
     }
 
     const isActive = (path) => {
@@ -105,19 +145,22 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
         return false
     }
 
-    const isMoreActive = pathname?.startsWith('/about') || pathname?.startsWith('/feedback') || pathname?.startsWith('/community') || pathname?.startsWith('/faq')
+    const isServicesActive = pathname?.startsWith('/services')
+    const isSolutionsActive = pathname?.startsWith('/solutions')
+    const isResourcesActive = pathname?.startsWith('/resources')
+    const isMoreActive = pathname?.startsWith('/about') || pathname?.startsWith('/careers') || pathname?.startsWith('/feedback') || pathname?.startsWith('/faq') || pathname?.startsWith('/pricing')
 
     return (
         <header
             className="floating_navbar_container"
             style={{
                 position: 'fixed',
-                top: scroll ? '14px' : '20px',
+                top: scroll ? '12px' : '18px',
                 left: 0,
                 right: 0,
                 margin: '0 auto',
-                width: 'calc(100% - 40px)',
-                maxWidth: '1160px',
+                width: 'calc(100% - 32px)',
+                maxWidth: '1240px',
                 zIndex: 1000,
                 transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
                 fontFamily: "var(--primary-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif)"
@@ -129,23 +172,24 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
-                    height: '64px',
-                    padding: '0 20px 0 24px',
+                    height: '66px',
+                    padding: '0 16px 0 22px',
                     borderRadius: '9999px',
-                    backgroundColor: scroll ? 'rgba(255, 255, 255, 0.92)' : 'rgba(255, 255, 255, 0.82)',
-                    backdropFilter: 'blur(16px) saturate(180%)',
-                    WebkitBackdropFilter: 'blur(16px) saturate(180%)',
-                    border: '1px solid rgba(255, 255, 255, 0.75)',
+                    backgroundColor: scroll ? 'rgba(255, 255, 255, 0.94)' : 'rgba(255, 255, 255, 0.86)',
+                    backdropFilter: 'blur(20px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                    border: '1px solid rgba(255, 255, 255, 0.85)',
                     boxShadow: scroll
-                        ? '0 14px 40px -4px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05)'
-                        : '0 10px 30px -5px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04)',
+                        ? '0 16px 42px -4px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(15, 23, 42, 0.05)'
+                        : '0 10px 32px -4px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(15, 23, 42, 0.04)',
                     transition: 'all 0.3s ease'
                 }}
             >
-                {/* 1. Logo (Left-aligned) */}
+                {/* 1. Brand Logo (Left) */}
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <Link
                         href="/"
+                        onClick={closeAllDropdowns}
                         style={{
                             display: 'inline-flex',
                             alignItems: 'center',
@@ -155,7 +199,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                     >
                         <img
                             src="/assets/images/Elite%20Prominence/EliteProminence-iocn.png"
-                            alt="Elite Prominence"
+                            alt="Prominence.agency"
                             style={{
                                 height: '32px',
                                 width: 'auto',
@@ -163,110 +207,400 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 borderRadius: '6px'
                             }}
                         />
-                        <span
-                            className="logo_wordmark"
-                            style={{
-                                fontSize: '18px',
-                                fontWeight: '800',
-                                color: '#1b2534',
-                                letterSpacing: '-0.4px',
-                                whiteSpace: 'nowrap'
-                            }}
-                        >
-                            Elite Prominence
-                        </span>
+                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <span
+                                className="logo_wordmark"
+                                style={{
+                                    fontSize: '17px',
+                                    fontWeight: '800',
+                                    color: '#0f172a',
+                                    letterSpacing: '-0.4px',
+                                    whiteSpace: 'nowrap',
+                                    lineHeight: '1.2'
+                                }}
+                            >
+                                Prominence
+                            </span>
+                            <span
+                                className="logo_subtag"
+                                style={{
+                                    fontSize: '9.5px',
+                                    fontWeight: '700',
+                                    letterSpacing: '1px',
+                                    textTransform: 'uppercase',
+                                    color: '#64748b'
+                                }}
+                            >
+                                Executive Advisory
+                            </span>
+                        </div>
                     </Link>
                 </div>
 
-                {/* 2. Nav Links (Center-aligned, desktop only) */}
+                {/* 2. Desktop Navigation Links (Center) */}
                 <nav className="desktop_nav_links" aria-label="Desktop Primary Navigation" style={{ margin: '0 auto' }}>
                     <ul
                         style={{
                             display: 'flex',
                             alignItems: 'center',
-                            gap: '26px',
+                            gap: '20px',
                             listStyle: 'none',
                             margin: 0,
                             padding: 0
                         }}
                     >
-                        <li>
-                            <Link
-                                href="/"
-                                style={{
-                                    fontSize: '14.5px',
-                                    fontWeight: '600',
-                                    color: isActive('/') ? '#1b2534' : '#4b5563',
-                                    textDecoration: 'none',
-                                    transition: 'color 0.2s ease',
-                                    position: 'relative'
-                                }}
-                            >
-                                Home
-                            </Link>
-                        </li>
-                        <li>
+                        {/* Services Dropdown */}
+                        <li
+                            ref={servicesRef}
+                            onMouseEnter={() => handleMouseEnter('services')}
+                            onMouseLeave={() => handleMouseLeave('services')}
+                            style={{ position: 'relative' }}
+                        >
                             <Link
                                 href="/services"
                                 style={{
-                                    fontSize: '14.5px',
+                                    fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isActive('/services') ? '#1b2534' : '#4b5563',
+                                    color: isServicesActive ? '#0f172a' : '#475569',
                                     textDecoration: 'none',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '4px',
+                                    padding: '6px 2px',
                                     transition: 'color 0.2s ease'
                                 }}
                             >
-                                Services
+                                <span>Services</span>
+                                <svg width="9" height="5" viewBox="0 0 10 6" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
                             </Link>
+
+                            {servicesOpen && (
+                                <div
+                                    className="nav_mega_dropdown"
+                                    style={{
+                                        position: 'absolute',
+                                        top: 'calc(100% + 14px)',
+                                        left: '50%',
+                                        transform: 'translateX(-50%)',
+                                        width: '440px',
+                                        backgroundColor: '#ffffff',
+                                        borderRadius: '16px',
+                                        border: '1px solid #e2e8f0',
+                                        boxShadow: '0 20px 48px rgba(15, 23, 42, 0.12), 0 2px 6px rgba(15, 23, 42, 0.04)',
+                                        padding: '12px',
+                                        zIndex: 1010,
+                                        animation: 'navFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
+                                    }}
+                                >
+                                    <div style={{ padding: '6px 12px 10px', borderBottom: '1px solid #f1f5f9', marginBottom: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                        <span style={{ fontSize: '11px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '1px', color: '#94a3b8' }}>
+                                            Core Executive Offerings
+                                        </span>
+                                        <Link href="/services" onClick={closeAllDropdowns} style={{ fontSize: '12px', fontWeight: '700', color: '#0f172a', textDecoration: 'none' }}>
+                                            Overview &rarr;
+                                        </Link>
+                                    </div>
+                                    <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4px' }}>
+                                        {SERVICES_DATA.map((srv) => (
+                                            <Link
+                                                key={srv.slug}
+                                                href={`/services/${srv.slug}`}
+                                                onClick={closeAllDropdowns}
+                                                className="dropdown_nav_link"
+                                                style={{
+                                                    display: 'flex',
+                                                    alignItems: 'flex-start',
+                                                    gap: '12px',
+                                                    padding: '9px 12px',
+                                                    borderRadius: '10px',
+                                                    textDecoration: 'none',
+                                                    transition: 'all 0.18s ease'
+                                                }}
+                                            >
+                                                <span style={{
+                                                    fontSize: '11px',
+                                                    fontWeight: '800',
+                                                    color: '#94a3b8',
+                                                    backgroundColor: '#f8fafc',
+                                                    padding: '2px 6px',
+                                                    borderRadius: '6px',
+                                                    marginTop: '2px'
+                                                }}>
+                                                    {srv.number}
+                                                </span>
+                                                <div>
+                                                    <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0f172a', lineHeight: '1.3' }}>
+                                                        {srv.title}
+                                                    </div>
+                                                    <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px', lineHeight: '1.35' }}>
+                                                        {srv.shortDescription}
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </li>
+
+                        {/* Solutions Dropdown */}
+                        <li
+                            ref={solutionsRef}
+                            onMouseEnter={() => handleMouseEnter('solutions')}
+                            onMouseLeave={() => handleMouseLeave('solutions')}
+                            style={{ position: 'relative' }}
+                        >
+                            <Link
+                                href="/solutions"
+                                style={{
+                                    fontSize: '14px',
+                                    fontWeight: '600',
+                                    color: isSolutionsActive ? '#0f172a' : '#475569',
+                                    textDecoration: 'none',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '4px',
+                                    padding: '6px 2px',
+                                    transition: 'color 0.2s ease'
+                                }}
+                            >
+                                <span>Solutions</span>
+                                <svg width="9" height="5" viewBox="0 0 10 6" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </Link>
+
+                            {solutionsOpen && (
+                                <div
+                                    className="nav_mega_dropdown"
+                                    style={{
+                                        position: 'absolute',
+                                        top: 'calc(100% + 14px)',
+                                        left: '50%',
+                                        transform: 'translateX(-50%)',
+                                        width: '380px',
+                                        backgroundColor: '#ffffff',
+                                        borderRadius: '16px',
+                                        border: '1px solid #e2e8f0',
+                                        boxShadow: '0 20px 48px rgba(15, 23, 42, 0.12), 0 2px 6px rgba(15, 23, 42, 0.04)',
+                                        padding: '12px',
+                                        zIndex: 1010,
+                                        animation: 'navFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
+                                    }}
+                                >
+                                    <div style={{ padding: '6px 12px 10px', borderBottom: '1px solid #f1f5f9', marginBottom: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                        <span style={{ fontSize: '11px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '1px', color: '#94a3b8' }}>
+                                            Who We Serve
+                                        </span>
+                                        <Link href="/solutions" onClick={closeAllDropdowns} style={{ fontSize: '12px', fontWeight: '700', color: '#0f172a', textDecoration: 'none' }}>
+                                            Compare All &rarr;
+                                        </Link>
+                                    </div>
+                                    <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4px' }}>
+                                        {SOLUTIONS_DATA.map((sol) => (
+                                            <Link
+                                                key={sol.slug}
+                                                href={`/solutions/${sol.slug}`}
+                                                onClick={closeAllDropdowns}
+                                                className="dropdown_nav_link"
+                                                style={{
+                                                    display: 'block',
+                                                    padding: '9px 12px',
+                                                    borderRadius: '10px',
+                                                    textDecoration: 'none',
+                                                    transition: 'all 0.18s ease'
+                                                }}
+                                            >
+                                                <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0f172a', lineHeight: '1.3' }}>
+                                                    {sol.title}
+                                                </div>
+                                                <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px', lineHeight: '1.35' }}>
+                                                    {sol.subtitle}
+                                                </div>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </li>
+
+                        {/* How It Works */}
                         <li>
                             <Link
-                                href="/pricing"
+                                href="/how-it-works"
+                                onClick={closeAllDropdowns}
                                 style={{
-                                    fontSize: '14.5px',
+                                    fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isActive('/pricing') ? '#1b2534' : '#4b5563',
+                                    color: isActive('/how-it-works') ? '#0f172a' : '#475569',
                                     textDecoration: 'none',
+                                    padding: '6px 2px',
                                     transition: 'color 0.2s ease'
                                 }}
                             >
-                                Pricing
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/blog-grid"
-                                style={{
-                                    fontSize: '14.5px',
-                                    fontWeight: '600',
-                                    color: isActive('/blog-grid') ? '#1b2534' : '#4b5563',
-                                    textDecoration: 'none',
-                                    transition: 'color 0.2s ease'
-                                }}
-                            >
-                                Blog
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/contact"
-                                style={{
-                                    fontSize: '14.5px',
-                                    fontWeight: '600',
-                                    color: isActive('/contact') ? '#1b2534' : '#4b5563',
-                                    textDecoration: 'none',
-                                    transition: 'color 0.2s ease'
-                                }}
-                            >
-                                Contact
+                                How It Works
                             </Link>
                         </li>
 
-                        {/* "More" Dropdown: Folds About, Feedback, Community */}
+                        {/* Case Studies */}
+                        <li>
+                            <Link
+                                href="/case-studies"
+                                onClick={closeAllDropdowns}
+                                style={{
+                                    fontSize: '14px',
+                                    fontWeight: '600',
+                                    color: isActive('/case-studies') ? '#0f172a' : '#475569',
+                                    textDecoration: 'none',
+                                    padding: '6px 2px',
+                                    transition: 'color 0.2s ease'
+                                }}
+                            >
+                                Case Studies
+                            </Link>
+                        </li>
+
+                        {/* Insights (Blog) */}
+                        <li>
+                            <Link
+                                href="/blog-grid"
+                                onClick={closeAllDropdowns}
+                                style={{
+                                    fontSize: '14px',
+                                    fontWeight: '600',
+                                    color: isActive('/blog') || isActive('/blog-grid') ? '#0f172a' : '#475569',
+                                    textDecoration: 'none',
+                                    padding: '6px 2px',
+                                    transition: 'color 0.2s ease'
+                                }}
+                            >
+                                Insights
+                            </Link>
+                        </li>
+
+                        {/* Resources Dropdown */}
                         <li
-                            ref={moreDropdownRef}
-                            onMouseEnter={handleMouseEnterMore}
-                            onMouseLeave={handleMouseLeaveMore}
+                            ref={resourcesRef}
+                            onMouseEnter={() => handleMouseEnter('resources')}
+                            onMouseLeave={() => handleMouseLeave('resources')}
+                            style={{ position: 'relative' }}
+                        >
+                            <button
+                                type="button"
+                                onClick={() => setResourcesOpen(!resourcesOpen)}
+                                style={{
+                                    background: 'none',
+                                    border: 'none',
+                                    padding: '6px 2px',
+                                    fontSize: '14px',
+                                    fontWeight: '600',
+                                    color: isResourcesActive ? '#0f172a' : '#475569',
+                                    cursor: 'pointer',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '4px',
+                                    transition: 'color 0.2s ease'
+                                }}
+                            >
+                                <span>Resources</span>
+                                <svg width="9" height="5" viewBox="0 0 10 6" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </button>
+
+                            {resourcesOpen && (
+                                <div
+                                    className="nav_mega_dropdown"
+                                    style={{
+                                        position: 'absolute',
+                                        top: 'calc(100% + 14px)',
+                                        left: '50%',
+                                        transform: 'translateX(-50%)',
+                                        width: '280px',
+                                        backgroundColor: '#ffffff',
+                                        borderRadius: '16px',
+                                        border: '1px solid #e2e8f0',
+                                        boxShadow: '0 20px 48px rgba(15, 23, 42, 0.12), 0 2px 6px rgba(15, 23, 42, 0.04)',
+                                        padding: '10px',
+                                        zIndex: 1010,
+                                        animation: 'navFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
+                                    }}
+                                >
+                                    <Link
+                                        href="/resources/assessment"
+                                        onClick={closeAllDropdowns}
+                                        className="dropdown_nav_link"
+                                        style={{
+                                            display: 'block',
+                                            padding: '10px 12px',
+                                            borderRadius: '10px',
+                                            textDecoration: 'none',
+                                            backgroundColor: '#f8fafd',
+                                            border: '1px solid #e2e8f0',
+                                            marginBottom: '6px'
+                                        }}
+                                    >
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                            <span style={{ fontSize: '13.5px', fontWeight: '800', color: '#0f172a' }}>
+                                                Executive Scorecard
+                                            </span>
+                                            <span style={{ fontSize: '10px', fontWeight: '800', backgroundColor: '#dbeafe', color: '#1d4ed8', padding: '1px 6px', borderRadius: '10px' }}>
+                                                Free
+                                            </span>
+                                        </div>
+                                        <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px' }}>
+                                            Test your digital presence in 3 mins
+                                        </div>
+                                    </Link>
+
+                                    <Link
+                                        href="/resources"
+                                        onClick={closeAllDropdowns}
+                                        className="dropdown_nav_link"
+                                        style={{
+                                            display: 'block',
+                                            padding: '8px 12px',
+                                            borderRadius: '10px',
+                                            textDecoration: 'none'
+                                        }}
+                                    >
+                                        <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0f172a' }}>
+                                            Resources Library
+                                        </div>
+                                        <div style={{ fontSize: '12px', color: '#64748b' }}>
+                                            Checklists, audit templates &amp; guides
+                                        </div>
+                                    </Link>
+
+                                    <Link
+                                        href="/community"
+                                        onClick={closeAllDropdowns}
+                                        className="dropdown_nav_link"
+                                        style={{
+                                            display: 'block',
+                                            padding: '8px 12px',
+                                            borderRadius: '10px',
+                                            textDecoration: 'none'
+                                        }}
+                                    >
+                                        <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0f172a' }}>
+                                            Executive Directory
+                                        </div>
+                                        <div style={{ fontSize: '12px', color: '#64748b' }}>
+                                            Verified contributors &amp; perspectives
+                                        </div>
+                                    </Link>
+                                </div>
+                            )}
+                        </li>
+
+                        {/* More Dropdown (About, Careers, Reviews, Pricing, FAQ) */}
+                        <li
+                            ref={moreRef}
+                            onMouseEnter={() => handleMouseEnter('more')}
+                            onMouseLeave={() => handleMouseLeave('more')}
                             style={{ position: 'relative' }}
                         >
                             <button
@@ -275,10 +609,10 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     background: 'none',
                                     border: 'none',
-                                    padding: '4px 0',
-                                    fontSize: '14.5px',
+                                    padding: '6px 2px',
+                                    fontSize: '14px',
                                     fontWeight: '600',
-                                    color: isMoreActive ? '#1b2534' : '#4b5563',
+                                    color: isMoreActive ? '#0f172a' : '#475569',
                                     cursor: 'pointer',
                                     display: 'inline-flex',
                                     alignItems: 'center',
@@ -286,106 +620,70 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                     transition: 'color 0.2s ease'
                                 }}
                             >
-                                <span>More</span>
-                                <svg
-                                    width="10"
-                                    height="6"
-                                    viewBox="0 0 10 6"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    style={{
-                                        transform: moreOpen ? 'rotate(180deg)' : 'none',
-                                        transition: 'transform 0.2s ease'
-                                    }}
-                                >
-                                    <path d="M1 1L5 5L9 1" stroke="#6b7280" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                                <span>Firm</span>
+                                <svg width="9" height="5" viewBox="0 0 10 6" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </button>
 
-                            {/* Floating Dropdown Card */}
                             {moreOpen && (
                                 <div
+                                    className="nav_mega_dropdown"
                                     style={{
                                         position: 'absolute',
-                                        top: 'calc(100% + 12px)',
+                                        top: 'calc(100% + 14px)',
                                         left: '50%',
                                         transform: 'translateX(-50%)',
-                                        minWidth: '220px',
-                                        backgroundColor: 'rgba(255, 255, 255, 0.96)',
-                                        backdropFilter: 'blur(20px)',
-                                        WebkitBackdropFilter: 'blur(20px)',
+                                        width: '240px',
+                                        backgroundColor: '#ffffff',
                                         borderRadius: '16px',
                                         border: '1px solid #e2e8f0',
-                                        boxShadow: '0 16px 36px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0,0,0,0.04)',
-                                        padding: '8px',
-                                        zIndex: 1010
+                                        boxShadow: '0 20px 48px rgba(15, 23, 42, 0.12), 0 2px 6px rgba(15, 23, 42, 0.04)',
+                                        padding: '10px',
+                                        zIndex: 1010,
+                                        animation: 'navFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
                                     }}
                                 >
                                     <Link
                                         href="/about"
-                                        onClick={() => setMoreOpen(false)}
-                                        style={{
-                                            display: 'block',
-                                            padding: '10px 14px',
-                                            borderRadius: '10px',
-                                            color: '#1b2534',
-                                            textDecoration: 'none',
-                                            fontSize: '14px',
-                                            fontWeight: '600',
-                                            transition: 'background-color 0.2s ease'
-                                        }}
-                                        className="more_dropdown_item"
+                                        onClick={closeAllDropdowns}
+                                        className="dropdown_nav_link"
+                                        style={{ display: 'block', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0f172a', fontSize: '13.5px', fontWeight: '700' }}
                                     >
-                                        About Us
+                                        About Prominence
+                                    </Link>
+                                    <Link
+                                        href="/careers"
+                                        onClick={closeAllDropdowns}
+                                        className="dropdown_nav_link"
+                                        style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0f172a', fontSize: '13.5px', fontWeight: '700' }}
+                                    >
+                                        <span>Careers</span>
+                                        <span style={{ fontSize: '10px', fontWeight: '800', backgroundColor: '#ecfdf5', color: '#059669', padding: '1px 6px', borderRadius: '8px' }}>
+                                            Hiring
+                                        </span>
+                                    </Link>
+                                    <Link
+                                        href="/pricing"
+                                        onClick={closeAllDropdowns}
+                                        className="dropdown_nav_link"
+                                        style={{ display: 'block', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0f172a', fontSize: '13.5px', fontWeight: '700' }}
+                                    >
+                                        Engagement Pricing
                                     </Link>
                                     <Link
                                         href="/feedback"
-                                        onClick={() => setMoreOpen(false)}
-                                        style={{
-                                            display: 'block',
-                                            padding: '10px 14px',
-                                            borderRadius: '10px',
-                                            color: '#1b2534',
-                                            textDecoration: 'none',
-                                            fontSize: '14px',
-                                            fontWeight: '600',
-                                            transition: 'background-color 0.2s ease'
-                                        }}
-                                        className="more_dropdown_item"
+                                        onClick={closeAllDropdowns}
+                                        className="dropdown_nav_link"
+                                        style={{ display: 'block', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0f172a', fontSize: '13.5px', fontWeight: '700' }}
                                     >
-                                        Client Reviews
-                                    </Link>
-                                    <Link
-                                        href="/community"
-                                        onClick={() => setMoreOpen(false)}
-                                        style={{
-                                            display: 'block',
-                                            padding: '10px 14px',
-                                            borderRadius: '10px',
-                                            color: '#1b2534',
-                                            textDecoration: 'none',
-                                            fontSize: '14px',
-                                            fontWeight: '600',
-                                            transition: 'background-color 0.2s ease'
-                                        }}
-                                        className="more_dropdown_item"
-                                    >
-                                        Executive Directory
+                                        Client Endorsements
                                     </Link>
                                     <Link
                                         href="/faq"
-                                        onClick={() => setMoreOpen(false)}
-                                        style={{
-                                            display: 'block',
-                                            padding: '10px 14px',
-                                            borderRadius: '10px',
-                                            color: '#1b2534',
-                                            textDecoration: 'none',
-                                            fontSize: '14px',
-                                            fontWeight: '600',
-                                            transition: 'background-color 0.2s ease'
-                                        }}
-                                        className="more_dropdown_item"
+                                        onClick={closeAllDropdowns}
+                                        className="dropdown_nav_link"
+                                        style={{ display: 'block', padding: '8px 12px', borderRadius: '10px', textDecoration: 'none', color: '#0f172a', fontSize: '13.5px', fontWeight: '700' }}
                                     >
                                         Strategic FAQ
                                     </Link>
@@ -395,10 +693,10 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                     </ul>
                 </nav>
 
-                {/* 3. Right side: Auth Links + Gradient CTA + Mobile Hamburger */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    {/* Auth-Aware State (Left of CTA) */}
-                    <div className="desktop_auth_area" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                {/* 3. Right: Auth area + Primary Executive Consultation CTA + Mobile Trigger */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    {/* Auth links (desktop) */}
+                    <div className="desktop_auth_area" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
                         {user ? (
                             <>
                                 <Link
@@ -406,7 +704,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                     style={{
                                         fontSize: '13px',
                                         fontWeight: '600',
-                                        color: '#4b5563',
+                                        color: '#475569',
                                         textDecoration: 'none',
                                         padding: '4px 8px',
                                         borderRadius: '8px',
@@ -441,7 +739,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                                 style={{
                                     fontSize: '13px',
                                     fontWeight: '600',
-                                    color: '#6b7280',
+                                    color: '#64748b',
                                     textDecoration: 'none',
                                     padding: '4px 6px',
                                     transition: 'color 0.2s ease'
@@ -452,34 +750,35 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                         )}
                     </div>
 
-                    {/* Tactile 3D CTA Pill Button */}
+                    {/* Primary CTA Button: Book a Private Consultation */}
                     <Link
                         href="/contact"
                         className="floating_cta_btn"
+                        onClick={closeAllDropdowns}
                         style={{
                             display: 'inline-flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            padding: '10px 24px',
+                            padding: '10px 22px',
                             borderRadius: '9999px',
-                            background: 'linear-gradient(180deg, #2b2d32 0%, #151619 100%)',
+                            background: 'linear-gradient(180deg, #1e293b 0%, #0f172a 100%)',
                             color: '#ffffff',
-                            fontSize: '14px',
+                            fontSize: '13.5px',
                             fontWeight: '600',
                             letterSpacing: '0.2px',
                             textDecoration: 'none',
                             whiteSpace: 'nowrap',
-                            border: '1px solid rgba(255, 255, 255, 0.09)',
-                            boxShadow: '0 8px 20px -2px rgba(0, 0, 0, 0.4), 0 3px 6px -1px rgba(0, 0, 0, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6)',
+                            border: '1px solid rgba(255, 255, 255, 0.12)',
+                            boxShadow: '0 8px 20px -2px rgba(15, 23, 42, 0.35), 0 2px 6px -1px rgba(15, 23, 42, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6)',
                             textShadow: '0 1px 2px rgba(0, 0, 0, 0.4)',
                             transition: 'all 0.22s cubic-bezier(0.16, 1, 0.3, 1)'
                         }}
                     >
-                        <span className="cta_desktop_text">Book a Strategy Call</span>
-                        <span className="cta_mobile_text">Book Call</span>
+                        <span className="cta_desktop_text">Book a Private Consultation</span>
+                        <span className="cta_mobile_text">Consultation</span>
                     </Link>
 
-                    {/* Mobile Hamburger Icon (visible on mobile only) */}
+                    {/* Mobile Menu Hamburger */}
                     <button
                         type="button"
                         onClick={handleMobileMenu}
@@ -487,9 +786,8 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                         aria-label="Toggle navigation menu"
                         style={{
                             display: 'none',
-                            background: '#f1f3f6',
-                            border: '1px solid rgba(0, 0, 0, 0.04)',
-                            boxShadow: 'inset 0 1px 1px rgba(255, 255, 255, 0.95), 0 2px 5px rgba(0, 0, 0, 0.04)',
+                            background: '#f1f5f9',
+                            border: '1px solid rgba(0, 0, 0, 0.05)',
                             borderRadius: '12px',
                             width: '42px',
                             height: '42px',
@@ -498,40 +796,46 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                             alignItems: 'center',
                             justifyContent: 'center',
                             cursor: 'pointer',
-                            color: '#1b2534',
+                            color: '#0f172a',
                             padding: 0
                         }}
                     >
                         <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1H17M1 7H17M1 13H17" stroke="#1b2534" strokeWidth="2" strokeLinecap="round" />
+                            <path d="M1 1H17M1 7H17M1 13H17" stroke="#0f172a" strokeWidth="2" strokeLinecap="round" />
                         </svg>
                     </button>
                 </div>
             </div>
 
-            {/* Scoped CSS for responsive floating navbar behavior */}
+            {/* Scoped CSS for dropdowns and responsive behaviors */}
             <style jsx>{`
-                .floating_cta_btn {
-                    min-height: 44px;
+                @keyframes navFadeIn {
+                    from {
+                        opacity: 0;
+                        transform: translate(-50%, -6px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translate(-50%, 0);
+                    }
+                }
+                .dropdown_nav_link:hover {
+                    background-color: #f8fafc !important;
                 }
                 .floating_cta_btn:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 12px 26px -2px rgba(0, 0, 0, 0.5), 0 4px 10px -1px rgba(0, 0, 0, 0.25), inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.48), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6) !important;
-                    filter: brightness(1.04);
+                    transform: translateY(-1.5px);
+                    box-shadow: 0 12px 24px -2px rgba(15, 23, 42, 0.45), 0 4px 10px -1px rgba(15, 23, 42, 0.25), inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.45) !important;
+                    filter: brightness(1.05);
                 }
                 .floating_cta_btn:active {
                     transform: translateY(1px);
-                    box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.32), inset 0 1px 2px 0 rgba(0, 0, 0, 0.7) !important;
-                }
-                .more_dropdown_item:hover {
-                    background-color: rgba(15, 23, 42, 0.05) !important;
-                    color: #0f172a !important;
+                    box-shadow: 0 4px 10px -1px rgba(15, 23, 42, 0.3) !important;
                 }
                 .cta_mobile_text {
                     display: none;
                 }
 
-                @media (max-width: 991px) {
+                @media (max-width: 1100px) {
                     .desktop_nav_links {
                         display: none !important;
                     }
@@ -548,25 +852,25 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                         display: inline;
                     }
                     .floating_navbar_pill {
-                        padding: 0 10px 0 16px !important;
-                        height: 56px !important;
+                        padding: 0 12px 0 16px !important;
+                        height: 58px !important;
                     }
                 }
 
                 @media (max-width: 480px) {
                     :global(.floating_navbar_container) {
-                        width: calc(100% - 24px) !important;
-                        top: 12px !important;
+                        width: calc(100% - 20px) !important;
+                        top: 10px !important;
                     }
-                    .logo_wordmark {
+                    .logo_subtag {
                         display: none !important;
                     }
                     .floating_navbar_pill {
                         padding: 0 8px 0 12px !important;
                     }
                     .floating_cta_btn {
-                        padding: 8px 16px !important;
-                        font-size: 13px !important;
+                        padding: 8px 14px !important;
+                        font-size: 12.5px !important;
                     }
                 }
             `}</style>

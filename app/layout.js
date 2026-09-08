@@ -9,6 +9,7 @@ import 'swiper/css'
 import "swiper/css/pagination"
 import 'swiper/css/free-mode';
 import { ptSerif, tiroBangla } from '@/lib/font'
+
 export const viewport = {
     width: 'device-width',
     initialScale: 1,
@@ -18,24 +19,24 @@ export const viewport = {
 export const metadata = {
     metadataBase: new URL('https://www.prominence.agency'),
     title: {
-        default: 'Personal Branding for HR Leaders & CHROs | Elite Prominence',
-        template: '%s | Elite Prominence',
+        default: 'Executive Personal Branding & Digital Reputation Advisory | Prominence',
+        template: '%s | Prominence',
     },
-    description: 'Done-for-you personal branding agency for HR leaders, CHROs, and senior executives. We build your private digital HQ, Google reputation, and high-impact LinkedIn authority.',
+    description: 'Prominence is a premier executive reputation advisory counseling CEOs, CHROs, enterprise founders, and senior leaders on sovereign digital stature, executive websites, and thought leadership.',
     alternates: {
         canonical: 'https://www.prominence.agency',
     },
     openGraph: {
-        title: 'Personal Branding for HR Leaders & CHROs | Elite Prominence',
-        description: 'Elevate your executive authority. Elite Prominence designs bespoke digital HQs, Google Knowledge Panels, and strategic LinkedIn presence for HR leaders & CHROs.',
+        title: 'Executive Personal Branding & Digital Reputation Advisory | Prominence',
+        description: 'Build a digital presence that commands attention. Bespoke executive websites, Google search dominance, and strategic thought leadership.',
         url: 'https://www.prominence.agency',
-        siteName: 'Elite Prominence',
+        siteName: 'Prominence.agency',
         images: [
             {
                 url: '/assets/images/Elite%20Prominence/EliteProminence-coverphoto.png',
                 width: 1200,
                 height: 630,
-                alt: 'Elite Prominence — Personal Branding for HR Leaders & Executives',
+                alt: 'Prominence — Executive Personal Branding & Reputation Advisory',
             },
         ],
         locale: 'en_US',
@@ -43,8 +44,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Personal Branding for HR Leaders & CHROs | Elite Prominence',
-        description: 'Turn HR leadership into executive influence. Bespoke digital HQ, search reputation, and LinkedIn thought leadership for CHROs.',
+        title: 'Executive Personal Branding & Digital Reputation Advisory | Prominence',
+        description: 'Turn leadership excellence into sovereign executive influence. Bespoke digital HQ, search reputation, and thought leadership.',
         images: ['/assets/images/Elite%20Prominence/EliteProminence-coverphoto.png'],
     },
     icons: {
@@ -71,10 +72,11 @@ export default function RootLayout({ children }) {
                         __html: JSON.stringify({
                             '@context': 'https://schema.org',
                             '@type': 'Organization',
-                            name: 'Elite Prominence',
+                            name: 'Prominence',
+                            legalName: 'Elite Prominence',
                             url: 'https://www.prominence.agency',
                             logo: 'https://www.prominence.agency/assets/images/Elite%20Prominence/EliteProminence-iocn.png',
-                            description: 'Personal branding agency for senior HR leaders, CHROs, and executive consultants.',
+                            description: 'Premier executive personal branding and digital reputation advisory firm for CEOs, CHROs, enterprise founders, and senior leaders.',
                             sameAs: [
                                 'https://www.linkedin.com/company/elite-prominence',
                                 'https://www.facebook.com/EliteProminence/',
@@ -95,4 +97,3 @@ export default function RootLayout({ children }) {
         </html>
     )
 }
-

@@ -7,7 +7,7 @@ export default function Clients() {
             <div className="container">
                 {/* Executive Trust Line & Institutional Badges */}
                 <div className="row justify-content-center text-center" style={{ marginBottom: "40px" }} data-aos="fade-up" data-aos-easing="linear" data-aos-duration="450">
-                    <div className="col-xl-9 col-lg-11">
+                    <div className="col-xl-10 col-lg-11">
                         <p style={{
                             fontSize: "13px",
                             fontWeight: "700",
@@ -16,7 +16,7 @@ export default function Clients() {
                             color: "#64748b",
                             marginBottom: "18px"
                         }}>
-                            Trusted by Senior HR Leaders &amp; Executives From
+                            Advising CEOs, CHROs, Enterprise Founders &amp; Leaders From
                         </p>
 
                         <div style={{
@@ -28,10 +28,10 @@ export default function Clients() {
                         }}>
                             {[
                                 { label: "Fortune 500 Enterprises", icon: "🏛️" },
-                                { label: "Tech Unicorn Startups", icon: "🦄" },
+                                { label: "High-Growth Tech Unicorns", icon: "🦄" },
+                                { label: "Private Equity Portfolio Companies", icon: "📈" },
                                 { label: "Global Management Consultancies", icon: "🌐" },
-                                { label: "Boardroom Nominating Networks", icon: "⚖️" },
-                                { label: "Private Equity Portfolio CHROs", icon: "📈" }
+                                { label: "Corporate Board Nominating Networks", icon: "⚖️" }
                             ].map((badge, idx) => (
                                 <div
                                     key={idx}
@@ -39,7 +39,7 @@ export default function Clients() {
                                         display: "inline-flex",
                                         alignItems: "center",
                                         gap: "8px",
-                                        padding: "8px 16px",
+                                        padding: "8px 18px",
                                         backgroundColor: "#ffffff",
                                         borderRadius: "9999px",
                                         border: "1px solid #e2e8f0",
@@ -61,22 +61,22 @@ export default function Clients() {
                 <div className="row justify-content-center text-center">
                     <div className="col-lg-10 col-md-12" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
                         <div style={{
-                            maxWidth: "840px",
+                            maxWidth: "860px",
                             margin: "0 auto",
-                            padding: "36px 30px",
+                            padding: "36px 32px",
                             backgroundColor: "#ffffff",
                             borderRadius: "16px",
                             border: "1px solid #e2e8f0",
                             boxShadow: "0 10px 30px rgba(0,0,0,0.04)"
                         }}>
-                            <p style={{ fontSize: "23px", fontWeight: "800", color: "#162d20", marginBottom: "10px", lineHeight: "1.35" }}>
-                                Your experience is in the top 5% of your field.
+                            <p style={{ fontSize: "24px", fontWeight: "800", color: "#0d1b2a", marginBottom: "8px", lineHeight: "1.35" }}>
+                                Your real-world leadership is in the top 5% of your industry.
                             </p>
-                            <p style={{ fontSize: "23px", fontWeight: "800", color: "#2460e2", marginBottom: "14px", lineHeight: "1.35" }}>
-                                Your online presence isn't in the top 50%.
+                            <p style={{ fontSize: "24px", fontWeight: "800", color: "#2460e2", marginBottom: "14px", lineHeight: "1.35" }}>
+                                Your public digital presence isn't in the top 50%.
                             </p>
                             <p style={{ fontSize: "16.5px", color: "#64748b", margin: 0, lineHeight: "1.65" }}>
-                                That gap is quietly costing you board seats, keynote speaking invitations, and inbound advisory mandates. Elite Prominence solves it.
+                                That authority gap silently costs you board directorships, capital partner confidence, keynote speaking invitations, and inbound advisory mandates. Prominence permanently closes it.
                             </p>
                         </div>
                     </div>
