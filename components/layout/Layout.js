@@ -2,6 +2,8 @@
 'use client'
 import { useEffect, useState } from "react"
 import BackToTop from '../elements/BackToTop'
+import ScrollProgress from '../elements/ScrollProgress'
+import Preloader from '../elements/Preloader'
 import DataBg from "../elements/DataBg"
 import Breadcrumb from './Breadcrumb'
 import Breadcrumb2 from './Breadcrumb2'
@@ -61,6 +63,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, brea
     }, [])
     return (
         <>
+            <Preloader />
             <DataBg />
             <div className={`page-wrapper ${wrapperCls ? wrapperCls : ""}`} id="#top">
                 <AnnouncementBanner />
@@ -97,6 +100,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, brea
                 {footerStyle == 1 ? < Footer1 /> : null}
             </div>
             <BackToTop scroll={scroll} />
+            <ScrollProgress />
         </>
     )
 }

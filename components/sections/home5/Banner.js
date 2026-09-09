@@ -9,9 +9,9 @@ export default function Banner() {
                 className="bg_layer" 
                 style={{ 
                     backgroundImage: "url(/assets/images/elite/hero_executive.jpg)", 
-                    backgroundPosition: "right 25%", 
+                    backgroundPosition: "right center", 
                     backgroundSize: "cover",
-                    filter: "brightness(1.3) contrast(1.1)"
+                    filter: "none"
                 }}
             />
             <div className="container">
@@ -23,11 +23,11 @@ export default function Banner() {
                                 Executive Reputation &amp; Digital Stature
                             </span>
 
-                            <h1 style={{ fontSize: "clamp(30px, 4.5vw, 50px)", fontWeight: "700", lineHeight: "1.18", marginBottom: "20px", color: "#ffffff", letterSpacing: "-0.5px", textShadow: "0 2px 10px rgba(0,0,0,0.85), 0 1px 3px rgba(0,0,0,0.9)" }}>
+                            <h1 style={{ fontSize: "clamp(30px, 4.5vw, 50px)", fontWeight: "700", lineHeight: "1.18", marginBottom: "20px", color: "#ffffff", letterSpacing: "-0.5px", textShadow: "0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.6)" }}>
                                 Build a Digital Presence That Commands Attention.
                             </h1>
 
-                            <p style={{ fontSize: "17.5px", lineHeight: "29px", color: "rgba(255, 255, 255, 0.95)", maxWidth: "600px", marginBottom: "30px", textShadow: "0 2px 8px rgba(0,0,0,0.85), 0 1px 3px rgba(0,0,0,0.9)" }}>
+                            <p style={{ fontSize: "17.5px", lineHeight: "29px", color: "rgba(255, 255, 255, 0.92)", maxWidth: "580px", marginBottom: "30px", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
                                 We architect the sovereign websites, search reputation, strategic ghostwriting, and authority assets that represent CEOs, CHROs, Founders, and enterprise leaders before they walk into the room.
                             </p>
 
@@ -66,113 +66,88 @@ export default function Banner() {
                         </div>
                     </div>
 
-                    {/* Right Column: 3D Stature Dashboard Showcase */}
+                    {/* Right Column: Floating Stature Accents framing the Executive */}
                     <div className="col-12 col-lg-5 mt-5 mt-lg-0" data-aos="fade-left" data-aos-duration="600">
-                        <div style={{ position: "relative", maxWidth: "460px", margin: "0 auto" }}>
-                            {/* Floating Google Top Badge */}
+                        <div style={{ position: "relative", minHeight: "440px", width: "100%" }}>
+                            {/* Floating Google Verified Badge */}
                             <div
-                                className="float-bob-y"
+                                className="float-bob-y d-none d-lg-inline-flex"
                                 style={{
                                     position: "absolute",
-                                    top: "-16px",
-                                    right: "12px",
-                                    backgroundColor: "rgba(13, 13, 20, 0.92)",
-                                    backdropFilter: "blur(12px)",
-                                    border: "1px solid rgba(139, 92, 246, 0.4)",
-                                    padding: "7px 15px",
+                                    top: "24px",
+                                    left: "-80px",
+                                    backgroundColor: "rgba(13, 13, 20, 0.86)",
+                                    backdropFilter: "blur(16px)",
+                                    WebkitBackdropFilter: "blur(16px)",
+                                    border: "1px solid rgba(139, 92, 246, 0.45)",
+                                    padding: "9px 18px",
                                     borderRadius: "30px",
-                                    display: "inline-flex",
                                     alignItems: "center",
-                                    gap: "8px",
+                                    gap: "10px",
                                     color: "#ffffff",
-                                    fontSize: "12px",
-                                    fontWeight: "700",
                                     zIndex: 4,
-                                    boxShadow: "0 12px 28px rgba(0,0,0,0.45)"
+                                    boxShadow: "0 16px 36px rgba(0,0,0,0.5), 0 0 20px rgba(66, 133, 244, 0.15)"
                                 }}
                             >
-                                <i className="fab fa-google" style={{ color: "#4285F4", fontSize: "14px" }}></i>
-                                <span>Google Page 1 Verified #1</span>
-                            </div>
-
-                            {/* 3D Glassmorphic Stature Dashboard Image Frame */}
-                            <div
-                                style={{
-                                    borderRadius: "18px",
-                                    overflow: "hidden",
-                                    border: "1px solid rgba(139, 92, 246, 0.35)",
-                                    boxShadow: "0 24px 60px rgba(0, 0, 0, 0.5), 0 0 35px rgba(139, 92, 246, 0.2)",
-                                    background: "rgba(13, 13, 20, 0.85)",
-                                    position: "relative"
-                                }}
-                            >
-                                <img
-                                    src="/assets/images/elite/executive_presence_platform.jpg"
-                                    alt="Executive Presence & Digital Authority Platform"
-                                    style={{
-                                        width: "100%",
-                                        height: "auto",
-                                        display: "block",
-                                        borderRadius: "18px"
-                                    }}
-                                />
-                                {/* Ambient Bottom Overlay */}
-                                <div
-                                    style={{
-                                        position: "absolute",
-                                        inset: 0,
-                                        borderRadius: "18px",
-                                        background: "linear-gradient(180deg, rgba(13,13,20,0) 65%, rgba(13,13,20,0.85) 100%)",
-                                        pointerEvents: "none"
-                                    }}
-                                />
-                                {/* Overlay Micro-Stats */}
-                                <div
-                                    style={{
-                                        position: "absolute",
-                                        bottom: "14px",
-                                        left: "16px",
-                                        right: "16px",
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                        alignItems: "center",
-                                        zIndex: 3
-                                    }}
-                                >
-                                    <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                                        <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#10B981", display: "inline-block", boxShadow: "0 0 8px #10B981" }}></span>
-                                        <span style={{ fontSize: "11.5px", color: "#ffffff", fontWeight: "700" }}>Sovereign Entity Active</span>
-                                    </div>
-                                    <span style={{ fontSize: "11px", color: "#C084FC", fontWeight: "700", background: "rgba(139, 92, 246, 0.2)", padding: "2px 8px", borderRadius: "6px", border: "1px solid rgba(139, 92, 246, 0.3)" }}>
-                                        Top 1% Stature
-                                    </span>
+                                <div style={{ width: "24px", height: "24px", borderRadius: "50%", background: "rgba(66, 133, 244, 0.2)", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(66, 133, 244, 0.4)" }}>
+                                    <i className="fab fa-google" style={{ color: "#4285F4", fontSize: "12px" }}></i>
+                                </div>
+                                <div>
+                                    <div style={{ fontSize: "9.5px", textTransform: "uppercase", letterSpacing: "0.8px", color: "rgba(255, 255, 255, 0.6)", fontWeight: "600", lineHeight: "1" }}>Search Stature</div>
+                                    <div style={{ fontSize: "12.5px", fontWeight: "700", color: "#ffffff", lineHeight: "1.3" }}>Google Page 1 Verified #1</div>
                                 </div>
                             </div>
 
-                            {/* Floating Bottom Left Badge */}
+                            {/* Floating Boardroom Authority Badge */}
                             <div
-                                className="float-bob-x"
+                                className="float-bob-x d-none d-lg-inline-flex"
                                 style={{
                                     position: "absolute",
-                                    bottom: "-14px",
-                                    left: "12px",
-                                    backgroundColor: "rgba(13, 13, 20, 0.92)",
-                                    backdropFilter: "blur(12px)",
-                                    border: "1px solid rgba(245, 158, 11, 0.4)",
-                                    padding: "7px 15px",
+                                    bottom: "45px",
+                                    left: "-130px",
+                                    backgroundColor: "rgba(13, 13, 20, 0.86)",
+                                    backdropFilter: "blur(16px)",
+                                    WebkitBackdropFilter: "blur(16px)",
+                                    border: "1px solid rgba(245, 158, 11, 0.45)",
+                                    padding: "9px 18px",
                                     borderRadius: "30px",
-                                    display: "inline-flex",
                                     alignItems: "center",
-                                    gap: "8px",
+                                    gap: "10px",
                                     color: "#ffffff",
-                                    fontSize: "12px",
-                                    fontWeight: "700",
                                     zIndex: 4,
-                                    boxShadow: "0 12px 28px rgba(0,0,0,0.45)"
+                                    boxShadow: "0 16px 36px rgba(0,0,0,0.5), 0 0 20px rgba(245, 158, 11, 0.15)"
                                 }}
                             >
-                                <i className="fa-solid fa-award" style={{ color: "#F59E0B", fontSize: "14px" }}></i>
-                                <span>Boardroom Authority: 96/100</span>
+                                <div style={{ width: "24px", height: "24px", borderRadius: "50%", background: "rgba(245, 158, 11, 0.2)", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(245, 158, 11, 0.4)" }}>
+                                    <i className="fa-solid fa-award" style={{ color: "#F59E0B", fontSize: "12px" }}></i>
+                                </div>
+                                <div>
+                                    <div style={{ fontSize: "9.5px", textTransform: "uppercase", letterSpacing: "0.8px", color: "#C084FC", fontWeight: "700", lineHeight: "1" }}>Executive Benchmark</div>
+                                    <div style={{ fontSize: "12.5px", fontWeight: "700", color: "#ffffff", lineHeight: "1.3" }}>Boardroom Authority: 96/100</div>
+                                </div>
+                            </div>
+
+                            {/* Live Status Pill */}
+                            <div
+                                className="d-none d-xl-inline-flex"
+                                style={{
+                                    position: "absolute",
+                                    bottom: "110px",
+                                    right: "15px",
+                                    backgroundColor: "rgba(13, 13, 20, 0.78)",
+                                    backdropFilter: "blur(12px)",
+                                    WebkitBackdropFilter: "blur(12px)",
+                                    border: "1px solid rgba(16, 185, 129, 0.4)",
+                                    padding: "6px 14px",
+                                    borderRadius: "20px",
+                                    alignItems: "center",
+                                    gap: "7px",
+                                    boxShadow: "0 10px 24px rgba(0,0,0,0.4), 0 0 15px rgba(16, 185, 129, 0.2)",
+                                    zIndex: 4
+                                }}
+                            >
+                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#10B981", boxShadow: "0 0 8px #10B981" }}></span>
+                                <span style={{ fontSize: "11.5px", color: "#ffffff", fontWeight: "600" }}>Sovereign Stature Active</span>
                             </div>
                         </div>
                     </div>
