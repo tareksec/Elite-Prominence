@@ -4,16 +4,29 @@ import React, { useEffect, useState } from 'react'
 export default function Preloader() {
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
+    const [isFirstEntry, setIsFirstEntry] = useState(true)
 
     useEffect(() => {
-        // Automatically initiate smooth dissolve after initial load
+        // Detect if user has already visited in this session
+        const hasVisited = typeof window !== 'undefined' && sessionStorage.getItem('ep_visited_session')
+        const firstEntry = !hasVisited
+        setIsFirstEntry(firstEntry)
+
+        if (firstEntry && typeof window !== 'undefined') {
+            sessionStorage.setItem('ep_visited_session', 'true')
+        }
+
+        // 1.5s on first entry, 0.5s on subsequent loads
+        const activeDuration = firstEntry ? 1500 : 500
+        const fadeDuration = 500 // 0.5s smooth dissolve
+
         const fadeTimer = setTimeout(() => {
             setFadeOut(true)
-        }, 1200)
+        }, activeDuration)
 
         const removeTimer = setTimeout(() => {
             setLoading(false)
-        }, 1750)
+        }, activeDuration + fadeDuration)
 
         return () => {
             clearTimeout(fadeTimer)
@@ -39,7 +52,7 @@ export default function Preloader() {
                 justifyContent: 'center',
                 opacity: fadeOut ? 0 : 1,
                 visibility: loading ? 'visible' : 'hidden',
-                transition: 'opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1)',
+                transition: 'opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
                 transform: fadeOut ? 'scale(1.02)' : 'scale(1)',
                 pointerEvents: fadeOut ? 'none' : 'auto'
             }}
@@ -181,7 +194,8 @@ export default function Preloader() {
                                 height: '100%',
                                 background: 'linear-gradient(90deg, #8B5CF6 0%, #EC4899 100%)',
                                 borderRadius: '2px',
-                                boxShadow: '0 0 10px rgba(236, 72, 153, 0.8)'
+                                boxShadow: '0 0 10px rgba(236, 72, 153, 0.8)',
+                                animationDuration: isFirstEntry ? '1.5s' : '0.5s'
                             }}
                         />
                     </div>
