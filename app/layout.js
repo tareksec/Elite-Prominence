@@ -1,4 +1,3 @@
-import "app/favicon.png"
 import "@/node_modules/react-modal-video/css/modal-video.css"
 import Aos_Animation from "@/components/elements/AosAnimation"
 import "public/assets/css/bootstrap.css"
@@ -49,10 +48,20 @@ export const metadata = {
         images: ['/assets/images/Elite%20Prominence/EliteProminence-coverphoto.png'],
     },
     icons: {
-        icon: '/favicon.png',
-        shortcut: '/favicon.png',
-        apple: '/favicon.png',
+        icon: [
+            { url: '/favicon.ico', sizes: '32x32' },
+            { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+            { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+            { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
+            { url: '/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
+            { url: '/favicon.png', sizes: '512x512', type: 'image/png' },
+        ],
+        shortcut: '/favicon.ico',
+        apple: [
+            { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+        ],
     },
+    manifest: '/site.webmanifest',
 }
 
 export default function RootLayout({ children }) {
