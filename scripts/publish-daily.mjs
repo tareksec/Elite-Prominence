@@ -41,18 +41,35 @@ function parseMarkdownToSections(body) {
   const headings = [];
   const sections = [];
   let currentSection = null;
+  let introParagraphs = [];
 
   for (const line of lines) {
-    const hMatch = line.match(/^(#{2,3})\s+(.*)$/);
+    const trimmed = line.trim();
+    const hMatch = trimmed.match(/^(#{2,3})\s+(.*)$/);
     if (hMatch) {
       const level = hMatch[1].length;
       const text = hMatch[2].replace(/\*\*/g, '').trim();
       const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
       headings.push({ id, text, level });
-      if (currentSection) sections.push(currentSection);
+      if (currentSection) {
+        sections.push(currentSection);
+      } else if (introParagraphs.length > 0) {
+        sections.push({
+          id: 'executive-summary',
+          heading: 'Executive Overview',
+          level: 2,
+          paragraphs: introParagraphs
+        });
+      }
       currentSection = { id, heading: text, level, paragraphs: [] };
-    } else if (currentSection && line.trim().length > 0 && !line.startsWith('#')) {
-      currentSection.paragraphs.push(line.trim());
+    } else if (currentSection) {
+      if (trimmed.length > 0 && !trimmed.startsWith('#')) {
+        currentSection.paragraphs.push(trimmed);
+      }
+    } else {
+      if (trimmed.length > 0 && !trimmed.startsWith('#')) {
+        introParagraphs.push(trimmed);
+      }
     }
   }
   if (currentSection) sections.push(currentSection);
