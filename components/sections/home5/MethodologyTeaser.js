@@ -1,6 +1,8 @@
 'use client'
+
 import React from 'react'
 import Link from 'next/link'
+import { StaggerText } from '@/components/ui/stagger-text'
 
 const PHASES = [
     {
@@ -67,23 +69,72 @@ const PHASES = [
 
 export default function MethodologyTeaser() {
     return (
-        <section className="prominence_section" style={{ background: '#F7F5FC', borderTop: '1px solid #eaedf0', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
+        <section
+            style={{
+                backgroundColor: "#FAF8F5",
+                padding: "110px 0",
+                borderBottom: "1.5px solid #E5E7EB",
+                fontFamily: "var(--primary-font, -apple-system, sans-serif)",
+                position: "relative"
+            }}
+        >
             <div className="container">
                 {/* Section Header: Editorial Split */}
-                <div className="prominence_header_split">
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "flex-end",
+                        flexWrap: "wrap",
+                        gap: "24px",
+                        marginBottom: "50px"
+                    }}
+                >
                     <div>
-                        <div style={{ marginBottom: '12px' }}>
-                            <span className="prominence_tracker">
-                                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#6D28D9' }}></span>
+                        <div style={{ marginBottom: "14px" }}>
+                            <span
+                                style={{
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    gap: "8px",
+                                    padding: "6px 16px",
+                                    borderRadius: "9999px",
+                                    backgroundColor: "#EDE9FE",
+                                    color: "#6D28D9",
+                                    fontSize: "12px",
+                                    fontWeight: "700",
+                                    textTransform: "uppercase",
+                                    letterSpacing: "0.5px",
+                                    border: "1.5px solid rgba(109, 40, 217, 0.2)"
+                                }}
+                            >
+                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#7C3AED" }} />
                                 The Prominence Protocol
                             </span>
                         </div>
-                        <h2 style={{ fontSize: 'clamp(26px, 3.6vw, 36px)', fontWeight: '700', color: '#0D0D14', letterSpacing: '-0.5px', lineHeight: '1.24', margin: 0, fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                        <h2
+                            style={{
+                                fontSize: "clamp(30px, 4vw, 44px)",
+                                fontWeight: "800",
+                                color: "#0F1117",
+                                letterSpacing: "-0.8px",
+                                lineHeight: "1.16",
+                                margin: 0
+                            }}
+                        >
                             Our 6-Stage Sovereign Architecture
                         </h2>
                     </div>
                     <div>
-                        <p style={{ color: '#4B5563', fontSize: '16px', lineHeight: '27px', maxWidth: '520px', margin: 0 }}>
+                        <p
+                            style={{
+                                color: "#4B5563",
+                                fontSize: "16.5px",
+                                lineHeight: "1.7",
+                                maxWidth: "520px",
+                                margin: 0
+                            }}
+                        >
                             A disciplined, turnkey methodology engineered to establish permanent executive stature with under 30 minutes of client time per month.
                         </p>
                     </div>
@@ -93,64 +144,97 @@ export default function MethodologyTeaser() {
                 <div className="row g-4 mb-4">
                     {PHASES.map((block, idx) => (
                         <div key={idx} className="col-lg-4 col-md-12">
-                            <div className="prominence_depth_card" style={{
-                                background: '#ffffff',
-                                border: '1px solid #eaedf0',
-                                borderTop: '3px solid #8B5CF6',
-                                borderRadius: '14px',
-                                padding: '34px 28px',
-                                height: '100%',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                position: 'relative'
-                            }}>
+                            <div
+                                className="neo-card"
+                                style={{
+                                    backgroundColor: "#FFFFFF",
+                                    border: "2px solid #0F1117",
+                                    borderRadius: "26px",
+                                    padding: "36px 30px",
+                                    height: "100%",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    boxShadow: "6px 6px 0px #0F1117",
+                                    position: "relative"
+                                }}
+                            >
                                 {/* Phase Header */}
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', paddingBottom: '16px', borderBottom: '1px solid #eaedf0' }}>
-                                    <span style={{ fontSize: '13px', fontWeight: '700', color: '#0D0D14', letterSpacing: '0.5px' }}>
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        marginBottom: "28px",
+                                        paddingBottom: "18px",
+                                        borderBottom: "1.5px solid #F4F4F5"
+                                    }}
+                                >
+                                    <span style={{ fontSize: "14px", fontWeight: "800", color: "#0F1117" }}>
                                         {block.phase}
                                     </span>
-                                    <span className="prominence_badge prominence_badge_gold" style={{ fontSize: '11.5px', fontWeight: '700', padding: '3px 10px', color: '#6D28D9' }}>
+                                    <span
+                                        style={{
+                                            fontSize: "11px",
+                                            fontWeight: "800",
+                                            padding: "4px 12px",
+                                            backgroundColor: "#EDE9FE",
+                                            color: "#6D28D9",
+                                            borderRadius: "9999px",
+                                            border: "1px solid rgba(124, 58, 237, 0.2)"
+                                        }}
+                                    >
                                         {block.timeline}
                                     </span>
                                 </div>
 
-                                {/* Stages in this Phase */}
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', flexGrow: 1 }}>
+                                {/* Stages */}
+                                <div style={{ display: "flex", flexDirection: "column", gap: "26px", flexGrow: 1 }}>
                                     {block.stages.map((stage) => (
-                                        <div key={stage.num} style={{ position: 'relative', paddingLeft: '48px' }}>
-                                            {/* Stage Icon Bullet */}
-                                            <div style={{
-                                                position: 'absolute',
-                                                left: 0,
-                                                top: '2px',
-                                                width: '36px',
-                                                height: '36px',
-                                                borderRadius: '10px',
-                                                background: 'linear-gradient(135deg, #0D0D14 0%, #1e1b4b 100%)',
-                                                color: '#C084FC',
-                                                fontSize: '14px',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                border: '1px solid rgba(139, 92, 246, 0.35)',
-                                                boxShadow: '0 4px 12px rgba(13, 13, 20, 0.12)'
-                                            }}>
-                                                <i className={stage.icon}></i>
+                                        <div key={stage.num} style={{ position: "relative", paddingLeft: "52px" }}>
+                                            {/* Stage Icon */}
+                                            <div
+                                                style={{
+                                                    position: "absolute",
+                                                    left: 0,
+                                                    top: "0px",
+                                                    width: "40px",
+                                                    height: "40px",
+                                                    borderRadius: "12px",
+                                                    backgroundColor: "#0F1117",
+                                                    color: "#C084FC",
+                                                    fontSize: "15px",
+                                                    display: "flex",
+                                                    alignItems: "center",
+                                                    justifyContent: "center",
+                                                    boxShadow: "0 4px 12px rgba(15, 23, 42, 0.15)"
+                                                }}
+                                            >
+                                                <i className={stage.icon} />
                                             </div>
 
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-                                                <span style={{ fontSize: '11.5px', fontWeight: '700', color: '#6D28D9' }}>
+                                            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "6px" }}>
+                                                <span style={{ fontSize: "12px", fontWeight: "800", color: "#7C3AED" }}>
                                                     {stage.num}.
                                                 </span>
-                                                <h3 style={{ fontSize: '17px', fontWeight: '700', color: '#0D0D14', margin: 0, fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                                <h3 style={{ fontSize: "17px", fontWeight: "800", color: "#0F1117", margin: 0 }}>
                                                     {stage.name}
                                                 </h3>
-                                                <span style={{ fontSize: '11px', fontWeight: '600', color: '#4B5563', background: '#F7F5FC', padding: '2px 8px', borderRadius: '6px', border: '1px solid #e2e8f0' }}>
+                                                <span
+                                                    style={{
+                                                        fontSize: "10.5px",
+                                                        fontWeight: "700",
+                                                        color: "#52525B",
+                                                        backgroundColor: "#FAF8F5",
+                                                        padding: "2px 8px",
+                                                        borderRadius: "6px",
+                                                        border: "1px solid #E5E7EB"
+                                                    }}
+                                                >
                                                     {stage.badge}
                                                 </span>
                                             </div>
 
-                                            <p style={{ color: '#4B5563', fontSize: '13.5px', lineHeight: '1.6', margin: 0 }}>
+                                            <p style={{ color: "#52525B", fontSize: "13.5px", lineHeight: "1.6", margin: 0 }}>
                                                 {stage.desc}
                                             </p>
                                         </div>
@@ -161,9 +245,9 @@ export default function MethodologyTeaser() {
                     ))}
                 </div>
 
-                <div className="text-center" style={{ marginTop: '40px' }}>
-                    <Link href="/how-it-works" className="btn_style_one btn_md">
-                        Explore the Full Methodology Protocol <i className="fa-solid fa-arrow-right"></i>
+                <div className="text-center" style={{ marginTop: "44px" }}>
+                    <Link href="/how-it-works" className="neo-btn-primary" style={{ padding: "14px 30px" }}>
+                        Explore Full Methodology Protocol <i className="fa-solid fa-arrow-right" style={{ fontSize: "12px" }} />
                     </Link>
                 </div>
             </div>

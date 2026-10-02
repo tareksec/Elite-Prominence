@@ -27,12 +27,12 @@ export default function AuthorCard({
         marginTop: '3.5rem',
         marginBottom: '3.5rem',
         padding: '32px',
-        borderRadius: '16px',
-        backgroundColor: '#ffffff',
-        border: '1px solid #eaedf0',
+        borderRadius: '24px',
+        backgroundColor: '#FFFFFF',
+        border: '1.5px solid rgba(18, 19, 22, 0.08)',
         position: 'relative',
         overflow: 'hidden',
-        boxShadow: '0 4px 24px rgba(15, 16, 19, 0.04)'
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.03)'
       }}
     >
       {/* Subtle brand accent bar at top */}
@@ -43,7 +43,7 @@ export default function AuthorCard({
           left: 0,
           right: 0,
           height: '4px',
-          background: 'linear-gradient(90deg, #8B5CF6 0%, #EC4899 100%)'
+          background: 'linear-gradient(90deg, #FF3B81 0%, #7C3AED 100%)'
         }}
       />
 
@@ -63,12 +63,13 @@ export default function AuthorCard({
               width: '76px',
               height: '76px',
               borderRadius: '50%',
-              background: '#0D0D14',
-              padding: '3px',
+              background: '#121316',
+              padding: '2px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
+              overflow: 'hidden',
+              boxShadow: '0 4px 14px rgba(0, 0, 0, 0.12)'
             }}
           >
             {author.avatar ? (
@@ -89,13 +90,12 @@ export default function AuthorCard({
                 width: '100%',
                 height: '100%',
                 borderRadius: '50%',
-                backgroundColor: '#0D0D14',
+                backgroundColor: '#121316',
                 color: '#FFFFFF',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontFamily: "var(--primary-font)",
-                fontSize: '24px',
-                letterSpacing: '1px'
+                fontWeight: 800,
+                fontSize: '22px'
               }}
             >
               {author.initials || 'EP'}
@@ -106,17 +106,18 @@ export default function AuthorCard({
         {/* Bio Content */}
         <div style={{ flex: '1 1 300px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-            <span className="prominence_badge">
-              Author &amp; Advisor
+            <span className="editorial-badge">
+              <span className="editorial-badge-dot">✦</span> ADVISORY AUTHOR
             </span>
           </div>
 
           <h3
             style={{
-              fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
-              fontSize: '24px',
-              color: '#0D0D14',
-              margin: '4px 0 6px 0',
+              fontSize: '22px',
+              fontWeight: 850,
+              color: '#121316',
+              letterSpacing: '-0.02em',
+              margin: '6px 0 4px 0',
               lineHeight: 1.2
             }}
           >
@@ -125,9 +126,9 @@ export default function AuthorCard({
 
           <p
             style={{
-              fontSize: '14px',
-              fontWeight: '600',
-              color: '#6B7280',
+              fontSize: '13.5px',
+              fontWeight: 700,
+              color: '#FF3B81',
               marginBottom: '12px'
             }}
           >
@@ -136,10 +137,10 @@ export default function AuthorCard({
 
           <p
             style={{
-              fontSize: '15px',
+              fontSize: '14.5px',
               lineHeight: 1.65,
-              color: '#374151',
-              marginBottom: '20px'
+              color: '#5A5D66',
+              marginBottom: '22px'
             }}
           >
             {author.bio}
@@ -154,23 +155,25 @@ export default function AuthorCard({
               flexWrap: 'wrap'
             }}
           >
+            <Link
+              href="/contact"
+              className="prominence-btn-primary"
+              style={{ padding: '10px 22px', fontSize: '13.5px' }}
+            >
+              <span>Book a Strategy Call</span>
+              <span>&rarr;</span>
+            </Link>
+
             <a
               href={author.linkedinUrl || 'https://www.linkedin.com/company/elite-prominence/'}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn_style_two btn_sm"
+              className="prominence-btn-outline"
+              style={{ padding: '10px 20px', fontSize: '13.5px' }}
             >
-              <i className="fab fa-linkedin-in" style={{ marginRight: '6px', fontSize: '14px' }}></i>
+              <i className="fab fa-linkedin-in" style={{ marginRight: '6px' }}></i>
               <span>Follow on LinkedIn</span>
             </a>
-
-            <Link
-              href="/contact"
-              className="btn_style_one btn_sm"
-            >
-              <span>Book a Strategy Call</span>
-              <i className="fa-solid fa-arrow-right"></i>
-            </Link>
           </div>
         </div>
       </div>

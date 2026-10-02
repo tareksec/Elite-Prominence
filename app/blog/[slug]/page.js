@@ -1,6 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import Layout from '@/components/layout/Layout';
+import ModernHeader from '@/components/layout/ModernHeader';
+import ModernFooter from '@/components/layout/ModernFooter';
 // Elite Prominence blog reading interface with open web imagery
 import ReadingProgressBar from '@/components/blog/ReadingProgressBar';
 import ArticleHeader from '@/components/blog/ArticleHeader';
@@ -147,36 +149,57 @@ export default function BlogPostPage({ params }) {
 
       <ReadingProgressBar />
 
-      <Layout headerStyle={4} footerStyle={1}>
-        <article className={styles.readingContainer}>
-          <ArticleHeader
-            title={post.title}
-            category={post.category}
-            date={post.publishDate}
-            readTime={post.readTime}
-            tags={post.tags}
-            heroImage={post.heroImage}
-            author={post.author.name}
-          />
+      <div className="mlab-page">
+        <ModernHeader activeNav="insights" />
 
-          <div className={styles.threeColLayout}>
-            {/* Sticky TOC Sidebar (Left, desktop only) */}
-            <TableOfContents headings={post.headings} />
-
-            {/* Center Content Column */}
-            <div className={styles.articleContentCol}>
-              <ArticleRenderer sections={post.sections} />
-
-              <AuthorCard author={post.author} />
-
-              <RelatedArticles articles={BLOG_ARTICLES} currentSlug={post.slug} />
+        {/* Breadcrumb Navigation */}
+        <div style={{ padding: "14px 0", borderBottom: "1px solid rgba(18,19,22,0.06)", background: "#FAF7F4", fontSize: "13px" }}>
+          <div className="mlab-container">
+            <div className="d-flex align-items-center gap-2" style={{ color: "#6c757d" }}>
+              <Link href="/" style={{ color: "#6c757d", textDecoration: "none" }}>Home</Link>
+              <span>/</span>
+              <Link href="/blog-grid" style={{ color: "#6c757d", textDecoration: "none" }}>Insights</Link>
+              <span>/</span>
+              <span style={{ color: "#121316", fontWeight: 700, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", maxWidth: "450px" }}>
+                {post.title}
+              </span>
             </div>
-
-            {/* Sticky Share + Reactions Sidebar (Right) */}
-            <ArticleSidebar slug={post.slug} />
           </div>
-        </article>
-      </Layout>
+        </div>
+
+        <main style={{ minHeight: '80vh', background: '#fafafc' }}>
+          <article className={styles.readingContainer}>
+            <ArticleHeader
+              title={post.title}
+              category={post.category}
+              date={post.publishDate}
+              readTime={post.readTime}
+              tags={post.tags}
+              heroImage={post.heroImage}
+              author={post.author.name}
+            />
+
+            <div className={styles.threeColLayout}>
+              {/* Sticky TOC Sidebar (Left, desktop only) */}
+              <TableOfContents headings={post.headings} />
+
+              {/* Center Content Column */}
+              <div className={styles.articleContentCol}>
+                <ArticleRenderer sections={post.sections} />
+
+                <AuthorCard author={post.author} />
+
+                <RelatedArticles articles={BLOG_ARTICLES} currentSlug={post.slug} />
+              </div>
+
+              {/* Sticky Share + Reactions Sidebar (Right) */}
+              <ArticleSidebar slug={post.slug} />
+            </div>
+          </article>
+        </main>
+
+        <ModernFooter />
+      </div>
 
       <BackToTop />
       <FontSizeControl />

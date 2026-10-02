@@ -1,153 +1,170 @@
-import React from 'react';
-import Link from 'next/link';
-import Layout from '@/components/layout/Layout';
-import { BLOG_ARTICLES } from '@/lib/blogData';
+'use client'
 
-export const metadata = {
-  title: 'Executive Insights & Articles',
-  description: 'Strategic guidance on executive personal branding, LinkedIn strategy, and Google reputation management for senior human resources leaders and executive consultants.',
-  alternates: {
-    canonical: '/blog-grid',
-  },
-  openGraph: {
-    title: 'Executive Insights for HR Leaders | Blog',
-    description: 'Strategic guidance on executive personal branding, LinkedIn strategy, and Google reputation management for senior human resources leaders and executive consultants.',
-    url: 'https://www.prominence.agency/blog-grid',
-    siteName: 'Elite Prominence',
-    locale: 'en_US',
-    type: 'website',
-  },
-};
+import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import ModernHeader from '@/components/layout/ModernHeader'
+import ModernFooter from '@/components/layout/ModernFooter'
+import { BLOG_ARTICLES } from '@/lib/blogData'
 
-const blogGridSchema = {
-  '@context': 'https://schema.org',
-  '@graph': [
+export default function BlogGridPage() {
+  const featuredArticles = [
     {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://www.prominence.agency',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'Blog',
-          item: 'https://www.prominence.agency/blog-grid',
-        },
-      ],
+      title: 'How Executives Can Build Trust Through Digital Presence',
+      date: 'Aug 28, 2025',
+      category: 'Reputation',
+      slug: '/blog/from-corporate-executive-to-board-advisor',
+      img: '/assets/images/resource/testimonial-1.jpg',
+      desc: 'Strategic insights into why owned digital stature is the single highest-ROI asset for enterprise leadership.',
     },
     {
-      '@type': 'CollectionPage',
-      name: 'Executive Insights for HR Leaders | Elite Prominence Blog',
-      description: 'Strategic guidance on executive personal branding, LinkedIn strategy, and Google reputation management for senior human resources leaders and executive consultants.',
-      url: 'https://www.prominence.agency/blog-grid',
+      title: 'SEO Strategies for Long-Term Authority',
+      date: 'Aug 19, 2025',
+      category: 'SEO',
+      slug: '/blog/chief-technology-officer-personal-brand',
+      img: '/assets/images/project/project_2.jpg',
+      desc: 'How search knowledge panels and high-intent keyword ownership protect executives against reputation volatility.',
     },
-  ],
-};
+    {
+      title: 'The Future of Personal Branding for Founders',
+      date: 'Aug 12, 2025',
+      category: 'Branding',
+      slug: '/blog/c-suite-linkedin-algorithm-strategy-2026',
+      img: '/assets/images/project/project_1.jpg',
+      desc: 'Navigating algorithmic changes, thought leadership integrity, and modern investor-facing authority.',
+    },
+  ]
 
-export default function Blog_Grid() {
   return (
-    <div className="boxed_wrapper">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogGridSchema) }}
-      />
-      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle14="Insights for HR Leaders">
-        <section className="blog_section pt_90 pb_120" style={{ backgroundColor: '#F7F5FC' }}>
-          <div className="container">
-            <div className="section_title centred" style={{ marginBottom: '50px' }}>
-              <span className="prominence_badge">
-                Executive Thought Leadership
+    <div className="mlab-page">
+      <ModernHeader activeNav="insights" />
+
+      {/* =========================================================================
+          INSIGHTS HEADER INTRO
+      ========================================================================= */}
+      <section className="py-5">
+        <div className="mlab-container">
+          <div className="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end mb-5 gap-4">
+            <div style={{ maxWidth: '620px' }}>
+              <span className="editorial-badge">
+                <span className="editorial-badge-dot">✦</span> INSIGHTS
               </span>
-              <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontSize: '42px', color: '#0D0D14', letterSpacing: '-0.5px' }}>
-                Articles &amp; Strategic Frameworks
-              </h2>
-              <p style={{ maxWidth: '820px', margin: '15px auto 0', fontSize: '18px', color: '#6B7280', lineHeight: '1.7' }}>
-                Navigating the C-suite landscape requires human resources executives to command more than internal operational credibility. Explore our field-tested methodologies on executive presence, Google reputation management, and high-signal personal branding.
-              </p>
+              <h1 className="editorial-page-title mb-0">
+                Ideas, trends and strategies for a stronger digital presence.
+              </h1>
+            </div>
+            <Link href="/contact" className="d-flex align-items-center gap-2 text-decoration-none fw-bold text-dark">
+              <span>Explore all advisory insights</span>
+              <span style={{ color: '#FF3B81' }}>&rarr;</span>
+            </Link>
+          </div>
+
+          {/* =====================================================================
+              FEATURED ARTICLES GRID
+          ===================================================================== */}
+          <div className="row g-4 mb-5">
+            {featuredArticles.map((post, idx) => (
+              <div key={idx} className="col-md-6 col-lg-4">
+                <Link href={post.slug} className="text-decoration-none">
+                  <article className="modern-case-card">
+                    <div className="modern-case-img-box">
+                      <Image
+                        src={post.img}
+                        alt={post.title}
+                        fill
+                        className="object-fit-cover"
+                        sizes="(max-width: 768px) 100vw, 360px"
+                      />
+                    </div>
+                    <div className="modern-case-body">
+                      <div>
+                        <div className="d-flex align-items-center justify-content-between mb-2">
+                          <span style={{ fontSize: '11px', color: '#9CA3AF', fontWeight: 600 }}>
+                            {post.date}
+                          </span>
+                          <span
+                            style={{
+                              fontSize: '10.5px',
+                              fontWeight: 800,
+                              letterSpacing: '1px',
+                              color: '#FF3B81',
+                              textTransform: 'uppercase',
+                              backgroundColor: '#FFF0F5',
+                              padding: '2px 8px',
+                              borderRadius: '9999px',
+                            }}
+                          >
+                            {post.category}
+                          </span>
+                        </div>
+                        <h2 style={{ fontSize: '17px', fontWeight: 800, color: '#121316', margin: '0 0 10px', lineHeight: 1.35 }}>
+                          {post.title}
+                        </h2>
+                        <p style={{ fontSize: '13.5px', color: '#6B7280', margin: '0 0 16px', lineHeight: 1.5 }}>
+                          {post.desc}
+                        </p>
+                      </div>
+
+                      <div className="d-flex align-items-center gap-2" style={{ fontSize: '13px', fontWeight: 700, color: '#121316' }}>
+                        <span>Read article</span>
+                        <span style={{ color: '#FF3B81' }}>&rarr;</span>
+                      </div>
+                    </div>
+                  </article>
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* Complete 17-Article Executive Knowledge Base */}
+          <div className="mt-5 pt-3">
+            <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+              <div>
+                <h3 style={{ fontSize: '24px', fontWeight: 800, color: '#121316', margin: '0 0 6px' }}>
+                  All Executive Insights &amp; Protocols ({BLOG_ARTICLES.length} Articles)
+                </h3>
+                <p style={{ fontSize: '14px', color: '#6B7280', margin: 0 }}>
+                  Grounded research across GEO, Answer Engine Optimization, C-Suite reputation, and boardroom governance.
+                </p>
+              </div>
             </div>
 
-            <div className="row">
-              {BLOG_ARTICLES.map((post) => (
-                <div key={post.slug} className="col-xl-4 col-md-6 col-sm-12 mb_40">
-                  <div
-                    style={{
-                      background: '#FFFFFF',
-                      borderRadius: '12px',
-                      overflow: 'hidden',
-                      border: '1px solid #E5E7EB',
-                      boxShadow: 'var(--ep-shadow-sm)',
-                      height: '100%',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      transition: 'transform 0.25s ease, box-shadow 0.25s ease'
-                    }}
-                    className="ep-grid-card prominence_card_equal_height"
-                  >
-                    <div style={{ position: 'relative', width: '100%', height: '220px', overflow: 'hidden' }}>
-                      <Link href={`/blog/${post.slug}`}>
-                        <img
-                          src={post.heroImage}
-                          alt={post.title}
-                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                        />
-                      </Link>
-                      <span
-                        style={{
-                          position: 'absolute',
-                          top: '14px',
-                          left: '14px',
-                          background: '#0D0D14',
-                          color: '#FFFFFF',
-                          fontSize: '11px',
-                          fontWeight: '700',
-                          textTransform: 'uppercase',
-                          letterSpacing: '0.5px',
-                          padding: '4px 10px',
-                          borderRadius: '4px',
-                          border: '1px solid rgba(255, 255, 255, 0.15)',
-                          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
-                          fontFamily: 'var(--primary-font)'
-                        }}
-                      >
-                        {post.category}
-                      </span>
-                    </div>
-
-                    <div className="prominence_card_body" style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: '#94A3B8', marginBottom: '10px' }}>
-                        <span>{post.publishDate}</span>
-                        <span>•</span>
-                        <span>{post.readTime}</span>
+            <div className="row g-4">
+              {BLOG_ARTICLES.map((item) => (
+                <div key={item.id} className="col-md-6 col-lg-4">
+                  <Link href={`/blog/${item.slug}`} className="text-decoration-none">
+                    <div className="p-4 bg-white rounded-4 border h-100 transition-all hover-shadow d-flex flex-column justify-content-between">
+                      <div>
+                        <div className="d-flex justify-content-between align-items-center mb-2">
+                          <span style={{ fontSize: '11px', fontWeight: 800, color: '#FF3B81', textTransform: 'uppercase', letterSpacing: '0.8px', background: '#FFF0F5', padding: '2px 8px', borderRadius: '4px' }}>
+                            {item.category}
+                          </span>
+                          <span style={{ fontSize: '12px', color: '#9CA3AF' }}>
+                            {item.readTime || '5 min read'}
+                          </span>
+                        </div>
+                        <h4 style={{ fontSize: '16px', fontWeight: 800, color: '#121316', margin: '10px 0 8px', lineHeight: 1.4 }}>
+                          {item.title}
+                        </h4>
+                        <p style={{ fontSize: '13px', color: '#6B7280', margin: '0 0 16px', lineHeight: 1.55 }}>
+                          {item.excerpt ? item.excerpt.slice(0, 115) + '...' : ''}
+                        </p>
                       </div>
 
-                      <h3 style={{ fontSize: '19px', lineHeight: '1.35', marginBottom: '12px', fontWeight: '700', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                        <Link href={`/blog/${post.slug}`} style={{ color: '#0D0D14', textDecoration: 'none' }}>
-                          {post.title}
-                        </Link>
-                      </h3>
-
-                      <p style={{ color: '#6B7280', fontSize: '14px', lineHeight: '1.6', marginBottom: '20px', flex: 1 }}>
-                        {post.excerpt}
-                      </p>
-
-                      <div className="prominence_card_footer" style={{ borderTop: '1px solid #F1F0F9', paddingTop: '16px', marginTop: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <Link href={`/blog/${post.slug}`} className="btn_style_ghost">
-                          Read Article <i className="fa-solid fa-arrow-right"></i>
-                        </Link>
-                        <span style={{ fontSize: '12px', color: '#94A3B8' }}>{post.author.name}</span>
+                      <div className="d-flex align-items-center gap-2 pt-2 border-top" style={{ fontSize: '12.5px', fontWeight: 700, color: '#121316' }}>
+                        <span>Read full protocol</span>
+                        <span style={{ color: '#FF3B81' }}>&rarr;</span>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>
           </div>
-        </section>
-      </Layout>
+        </div>
+      </section>
+
+      <ModernFooter />
     </div>
-  );
+  )
 }

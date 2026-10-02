@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useState } from 'react'
 import Link from 'next/link'
 
@@ -10,7 +11,7 @@ const TESTIMONIALS = [
         company: "GlobalTech Solutions",
         location: "New York, USA",
         avatarInitials: "EV",
-        avatarBg: "linear-gradient(135deg, #2b2d32 0%, #151619 100%)",
+        avatarBg: "#7C3AED",
         rating: 5,
         quote: "Prominence transformed my executive presence. Within 60 days of launching my new digital HQ and executive LinkedIn strategy, I received two board advisory invitations.",
         highlight: "2 Board Advisory Invitations in 60 Days",
@@ -23,7 +24,7 @@ const TESTIMONIALS = [
         company: "Sterling & Partners Advisory",
         location: "London, UK",
         avatarInitials: "MS",
-        avatarBg: "linear-gradient(135deg, #1e2025 0%, #0D0D14 100%)",
+        avatarBg: "#0F1117",
         rating: 5,
         quote: "The Google reputation management and thought leadership ghostwriting are world-class. When prospects Google my name today, they find an authoritative, cohesive presence.",
         highlight: "Page 1 Search Authority Restored",
@@ -36,7 +37,7 @@ const TESTIMONIALS = [
         company: "BioHealth Diagnostics",
         location: "Boston, USA",
         avatarInitials: "AT",
-        avatarBg: "linear-gradient(135deg, #2b2d32 0%, #0D0D14 100%)",
+        avatarBg: "#2563EB",
         rating: 5,
         quote: "Their team understands the subtle distinction between vanity personal branding and genuine executive authority. Exceptional rigor, discretion, and strategic alignment.",
         highlight: "High-Caliber Network Growth",
@@ -49,49 +50,92 @@ export default function Testimonial() {
 
     return (
         <section
-            className="testimonial_section_two"
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="500"
             style={{
-                backgroundColor: "#ffffff",
-                padding: "var(--ep-section-py) 0",
+                backgroundColor: "#FAF8F5",
+                padding: "110px 0",
+                borderBottom: "1.5px solid #E5E7EB",
                 position: "relative",
-                fontFamily: "var(--primary-font)"
+                fontFamily: "var(--primary-font, -apple-system, sans-serif)"
             }}
         >
             <div className="container">
-                {/* Section Header */}
-                <div className="prominence_header_split">
+                {/* Section Header (MLab / Wellpitched Style) */}
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "flex-end",
+                        flexWrap: "wrap",
+                        gap: "24px",
+                        marginBottom: "50px"
+                    }}
+                >
                     <div>
-                        <span className="prominence_tracker">Verified Executive Endorsements</span>
-                        <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                            Proven Results for Senior People Leaders
+                        <div style={{ marginBottom: "14px" }}>
+                            <span
+                                style={{
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    gap: "8px",
+                                    padding: "6px 16px",
+                                    borderRadius: "9999px",
+                                    backgroundColor: "#EDE9FE",
+                                    color: "#6D28D9",
+                                    fontSize: "12px",
+                                    fontWeight: "700",
+                                    textTransform: "uppercase",
+                                    letterSpacing: "0.5px",
+                                    border: "1.5px solid rgba(109, 40, 217, 0.2)"
+                                }}
+                            >
+                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#7C3AED" }} />
+                                Executive Endorsements
+                            </span>
+                        </div>
+                        <h2
+                            style={{
+                                fontSize: "clamp(30px, 4vw, 44px)",
+                                fontWeight: "800",
+                                color: "#0F1117",
+                                letterSpacing: "-0.8px",
+                                lineHeight: "1.16",
+                                margin: 0
+                            }}
+                        >
+                            Proven Results for Senior Leaders
                         </h2>
                     </div>
                     <div>
-                        <p className="prominence_lead_text">
+                        <p
+                            style={{
+                                color: "#4B5563",
+                                fontSize: "16.5px",
+                                lineHeight: "1.7",
+                                maxWidth: "520px",
+                                margin: 0
+                            }}
+                        >
                             How CHROs, Chief People Officers, and Managing Directors build undeniable authority, unlock board invitations, and dominate their niche with Prominence.
                         </p>
                     </div>
                 </div>
 
-                {/* 3 Executive Testimonial Cards Grid */}
+                {/* Testimonial Cards Grid (Neo-Editorial MLab Style) */}
                 <div className="row g-4 justify-content-center">
                     {TESTIMONIALS.map((item, idx) => (
                         <div key={item.id} className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                             <div
                                 onClick={() => setActiveIndex(idx)}
+                                className="neo-card"
                                 style={{
                                     height: "100%",
-                                    backgroundColor: activeIndex === idx ? "#F7F5FC" : "#ffffff",
-                                    borderRadius: "14px",
+                                    backgroundColor: activeIndex === idx ? "#FFFFFF" : "#FFFFFF",
+                                    borderRadius: "26px",
                                     padding: "36px 30px",
-                                    border: activeIndex === idx ? "1px solid #0D0D14" : "1px solid #eaedf0",
+                                    border: "2px solid #0F1117",
                                     boxShadow: activeIndex === idx
-                                        ? "0 16px 36px rgba(15, 16, 19, 0.08)"
-                                        : "0 4px 18px rgba(15, 16, 19, 0.02)",
-                                    transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
+                                        ? "6px 6px 0px #7C3AED"
+                                        : "6px 6px 0px #0F1117",
                                     display: "flex",
                                     flexDirection: "column",
                                     justifyContent: "space-between",
@@ -100,116 +144,99 @@ export default function Testimonial() {
                                 }}
                             >
                                 <div>
-                                    {/* Rating and Outcome Chip */}
-                                    <div style={{
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                        alignItems: "center",
-                                        marginBottom: "20px"
-                                    }}>
-                                        <div style={{ display: "flex", gap: "4px" }}>
+                                    {/* Big Quote Mark and Rating Header */}
+                                    <div
+                                        style={{
+                                            display: "flex",
+                                            justifyContent: "space-between",
+                                            alignItems: "center",
+                                            marginBottom: "20px"
+                                        }}
+                                    >
+                                        <div
+                                            style={{
+                                                fontSize: "42px",
+                                                fontWeight: "900",
+                                                color: "#7C3AED",
+                                                lineHeight: "1",
+                                                fontFamily: "Georgia, serif"
+                                            }}
+                                        >
+                                            &ldquo;&ldquo;
+                                        </div>
+                                        <div style={{ display: "flex", gap: "3px", color: "#F59E0B", fontSize: "12px" }}>
                                             {[...Array(item.rating)].map((_, i) => (
-                                                <i key={i} className="fa-solid fa-star" style={{ color: "#8B5CF6", fontSize: "13px" }}></i>
+                                                <i key={i} className="fa-solid fa-star" />
                                             ))}
                                         </div>
-                                        <span style={{
-                                            fontSize: "11px",
-                                            fontWeight: "700",
-                                            color: "#166534",
-                                            backgroundColor: "#f0fdf4",
-                                            padding: "3px 10px",
-                                            borderRadius: "4px",
-                                            border: "1px solid #bbf7d0",
-                                            display: "inline-flex",
-                                            alignItems: "center",
-                                            gap: "4px"
-                                        }}>
-                                            <i className="fa-solid fa-check" style={{ fontSize: "9px" }}></i>
-                                            Verified Leader
-                                        </span>
                                     </div>
 
-                                    {/* Quote Text */}
-                                    <p style={{
-                                        fontSize: "15.5px",
-                                        lineHeight: "1.7",
-                                        color: "#334155",
-                                        fontStyle: "normal",
-                                        marginBottom: "24px"
-                                    }}>
+                                    {/* Quote Body */}
+                                    <p
+                                        style={{
+                                            fontSize: "16px",
+                                            lineHeight: "1.7",
+                                            color: "#1F2937",
+                                            marginBottom: "22px",
+                                            fontWeight: "500"
+                                        }}
+                                    >
                                         &ldquo;{item.quote}&rdquo;
                                     </p>
 
-                                    {/* Highlight Metric Pill */}
-                                    <div style={{
-                                        display: "inline-block",
-                                        fontSize: "11.5px",
-                                        fontWeight: "700",
-                                        color: "#92400e",
-                                        backgroundColor: "#fef3c7",
-                                        border: "1px solid #fde68a",
-                                        padding: "4px 12px",
-                                        borderRadius: "6px",
-                                        marginBottom: "24px",
-                                        letterSpacing: "0.2px"
-                                    }}>
+                                    {/* Highlight Badge */}
+                                    <div
+                                        style={{
+                                            display: "inline-block",
+                                            fontSize: "11.5px",
+                                            fontWeight: "800",
+                                            color: "#7C3AED",
+                                            backgroundColor: "#EDE9FE",
+                                            border: "1px solid rgba(124, 58, 237, 0.2)",
+                                            padding: "5px 14px",
+                                            borderRadius: "9999px",
+                                            marginBottom: "24px"
+                                        }}
+                                    >
                                         {item.highlight}
                                     </div>
                                 </div>
 
                                 {/* Author Block */}
-                                <div style={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: "14px",
-                                    paddingTop: "18px",
-                                    borderTop: "1px solid #eaedf0"
-                                }}>
-                                    <div style={{
-                                        width: "46px",
-                                        height: "46px",
-                                        borderRadius: "50%",
-                                        backgroundColor: "#1e2025",
-                                        background: item.avatarBg,
-                                        color: "#ffffff",
+                                <div
+                                    style={{
                                         display: "flex",
                                         alignItems: "center",
-                                        justifyContent: "center",
-                                        fontSize: "15px",
-                                        fontWeight: "700",
-                                        letterSpacing: "0.5px",
-                                        flexShrink: 0,
-                                        textShadow: "0 1px 2px rgba(0,0,0,0.5)"
-                                    }}>
+                                        gap: "14px",
+                                        paddingTop: "20px",
+                                        borderTop: "1.5px solid #F4F4F5"
+                                    }}
+                                >
+                                    <div
+                                        style={{
+                                            width: "44px",
+                                            height: "44px",
+                                            borderRadius: "50%",
+                                            backgroundColor: item.avatarBg,
+                                            color: "#FFFFFF",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "center",
+                                            fontSize: "14px",
+                                            fontWeight: "800",
+                                            flexShrink: 0,
+                                            border: "2px solid #0F1117"
+                                        }}
+                                    >
                                         {item.avatarInitials}
                                     </div>
                                     <div>
-                                        <h3 style={{
-                                            fontSize: "16px",
-                                            fontWeight: "700",
-                                            color: "#0D0D14",
-                                            margin: "0 0 2px",
-                                            fontFamily: "var(--primary-font)"
-                                        }}>
+                                        <div style={{ fontSize: "15px", fontWeight: "800", color: "#0F1117" }}>
                                             {item.name}
-                                        </h3>
-                                        <p style={{
-                                            fontSize: "12.5px",
-                                            color: "#4B5563",
-                                            margin: "0 0 2px",
-                                            fontWeight: "500",
-                                            lineHeight: "1.3"
-                                        }}>
-                                            {item.role}
-                                        </p>
-                                        <p style={{
-                                            fontSize: "12px",
-                                            color: "#475569",
-                                            fontWeight: "500",
-                                            margin: 0
-                                        }}>
-                                            {item.company} &bull; {item.location}
-                                        </p>
+                                        </div>
+                                        <div style={{ fontSize: "12px", color: "#6B7280", marginTop: "2px" }}>
+                                            {item.role} &bull; {item.location}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -217,22 +244,9 @@ export default function Testimonial() {
                     ))}
                 </div>
 
-                {/* Bottom Trust & Verification Action Row */}
-                <div style={{
-                    marginTop: "45px",
-                    textAlign: "center",
-                    display: "flex",
-                    flexWrap: "wrap",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "16px"
-                }}>
-                    <Link href="/feedback" className="btn_style_one btn_md">
-                        View All Client Reviews <i className="fa-solid fa-arrow-right"></i>
-                    </Link>
-
-                    <Link href="/community" className="btn_style_two btn_md">
-                        Browse Executive Directory <i className="fa-solid fa-arrow-right"></i>
+                <div className="text-center" style={{ marginTop: "44px" }}>
+                    <Link href="/case-studies" className="neo-btn-secondary" style={{ padding: "14px 28px" }}>
+                        View Executive Case Studies <i className="fa-solid fa-arrow-right" style={{ fontSize: "12px" }} />
                     </Link>
                 </div>
             </div>

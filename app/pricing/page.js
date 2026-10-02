@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from "next/link"
-import Layout from "@/components/layout/Layout"
+import ModernHeader from "@/components/layout/ModernHeader"
+import ModernFooter from "@/components/layout/ModernFooter"
 import PricingTabs from "@/components/elements/PricingTabs"
 
 export const metadata = {
@@ -40,37 +41,51 @@ const breadcrumbJsonLd = {
 
 export default function Pricing_Page() {
     return (
-        <div className="boxed_wrapper">
+        <div className="mlab-page">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
-            <Layout headerStyle={4} footerStyle={1}>
+            <ModernHeader />
+
+            {/* Breadcrumb Navigation */}
+            <div style={{ padding: "16px 0", borderBottom: "1px solid rgba(18,19,22,0.08)", background: "#FAF9F5", fontSize: "13px" }}>
+                <div className="container">
+                    <div className="d-flex align-items-center gap-2" style={{ color: "#8A8F9E" }}>
+                        <Link href="/" style={{ color: "#8A8F9E", textDecoration: "none" }}>Home</Link>
+                        <span>/</span>
+                        <span style={{ color: "#121316", fontWeight: 600 }}>Pricing &amp; Packages</span>
+                    </div>
+                </div>
+            </div>
+
+            <main>
                 {/* Clean Executive Hero Header */}
-                <section className="pricing_page_hero" style={{
-                    padding: "130px 0 50px",
-                    background: "#F7F5FC",
-                    textAlign: "center"
+                <section style={{
+                    padding: "72px 0 48px",
+                    background: "#FAF9F5",
+                    textAlign: "center",
+                    borderBottom: "1px solid rgba(18,19,22,0.08)"
                 }}>
                     <div className="container">
-                        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-                            <span className="prominence_badge">
-                                Investment &amp; Packages
+                        <div style={{ maxWidth: "840px", margin: "0 auto" }}>
+                            <span className="editorial-badge" style={{ marginBottom: "18px" }}>
+                                <span className="editorial-badge-dot">✦</span> INVESTMENT &amp; PACKAGES
                             </span>
                             <h1 style={{
-                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
-                                fontSize: "clamp(32px, 5vw, 48px)",
-                                fontWeight: "700",
-                                color: "#0D0D14",
-                                marginBottom: "18px",
-                                lineHeight: "1.2"
+                                fontSize: "clamp(32px, 5vw, 52px)",
+                                fontWeight: 850,
+                                color: "#121316",
+                                marginBottom: "20px",
+                                lineHeight: "1.15",
+                                letterSpacing: "-0.03em"
                             }}>
                                 Executive Personal Branding Models
                             </h1>
                             <p style={{
                                 fontSize: "18px",
-                                color: "#6B7280",
-                                lineHeight: "1.7",
+                                color: "#555A68",
+                                lineHeight: "1.65",
                                 margin: "0 auto",
                                 maxWidth: "720px"
                             }}>
@@ -80,12 +95,14 @@ export default function Pricing_Page() {
                     </div>
                 </section>
 
-                <section className="pricing_section pb_120" style={{ background: "#FFFFFF" }}>
+                <section style={{ padding: "80px 0 120px", background: "#FFFFFF" }}>
                     <div className="container">
                         <PricingTabs />
                     </div>
                 </section>
-            </Layout>
+            </main>
+
+            <ModernFooter />
         </div>
     )
 }

@@ -19,31 +19,31 @@ export default function MandateApplicationForm({ mandateTitle }) {
         return (
             <div style={{
                 background: '#ffffff',
-                border: '1px solid #eaedf0',
-                borderRadius: '16px',
+                border: '1.5px solid rgba(18,19,22,0.08)',
+                borderRadius: '24px',
                 padding: '48px 36px',
                 textAlign: 'center',
-                boxShadow: '0 8px 30px rgba(15, 16, 19, 0.05)'
+                boxShadow: '0 8px 30px rgba(18, 19, 22, 0.04)'
             }}>
                 <div style={{
                     width: '56px',
                     height: '56px',
                     borderRadius: '50%',
-                    background: '#F7F5FC',
-                    border: '1px solid rgba(139, 92, 246, 0.4)',
-                    color: '#8B5CF6',
+                    background: '#FAF9F5',
+                    border: '1.5px solid #FF3B81',
+                    color: '#FF3B81',
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     fontSize: '22px',
                     marginBottom: '18px'
                 }}>
-                    <i className="fa-solid fa-check"></i>
+                    ✓
                 </div>
-                <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#0D0D14', marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '24px', fontWeight: '800', color: '#121316', marginBottom: '10px', letterSpacing: '-0.02em' }}>
                     Dossier Successfully Transmitted
                 </h3>
-                <p style={{ color: '#6B7280', fontSize: '15.5px', maxWidth: '540px', margin: '0 auto', lineHeight: '1.65' }}>
+                <p style={{ color: '#555A68', fontSize: '15.5px', maxWidth: '540px', margin: '0 auto', lineHeight: '1.65' }}>
                     Thank you, {name}. Your credentials for <strong>{mandateTitle}</strong> have been transferred directly to our managing advisory partners. If there is mutual alignment, we will contact you to schedule a confidential dialogue.
                 </p>
             </div>
@@ -53,10 +53,10 @@ export default function MandateApplicationForm({ mandateTitle }) {
     return (
         <form onSubmit={handleSubmit} style={{
             background: '#ffffff',
-            border: '1px solid #eaedf0',
-            borderRadius: '16px',
+            border: '1.5px solid rgba(18,19,22,0.08)',
+            borderRadius: '24px',
             padding: 'clamp(28px, 4vw, 42px)',
-            boxShadow: '0 4px 20px rgba(15, 16, 19, 0.03)'
+            boxShadow: '0 4px 24px rgba(18, 19, 22, 0.04)'
         }}>
             <div className="row g-3">
                 <div className="col-12">
@@ -68,7 +68,7 @@ export default function MandateApplicationForm({ mandateTitle }) {
                         readOnly 
                         value={mandateTitle}
                         className="prominence_input"
-                        style={{ background: '#F7F5FC', fontWeight: '600', color: '#0D0D14' }}
+                        style={{ background: '#FAF9F5', fontWeight: '600', color: '#121316', borderColor: 'rgba(18,19,22,0.1)' }}
                     />
                 </div>
                 <div className="col-md-6">
@@ -137,8 +137,9 @@ export default function MandateApplicationForm({ mandateTitle }) {
                     />
                 </div>
                 <div className="col-12 text-center mt-4">
-                    <button type="submit" className="btn_style_one btn_block btn_lg">
-                        Transmit Confidential Application <i className="fa-solid fa-arrow-right"></i>
+                    <button type="submit" className="prominence-btn-primary w-100 justify-content-center" style={{ border: 'none', cursor: 'pointer', fontSize: '15px', padding: '16px 28px' }}>
+                        <span>Transmit Confidential Application</span>
+                        <span>&rarr;</span>
                     </button>
                 </div>
             </div>

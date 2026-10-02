@@ -1,87 +1,125 @@
 'use client'
+
 import React from 'react'
 import Link from "next/link"
 import FaqAccordion from "@/components/elements/FaqAccordion"
 
 export default function Faq() {
     return (
-        <section className="faq_section home_four prominence_section" style={{ backgroundColor: "#ffffff", borderTop: "1px solid #eaedf0" }}>
+        <section
+            style={{
+                backgroundColor: "#FAF8F5",
+                padding: "110px 0",
+                borderBottom: "1.5px solid #E5E7EB",
+                fontFamily: "var(--primary-font, -apple-system, sans-serif)",
+                position: "relative"
+            }}
+        >
             <div className="container">
-                <div className="row align-items-start">
-                    {/* Left Sticky Consultation Card */}
-                    <div className="col-xl-5 col-lg-5 col-md-12 mb-4 mb-lg-0" style={{ position: "sticky", top: "100px" }}>
-                        <div 
-                            className="prominence_depth_card_dark"
-                            style={{
-                                overflow: "hidden",
-                                position: "relative",
-                                borderRadius: "14px",
-                                display: "flex",
-                                flexDirection: "column",
-                                justifyContent: "center",
-                                backgroundColor: "#0D0D14",
-                                border: "1px solid rgba(255, 255, 255, 0.12)"
-                            }} 
-                            data-aos="fade-right" 
-                            data-aos-easing="linear" 
-                            data-aos-duration="500"
-                        >
-                            <img 
-                                src="/assets/images/elite/blog_4_executive_presence.jpg" 
-                                alt="Executive personal branding consultation and advisory guidance"
-                                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.32) contrast(1.1)" }}
-                            />
-                            <div style={{
-                                position: "absolute",
-                                top: 0,
-                                left: 0,
-                                width: "100%",
-                                height: "100%",
-                                background: "linear-gradient(180deg, rgba(13, 13, 20, 0.45) 0%, rgba(13, 13, 20, 0.95) 100%)"
-                            }}></div>
-                            <div style={{ position: "relative", zIndex: 2, padding: "34px 28px", color: "#ffffff" }}>
-                                <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "12px" }}>
-                                    <span className="prominence_pulse_dot"></span>
-                                    <span style={{ color: "#C084FC", textTransform: "uppercase", fontSize: "12px", fontWeight: "700", letterSpacing: "0.8px", fontFamily: "var(--primary-font)" }}>
-                                        Executive Consultation
+                <div className="row align-items-start g-5">
+                    
+                    {/* Left Column: Heading & Consultation (Inspired by MLab FAQ) */}
+                    <div className="col-12 col-lg-5" data-aos="fade-right" data-aos-duration="500">
+                        <div style={{ position: "sticky", top: "120px" }}>
+                            {/* Eyebrow */}
+                            <div style={{ marginBottom: "18px" }}>
+                                <span
+                                    style={{
+                                        display: "inline-flex",
+                                        alignItems: "center",
+                                        gap: "8px",
+                                        padding: "6px 16px",
+                                        borderRadius: "9999px",
+                                        backgroundColor: "#EDE9FE",
+                                        color: "#6D28D9",
+                                        fontSize: "12px",
+                                        fontWeight: "700",
+                                        textTransform: "uppercase",
+                                        letterSpacing: "0.5px",
+                                        border: "1.5px solid rgba(109, 40, 217, 0.2)"
+                                    }}
+                                >
+                                    <span style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#7C3AED" }} />
+                                    Common Inquiries
+                                </span>
+                            </div>
+
+                            <h2
+                                style={{
+                                    fontSize: "clamp(34px, 4.2vw, 48px)",
+                                    fontWeight: "800",
+                                    color: "#0F1117",
+                                    lineHeight: "1.12",
+                                    letterSpacing: "-1px",
+                                    marginBottom: "18px"
+                                }}
+                            >
+                                FAQ
+                            </h2>
+
+                            <p
+                                style={{
+                                    fontSize: "16.5px",
+                                    color: "#4B5563",
+                                    lineHeight: "1.7",
+                                    marginBottom: "30px",
+                                    maxWidth: "420px"
+                                }}
+                            >
+                                Can't find the answer you're looking for? Reach out for a confidential conversation regarding your stature audit.
+                            </p>
+
+                            <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", alignItems: "center", marginBottom: "36px" }}>
+                                <Link
+                                    href="/contact"
+                                    className="neo-btn-primary"
+                                    style={{ padding: "13px 28px", fontSize: "14px" }}
+                                >
+                                    Ask a question <i className="fa-solid fa-arrow-right" style={{ fontSize: "12px" }} />
+                                </Link>
+                                <Link
+                                    href="/pricing"
+                                    className="neo-btn-secondary"
+                                    style={{ padding: "13px 24px", fontSize: "14px" }}
+                                >
+                                    View Pricing
+                                </Link>
+                            </div>
+
+                            {/* Sticky Preview Card */}
+                            <div
+                                className="neo-card-dark"
+                                style={{
+                                    padding: "28px",
+                                    borderRadius: "22px",
+                                    backgroundColor: "#0F1117",
+                                    border: "2px solid #27272A",
+                                    boxShadow: "6px 6px 0px #000000"
+                                }}
+                            >
+                                <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
+                                    <span style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: "#10B981" }} />
+                                    <span style={{ color: "#C084FC", fontSize: "11.5px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                                        Confidential Advisory
                                     </span>
                                 </div>
-                                <h3 style={{ color: "#ffffff", fontSize: "22px", fontWeight: "700", marginBottom: "12px", lineHeight: "1.3", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
-                                    Have a Specific Question About Your Digital Stature?
-                                </h3>
-                                <p style={{ color: "rgba(255,255,255,0.92)", fontSize: "14px", lineHeight: "1.6", marginBottom: "22px", textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}>
-                                    Every leader's career trajectory and disclosure constraints are distinct. We conduct confidential 20-minute digital stature assessments to audit your current search standing.
+                                <h4 style={{ color: "#FFFFFF", fontSize: "17px", fontWeight: "800", marginBottom: "8px" }}>
+                                    Have Specific Disclosure Constraints?
+                                </h4>
+                                <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "13.5px", lineHeight: "1.6", margin: 0 }}>
+                                    We work under strict corporate NDAs. All thought leadership and entity architecture protect corporate employer data without exception.
                                 </p>
-                                <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center" }}>
-                                    <Link href="/contact" className="btn_style_gold btn_md">
-                                        Book Strategy Call <i className="fa-solid fa-arrow-right"></i>
-                                    </Link>
-                                    <Link href="/pricing" className="btn_style_two_dark btn_md">
-                                        View Pricing
-                                    </Link>
-                                </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Right Expanded FAQ Accordion */}
-                    <div className="col-xl-7 col-lg-7 col-md-12">
-                        <div className="inner_box ps-lg-4" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
-                            <div style={{ marginBottom: "18px" }}>
-                                <span className="prominence_tracker" style={{ display: "inline-block", marginBottom: "8px" }}>
-                                    Strategic FAQ &amp; Guidance
-                                </span>
-                                <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", margin: 0, fontSize: "clamp(24px, 3.5vw, 32px)", color: "#0D0D14" }}>
-                                    Frequently Addressed Governance Matters
-                                </h2>
-                            </div>
-                            
-                            <FaqAccordion />
-                        </div>
+                    {/* Right Column: Sleek Accordion */}
+                    <div className="col-12 col-lg-7" data-aos="fade-left" data-aos-duration="550">
+                        <FaqAccordion />
                     </div>
+
                 </div>
             </div>
         </section>
     )
 }
-

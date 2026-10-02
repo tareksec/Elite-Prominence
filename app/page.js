@@ -1,15 +1,4 @@
-import Layout from "@/components/layout/Layout"
-import Banner from "@/components/sections/home5/Banner"
-import Clients from "@/components/sections/home5/Clients"
-import Feature from "@/components/sections/home2/Feature"
-import Feature_Two from "@/components/sections/home5/Feature"
-import MethodologyTeaser from "@/components/sections/home5/MethodologyTeaser"
-import ExecutiveCaseStudy from "@/components/sections/home5/ExecutiveCaseStudy"
-import Testimonial from "@/components/sections/home3/Testimonial"
-import ExecutiveDirectoryTeaser from "@/components/sections/home5/ExecutiveDirectoryTeaser"
-import Faq from "@/components/sections/home5/Faq"
-import Blog from "@/components/sections/home2/Blog"
-import FinalCta from "@/components/sections/home5/FinalCta"
+import MlabHomePage from "@/components/home/MlabHomePage"
 
 export const metadata = {
     title: {
@@ -197,19 +186,7 @@ export default function Home() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchemaGraph) }}
             />
-            <Layout headerStyle={3} footerStyle={1}>
-                <Banner/>
-                <Clients/>
-                <Feature/>
-                <Feature_Two/>
-                <MethodologyTeaser/>
-                <ExecutiveCaseStudy/>
-                <Testimonial/>
-                <ExecutiveDirectoryTeaser/>
-                <Faq/>
-                <Blog/>
-                <FinalCta/>
-            </Layout>
+            <MlabHomePage />
         </div>
     )
 }

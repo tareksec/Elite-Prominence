@@ -8,59 +8,66 @@ export default function ExecutiveCaseStudy() {
     return (
         <section
             className="executive_case_study_section"
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="550"
             style={{
-                backgroundColor: "#F7F5FC",
-                padding: "var(--ep-section-py) 0",
+                backgroundColor: "#FAF8F5",
+                padding: "110px 0",
                 position: "relative",
-                borderTop: "1px solid #eaedf0",
-                borderBottom: "1px solid #eaedf0",
-                fontFamily: "var(--primary-font)"
+                borderBottom: "1.5px solid #E5E7EB",
+                fontFamily: "var(--primary-font, -apple-system, sans-serif)"
             }}
         >
             <div className="container">
                 {/* Section Header: Editorial Split */}
-                <div className="prominence_header_split">
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "flex-end",
+                        flexWrap: "wrap",
+                        gap: "24px",
+                        marginBottom: "46px"
+                    }}
+                >
                     <div>
-                        <div style={{
-                            display: "inline-flex",
-                            alignItems: "center",
-                            gap: "8px",
-                            padding: "5px 14px",
-                            background: "#f1f5f9",
-                            borderRadius: "6px",
-                            fontSize: "11px",
-                            fontWeight: "700",
-                            color: "#0D0D14",
-                            textTransform: "uppercase",
-                            letterSpacing: "1px",
-                            marginBottom: "14px",
-                            border: "1px solid #e2e8f0"
-                        }}>
-                            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#6D28D9" }}></span>
-                            Executive Proof of Concept
+                        <div style={{ marginBottom: "14px" }}>
+                            <span
+                                style={{
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    gap: "8px",
+                                    padding: "6px 16px",
+                                    borderRadius: "9999px",
+                                    backgroundColor: "#EDE9FE",
+                                    color: "#6D28D9",
+                                    fontSize: "12px",
+                                    fontWeight: "700",
+                                    textTransform: "uppercase",
+                                    letterSpacing: "0.5px",
+                                    border: "1.5px solid rgba(109, 40, 217, 0.2)"
+                                }}
+                            >
+                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#7C3AED" }} />
+                                Executive Proof of Concept
+                            </span>
                         </div>
 
                         <h2 style={{
-                            fontSize: "clamp(26px, 3.6vw, 36px)",
-                            fontWeight: "700",
-                            color: "#0D0D14",
-                            lineHeight: "1.24",
-                            letterSpacing: "-0.5px",
-                            margin: 0,
-                            fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
+                            fontSize: "clamp(28px, 3.8vw, 42px)",
+                            fontWeight: "800",
+                            color: "#0F1117",
+                            lineHeight: "1.16",
+                            letterSpacing: "-0.8px",
+                            margin: 0
                         }}>
-                            Case Study: From Operational Operator to Boardroom Authority in 90 Days
+                            From Operator to Boardroom Authority in 90 Days
                         </h2>
                     </div>
 
                     <div>
                         <p style={{
-                            fontSize: "16px",
+                            fontSize: "16.5px",
                             color: "#4B5563",
-                            lineHeight: "27px",
+                            lineHeight: "1.7",
                             maxWidth: "520px",
                             margin: 0
                         }}>
@@ -73,7 +80,7 @@ export default function ExecutiveCaseStudy() {
                 <div style={{
                     display: "grid",
                     gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                    gap: "20px",
+                    gap: "18px",
                     marginBottom: "45px"
                 }}>
                     {[
@@ -84,32 +91,33 @@ export default function ExecutiveCaseStudy() {
                     ].map((stat, idx) => (
                         <div
                             key={idx}
-                            className="prominence_depth_card"
+                            className="neo-card"
                             style={{
                                 backgroundColor: "#ffffff",
-                                padding: "28px 22px",
-                                borderRadius: "12px",
-                                border: "1px solid #eaedf0",
-                                borderTop: "3px solid #8B5CF6",
+                                padding: "26px 20px",
+                                borderRadius: "20px",
+                                border: "1.5px solid #0F1117",
+                                boxShadow: "4px 4px 0px #0F1117",
                                 textAlign: "center",
                                 transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)"
                             }}
                         >
                             <div style={{ 
-                                width: "44px", 
-                                height: "44px", 
-                                margin: "0 auto 14px", 
-                                borderRadius: "8px", 
-                                background: "rgba(109, 40, 217, 0.08)", 
+                                width: "42px", 
+                                height: "42px", 
+                                margin: "0 auto 12px", 
+                                borderRadius: "12px", 
+                                background: "#EDE9FE", 
                                 color: "#6D28D9", 
                                 display: "flex", 
                                 alignItems: "center", 
                                 justifyContent: "center", 
-                                fontSize: "16px" 
+                                fontSize: "16px",
+                                border: "1.5px solid rgba(124, 58, 237, 0.2)"
                             }}>
                                 <i className={stat.icon}></i>
                             </div>
-                            <div style={{ fontSize: "24px", fontWeight: "700", color: "#0D0D14", letterSpacing: "-0.5px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                            <div style={{ fontSize: "24px", fontWeight: "800", color: "#0F1117", letterSpacing: "-0.5px" }}>
                                 {stat.metric}
                             </div>
                             <div style={{ fontSize: "12.5px", fontWeight: "600", color: "#4B5563", marginTop: "4px" }}>

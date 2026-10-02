@@ -34,6 +34,11 @@ const nextConfig = {
                 permanent: true,
             },
             {
+                source: '/blog',
+                destination: '/blog-grid',
+                permanent: true,
+            },
+            {
                 source: '/privacy',
                 destination: '/privacy-policy',
                 permanent: true,

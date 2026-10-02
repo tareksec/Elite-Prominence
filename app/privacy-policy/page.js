@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import Layout from '@/components/layout/Layout'
+import ModernHeader from '@/components/layout/ModernHeader'
+import ModernFooter from '@/components/layout/ModernFooter'
 import BreadcrumbJsonLd from '@/components/elements/BreadcrumbJsonLd'
 
 export const metadata = {
@@ -26,10 +27,23 @@ export default function PrivacyPolicyPage() {
     ]
 
     return (
-        <div className="boxed_wrapper">
+        <div className="mlab-page">
             <BreadcrumbJsonLd items={breadcrumbItems} />
-            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Privacy Policy">
-                <section className="pt_120 pb_120" style={{ backgroundColor: "#F7F5FC", minHeight: "80vh" }}>
+            <ModernHeader />
+
+            {/* Breadcrumb Navigation */}
+            <div style={{ padding: "14px 0", borderBottom: "1px solid #eaedf0", background: "#f8f9fa", fontSize: "13px" }}>
+                <div className="container">
+                    <div className="d-flex align-items-center gap-2" style={{ color: "#6c757d" }}>
+                        <Link href="/" style={{ color: "#6c757d", textDecoration: "none" }}>Home</Link>
+                        <span>/</span>
+                        <span style={{ color: "#0D0D14", fontWeight: 600 }}>Privacy Policy</span>
+                    </div>
+                </div>
+            </div>
+
+            <main>
+                <section className="pt_60 pb_120" style={{ backgroundColor: "#F7F5FC", minHeight: "80vh" }}>
                     <div className="container" style={{ maxWidth: "860px" }}>
                         {/* Title & Metadata Card */}
                         <div style={{
@@ -190,7 +204,8 @@ export default function PrivacyPolicyPage() {
                         </div>
                     </div>
                 </section>
-            </Layout>
+            </main>
+            <ModernFooter />
         </div>
     )
 }

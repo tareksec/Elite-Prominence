@@ -7,11 +7,10 @@ export default function Feature_Two() {
         <section
             className="prominence_features_section"
             style={{
-                backgroundColor: "#F7F5FC",
-                padding: "90px 0 110px",
+                backgroundColor: "#FAF8F5",
+                padding: "110px 0",
                 position: "relative",
-                borderTop: "1px solid #eaedf0",
-                borderBottom: "1px solid #eaedf0",
+                borderBottom: "1.5px solid #E5E7EB",
                 fontFamily: "var(--primary-font, -apple-system, sans-serif)"
             }}
         >

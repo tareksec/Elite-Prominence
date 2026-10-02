@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import Layout from '@/components/layout/Layout'
+import ModernHeader from '@/components/layout/ModernHeader'
+import ModernFooter from '@/components/layout/ModernFooter'
 import { getSolutionBySlug, getAllSolutionSlugs, SOLUTIONS_DATA } from '@/lib/solutionsData'
 
 export async function generateStaticParams() {
@@ -103,51 +104,112 @@ export default function SolutionDetailPage({ params }) {
     const otherSolutions = SOLUTIONS_DATA.filter((s) => s.slug !== solution.slug).slice(0, 3)
 
     return (
-        <div className="boxed_wrapper">
+        <div className="mlab-page">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle={solution.shortTitle}>
-                
+            <ModernHeader activeNav="solutions" />
+
+            {/* Breadcrumb Navigation */}
+            <div style={{ padding: "14px 0", borderBottom: "1px solid #eaedf0", background: "#f8f9fa", fontSize: "13px" }}>
+                <div className="container">
+                    <div className="d-flex align-items-center gap-2" style={{ color: "#6c757d" }}>
+                        <Link href="/" style={{ color: "#6c757d", textDecoration: "none" }}>Home</Link>
+                        <span>/</span>
+                        <Link href="/solutions" style={{ color: "#6c757d", textDecoration: "none" }}>Solutions</Link>
+                        <span>/</span>
+                        <span style={{ color: "#0D0D14", fontWeight: 600 }}>{solution.shortTitle || solution.title}</span>
+                    </div>
+                </div>
+            </div>
+
+            <main>
                 {/* Hero Banner */}
-                <section className="prominence_page_intro">
-                    <div className="container">
-                        <div className="row align-items-center">
+                <section className="py-5" style={{ background: '#FAF7F4', borderBottom: '1px solid rgba(18,19,22,0.06)' }}>
+                    <div className="mlab-container py-3">
+                        <div className="row align-items-center g-5">
                             <div className="col-lg-7">
-                                <div className="tag_text" style={{ marginBottom: "16px" }}>
-                                    <h6>{solution.badge}</h6>
-                                </div>
-                                <h1 style={{ fontSize: "44px", fontWeight: "700", color: "#0D0D14", lineHeight: "1.2", marginBottom: "16px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                                <span className="editorial-badge mb-3">
+                                    <span className="editorial-badge-dot">✦</span> {solution.badge.toUpperCase()}
+                                </span>
+                                <h1 style={{
+                                    fontSize: 'clamp(34px, 4.4vw, 54px)',
+                                    fontWeight: 850,
+                                    color: '#121316',
+                                    lineHeight: 1.12,
+                                    letterSpacing: '-0.03em',
+                                    marginBottom: '16px'
+                                }}>
                                     {solution.title}
                                 </h1>
-                                <p style={{ fontSize: "17px", fontWeight: "700", color: "#8B5CF6", marginBottom: "18px", fontFamily: "var(--primary-font)", letterSpacing: "0.2px" }}>
+                                <p style={{
+                                    fontSize: '17px',
+                                    fontWeight: 700,
+                                    color: '#FF3B81',
+                                    marginBottom: '16px',
+                                    letterSpacing: '-0.01em'
+                                }}>
                                     {solution.subtitle}
                                 </p>
-                                <p style={{ fontSize: "17px", color: "#6B7280", lineHeight: "28px", marginBottom: "32px", maxWidth: "620px" }}>
+                                <p style={{
+                                    fontSize: '16px',
+                                    color: '#5A5D66',
+                                    lineHeight: 1.65,
+                                    marginBottom: '32px',
+                                    maxWidth: '620px'
+                                }}>
                                     {solution.executiveSummary}
                                 </p>
-                                <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
-                                    <Link href="/contact" className="btn_style_one btn_md">
-                                        Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
+                                <div className="d-flex align-items-center gap-3 flex-wrap">
+                                    <Link href="/contact" className="prominence-btn-primary">
+                                        <span>Book a Private Consultation</span>
+                                        <span>&rarr;</span>
                                     </Link>
-                                    <Link href="/resources/assessment" className="btn_style_two btn_md">
-                                        Audit Your Stature <i className="fa-solid fa-arrow-right"></i>
+                                    <Link href="/resources/assessment" className="prominence-btn-outline">
+                                        <span>Take 3-Min Assessment</span>
                                     </Link>
                                 </div>
                             </div>
-                            <div className="col-lg-5 mt-4 mt-lg-0">
-                                <div style={{ 
-                                    borderRadius: "14px", 
-                                    overflow: "hidden", 
-                                    boxShadow: "0 16px 40px rgba(0,0,0,0.08)",
-                                    border: "1px solid #e2e8f0" 
+                            <div className="col-lg-5">
+                                <div style={{
+                                    borderRadius: '24px',
+                                    overflow: 'hidden',
+                                    border: '1.5px solid rgba(18,19,22,0.08)',
+                                    boxShadow: '0 20px 40px rgba(0,0,0,0.06)',
+                                    position: 'relative'
                                 }}>
-                                    <img 
-                                        src={solution.heroImage} 
-                                        alt={solution.title} 
-                                        style={{ width: "100%", height: "360px", objectFit: "cover", display: "block" }}
+                                    <img
+                                        src={solution.heroImage}
+                                        alt={solution.title}
+                                        style={{ width: '100%', height: '380px', objectFit: 'cover', display: 'block' }}
                                     />
+                                    <div style={{
+                                        position: 'absolute',
+                                        bottom: '16px',
+                                        left: '16px',
+                                        right: '16px',
+                                        background: 'rgba(255,255,255,0.92)',
+                                        backdropFilter: 'blur(10px)',
+                                        borderRadius: '14px',
+                                        padding: '12px 18px',
+                                        border: '1px solid rgba(255,255,255,0.8)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'space-between'
+                                    }}>
+                                        <div>
+                                            <span style={{ fontSize: '11px', fontWeight: 800, color: '#FF3B81', textTransform: 'uppercase', letterSpacing: '0.8px', display: 'block' }}>
+                                                Executive Architecture
+                                            </span>
+                                            <span style={{ fontSize: '13px', fontWeight: 700, color: '#121316' }}>
+                                                {solution.shortTitle}
+                                            </span>
+                                        </div>
+                                        <span style={{ fontSize: '12px', fontWeight: 800, background: '#121316', color: '#FFFFFF', padding: '4px 10px', borderRadius: '999px' }}>
+                                            Confidential
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -155,35 +217,51 @@ export default function SolutionDetailPage({ params }) {
                 </section>
 
                 {/* Unique Reputation Challenges */}
-                <section className="pt_100 pb_90" style={{ background: "#ffffff" }}>
-                    <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: "780px", margin: "0 auto 60px" }}>
-                            <div className="tag_text">
-                                <h6>The Reputation Landscape</h6>
+                <section className="py-5" style={{ background: '#FFFFFF' }}>
+                    <div className="mlab-container py-4">
+                        <div className="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end mb-5 gap-3">
+                            <div style={{ maxWidth: '620px' }}>
+                                <span className="editorial-badge mb-2">
+                                    <span className="editorial-badge-dot">✦</span> REPUTATION FRICTION POINTS
+                                </span>
+                                <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 42px)', fontWeight: 850, letterSpacing: '-0.03em', color: '#121316', margin: 0 }}>
+                                    Distinct Pressures You Face
+                                </h2>
                             </div>
-                            <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>Distinct Reputation Pressures You Face</h2>
-                            <p style={{ color: "#59606a", fontSize: "17px", marginTop: "12px", lineHeight: "28px" }}>
+                            <p style={{ fontSize: '15px', color: '#6B7280', maxWidth: '420px', margin: 0, lineHeight: 1.6 }}>
                                 High-profile leadership carries specific reputational vulnerabilities that generic PR agencies fail to comprehend.
                             </p>
                         </div>
 
-                        <div className="row">
+                        <div className="row g-4">
                             {solution.uniqueChallenges.map((challenge, idx) => (
-                                <div key={idx} className="col-lg-6 mb_30">
-                                    <div style={{ 
-                                        background: "#fafbfc", 
-                                        border: "1px solid #e5e7eb", 
-                                        borderRadius: "12px", 
-                                        padding: "32px", 
-                                        height: "100%" 
+                                <div key={idx} className="col-lg-6">
+                                    <div style={{
+                                        background: '#FAF7F4',
+                                        border: '1.5px solid rgba(18,19,22,0.07)',
+                                        borderRadius: '20px',
+                                        padding: '32px',
+                                        height: '100%',
+                                        transition: 'all 0.25s ease'
                                     }}>
-                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#6B7280", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
-                                            Friction Point 0{idx + 1}
-                                        </span>
-                                        <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "12px" }}>
+                                        <div className="d-flex align-items-center justify-content-between mb-3">
+                                            <span style={{
+                                                fontSize: '11px',
+                                                fontWeight: 800,
+                                                color: '#FF3B81',
+                                                letterSpacing: '1px',
+                                                textTransform: 'uppercase',
+                                                background: '#FFF0F5',
+                                                padding: '3px 10px',
+                                                borderRadius: '999px'
+                                            }}>
+                                                Friction Point 0{idx + 1}
+                                            </span>
+                                        </div>
+                                        <h3 style={{ fontSize: '19px', fontWeight: 800, color: '#121316', marginBottom: '10px', letterSpacing: '-0.02em' }}>
                                             {challenge.title}
                                         </h3>
-                                        <p style={{ color: "#6B7280", fontSize: "15px", lineHeight: "24px", margin: 0 }}>
+                                        <p style={{ color: '#5A5D66', fontSize: '14.5px', lineHeight: 1.6, margin: 0 }}>
                                             {challenge.desc}
                                         </p>
                                     </div>
@@ -194,36 +272,51 @@ export default function SolutionDetailPage({ params }) {
                 </section>
 
                 {/* What Prominence Builds */}
-                <section className="pt_100 pb_90" style={{ background: "#F7F5FC", borderTop: "1px solid #edf2f7", borderBottom: "1px solid #edf2f7" }}>
-                    <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: "780px", margin: "0 auto 60px" }}>
-                            <div className="tag_text">
-                                <h6>Bespoke Architecture</h6>
+                <section className="py-5" style={{ background: '#FAF7F4', borderTop: '1px solid rgba(18,19,22,0.06)', borderBottom: '1px solid rgba(18,19,22,0.06)' }}>
+                    <div className="mlab-container py-4">
+                        <div className="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end mb-5 gap-3">
+                            <div style={{ maxWidth: '620px' }}>
+                                <span className="editorial-badge mb-2">
+                                    <span className="editorial-badge-dot">✦</span> BESPOKE ARCHITECTURE
+                                </span>
+                                <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 42px)', fontWeight: 850, letterSpacing: '-0.03em', color: '#121316', margin: 0 }}>
+                                    How Prominence Architects Your Presence
+                                </h2>
                             </div>
-                            <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>How Prominence Architects Your Sovereign Presence</h2>
-                            <p style={{ color: "#6B7280", fontSize: "17px", marginTop: "12px", lineHeight: "28px" }}>
+                            <p style={{ fontSize: '15px', color: '#6B7280', maxWidth: '420px', margin: 0, lineHeight: 1.6 }}>
                                 A turnkey operational framework that protects, amplifies, and monetizes your executive authority.
                             </p>
                         </div>
 
-                        <div className="row">
+                        <div className="row g-4">
                             {solution.whatProminenceDoes.map((item, idx) => (
-                                <div key={idx} className="col-lg-6 mb_30">
-                                    <div style={{ 
-                                        background: "#ffffff", 
-                                        border: "1px solid #e2e8f0", 
-                                        borderRadius: "12px", 
-                                        padding: "32px", 
-                                        height: "100%",
-                                        boxShadow: "0 2px 10px rgba(0,0,0,0.02)" 
+                                <div key={idx} className="col-lg-6">
+                                    <div style={{
+                                        background: '#FFFFFF',
+                                        border: '1.5px solid rgba(18,19,22,0.07)',
+                                        borderRadius: '20px',
+                                        padding: '32px',
+                                        height: '100%',
+                                        boxShadow: '0 4px 20px rgba(0,0,0,0.02)'
                                     }}>
-                                        <span style={{ fontSize: "12px", fontWeight: "700", color: "#6B7280", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px", display: "block", fontFamily: "var(--primary-font)" }}>
-                                            Capability 0{idx + 1}
-                                        </span>
-                                        <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#0D0D14", marginBottom: "12px" }}>
+                                        <div className="d-flex align-items-center justify-content-between mb-3">
+                                            <span style={{
+                                                fontSize: '11px',
+                                                fontWeight: 800,
+                                                color: '#7C3AED',
+                                                letterSpacing: '1px',
+                                                textTransform: 'uppercase',
+                                                background: '#F5F0FF',
+                                                padding: '3px 10px',
+                                                borderRadius: '999px'
+                                            }}>
+                                                Capability 0{idx + 1}
+                                            </span>
+                                        </div>
+                                        <h3 style={{ fontSize: '19px', fontWeight: 800, color: '#121316', marginBottom: '10px', letterSpacing: '-0.02em' }}>
                                             {item.title}
                                         </h3>
-                                        <p style={{ color: "#6B7280", fontSize: "15px", lineHeight: "24px", margin: 0 }}>
+                                        <p style={{ color: '#5A5D66', fontSize: '14.5px', lineHeight: 1.6, margin: 0 }}>
                                             {item.desc}
                                         </p>
                                     </div>
@@ -234,38 +327,39 @@ export default function SolutionDetailPage({ params }) {
                 </section>
 
                 {/* Core Recommended Services */}
-                <section className="pt_90 pb_90" style={{ background: "#ffffff" }}>
-                    <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: "760px", margin: "0 auto 50px" }}>
-                            <div className="tag_text">
-                                <h6>Core Capabilities</h6>
-                            </div>
-                            <h2 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>Tailored Capability Combination</h2>
-                            <p style={{ color: "#6B7280", fontSize: "16px", marginTop: "8px", lineHeight: "26px" }}>
-                                Recommended foundational pillars for this executive profile.
-                            </p>
+                <section className="py-5" style={{ background: '#FFFFFF' }}>
+                    <div className="mlab-container py-4">
+                        <div className="mb-4">
+                            <span className="editorial-badge mb-2">
+                                <span className="editorial-badge-dot">✦</span> INTEGRATED CAPABILITIES
+                            </span>
+                            <h2 style={{ fontSize: 'clamp(26px, 3.2vw, 36px)', fontWeight: 850, letterSpacing: '-0.03em', color: '#121316', margin: 0 }}>
+                                Tailored Capability Combination
+                            </h2>
                         </div>
 
-                        <div className="row">
+                        <div className="row g-4">
                             {solution.relevantServices.map((srv, idx) => (
-                                <div key={idx} className="col-lg-4 col-md-6 mb_20">
-                                    <div className="prominence_card_equal_height" style={{ background: "#F7F5FC", border: "1px solid #e2e8f0", borderRadius: "12px", padding: "26px" }}>
-                                        <div className="prominence_card_body">
-                                            <h3 style={{ fontSize: "18px", fontWeight: "700", marginBottom: "10px" }}>
-                                                <Link href={`/services/${srv.slug}`} style={{ color: "#0D0D14", textDecoration: "none" }}>
+                                <div key={idx} className="col-lg-4 col-md-6">
+                                    <Link href={`/services/${srv.slug}`} className="text-decoration-none">
+                                        <div className="p-4 bg-white rounded-4 border h-100 transition-all hover-shadow d-flex flex-column justify-content-between" style={{ border: '1.5px solid rgba(18,19,22,0.08)' }}>
+                                            <div>
+                                                <span style={{ fontSize: '11px', fontWeight: 800, color: '#FF3B81', textTransform: 'uppercase', letterSpacing: '0.8px', background: '#FFF0F5', padding: '2px 8px', borderRadius: '4px' }}>
+                                                    Pillar 0{idx + 1}
+                                                </span>
+                                                <h3 style={{ fontSize: '17px', fontWeight: 800, color: '#121316', margin: '12px 0 8px', letterSpacing: '-0.02em' }}>
                                                     {srv.name}
-                                                </Link>
-                                            </h3>
-                                            <p style={{ fontSize: "14px", color: "#6B7280", lineHeight: "22px", margin: 0 }}>
-                                                {srv.desc}
-                                            </p>
+                                                </h3>
+                                                <p style={{ fontSize: '13.5px', color: '#6B7280', margin: '0 0 16px', lineHeight: 1.55 }}>
+                                                    {srv.desc}
+                                                </p>
+                                            </div>
+                                            <div className="d-flex align-items-center gap-2 pt-2 border-top" style={{ fontSize: '13px', fontWeight: 700, color: '#121316' }}>
+                                                <span>Explore Pillar Scope</span>
+                                                <span style={{ color: '#FF3B81' }}>&rarr;</span>
+                                            </div>
                                         </div>
-                                        <div className="prominence_card_footer" style={{ marginTop: "16px" }}>
-                                            <Link href={`/services/${srv.slug}`} className="btn_style_ghost">
-                                                Explore Pillar Scope <i className="fa-solid fa-arrow-right"></i>
-                                            </Link>
-                                        </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
@@ -274,50 +368,60 @@ export default function SolutionDetailPage({ params }) {
 
                 {/* Case Vignette Callout */}
                 {solution.caseVignette && (
-                    <section className="pt_90 pb_90" style={{ background: "#F7F5FC", borderTop: "1px solid #eaedf0", borderBottom: "1px solid #eaedf0" }}>
-                        <div className="container">
-                            <div className="row align-items-center">
-                                <div className="col-lg-6 mb_30 mb-lg-0">
-                                    <div className="tag_text" style={{ marginBottom: "14px" }}>
-                                        <h6>Proof Vignette</h6>
-                                    </div>
-                                    <h2 style={{ fontSize: "30px", fontWeight: "700", color: "#0D0D14", marginBottom: "20px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
+                    <section className="py-5" style={{ background: '#FAF7F4', borderTop: '1px solid rgba(18,19,22,0.06)', borderBottom: '1px solid rgba(18,19,22,0.06)' }}>
+                        <div className="mlab-container py-3">
+                            <div className="row align-items-center g-5">
+                                <div className="col-lg-6">
+                                    <span className="editorial-badge mb-2">
+                                        <span className="editorial-badge-dot">✦</span> VERIFIED PROOF VIGNETTE
+                                    </span>
+                                    <h2 style={{ fontSize: 'clamp(26px, 3.2vw, 36px)', fontWeight: 850, letterSpacing: '-0.03em', color: '#121316', marginBottom: '24px' }}>
                                         {solution.caseVignette.title}
                                     </h2>
-                                    <div style={{ marginBottom: "18px" }}>
-                                        <h4 style={{ fontSize: "12px", fontWeight: "700", color: "#6B7280", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "4px", fontFamily: "var(--primary-font)" }}>
+                                    <div className="mb-3">
+                                        <div style={{ fontSize: '11px', fontWeight: 800, color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '4px' }}>
                                             Initial Situation:
-                                        </h4>
-                                        <p style={{ color: "#0D0D14", fontSize: "15px", lineHeight: "24px" }}>
+                                        </div>
+                                        <p style={{ color: '#121316', fontSize: '14.5px', lineHeight: 1.6, margin: 0 }}>
                                             {solution.caseVignette.challenge}
                                         </p>
                                     </div>
-                                    <div style={{ marginBottom: "18px" }}>
-                                        <h4 style={{ fontSize: "12px", fontWeight: "700", color: "#8B5CF6", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "4px", fontFamily: "var(--primary-font)" }}>
+                                    <div className="mb-3">
+                                        <div style={{ fontSize: '11px', fontWeight: 800, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '4px' }}>
                                             Strategic Intervention:
-                                        </h4>
-                                        <p style={{ color: "#0D0D14", fontSize: "15px", lineHeight: "24px" }}>
+                                        </div>
+                                        <p style={{ color: '#121316', fontSize: '14.5px', lineHeight: 1.6, margin: 0 }}>
                                             {solution.caseVignette.solution}
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 style={{ fontSize: "12px", fontWeight: "700", color: "#166534", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "4px", fontFamily: "var(--primary-font)" }}>
+                                        <div style={{ fontSize: '11px', fontWeight: 800, color: '#10B981', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '4px' }}>
                                             Verified Outcome:
-                                        </h4>
-                                        <p style={{ color: "#0D0D14", fontSize: "15px", fontWeight: "700", lineHeight: "24px" }}>
+                                        </div>
+                                        <p style={{ color: '#121316', fontSize: '15px', fontWeight: 800, lineHeight: 1.6, margin: 0 }}>
                                             {solution.caseVignette.outcome}
                                         </p>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div style={{ background: "#ffffff", border: "1px solid #eaedf0", borderRadius: "14px", padding: "40px", boxShadow: "0 4px 18px rgba(13, 13, 20, 0.03)" }}>
-                                        <p style={{ fontSize: "17px", color: "#0D0D14", fontStyle: "italic", lineHeight: "28px", marginBottom: "20px" }}>
+                                    <div style={{
+                                        background: '#FFFFFF',
+                                        border: '1.5px solid rgba(18,19,22,0.08)',
+                                        borderRadius: '24px',
+                                        padding: '40px',
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.04)'
+                                    }}>
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#FF3B81" style={{ marginBottom: '18px', opacity: 0.8 }}>
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                                        </svg>
+                                        <p style={{ fontSize: '16.5px', color: '#121316', fontStyle: 'italic', lineHeight: 1.65, marginBottom: '20px' }}>
                                             &ldquo;{solution.caseVignette.quote}&rdquo;
                                         </p>
-                                        <div>
-                                            <p style={{ fontSize: "14px", color: "#6B7280", margin: 0, fontWeight: "600" }}>
-                                                — {solution.caseVignette.authorTitle}
-                                            </p>
+                                        <div className="d-flex align-items-center gap-2">
+                                            <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981' }}></span>
+                                            <span style={{ fontSize: '13.5px', color: '#6B7280', fontWeight: 700 }}>
+                                                {solution.caseVignette.authorTitle}
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -327,22 +431,31 @@ export default function SolutionDetailPage({ params }) {
                 )}
 
                 {/* Persona FAQs */}
-                <section className="pt_100 pb_90" style={{ background: "#ffffff" }}>
-                    <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: "760px", margin: "0 auto 50px" }}>
-                            <div className="tag_text"><h6>Role Clarifications</h6></div>
-                            <h2>Inquiries for {solution.shortTitle}</h2>
+                <section className="py-5" style={{ background: '#FFFFFF' }}>
+                    <div className="mlab-container py-4">
+                        <div className="text-center mb-5" style={{ maxWidth: '680px', margin: '0 auto 48px' }}>
+                            <span className="editorial-badge mb-2">
+                                <span className="editorial-badge-dot">✦</span> ROLE CLARIFICATIONS
+                            </span>
+                            <h2 style={{ fontSize: 'clamp(26px, 3.2vw, 38px)', fontWeight: 850, letterSpacing: '-0.03em', color: '#121316', margin: 0 }}>
+                                Inquiries for {solution.shortTitle}
+                            </h2>
                         </div>
 
                         <div className="row justify-content-center">
                             <div className="col-lg-9">
-                                <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
+                                <div className="d-flex flex-column gap-3">
                                     {solution.faqs.map((faq, i) => (
-                                        <div key={i} style={{ border: "1px solid #e2e8f0", borderRadius: "10px", padding: "26px 30px", background: "#F7F5FC" }}>
-                                            <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0D0D14", marginBottom: "10px" }}>
+                                        <div key={i} style={{
+                                            border: '1.5px solid rgba(18,19,22,0.07)',
+                                            borderRadius: '16px',
+                                            padding: '24px 28px',
+                                            background: '#FAF7F4'
+                                        }}>
+                                            <h3 style={{ fontSize: '17px', fontWeight: 800, color: '#121316', marginBottom: '8px', letterSpacing: '-0.01em' }}>
                                                 {faq.question}
                                             </h3>
-                                            <p style={{ color: "#6B7280", lineHeight: "24px", margin: 0, fontSize: "15px" }}>
+                                            <p style={{ color: '#5A5D66', lineHeight: 1.6, margin: 0, fontSize: '14.5px' }}>
                                                 {faq.answer}
                                             </p>
                                         </div>
@@ -353,32 +466,43 @@ export default function SolutionDetailPage({ params }) {
                     </div>
                 </section>
 
-                {/* Final CTA */}
-                <section className="pt_90 pb_90" style={{ background: "#F7F5FC", borderTop: "1px solid #edf2f7", textAlign: "center" }}>
-                    <div className="container">
-                        <div style={{ maxWidth: "740px", margin: "0 auto" }}>
-                            <div className="tag_text" style={{ marginBottom: "16px" }}>
-                                <h6>Private Engagement</h6>
-                            </div>
-                            <h2 style={{ fontSize: "38px", fontWeight: "700", color: "#0D0D14", marginBottom: "16px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                                Align Your Digital Reputation With Your Leadership Mandate
-                            </h2>
-                            <p style={{ color: "#6B7280", fontSize: "17px", lineHeight: "28px", marginBottom: "32px" }}>
-                                Schedule a 30-minute confidential discussion with our partners. We will audit your current search footprint and scope a sovereign reputation architecture tailored for your role.
-                            </p>
-                            <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                                <Link href="/contact" className="btn_style_one btn_md">
-                                    Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
-                                </Link>
-                                <Link href="/resources/assessment" className="btn_style_two btn_md">
-                                    Take 3-Min Assessment <i className="fa-solid fa-arrow-right"></i>
-                                </Link>
+                {/* Final Dark Executive CTA */}
+                <section className="py-5" style={{ background: '#FAF7F4' }}>
+                    <div className="mlab-container">
+                        <div className="custom-solution-cta" style={{ margin: 0 }}>
+                            <div className="row align-items-center g-4">
+                                <div className="col-lg-8">
+                                    <div className="mb-3">
+                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="#FF3B81">
+                                            <path d="M12 0 Q12 12 0 12 Q12 12 12 24 Q12 12 24 12 Q12 12 12 0 Z" />
+                                        </svg>
+                                    </div>
+                                    <span style={{ fontSize: '11px', fontWeight: 800, color: '#FF3B81', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '8px' }}>
+                                        Private Confidential Engagement
+                                    </span>
+                                    <h2 style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', fontWeight: 850, color: '#FFFFFF', letterSpacing: '-0.03em', marginBottom: '14px', lineHeight: 1.2 }}>
+                                        Align Your Digital Reputation With Your Leadership Mandate
+                                    </h2>
+                                    <p style={{ fontSize: '15.5px', color: '#9CA3AF', marginBottom: '28px', maxWidth: '640px', lineHeight: 1.6 }}>
+                                        Schedule a 30-minute confidential discussion with our partners. We will audit your current search footprint and scope a sovereign reputation architecture tailored for your role.
+                                    </p>
+                                    <div className="d-flex align-items-center gap-3 flex-wrap">
+                                        <Link href="/contact" className="prominence-btn-primary">
+                                            <span>Book a Private Consultation</span>
+                                            <span>&rarr;</span>
+                                        </Link>
+                                        <Link href="/resources/assessment" className="btn btn-outline-light rounded-pill px-4 py-2" style={{ fontSize: '14px', fontWeight: 700 }}>
+                                            Take 3-Min Assessment
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-            </Layout>
+            </main>
+            <ModernFooter />
         </div>
     )
 }

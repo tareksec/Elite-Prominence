@@ -1,29 +1,68 @@
-import Link from "next/link"
-import Layout from "@/components/layout/Layout"
+import React from 'react'
+import Link from 'next/link'
+import ModernHeader from '@/components/layout/ModernHeader'
+import ModernFooter from '@/components/layout/ModernFooter'
 
 export default function ErrorPage() {
     return (
-        <div className="boxed_wrapper">
-            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="404 - Page Not Found">
-                <section className="error_section pt_150 pb_150">
-                    <div className="container">
-                        <div className="error_content centred" style={{ maxWidth: "600px", margin: "0 auto", padding: "60px 30px", background: "#ffffff", border: "1px solid #e5e3db", borderRadius: "16px", boxShadow: "0 10px 40px rgba(13, 13, 20, 0.05)" }}>
-                            <div style={{ fontSize: "72px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: "700", color: "#0D0D14", marginBottom: "15px", lineHeight: "1" }}>
-                                404
-                            </div>
-                            <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0D0D14", marginBottom: "15px" }}>Page Not Found</h2>
-                            <p style={{ color: "#6B7280", fontSize: "16px", marginBottom: "30px" }}>
-                                The page you are looking for doesn't exist or has been moved.
-                            </p>
-                            <div className="error_btn_box">
-                                <Link href="/" className="btn_style_one btn_md">
-                                    Back to Homepage <i className="fa-solid fa-arrow-right" style={{ marginLeft: "8px" }}></i>
-                                </Link>
-                            </div>
-                        </div>
+        <div className="mlab-page">
+            <ModernHeader />
+            <main className="d-flex align-items-center justify-content-center" style={{ minHeight: '70vh', padding: '80px 24px' }}>
+                <div
+                    className="text-center"
+                    style={{
+                        maxWidth: '560px',
+                        width: '100%',
+                        background: '#FFFFFF',
+                        border: '1.5px solid rgba(18,19,22,0.08)',
+                        borderRadius: '28px',
+                        padding: '60px 36px',
+                        boxShadow: '0 12px 40px rgba(0, 0, 0, 0.04)',
+                    }}
+                >
+                    <span className="editorial-badge" style={{ marginBottom: '16px' }}>
+                        <span className="editorial-badge-dot">✦</span> ERROR 404
+                    </span>
+                    <div
+                        style={{
+                            fontSize: 'clamp(64px, 8vw, 88px)',
+                            fontWeight: 900,
+                            color: '#FF3B81',
+                            lineHeight: 1,
+                            margin: '16px 0 12px',
+                            letterSpacing: '-0.04em',
+                        }}
+                    >
+                        404
                     </div>
-                </section>
-            </Layout>
+                    <h1
+                        style={{
+                            fontSize: '26px',
+                            fontWeight: 850,
+                            color: '#121316',
+                            marginBottom: '14px',
+                            letterSpacing: '-0.02em',
+                        }}
+                    >
+                        Page Not Found
+                    </h1>
+                    <p
+                        style={{
+                            color: '#555A68',
+                            fontSize: '16px',
+                            lineHeight: 1.6,
+                            marginBottom: '32px',
+                        }}
+                    >
+                        The requested executive advisory briefing does not exist or has been relocated.
+                    </p>
+                    <Link href="/" className="prominence-btn-primary">
+                        <span>Back to Homepage</span>
+                        <span>&rarr;</span>
+                    </Link>
+                </div>
+            </main>
+            <ModernFooter />
         </div>
     )
 }

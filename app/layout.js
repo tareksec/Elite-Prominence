@@ -1,9 +1,11 @@
 import "@/node_modules/react-modal-video/css/modal-video.css"
 import Aos_Animation from "@/components/elements/AosAnimation"
+import SmoothScroll from "@/components/elements/SmoothScroll"
 import "public/assets/css/bootstrap.css"
 import "public/assets/css/aos.css"
 import "public/assets/css/style.css"
 import "public/assets/css/responsive.css"
+import "public/assets/css/modern-design.css"
 import 'swiper/css'
 import "swiper/css/pagination"
 import 'swiper/css/free-mode';
@@ -101,6 +103,7 @@ export default function RootLayout({ children }) {
             </head>
             <body>
                 <Aos_Animation/>
+                <SmoothScroll/>
                 {children}
             </body>
         </html>

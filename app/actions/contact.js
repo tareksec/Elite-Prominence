@@ -5,13 +5,12 @@ import { createClient } from '@supabase/supabase-js'
 // Initialize Supabase Client
 // Uses SUPABASE_SERVICE_ROLE_KEY if available for secure backend execution,
 // falling back to NEXT_PUBLIC_SUPABASE_ANON_KEY.
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-const supabase = createClient(
-  supabaseUrl,
-  supabaseKey
-)
+function getSupabaseClient() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  if (!supabaseUrl || !supabaseKey) return null
+  return createClient(supabaseUrl, supabaseKey)
+}
 
 /**
  * Server Action to handle Contact Form submissions
@@ -46,14 +45,16 @@ export async function sendContactForm(formData) {
 
   try {
     // 1. Save to Supabase contacts table
-    const { data: dbData, error: dbError } = await supabase
-      .from('contacts')
-      .insert([{ name, email, message: finalMessage }])
-      .select()
+    const supabase = getSupabaseClient()
+    if (supabase) {
+      const { data: dbData, error: dbError } = await supabase
+        .from('contacts')
+        .insert([{ name, email, message: finalMessage }])
+        .select()
 
-    if (dbError) {
-      console.error('[Supabase contacts DB Error]:', dbError)
-      throw new Error(`Database error: ${dbError.message}`)
+      if (dbError) {
+        console.error('[Supabase contacts DB Error]:', dbError)
+      }
     }
 
     // 2. Prepare HTML for Brevo Email Notification

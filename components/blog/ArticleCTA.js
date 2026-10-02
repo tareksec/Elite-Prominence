@@ -20,32 +20,17 @@ export default function ArticleCTA({
     <aside
       aria-label="Executive digital presence assessment"
       style={{
-        margin: '2.75rem 0',
-        padding: '28px 32px',
+        margin: '3rem 0',
+        padding: '30px 34px',
         backgroundColor: '#FFFFFF',
-        borderRadius: '14px',
-        border: '1px solid #E5E7EB',
-        borderLeft: '5px solid #8B5CF6',
-        boxShadow: '0 8px 30px rgba(13, 13, 20, 0.06), 0 2px 8px rgba(13, 13, 20, 0.03)',
+        borderRadius: '20px',
+        border: '1.5px solid rgba(18, 19, 22, 0.08)',
+        borderLeft: '5px solid #FF3B81',
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.04)',
         position: 'relative',
         overflow: 'hidden'
       }}
     >
-      {/* Background ambient gradient glow */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '-40px',
-          right: '-40px',
-          width: '180px',
-          height: '180px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(13, 13, 20, 0.03) 70%, transparent 100%)',
-          pointerEvents: 'none',
-          filter: 'blur(16px)'
-        }}
-      />
-
       <div
         style={{
           display: 'flex',
@@ -65,30 +50,22 @@ export default function ArticleCTA({
               alignItems: 'center',
               gap: '6px',
               fontSize: '11px',
-              fontWeight: '700',
+              fontWeight: '800',
               textTransform: 'uppercase',
               letterSpacing: '0.8px',
-              color: '#0D0D14',
+              color: '#FF3B81',
               marginBottom: '8px'
             }}
           >
-            <span
-              style={{
-                width: '6px',
-                height: '6px',
-                borderRadius: '50%',
-                backgroundColor: '#8B5CF6'
-              }}
-            />
-            <span>Prominence Executive Advisory</span>
+            <span>✦ Prominence Executive Advisory</span>
           </div>
 
           <h3
             style={{
-              fontFamily: "var(--primary-font)",
-              fontSize: '23px',
-              fontWeight: '700',
-              color: '#0D0D14',
+              fontSize: '22px',
+              fontWeight: 850,
+              color: '#121316',
+              letterSpacing: '-0.02em',
               lineHeight: 1.25,
               margin: '0 0 8px 0'
             }}
@@ -98,9 +75,9 @@ export default function ArticleCTA({
 
           <p
             style={{
-              fontSize: '15px',
+              fontSize: '14.5px',
               lineHeight: 1.6,
-              color: '#6B7280',
+              color: '#5A5D66',
               margin: 0
             }}
           >
@@ -112,21 +89,22 @@ export default function ArticleCTA({
               display: 'flex',
               alignItems: 'center',
               gap: '16px',
-              marginTop: '12px',
-              fontSize: '12px',
-              color: '#6B7280'
+              marginTop: '14px',
+              fontSize: '12.5px',
+              color: '#6B7280',
+              fontWeight: 600
             }}
           >
             <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <i className="fa-solid fa-check" style={{ color: '#8B5CF6', fontSize: '11px' }}></i>
+              <i className="fa-solid fa-check" style={{ color: '#10B981', fontSize: '11px' }}></i>
               100% Confidential
             </span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <i className="fa-solid fa-check" style={{ color: '#8B5CF6', fontSize: '11px' }}></i>
+              <i className="fa-solid fa-check" style={{ color: '#10B981', fontSize: '11px' }}></i>
               No Obligation
             </span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <i className="fa-solid fa-check" style={{ color: '#8B5CF6', fontSize: '11px' }}></i>
+              <i className="fa-solid fa-check" style={{ color: '#10B981', fontSize: '11px' }}></i>
               20 Minutes
             </span>
           </div>
@@ -136,20 +114,20 @@ export default function ArticleCTA({
           {isInternal ? (
             <Link
               href={link}
-              className="btn_style_one"
+              className="prominence-btn-primary"
             >
               <span>{buttonText}</span>
-              <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              <span>&rarr;</span>
             </Link>
           ) : (
             <a
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn_style_one"
+              className="prominence-btn-primary"
             >
               <span>{buttonText}</span>
-              <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              <span>&rarr;</span>
             </a>
           )}
         </div>

@@ -13,61 +13,58 @@ export default function ArticleHeader({
   authorAvatar = '/assets/images/elite/tarek-portrait.jpg'
 }) {
   return (
-    <header style={{ maxWidth: '960px', margin: '48px auto 32px', padding: '0 24px', textAlign: 'center' }}>
-      {/* Category Badge */}
-      <div style={{ marginBottom: '20px' }}>
-        <span
-          className="prominence_badge"
-          style={{
-            background: '#0D0D14',
-            color: '#FFFFFF',
-            borderColor: 'rgba(255, 255, 255, 0.2)'
-          }}
-        >
-          {category}
+    <header style={{ maxWidth: '1040px', margin: '40px auto 32px', padding: '0 24px', textAlign: 'center' }}>
+      {/* Editorial Category Badge */}
+      <div style={{ marginBottom: '18px' }}>
+        <span className="editorial-badge">
+          <span className="editorial-badge-dot">✦</span> {category.toUpperCase()}
         </span>
       </div>
 
-      {/* H1 Title */}
+      {/* Modern Sans-serif H1 Title */}
       <h1
         style={{
-          fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
-          fontSize: 'clamp(30px, 4.5vw, 46px)',
-          lineHeight: '1.2',
-          color: '#0D0D14',
-          marginBottom: '24px',
-          letterSpacing: '-0.5px'
+          fontSize: 'clamp(32px, 4.6vw, 50px)',
+          fontWeight: 850,
+          lineHeight: '1.14',
+          letterSpacing: '-0.03em',
+          color: '#121316',
+          marginBottom: '20px'
         }}
       >
         {title}
       </h1>
 
-      {/* Meta Row */}
+      {/* Modern Meta Pill */}
       <div
         style={{
-          display: 'flex',
+          display: 'inline-flex',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '16px',
+          gap: '12px',
+          background: '#FFFFFF',
+          border: '1.5px solid rgba(18,19,22,0.08)',
+          borderRadius: '999px',
+          padding: '6px 20px',
+          boxShadow: '0 2px 10px rgba(0,0,0,0.02)',
           color: '#6B7280',
-          fontSize: '14px',
-          fontWeight: '500',
+          fontSize: '13.5px',
+          fontWeight: '600',
           flexWrap: 'wrap',
           marginBottom: '24px'
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <div
             style={{
-              width: '32px',
-              height: '32px',
+              width: '26px',
+              height: '26px',
               borderRadius: '50%',
-              background: '#0D0D14',
-              padding: '2px',
+              background: '#121316',
+              padding: '1px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)',
               overflow: 'hidden'
             }}
           >
@@ -83,33 +80,18 @@ export default function ArticleHeader({
                 }}
               />
             ) : (
-              <div
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  borderRadius: '50%',
-                  background: '#0D0D14',
-                  color: '#FFFFFF',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontWeight: '700',
-                  fontSize: '12px'
-                }}
-              >
-                TC
-              </div>
+              <span style={{ color: '#FFFFFF', fontWeight: 800, fontSize: '10px' }}>TC</span>
             )}
           </div>
-          <span style={{ color: '#0D0D14', fontWeight: '600' }}>{author}</span>
+          <span style={{ color: '#121316', fontWeight: 700 }}>{author}</span>
         </div>
-        <span style={{ color: '#CBD5E1' }}>&bull;</span>
+        <span style={{ color: '#E5E7EB' }}>|</span>
         <time>{date}</time>
-        <span style={{ color: '#CBD5E1' }}>&bull;</span>
-        <span>{readTime}</span>
+        <span style={{ color: '#E5E7EB' }}>|</span>
+        <span style={{ color: '#FF3B81', fontWeight: 700 }}>{readTime}</span>
       </div>
 
-      {/* Tags Row */}
+      {/* Modern Tags Row */}
       {tags && tags.length > 0 && (
         <div
           style={{
@@ -125,18 +107,18 @@ export default function ArticleHeader({
             <span
               key={idx}
               style={{
-                display: 'inline-block',
-                padding: '5px 14px',
-                borderRadius: '6px',
-                background: 'rgba(13, 13, 20, 0.05)',
-                color: '#0D0D14',
-                border: '1px solid rgba(13, 13, 20, 0.1)',
-                fontSize: '12.5px',
-                fontWeight: '600',
-                fontFamily: 'var(--primary-font)'
+                display: 'inline-flex',
+                alignItems: 'center',
+                padding: '4px 12px',
+                borderRadius: '999px',
+                background: '#FAF7F4',
+                color: '#5A5D66',
+                border: '1px solid rgba(18, 19, 22, 0.08)',
+                fontSize: '12px',
+                fontWeight: 600
               }}
             >
-              {tag}
+              #{tag}
             </span>
           ))}
         </div>
@@ -144,7 +126,15 @@ export default function ArticleHeader({
 
       {/* Full-width Hero Image */}
       {heroImage && (
-        <div style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
+        <div style={{
+          maxWidth: '1060px',
+          margin: '0 auto',
+          textAlign: 'center',
+          borderRadius: '24px',
+          overflow: 'hidden',
+          border: '1.5px solid rgba(18,19,22,0.08)',
+          boxShadow: '0 20px 40px rgba(0,0,0,0.06)'
+        }}>
           <img
             src={heroImage}
             alt={title}
@@ -153,8 +143,7 @@ export default function ArticleHeader({
               width: '100%',
               maxHeight: '480px',
               objectFit: 'cover',
-              borderRadius: '16px',
-              boxShadow: '0 10px 30px rgba(13, 13, 20, 0.08)'
+              display: 'block'
             }}
           />
         </div>

@@ -1,206 +1,179 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
-import Layout from '@/components/layout/Layout'
-import Testimonial from '@/components/sections/home3/Testimonial'
+import Image from 'next/image'
+import ModernHeader from '@/components/layout/ModernHeader'
+import ModernFooter from '@/components/layout/ModernFooter'
 import { SOLUTIONS_DATA } from '@/lib/solutionsData'
 
-export const metadata = {
-    title: 'Who We Serve | Executive Solutions | Prominence',
-    description: 'Bespoke executive digital presence and reputation architecture tailored for CEOs, CHROs, enterprise founders, senior executives, and elite consultants.',
-    alternates: {
-        canonical: '/solutions',
+export default function SolutionsPage() {
+  const roleCards = [
+    {
+      title: 'Chief Executive Officers',
+      role: 'CEOs & Managing Directors',
+      slug: '/solutions/ceos',
+      desc: 'Build sovereign investor confidence, protect valuation, and lead industry discourse outside official corporate filings.',
+      badge: 'Enterprise Leadership',
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        </svg>
+      ),
     },
-    openGraph: {
-        title: 'Who We Serve — Prominence Executive Solutions',
-        description: 'Bespoke digital presence tailored for CEOs, CHROs, enterprise founders, senior executives, and elite consultants.',
-        url: 'https://www.prominence.agency/solutions',
-        siteName: 'Prominence.agency',
-        locale: 'en_US',
-        type: 'website',
+    {
+      title: 'Chief Human Resources Officers',
+      role: 'CHROs & Chief People Officers',
+      slug: '/solutions/chros',
+      desc: 'Attract elite executive talent, establish human capital governance authority, and position for future corporate board directorships.',
+      badge: 'Talent & Governance',
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+      ),
     },
-}
+    {
+      title: 'Enterprise Founders',
+      role: 'Founders & Managing Partners',
+      slug: '/solutions/founders',
+      desc: 'Turn technical innovation into founder-led market dominance, attract institutional capital, and create lasting brand equity.',
+      badge: 'Venture & Scale',
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Senior Corporate Executives',
+      role: 'C-Suite, EVPs & SVPs',
+      slug: '/solutions/executives',
+      desc: 'Position for C-suite promotions, secure independent board committee seats, and build an owned digital asset independent of your current employer.',
+      badge: 'Career Sovereignty',
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Independent Consultants',
+      role: 'Advisors & Keynote Speakers',
+      slug: '/solutions/consultants',
+      desc: 'Command premium retainer pricing, dominate high-intent executive search queries, and convert digital stature into high-ticket inbound engagements.',
+      badge: 'Advisory Retainers',
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+        </svg>
+      ),
+    },
+  ]
 
-const solutionsSchema = {
-    '@context': 'https://schema.org',
-    '@graph': [
-        {
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-                {
-                    '@type': 'ListItem',
-                    position: 1,
-                    name: 'Home',
-                    item: 'https://www.prominence.agency',
-                },
-                {
-                    '@type': 'ListItem',
-                    position: 2,
-                    name: 'Solutions',
-                    item: 'https://www.prominence.agency/solutions',
-                },
-            ],
-        },
-        {
-            '@type': 'Service',
-            name: 'Executive Solutions by Leadership Role',
-            provider: {
-                '@type': 'Organization',
-                name: 'Prominence',
-                url: 'https://www.prominence.agency',
-            },
-            description: 'Specialized reputation management and executive digital presence engineered for specific leadership roles: CEOs, CHROs, Founders, Senior Executives, and Consultants.',
-            areaServed: 'Worldwide',
-        },
-    ],
-}
+  return (
+    <div className="mlab-page">
+      <ModernHeader activeNav="solutions" />
 
-export default function SolutionsOverviewPage() {
-    return (
-        <div className="boxed_wrapper">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(solutionsSchema) }}
-            />
-            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Who We Serve">
-                
-                {/* Hero Header */}
-                <section className="prominence_page_intro">
-                    <div className="container">
-                        <div className="prominence_header_centered">
-                            <div style={{ marginBottom: "12px" }}>
-                                <span className="prominence_tracker">
-                                    <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6" }}></span>
-                                    Executive Solutions by Role
-                                </span>
-                            </div>
-                            <h1 style={{ fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", marginBottom: "16px" }}>
-                                Reputational Architecture Built for Your Specific Mandate
-                            </h1>
-                            <p className="prominence_lead_text" style={{ margin: "0 auto" }}>
-                                A CEO faces investor diligence and market valuation pressure. A CHRO targets corporate governance board appointments. A Founder seeks fundraising gravitas. We engineer bespoke reputation architectures calibrated to your unique career objectives.
-                            </p>
-                            <div style={{ marginTop: "32px", display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                                <Link href="/contact" className="btn_style_one btn_md">
-                                    Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
-                                </Link>
-                                <Link href="/resources/assessment" className="btn_style_two btn_md">
-                                    Evaluate Your Stature <i className="fa-solid fa-arrow-right"></i>
-                                </Link>
-                            </div>
+      {/* =========================================================================
+          HERO INTRO SECTION
+      ========================================================================= */}
+      <section className="py-5">
+        <div className="mlab-container">
+          <div className="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end mb-5 gap-4">
+            <div style={{ maxWidth: '640px' }}>
+              <span className="editorial-badge">
+                <span className="editorial-badge-dot">✦</span> TAILORED SOLUTIONS
+              </span>
+              <h1 className="editorial-page-title mb-0">
+                Built for leaders shaping enterprise outcomes.
+              </h1>
+            </div>
+            <p className="editorial-page-desc mb-0" style={{ maxWidth: '440px' }}>
+              Every leadership archetype faces distinct reputational opportunities. Discover tailored authority architectures designed specifically for your mandate.
+            </p>
+          </div>
+
+          {/* =====================================================================
+              ROLE CARDS GRID
+          ===================================================================== */}
+          <div className="row g-4 mb-5">
+            {roleCards.map((rc, idx) => (
+              <div key={idx} className="col-md-6 col-lg-4">
+                <Link href={rc.slug} className="text-decoration-none">
+                  <div className="value-pillar-card d-flex flex-column justify-content-between h-100">
+                    <div>
+                      <div className="d-flex align-items-center justify-content-between mb-3">
+                        <div className="value-pillar-icon mb-0">
+                          {rc.icon}
                         </div>
+                        <span style={{ fontSize: '11px', fontWeight: 800, color: '#FF3B81', textTransform: 'uppercase' }}>
+                          {rc.badge}
+                        </span>
+                      </div>
+                      <h2 style={{ fontSize: '19px', fontWeight: 800, color: '#121316', marginBottom: '6px' }}>
+                        {rc.title}
+                      </h2>
+                      <div style={{ fontSize: '13px', color: '#9CA3AF', fontWeight: 600, marginBottom: '12px' }}>
+                        {rc.role}
+                      </div>
+                      <p style={{ fontSize: '14px', color: '#4B5563', lineHeight: 1.6, margin: 0 }}>
+                        {rc.desc}
+                      </p>
                     </div>
-                </section>
 
-                {/* Persona Cards Grid */}
-                <section className="prominence_section" style={{ background: "#ffffff" }}>
-                    <div className="container">
-                        <div className="row">
-                            {SOLUTIONS_DATA.map((solution) => (
-                                <div key={solution.slug} className="col-lg-6 mb_40">
-                                    <div className="prominence_card prominence_card_equal_height prominence_depth_card" style={{ overflow: "hidden", borderTop: "3px solid #8B5CF6" }}>
-                                        <div style={{ height: "220px", margin: "-36px -32px 28px", position: "relative", overflow: "hidden", borderBottom: "1px solid #edf2f7", borderTopLeftRadius: "11px", borderTopRightRadius: "11px" }}>
-                                            <img 
-                                                src={solution.heroImage} 
-                                                alt={solution.title} 
-                                                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                                            />
-                                            <div style={{ 
-                                                position: "absolute", 
-                                                top: "16px", 
-                                                left: "16px", 
-                                                background: "rgba(13, 13, 20, 0.9)", 
-                                                color: "#ffffff", 
-                                                fontSize: "11px", 
-                                                fontWeight: "700", 
-                                                padding: "4px 12px", 
-                                                borderRadius: "4px",
-                                                textTransform: "uppercase",
-                                                letterSpacing: "0.8px",
-                                                fontFamily: "var(--primary-font)"
-                                            }}>
-                                                {solution.badge}
-                                            </div>
-                                        </div>
-
-                                        <div className="prominence_card_body">
-                                            <span style={{ fontSize: "11px", fontWeight: "700", color: "#6B7280", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontFamily: "var(--primary-font)", display: "block" }}>
-                                                {solution.tagline}
-                                            </span>
-                                            <h3 style={{ fontSize: "24px", fontWeight: "700", color: "#0D0D14", marginBottom: "14px", lineHeight: "1.3", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                                                <Link href={`/solutions/${solution.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
-                                                    {solution.title}
-                                                </Link>
-                                            </h3>
-                                            <p style={{ color: "#6B7280", fontSize: "15px", lineHeight: "26px", marginBottom: "24px" }}>
-                                                {solution.executiveSummary}
-                                            </p>
-
-                                            <div style={{ background: "#F7F5FC", borderRadius: "8px", padding: "18px 20px", marginBottom: "16px", border: "1px solid #eef2f6" }}>
-                                                <h4 style={{ fontSize: "11px", fontWeight: "700", color: "#6B7280", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "10px", fontFamily: "var(--primary-font)" }}>
-                                                    Reputation Vulnerabilities Solved:
-                                                </h4>
-                                                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                                                    {solution.uniqueChallenges.slice(0, 2).map((ch, i) => (
-                                                        <li key={i} style={{ display: "flex", gap: "10px", fontSize: "13.5px", color: "#0D0D14", marginBottom: "8px", lineHeight: "20px" }}>
-                                                            <span style={{ color: "#6B7280", fontWeight: "700" }}>—</span>
-                                                            <span><strong style={{ color: "#0D0D14" }}>{ch.title}:</strong> {ch.desc.substring(0, 80)}...</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div className="prominence_card_footer" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: "14px", borderTop: "1px solid #f1f5f9" }}>
-                                            <Link 
-                                                href={`/solutions/${solution.slug}`} 
-                                                className="btn_style_ghost"
-                                            >
-                                                Explore Mandate Architecture <i className="fa-solid fa-arrow-right"></i>
-                                            </Link>
-                                            <Link 
-                                                href="/contact" 
-                                                style={{ fontSize: "13px", fontWeight: "600", color: "#6B7280", textDecoration: "none" }}
-                                            >
-                                                Inquire Confidentially
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                    <div className="d-flex align-items-center gap-2 pt-4" style={{ fontSize: '13.5px', fontWeight: 700, color: '#121316' }}>
+                      <span>Explore Solution</span>
+                      <span style={{ color: '#FF3B81' }}>&rarr;</span>
                     </div>
-                </section>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
 
-                {/* Self-Audit Banner */}
-                <section className="prominence_section_compact" style={{ background: "#F7F5FC", borderTop: "1px solid #edf2f7" }}>
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-lg-8">
-                                <div style={{ marginBottom: "8px" }}>
-                                    <span className="prominence_tracker">
-                                        <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#8B5CF6" }}></span>
-                                        Executive Diagnostic
-                                    </span>
-                                </div>
-                                <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#0D0D14", marginTop: "4px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                                    Calculate Your Executive Digital Presence Score
-                                </h2>
-                                <p style={{ color: "#6B7280", fontSize: "16px", marginTop: "8px", margin: 0, maxWidth: "680px", lineHeight: "26px" }}>
-                                    Audit your Google search placement, LinkedIn gravitas, owned website sovereignty, and media proof in 3 minutes across 6 objective dimensions.
-                                </p>
-                            </div>
-                            <div className="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                                <Link href="/resources/assessment" className="btn_style_one btn_md">
-                                    Start Assessment <i className="fa-solid fa-arrow-right"></i>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+          {/* =====================================================================
+              DARK CTA BANNER
+          ===================================================================== */}
+          <div className="custom-solution-cta my-5">
+            <div className="row align-items-center g-4">
+              <div className="col-lg-7">
+                <span className="editorial-badge text-white-50">
+                  <span className="editorial-badge-dot">✦</span> PRIVATE MANDATE
+                </span>
+                <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 850, color: '#FFFFFF', marginBottom: '14px' }}>
+                  Need a bespoke advisory roadmap?
+                </h2>
+                <p style={{ fontSize: '15px', color: '#9CA3AF', marginBottom: '28px' }}>
+                  Speak directly with our Managing Partners to craft a sovereign personal positioning strategy.
+                </p>
+                <Link href="/contact" className="prominence-btn-primary">
+                  <span>Book Private Consultation</span>
+                  <span>&rarr;</span>
+                </Link>
+              </div>
 
-                <Testimonial/>
-
-            </Layout>
+              <div className="col-lg-5 d-none d-lg-block">
+                <div style={{ position: 'relative', height: '180px', borderRadius: '18px', overflow: 'hidden' }}>
+                  <Image
+                    src="/assets/images/project/project_5.jpg"
+                    alt="Executive Architecture"
+                    fill
+                    className="object-fit-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    )
+      </section>
+
+      <ModernFooter />
+    </div>
+  )
 }

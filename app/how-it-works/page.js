@@ -1,483 +1,257 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
-import Layout from '@/components/layout/Layout'
-import Testimonial from '@/components/sections/home3/Testimonial'
-
-export const metadata = {
-    title: 'How It Works | Executive Reputation Methodology | Prominence',
-    description: 'The 6-stage Prominence methodology for building sovereign executive presence: Discover, Position, Build, Publish, Amplify, and Measure.',
-    alternates: {
-        canonical: '/how-it-works',
-    },
-    openGraph: {
-        title: 'How It Works — The Prominence Executive Reputation Methodology',
-        description: 'A 6-stage strategic protocol engineered for complete discretion, corporate PR compliance, and under 30 minutes of executive time per month.',
-        url: 'https://www.prominence.agency/how-it-works',
-        siteName: 'Prominence.agency',
-        locale: 'en_US',
-        type: 'website',
-    },
-}
-
-const howItWorksSchema = {
-    '@context': 'https://schema.org',
-    '@graph': [
-        {
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-                {
-                    '@type': 'ListItem',
-                    position: 1,
-                    name: 'Home',
-                    item: 'https://www.prominence.agency',
-                },
-                {
-                    '@type': 'ListItem',
-                    position: 2,
-                    name: 'How It Works',
-                    item: 'https://www.prominence.agency/how-it-works',
-                },
-            ],
-        },
-        {
-            '@type': 'HowTo',
-            name: 'The Prominence Executive Reputation Architecture Protocol',
-            description: 'A 6-stage turnkey methodology for establishing sovereign digital presence and search authority for C-suite leaders.',
-            step: [
-                {
-                    '@type': 'HowToStep',
-                    position: 1,
-                    name: 'Discover',
-                    text: 'Comprehensive search audit, digital asset inventory, and 45-minute narrative extraction interview.',
-                },
-                {
-                    '@type': 'HowToStep',
-                    position: 2,
-                    name: 'Position',
-                    text: 'Formulating your leadership thesis, boardroom credentials, and strict corporate compliance guardrails.',
-                },
-                {
-                    '@type': 'HowToStep',
-                    position: 3,
-                    name: 'Build',
-                    text: 'Engineering your custom Executive Digital HQ and structured JSON-LD Google Knowledge Graph schema.',
-                },
-                {
-                    '@type': 'HowToStep',
-                    position: 4,
-                    name: 'Publish',
-                    text: 'Discreet, high-caliber executive ghostwriting authored by veteran business journalists in your authentic voice.',
-                },
-                {
-                    '@type': 'HowToStep',
-                    position: 5,
-                    name: 'Amplify',
-                    text: 'Securing tier-one podcast interviews, keynote stage pitches, and syndicated industry quotations.',
-                },
-                {
-                    '@type': 'HowToStep',
-                    position: 6,
-                    name: 'Measure',
-                    text: 'Continuous Google Page 1 monitoring, inbound opportunity tracking, and ongoing narrative governance.',
-                },
-            ],
-        },
-    ],
-}
+import Image from 'next/image'
+import ModernHeader from '@/components/layout/ModernHeader'
+import ModernFooter from '@/components/layout/ModernFooter'
 
 export default function HowItWorksPage() {
-    const stages = [
-        {
-            number: '01',
-            name: 'Discover',
-            tagline: 'Deep Reputation Audit & Narrative Extraction',
-            duration: 'Weeks 1–2',
-            clientTime: '45 Minutes Total',
-            overview: 'Before authoring positioning copy or configuring technical infrastructure, we conduct a forensic audit across Google search surfaces, proprietary executive databases, news archives, and professional networks.',
-            deliverables: [
-                'Forensic audit of your Google Page 1 results, namesake conflicts, and search sentiment',
-                'Comprehensive inventory of existing corporate bios, interview archives, and conference recordings',
-                'One 45-minute structured narrative extraction session with a senior communications partner',
-                'Reputational gap analysis benchmarked against peer industry leaders and board candidates'
-            ]
-        },
-        {
-            number: '02',
-            name: 'Position',
-            tagline: 'Strategic Governance Thesis & Editorial Guardrails',
-            duration: 'Weeks 2–3',
-            clientTime: '15 Minutes Review',
-            overview: 'We crystallize your leadership thesis into an authoritative executive narrative. We establish clear boundaries with your corporate PR and legal teams to guarantee 100% compliance with non-disclosure and disclosure standards.',
-            deliverables: [
-                'Calibrated Executive Positioning Document articulating your core leadership pillars',
-                'Boardroom-ready executive biography, committee candidate profile, and media summary',
-                'Corporate compliance protocol aligning public commentary with employer communications policies',
-                'Cadence and lexicon analysis guide ensuring all written materials replicate your authentic speaking style'
-            ]
-        },
-        {
-            number: '03',
-            name: 'Build',
-            tagline: 'Sovereign Digital HQ & Entity Graph Engineering',
-            duration: 'Weeks 3–6',
-            clientTime: '15 Minutes Approval',
-            overview: 'We design and engineer your owned personal digital headquarters on Next.js, deploy structured JSON-LD entity markup for Google Knowledge Graph recognition, and secure sovereign domain ownership.',
-            deliverables: [
-                'Bespoke executive personal website built on modern Next.js architecture with 95+ Core Web Vitals',
-                'Custom executive domain acquisition, SSL configuration, and enterprise-grade DNS hosting',
-                'Interactive career milestone portfolio, major transaction vignettes, and board dossier',
-                'Structured JSON-LD schema deployment for Google Search Console indexing and Knowledge Panel linkage'
-            ]
-        },
-        {
-            number: '04',
-            name: 'Publish',
-            tagline: 'Calibrated Ghostwriting & Executive Stature Content',
-            duration: 'Ongoing Monthly',
-            clientTime: '20 Minutes / Month',
-            overview: 'Senior journalists author substantial, provocative, and data-backed essays that demonstrate your macro business acumen. No generic platitudes, no junior social media gimmicks.',
-            deliverables: [
-                '2 to 4 high-signal strategic essays per month published directly to LinkedIn and your owned Digital HQ',
-                'Monthly 20-minute voice-memo briefing or interview to harvest your real-time perspectives',
-                'Complete editorial management, comment moderation guidance, and network engagement protocols',
-                'Visual asset creation: custom typography graphics, charts, and executive quote cards'
-            ]
-        },
-        {
-            number: '05',
-            name: 'Amplify',
-            tagline: 'Keynote Stages, Tier-One Podcasts & Media Quotations',
-            duration: 'Months 2+',
-            clientTime: 'Zero Admin Time',
-            overview: 'We take your proven ideas beyond your primary audience. We pitch event curators, conference chairs, and high-signal podcast producers to position you on reputable stages.',
-            deliverables: [
-                'Comprehensive Executive Speaker Kit: keynote abstracts, high-res photography, and technical rider',
-                'Proactive pitching to top 2% business, industry, and leadership podcast shows',
-                'Keynote submission pitching for reputable global summits and industry panels',
-                'Post-appearance asset repurposing: high-definition video clips, transcripts, and press syndication'
-            ]
-        },
-        {
-            number: '06',
-            name: 'Measure',
-            tagline: 'Search Dominance, Due Diligence Protection & ROI Tracking',
-            duration: 'Quarterly Reviews',
-            clientTime: '10 Minutes Review',
-            overview: 'Reputation is not an abstract concept—it produces measurable commercial outcomes. We monitor search ranking resilience, track inbound corporate recruiter inquiries, and evaluate board interest.',
-            deliverables: [
-                'Quarterly Search Resilience Report tracking Google Page 1 ownership for your exact name',
-                'Inbound opportunity attribution tracking: board reach-outs, consulting leads, speaking inquiries',
-                'Google Knowledge Panel verification and ongoing entity monitoring',
-                'Annual narrative refresh aligning your digital assets with newly achieved enterprise milestones'
-            ]
-        }
-    ]
+  const steps = [
+    {
+      number: '01',
+      name: 'Discover',
+      tagline: 'Deep Reputation Audit & Narrative Extraction',
+      duration: 'Weeks 1–2',
+      clientTime: '45 Minutes Total',
+      overview: 'Before authoring positioning copy or configuring technical infrastructure, we conduct a forensic audit across Google search surfaces, proprietary executive databases, news archives, and professional networks.',
+      deliverables: [
+        'Forensic audit of your Google Page 1 results, namesake conflicts, and search sentiment',
+        'Comprehensive inventory of existing corporate bios, interview archives, and conference recordings',
+        'One 45-minute structured narrative extraction session with a senior communications partner',
+        'Reputational gap analysis benchmarked against peer industry leaders and board candidates',
+      ],
+    },
+    {
+      number: '02',
+      name: 'Position',
+      tagline: 'Strategic Governance Thesis & Editorial Guardrails',
+      duration: 'Weeks 2–3',
+      clientTime: '15 Minutes Review',
+      overview: 'We crystallize your leadership thesis into an authoritative executive narrative. We establish clear boundaries with your corporate PR and legal teams to guarantee 100% compliance with non-disclosure and disclosure standards.',
+      deliverables: [
+        'Calibrated Executive Positioning Document articulating your core leadership pillars',
+        'Boardroom-ready executive biography, committee candidate profile, and media summary',
+        'Corporate compliance protocol aligning public commentary with employer communications policies',
+        'Cadence and lexicon analysis guide ensuring all written materials replicate your authentic speaking style',
+      ],
+    },
+    {
+      number: '03',
+      name: 'Build',
+      tagline: 'Sovereign Digital HQ & Entity Graph Engineering',
+      duration: 'Weeks 3–6',
+      clientTime: '15 Minutes Approval',
+      overview: 'We design and engineer your owned personal digital headquarters on Next.js, deploy structured JSON-LD entity markup for Google Knowledge Graph recognition, and secure sovereign domain ownership.',
+      deliverables: [
+        'Bespoke executive personal website built on modern Next.js architecture with 95+ Core Web Vitals',
+        'Custom executive domain acquisition, SSL configuration, and enterprise-grade DNS hosting',
+        'Interactive career milestone portfolio, major transaction vignettes, and board dossier',
+        'Structured JSON-LD schema deployment for Google Search Console indexing and Knowledge Panel linkage',
+      ],
+    },
+    {
+      number: '04',
+      name: 'Publish',
+      tagline: 'Calibrated Ghostwriting & Executive Stature Content',
+      duration: 'Ongoing Monthly',
+      clientTime: '20 Minutes / Month',
+      overview: 'Senior journalists author substantial, provocative, and data-backed essays that demonstrate your macro business acumen. No generic platitudes, no junior social media gimmicks.',
+      deliverables: [
+        '2 to 4 high-signal strategic essays per month published directly to LinkedIn and your owned Digital HQ',
+        'Monthly 20-minute voice-memo briefing or interview to harvest your real-time perspectives',
+        'Complete editorial management, comment moderation guidance, and network engagement protocols',
+        'Visual asset creation: custom typography graphics, charts, and executive quote cards',
+      ],
+    },
+    {
+      number: '05',
+      name: 'Amplify',
+      tagline: 'Keynote Stages, Tier-One Podcasts & Media Quotations',
+      duration: 'Months 2+',
+      clientTime: 'Zero Admin Time',
+      overview: 'We take your proven ideas beyond your primary audience. We pitch event curators, conference chairs, and high-signal podcast producers to position you on reputable stages.',
+      deliverables: [
+        'Comprehensive Executive Speaker Kit: keynote abstracts, high-res photography, and technical rider',
+        'Proactive pitching to top 2% business, industry, and leadership podcast shows',
+        'Keynote submission pitching for reputable global summits and industry panels',
+        'Post-appearance asset repurposing: high-definition video clips, transcripts, and press syndication',
+      ],
+    },
+    {
+      number: '06',
+      name: 'Measure',
+      tagline: 'Search Dominance, Due Diligence Protection & ROI Tracking',
+      duration: 'Quarterly Reviews',
+      clientTime: '10 Minutes Review',
+      overview: 'Reputation is not an abstract concept—it produces measurable commercial outcomes. We monitor search ranking resilience, track inbound corporate recruiter inquiries, and evaluate board interest.',
+      deliverables: [
+        'Quarterly Search Resilience Report tracking Google Page 1 ownership for your exact name',
+        'Inbound opportunity attribution tracking: board reach-outs, consulting leads, speaking inquiries',
+        'Google Knowledge Panel verification and ongoing entity monitoring',
+        'Annual narrative refresh aligning your digital assets with newly achieved enterprise milestones',
+      ],
+    },
+  ]
 
-    return (
-        <div className="boxed_wrapper">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(howItWorksSchema) }}
-            />
-            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="The Prominence Methodology">
-                
-                {/* Hero Header */}
-                <section className="prominence_page_intro" style={{ backgroundColor: '#ffffff', borderBottom: '1px solid #eaedf0', fontFamily: 'var(--primary-font)' }}>
-                    <div className="container">
-                        <div className="section_title centred" style={{ maxWidth: '860px', margin: '0 auto' }}>
-                            <div className="tag_text" style={{ marginBottom: '14px' }}>
-                                <h6 style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: '8px',
-                                    padding: '6px 16px',
-                                    background: '#F7F5FC',
-                                    borderRadius: '6px',
-                                    fontSize: '12px',
-                                    fontWeight: '700',
-                                    color: '#0D0D14',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.8px',
-                                    border: '1px solid #e2e8f0'
-                                }}>
-                                    <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#8B5CF6' }}></span>
-                                    The 6-Stage Methodology
-                                </h6>
-                            </div>
-                            <h1 style={{
-                                fontSize: 'clamp(28px, 5vw, 44px)',
-                                fontWeight: '700',
-                                color: '#0D0D14',
-                                lineHeight: '1.2',
-                                letterSpacing: '-0.5px',
-                                marginBottom: '20px',
-                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
-                            }}>
-                                The Sovereign Stature Architecture Protocol
-                            </h1>
-                            <p style={{ fontSize: '18px', color: '#6B7280', lineHeight: '1.7', margin: '0 auto', maxWidth: '720px' }}>
-                                Establishing a commanding executive presence demands strategic rigor, journalistic precision, and absolute discretion. Our 6-stage protocol delivers turnkey execution requiring under 30 minutes of executive time each month.
-                            </p>
-                            <div style={{ marginTop: '32px', display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <Link href="/contact" className="btn_style_one btn_md">
-                                    Schedule a Confidential Briefing <i className="fa-solid fa-arrow-right"></i>
-                                </Link>
-                                <Link href="/case-studies" className="btn_style_two btn_md">
-                                    Review Case Studies
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+  return (
+    <div className="mlab-page">
+      <ModernHeader activeNav="methodology" />
 
-                {/* 6 Stages Deep Dive — Alternating Card vs Editorial Layout */}
-                <section className="pt_100 pb_90" style={{ background: '#F7F5FC', fontFamily: 'var(--primary-font)' }}>
-                    <div className="container">
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
-                            {stages.map((stage, idx) => {
-                                const isCard = idx % 2 === 0; // Alternates: 01, 03, 05 are cards; 02, 04, 06 are deliberate non-card editorial rows
-                                
-                                if (isCard) {
-                                    return (
-                                        <div key={stage.number} className="prominence_card prominence_depth_card" style={{ padding: '44px 48px', borderTop: '3px solid #8B5CF6' }}>
-                                            <div className="row align-items-start">
-                                                <div className="col-lg-4 mb_30 mb-lg-0">
-                                                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '12px' }}>
-                                                        <span className="prominence_step_num" style={{ color: '#0D0D14' }}>
-                                                            {stage.number}
-                                                        </span>
-                                                        <span style={{ fontSize: '11px', fontWeight: '700', color: '#8B5CF6', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                                                            Stage {stage.number} of 06 · Flagship Protocol
-                                                        </span>
-                                                    </div>
-                                                    <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#0D0D14', marginBottom: '8px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                                                        {stage.name}
-                                                    </h2>
-                                                    <p style={{ fontSize: '14.5px', fontWeight: '600', color: '#8B5CF6', marginBottom: '22px' }}>
-                                                        {stage.tagline}
-                                                    </p>
-                                                    
-                                                    <div className="prominence_meta_grid">
-                                                        <div className="prominence_meta_item">
-                                                            <span className="prominence_meta_label">Execution Horizon</span>
-                                                            <span className="prominence_meta_value">{stage.duration}</span>
-                                                        </div>
-                                                        <div className="prominence_meta_item">
-                                                            <span className="prominence_meta_label">Client Commitment</span>
-                                                            <span className="prominence_meta_value" style={{ color: '#8B5CF6' }}>{stage.clientTime}</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
+      {/* =========================================================================
+          HERO SECTION
+      ========================================================================= */}
+      <section className="py-5">
+        <div className="mlab-container">
+          <div className="row align-items-center g-5 mb-5">
+            <div className="col-lg-7">
+              <span className="editorial-badge">
+                <span className="editorial-badge-dot">✦</span> METHODOLOGY &amp; PROTOCOL
+              </span>
+              <h1 className="editorial-page-title">
+                Strategy. Visibility.<br />
+                Authority. Protection.
+              </h1>
+              <p className="editorial-page-desc" style={{ maxWidth: '540px' }}>
+                A 6-stage turnkey protocol engineered for enterprise executives, board directors, and senior leaders to close the authority gap with complete discretion.
+              </p>
 
-                                                <div className="col-lg-8">
-                                                    <div style={{ paddingLeft: '20px' }}>
-                                                        <p style={{ fontSize: '15.5px', color: '#475569', lineHeight: '1.75', marginBottom: '24px' }}>
-                                                            {stage.overview}
-                                                        </p>
+              <div className="d-flex flex-wrap gap-2 pt-2">
+                <span className="badge rounded-pill bg-white text-dark border px-3 py-2 fw-semibold">
+                  ⏱ Under 30 Min / Month
+                </span>
+                <span className="badge rounded-pill bg-white text-dark border px-3 py-2 fw-semibold">
+                  🛡 100% PR &amp; Legal Compliant
+                </span>
+                <span className="badge rounded-pill bg-white text-dark border px-3 py-2 fw-semibold">
+                  📈 Measurable Search Dominance
+                </span>
+              </div>
+            </div>
 
-                                                        <h3 style={{ fontSize: '11.5px', fontWeight: '700', color: '#0D0D14', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>
-                                                            Tangible Protocol Deliverables
-                                                        </h3>
+            <div className="col-lg-5">
+              <div
+                style={{
+                  position: 'relative',
+                  height: '320px',
+                  borderRadius: '24px',
+                  overflow: 'hidden',
+                  boxShadow: '0 20px 45px rgba(0,0,0,0.08)',
+                }}
+              >
+                <Image
+                  src="/assets/images/project/project_1.jpg"
+                  alt="Prominence Executive Protocol Architecture"
+                  fill
+                  className="object-fit-cover"
+                  sizes="450px"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
 
-                                                        <div className="row">
-                                                            {stage.deliverables.map((del, i) => (
-                                                                <div key={i} className="col-md-6 mb_16">
-                                                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                                                                        <span style={{ color: '#8B5CF6', fontSize: '12px', marginTop: '4px' }}>
-                                                                            <i className="fa-solid fa-check"></i>
-                                                                        </span>
-                                                                        <span style={{ fontSize: '13.5px', color: '#475569', lineHeight: '1.6' }}>{del}</span>
-                                                                    </div>
-                                                                </div>
-                                                            ))}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )
-                                }
+          {/* =====================================================================
+              6-STAGE PROTOCOL CARDS
+          ===================================================================== */}
+          <div className="d-flex flex-column gap-4 my-5">
+            {steps.map((st, idx) => (
+              <div key={idx} className="value-pillar-card p-4 p-md-5">
+                <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 pb-3 border-bottom mb-4">
+                  <div className="d-flex align-items-center gap-3">
+                    <span
+                      style={{
+                        fontSize: '18px',
+                        fontWeight: 900,
+                        color: '#FF3B81',
+                        backgroundColor: '#FFF0F5',
+                        padding: '6px 14px',
+                        borderRadius: '9999px',
+                      }}
+                    >
+                      Stage {st.number}
+                    </span>
+                    <h2 style={{ fontSize: '24px', fontWeight: 800, color: '#121316', margin: 0 }}>
+                      {st.name}
+                    </h2>
+                  </div>
 
-                                // Deliberate Non-Card Editorial Layout
-                                return (
-                                    <div key={stage.number} style={{ 
-                                        padding: '40px 24px', 
-                                        borderTop: '1px solid #e2e8f0', 
-                                        borderBottom: '1px solid #e2e8f0', 
-                                        background: 'transparent'
-                                    }}>
-                                        <div className="row align-items-start">
-                                            <div className="col-lg-4 mb_30 mb-lg-0">
-                                                <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '12px' }}>
-                                                    <span style={{ fontSize: '38px', fontWeight: '800', color: '#cbd5e1', lineHeight: '1', fontFamily: 'var(--primary-font)' }}>
-                                                        {stage.number}
-                                                    </span>
-                                                    <span style={{ fontSize: '11px', fontWeight: '700', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                                                        Stage {stage.number} of 06 · Editorial Briefing
-                                                    </span>
-                                                </div>
-                                                <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#0D0D14', marginBottom: '8px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                                                    {stage.name}
-                                                </h2>
-                                                <p style={{ fontSize: '14.5px', fontWeight: '600', color: '#475569', marginBottom: '22px' }}>
-                                                    {stage.tagline}
-                                                </p>
-                                                
-                                                <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                                                    <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '8px 14px', fontSize: '12.5px' }}>
-                                                        <span style={{ color: '#6B7280', marginRight: '6px' }}>Horizon:</span>
-                                                        <strong style={{ color: '#0D0D14' }}>{stage.duration}</strong>
-                                                    </div>
-                                                    <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '8px 14px', fontSize: '12.5px' }}>
-                                                        <span style={{ color: '#6B7280', marginRight: '6px' }}>Client:</span>
-                                                        <strong style={{ color: '#8B5CF6' }}>{stage.clientTime}</strong>
-                                                    </div>
-                                                </div>
-                                            </div>
+                  <div className="d-flex align-items-center gap-3">
+                    <span style={{ fontSize: '13px', fontWeight: 700, color: '#6B7280' }}>
+                      {st.duration}
+                    </span>
+                    <span style={{ color: '#D1D5DB' }}>•</span>
+                    <span style={{ fontSize: '13px', fontWeight: 700, color: '#FF3B81' }}>
+                      {st.clientTime}
+                    </span>
+                  </div>
+                </div>
 
-                                            <div className="col-lg-8">
-                                                <div style={{ paddingLeft: '20px' }}>
-                                                    <p style={{ fontSize: '15.5px', color: '#475569', lineHeight: '1.75', marginBottom: '24px' }}>
-                                                        {stage.overview}
-                                                    </p>
+                <div className="row g-4">
+                  <div className="col-lg-5">
+                    <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#121316', marginBottom: '8px' }}>
+                      {st.tagline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#4B5563', lineHeight: 1.65, margin: 0 }}>
+                      {st.overview}
+                    </p>
+                  </div>
 
-                                                    <h3 style={{ fontSize: '11.5px', fontWeight: '700', color: '#0D0D14', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>
-                                                        Tangible Protocol Deliverables
-                                                    </h3>
+                  <div className="col-lg-7">
+                    <h4 style={{ fontSize: '12.5px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', color: '#9CA3AF', marginBottom: '14px' }}>
+                      Key Deliverables
+                    </h4>
+                    <ul className="list-unstyled d-flex flex-column gap-2 mb-0" style={{ fontSize: '14px', color: '#374151' }}>
+                      {st.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} className="d-flex align-items-start gap-2">
+                          <span style={{ color: '#FF3B81', fontWeight: 800, lineHeight: 1.2 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
 
-                                                    <div className="row">
-                                                        {stage.deliverables.map((del, i) => (
-                                                            <div key={i} className="col-md-6 mb_16">
-                                                                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                                                                    <span style={{ color: '#8B5CF6', fontSize: '12px', marginTop: '4px' }}>
-                                                                        <i className="fa-solid fa-circle-check"></i>
-                                                                    </span>
-                                                                    <span style={{ fontSize: '13.5px', color: '#475569', lineHeight: '1.6' }}>{del}</span>
-                                                                </div>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                </section>
+          {/* =====================================================================
+              DARK CTA BANNER
+          ===================================================================== */}
+          <div className="custom-solution-cta my-5">
+            <div className="row align-items-center g-4">
+              <div className="col-lg-7">
+                <span className="editorial-badge text-white-50">
+                  <span className="editorial-badge-dot">✦</span> READY TO COMMENCE?
+                </span>
+                <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 850, color: '#FFFFFF', marginBottom: '14px' }}>
+                  Deploy the protocol for your executive stature.
+                </h2>
+                <p style={{ fontSize: '15px', color: '#9CA3AF', marginBottom: '28px' }}>
+                  Book a confidential 30-minute introductory briefing with our managing partner.
+                </p>
+                <Link href="/contact" className="prominence-btn-primary">
+                  <span>Schedule Consultation</span>
+                  <span>&rarr;</span>
+                </Link>
+              </div>
 
-                {/* Confidentiality, PR & Legal Governance */}
-                <section className="prominence_section" style={{ background: '#0D0D14', color: '#ffffff', fontFamily: 'var(--primary-font)' }}>
-                    <div className="container">
-                        <div className="prominence_header_split">
-                            <div>
-                                <div style={{ marginBottom: '12px' }}>
-                                    <span className="prominence_badge" style={{ background: 'rgba(255, 255, 255, 0.08)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
-                                        Institutional Trust
-                                    </span>
-                                </div>
-                                <h2 style={{
-                                    fontSize: 'clamp(26px, 3.6vw, 36px)',
-                                    fontWeight: '700',
-                                    color: '#ffffff',
-                                    letterSpacing: '-0.5px',
-                                    margin: 0,
-                                    fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
-                                }}>
-                                    Enterprise Confidentiality &amp; PR Governance
-                                </h2>
-                            </div>
-                            <div>
-                                <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: '27px', maxWidth: '520px', margin: 0 }}>
-                                    We work with executives managing sensitive public company disclosures, imminent transactions, and complex governance environments. Our security standards are non-negotiable.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="row g-4">
-                            <div className="col-lg-4 col-md-6">
-                                <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: '36px 30px', height: '100%', borderTop: '3px solid #8B5CF6' }}>
-                                    <div style={{ fontSize: '22px', color: '#8B5CF6', marginBottom: '18px' }}>
-                                        <i className="fa-solid fa-file-shield"></i>
-                                    </div>
-                                    <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff', marginBottom: '12px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                                        Strict Non-Disclosure
-                                    </h3>
-                                    <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.7', margin: 0 }}>
-                                        All team members sign comprehensive NDAs. We never disclose client identities, private advisory notes, or confidential strategy documents without express written consent.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-6">
-                                <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: '36px 30px', height: '100%', borderTop: '3px solid #8B5CF6' }}>
-                                    <div style={{ fontSize: '22px', color: '#8B5CF6', marginBottom: '18px' }}>
-                                        <i className="fa-solid fa-scale-balanced"></i>
-                                    </div>
-                                    <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff', marginBottom: '12px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                                        Corporate PR Alignment
-                                    </h3>
-                                    <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.7', margin: 0 }}>
-                                        We establish clear topic guardrails that complement employer PR policies. We never publish speculative operational forecasts, insider disclosures, or sensitive corporate data.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-6">
-                                <div className="prominence_card_dark prominence_depth_card_dark" style={{ padding: '36px 30px', height: '100%', borderTop: '3px solid #8B5CF6' }}>
-                                    <div style={{ fontSize: '22px', color: '#8B5CF6', marginBottom: '18px' }}>
-                                        <i className="fa-solid fa-certificate"></i>
-                                    </div>
-                                    <h3 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff', marginBottom: '12px', fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)" }}>
-                                        Sovereign Ownership
-                                    </h3>
-                                    <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.7', margin: 0 }}>
-                                        You own 100% of the domains, content, code, and digital assets we build. Nothing is leased, locked in proprietary platforms, or dependent on our ongoing involvement.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Final Consultation CTA */}
-                <section className="prominence_section" style={{ background: '#ffffff', borderTop: '1px solid #eaedf0', textAlign: 'center', fontFamily: 'var(--primary-font)' }}>
-                    <div className="container">
-                        <div style={{ maxWidth: '760px', margin: '0 auto' }}>
-                            <div className="tag_text" style={{ marginBottom: '14px' }}>
-                                <span className="prominence_badge">
-                                    Initiate Engagement
-                                </span>
-                            </div>
-                            <h2 style={{
-                                fontSize: 'clamp(26px, 4.5vw, 38px)',
-                                fontWeight: '700',
-                                color: '#0D0D14',
-                                letterSpacing: '-0.5px',
-                                marginBottom: '16px',
-                                fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
-                            }}>
-                                Put the Prominence Protocol to Work for Your Career
-                            </h2>
-                            <p style={{ color: '#6B7280', fontSize: '17px', lineHeight: '1.7', marginBottom: '32px' }}>
-                                Connect directly with our managing partners for a 30-minute private consultation. We will analyze your public search posture and explain how Stage 01 will proceed.
-                            </p>
-                            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <Link href="/contact" className="btn_style_one btn_md">
-                                    Book a Private Consultation <i className="fa-solid fa-arrow-right"></i>
-                                </Link>
-                                <Link href="/pricing" className="btn_style_two btn_md">
-                                    View Engagement Tiers
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <Testimonial/>
-
-            </Layout>
+              <div className="col-lg-5 d-none d-lg-block">
+                <div style={{ position: 'relative', height: '190px', borderRadius: '18px', overflow: 'hidden' }}>
+                  <Image
+                    src="/assets/images/project/project_6.jpg"
+                    alt="Strategic Advisory"
+                    fill
+                    className="object-fit-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    )
+      </section>
+
+      <ModernFooter />
+    </div>
+  )
 }

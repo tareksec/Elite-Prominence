@@ -1,24 +1,63 @@
-import Link from "next/link"
+'use client'
 
-export default function Error() {
-    return (
-        <section className="error_section pt_150 pb_150">
-            <div className="container">
-                <div className="error_content centred" style={{ maxWidth: "600px", margin: "0 auto", padding: "60px 30px", background: "#ffffff", border: "1px solid #e5e3db", borderRadius: "16px", boxShadow: "0 10px 40px rgba(13, 13, 20, 0.05)" }}>
-                    <div style={{ fontSize: "72px", fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)", fontWeight: "700", color: "#0D0D14", marginBottom: "15px", lineHeight: "1" }}>
-                        404
-                    </div>
-                    <h1 style={{ fontSize: "28px", fontWeight: "700", color: "#0D0D14", marginBottom: "15px" }}>Page Not Found</h1>
-                    <p style={{ color: "#6B7280", fontSize: "16px", marginBottom: "30px" }}>
-                        The page you are looking for doesn't exist or has been moved.
-                    </p>
-                    <div className="error_btn_box">
-                        <Link href="/" className="btn_style_one btn_md">
-                            Back to Homepage <i className="fa-solid fa-arrow-right" style={{ marginLeft: "8px" }}></i>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
+import React from 'react'
+import Link from 'next/link'
+
+export default function NotFound() {
+  return (
+    <div
+      className="mlab-page d-flex align-items-center justify-content-center"
+      style={{ minHeight: '100vh', padding: '60px 24px' }}
+    >
+      <div
+        className="text-center"
+        style={{
+          maxWidth: '560px',
+          width: '100%',
+          background: '#FFFFFF',
+          border: '1.5px solid #121316',
+          borderRadius: '28px',
+          padding: '60px 32px',
+          boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.08)',
+        }}
+      >
+        <div
+          style={{
+            fontSize: '92px',
+            fontWeight: 800,
+            color: '#FF5E86',
+            lineHeight: 1,
+            marginBottom: '20px',
+            letterSpacing: '-2px',
+          }}
+        >
+          404
+        </div>
+        <h1
+          style={{
+            fontSize: '28px',
+            fontWeight: 800,
+            color: '#121316',
+            marginBottom: '16px',
+            letterSpacing: '-0.5px',
+          }}
+        >
+          Page Not Found
+        </h1>
+        <p
+          style={{
+            color: '#5A5D66',
+            fontSize: '15.5px',
+            lineHeight: 1.6,
+            marginBottom: '32px',
+          }}
+        >
+          The page you are looking for doesn&apos;t exist, has been removed, or has been relocated.
+        </p>
+        <Link href="/" className="mlab-pill-btn">
+          Back to Homepage
+        </Link>
+      </div>
+    </div>
+  )
 }

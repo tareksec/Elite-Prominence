@@ -41,39 +41,61 @@ const DIRECTORY_TEASER_MEMBERS = [
 export default function ExecutiveDirectoryTeaser() {
     return (
         <section style={{
-            backgroundColor: "#F7F5FC",
-            padding: "var(--ep-section-py) 0",
-            fontFamily: "var(--primary-font)",
+            backgroundColor: "#FAF8F5",
+            padding: "110px 0",
+            fontFamily: "var(--primary-font, -apple-system, sans-serif)",
             position: "relative",
-            borderTop: "1px solid #eaedf0",
-            borderBottom: "1px solid #eaedf0"
+            borderBottom: "1.5px solid #E5E7EB"
         }}>
             <div className="container">
                 {/* Section Header: Editorial Split */}
-                <div className="prominence_header_split">
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "flex-end",
+                        flexWrap: "wrap",
+                        gap: "24px",
+                        marginBottom: "46px"
+                    }}
+                >
                     <div>
-                        <div style={{ marginBottom: "12px" }}>
-                            <span className="prominence_tracker">
-                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#6D28D9" }}></span>
-                                Verified Network &amp; Editorial Syndication
+                        <div style={{ marginBottom: "14px" }}>
+                            <span
+                                style={{
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    gap: "8px",
+                                    padding: "6px 16px",
+                                    borderRadius: "9999px",
+                                    backgroundColor: "#EDE9FE",
+                                    color: "#6D28D9",
+                                    fontSize: "12px",
+                                    fontWeight: "700",
+                                    textTransform: "uppercase",
+                                    letterSpacing: "0.5px",
+                                    border: "1.5px solid rgba(109, 40, 217, 0.2)"
+                                }}
+                            >
+                                <span style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#7C3AED" }} />
+                                Verified Contributor Network
                             </span>
                         </div>
                         <h2 style={{
-                            fontSize: "clamp(26px, 3.6vw, 36px)",
-                            fontWeight: "700",
-                            color: "#0D0D14",
-                            letterSpacing: "-0.5px",
+                            fontSize: "clamp(28px, 3.8vw, 42px)",
+                            fontWeight: "800",
+                            color: "#0F1117",
+                            letterSpacing: "-0.8px",
                             margin: 0,
-                            lineHeight: "1.24",
-                            fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)"
+                            lineHeight: "1.16"
                         }}>
-                            The Sovereign Executive Contributor Directory
+                            Sovereign Executive Contributor Directory
                         </h2>
                     </div>
                     <div>
                         <p style={{
-                            fontSize: "16px",
-                            lineHeight: "27px",
+                            fontSize: "16.5px",
+                            lineHeight: "1.7",
                             color: "#4B5563",
                             maxWidth: "520px",
                             margin: 0
@@ -93,13 +115,13 @@ export default function ExecutiveDirectoryTeaser() {
                     {DIRECTORY_TEASER_MEMBERS.map((member) => (
                         <div
                             key={member.id}
-                            className="prominence_card_equal_height prominence_depth_card"
+                            className="neo-card"
                             style={{
                                 backgroundColor: "#ffffff",
-                                borderRadius: "14px",
+                                borderRadius: "24px",
                                 padding: "32px 28px",
-                                border: "1px solid #eaedf0",
-                                borderTop: "3px solid #8B5CF6",
+                                border: "1.5px solid #0F1117",
+                                boxShadow: "4px 4px 0px #0F1117",
                                 display: "flex",
                                 flexDirection: "column",
                                 transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)"
