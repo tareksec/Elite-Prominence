@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react'
 
 export default function IntroVideo() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
   const [isClosing, setIsClosing] = useState(false)
   const videoRef = useRef(null)
   const closedRef = useRef(false)
@@ -47,6 +47,9 @@ export default function IntroVideo() {
 
     // 5. Completely unmount from DOM immediately after transition
     setTimeout(() => {
+      if (typeof document !== 'undefined') {
+        document.documentElement.classList.add('intro-already-seen')
+      }
       setIsVisible(false)
     }, 350)
   }, [])
@@ -70,6 +73,9 @@ export default function IntroVideo() {
 
     if (prefersReducedMotion || hasSeenIntro) {
       closedRef.current = true
+      document.documentElement.classList.add('intro-already-seen')
+      document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
       setIsVisible(false)
       return
     }
@@ -81,12 +87,21 @@ export default function IntroVideo() {
       document.cookie = 'elite_intro_played=true; path=/; max-age=315360000; SameSite=Lax'
     } catch (e) {}
 
-    // Show intro overlay
-    setIsVisible(true)
-
     // Lock page scroll while intro is playing
     document.body.style.overflow = 'hidden'
     document.documentElement.style.overflow = 'hidden'
+
+    // Play video
+    const video = videoRef.current
+    if (video) {
+      video.muted = true
+      video.defaultMuted = true
+      video.playsInline = true
+      const p = video.play()
+      if (p !== undefined) {
+        p.catch(() => handleClose())
+      }
+    }
 
     // Background pre-warmup: while video is playing, awaken page assets
     warmupRef.current = setTimeout(() => {
@@ -133,13 +148,14 @@ export default function IntroVideo() {
 
   return (
     <div
+      id="intro-video-overlay"
       key="intro-video-overlay"
       style={{
         position: 'fixed',
         inset: 0,
         width: '100vw',
         height: '100dvh',
-        zIndex: 9999999,
+        zIndex: 99999999,
         backgroundColor: '#e9e2d3',
         display: 'flex',
         alignItems: 'center',
@@ -154,18 +170,7 @@ export default function IntroVideo() {
       aria-label="Brand introduction"
     >
       <video
-        ref={(el) => {
-          videoRef.current = el
-          if (el && !closedRef.current) {
-            el.muted = true
-            el.defaultMuted = true
-            el.playsInline = true
-            const p = el.play()
-            if (p !== undefined) {
-              p.catch(() => handleClose())
-            }
-          }
-        }}
+        ref={videoRef}
         autoPlay
         muted
         playsInline

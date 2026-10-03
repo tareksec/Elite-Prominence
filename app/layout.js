@@ -75,6 +75,46 @@ export default function RootLayout({ children }) {
         <html lang="en" className={`${ptSerif.variable} ${tiroBangla.variable}`}>
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+                <style
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            html.intro-already-seen #intro-video-overlay {
+                                display: none !important;
+                                visibility: hidden !important;
+                                pointer-events: none !important;
+                            }
+                            html:not(.intro-already-seen) {
+                                overflow: hidden !important;
+                            }
+                            html:not(.intro-already-seen) body {
+                                overflow: hidden !important;
+                            }
+                        `,
+                    }}
+                />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            (function() {
+                                try {
+                                    var seen = localStorage.getItem('elite_intro_played') === 'true' ||
+                                               sessionStorage.getItem('introSeen') === 'true' ||
+                                               document.cookie.indexOf('elite_intro_played=true') !== -1;
+                                    if (seen) {
+                                        document.documentElement.classList.add('intro-already-seen');
+                                    } else {
+                                        var link = document.createElement('link');
+                                        link.rel = 'preload';
+                                        link.as = 'video';
+                                        link.href = '/new/intro.mp4';
+                                        link.type = 'video/mp4';
+                                        document.head.appendChild(link);
+                                    }
+                                } catch(e) {}
+                            })();
+                        `,
+                    }}
+                />
                 <link rel="icon" href="/new/logo.png" type="image/png" />
                 <link rel="shortcut icon" href="/new/logo.png" type="image/png" />
                 <link rel="apple-touch-icon" href="/new/logo.png" />
