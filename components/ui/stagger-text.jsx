@@ -47,14 +47,17 @@ export function StaggerText({
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className={className}
-            style={{ display: "inline-block" }}
+            className={`inline-flex flex-wrap ${className}`}
+            style={{ display: "inline-flex", flexWrap: "wrap", rowGap: "0.15em" }}
         >
             {parts.map((part, i) => (
                 <span
                     key={i}
                     className="inline-block overflow-hidden relative"
-                    style={{ verticalAlign: "top" }}
+                    style={{
+                        verticalAlign: "top",
+                        marginRight: divideBy === "word" ? "0.26em" : "0",
+                    }}
                 >
                     <motion.span
                         variants={item}
@@ -64,7 +67,7 @@ export function StaggerText({
                             ? part === " "
                                 ? "\u00A0"
                                 : part
-                            : part + "\u00A0"}
+                            : part}
                     </motion.span>
                 </span>
             ))}

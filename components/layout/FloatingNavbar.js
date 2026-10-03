@@ -199,7 +199,7 @@ export default function FloatingNavbar({ scroll, handleMobileMenu }) {
                         }}
                     >
                         <img
-                            src="/assets/images/Elite%20Prominence/EliteProminence-iocn.png"
+                            src="/new/logo.png"
                             alt="Elite Prominence"
                             className="navbar_logo_img"
                             style={{

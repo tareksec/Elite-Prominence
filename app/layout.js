@@ -1,6 +1,9 @@
 import "@/node_modules/react-modal-video/css/modal-video.css"
 import Aos_Animation from "@/components/elements/AosAnimation"
 import SmoothScroll from "@/components/elements/SmoothScroll"
+import GlobalFloatingDock from "@/components/layout/GlobalFloatingDock"
+import IntroVideo from "@/components/IntroVideo"
+import AiFloatingButton from "@/components/elements/AiFloatingButton"
 import "public/assets/css/bootstrap.css"
 import "public/assets/css/aos.css"
 import "public/assets/css/style.css"
@@ -51,6 +54,7 @@ export const metadata = {
     },
     icons: {
         icon: [
+            { url: '/new/logo.png' },
             { url: '/favicon.ico', sizes: '32x32' },
             { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
             { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
@@ -58,9 +62,9 @@ export const metadata = {
             { url: '/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
             { url: '/favicon.png', sizes: '512x512', type: 'image/png' },
         ],
-        shortcut: '/favicon.ico',
+        shortcut: '/new/logo.png',
         apple: [
-            { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+            { url: '/new/logo.png', sizes: '180x180', type: 'image/png' },
         ],
     },
     manifest: '/site.webmanifest',
@@ -71,6 +75,9 @@ export default function RootLayout({ children }) {
         <html lang="en" className={`${ptSerif.variable} ${tiroBangla.variable}`}>
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+                <link rel="icon" href="/new/logo.png" type="image/png" />
+                <link rel="shortcut icon" href="/new/logo.png" type="image/png" />
+                <link rel="apple-touch-icon" href="/new/logo.png" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <link
@@ -102,9 +109,12 @@ export default function RootLayout({ children }) {
                 />
             </head>
             <body>
+                <IntroVideo />
                 <Aos_Animation/>
                 <SmoothScroll/>
                 {children}
+                <GlobalFloatingDock/>
+                <AiFloatingButton />
             </body>
         </html>
     )

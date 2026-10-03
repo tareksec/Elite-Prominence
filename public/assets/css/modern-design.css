@@ -1420,3 +1420,1067 @@ html.lenis, html.lenis body {
 
 
 
+
+
+/* Demote header CTA to secondary ghost pill to avoid competing with hero primary CTA */
+.mlab-header .mlab-pill-btn {
+  background-color: transparent;
+  color: #121316 !important;
+  border: 1.5px solid rgba(18, 19, 22, 0.25);
+}
+.mlab-header .mlab-pill-btn:hover {
+  background-color: #121316;
+  color: #FFFFFF !important;
+  border-color: #121316;
+}
+
+/* ==========================================================================
+   macOS-Style Floating Dock Component (Aceternity / 21st.dev)
+   ========================================================================== */
+.floating-dock-desktop {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9990;
+  display: none;
+  align-items: flex-end;
+  height: 64px;
+  padding: 0 14px 10px;
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-radius: 28px;
+  border: 1.5px solid rgba(18, 19, 22, 0.08);
+  box-shadow: 
+    0 18px 45px -8px rgba(18, 19, 22, 0.12),
+    0 4px 12px rgba(18, 19, 22, 0.04),
+    inset 0 1px 1px rgba(255, 255, 255, 0.95);
+}
+
+@media (min-width: 768px) {
+  .floating-dock-desktop {
+    display: flex;
+  }
+}
+
+.floating-dock-desktop-inner {
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+}
+
+.floating-dock-link {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+  outline: none;
+}
+
+.floating-dock-link:focus-visible .floating-dock-item {
+  outline: 2px solid #FF3B81;
+  outline-offset: 3px;
+}
+
+.floating-dock-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(18, 19, 22, 0.04);
+  border: 1px solid rgba(18, 19, 22, 0.07);
+  color: #121316;
+  cursor: pointer;
+  transition: 
+    background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-dock-item:hover {
+  background: rgba(255, 59, 129, 0.08);
+  border-color: rgba(255, 59, 129, 0.35);
+  color: #FF3B81;
+  box-shadow: 0 6px 18px rgba(255, 59, 129, 0.15);
+}
+
+.floating-dock-item-active {
+  background: rgba(255, 59, 129, 0.12) !important;
+  border-color: #FF3B81 !important;
+  color: #FF3B81 !important;
+  box-shadow: 0 0 16px rgba(255, 59, 129, 0.2);
+}
+
+.floating-dock-item-brand {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(18, 19, 22, 0.1);
+  box-shadow: 0 2px 8px rgba(18, 19, 22, 0.06);
+  padding: 4px;
+}
+
+.floating-dock-item-brand:hover {
+  border-color: #FF3B81;
+  box-shadow: 0 0 16px rgba(255, 59, 129, 0.25);
+}
+
+.floating-dock-brand-wrapper {
+  padding: 1px;
+}
+
+.floating-dock-active-dot {
+  position: absolute;
+  bottom: -6.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #FF3B81;
+  box-shadow: 0 0 6px 1px #FF3B81;
+  pointer-events: none;
+}
+
+.floating-dock-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.floating-dock-icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+.floating-dock-tooltip {
+  position: absolute;
+  top: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  white-space: nowrap;
+  border-radius: 8px;
+  background: #121316;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 24px rgba(18, 19, 22, 0.25);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.floating-dock-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  background: #121316;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.floating-dock-separator {
+  width: 1px;
+  height: 22px;
+  background: linear-gradient(to bottom, transparent, rgba(18, 19, 22, 0.12) 30%, rgba(18, 19, 22, 0.12) 70%, transparent);
+  margin: 0 3px 10px;
+  align-self: flex-end;
+  flex-shrink: 0;
+}
+
+.floating-dock-item-whatsapp:hover {
+  background: rgba(37, 211, 102, 0.12) !important;
+  border-color: #25D366 !important;
+  color: #25D366 !important;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.2) !important;
+}
+
+.floating-dock-item-linkedin:hover {
+  background: rgba(10, 102, 194, 0.12) !important;
+  border-color: #0A66C2 !important;
+  color: #0A66C2 !important;
+  box-shadow: 0 6px 18px rgba(10, 102, 194, 0.2) !important;
+}
+
+/* Consultation Action matching .mlab-pill-btn */
+.floating-dock-item-highlight {
+  background: #121316 !important;
+  border-color: #121316 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(18, 19, 22, 0.25) !important;
+}
+
+.floating-dock-item-highlight:hover {
+  background: #FF3B81 !important;
+  border-color: #FF3B81 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px rgba(255, 59, 129, 0.4) !important;
+}
+
+/* Mobile Backdrop */
+.floating-dock-mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 19, 22, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9989;
+}
+
+/* Mobile Floating Dock */
+.floating-dock-mobile {
+  position: fixed;
+  bottom: 22px;
+  right: 20px;
+  z-index: 9995;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .floating-dock-mobile {
+    display: none;
+  }
+}
+
+.floating-dock-mobile-trigger {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #121316;
+  border: 1.5px solid rgba(18, 19, 22, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(18, 19, 22, 0.12), 0 2px 8px rgba(18, 19, 22, 0.06);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-dock-mobile-trigger:active {
+  transform: scale(0.92);
+}
+
+.floating-dock-mobile-trigger-open {
+  background: #121316;
+  border-color: #121316;
+  color: #FFFFFF;
+  box-shadow: 0 10px 28px rgba(18, 19, 22, 0.3);
+}
+
+.floating-dock-mobile-menu {
+  position: absolute;
+  bottom: 66px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 230px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border-radius: 20px;
+  border: 1.5px solid rgba(18, 19, 22, 0.09);
+  box-shadow: 0 20px 50px rgba(18, 19, 22, 0.16), 0 4px 16px rgba(18, 19, 22, 0.06);
+}
+
+.floating-dock-mobile-header {
+  padding: 10px 14px 12px;
+  border-bottom: 1px solid rgba(18, 19, 22, 0.08);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-dock-mobile-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.floating-dock-mobile-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #121316;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: all 0.18s ease;
+  position: relative;
+}
+
+.floating-dock-mobile-item:hover,
+.floating-dock-mobile-item:active {
+  background: rgba(18, 19, 22, 0.04);
+  color: #FF3B81;
+}
+
+.floating-dock-mobile-item-active {
+  background: rgba(255, 59, 129, 0.1) !important;
+  color: #FF3B81 !important;
+  font-weight: 700;
+  border: 1px solid rgba(255, 59, 129, 0.25);
+}
+
+.floating-dock-active-dot-mobile {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FF3B81;
+  margin-left: auto;
+  box-shadow: 0 0 8px #FF3B81;
+}
+
+.floating-dock-mobile-badge {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #FF3B81;
+  color: #FFFFFF;
+  margin-left: auto;
+}
+
+.floating-dock-mobile-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.floating-dock-mobile-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.floating-dock-mobile-item-whatsapp:hover {
+  color: #25D366 !important;
+}
+
+.floating-dock-mobile-item-linkedin:hover {
+  color: #0A66C2 !important;
+}
+
+.floating-dock-mobile-item-highlight {
+  margin-top: 6px;
+  background: #121316 !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  border: 1.5px solid #121316;
+}
+
+.floating-dock-mobile-item-highlight:hover,
+.floating-dock-mobile-item-highlight:active {
+  background: #FF3B81 !important;
+  border-color: #FF3B81 !important;
+  color: #FFFFFF !important;
+}
+
+/* Brand dock enhancements & top navbar removal */
+.mlab-header,
+header.mlab-header {
+  display: none !important;
+}
+
+.prominence-hero-section {
+  padding-top: 48px;
+}
+
+.mlab-page {
+  padding-top: 20px;
+}
+
+/* =========================================================================
+   AI Floating Action Widget (with WhatsApp & Advisory Sub-buttons)
+   ========================================================================= */
+.ai-floating-widget-wrapper {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9988;
+  font-family: inherit;
+}
+
+@media (max-width: 767px) {
+  .ai-floating-widget-wrapper {
+    bottom: 84px;
+    right: 18px;
+  }
+}
+
+/* =========================================================================
+   Executive Concierge Trigger Button
+   ========================================================================= */
+.ai-floating-trigger {
+  position: relative;
+  background: #111317;
+  color: #FFFFFF;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 59, 129, 0.4);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 16px rgba(255, 59, 129, 0.18);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.ai-floating-trigger:hover {
+  border-color: #FF3B81;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55), 0 0 22px rgba(255, 59, 129, 0.35);
+}
+
+.ai-floating-trigger.active {
+  background: #FF3B81;
+  border-color: #FF3B81;
+  box-shadow: 0 10px 24px rgba(255, 59, 129, 0.4);
+}
+
+.ai-trigger-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF3B81;
+  transition: color 0.2s ease;
+}
+
+.ai-floating-trigger.active .ai-trigger-icon-wrap {
+  color: #FFFFFF;
+}
+
+.ai-trigger-text {
+  white-space: nowrap;
+}
+
+.ai-trigger-pulse-dot {
+  width: 6.5px;
+  height: 6.5px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  display: inline-block;
+  animation: concierge-dot-pulse 2s infinite ease-in-out;
+}
+
+@keyframes concierge-dot-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
+/* =========================================================================
+   Executive Concierge Popup Card (Ultra-Professional & Clean)
+   ========================================================================= */
+.ai-concierge-card {
+  position: absolute;
+  bottom: 56px;
+  right: 0;
+  width: 335px;
+  max-width: calc(100vw - 36px);
+  background: rgba(17, 19, 25, 0.95);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.65), 0 0 1px 1px rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+@media (max-width: 480px) {
+  .ai-concierge-card {
+    width: calc(100vw - 36px);
+    right: 0;
+    bottom: 52px;
+    padding: 14px;
+  }
+}
+
+/* Header */
+.ai-concierge-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ai-concierge-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: rgba(255, 59, 129, 0.12);
+  color: #FF3B81;
+  border: 1px solid rgba(255, 59, 129, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ai-concierge-brand {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+
+.ai-concierge-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #8F94A6;
+  margin-top: 3px;
+}
+
+.ai-concierge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.7);
+  display: inline-block;
+}
+
+.ai-concierge-close {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #71717A;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s ease;
+}
+
+.ai-concierge-close:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+
+/* Action Cards */
+.ai-concierge-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ai-action-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.025);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ai-action-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
+}
+
+.ai-action-icon-box {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ai-icon-whatsapp {
+  background: rgba(37, 211, 102, 0.12);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.2);
+}
+
+.ai-icon-audit {
+  background: rgba(255, 59, 129, 0.12);
+  color: #FF3B81;
+  border: 1px solid rgba(255, 59, 129, 0.2);
+}
+
+.ai-icon-consult {
+  background: rgba(255, 255, 255, 0.06);
+  color: #E4E4E7;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-action-card.ai-action-whatsapp:hover {
+  border-color: rgba(37, 211, 102, 0.35);
+}
+
+.ai-action-card.ai-action-audit:hover {
+  border-color: rgba(255, 59, 129, 0.35);
+}
+
+.ai-action-card.ai-action-consult:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.ai-action-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.ai-action-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.ai-action-desc {
+  display: block;
+  font-size: 11px;
+  color: #8F94A6;
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ai-action-tag {
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.2px;
+}
+
+.ai-tag-whatsapp {
+  background: rgba(37, 211, 102, 0.15);
+  color: #25D366;
+}
+
+.ai-tag-audit {
+  background: rgba(255, 59, 129, 0.15);
+  color: #FF3B81;
+}
+
+.ai-tag-consult {
+  background: rgba(255, 255, 255, 0.08);
+  color: #D4D4D8;
+}
+
+.ai-action-arrow {
+  color: #52525B;
+  transition: transform 0.18s ease, color 0.18s ease;
+  flex-shrink: 0;
+}
+
+.ai-action-card:hover .ai-action-arrow {
+  color: #FFFFFF;
+  transform: translateX(2px);
+}
+
+/* Footer Reassurance */
+.ai-concierge-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 10px;
+  color: #71717A;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+
+/* =========================================================================
+   OUR SERVICES SECTION (Match Exact Mockup UI)
+   ========================================================================= */
+.services-section-wrapper {
+  padding: 70px 0;
+  position: relative;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.services-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+}
+
+@media (max-width: 991px) {
+  .services-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.services-header-left {
+  max-width: 620px;
+}
+
+.services-eyebrow-line-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.services-eyebrow-star {
+  color: #FF3B81;
+  font-size: 14px;
+}
+
+.services-eyebrow-text {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: #121316;
+  text-transform: uppercase;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.services-eyebrow-hr {
+  width: 48px;
+  height: 1px;
+  background: #D1D5DB;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.services-main-heading {
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: 850;
+  letter-spacing: -1.2px;
+  color: #111318;
+  line-height: 1.12;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+.services-heading-accent {
+  background: linear-gradient(90deg, #E11D48, #C026D3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.services-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  max-width: 460px;
+}
+
+@media (max-width: 991px) {
+  .services-header-right {
+    align-items: flex-start;
+  }
+}
+
+.services-header-desc {
+  font-size: 14.5px;
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0;
+  text-align: right;
+}
+
+@media (max-width: 991px) {
+  .services-header-desc {
+    text-align: left;
+  }
+}
+
+.services-view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: 1px solid rgba(18, 19, 22, 0.16);
+  background: #FFFFFF;
+  color: #121316 !important;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.services-view-all-btn:hover {
+  border-color: #121316;
+  background: #121316;
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+}
+
+.services-view-all-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.services-view-all-btn:hover .services-view-all-circle {
+  transform: translateX(2px);
+}
+
+/* Service Feature Card (Cards 1 to 7) */
+.service-feature-card {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
+  padding: 26px 22px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none !important;
+}
+
+.service-feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 59, 129, 0.25);
+  box-shadow: 0 16px 36px -10px rgba(255, 59, 129, 0.12), 0 6px 18px -6px rgba(0, 0, 0, 0.05);
+}
+
+/* Subtle pink radial wash in bottom-right corner */
+.service-card-corner-glow {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 59, 129, 0.14) 0%, rgba(255, 59, 129, 0.04) 50%, rgba(255, 59, 129, 0) 75%);
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.service-feature-card:hover .service-card-corner-glow {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.service-card-top {
+  position: relative;
+  z-index: 1;
+}
+
+.service-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 59, 129, 0.06);
+  border: 1px solid rgba(255, 59, 129, 0.14);
+  color: #FF3B81;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.service-feature-card:hover .service-icon-box {
+  background: rgba(255, 59, 129, 0.12);
+  border-color: rgba(255, 59, 129, 0.3);
+  transform: scale(1.05);
+}
+
+.service-badge {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #FF3B81;
+  background: rgba(255, 59, 129, 0.06);
+  border: 1px solid rgba(255, 59, 129, 0.12);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.service-card-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 17.5px;
+  font-weight: 800;
+  color: #111318;
+  line-height: 1.25;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.service-card-desc {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 13px;
+  color: #64748B;
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+
+.service-learn-more {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #111318;
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.service-learn-more-arrow {
+  color: #FF3B81;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.service-feature-card:hover .service-learn-more-arrow {
+  transform: translateX(4px);
+}
+
+/* 8th Card (Bespoke Authority Advisory - Dark Luxury) */
+.service-dark-card {
+  position: relative;
+  background: linear-gradient(145deg, #0B0D13 0%, #12141C 55%, #181222 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.5);
+  padding: 26px 22px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  text-decoration: none !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-dark-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 59, 129, 0.45);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.65), 0 0 25px rgba(255, 59, 129, 0.2);
+}
+
+.service-dark-ambient-glow {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(225, 29, 72, 0.45) 0%, rgba(147, 51, 234, 0.25) 45%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+  filter: blur(6px);
+}
+
+.service-dark-top {
+  position: relative;
+  z-index: 1;
+}
+
+.service-dark-badge {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.service-dark-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 18px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin-top: 14px;
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.service-dark-desc {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 13px;
+  color: #94A3B8;
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+
+.service-dark-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+}
+
+.service-dark-link span:last-child {
+  color: #FF3B81;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.service-dark-card:hover .service-dark-link span:last-child {
+  transform: translateX(4px);
+}
+
+.service-dark-bars-graphic {
+  position: relative;
+  z-index: 1;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+
+
+

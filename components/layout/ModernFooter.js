@@ -11,13 +11,12 @@ export default function ModernFooter() {
         <div className="row g-5 pb-5 border-bottom border-secondary border-opacity-25">
           {/* Column 1: Brand, Positioning & Direct Contact */}
           <div className="col-lg-4 col-md-12">
-            <Link href="/" className="d-flex align-items-center gap-2 text-decoration-none mb-3" aria-label="Prominence Home">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF3B81">
-                <path d="M12 0 Q12 12 0 12 Q12 12 12 24 Q12 12 24 12 Q12 12 12 0 Z" />
-              </svg>
-              <span style={{ fontSize: '20px', fontWeight: 900, letterSpacing: '2.5px', color: '#FFFFFF', fontFamily: 'sans-serif' }}>
-                PROMINENCE
-              </span>
+            <Link href="/" className="d-inline-flex align-items-center text-decoration-none mb-3" aria-label="Prominence Home" style={{ background: '#FFFFFF', padding: '6px 14px', borderRadius: '8px' }}>
+              <img
+                src="/new/navbar.png"
+                alt="Elite Prominence"
+                style={{ height: '36px', width: 'auto', objectFit: 'contain', display: 'block' }}
+              />
             </Link>
 
             <p style={{ fontSize: '14px', lineHeight: 1.65, color: '#9CA3AF', maxWidth: '340px', marginBottom: '20px' }}>
@@ -96,9 +95,9 @@ export default function ModernFooter() {
 
           {/* Column 2: Executive Services (Interlinking all 7 services) */}
           <div className="col-lg-2 col-md-4 col-6">
-            <h4 style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1.2px', color: '#FFFFFF', marginBottom: '18px' }}>
+            <h3 style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1.2px', color: '#FFFFFF', marginBottom: '18px' }}>
               Services
-            </h4>
+            </h3>
             <ul className="list-unstyled d-flex flex-column gap-2 mb-0" style={{ fontSize: '13.5px' }}>
               <li>
                 <Link href="/services/executive-digital-hq" className="text-secondary text-decoration-none hover-white">
@@ -145,9 +144,9 @@ export default function ModernFooter() {
 
           {/* Column 3: Solutions by Role (Interlinking all 5 solutions) */}
           <div className="col-lg-2 col-md-4 col-6">
-            <h4 style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1.2px', color: '#FFFFFF', marginBottom: '18px' }}>
+            <h3 style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1.2px', color: '#FFFFFF', marginBottom: '18px' }}>
               Solutions
-            </h4>
+            </h3>
             <ul className="list-unstyled d-flex flex-column gap-2 mb-0" style={{ fontSize: '13.5px' }}>
               <li>
                 <Link href="/solutions/ceos" className="text-secondary text-decoration-none hover-white">
@@ -189,9 +188,9 @@ export default function ModernFooter() {
 
           {/* Column 4: GEO & Authority Insights (SEO / AEO / GEO Interlinking) */}
           <div className="col-lg-2 col-md-4 col-6">
-            <h4 style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1.2px', color: '#FFFFFF', marginBottom: '18px' }}>
+            <h3 style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1.2px', color: '#FFFFFF', marginBottom: '18px' }}>
               GEO &amp; Insights
-            </h4>
+            </h3>
             <ul className="list-unstyled d-flex flex-column gap-2 mb-0" style={{ fontSize: '13.5px' }}>
               <li>
                 <Link href="/blog/geo-generative-engine-optimization-for-executives" className="text-secondary text-decoration-none hover-white">
@@ -233,9 +232,9 @@ export default function ModernFooter() {
 
           {/* Column 5: Firm & Advisory Protocol */}
           <div className="col-lg-2 col-md-4 col-6">
-            <h4 style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1.2px', color: '#FFFFFF', marginBottom: '18px' }}>
+            <h3 style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1.2px', color: '#FFFFFF', marginBottom: '18px' }}>
               Firm
-            </h4>
+            </h3>
             <ul className="list-unstyled d-flex flex-column gap-2 mb-0" style={{ fontSize: '13.5px' }}>
               <li>
                 <Link href="/about" className="text-secondary text-decoration-none hover-white">

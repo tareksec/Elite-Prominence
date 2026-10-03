@@ -13,6 +13,7 @@
     "@floating-ui/react": "^0.27.20",
     "@supabase/ssr": "^0.12.6",
     "@supabase/supabase-js": "^2.115.0",
+    "@tabler/icons-react": "^3.48.0",
     "aos": "^2.3.4",
     "bootstrap-touchspin": "^4.7.3",
     "clsx": "^2.1.1",

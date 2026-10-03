@@ -32,7 +32,7 @@ export default function Footer1() {
                         <div>
                             <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: "10px", textDecoration: "none", marginBottom: "16px" }}>
                                 <img
-                                    src="/assets/images/Elite%20Prominence/EliteProminence-iocn.png"
+                                    src="/new/logo.png"
                                     alt="Elite Prominence"
                                     style={{ height: "36px", width: "auto", display: "block" }}
                                 />

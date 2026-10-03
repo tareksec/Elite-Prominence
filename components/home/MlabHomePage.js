@@ -6,6 +6,7 @@ import Image from 'next/image'
 import ModernHeader from '@/components/layout/ModernHeader'
 import ModernFooter from '@/components/layout/ModernFooter'
 import HeroVisual from './HeroVisual'
+import ServicesGridSection from '@/components/sections/ServicesGridSection'
 import { FlipText } from '@/components/ui/flip-text'
 import { FlipFadeText } from '@/components/ui/flip-fade-text'
 import { StaggerText } from '@/components/ui/stagger-text'
@@ -264,31 +265,15 @@ export default function MlabHomePage() {
               </p>
 
               <div className="d-flex flex-wrap align-items-center gap-3">
-                <TooltipProvider>
-                  <Tooltip side="top">
-                    <TooltipTrigger asChild>
-                      <Link href="/contact" className="prominence-btn-primary">
-                        <span>Book a Private Consultation</span>
-                        <span style={{ fontSize: '15px' }}>&rarr;</span>
-                      </Link>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      Confidential 1-on-1 executive briefing with Managing Partner
-                    </TooltipContent>
-                  </Tooltip>
+                <Link href="/contact" className="prominence-btn-primary">
+                  <span>Book a Private Consultation</span>
+                  <span style={{ fontSize: '15px' }}>&rarr;</span>
+                </Link>
 
-                  <Tooltip side="top">
-                    <TooltipTrigger asChild>
-                      <Link href="/how-it-works" className="prominence-btn-outline">
-                        <span>Explore the Protocol</span>
-                        <span style={{ fontSize: '15px' }}>&rarr;</span>
-                      </Link>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      Explore our 4-stage sovereign stature framework
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
+                <Link href="/how-it-works" className="prominence-btn-outline">
+                  <span>Explore the Protocol</span>
+                  <span style={{ fontSize: '15px' }}>&rarr;</span>
+                </Link>
               </div>
 
               {/* Bottom Ticker Strip */}
@@ -412,95 +397,9 @@ export default function MlabHomePage() {
       </section>
 
       {/* =========================================================================
-          OUR SERVICES SECTION
+          OUR SERVICES SECTION (MATCHING EXACT MOCKUP)
       ========================================================================= */}
-      <section id="services" className="py-5 my-4" aria-labelledby="services-heading">
-        <div className="mlab-container">
-          <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 gap-3">
-            <div>
-              <span className="editorial-badge">
-                <span className="editorial-badge-dot">✦</span> OUR SERVICES
-              </span>
-              <h2 id="services-heading" style={{ fontSize: 'clamp(30px, 3.8vw, 44px)', fontWeight: 850, letterSpacing: '-0.8px', color: '#121316', margin: 0 }}>
-                <StaggerText divideBy="word">
-                  Strategic services for lasting digital influence.
-                </StaggerText>
-              </h2>
-            </div>
-            <Link href="/services" className="d-flex align-items-center gap-2 text-decoration-none fw-bold text-dark">
-              <span>View all services</span>
-              <span style={{ color: '#FF3B81' }}>&rarr;</span>
-            </Link>
-          </div>
-
-          <div className="row g-4">
-            {homeServices.map((item, idx) => (
-              <div key={idx} className="col-md-6 col-lg-3">
-                <Link href={item.slug} className="text-decoration-none">
-                  <div className="value-pillar-card h-100 d-flex flex-column justify-content-between">
-                    <div>
-                      <div className="d-flex align-items-center justify-content-between mb-3">
-                        <TooltipProvider>
-                          <Tooltip side="top">
-                            <TooltipTrigger>
-                              <div className="value-pillar-icon mb-0">
-                                {item.icon}
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              Explore {item.title}
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-
-                        <span className="badge" style={{ backgroundColor: '#FAF7F4', color: '#FF3B81', border: '1px solid rgba(255,59,129,0.15)', fontSize: '10px', fontWeight: 800 }}>
-                          {item.badge}
-                        </span>
-                      </div>
-
-                      <h3 style={{ fontSize: '17px', fontWeight: 800, color: '#121316', marginBottom: '10px' }}>
-                        {item.title}
-                      </h3>
-                      <p style={{ fontSize: '13.5px', color: '#6B7280', margin: 0, lineHeight: 1.5 }}>
-                        {item.desc}
-                      </p>
-                    </div>
-
-                    <div className="d-flex align-items-center justify-content-between pt-4 mt-2 border-top" style={{ fontSize: '12.5px', fontWeight: 700, color: '#121316', borderColor: 'rgba(0,0,0,0.05)' }}>
-                      <span>Learn More</span>
-                      <span style={{ color: '#FF3B81' }}>&rarr;</span>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-
-            {/* 8th Card: Direct Link to All Services */}
-            <div className="col-md-6 col-lg-3">
-              <Link href="/services" className="text-decoration-none">
-                <div className="value-pillar-card h-100 d-flex flex-column justify-content-between text-white" style={{ backgroundColor: '#121316' }}>
-                  <div>
-                    <span className="editorial-badge text-white-50 mb-3" style={{ background: 'rgba(255,255,255,0.1)' }}>
-                      ✦ FULL SUITE
-                    </span>
-                    <h3 style={{ fontSize: '20px', fontWeight: 850, color: '#FFFFFF', marginBottom: '12px' }}>
-                      Bespoke Authority Advisory
-                    </h3>
-                    <p style={{ fontSize: '13.5px', color: '#9CA3AF', margin: 0, lineHeight: 1.5 }}>
-                      Explore our full capabilities in Google search dominance, personal website architecture, and executive thought leadership.
-                    </p>
-                  </div>
-
-                  <div className="d-flex align-items-center gap-2 pt-4" style={{ fontSize: '13px', fontWeight: 800, color: '#FF3B81' }}>
-                    <span>Browse All 7 Pillars</span>
-                    <span>&rarr;</span>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServicesGridSection showViewAll={true} />
 
       {/* =========================================================================
           ROLE-SPECIFIC SOLUTIONS SECTION (SEO, GEO & AEO INTERLINKING)
@@ -526,7 +425,7 @@ export default function MlabHomePage() {
 
           <div className="row g-4">
             {homeSolutions.map((sol, idx) => (
-              <div key={idx} className={idx < 2 ? "col-md-6" : "col-md-4"}>
+              <div key={idx} className="col-lg-4 col-md-6">
                 <Link href={sol.slug} className="text-decoration-none">
                   <div className="value-pillar-card h-100 p-4 p-md-5 d-flex flex-column justify-content-between bg-white shadow-sm">
                     <div>
@@ -548,11 +447,11 @@ export default function MlabHomePage() {
                       </p>
                     </div>
 
-                    <div className="d-flex align-items-center justify-content-between pt-4 mt-3 border-top" style={{ borderColor: 'rgba(0,0,0,0.06)' }}>
-                      <span style={{ fontSize: '13px', fontWeight: 700, color: '#121316' }}>
-                        Explore Framework
-                      </span>
-                      <span style={{ color: '#FF3B81', fontWeight: 800 }}>&rarr;</span>
+                    <div className="pt-4 mt-3 border-top" style={{ borderColor: 'rgba(0,0,0,0.06)' }}>
+                      <div className="d-inline-flex align-items-center gap-2" style={{ fontSize: '13px', fontWeight: 700, color: '#121316' }}>
+                        <span>Explore Framework</span>
+                        <span style={{ color: '#FF3B81', fontWeight: 800 }}>&rarr;</span>
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -815,22 +714,22 @@ export default function MlabHomePage() {
 
           {/* Topic Cluster Pills for GEO, AI & Executive Authority (AEO / GEO Architecture) */}
           <div className="d-flex flex-wrap align-items-center gap-2 mb-4">
-            <Link href="/blog-grid" className="badge text-decoration-none px-3 py-2 rounded-pill" style={{ backgroundColor: '#121316', color: '#FFFFFF', fontSize: '12px' }}>
+            <Link href="/blog-grid" className="badge text-decoration-none px-3 py-2 rounded-pill" style={{ backgroundColor: '#121316', color: '#FFFFFF', fontSize: '12px', border: '1px solid #121316' }}>
               All 17 Articles
             </Link>
-            <Link href="/blog/geo-generative-engine-optimization-for-executives" className="badge text-decoration-none px-3 py-2 rounded-pill" style={{ backgroundColor: '#FAF7F4', color: '#FF3B81', border: '1px solid rgba(255,59,129,0.2)', fontSize: '12px' }}>
+            <Link href="/blog/geo-generative-engine-optimization-for-executives" className="badge text-decoration-none px-3 py-2 rounded-pill" style={{ backgroundColor: '#FAF7F4', color: '#121316', border: '1px solid rgba(18,19,22,0.12)', fontSize: '12px' }}>
               GEO &amp; AI Models
             </Link>
-            <Link href="/blog/chief-technology-officer-personal-brand" className="badge text-decoration-none px-3 py-2 rounded-pill" style={{ backgroundColor: '#FAF7F4', color: '#121316', border: '1px solid rgba(18,19,22,0.1)', fontSize: '12px' }}>
+            <Link href="/blog/chief-technology-officer-personal-brand" className="badge text-decoration-none px-3 py-2 rounded-pill" style={{ backgroundColor: '#FAF7F4', color: '#121316', border: '1px solid rgba(18,19,22,0.12)', fontSize: '12px' }}>
               CTO &amp; AI Branding
             </Link>
-            <Link href="/blog/from-corporate-executive-to-board-advisor" className="badge text-decoration-none px-3 py-2 rounded-pill" style={{ backgroundColor: '#FAF7F4', color: '#121316', border: '1px solid rgba(18,19,22,0.1)', fontSize: '12px' }}>
+            <Link href="/blog/from-corporate-executive-to-board-advisor" className="badge text-decoration-none px-3 py-2 rounded-pill" style={{ backgroundColor: '#FAF7F4', color: '#121316', border: '1px solid rgba(18,19,22,0.12)', fontSize: '12px' }}>
               Board Governance
             </Link>
-            <Link href="/blog/c-suite-linkedin-algorithm-strategy-2026" className="badge text-decoration-none px-3 py-2 rounded-pill" style={{ backgroundColor: '#FAF7F4', color: '#121316', border: '1px solid rgba(18,19,22,0.1)', fontSize: '12px' }}>
+            <Link href="/blog/c-suite-linkedin-algorithm-strategy-2026" className="badge text-decoration-none px-3 py-2 rounded-pill" style={{ backgroundColor: '#FAF7F4', color: '#121316', border: '1px solid rgba(18,19,22,0.12)', fontSize: '12px' }}>
               C-Suite LinkedIn
             </Link>
-            <Link href="/blog/ceo-reputation-management-2026" className="badge text-decoration-none px-3 py-2 rounded-pill" style={{ backgroundColor: '#FAF7F4', color: '#121316', border: '1px solid rgba(18,19,22,0.1)', fontSize: '12px' }}>
+            <Link href="/blog/ceo-reputation-management-2026" className="badge text-decoration-none px-3 py-2 rounded-pill" style={{ backgroundColor: '#FAF7F4', color: '#121316', border: '1px solid rgba(18,19,22,0.12)', fontSize: '12px' }}>
               CEO Valuation
             </Link>
           </div>
@@ -851,11 +750,12 @@ export default function MlabHomePage() {
                     </div>
                     <div className="modern-case-body p-4">
                       <div>
-                        <div className="d-flex align-items-center justify-content-between mb-2">
+                        <div className="d-flex align-items-center gap-2 mb-2">
                           <span style={{ fontSize: '11px', color: '#9CA3AF', fontWeight: 600 }}>
                             {post.date}
                           </span>
-                          <span style={{ fontSize: '10.5px', fontWeight: 800, color: '#FF3B81', textTransform: 'uppercase' }}>
+                          <span aria-hidden="true" style={{ color: '#D1D5DB' }}>·</span>
+                          <span style={{ fontSize: '11px', fontWeight: 800, color: '#FF3B81', textTransform: 'uppercase' }}>
                             {post.category}
                           </span>
                         </div>
@@ -961,51 +861,6 @@ export default function MlabHomePage() {
           </div>
         </div>
       </section>
-
-      {/* Floating WhatsApp Direct Advisory Button */}
-      <div
-        style={{
-          position: 'fixed',
-          bottom: '26px',
-          right: '26px',
-          zIndex: 9999,
-        }}
-      >
-        <TooltipProvider>
-          <Tooltip side="left">
-            <TooltipTrigger asChild>
-              <a
-                href="https://wa.me/8801645441584"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="d-flex align-items-center gap-2 shadow-lg text-decoration-none"
-                style={{
-                  backgroundColor: '#25D366',
-                  color: '#FFFFFF',
-                  padding: '12px 18px',
-                  borderRadius: '32px',
-                  boxShadow: '0 12px 30px rgba(37,211,102,0.4)',
-                  fontWeight: 700,
-                  fontSize: '13.5px',
-                  border: '1.5px solid rgba(255,255,255,0.2)',
-                  transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-3px) scale(1.03)')}
-                onMouseLeave={(e) => (e.currentTarget.style.transform = 'translateY(0) scale(1)')}
-                aria-label="Direct WhatsApp Advisory with Managing Partner"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.36 7.32 9.09 7.38 8.87 7.62C8.65 7.86 8.02 8.45 8.02 9.68C8.02 10.9 8.91 12.08 9.04 12.25C9.16 12.42 10.79 14.92 13.27 16C13.86 16.25 14.32 16.41 14.68 16.52C15.27 16.71 15.82 16.68 16.25 16.62C16.73 16.55 17.72 16.02 17.93 15.44C18.14 14.85 18.14 14.35 18.08 14.25C18.01 14.15 17.85 14.09 17.6 13.96C17.36 13.84 16.14 13.24 15.91 13.16C15.69 13.07 15.52 13.03 15.36 13.28C15.19 13.52 14.71 14.09 14.56 14.25C14.42 14.42 14.27 14.44 14.03 14.32C13.78 14.19 12.98 13.93 12.04 13.09C11.31 12.44 10.81 11.63 10.67 11.39C10.52 11.14 10.65 11.01 10.78 10.88C10.89 10.77 11.03 10.59 11.15 10.45C11.27 10.31 11.31 10.2 11.39 10.04C11.47 9.88 11.43 9.73 11.37 9.61C11.31 9.49 10.81 8.27 10.61 7.77C10.41 7.29 10.21 7.35 10.05 7.35C9.9 7.34 9.72 7.32 9.53 7.32Z" />
-                </svg>
-                <span>WhatsApp Advisory</span>
-              </a>
-            </TooltipTrigger>
-            <TooltipContent>
-              Connect directly with Managing Partner Md Tarek (+880 1645-441584)
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      </div>
 
       <ModernFooter />
     </div>

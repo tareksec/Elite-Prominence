@@ -16,12 +16,12 @@ export default function HeroVisual() {
         className="hero-connectors-svg position-absolute top-0 start-0 w-100 h-100"
         style={{ zIndex: 3, pointerEvents: 'none' }}
       >
-        {/* EXECUTIVE AUTHORITY connector */}
+        {/* Executive Authority connector */}
         <line x1="165" y1="42" x2="230" y2="42" stroke="#121316" strokeWidth="1" opacity="0.6" />
         <line x1="230" y1="42" x2="295" y2="92" stroke="#FF3B81" strokeWidth="1.2" strokeDasharray="3 3" />
         <circle cx="230" cy="42" r="3" fill="#FF3B81" />
 
-        {/* DIGITAL HQ connector */}
+        {/* Digital HQ connector */}
         <line x1="535" y1="42" x2="495" y2="82" stroke="#121316" strokeWidth="1" opacity="0.6" />
         <circle cx="535" cy="42" r="3" fill="#FF3B81" />
 
@@ -41,26 +41,26 @@ export default function HeroVisual() {
       </svg>
 
       {/* =========================================================================
-          CALLOUT TAG 1: EXECUTIVE AUTHORITY (TOP LEFT)
+          CALLOUT TAG 1: Executive Authority (TOP LEFT)
       ========================================================================= */}
       <div
         className="position-absolute hero-callout-tag"
         style={{ top: '30px', left: '18px', zIndex: 10 }}
       >
         <span className="hero-editorial-label">
-          EXECUTIVE AUTHORITY
+          Executive Authority
         </span>
       </div>
 
       {/* =========================================================================
-          CALLOUT TAG 2: DIGITAL HQ (TOP RIGHT)
+          CALLOUT TAG 2: Digital HQ (TOP RIGHT)
       ========================================================================= */}
       <div
         className="position-absolute hero-callout-tag"
         style={{ top: '30px', right: '15px', zIndex: 10 }}
       >
         <span className="hero-editorial-label">
-          DIGITAL HQ
+          Digital HQ
         </span>
       </div>
 
