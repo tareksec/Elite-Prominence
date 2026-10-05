@@ -1443,7 +1443,7 @@ html.lenis, html.lenis body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 9990;
-  display: none;
+  display: flex !important;
   align-items: flex-end;
   height: 64px;
   padding: 0 14px 10px;
@@ -1456,11 +1456,51 @@ html.lenis, html.lenis body {
     0 18px 45px -8px rgba(18, 19, 22, 0.12),
     0 4px 12px rgba(18, 19, 22, 0.04),
     inset 0 1px 1px rgba(255, 255, 255, 0.95);
+  max-width: calc(100vw - 16px);
+  box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 74px;
+  }
+
   .floating-dock-desktop {
-    display: flex;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    height: 52px;
+    padding: 0 8px 5px;
+    border-radius: 26px;
+    max-width: calc(100vw - 16px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 
+      0 12px 35px -6px rgba(18, 19, 22, 0.20),
+      0 4px 12px rgba(18, 19, 22, 0.08),
+      inset 0 1px 1px rgba(255, 255, 255, 0.95);
+  }
+
+  .floating-dock-desktop::-webkit-scrollbar {
+    display: none;
+  }
+
+  .floating-dock-desktop-inner {
+    gap: 4px;
+    align-items: center;
+  }
+
+  .floating-dock-separator {
+    height: 18px;
+    margin: 0 2px 4px !important;
+  }
+
+  .floating-dock-tooltip {
+    display: none !important;
+  }
+
+  .floating-dock-mobile {
+    display: none !important;
   }
 }
 
@@ -1819,8 +1859,8 @@ header.mlab-header {
 
 @media (max-width: 767px) {
   .ai-floating-widget-wrapper {
-    bottom: 84px;
-    right: 18px;
+    bottom: 76px;
+    right: 14px;
   }
 }
 

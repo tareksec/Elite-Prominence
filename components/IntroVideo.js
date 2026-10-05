@@ -25,6 +25,7 @@ export default function IntroVideo() {
 
     // 2. Unlock scroll immediately
     if (typeof document !== 'undefined') {
+      document.documentElement.classList.add('intro-already-seen')
       document.body.style.overflow = ''
       document.documentElement.style.overflow = ''
     }
@@ -47,9 +48,6 @@ export default function IntroVideo() {
 
     // 5. Completely unmount from DOM immediately after transition
     setTimeout(() => {
-      if (typeof document !== 'undefined') {
-        document.documentElement.classList.add('intro-already-seen')
-      }
       setIsVisible(false)
     }, 350)
   }, [])
@@ -150,6 +148,7 @@ export default function IntroVideo() {
     <div
       id="intro-video-overlay"
       key="intro-video-overlay"
+      onClick={handleClose}
       style={{
         position: 'fixed',
         inset: 0,
@@ -161,6 +160,7 @@ export default function IntroVideo() {
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
+        cursor: 'default',
         opacity: isClosing ? 0 : 1,
         pointerEvents: isClosing ? 'none' : 'auto',
         transition: 'opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
@@ -168,30 +168,47 @@ export default function IntroVideo() {
       role="dialog"
       aria-modal="true"
       aria-label="Brand introduction"
-    >
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-        onTimeUpdate={handleTimeUpdate}
-        onLoadedMetadata={handleMetadata}
-        onEnded={handleClose}
-        onError={() => {
-          handleClose()
-        }}
+      {/* Screen-adjusted intro video container */}
+      <div
         style={{
           width: '100%',
           height: '100%',
-          objectFit: 'cover',
-          objectPosition: 'center',
-          display: 'block',
+          maxWidth: '100vw',
+          maxHeight: '100dvh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           backgroundColor: '#e9e2d3',
         }}
       >
-        <source src="/new/intro.mp4" type="video/mp4" />
-      </video>
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          playsInline
+          webkit-playsinline="true"
+          x5-playsinline="true"
+          preload="auto"
+          onTimeUpdate={handleTimeUpdate}
+          onLoadedMetadata={handleMetadata}
+          onEnded={handleClose}
+          onError={() => {
+            handleClose()
+          }}
+          style={{
+            width: '100%',
+            height: '100%',
+            maxWidth: '100vw',
+            maxHeight: '100dvh',
+            objectFit: 'contain',
+            objectPosition: 'center',
+            display: 'block',
+            backgroundColor: '#e9e2d3',
+          }}
+        >
+          <source src="/new/intro.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
   )
 }

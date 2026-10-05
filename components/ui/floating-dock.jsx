@@ -18,138 +18,7 @@ export const FloatingDock = ({
   desktopClassName,
   mobileClassName,
 }) => {
-  return (
-    <>
-      <FloatingDockDesktop items={items} className={desktopClassName} />
-      <FloatingDockMobile items={items} className={mobileClassName} />
-    </>
-  )
-}
-
-const FloatingDockMobile = ({
-  items,
-  className,
-}) => {
-  const [open, setOpen] = useState(false)
-  const pathname = usePathname()
-
-  // Close menu on route change
-  useEffect(() => {
-    setOpen(false)
-  }, [pathname])
-
-  return (
-    <>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="floating-dock-mobile-backdrop"
-            onClick={() => setOpen(false)}
-            aria-hidden="true"
-          />
-        )}
-      </AnimatePresence>
-
-      <div className={cn("floating-dock-mobile", className)}>
-        <AnimatePresence>
-          {open && (
-            <motion.div
-              layoutId="floating-nav-mobile"
-              className="floating-dock-mobile-menu"
-              initial={{ opacity: 0, y: 20, scale: 0.94 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 20, scale: 0.94 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              role="dialog"
-              aria-modal="true"
-              aria-label="Navigation Menu"
-            >
-              {/* Mobile Header with Full Brand Wordmark */}
-              <div className="floating-dock-mobile-header">
-                <img
-                  src="/new/navbar.png"
-                  alt="Elite Prominence"
-                  style={{ height: "26px", width: "auto", objectFit: "contain", display: "block" }}
-                />
-              </div>
-
-              <div className="floating-dock-mobile-items-list">
-                {items.map((item, idx) => {
-                  const isExternal = item.href?.startsWith('http')
-                  const LinkComponent = isExternal ? 'a' : Link
-                  const linkProps = isExternal
-                    ? { href: item.href, target: "_blank", rel: "noopener noreferrer" }
-                    : { href: item.href }
-
-                  const isActive = !item.isBrand && !isExternal && (
-                    item.href === '/' ? pathname === '/' : pathname?.startsWith(item.href)
-                  )
-
-                  return (
-                    <motion.div
-                      key={item.title}
-                      initial={{ opacity: 0, x: 12 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 12 }}
-                      transition={{ delay: idx * 0.02, duration: 0.2 }}
-                    >
-                      <LinkComponent
-                        {...linkProps}
-                        onClick={() => setOpen(false)}
-                        className={cn(
-                          "floating-dock-mobile-item",
-                          item.highlight && "floating-dock-mobile-item-highlight",
-                          item.colorType && `floating-dock-mobile-item-${item.colorType}`,
-                          isActive && "floating-dock-mobile-item-active"
-                        )}
-                        aria-label={item.title}
-                        aria-current={isActive ? "page" : undefined}
-                      >
-                        <div className="floating-dock-mobile-icon">{item.icon}</div>
-                        <span className="floating-dock-mobile-label">{item.title}</span>
-                        {item.badge && (
-                          <span className="floating-dock-mobile-badge">{item.badge}</span>
-                        )}
-                        {isActive && <span className="floating-dock-active-dot-mobile" />}
-                      </LinkComponent>
-                    </motion.div>
-                  )
-                })}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        <button
-          type="button"
-          onClick={() => setOpen(!open)}
-          className={cn("floating-dock-mobile-trigger", open && "floating-dock-mobile-trigger-open")}
-          aria-label={open ? "Close menu" : "Open navigation menu"}
-          aria-expanded={open}
-        >
-          <motion.div
-            animate={{ rotate: open ? 90 : 0 }}
-            transition={{ duration: 0.22, ease: "easeInOut" }}
-            style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-          >
-            {open ? (
-              <IconX size={22} stroke={2.2} />
-            ) : (
-              <img
-                src="/new/logo.png"
-                alt="Elite Prominence"
-                style={{ width: "28px", height: "28px", objectFit: "contain", display: "block" }}
-              />
-            )}
-          </motion.div>
-        </button>
-      </div>
-    </>
-  )
+  return <FloatingDockDesktop items={items} className={desktopClassName} />
 }
 
 const FloatingDockDesktop = ({
@@ -158,14 +27,28 @@ const FloatingDockDesktop = ({
 }) => {
   const mouseX = useMotionValue(Infinity)
   const pathname = usePathname()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   return (
     <motion.nav
       initial={{ y: 35, opacity: 0, x: "-50%" }}
       animate={{ y: 0, opacity: 1, x: "-50%" }}
       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-      onMouseMove={(e) => mouseX.set(e.pageX)}
-      onMouseLeave={() => mouseX.set(Infinity)}
+      onMouseMove={(e) => {
+        if (!isMobile) mouseX.set(e.pageX)
+      }}
+      onMouseLeave={() => {
+        if (!isMobile) mouseX.set(Infinity)
+      }}
       className={cn("floating-dock-desktop", className)}
       role="navigation"
       aria-label="Floating Navigation Dock"
@@ -179,7 +62,7 @@ const FloatingDockDesktop = ({
 
           return (
             <React.Fragment key={item.title}>
-              <IconContainer mouseX={mouseX} isActive={isActive} {...item} />
+              <IconContainer mouseX={mouseX} isActive={isActive} isMobile={isMobile} {...item} />
               {(item.separator || item.separatorAfter) && (
                 <div className="floating-dock-separator" aria-hidden="true" />
               )}
@@ -200,6 +83,7 @@ function IconContainer({
   colorType,
   isBrand,
   isActive,
+  isMobile,
 }) {
   const ref = useRef(null)
 
@@ -208,14 +92,19 @@ function IconContainer({
     return val - bounds.x - bounds.width / 2
   })
 
-  const widthTransform = useTransform(distance, [-140, 0, 140], [42, 68, 42])
-  const heightTransform = useTransform(distance, [-140, 0, 140], [42, 68, 42])
+  const baseSize = isMobile ? 38 : 42
+  const hoverSize = isMobile ? 44 : 68
+  const baseIcon = isMobile ? 18 : 20
+  const hoverIcon = isMobile ? 22 : 32
 
-  const widthTransformIcon = useTransform(distance, [-140, 0, 140], [20, 32, 20])
+  const widthTransform = useTransform(distance, [-140, 0, 140], [baseSize, hoverSize, baseSize])
+  const heightTransform = useTransform(distance, [-140, 0, 140], [baseSize, hoverSize, baseSize])
+
+  const widthTransformIcon = useTransform(distance, [-140, 0, 140], [baseIcon, hoverIcon, baseIcon])
   const heightTransformIcon = useTransform(
     distance,
     [-140, 0, 140],
-    [20, 32, 20]
+    [baseIcon, hoverIcon, baseIcon]
   )
 
   const width = useSpring(widthTransform, {
@@ -258,8 +147,9 @@ function IconContainer({
       <motion.div
         ref={ref}
         style={{ width, height }}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+        whileTap={{ scale: 0.88 }}
+        onMouseEnter={() => !isMobile && setHovered(true)}
+        onMouseLeave={() => !isMobile && setHovered(false)}
         className={cn(
           "floating-dock-item",
           isBrand && "floating-dock-item-brand",
@@ -269,7 +159,7 @@ function IconContainer({
         )}
       >
         <AnimatePresence>
-          {hovered && (
+          {hovered && !isMobile && (
             <motion.div
               initial={{ opacity: 0, y: 8, x: "-50%", scale: 0.95 }}
               animate={{ opacity: 1, y: 0, x: "-50%", scale: 1 }}
