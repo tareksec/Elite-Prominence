@@ -168,6 +168,7 @@ export default function IntroVideo() {
       role="dialog"
       aria-modal="true"
       aria-label="Brand introduction"
+    >
       {/* Screen-adjusted intro video container */}
       <div
         style={{
