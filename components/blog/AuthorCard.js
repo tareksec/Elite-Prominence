@@ -43,7 +43,7 @@ export default function AuthorCard({
           left: 0,
           right: 0,
           height: '4px',
-          background: 'linear-gradient(90deg, #FF3B81 0%, #7C3AED 100%)'
+          background: 'linear-gradient(90deg, #FF3B81 0%, #121316 100%)'
         }}
       />
 

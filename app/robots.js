@@ -14,6 +14,11 @@ export default function robots() {
           '/signup',
         ],
       },
+      {
+        userAgent: ['GPTBot', 'PerplexityBot', 'ClaudeBot', 'Google-Extended', 'Applebot-Extended', 'cohere-ai'],
+        allow: '/',
+        disallow: ['/dashboard', '/admin', '/api/', '/login', '/signup'],
+      },
     ],
     sitemap: 'https://www.prominence.agency/sitemap.xml',
   }

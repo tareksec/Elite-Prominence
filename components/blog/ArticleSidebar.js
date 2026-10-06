@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useEffect, useState } from 'react'
 
 export default function ArticleSidebar({ slug = 'default-post' }) {
@@ -65,17 +66,6 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
     }
   }
 
-  const mobileShare = () => {
-    if (typeof navigator !== 'undefined' && navigator.share) {
-      navigator.share({
-        title: document.title,
-        url: window.location.href
-      }).catch(() => {})
-    } else {
-      copyLink()
-    }
-  }
-
   return (
     <>
       {/* Desktop Sticky Right Sidebar (>= 1280px) */}
@@ -89,25 +79,25 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '14px',
+          gap: '12px',
           background: '#FFFFFF',
-          border: '1px solid #E5E7EB',
+          border: '1.5px solid rgba(18, 19, 22, 0.08)',
           borderRadius: '9999px',
           padding: '16px 10px',
-          boxShadow: '0 1px 3px rgba(15, 18, 53, 0.05)',
-          width: '68px',
+          boxShadow: '0 4px 18px rgba(18, 19, 22, 0.04)',
+          width: '64px',
           marginLeft: 'auto'
         }}
       >
         {/* Share Buttons */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
           <button
             onClick={shareLinkedIn}
             title="Share on LinkedIn"
             aria-label="Share on LinkedIn"
             className="action-btn"
           >
-            <i className="fab fa-linkedin-in" style={{ fontSize: '15px' }}></i>
+            <i className="fab fa-linkedin-in" style={{ fontSize: '14px' }}></i>
           </button>
 
           <button
@@ -116,7 +106,7 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             aria-label="Share on X"
             className="action-btn"
           >
-            <i className="fab fa-x-twitter" style={{ fontSize: '14px' }}></i>
+            <i className="fab fa-x-twitter" style={{ fontSize: '13px' }}></i>
           </button>
 
           <button
@@ -125,14 +115,14 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             aria-label="Copy Link"
             className="action-btn"
           >
-            <i className="fa-solid fa-link" style={{ fontSize: '14px' }}></i>
+            <i className="fa-solid fa-link" style={{ fontSize: '13px' }}></i>
           </button>
         </div>
 
-        <div style={{ width: '28px', height: '1px', background: '#E5E7EB', margin: '4px 0' }} />
+        <div style={{ width: '24px', height: '1px', background: 'rgba(18, 19, 22, 0.08)', margin: '4px 0' }} />
 
         {/* Reactions */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
           {/* Clap / Endorsement */}
           <button
             onClick={() => toggleReaction('claps')}
@@ -140,21 +130,21 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             title="Endorse"
             aria-label="Endorse"
           >
-            <i className="fa-solid fa-thumbs-up" style={{ fontSize: '14px', lineHeight: 1 }}></i>
-            <span style={{ fontSize: '11px', fontWeight: '700', marginTop: '2px', lineHeight: 1 }}>
+            <i className="fa-solid fa-thumbs-up" style={{ fontSize: '13px', lineHeight: 1 }}></i>
+            <span style={{ fontSize: '10.5px', fontWeight: '800', marginTop: '2px', lineHeight: 1 }}>
               {baseCounts.claps + (reactions.claps ? 1 : 0)}
             </span>
           </button>
 
-          {/* Like */}
+          {/* Bookmark */}
           <button
             onClick={() => toggleReaction('likes')}
             className={`action-btn ${reactions.likes ? 'active' : ''}`}
             title="Bookmark"
             aria-label="Bookmark"
           >
-            <i className="fa-solid fa-bookmark" style={{ fontSize: '14px', lineHeight: 1 }}></i>
-            <span style={{ fontSize: '11px', fontWeight: '700', marginTop: '2px', lineHeight: 1 }}>
+            <i className="fa-solid fa-bookmark" style={{ fontSize: '13px', lineHeight: 1 }}></i>
+            <span style={{ fontSize: '10.5px', fontWeight: '800', marginTop: '2px', lineHeight: 1 }}>
               {baseCounts.likes + (reactions.likes ? 1 : 0)}
             </span>
           </button>
@@ -166,137 +156,72 @@ export default function ArticleSidebar({ slug = 'default-post' }) {
             title="Insightful"
             aria-label="Insightful"
           >
-            <i className="fa-solid fa-lightbulb" style={{ fontSize: '14px', lineHeight: 1 }}></i>
-            <span style={{ fontSize: '11px', fontWeight: '700', marginTop: '2px', lineHeight: 1 }}>
+            <i className="fa-solid fa-lightbulb" style={{ fontSize: '13px', lineHeight: 1 }}></i>
+            <span style={{ fontSize: '10.5px', fontWeight: '800', marginTop: '2px', lineHeight: 1 }}>
               {baseCounts.insights + (reactions.insights ? 1 : 0)}
             </span>
           </button>
         </div>
       </aside>
 
-      {/* Mobile Fixed Bottom Bar (< 768px) */}
-      <aside
-        className="sidebar-mobile-bottom"
-        aria-label="Mobile Reactions & Share"
-        style={{
-          display: 'none',
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          background: '#FFFFFF',
-          borderTop: '1px solid #E5E7EB',
-          padding: '10px 20px',
-          zIndex: 1000,
-          boxShadow: '0 -4px 16px rgba(15, 18, 53, 0.08)',
-          justifyContent: 'space-around',
-          alignItems: 'center'
-        }}
-      >
-        <button
-          onClick={() => toggleReaction('claps')}
-          className={`action-btn ${reactions.claps ? 'active' : ''}`}
-          aria-label="Endorse"
-        >
-          <i className="fa-solid fa-thumbs-up" style={{ fontSize: '14px' }}></i>
-          <span style={{ fontSize: '11px', fontWeight: '700' }}>
-            {baseCounts.claps + (reactions.claps ? 1 : 0)}
-          </span>
-        </button>
-
-        <button
-          onClick={() => toggleReaction('likes')}
-          className={`action-btn ${reactions.likes ? 'active' : ''}`}
-          aria-label="Bookmark"
-        >
-          <i className="fa-solid fa-bookmark" style={{ fontSize: '14px' }}></i>
-          <span style={{ fontSize: '11px', fontWeight: '700' }}>
-            {baseCounts.likes + (reactions.likes ? 1 : 0)}
-          </span>
-        </button>
-
-        <button
-          onClick={() => toggleReaction('insights')}
-          className={`action-btn ${reactions.insights ? 'active' : ''}`}
-          aria-label="Insightful"
-        >
-          <i className="fa-solid fa-lightbulb" style={{ fontSize: '14px' }}></i>
-          <span style={{ fontSize: '11px', fontWeight: '700' }}>
-            {baseCounts.insights + (reactions.insights ? 1 : 0)}
-          </span>
-        </button>
-
-        <button
-          onClick={mobileShare}
-          className="action-btn"
-          aria-label="Share"
-        >
-          <i className="fa-solid fa-share-nodes" style={{ fontSize: '15px' }}></i>
-        </button>
-      </aside>
-
-      {/* Toast Alert */}
+      {/* Floating Action Feedback Toast */}
       {toastMsg && (
         <div
           role="status"
           style={{
             position: 'fixed',
-            bottom: '80px',
+            bottom: 'calc(80px + env(safe-area-inset-bottom, 0px))',
             left: '50%',
             transform: 'translateX(-50%)',
-            background: '#0D0D14',
+            background: '#121316',
             color: '#FFFFFF',
-            padding: '10px 20px',
-            borderRadius: '8px',
-            fontSize: '14px',
-            fontWeight: '500',
+            padding: '9px 18px',
+            borderRadius: '9999px',
+            fontSize: '13px',
+            fontWeight: '600',
             zIndex: 99999,
-            boxShadow: '0 4px 14px rgba(13, 13, 20, 0.25)',
+            boxShadow: '0 8px 24px rgba(18, 19, 22, 0.3)',
             display: 'flex',
             alignItems: 'center',
             gap: '8px'
           }}
         >
-          <i className="fa-solid fa-circle-check" style={{ color: '#8B5CF6', fontSize: '15px' }}></i>
-          {toastMsg}
+          <span style={{ color: '#FF3B81' }}>✦</span>
+          <span>{toastMsg}</span>
         </div>
       )}
 
       <style jsx>{`
         .action-btn {
-          width: 44px;
-          height: 44px;
+          width: 42px;
+          height: 42px;
           border-radius: 50%;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           color: #6B7280;
-          background: #FFFFFF;
-          border: 1px solid #E5E7EB;
+          background: #FAF7F4;
+          border: 1px solid rgba(18, 19, 22, 0.08);
           cursor: pointer;
-          transition: all 0.2s ease;
+          transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .action-btn:hover {
-          color: #0D0D14;
-          border-color: #0D0D14;
-          background: #F7F5FC;
-          transform: scale(1.06);
+          color: #FF3B81;
+          border-color: rgba(255, 59, 129, 0.3);
+          background: #FFFFFF;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(255, 59, 129, 0.15);
         }
         .action-btn.active {
-          background: #0D0D14 !important;
+          background: #FF3B81 !important;
           color: #FFFFFF !important;
-          border-color: #0D0D14 !important;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          border-color: #FF3B81 !important;
+          box-shadow: 0 4px 14px rgba(255, 59, 129, 0.35);
         }
         @media (max-width: 1279px) {
           .sidebar-desktop {
             display: none !important;
-          }
-        }
-        @media (max-width: 767px) {
-          .sidebar-mobile-bottom {
-            display: flex !important;
           }
         }
       `}</style>

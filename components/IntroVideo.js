@@ -14,11 +14,15 @@ export default function IntroVideo() {
     if (closedRef.current) return
     closedRef.current = true
 
-    // 1. Permanently record across browser sessions
+    if (videoRef.current) {
+      try {
+        videoRef.current.pause()
+      } catch (e) {}
+    }
+
+    // 1. Record for current browser session
     try {
-      localStorage.setItem('elite_intro_played', 'true')
       sessionStorage.setItem('introSeen', 'true')
-      document.cookie = 'elite_intro_played=true; path=/; max-age=315360000; SameSite=Lax'
     } catch (e) {
       // Ignore storage errors
     }
@@ -57,47 +61,35 @@ export default function IntroVideo() {
 
     // Check prefers-reduced-motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
-    // Check permanent storage (localStorage, sessionStorage, cookie)
-    let hasSeenIntro = false
-    try {
-      hasSeenIntro =
-        localStorage.getItem('elite_intro_played') === 'true' ||
-        sessionStorage.getItem('introSeen') === 'true' ||
-        document.cookie.includes('elite_intro_played=true')
-    } catch (e) {
-      hasSeenIntro = false
-    }
-
-    if (prefersReducedMotion || hasSeenIntro) {
-      closedRef.current = true
-      document.documentElement.classList.add('intro-already-seen')
-      document.body.style.overflow = ''
-      document.documentElement.style.overflow = ''
-      setIsVisible(false)
+    if (prefersReducedMotion) {
+      handleClose()
       return
     }
 
-    // First time visitor: Immediately mark as played so it NEVER triggers again
+    // Clear any stale legacy locks
     try {
-      localStorage.setItem('elite_intro_played', 'true')
-      sessionStorage.setItem('introSeen', 'true')
-      document.cookie = 'elite_intro_played=true; path=/; max-age=315360000; SameSite=Lax'
+      localStorage.removeItem('elite_intro_played')
+      document.cookie = 'elite_intro_played=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT'
     } catch (e) {}
 
     // Lock page scroll while intro is playing
     document.body.style.overflow = 'hidden'
     document.documentElement.style.overflow = 'hidden'
 
-    // Play video
+    // Play video smoothly using the browser's native source selection
     const video = videoRef.current
     if (video) {
       video.muted = true
       video.defaultMuted = true
       video.playsInline = true
-      const p = video.play()
-      if (p !== undefined) {
-        p.catch(() => handleClose())
+
+      if (video.paused) {
+        const p = video.play()
+        if (p !== undefined) {
+          p.catch(() => {
+            // Autoplay catch: keep video mounted and ready
+          })
+        }
       }
     }
 
@@ -169,17 +161,18 @@ export default function IntroVideo() {
       aria-modal="true"
       aria-label="Brand introduction"
     >
-      {/* Screen-adjusted intro video container */}
+      {/* Full-bleed edge-to-edge intro video container */}
       <div
         style={{
-          width: '100%',
-          height: '100%',
-          maxWidth: '100vw',
-          maxHeight: '100dvh',
+          position: 'absolute',
+          inset: 0,
+          width: '100vw',
+          height: '100dvh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: '#e9e2d3',
+          overflow: 'hidden',
         }}
       >
         <video
@@ -197,16 +190,19 @@ export default function IntroVideo() {
             handleClose()
           }}
           style={{
-            width: '100%',
-            height: '100%',
-            maxWidth: '100vw',
-            maxHeight: '100dvh',
-            objectFit: 'contain',
+            position: 'absolute',
+            inset: 0,
+            width: '100vw',
+            height: '100dvh',
+            minWidth: '100vw',
+            minHeight: '100dvh',
+            objectFit: 'cover',
             objectPosition: 'center',
             display: 'block',
             backgroundColor: '#e9e2d3',
           }}
         >
+          <source src="/new/mobile-intro.mp4" type="video/mp4" media="(max-width: 768px)" />
           <source src="/new/intro.mp4" type="video/mp4" />
         </video>
       </div>

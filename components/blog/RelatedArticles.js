@@ -3,11 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-/**
- * RelatedArticles — HackerNoon-style 3-column related articles grid
- * Placed beneath the Author Card to keep executive readers engaged.
- * Smooth translateY(-4px) and subtle purple glow on hover.
- */
 export default function RelatedArticles({ articles = [], currentSlug = '' }) {
   // Filter out the active reading article and take up to 3
   const filtered = articles
@@ -22,29 +17,21 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
       style={{
         marginTop: '4rem',
         paddingTop: '3rem',
-        borderTop: '1px solid #E5E7EB'
+        borderTop: '1px solid rgba(18, 19, 22, 0.08)'
       }}
     >
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2rem', flexWrap: 'wrap', gap: '12px' }}>
         <div>
-          <span
-            style={{
-              fontSize: '12px',
-              fontWeight: '700',
-              textTransform: 'uppercase',
-              letterSpacing: '0.8px',
-              color: '#8B5CF6',
-              fontFamily: 'var(--primary-font)'
-            }}
-          >
-            Further Reading
+          <span className="editorial-badge">
+            <span className="editorial-badge-dot">✦</span> FURTHER READING
           </span>
           <h2
             style={{
-              fontFamily: "var(--title-font, 'PT Serif', Georgia, serif)",
-              fontSize: '28px',
-              color: '#0D0D14',
-              margin: '4px 0 0 0'
+              fontSize: 'clamp(24px, 3vw, 32px)',
+              fontWeight: 850,
+              letterSpacing: '-0.02em',
+              color: '#121316',
+              margin: '8px 0 0 0'
             }}
           >
             Recommended Executive Articles
@@ -54,16 +41,17 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
         <Link
           href="/blog-grid"
           style={{
-            fontSize: '14px',
-            fontWeight: '600',
-            color: '#0D0D14',
+            fontSize: '13.5px',
+            fontWeight: 700,
+            color: '#121316',
             textDecoration: 'none',
             display: 'inline-flex',
             alignItems: 'center',
             gap: '6px'
           }}
         >
-          View All <i className="fa-solid fa-arrow-right" style={{ fontSize: '12px' }}></i>
+          <span>View All</span>
+          <span style={{ color: '#FF3B81' }}>&rarr;</span>
         </Link>
       </div>
 
@@ -75,7 +63,7 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
                 {/* Image Wrap */}
                 <div className="ep-card-img-wrap">
                   <img
-                    src={art.heroImage || 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&h=630&q=80'}
+                    src={art.heroImage || '/assets/images/project/project_1.jpg'}
                     alt={art.title}
                     className="ep-card-img"
                   />
@@ -87,11 +75,11 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
                 </div>
 
                 {/* Card Content */}
-                <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', flexGrow: 1, backgroundColor: '#FFFFFF' }}>
+                <div style={{ padding: '22px', display: 'flex', flexDirection: 'column', flexGrow: 1, backgroundColor: '#FFFFFF' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: '#6B7280', marginBottom: '8px' }}>
                     <span>{art.publishDate || 'Recent'}</span>
                     <span>•</span>
-                    <span>{art.readTime || '6 min read'}</span>
+                    <span style={{ color: '#FF3B81', fontWeight: 700 }}>{art.readTime || '6 min read'}</span>
                   </div>
 
                   <h3 className="ep-card-title">
@@ -104,9 +92,9 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
                     </p>
                   )}
 
-                  <div style={{ marginTop: 'auto', paddingTop: '12px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '700', color: '#0D0D14' }}>
+                  <div style={{ marginTop: 'auto', paddingTop: '12px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: 700, color: '#121316' }}>
                     <span>Read Article</span>
-                    <i className="fa-solid fa-arrow-right ms-1" style={{ fontSize: '12px' }}></i>
+                    <span style={{ color: '#FF3B81' }}>&rarr;</span>
                   </div>
                 </div>
               </Link>
@@ -123,17 +111,18 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
         }
 
         .ep-related-card {
-          border-radius: 14px;
+          border-radius: 20px;
           overflow: hidden;
           background: #FFFFFF;
-          border: 1px solid #E5E7EB;
-          transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+          border: 1.5px solid rgba(18, 19, 22, 0.08);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
         }
 
         .ep-related-card:hover {
           transform: translateY(-4px);
-          box-shadow: 0 12px 30px rgba(13, 13, 20, 0.08);
-          border-color: #cbd5e1;
+          box-shadow: 0 16px 36px rgba(18, 19, 22, 0.08);
+          border-color: rgba(255, 59, 129, 0.3);
         }
 
         .ep-card-img-wrap {
@@ -141,52 +130,52 @@ export default function RelatedArticles({ articles = [], currentSlug = '' }) {
           width: 100%;
           height: 190px;
           overflow: hidden;
-          background-color: #F7F5FC;
+          background-color: #FAF7F4;
         }
 
         .ep-card-img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: transform 0.35s ease;
+          transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .ep-related-card:hover .ep-card-img {
-          transform: scale(1.04);
+          transform: scale(1.05);
         }
 
         .ep-card-badge {
           position: absolute;
-          top: 12px;
-          left: 12px;
-          background: #0D0D14;
+          top: 14px;
+          left: 14px;
+          background: rgba(18, 19, 22, 0.9);
+          backdrop-filter: blur(8px);
           color: #FFFFFF;
-          font-size: 11px;
-          font-weight: 700;
+          font-size: 10px;
+          font-weight: 800;
           text-transform: uppercase;
-          letter-spacing: 0.5px;
+          letter-spacing: 0.8px;
           padding: 4px 10px;
-          border-radius: 4px;
+          border-radius: 9999px;
           border: 1px solid rgba(255, 255, 255, 0.15);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-          font-family: var(--primary-font);
         }
 
         .ep-card-title {
-          font-family: var(--title-font, 'PT Serif', Georgia, serif);
-          font-size: 18px;
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+          font-size: 16.5px;
+          font-weight: 800;
           line-height: 1.35;
-          color: #0D0D14;
+          color: #121316;
           margin: 0 0 8px 0;
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           overflow: hidden;
-          transition: color 0.15s ease;
+          transition: color 0.2s ease;
         }
 
         .ep-related-card:hover .ep-card-title {
-          color: #8B5CF6;
+          color: #FF3B81;
         }
 
         .ep-card-excerpt {

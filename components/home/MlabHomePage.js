@@ -11,6 +11,7 @@ import { FlipText } from '@/components/ui/flip-text'
 import { FlipFadeText } from '@/components/ui/flip-fade-text'
 import { StaggerText } from '@/components/ui/stagger-text'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function MlabHomePage() {
   const [activeFaq, setActiveFaq] = useState(1) // Item 2 active by default
@@ -305,7 +306,13 @@ export default function MlabHomePage() {
       <section className="py-5 my-3" aria-labelledby="firm-heading">
         <div className="mlab-container">
           <div className="row align-items-center g-5">
-            <div className="col-lg-6">
+            <motion.div
+              className="col-lg-6"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+            >
               <span className="editorial-badge">
                 <span className="editorial-badge-dot">✦</span> OUR FIRM
               </span>
@@ -321,9 +328,15 @@ export default function MlabHomePage() {
                 <span>Our Approach</span>
                 <span>&rarr;</span>
               </Link>
-            </div>
+            </motion.div>
 
-            <div className="col-lg-6">
+            <motion.div
+              className="col-lg-6"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+            >
               <div className="position-relative" style={{ maxWidth: '500px', margin: '0 auto' }}>
                 <div className="position-absolute" style={{ top: '-15px', right: '40px', zIndex: 5 }}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="#FF3B81">
@@ -331,7 +344,7 @@ export default function MlabHomePage() {
                   </svg>
                 </div>
 
-                <div
+                <motion.div
                   style={{
                     position: 'relative',
                     height: '360px',
@@ -339,17 +352,19 @@ export default function MlabHomePage() {
                     overflow: 'hidden',
                     boxShadow: '0 20px 45px rgba(0,0,0,0.08)',
                   }}
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <Image
                     src="/assets/images/project/project_1.jpg"
                     alt="Prominence Corporate Headquarters"
                     fill
-                    className="object-fit-cover"
+                    className="object-fit-cover transition-transform duration-500"
                     sizes="500px"
                   />
-                </div>
+                </motion.div>
 
-                <div
+                <motion.div
                   className="position-absolute bg-white rounded-4 p-4 shadow-lg border"
                   style={{
                     bottom: '24px',
@@ -357,6 +372,10 @@ export default function MlabHomePage() {
                     width: '185px',
                     zIndex: 4,
                   }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 25, delay: 0.35 }}
                 >
                   <TooltipProvider>
                     <div className="mb-3">
@@ -389,9 +408,9 @@ export default function MlabHomePage() {
                       </Tooltip>
                     </div>
                   </TooltipProvider>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -425,7 +444,19 @@ export default function MlabHomePage() {
 
           <div className="row g-4">
             {homeSolutions.map((sol, idx) => (
-              <div key={idx} className="col-lg-4 col-md-6">
+              <motion.div
+                key={idx}
+                className="col-lg-4 col-md-6"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 280,
+                  damping: 24,
+                  delay: idx * 0.06,
+                }}
+              >
                 <Link href={sol.slug} className="text-decoration-none">
                   <div className="value-pillar-card h-100 p-4 p-md-5 d-flex flex-column justify-content-between bg-white shadow-sm">
                     <div>
@@ -455,7 +486,7 @@ export default function MlabHomePage() {
                     </div>
                   </div>
                 </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -485,7 +516,19 @@ export default function MlabHomePage() {
 
           <div className="row g-4">
             {caseStudies.map((item, idx) => (
-              <div key={idx} className="col-md-4">
+              <motion.div
+                key={idx}
+                className="col-md-4"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 280,
+                  damping: 24,
+                  delay: idx * 0.08,
+                }}
+              >
                 <Link href={item.slug} className="text-decoration-none">
                   <article className="modern-case-card h-100 d-flex flex-column justify-content-between">
                     <div>
@@ -517,7 +560,7 @@ export default function MlabHomePage() {
                     </div>
                   </article>
                 </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -541,7 +584,13 @@ export default function MlabHomePage() {
 
           <div className="row g-4">
             {/* Testimonial 1 */}
-            <div className="col-lg-6">
+            <motion.div
+              className="col-lg-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            >
               <article className="value-pillar-card p-4 p-md-5">
                 <span style={{ color: '#FF3B81', fontSize: '32px', lineHeight: 1, display: 'block', marginBottom: '12px', fontFamily: 'serif' }}>“</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.35, marginBottom: '16px', color: '#121316' }}>
@@ -570,10 +619,16 @@ export default function MlabHomePage() {
                   </div>
                 </div>
               </article>
-            </div>
+            </motion.div>
 
             {/* Testimonial 2 */}
-            <div className="col-lg-6">
+            <motion.div
+              className="col-lg-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
+            >
               <article className="value-pillar-card p-4 p-md-5">
                 <span style={{ color: '#FF3B81', fontSize: '32px', lineHeight: 1, display: 'block', marginBottom: '12px', fontFamily: 'serif' }}>“</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.35, marginBottom: '16px', color: '#121316' }}>
@@ -602,7 +657,7 @@ export default function MlabHomePage() {
                   </div>
                 </div>
               </article>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -613,7 +668,13 @@ export default function MlabHomePage() {
       <section id="faq" className="py-5 my-4" aria-labelledby="faq-heading">
         <div className="mlab-container">
           <div className="row g-5">
-            <div className="col-lg-5">
+            <motion.div
+              className="col-lg-5"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            >
               <span className="editorial-badge">
                 <span className="editorial-badge-dot">✦</span> COMMON INQUIRIES
               </span>
@@ -629,20 +690,21 @@ export default function MlabHomePage() {
                 <span>Ask a Specific Question</span>
                 <span>&rarr;</span>
               </Link>
-            </div>
+            </motion.div>
 
             <div className="col-lg-7">
               <div className="d-flex flex-column gap-3">
                 {faqs.map((faq, idx) => {
                   const isOpen = activeFaq === idx
                   return (
-                    <div
+                    <motion.div
                       key={idx}
                       className="bg-white rounded-4 border transition-all"
                       style={{
                         padding: '22px 26px',
                         borderColor: isOpen ? '#FF3B81' : 'rgba(18,19,22,0.08)',
                       }}
+                      layout
                     >
                       <button
                         type="button"
@@ -654,7 +716,9 @@ export default function MlabHomePage() {
                         <span style={{ fontSize: '16px', fontWeight: 800, color: '#121316', paddingRight: '16px' }}>
                           {faq.question}
                         </span>
-                        <span
+                        <motion.span
+                          animate={{ rotate: isOpen ? 180 : 0 }}
+                          transition={{ duration: 0.25 }}
                           style={{
                             width: '28px',
                             height: '28px',
@@ -667,21 +731,31 @@ export default function MlabHomePage() {
                             fontSize: '16px',
                             fontWeight: 700,
                             flexShrink: 0,
-                            transition: 'all 0.2s ease',
+                            transition: 'background-color 0.2s ease, color 0.2s ease',
                           }}
                         >
                           {isOpen ? '−' : '+'}
-                        </span>
+                        </motion.span>
                       </button>
 
-                      {isOpen && (
-                        <div className="pt-3 mt-3 border-top" style={{ borderColor: 'rgba(0,0,0,0.06)' }}>
-                          <p style={{ fontSize: '14.5px', color: '#4B5563', lineHeight: 1.65, margin: 0 }}>
-                            {faq.answer}
-                          </p>
-                        </div>
-                      )}
-                    </div>
+                      <AnimatePresence initial={false}>
+                        {isOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                            className="overflow-hidden"
+                          >
+                            <div className="pt-3 mt-3 border-top" style={{ borderColor: 'rgba(0,0,0,0.06)' }}>
+                              <p style={{ fontSize: '14.5px', color: '#4B5563', lineHeight: 1.65, margin: 0 }}>
+                                {faq.answer}
+                              </p>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </motion.div>
                   )
                 })}
               </div>
@@ -736,7 +810,19 @@ export default function MlabHomePage() {
 
           <div className="row g-4">
             {blogPosts.map((post, idx) => (
-              <div key={idx} className="col-md-6 col-lg-4">
+              <motion.div
+                key={idx}
+                className="col-md-6 col-lg-4"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 280,
+                  damping: 24,
+                  delay: idx * 0.06,
+                }}
+              >
                 <Link href={post.slug} className="text-decoration-none">
                   <article className="modern-case-card">
                     <div className="modern-case-img-box" style={{ height: '190px' }}>
@@ -770,7 +856,7 @@ export default function MlabHomePage() {
                     </div>
                   </article>
                 </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -781,7 +867,13 @@ export default function MlabHomePage() {
       ========================================================================= */}
       <section className="py-4 my-5">
         <div className="mlab-container">
-          <div className="custom-solution-cta">
+          <motion.div
+            className="custom-solution-cta"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          >
             <div className="row align-items-center g-4">
               <div className="col-lg-7">
                 <span className="editorial-badge text-white-50">
@@ -858,7 +950,7 @@ export default function MlabHomePage() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 

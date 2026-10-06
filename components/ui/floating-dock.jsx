@@ -18,7 +18,7 @@ export const FloatingDock = ({
   desktopClassName,
   mobileClassName,
 }) => {
-  return <FloatingDockDesktop items={items} className={desktopClassName} />
+  return <FloatingDockDesktop items={items} className={cn(desktopClassName, mobileClassName)} />
 }
 
 const FloatingDockDesktop = ({
@@ -27,34 +27,59 @@ const FloatingDockDesktop = ({
 }) => {
   const mouseX = useMotionValue(Infinity)
   const pathname = usePathname()
-  const [isMobile, setIsMobile] = useState(false)
+  const [screenSize, setScreenSize] = useState({ isMobile: false, width: 1200 })
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
+    const checkScreen = () => {
+      setScreenSize({
+        isMobile: window.innerWidth < 768,
+        width: window.innerWidth,
+      })
     }
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
+    checkScreen()
+    window.addEventListener('resize', checkScreen, { passive: true })
+    return () => window.removeEventListener('resize', checkScreen)
   }, [])
+
+  const isMobile = screenSize.isMobile
+  const screenWidth = screenSize.width
+
+  const handleTouch = (e) => {
+    if (e.touches && e.touches[0]) {
+      mouseX.set(e.touches[0].clientX)
+    }
+  }
+
+  const handleTouchEnd = () => {
+    mouseX.set(Infinity)
+  }
 
   return (
     <motion.nav
-      initial={{ y: 35, opacity: 0, x: "-50%" }}
-      animate={{ y: 0, opacity: 1, x: "-50%" }}
-      transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+      initial={{ y: 55, opacity: 0, x: "-50%", scale: 0.92 }}
+      animate={{ y: 0, opacity: 1, x: "-50%", scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 280,
+        damping: 24,
+        mass: 0.85,
+      }}
       onMouseMove={(e) => {
-        if (!isMobile) mouseX.set(e.pageX)
+        mouseX.set(e.clientX)
       }}
       onMouseLeave={() => {
-        if (!isMobile) mouseX.set(Infinity)
+        mouseX.set(Infinity)
       }}
+      onTouchStart={handleTouch}
+      onTouchMove={handleTouch}
+      onTouchEnd={handleTouchEnd}
+      onTouchCancel={handleTouchEnd}
       className={cn("floating-dock-desktop", className)}
       role="navigation"
       aria-label="Floating Navigation Dock"
     >
       <div className="floating-dock-desktop-inner">
-        {items.map((item) => {
+        {items.map((item, idx) => {
           const isExternal = item.href?.startsWith('http')
           const isActive = !item.isBrand && !isExternal && (
             item.href === '/' ? pathname === '/' : pathname?.startsWith(item.href)
@@ -62,7 +87,14 @@ const FloatingDockDesktop = ({
 
           return (
             <React.Fragment key={item.title}>
-              <IconContainer mouseX={mouseX} isActive={isActive} isMobile={isMobile} {...item} />
+              <IconContainer
+                mouseX={mouseX}
+                isActive={isActive}
+                isMobile={isMobile}
+                screenWidth={screenWidth}
+                index={idx}
+                {...item}
+              />
               {(item.separator || item.separatorAfter) && (
                 <div className="floating-dock-separator" aria-hidden="true" />
               )}
@@ -84,6 +116,8 @@ function IconContainer({
   isBrand,
   isActive,
   isMobile,
+  screenWidth,
+  index = 0,
 }) {
   const ref = useRef(null)
 
@@ -92,18 +126,20 @@ function IconContainer({
     return val - bounds.x - bounds.width / 2
   })
 
-  const baseSize = isMobile ? 38 : 42
-  const hoverSize = isMobile ? 44 : 68
-  const baseIcon = isMobile ? 18 : 20
-  const hoverIcon = isMobile ? 22 : 32
+  const isSmallMobile = isMobile && screenWidth < 380
+  const baseSize = isMobile ? (isSmallMobile ? 33 : 36) : 42
+  const hoverSize = isMobile ? (isSmallMobile ? 44 : 48) : 68
+  const baseIcon = isMobile ? (isSmallMobile ? 16 : 18) : 20
+  const hoverIcon = isMobile ? (isSmallMobile ? 22 : 24) : 32
+  const distanceThreshold = isMobile ? (isSmallMobile ? 65 : 75) : 140
 
-  const widthTransform = useTransform(distance, [-140, 0, 140], [baseSize, hoverSize, baseSize])
-  const heightTransform = useTransform(distance, [-140, 0, 140], [baseSize, hoverSize, baseSize])
+  const widthTransform = useTransform(distance, [-distanceThreshold, 0, distanceThreshold], [baseSize, hoverSize, baseSize])
+  const heightTransform = useTransform(distance, [-distanceThreshold, 0, distanceThreshold], [baseSize, hoverSize, baseSize])
 
-  const widthTransformIcon = useTransform(distance, [-140, 0, 140], [baseIcon, hoverIcon, baseIcon])
+  const widthTransformIcon = useTransform(distance, [-distanceThreshold, 0, distanceThreshold], [baseIcon, hoverIcon, baseIcon])
   const heightTransformIcon = useTransform(
     distance,
-    [-140, 0, 140],
+    [-distanceThreshold, 0, distanceThreshold],
     [baseIcon, hoverIcon, baseIcon]
   )
 
@@ -147,7 +183,20 @@ function IconContainer({
       <motion.div
         ref={ref}
         style={{ width, height }}
-        whileTap={{ scale: 0.88 }}
+        initial={{ opacity: 0, scale: 0.7, y: 14 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 350,
+          damping: 22,
+          delay: 0.05 + index * 0.03,
+        }}
+        whileTap={{
+          scale: isMobile ? 1.18 : 0.88,
+          y: isMobile ? -5 : 0,
+          transition: { type: "spring", stiffness: 450, damping: 15 },
+        }}
+        whileHover={!isMobile ? { y: -2 } : undefined}
         onMouseEnter={() => !isMobile && setHovered(true)}
         onMouseLeave={() => !isMobile && setHovered(false)}
         className={cn(

@@ -1,15 +1,13 @@
-'use client'
+"use client"
 
 import React, { useEffect, useState, useMemo, useCallback, memo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
 
-const defaultWords = ["AUTHORITY", "INFLUENCE", "PRESTIGE", "SOVEREIGNTY"]
+const defaultWords = ["ELITE", "PROMINENCE", "DIGITAL", "LUXURY", "GROWTH"]
 
-const Letter = memo(function Letter({
-    char,
-    letterDuration
-}) {
+// Memoized Letter component for performance
+const Letter = memo(function Letter({ char, letterDuration }) {
     return (
         <motion.span
             style={{ transformStyle: "preserve-3d" }}
@@ -43,11 +41,12 @@ const Letter = memo(function Letter({
             }}
             className="inline-block"
         >
-            {char === " " ? "\u00A0" : char}
+            {char}
         </motion.span>
     )
 })
 
+// Memoized Word component for performance
 const Word = memo(function Word({
     text,
     staggerDelay,
@@ -60,7 +59,7 @@ const Word = memo(function Word({
     return (
         <motion.div
             className={cn(
-                "inline-flex gap-[0.03em] font-bold tracking-tight",
+                "inline-flex gap-[0.04em] font-extrabold uppercase tracking-tight",
                 textClassName
             )}
             initial="initial"
@@ -85,7 +84,7 @@ const Word = memo(function Word({
             {letters.map((char, i) => (
                 <Letter
                     key={`${char}-${i}`}
-                    char={char}
+                    char={char === " " ? "\u00A0" : char}
                     letterDuration={letterDuration}
                 />
             ))}
@@ -95,12 +94,12 @@ const Word = memo(function Word({
 
 export function FlipFadeText({
     words = defaultWords,
-    interval = 2800,
+    interval = 2500,
     className,
     textClassName,
     letterDuration = 0.5,
-    staggerDelay = 0.05,
-    exitStaggerDelay = 0.03,
+    staggerDelay = 0.06,
+    exitStaggerDelay = 0.04,
 }) {
     const [index, setIndex] = useState(0)
 
@@ -116,8 +115,8 @@ export function FlipFadeText({
     const currentWord = useMemo(() => words[index], [words, index])
 
     return (
-        <span className={cn("inline-flex items-center align-middle", className)}>
-            <span className="relative inline-flex items-center" style={{ perspective: "1000px" }}>
+        <span className={cn("inline-flex items-center justify-center relative", className)}>
+            <span className="relative inline-flex items-center justify-center" style={{ perspective: "1000px" }}>
                 <AnimatePresence mode="wait">
                     <Word
                         key={currentWord}

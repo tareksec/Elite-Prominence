@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function HeroVisual() {
   return (
@@ -19,55 +20,79 @@ export default function HeroVisual() {
         {/* Executive Authority connector */}
         <line x1="165" y1="42" x2="230" y2="42" stroke="#121316" strokeWidth="1" opacity="0.6" />
         <line x1="230" y1="42" x2="295" y2="92" stroke="#FF3B81" strokeWidth="1.2" strokeDasharray="3 3" />
-        <circle cx="230" cy="42" r="3" fill="#FF3B81" />
+        <circle cx="230" cy="42" r="3" fill="#FF3B81" className="hero-svg-dot" />
 
         {/* Digital HQ connector */}
         <line x1="535" y1="42" x2="495" y2="82" stroke="#121316" strokeWidth="1" opacity="0.6" />
-        <circle cx="535" cy="42" r="3" fill="#FF3B81" />
+        <circle cx="535" cy="42" r="3" fill="#FF3B81" className="hero-svg-dot" />
 
         {/* SEARCH PRESENCE connector */}
         <line x1="565" y1="232" x2="520" y2="258" stroke="#121316" strokeWidth="1" opacity="0.6" />
-        <circle cx="565" cy="232" r="3" fill="#FF3B81" />
+        <circle cx="565" cy="232" r="3" fill="#FF3B81" className="hero-svg-dot" />
 
         {/* TRUST SIGNAL connector */}
         <line x1="540" y1="412" x2="495" y2="412" stroke="#121316" strokeWidth="1" opacity="0.6" />
         <line x1="495" y1="412" x2="435" y2="385" stroke="#FF3B81" strokeWidth="1.2" strokeDasharray="3 3" />
-        <circle cx="495" cy="412" r="3" fill="#FF3B81" />
+        <circle cx="495" cy="412" r="3" fill="#FF3B81" className="hero-svg-dot" />
 
         {/* Constellation web extending to the left */}
         <line x1="150" y1="215" x2="105" y2="260" stroke="#FF3B81" strokeWidth="1" opacity="0.4" />
         <line x1="105" y1="260" x2="140" y2="330" stroke="#121316" strokeWidth="0.8" opacity="0.3" strokeDasharray="2 3" />
-        <circle cx="105" cy="260" r="2.5" fill="#FF3B81" opacity="0.7" />
+        <circle cx="105" cy="260" r="2.5" fill="#FF3B81" opacity="0.7" className="hero-svg-dot" />
       </svg>
 
       {/* =========================================================================
           CALLOUT TAG 1: Executive Authority (TOP LEFT)
       ========================================================================= */}
-      <div
+      <motion.div
         className="position-absolute hero-callout-tag"
         style={{ top: '30px', left: '18px', zIndex: 10 }}
+        initial={{ opacity: 0, y: 15 }}
+        animate={{
+          opacity: 1,
+          y: [0, -5, 0],
+        }}
+        transition={{
+          opacity: { duration: 0.6, delay: 0.2 },
+          y: { duration: 4.5, repeat: Infinity, ease: "easeInOut" },
+        }}
       >
         <span className="hero-editorial-label">
           Executive Authority
         </span>
-      </div>
+      </motion.div>
 
       {/* =========================================================================
           CALLOUT TAG 2: Digital HQ (TOP RIGHT)
       ========================================================================= */}
-      <div
+      <motion.div
         className="position-absolute hero-callout-tag"
         style={{ top: '30px', right: '15px', zIndex: 10 }}
+        initial={{ opacity: 0, y: 15 }}
+        animate={{
+          opacity: 1,
+          y: [0, -6, 0],
+        }}
+        transition={{
+          opacity: { duration: 0.6, delay: 0.35 },
+          y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.8 },
+        }}
       >
         <span className="hero-editorial-label">
           Digital HQ
         </span>
-      </div>
+      </motion.div>
 
       {/* =========================================================================
           CORE ARTWORK: EXECUTIVE DIGITAL IDENTITY COLLAGE PNG
       ========================================================================= */}
-      <div className="hero-main-collage-wrapper">
+      <motion.div
+        className="hero-main-collage-wrapper"
+        initial={{ opacity: 0, scale: 0.96 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        whileHover={{ scale: 1.015 }}
+      >
         <Image
           src="/assets/images/executive-digital-identity-collage.png"
           alt="Executive Digital Identity Collage"
@@ -81,9 +106,19 @@ export default function HeroVisual() {
         {/* =======================================================================
             3D EDITORIAL MAGNIFYING GLASS OVER SEARCH BAR (MATCHING MOCKUP)
         ======================================================================= */}
-        <div
+        <motion.div
           className="hero-magnifier-overlay position-absolute"
           aria-hidden="true"
+          animate={{
+            y: [0, -4, 0],
+            rotate: [-45, -42, -45],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          whileHover={{ scale: 1.08 }}
         >
           <svg width="105" height="155" viewBox="0 0 105 155" fill="none">
             <defs>
@@ -146,32 +181,51 @@ export default function HeroVisual() {
               />
             </g>
           </svg>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* =========================================================================
           CALLOUT TAG 3: SEARCH PRESENCE (RIGHT)
       ========================================================================= */}
-      <div
+      <motion.div
         className="position-absolute hero-callout-tag"
         style={{ top: '220px', right: '-12px', zIndex: 10 }}
+        initial={{ opacity: 0, x: 15 }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          y: [0, -4, 0],
+        }}
+        transition={{
+          opacity: { duration: 0.6, delay: 0.45 },
+          y: { duration: 5.2, repeat: Infinity, ease: "easeInOut", delay: 1.2 },
+        }}
       >
         <span className="hero-editorial-label">
           SEARCH PRESENCE
         </span>
-      </div>
+      </motion.div>
 
       {/* =========================================================================
           CALLOUT TAG 4: TRUST SIGNAL (BOTTOM RIGHT)
       ========================================================================= */}
-      <div
+      <motion.div
         className="position-absolute hero-callout-tag"
         style={{ bottom: '38px', right: '18px', zIndex: 10 }}
+        initial={{ opacity: 0, y: 15 }}
+        animate={{
+          opacity: 1,
+          y: [0, -5, 0],
+        }}
+        transition={{
+          opacity: { duration: 0.6, delay: 0.55 },
+          y: { duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 1.8 },
+        }}
       >
         <span className="hero-editorial-label">
           TRUST SIGNAL
         </span>
-      </div>
+      </motion.div>
     </div>
   )
 }

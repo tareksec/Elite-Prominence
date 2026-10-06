@@ -83,12 +83,6 @@ export default function RootLayout({ children }) {
                                 visibility: hidden !important;
                                 pointer-events: none !important;
                             }
-                            html:not(.intro-already-seen) {
-                                overflow: hidden !important;
-                            }
-                            html:not(.intro-already-seen) body {
-                                overflow: hidden !important;
-                            }
                         `,
                     }}
                 />
@@ -97,19 +91,17 @@ export default function RootLayout({ children }) {
                         __html: `
                             (function() {
                                 try {
-                                    var seen = localStorage.getItem('elite_intro_played') === 'true' ||
-                                               sessionStorage.getItem('introSeen') === 'true' ||
-                                               document.cookie.indexOf('elite_intro_played=true') !== -1;
-                                    if (seen) {
-                                        document.documentElement.classList.add('intro-already-seen');
-                                    } else {
-                                        var link = document.createElement('link');
-                                        link.rel = 'preload';
-                                        link.as = 'video';
-                                        link.href = '/new/intro.mp4';
-                                        link.type = 'video/mp4';
-                                        document.head.appendChild(link);
-                                    }
+                                    localStorage.removeItem('elite_intro_played');
+                                    document.cookie = 'elite_intro_played=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+                                    sessionStorage.removeItem('introSeen');
+
+                                    var isMobile = (window.innerWidth && window.innerWidth <= 768) || /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+                                    var link = document.createElement('link');
+                                    link.rel = 'preload';
+                                    link.as = 'video';
+                                    link.href = isMobile ? '/new/mobile-intro.mp4' : '/new/intro.mp4';
+                                    link.type = 'video/mp4';
+                                    document.head.appendChild(link);
                                 } catch(e) {}
                             })();
                         `,

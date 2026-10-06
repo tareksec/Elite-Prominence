@@ -47,9 +47,16 @@ export async function generateMetadata({ params }) {
     ? post.heroImage
     : `https://www.prominence.agency${post.heroImage || '/assets/images/elite/blog_1_hr_personal_brand.jpg'}`;
 
+  const publishIso = post.datePublished || '2026-08-01T00:00:00Z';
+  const modifiedIso = post.dateModified || '2026-10-06T00:00:00Z';
+
   return {
     title: seoTitle,
     description: post.excerpt,
+    keywords: post.tags?.join(', ') || post.primaryKeyword,
+    authors: [{ name: post.author?.name || 'Tarek Chowdhury', url: post.author?.linkedinUrl }],
+    creator: 'Tarek Chowdhury',
+    publisher: 'Elite Prominence',
     alternates: {
       canonical: pageUrl,
     },
@@ -60,6 +67,10 @@ export async function generateMetadata({ params }) {
       siteName: 'Elite Prominence',
       locale: 'en_US',
       type: 'article',
+      publishedTime: publishIso,
+      modifiedTime: modifiedIso,
+      authors: [post.author?.name || 'Tarek Chowdhury'],
+      tags: post.tags || [],
       images: [
         {
           url: heroImageUrl,
@@ -74,6 +85,8 @@ export async function generateMetadata({ params }) {
       title: post.title,
       description: post.excerpt,
       images: [heroImageUrl],
+      creator: '@EliteProminence',
+      site: '@EliteProminence'
     }
   };
 }
@@ -86,58 +99,91 @@ export default function BlogPostPage({ params }) {
   }
 
   const pageUrl = `https://www.prominence.agency/blog/${post.slug}`;
+  const publishIso = post.datePublished || '2026-08-01T00:00:00Z';
+  const modifiedIso = post.dateModified || '2026-10-06T00:00:00Z';
+
+  const schemaGraph = [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://www.prominence.agency',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Insights',
+          item: 'https://www.prominence.agency/blog-grid',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: post.title,
+          item: pageUrl,
+        },
+      ],
+    },
+    {
+      '@type': 'TechArticle',
+      '@id': `${pageUrl}#article`,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Elite Prominence',
+        url: 'https://www.prominence.agency'
+      },
+      headline: post.title,
+      description: post.excerpt,
+      image: post.heroImage?.startsWith('http') ? post.heroImage : `https://www.prominence.agency${post.heroImage}`,
+      inLanguage: 'en-US',
+      wordCount: post.wordCount || 2400,
+      keywords: post.tags ? post.tags.join(', ') : post.primaryKeyword,
+      articleSection: post.category || 'Executive Strategy',
+      author: {
+        '@type': 'Person',
+        name: post.author.name,
+        jobTitle: post.author.title,
+        url: post.author.linkedinUrl
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Elite Prominence',
+        url: 'https://www.prominence.agency',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.prominence.agency/favicon.png'
+        }
+      },
+      datePublished: publishIso,
+      dateModified: modifiedIso,
+      mainEntityOfPage: pageUrl,
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.executive-takeaways', 'h1', 'h2']
+      }
+    }
+  ];
+
+  if (post.faqs && post.faqs.length > 0) {
+    schemaGraph.push({
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: post.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer.replace(/<[^>]*>/g, '')
+        }
+      }))
+    });
+  }
 
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: 'https://www.prominence.agency',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Insights',
-            item: 'https://www.prominence.agency/blog-grid',
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: post.title,
-            item: pageUrl,
-          },
-        ],
-      },
-      {
-        '@type': 'Article',
-        headline: post.title,
-        description: post.excerpt,
-        image: post.heroImage?.startsWith('http') ? post.heroImage : `https://www.prominence.agency${post.heroImage}`,
-        author: {
-          '@type': 'Person',
-          name: post.author.name,
-          jobTitle: post.author.title,
-          url: post.author.linkedinUrl
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: 'Elite Prominence',
-          url: 'https://www.prominence.agency',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://www.prominence.agency/favicon.png'
-          }
-        },
-        datePublished: '2026-08-01T00:00:00Z',
-        dateModified: '2026-09-05T00:00:00Z',
-        mainEntityOfPage: pageUrl,
-      },
-    ],
+    '@graph': schemaGraph,
   };
 
   return (
@@ -167,7 +213,7 @@ export default function BlogPostPage({ params }) {
           </div>
         </div>
 
-        <main style={{ minHeight: '80vh', background: '#fafafc' }}>
+        <main style={{ minHeight: '80vh', background: '#FFFFFF' }}>
           <article className={styles.readingContainer}>
             <ArticleHeader
               title={post.title}
@@ -181,11 +227,21 @@ export default function BlogPostPage({ params }) {
 
             <div className={styles.threeColLayout}>
               {/* Sticky TOC Sidebar (Left, desktop only) */}
-              <TableOfContents headings={post.headings} />
+              <TableOfContents
+                headings={
+                  post.faqs?.length
+                    ? [...(post.headings || []), { id: 'frequently-asked-questions', text: 'Frequently Asked Questions', level: 2 }]
+                    : post.headings
+                }
+              />
 
               {/* Center Content Column */}
               <div className={styles.articleContentCol}>
-                <ArticleRenderer sections={post.sections} />
+                <ArticleRenderer
+                  sections={post.sections}
+                  keyTakeaways={post.keyTakeaways}
+                  faqs={post.faqs}
+                />
 
                 <AuthorCard author={post.author} />
 

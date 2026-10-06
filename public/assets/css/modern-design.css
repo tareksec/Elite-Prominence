@@ -1462,23 +1462,25 @@ html.lenis, html.lenis body {
 
 @media (max-width: 767px) {
   body {
-    padding-bottom: 74px;
+    padding-bottom: 80px;
   }
 
   .floating-dock-desktop {
-    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-    height: 52px;
-    padding: 0 8px 5px;
-    border-radius: 26px;
-    max-width: calc(100vw - 16px);
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
+    bottom: max(12px, env(safe-area-inset-bottom, 12px));
+    height: auto;
+    min-height: 48px;
+    padding: 5px 8px;
+    border-radius: 32px;
+    max-width: min(calc(100vw - 16px), 430px);
+    overflow: visible;
+    touch-action: pan-y;
     box-shadow: 
-      0 12px 35px -6px rgba(18, 19, 22, 0.20),
-      0 4px 12px rgba(18, 19, 22, 0.08),
+      0 14px 38px -6px rgba(18, 19, 22, 0.22),
+      0 4px 14px rgba(18, 19, 22, 0.08),
       inset 0 1px 1px rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(28px) saturate(190%);
+    -webkit-backdrop-filter: blur(28px) saturate(190%);
   }
 
   .floating-dock-desktop::-webkit-scrollbar {
@@ -1486,13 +1488,28 @@ html.lenis, html.lenis body {
   }
 
   .floating-dock-desktop-inner {
-    gap: 4px;
+    gap: clamp(2px, 1.1vw, 5px);
     align-items: center;
+    justify-content: center;
   }
 
   .floating-dock-separator {
-    height: 18px;
-    margin: 0 2px 4px !important;
+    height: 16px;
+    margin: 0 1px !important;
+    align-self: center;
+  }
+
+  .floating-dock-item {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+
+  .floating-dock-item-brand {
+    padding: 3px;
+  }
+
+  .floating-dock-item-highlight {
+    animation: dock-highlight-pulse 3s infinite ease-in-out;
   }
 
   .floating-dock-tooltip {
@@ -1501,6 +1518,21 @@ html.lenis, html.lenis body {
 
   .floating-dock-mobile {
     display: none !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .floating-dock-desktop {
+    padding: 4px 6px;
+    max-width: calc(100vw - 8px);
+  }
+
+  .floating-dock-desktop-inner {
+    gap: 2px;
+  }
+
+  .floating-dock-separator {
+    margin: 0 0.5px !important;
   }
 }
 
@@ -1571,15 +1603,38 @@ html.lenis, html.lenis body {
 
 .floating-dock-active-dot {
   position: absolute;
-  bottom: -6.5px;
+  bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
-  width: 4px;
-  height: 4px;
+  width: 4.5px;
+  height: 4.5px;
   border-radius: 50%;
   background: #FF3B81;
-  box-shadow: 0 0 6px 1px #FF3B81;
+  box-shadow: 0 0 8px 1px #FF3B81;
   pointer-events: none;
+  animation: dock-dot-pulse 2.2s infinite ease-in-out;
+}
+
+@keyframes dock-dot-pulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    box-shadow: 0 0 6px 1px rgba(255, 59, 129, 0.7);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.35);
+    box-shadow: 0 0 10px 2.5px rgba(255, 59, 129, 0.95);
+  }
+}
+
+@keyframes dock-highlight-pulse {
+  0%, 100% {
+    box-shadow: 0 3px 12px rgba(18, 19, 22, 0.25);
+    border-color: #121316;
+  }
+  50% {
+    box-shadow: 0 3px 16px rgba(255, 59, 129, 0.45);
+    border-color: rgba(255, 59, 129, 0.6);
+  }
 }
 
 .floating-dock-icon-wrapper {
@@ -2520,6 +2575,156 @@ header.mlab-header {
   opacity: 0.9;
   flex-shrink: 0;
 }
+
+/* ==========================================================================
+   Premium Button & Icon Micro-Interactions
+   ========================================================================== */
+.prominence-btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.prominence-btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  transform: skewX(-22deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
+}
+
+.prominence-btn-primary:hover::after {
+  left: 140%;
+}
+
+.prominence-btn-primary span:last-child,
+.prominence-btn-outline span:last-child,
+.service-learn-more-arrow {
+  display: inline-block;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.prominence-btn-primary:hover span:last-child,
+.prominence-btn-outline:hover span:last-child,
+.service-feature-card:hover .service-learn-more-arrow {
+  transform: translateX(4px);
+}
+
+.prominence-btn-outline {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* ==========================================================================
+   Image Reveal & Hover Movement
+   ========================================================================== */
+.modern-case-img-box img {
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.modern-case-card:hover .modern-case-img-box img {
+  transform: scale(1.05);
+}
+
+.modern-case-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.modern-case-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 45px rgba(18, 19, 22, 0.09) !important;
+  border-color: rgba(255, 59, 129, 0.25) !important;
+}
+
+/* ==========================================================================
+   Card Hover Interaction
+   ========================================================================== */
+.value-pillar-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.value-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(18, 19, 22, 0.08) !important;
+  border-color: rgba(255, 59, 129, 0.22) !important;
+}
+
+/* ==========================================================================
+   Icon Micro-Interactions
+   ========================================================================== */
+.service-icon-box {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease !important;
+}
+
+.service-feature-card:hover .service-icon-box {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.hero-svg-dot {
+  animation: hero-dot-glow 3s infinite ease-in-out;
+}
+
+@keyframes hero-dot-glow {
+  0%, 100% {
+    r: 3;
+    opacity: 0.8;
+  }
+  50% {
+    r: 4.2;
+    opacity: 1;
+  }
+}
+
+.service-dark-bars-graphic rect {
+  animation: bar-wave 2.4s infinite ease-in-out alternate;
+}
+
+.service-dark-bars-graphic rect:nth-child(1) { animation-delay: 0s; }
+.service-dark-bars-graphic rect:nth-child(2) { animation-delay: 0.2s; }
+.service-dark-bars-graphic rect:nth-child(3) { animation-delay: 0.4s; }
+.service-dark-bars-graphic rect:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes bar-wave {
+  0% {
+    opacity: 0.7;
+    transform: scaleY(0.92);
+    transform-origin: bottom;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1.08);
+    transform-origin: bottom;
+  }
+}
+
+/* ==========================================================================
+   Accessibility: Reduced Motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .flip-char,
+  .flip-char::before,
+  .flip-char::after,
+  .hero-svg-dot,
+  .service-dark-bars-graphic rect,
+  .floating-dock-active-dot,
+  .floating-dock-item-highlight {
+    animation: none !important;
+  }
+}
+
 
 
 

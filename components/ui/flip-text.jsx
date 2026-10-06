@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import React, { useMemo } from "react"
-import { cn } from "@/lib/utils"
+import React, { useMemo } from "react";
+import { cn } from "@/lib/utils";
 
 export function FlipText({
     className,
@@ -12,20 +12,17 @@ export function FlipText({
     separator = " ",
     together = false,
 }) {
-    if (typeof children !== "string") {
-        return <span className={className}>{children}</span>
-    }
-
-    const words = useMemo(() => children.split(separator), [children, separator])
-    const totalChars = children.length
+    const textContent = typeof children === "string" ? children : String(children || "");
+    const words = useMemo(() => textContent.split(separator), [textContent, separator]);
+    const totalChars = textContent.length;
 
     const getCharIndex = (wordIndex, charIndex) => {
-        let index = 0
+        let index = 0;
         for (let i = 0; i < wordIndex; i++) {
-            index += words[i].length + (separator === " " ? 1 : separator.length)
+            index += words[i].length + (separator === " " ? 1 : separator.length);
         }
-        return index + charIndex
-    }
+        return index + charIndex;
+    };
 
     return (
         <span
@@ -36,7 +33,7 @@ export function FlipText({
             style={{ perspective: "1000px" }}
         >
             {words.map((word, wordIndex) => {
-                const chars = word.split("")
+                const chars = word.split("");
 
                 return (
                     <span
@@ -45,13 +42,13 @@ export function FlipText({
                         style={{ transformStyle: "preserve-3d" }}
                     >
                         {chars.map((char, charIndex) => {
-                            const currentGlobalIndex = getCharIndex(wordIndex, charIndex)
+                            const currentGlobalIndex = getCharIndex(wordIndex, charIndex);
 
-                            let calculatedDelay = delay
+                            let calculatedDelay = delay;
                             if (!together) {
-                                const normalizedIndex = currentGlobalIndex / (totalChars || 1)
-                                const sineValue = Math.sin(normalizedIndex * (Math.PI / 2))
-                                calculatedDelay = sineValue * (duration * 0.25) + delay
+                                const normalizedIndex = totalChars > 0 ? currentGlobalIndex / totalChars : 0;
+                                const sineValue = Math.sin(normalizedIndex * (Math.PI / 2));
+                                calculatedDelay = sineValue * (duration * 0.25) + delay;
                             }
 
                             return (
@@ -68,7 +65,7 @@ export function FlipText({
                                 >
                                     {char}
                                 </span>
-                            )
+                            );
                         })}
                         {separator === " " && wordIndex < words.length - 1 && (
                             <span className="whitespace inline-block">&nbsp;</span>
@@ -77,10 +74,10 @@ export function FlipText({
                             <span className="separator inline-block">{separator}</span>
                         )}
                     </span>
-                )
+                );
             })}
         </span>
-    )
+    );
 }
 
-export default FlipText
+export default FlipText;

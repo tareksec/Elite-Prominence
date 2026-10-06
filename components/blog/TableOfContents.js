@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useEffect, useState } from 'react'
 
 export default function TableOfContents({ headings = [] }) {
@@ -84,22 +85,22 @@ export default function TableOfContents({ headings = [] }) {
       >
         <div
           style={{
-            fontSize: '12px',
-            fontWeight: '700',
+            fontSize: '11px',
+            fontWeight: '800',
             textTransform: 'uppercase',
             letterSpacing: '1px',
-            color: '#64748B',
+            color: '#121316',
             marginBottom: '16px',
             display: 'flex',
             alignItems: 'center',
             gap: '8px'
           }}
         >
-          <i className="fa-solid fa-list-ul" style={{ fontSize: '13px', color: '#8B5CF6' }}></i>
-          Table of Contents
+          <span style={{ color: '#FF3B81', fontSize: '13px' }}>✦</span>
+          <span>Table of Contents</span>
         </div>
 
-        <ul style={{ listStyle: 'none', padding: 0, margin: 0, borderLeft: '2px solid #E5E7EB' }}>
+        <ul style={{ listStyle: 'none', padding: 0, margin: 0, borderLeft: '2px solid rgba(18, 19, 22, 0.08)' }}>
           {items.map((heading) => {
             const isActive = activeId === heading.id
             return (
@@ -113,13 +114,14 @@ export default function TableOfContents({ headings = [] }) {
                   style={{
                     display: 'block',
                     padding: heading.level === 3 ? '6px 12px 6px 28px' : '6px 12px 6px 16px',
-                    fontSize: heading.level === 3 ? '13px' : '14px',
+                    fontSize: heading.level === 3 ? '12.5px' : '13.5px',
                     lineHeight: '1.4',
-                    color: isActive ? '#0D0D14' : '#6B7280',
-                    fontWeight: isActive ? '700' : '400',
-                    borderLeft: isActive ? '2px solid #8B5CF6' : '2px solid transparent',
+                    color: isActive ? '#121316' : '#6B7280',
+                    fontWeight: isActive ? '750' : '500',
+                    borderLeft: isActive ? '2px solid #FF3B81' : '2px solid transparent',
                     marginLeft: '-2px',
-                    background: isActive ? 'rgba(139, 92, 246, 0.08)' : 'transparent',
+                    background: isActive ? 'rgba(255, 59, 129, 0.08)' : 'transparent',
+                    borderRadius: isActive ? '0 8px 8px 0' : '0',
                     textDecoration: 'none',
                     transition: 'all 0.2s ease'
                   }}
@@ -140,25 +142,24 @@ export default function TableOfContents({ headings = [] }) {
         style={{
           display: 'none',
           position: 'fixed',
-          bottom: '84px',
-          right: '20px',
-          background: '#0D0D14',
+          bottom: 'calc(76px + env(safe-area-inset-bottom, 0px))',
+          right: '16px',
+          background: '#121316',
           color: '#FFFFFF',
-          borderRadius: '8px',
-          padding: '10px 18px',
-          fontSize: '13px',
-          fontWeight: '600',
-          fontFamily: 'var(--primary-font)',
-          boxShadow: '0 8px 25px rgba(0, 0, 0, 0.35)',
-          zIndex: 999,
+          borderRadius: '9999px',
+          padding: '8px 16px',
+          fontSize: '12px',
+          fontWeight: '700',
+          boxShadow: '0 8px 24px rgba(18, 19, 22, 0.25)',
+          zIndex: 9980,
           alignItems: 'center',
           gap: '6px',
           border: '1px solid rgba(255, 255, 255, 0.15)',
           cursor: 'pointer'
         }}
       >
-        <i className="fa-solid fa-list-ul" style={{ fontSize: '13px' }}></i>
-        TOC
+        <span style={{ color: '#FF3B81' }}>✦</span>
+        <span>Contents</span>
       </button>
 
       {/* Mobile Drawer Modal */}
@@ -169,9 +170,9 @@ export default function TableOfContents({ headings = [] }) {
             style={{
               position: 'fixed',
               inset: 0,
-              background: 'rgba(15, 18, 53, 0.5)',
-              backdropFilter: 'blur(4px)',
-              zIndex: 1099
+              background: 'rgba(18, 19, 22, 0.5)',
+              backdropFilter: 'blur(6px)',
+              zIndex: 10999
             }}
           />
           <div
@@ -184,26 +185,29 @@ export default function TableOfContents({ headings = [] }) {
               left: 0,
               right: 0,
               background: '#FFFFFF',
-              borderRadius: '20px 20px 0 0',
-              maxHeight: '70vh',
+              borderRadius: '24px 24px 0 0',
+              maxHeight: '72vh',
               overflowY: 'auto',
               padding: '24px',
-              boxShadow: '0 -10px 30px rgba(0,0,0,0.15)',
-              zIndex: 1100
+              boxShadow: '0 -10px 40px rgba(0,0,0,0.18)',
+              zIndex: 11000
             }}
           >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-              <h3 style={{ fontFamily: "var(--primary-font)", fontSize: '20px', color: '#0D0D14', margin: 0 }}>
-                Table of Contents
-              </h3>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <span style={{ color: '#FF3B81' }}>✦</span>
+                <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#121316', margin: 0 }}>
+                  Table of Contents
+                </h3>
+              </div>
               <button
                 onClick={() => setIsMobileOpen(false)}
-                style={{ fontSize: '24px', color: '#6B7280', background: 'none', border: 'none', cursor: 'pointer' }}
+                style={{ fontSize: '24px', color: '#6B7280', background: 'none', border: 'none', cursor: 'pointer', lineHeight: 1 }}
               >
                 &times;
               </button>
             </div>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, borderLeft: '2px solid #E5E7EB' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, borderLeft: '2px solid rgba(18, 19, 22, 0.08)' }}>
               {items.map((heading) => {
                 const isActive = activeId === heading.id
                 return (
@@ -218,8 +222,8 @@ export default function TableOfContents({ headings = [] }) {
                         display: 'block',
                         padding: heading.level === 3 ? '8px 12px 8px 24px' : '8px 12px 8px 16px',
                         fontSize: heading.level === 3 ? '13px' : '14px',
-                        color: isActive ? '#0D0D14' : '#6B7280',
-                        fontWeight: isActive ? '700' : '400',
+                        color: isActive ? '#FF3B81' : '#121316',
+                        fontWeight: isActive ? '750' : '500',
                         textDecoration: 'none'
                       }}
                     >
