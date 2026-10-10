@@ -76,6 +76,40 @@ function parseMarkdownToSections(body) {
   return { headings, sections };
 }
 
+function cleanInlineMarkdown(value) {
+  return value
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+    .trim();
+}
+
+function extractKeyTakeaways(body) {
+  const match = body.match(/^##\s+(?:Executive Answer|Direct Answer|Key Takeaways|Quick Answer)\s*\r?\n([\s\S]*?)(?=^##\s+|$)/im);
+  if (!match) return [];
+
+  return match[1]
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => /^[-*]\s+/.test(line) || /^\d+[.)]\s+/.test(line))
+    .map((line) => line.replace(/^([-*]|\d+[.)])\s+/, ''))
+    .map(cleanInlineMarkdown)
+    .filter(Boolean);
+}
+
+function extractFaqs(body) {
+  const sectionMatch = body.match(/^##\s+(?:Frequently Asked(?: Executive)? Questions|FAQs?)\s*\r?\n([\s\S]*?)(?=^##\s+|$)/im);
+  if (!sectionMatch) return [];
+
+  const faqSection = sectionMatch[1];
+  const questionMatches = [...faqSection.matchAll(/^###\s+(.+)\s*\r?\n([\s\S]*?)(?=^###\s+|$)/gim)];
+  return questionMatches
+    .map((match) => ({
+      question: cleanInlineMarkdown(match[1]),
+      answer: cleanInlineMarkdown(match[2].replace(/\r?\n+/g, ' ')),
+    }))
+    .filter((faq) => faq.question && faq.answer);
+}
+
 async function run() {
   console.log('=== Daily Post Publisher (Elite-Prominence) ===');
   console.log(`Current Time (UTC): ${new Date().toISOString()}`);
@@ -98,7 +132,8 @@ async function run() {
   const sourcePath = path.join(QUEUE_DIR, targetFile);
   const rawContent = fs.readFileSync(sourcePath, 'utf8');
 
-  const todayStr = new Date().toISOString().split('T')[0];
+  const publishIso = new Date().toISOString();
+  const todayStr = publishIso.split('T')[0];
   const { meta, body } = parseFrontmatter(rawContent);
 
   const cleanSlug = (meta.slug || targetFile.replace(/^[0-9]+-/, '').replace(/\.mdx?$/, '')).toLowerCase();
@@ -138,12 +173,16 @@ async function run() {
     let blogDataContent = fs.readFileSync(BLOG_DATA_FILE, 'utf8');
     if (!blogDataContent.includes(`slug: '${cleanSlug}'`) && !blogDataContent.includes(`slug: "${cleanSlug}"`)) {
       const { headings, sections } = parseMarkdownToSections(body);
+      const keyTakeaways = extractKeyTakeaways(body);
+      const faqs = extractFaqs(body);
       const articleObj = {
         slug: cleanSlug,
         title: meta.title || '',
         excerpt: meta.description || '',
         category: meta.category || 'Executive Branding',
         publishDate: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+        datePublished: publishIso,
+        dateModified: publishIso,
         readTime: meta.readTime || '7 min read',
         wordCount: body.split(/\s+/).length,
         primaryKeyword: meta.primaryKeyword || '',
@@ -158,7 +197,9 @@ async function run() {
           linkedinUrl: 'https://www.linkedin.com/in/mdtarek404/'
         },
         headings,
-        sections
+        sections,
+        keyTakeaways,
+        faqs
       };
 
       const insertionAnchor = 'export const BLOG_ARTICLES = [';

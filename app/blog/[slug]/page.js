@@ -17,6 +17,15 @@ import HighlightShare from '@/components/blog/HighlightShare';
 import styles from '@/components/blog/BlogReading.module.css';
 import { BLOG_ARTICLES, getArticleBySlug, getAllArticleSlugs } from '@/lib/blogData';
 
+function getArticleDate(post, field, fallback) {
+  if (post[field]) return post[field];
+  if (post.publishDate) {
+    const parsed = Date.parse(post.publishDate);
+    if (!Number.isNaN(parsed)) return new Date(parsed).toISOString();
+  }
+  return fallback;
+}
+
 export async function generateStaticParams() {
   return getAllArticleSlugs();
 }
@@ -47,8 +56,8 @@ export async function generateMetadata({ params }) {
     ? post.heroImage
     : `https://www.prominence.agency${post.heroImage || '/assets/images/elite/blog_1_hr_personal_brand.jpg'}`;
 
-  const publishIso = post.datePublished || '2026-08-01T00:00:00Z';
-  const modifiedIso = post.dateModified || '2026-10-06T00:00:00Z';
+  const publishIso = getArticleDate(post, 'datePublished', '2026-08-01T00:00:00Z');
+  const modifiedIso = getArticleDate(post, 'dateModified', publishIso);
 
   return {
     title: seoTitle,
@@ -99,8 +108,8 @@ export default function BlogPostPage({ params }) {
   }
 
   const pageUrl = `https://www.prominence.agency/blog/${post.slug}`;
-  const publishIso = post.datePublished || '2026-08-01T00:00:00Z';
-  const modifiedIso = post.dateModified || '2026-10-06T00:00:00Z';
+  const publishIso = getArticleDate(post, 'datePublished', '2026-08-01T00:00:00Z');
+  const modifiedIso = getArticleDate(post, 'dateModified', publishIso);
 
   const schemaGraph = [
     {
